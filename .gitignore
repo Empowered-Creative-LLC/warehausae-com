@@ -49,3 +49,7 @@ warehaus-statamic/.phpunit.result.cache
 warehaus-statamic/Homestead.json
 warehaus-statamic/Homestead.yaml
 warehaus-statamic/auth.json
+
+# Statamic file-based user accounts contain PII + bcrypt hashes. Each dev /
+# environment should create their own admin via `php artisan statamic:make:user`.
+warehaus-statamic/users/*.yaml
