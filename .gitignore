@@ -29,6 +29,8 @@ migration-tool/scraped/*
 migration-tool/scraped/_discovery/*
 !migration-tool/scraped/_discovery/url-inventory.md
 !migration-tool/scraped/_discovery/crawl-result.json
+!migration-tool/scraped/_discovery/canonical-url-map.md
+!migration-tool/scraped/_discovery/url-status.json
 
 # Laravel / Statamic app
 warehaus-statamic/vendor/

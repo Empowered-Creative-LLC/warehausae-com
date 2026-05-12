@@ -1,0 +1,2878 @@
+{
+  "checkedAt": "2026-05-12T18:27:52.343Z",
+  "results": [
+    {
+      "source": "http://warehausae.com/privacy-policy/",
+      "finalUrl": "http://warehausae.com/privacy-policy/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "http://warehausae.com/privacy-policy/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "http://warehausae.com/terms-and-conditions/",
+      "finalUrl": "http://warehausae.com/terms-and-conditions/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "http://warehausae.com/terms-and-conditions/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "http://warehausae.com/work__trashed/building-sciences/",
+      "finalUrl": "https://warehausae.com/building-sciences/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "http://warehausae.com/work__trashed/building-sciences/",
+          "status": 301,
+          "location": "https://warehausae.com/building-sciences/"
+        },
+        {
+          "url": "https://warehausae.com/building-sciences/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "http://warehausae.com/work/building-sciences/",
+      "finalUrl": "https://warehausae.com/building-sciences/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "http://warehausae.com/work/building-sciences/",
+          "status": 301,
+          "location": "https://warehausae.com/building-sciences/"
+        },
+        {
+          "url": "https://warehausae.com/building-sciences/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "http://warehausae.com/work/distribution_manufacturing/",
+      "finalUrl": "https://warehausae.com/distribution_manufacturing/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "http://warehausae.com/work/distribution_manufacturing/",
+          "status": 301,
+          "location": "https://warehausae.com/distribution_manufacturing/"
+        },
+        {
+          "url": "https://warehausae.com/distribution_manufacturing/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "http://warehausae.com/work/education/",
+      "finalUrl": "https://warehausae.com/education/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "http://warehausae.com/work/education/",
+          "status": 301,
+          "location": "https://warehausae.com/education/"
+        },
+        {
+          "url": "https://warehausae.com/education/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "http://warehausae.com/work/historic/",
+      "finalUrl": "https://warehausae.com/historic/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "http://warehausae.com/work/historic/",
+          "status": 301,
+          "location": "https://warehausae.com/historic/"
+        },
+        {
+          "url": "https://warehausae.com/historic/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "http://warehausae.com/work/residential-development/",
+      "finalUrl": "https://warehausae.com/residential-development/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "http://warehausae.com/work/residential-development/",
+          "status": 301,
+          "location": "https://warehausae.com/residential-development/"
+        },
+        {
+          "url": "https://warehausae.com/residential-development/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com",
+      "finalUrl": "https://warehausae.com",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/about/",
+      "finalUrl": "https://warehausae.com/about/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/about/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/adaptive-reuse/",
+      "finalUrl": "https://warehausae.com/adaptive-reuse/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/adaptive-reuse/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/arts_culture/",
+      "finalUrl": "https://warehausae.com/arts_culture/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/arts_culture/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/author/lbergman/",
+      "finalUrl": "https://warehausae.com/author/lbergman/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/author/lbergman/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/building-sciences/",
+      "finalUrl": "https://warehausae.com/building-sciences/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/building-sciences/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/careers/",
+      "finalUrl": "https://warehausae.com/careers/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/careers/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/case-study-bischoff-inn/",
+      "finalUrl": "https://warehausae.com/case-study-bischoff-inn/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/case-study-bischoff-inn/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/case-study/bischoff-inn/",
+      "finalUrl": "https://warehausae.com/case-study/bischoff-inn/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/case-study/bischoff-inn/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/case-study/municipal-engineering/",
+      "finalUrl": "https://warehausae.com/case-study/municipal-engineering/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/case-study/municipal-engineering/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/corporate-office/",
+      "finalUrl": "https://warehausae.com/corporate-office/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/corporate-office/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/culture/",
+      "finalUrl": "https://warehausae.com/culture/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/culture/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/distribution_manufacturing/",
+      "finalUrl": "https://warehausae.com/distribution_manufacturing/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/distribution_manufacturing/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/education/",
+      "finalUrl": "https://warehausae.com/education/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/education/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/elementor-23143/",
+      "finalUrl": "https://warehausae.com/elementor-23143/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/elementor-23143/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/elementor-23214/",
+      "finalUrl": "https://warehausae.com/elementor-23214/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/elementor-23214/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/future-architects-and-engineers/",
+      "finalUrl": "https://warehausae.com/future-architects-and-engineers/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/future-architects-and-engineers/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/get-rewarded-for-referrals/",
+      "finalUrl": "https://warehausae.com/get-rewarded-for-referrals/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/get-rewarded-for-referrals/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/happyholidays/",
+      "finalUrl": "https://warehausae.com/happyholidays/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/happyholidays/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/harrisburg-project-map/",
+      "finalUrl": "https://warehausae.com/harrisburg-project-map/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/harrisburg-project-map/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/healthcare/",
+      "finalUrl": "https://warehausae.com/healthcare/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/healthcare/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/historic/",
+      "finalUrl": "https://warehausae.com/historic/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/historic/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/Industries/around-the-haus/",
+      "finalUrl": "https://warehausae.com/Industries/around-the-haus/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/Industries/around-the-haus/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/Industries/case-study/",
+      "finalUrl": "https://warehausae.com/Industries/case-study/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/Industries/case-study/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/Industries/community/",
+      "finalUrl": "https://warehausae.com/Industries/community/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/Industries/community/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/Industries/game/",
+      "finalUrl": "https://warehausae.com/Industries/game/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/Industries/game/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/Industries/news/",
+      "finalUrl": "https://warehausae.com/Industries/news/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/Industries/news/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/Industries/uncategorized/",
+      "finalUrl": "https://warehausae.com/Industries/uncategorized/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/Industries/uncategorized/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/industry/adaptive-reuse/",
+      "finalUrl": "https://warehausae.com/adaptive-reuse/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/industry/adaptive-reuse/",
+          "status": 301,
+          "location": "https://warehausae.com/work/adaptive-reuse/"
+        },
+        {
+          "url": "https://warehausae.com/work/adaptive-reuse/",
+          "status": 301,
+          "location": "https://warehausae.com/adaptive-reuse/"
+        },
+        {
+          "url": "https://warehausae.com/adaptive-reuse/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/industry/arts-and-culture/",
+      "finalUrl": "https://warehausae.com/arts_culture/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/industry/arts-and-culture/",
+          "status": 301,
+          "location": "https://warehausae.com/work/arts_culture/"
+        },
+        {
+          "url": "https://warehausae.com/work/arts_culture/",
+          "status": 301,
+          "location": "https://warehausae.com/arts_culture/"
+        },
+        {
+          "url": "https://warehausae.com/arts_culture/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/industry/building-sciences/",
+      "finalUrl": "https://warehausae.com/building-sciences/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/industry/building-sciences/",
+          "status": 301,
+          "location": "https://warehausae.com/work/building-sciences/"
+        },
+        {
+          "url": "https://warehausae.com/work/building-sciences/",
+          "status": 301,
+          "location": "https://warehausae.com/building-sciences/"
+        },
+        {
+          "url": "https://warehausae.com/building-sciences/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/industry/civil-engineering/",
+      "finalUrl": "https://warehausae.com/industry/civil-engineering/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/industry/civil-engineering/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/industry/distribution-and-manufacturing/",
+      "finalUrl": "https://warehausae.com/distribution_manufacturing/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/industry/distribution-and-manufacturing/",
+          "status": 301,
+          "location": "https://warehausae.com/work/distribution_manufacturing/"
+        },
+        {
+          "url": "https://warehausae.com/work/distribution_manufacturing/",
+          "status": 301,
+          "location": "https://warehausae.com/distribution_manufacturing/"
+        },
+        {
+          "url": "https://warehausae.com/distribution_manufacturing/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/industry/education/",
+      "finalUrl": "https://warehausae.com/education/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/industry/education/",
+          "status": 301,
+          "location": "https://warehausae.com/work/education/"
+        },
+        {
+          "url": "https://warehausae.com/work/education/",
+          "status": 301,
+          "location": "https://warehausae.com/education/"
+        },
+        {
+          "url": "https://warehausae.com/education/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/industry/healthcare/",
+      "finalUrl": "https://warehausae.com/healthcare/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/industry/healthcare/",
+          "status": 301,
+          "location": "https://warehausae.com/work/healthcare/"
+        },
+        {
+          "url": "https://warehausae.com/work/healthcare/",
+          "status": 301,
+          "location": "https://warehausae.com/healthcare/"
+        },
+        {
+          "url": "https://warehausae.com/healthcare/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/industry/historic/",
+      "finalUrl": "https://warehausae.com/industry/historic/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/industry/historic/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/industry/multi-family/",
+      "finalUrl": "https://warehausae.com/multi-family/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/industry/multi-family/",
+          "status": 301,
+          "location": "https://warehausae.com/work/multi-family/"
+        },
+        {
+          "url": "https://warehausae.com/work/multi-family/",
+          "status": 301,
+          "location": "https://warehausae.com/multi-family/"
+        },
+        {
+          "url": "https://warehausae.com/multi-family/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/industry/municipal/",
+      "finalUrl": "https://warehausae.com/industry/municipal/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/industry/municipal/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/industry/retail-and-hospitality/",
+      "finalUrl": "https://warehausae.com/retail_hospitality/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/industry/retail-and-hospitality/",
+          "status": 301,
+          "location": "https://warehausae.com/work/retail_hospitality/"
+        },
+        {
+          "url": "https://warehausae.com/work/retail_hospitality/",
+          "status": 301,
+          "location": "https://warehausae.com/retail_hospitality/"
+        },
+        {
+          "url": "https://warehausae.com/retail_hospitality/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/interiors_visit/",
+      "finalUrl": "https://warehausae.com/interiors_visit/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/interiors_visit/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/job/civil-assistant-project-manager/",
+      "finalUrl": "https://warehausae.com/job/civil-assistant-project-manager/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/job/civil-assistant-project-manager/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/job/civil-project-manager-2/",
+      "finalUrl": "https://warehausae.com/job/civil-project-manager-2/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/job/civil-project-manager-2/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/job/job-civil-designer/",
+      "finalUrl": "https://warehausae.com/job/job-civil-designer/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/job/job-civil-designer/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/job/structural-designer-position/",
+      "finalUrl": "https://warehausae.com/job/structural-designer-position/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/job/structural-designer-position/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/job/structural-engineer-2024/",
+      "finalUrl": "https://warehausae.com/job/structural-engineer-2024/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/job/structural-engineer-2024/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/layout/alternate/",
+      "finalUrl": "https://warehausae.com/layout/alternate/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/layout/alternate/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/lunch-and-learns/",
+      "finalUrl": "https://warehausae.com/lunch-and-learns/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/lunch-and-learns/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/multi-family/",
+      "finalUrl": "https://warehausae.com/multi-family/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/multi-family/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/portfolio/",
+      "finalUrl": "https://warehausae.com/portfolio/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/portfolio/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/press_release_acquisition/",
+      "finalUrl": "https://warehausae.com/press_release_acquisition/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/press_release_acquisition/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/press_release-office_purchase/",
+      "finalUrl": "https://warehausae.com/press_release-office_purchase/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/press_release-office_purchase/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/project/1110-princess-street-office/",
+      "finalUrl": "https://warehausae.com/project/1110-princess-street-office/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/project/1110-princess-street-office/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/project/12th_and_macdonald/",
+      "finalUrl": "https://warehausae.com/project/12th_and_macdonald/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/project/12th_and_macdonald/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/project/1895-federal-building/",
+      "finalUrl": "https://warehausae.com/project/1895-federal-building/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/project/1895-federal-building/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/project/205-state-street-apartments/",
+      "finalUrl": "https://warehausae.com/project/205-state-street-apartments/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/project/205-state-street-apartments/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/project/210-york-street-office/",
+      "finalUrl": "https://warehausae.com/project/210-york-street-office/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/project/210-york-street-office/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/project/320-north-george-street-office/",
+      "finalUrl": "https://warehausae.com/project/320-north-george-street-office/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/project/320-north-george-street-office/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/project/3400-boston-street/",
+      "finalUrl": "https://warehausae.com/project/3400-boston-street/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/project/3400-boston-street/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/project/4844-market-street-self-storage/",
+      "finalUrl": "https://warehausae.com/project/4844-market-street-self-storage/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/project/4844-market-street-self-storage/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/project/800-south-queen-street-multi-family-apartments/",
+      "finalUrl": "https://warehausae.com/project/800-south-queen-street-multi-family-apartments/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/project/800-south-queen-street-multi-family-apartments/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/project/84-zions-view-road/",
+      "finalUrl": "https://warehausae.com/project/84-zions-view-road/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/project/84-zions-view-road/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/project/acadia-healthcare-inc-bowling-green-brandywine/",
+      "finalUrl": "https://warehausae.com/project/acadia-healthcare-inc-bowling-green-brandywine/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/project/acadia-healthcare-inc-bowling-green-brandywine/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/project/adams-county-arts-council-renovation/",
+      "finalUrl": "https://warehausae.com/project/adams-county-arts-council-renovation/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/project/adams-county-arts-council-renovation/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/project/appell-center-concessions-renovation/",
+      "finalUrl": "https://warehausae.com/project/appell-center-concessions-renovation/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/project/appell-center-concessions-renovation/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/project/back-2-health-chiropractic/",
+      "finalUrl": "https://warehausae.com/project/back-2-health-chiropractic/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/project/back-2-health-chiropractic/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/project/ballpark-commons/",
+      "finalUrl": "https://warehausae.com/project/ballpark-commons/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/project/ballpark-commons/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/project/bartels-center/",
+      "finalUrl": "https://warehausae.com/project/bartels-center/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/project/bartels-center/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/project/berks-county-heritage-lock-47-restoration/",
+      "finalUrl": "https://warehausae.com/project/berks-county-heritage-lock-47-restoration/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/project/berks-county-heritage-lock-47-restoration/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/project/bischoff-inn/",
+      "finalUrl": "https://warehausae.com/project/bischoff-inn/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/project/bischoff-inn/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/project/blackworth-live-fire-grill/",
+      "finalUrl": "https://warehausae.com/project/blackworth-live-fire-grill/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/project/blackworth-live-fire-grill/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/project/capitol-theatre/",
+      "finalUrl": "https://warehausae.com/project/capitol-theatre/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/project/capitol-theatre/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/project/carlisle-barracks-restoration/",
+      "finalUrl": "https://warehausae.com/project/carlisle-barracks-restoration/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/project/carlisle-barracks-restoration/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/project/catalyst-muddy-creek-warehouse/",
+      "finalUrl": "https://warehausae.com/project/catalyst-muddy-creek-warehouse/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/project/catalyst-muddy-creek-warehouse/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/project/courtyard-by-marriott-rowan-boulevard/",
+      "finalUrl": "https://warehausae.com/project/courtyard-by-marriott-rowan-boulevard/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/project/courtyard-by-marriott-rowan-boulevard/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/project/cove-forge-behavioral-health/",
+      "finalUrl": "https://warehausae.com/project/cove-forge-behavioral-health/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/project/cove-forge-behavioral-health/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/project/cumberland-township-municipal-building/",
+      "finalUrl": "https://warehausae.com/project/cumberland-township-municipal-building/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/project/cumberland-township-municipal-building/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/project/data-centers/",
+      "finalUrl": "https://warehausae.com/project/data-centers/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/project/data-centers/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/project/donwood-estates/",
+      "finalUrl": "https://warehausae.com/project/donwood-estates/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/project/donwood-estates/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/project/dreamwrights-center-for-community-arts/",
+      "finalUrl": "https://warehausae.com/project/dreamwrights-center-for-community-arts/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/project/dreamwrights-center-for-community-arts/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/project/dunkin-east-retail/",
+      "finalUrl": "https://warehausae.com/project/dunkin-east-retail/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/project/dunkin-east-retail/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/project/flats-at-hampden-apartments/",
+      "finalUrl": "https://warehausae.com/project/flats-at-hampden-apartments/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/project/flats-at-hampden-apartments/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/project/fox-apartments/",
+      "finalUrl": "https://warehausae.com/project/fox-apartments/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/project/fox-apartments/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/project/franklin-square-multi-family-mixed-use/",
+      "finalUrl": "https://warehausae.com/project/franklin-square-multi-family-mixed-use/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/project/franklin-square-multi-family-mixed-use/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/project/fuchs-north-america/",
+      "finalUrl": "https://warehausae.com/project/fuchs-north-america/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/project/fuchs-north-america/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/project/george-spangler-farm/",
+      "finalUrl": "https://warehausae.com/project/george-spangler-farm/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/project/george-spangler-farm/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/project/gettle-office/",
+      "finalUrl": "https://warehausae.com/project/gettle-office/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/project/gettle-office/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/project/gettysburg-lincoln-railroad-station/",
+      "finalUrl": "https://warehausae.com/project/gettysburg-lincoln-railroad-station/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/project/gettysburg-lincoln-railroad-station/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/project/gettysburg-national-military-park-museum/",
+      "finalUrl": "https://warehausae.com/project/gettysburg-national-military-park-museum/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/project/gettysburg-national-military-park-museum/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/project/gratz-bank-tower-repair/",
+      "finalUrl": "https://warehausae.com/project/gratz-bank-tower-repair/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/project/gratz-bank-tower-repair/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/project/harsco-corporate-headquarters/",
+      "finalUrl": "https://warehausae.com/project/harsco-corporate-headquarters/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/project/harsco-corporate-headquarters/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/project/hershey-historic-community-building/",
+      "finalUrl": "https://warehausae.com/project/hershey-historic-community-building/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/project/hershey-historic-community-building/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/project/hershey-tanger-outlets-site-and-facade-improvements/",
+      "finalUrl": "https://warehausae.com/project/hershey-tanger-outlets-site-and-facade-improvements/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/project/hershey-tanger-outlets-site-and-facade-improvements/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/project/hilton-garden-inn/",
+      "finalUrl": "https://warehausae.com/project/hilton-garden-inn/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/project/hilton-garden-inn/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/project/holderness-school-davis-center/",
+      "finalUrl": "https://warehausae.com/project/holderness-school-davis-center/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/project/holderness-school-davis-center/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/project/holderness-school-masterplan/",
+      "finalUrl": "https://warehausae.com/project/holderness-school-masterplan/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/project/holderness-school-masterplan/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/project/i-81-safety-rest-areas/",
+      "finalUrl": "https://warehausae.com/project/i-81-safety-rest-areas/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/project/i-81-safety-rest-areas/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/project/inn-at-wyndridge-farm/",
+      "finalUrl": "https://warehausae.com/project/inn-at-wyndridge-farm/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/project/inn-at-wyndridge-farm/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/project/italian-steakhouse/",
+      "finalUrl": "https://warehausae.com/project/italian-steakhouse/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/project/italian-steakhouse/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/project/jem-group-llc-office/",
+      "finalUrl": "https://warehausae.com/project/jem-group-llc-office/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/project/jem-group-llc-office/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/project/kaltreider-benfer-library-york-county-library/",
+      "finalUrl": "https://warehausae.com/project/kaltreider-benfer-library-york-county-library/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/project/kaltreider-benfer-library-york-county-library/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/project/kreutz-creek-library-york-county-libraries/",
+      "finalUrl": "https://warehausae.com/project/kreutz-creek-library-york-county-libraries/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/project/kreutz-creek-library-york-county-libraries/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/project/lancaster-county-courthouse-and-prison/",
+      "finalUrl": "https://warehausae.com/project/lancaster-county-courthouse-and-prison/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/project/lancaster-county-courthouse-and-prison/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/project/little-round-top/",
+      "finalUrl": "https://warehausae.com/project/little-round-top/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/project/little-round-top/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/project/logos-academy/",
+      "finalUrl": "https://warehausae.com/project/logos-academy/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/project/logos-academy/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/project/martin-brownstone-restoration/",
+      "finalUrl": "https://warehausae.com/project/martin-brownstone-restoration/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/project/martin-brownstone-restoration/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/project/martin-library-york-county-libraries/",
+      "finalUrl": "https://warehausae.com/project/martin-library-york-county-libraries/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/project/martin-library-york-county-libraries/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/project/mchenry-row-office-hotel/",
+      "finalUrl": "https://warehausae.com/project/mchenry-row-office-hotel/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/project/mchenry-row-office-hotel/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/project/milton-and-catherine-hershey-conservatory-at-hershey-gardens/",
+      "finalUrl": "https://warehausae.com/project/milton-and-catherine-hershey-conservatory-at-hershey-gardens/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/project/milton-and-catherine-hershey-conservatory-at-hershey-gardens/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/project/mobile-climate-control/",
+      "finalUrl": "https://warehausae.com/project/mobile-climate-control/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/project/mobile-climate-control/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/project/multi-family-land-development/",
+      "finalUrl": "https://warehausae.com/project/multi-family-land-development/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/project/multi-family-land-development/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/project/nelson-kohl-apartments/",
+      "finalUrl": "https://warehausae.com/project/nelson-kohl-apartments/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/project/nelson-kohl-apartments/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/project/new-freedom-borough-rail-trail-improvements/",
+      "finalUrl": "https://warehausae.com/project/new-freedom-borough-rail-trail-improvements/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/project/new-freedom-borough-rail-trail-improvements/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/project/northern-gateway/",
+      "finalUrl": "https://warehausae.com/project/northern-gateway/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/project/northern-gateway/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/project/office-rooftop-plaza/",
+      "finalUrl": "https://warehausae.com/project/office-rooftop-plaza/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/project/office-rooftop-plaza/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/project/ollies-bargain-outlet/",
+      "finalUrl": "https://warehausae.com/project/ollies-bargain-outlet/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/project/ollies-bargain-outlet/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/project/pandgtablerstation/",
+      "finalUrl": "https://warehausae.com/project/pandgtablerstation/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/project/pandgtablerstation/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/project/paypal-toronto-flagship-office/",
+      "finalUrl": "https://warehausae.com/project/paypal-toronto-flagship-office/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/project/paypal-toronto-flagship-office/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/project/penn-mar-human-services-far-hills-office-renovation/",
+      "finalUrl": "https://warehausae.com/project/penn-mar-human-services-far-hills-office-renovation/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/project/penn-mar-human-services-far-hills-office-renovation/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/project/penn-state-bakery-and-food-services/",
+      "finalUrl": "https://warehausae.com/project/penn-state-bakery-and-food-services/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/project/penn-state-bakery-and-food-services/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/project/phoenix-contact-office/",
+      "finalUrl": "https://warehausae.com/project/phoenix-contact-office/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/project/phoenix-contact-office/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/project/pshmc-crystala-offices/",
+      "finalUrl": "https://warehausae.com/project/pshmc-crystala-offices/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/project/pshmc-crystala-offices/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/project/retail-and-commercial/",
+      "finalUrl": "https://warehausae.com/project/retail-and-commercial/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/project/retail-and-commercial/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/project/saint-john-paul-ii-national-shrine/",
+      "finalUrl": "https://warehausae.com/project/saint-john-paul-ii-national-shrine/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/project/saint-john-paul-ii-national-shrine/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/project/single-family-lots-civil-engineering/",
+      "finalUrl": "https://warehausae.com/project/single-family-lots-civil-engineering/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/project/single-family-lots-civil-engineering/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/project/sinnemahoning-state-park/",
+      "finalUrl": "https://warehausae.com/project/sinnemahoning-state-park/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/project/sinnemahoning-state-park/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/project/southwire/",
+      "finalUrl": "https://warehausae.com/project/southwire/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/project/southwire/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/project/st-paul-evangelical-lutheran-church/",
+      "finalUrl": "https://warehausae.com/project/st-paul-evangelical-lutheran-church/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/project/st-paul-evangelical-lutheran-church/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/project/starbucks-coffee-roasting-plant/",
+      "finalUrl": "https://warehausae.com/project/starbucks-coffee-roasting-plant/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/project/starbucks-coffee-roasting-plant/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/project/sterman-masser-inc-office/",
+      "finalUrl": "https://warehausae.com/project/sterman-masser-inc-office/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/project/sterman-masser-inc-office/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/project/susquehanna-trail-dunkin-jimmy-johns/",
+      "finalUrl": "https://warehausae.com/project/susquehanna-trail-dunkin-jimmy-johns/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/project/susquehanna-trail-dunkin-jimmy-johns/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/project/sycamore-homes/",
+      "finalUrl": "https://warehausae.com/project/sycamore-homes/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/project/sycamore-homes/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/project/test-fits/",
+      "finalUrl": "https://warehausae.com/project/test-fits/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/project/test-fits/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/project/test-fits/10/",
+      "finalUrl": "https://warehausae.com/project/test-fits/10/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/project/test-fits/10/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/project/test-fits/11/",
+      "finalUrl": "https://warehausae.com/project/test-fits/11/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/project/test-fits/11/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/project/test-fits/12/",
+      "finalUrl": "https://warehausae.com/project/test-fits/12/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/project/test-fits/12/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/project/test-fits/13/",
+      "finalUrl": "https://warehausae.com/project/test-fits/13/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/project/test-fits/13/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/project/test-fits/14/",
+      "finalUrl": "https://warehausae.com/project/test-fits/14/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/project/test-fits/14/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/project/test-fits/15/",
+      "finalUrl": "https://warehausae.com/project/test-fits/15/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/project/test-fits/15/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/project/test-fits/2/",
+      "finalUrl": "https://warehausae.com/project/test-fits/2/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/project/test-fits/2/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/project/test-fits/3/",
+      "finalUrl": "https://warehausae.com/project/test-fits/3/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/project/test-fits/3/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/project/test-fits/4/",
+      "finalUrl": "https://warehausae.com/project/test-fits/4/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/project/test-fits/4/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/project/test-fits/5/",
+      "finalUrl": "https://warehausae.com/project/test-fits/5/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/project/test-fits/5/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/project/test-fits/6/",
+      "finalUrl": "https://warehausae.com/project/test-fits/6/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/project/test-fits/6/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/project/test-fits/7/",
+      "finalUrl": "https://warehausae.com/project/test-fits/7/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/project/test-fits/7/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/project/test-fits/8/",
+      "finalUrl": "https://warehausae.com/project/test-fits/8/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/project/test-fits/8/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/project/test-fits/9/",
+      "finalUrl": "https://warehausae.com/project/test-fits/9/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/project/test-fits/9/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/project/the-barn-resort/",
+      "finalUrl": "https://warehausae.com/project/the-barn-resort/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/project/the-barn-resort/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/project/the-hershey-story-museum/",
+      "finalUrl": "https://warehausae.com/project/the-hershey-story-museum/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/project/the-hershey-story-museum/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/project/the-steel-works-mixed-use-development/",
+      "finalUrl": "https://warehausae.com/project/the-steel-works-mixed-use-development/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/project/the-steel-works-mixed-use-development/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/project/umd_fpi/",
+      "finalUrl": "https://warehausae.com/project/umd_fpi/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/project/umd_fpi/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/project/umfp-redwood-facade-restoration/",
+      "finalUrl": "https://warehausae.com/project/umfp-redwood-facade-restoration/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/project/umfp-redwood-facade-restoration/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/project/union-flats-apartments/",
+      "finalUrl": "https://warehausae.com/project/union-flats-apartments/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/project/union-flats-apartments/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/project/university-lofts/",
+      "finalUrl": "https://warehausae.com/project/university-lofts/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/project/university-lofts/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/project/volvo-customer-care-center-office/",
+      "finalUrl": "https://warehausae.com/project/volvo-customer-care-center-office/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/project/volvo-customer-care-center-office/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/project/volvo-north-america-office-transformation/",
+      "finalUrl": "https://warehausae.com/project/volvo-north-america-office-transformation/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/project/volvo-north-america-office-transformation/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/project/wagman-inc-office/",
+      "finalUrl": "https://warehausae.com/project/wagman-inc-office/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/project/wagman-inc-office/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/project/wellspan-health-heart-vascular-center/",
+      "finalUrl": "https://warehausae.com/project/wellspan-health-heart-vascular-center/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/project/wellspan-health-heart-vascular-center/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/project/wellspan-health-shrewsbury-community-hospital/",
+      "finalUrl": "https://warehausae.com/project/wellspan-health-shrewsbury-community-hospital/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/project/wellspan-health-shrewsbury-community-hospital/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/project/wellspan-health-thomas-hart-medical-office-building/",
+      "finalUrl": "https://warehausae.com/project/wellspan-health-thomas-hart-medical-office-building/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/project/wellspan-health-thomas-hart-medical-office-building/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/project/wellspan-health-york-hospital/",
+      "finalUrl": "https://warehausae.com/project/wellspan-health-york-hospital/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/project/wellspan-health-york-hospital/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/project/wellspan-health/",
+      "finalUrl": "https://warehausae.com/project/wellspan-health/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/project/wellspan-health/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/project/whisper-run-residential-development/",
+      "finalUrl": "https://warehausae.com/project/whisper-run-residential-development/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/project/whisper-run-residential-development/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/project/wyndridge-farm/",
+      "finalUrl": "https://warehausae.com/project/wyndridge-farm/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/project/wyndridge-farm/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/project/york-academy-regional-charter-school-legacy-hall/",
+      "finalUrl": "https://warehausae.com/project/york-academy-regional-charter-school-legacy-hall/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/project/york-academy-regional-charter-school-legacy-hall/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/project/york-academy-regional-charter-school-lower-school/",
+      "finalUrl": "https://warehausae.com/project/york-academy-regional-charter-school-lower-school/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/project/york-academy-regional-charter-school-lower-school/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/project/york-academy-regional-charter-school-upper-school/",
+      "finalUrl": "https://warehausae.com/project/york-academy-regional-charter-school-upper-school/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/project/york-academy-regional-charter-school-upper-school/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/project/york-college-civil-engineering-center/",
+      "finalUrl": "https://warehausae.com/project/york-college-civil-engineering-center/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/project/york-college-civil-engineering-center/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/project/york-college-of-pennsylvania-kinsley-engineering-center/",
+      "finalUrl": "https://warehausae.com/project/york-college-of-pennsylvania-kinsley-engineering-center/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/project/york-college-of-pennsylvania-kinsley-engineering-center/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/project/york-college-of-pennsylvania-northside-commons-addition/",
+      "finalUrl": "https://warehausae.com/project/york-college-of-pennsylvania-northside-commons-addition/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/project/york-college-of-pennsylvania-northside-commons-addition/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/project/york-college-of-pennsylvania-northside-commons/",
+      "finalUrl": "https://warehausae.com/project/york-college-of-pennsylvania-northside-commons/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/project/york-college-of-pennsylvania-northside-commons/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/project/york-country-day-school/",
+      "finalUrl": "https://warehausae.com/project/york-country-day-school/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/project/york-country-day-school/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/project/york-county-history-center/",
+      "finalUrl": "https://warehausae.com/project/york-county-history-center/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/project/york-county-history-center/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/project/york-county-spca/",
+      "finalUrl": "https://warehausae.com/project/york-county-spca/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/project/york-county-spca/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/project/york-jcc-jewish-community-center/",
+      "finalUrl": "https://warehausae.com/project/york-jcc-jewish-community-center/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/project/york-jcc-jewish-community-center/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/project/zion-lutheran-church-adaptive-reuse/",
+      "finalUrl": "https://warehausae.com/project/zion-lutheran-church-adaptive-reuse/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/project/zion-lutheran-church-adaptive-reuse/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/residential-development/",
+      "finalUrl": "https://warehausae.com/residential-development/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/residential-development/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/retail_hospitality/",
+      "finalUrl": "https://warehausae.com/retail_hospitality/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/retail_hospitality/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/service/architecture/",
+      "finalUrl": "https://warehausae.com/services/architecture/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/service/architecture/",
+          "status": 301,
+          "location": "https://warehausae.com/services/architecture/"
+        },
+        {
+          "url": "https://warehausae.com/services/architecture/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/service/civil-engineering/",
+      "finalUrl": "https://warehausae.com/service/civil-engineering/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/service/civil-engineering/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/service/corporate/",
+      "finalUrl": "https://warehausae.com/service/corporate/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/service/corporate/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/service/historic/",
+      "finalUrl": "https://warehausae.com/services/historic-preservation/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/service/historic/",
+          "status": 301,
+          "location": "https://warehausae.com/services/historic-preservation/"
+        },
+        {
+          "url": "https://warehausae.com/services/historic-preservation/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/service/interiors/",
+      "finalUrl": "https://warehausae.com/services/interior_design/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/service/interiors/",
+          "status": 301,
+          "location": "https://warehausae.com/services/interior_design/"
+        },
+        {
+          "url": "https://warehausae.com/services/interior_design/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/services/",
+      "finalUrl": "https://warehausae.com/services/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/services/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/services/architecture/",
+      "finalUrl": "https://warehausae.com/services/architecture/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/services/architecture/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/services/civil_engineering/",
+      "finalUrl": "https://warehausae.com/services/civil_engineering/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/services/civil_engineering/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/services/historic-preservation/",
+      "finalUrl": "https://warehausae.com/services/historic-preservation/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/services/historic-preservation/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/services/interior_design/",
+      "finalUrl": "https://warehausae.com/services/interior_design/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/services/interior_design/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/services/start-here/",
+      "finalUrl": "https://warehausae.com/services/start-here/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/services/start-here/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/services/structural/",
+      "finalUrl": "https://warehausae.com/services/structural/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/services/structural/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/tag/bischoff-inn/",
+      "finalUrl": "https://warehausae.com/tag/bischoff-inn/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/tag/bischoff-inn/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/tag/downtown/",
+      "finalUrl": "https://warehausae.com/tag/downtown/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/tag/downtown/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/tag/george-street/",
+      "finalUrl": "https://warehausae.com/tag/george-street/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/tag/george-street/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/tag/historic-preservation/",
+      "finalUrl": "https://warehausae.com/tag/historic-preservation/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/tag/historic-preservation/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/tag/historic/",
+      "finalUrl": "https://warehausae.com/tag/historic/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/tag/historic/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/tag/hospitality/",
+      "finalUrl": "https://warehausae.com/tag/hospitality/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/tag/hospitality/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/tag/owners/",
+      "finalUrl": "https://warehausae.com/tag/owners/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/tag/owners/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/tag/ownership/",
+      "finalUrl": "https://warehausae.com/tag/ownership/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/tag/ownership/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/tag/pa/",
+      "finalUrl": "https://warehausae.com/tag/pa/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/tag/pa/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/tag/tamaqua/",
+      "finalUrl": "https://warehausae.com/tag/tamaqua/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/tag/tamaqua/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/tag/york/",
+      "finalUrl": "https://warehausae.com/tag/york/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/tag/york/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/team/courtney-weaver/",
+      "finalUrl": "https://warehausae.com/team/courtney-weaver/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/team/courtney-weaver/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/team/craig-campbell/",
+      "finalUrl": "https://warehausae.com/team/craig-campbell/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/team/craig-campbell/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/team/dan-creep/",
+      "finalUrl": "https://warehausae.com/team/dan-creep/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/team/dan-creep/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/team/david-koratich/",
+      "finalUrl": "https://warehausae.com/team/david-koratich/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/team/david-koratich/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/team/derek-donnelly-pe/",
+      "finalUrl": "https://warehausae.com/team/derek-donnelly-pe/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/team/derek-donnelly-pe/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/team/erin-himmelberger/",
+      "finalUrl": "https://warehausae.com/team/erin-himmelberger/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/team/erin-himmelberger/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/team/jeffrey-stough/",
+      "finalUrl": "https://warehausae.com/team/jeffrey-stough/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/team/jeffrey-stough/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/team/joseph-stein/",
+      "finalUrl": "https://warehausae.com/team/joseph-stein/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/team/joseph-stein/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/team/lauren-bergman/",
+      "finalUrl": "https://warehausae.com/team/lauren-bergman/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/team/lauren-bergman/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/team/matt-robertson/",
+      "finalUrl": "https://warehausae.com/team/matt-robertson/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/team/matt-robertson/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/team/seo-stephenstone/",
+      "finalUrl": "https://warehausae.com/team/seo-stephenstone/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/team/seo-stephenstone/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/team/travis-kepler/",
+      "finalUrl": "https://warehausae.com/team/travis-kepler/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/team/travis-kepler/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/team/troy-bankert/",
+      "finalUrl": "https://warehausae.com/team/troy-bankert/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/team/troy-bankert/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/team/zach-michali-eit/",
+      "finalUrl": "https://warehausae.com/team/zach-michali-eit/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/team/zach-michali-eit/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/themencode-pdf-viewer-sc/",
+      "finalUrl": "https://warehausae.com/themencode-pdf-viewer-sc/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/themencode-pdf-viewer-sc/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/themencode-pdf-viewer/",
+      "finalUrl": "https://warehausae.com/themencode-pdf-viewer/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/themencode-pdf-viewer/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/unlimited-charts-with-polar-area-and-pie-charts-comparison-3/",
+      "finalUrl": "https://warehausae.com/unlimited-charts-with-polar-area-and-pie-charts-comparison-3/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/unlimited-charts-with-polar-area-and-pie-charts-comparison-3/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/unlimited-charts-with-polar-area-and-pie-charts-comparison/",
+      "finalUrl": "https://warehausae.com/unlimited-charts-with-polar-area-and-pie-charts-comparison/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/unlimited-charts-with-polar-area-and-pie-charts-comparison/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/warehaus-announces-leadership-promotions/",
+      "finalUrl": "https://warehausae.com/warehaus-announces-leadership-promotions/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/warehaus-announces-leadership-promotions/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/warehaus-leadership-promotions/",
+      "finalUrl": "https://warehausae.com/warehaus-leadership-promotions/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/warehaus-leadership-promotions/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    },
+    {
+      "source": "https://warehausae.com/warehaus-welcomes-courtney-weaver-as-chief-financial-officer/",
+      "finalUrl": "https://warehausae.com/warehaus-welcomes-courtney-weaver-as-chief-financial-officer/",
+      "finalStatus": 200,
+      "chain": [
+        {
+          "url": "https://warehausae.com/warehaus-welcomes-courtney-weaver-as-chief-financial-officer/",
+          "status": 200,
+          "location": null
+        }
+      ]
+    }
+  ]
+}
