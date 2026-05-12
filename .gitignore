@@ -1,0 +1,51 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Env files
+.env
+.env.*.local
+!.env.example
+
+# Migration tool output — by default ignore everything under scraped/, but allow
+# committing the small discovery summaries (url-inventory.md, crawl-result.json)
+# under scraped/_discovery/. Per-page markdown lives in _discovery/pages/ and is
+# excluded again so we don't commit hundreds of files.
+migration-tool/scraped/*
+!migration-tool/scraped/.gitkeep
+!migration-tool/scraped/_discovery/
+migration-tool/scraped/_discovery/*
+!migration-tool/scraped/_discovery/url-inventory.md
+!migration-tool/scraped/_discovery/crawl-result.json
+
+# Laravel / Statamic app
+warehaus-statamic/vendor/
+warehaus-statamic/node_modules/
+warehaus-statamic/public/build/
+warehaus-statamic/public/hot
+warehaus-statamic/public/storage
+warehaus-statamic/storage/*.key
+warehaus-statamic/storage/app/*
+!warehaus-statamic/storage/app/.gitkeep
+warehaus-statamic/storage/framework/cache/data/*
+warehaus-statamic/storage/framework/sessions/*
+warehaus-statamic/storage/framework/testing/*
+warehaus-statamic/storage/framework/views/*
+warehaus-statamic/storage/logs/*
+warehaus-statamic/bootstrap/cache/*.php
+warehaus-statamic/.phpunit.result.cache
+warehaus-statamic/Homestead.json
+warehaus-statamic/Homestead.yaml
+warehaus-statamic/auth.json
