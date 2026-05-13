@@ -3,23 +3,36 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{ title }} | {{ seo_defaults:site_title_pattern | replace:'{title}':'Warehaus' }}</title>
-    {{ if seo_description }}<meta name="description" content="{{ seo_description }}">{{ /if }}
+    <meta name="theme-color" content="#0c0a09">
+
+    <title>{{ if seo_title }}{{ seo_title }}{{ else }}{{ title }}{{ /if }} | {{ config:app:name }}</title>
+    <meta name="description" content="{{ if seo_description }}{{ seo_description }}{{ else }}{{ seo_defaults:default_description }}{{ /if }}">
+
+    {{# Canonical link uses the entry's permalink (Statamic auto-builds this) #}}
     <link rel="canonical" href="{{ permalink }}">
+
+    {{# Open Graph #}}
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{{ if seo_title }}{{ seo_title }}{{ else }}{{ title }}{{ /if }}">
+    <meta property="og:description" content="{{ if seo_description }}{{ seo_description }}{{ else }}{{ seo_defaults:default_description }}{{ /if }}">
+    <meta property="og:url" content="{{ permalink }}">
+    {{ if seo_og_image_url }}<meta property="og:image" content="{{ seo_og_image_url }}">{{ /if }}
+
+    {{# Fonts: free Inter as a stand-in for the licensed Neue Haas Unica Pro
+        on the live site. Swap at launch once the client supplies licensed
+        font files. #}}
+    <link rel="preconnect" href="https://fonts.bunny.net">
+    <link href="https://fonts.bunny.net/css?family=inter:300,400,500,600,700" rel="stylesheet">
+
     {{ vite src="resources/css/app.css|resources/js/app.js" }}
 </head>
-<body class="bg-white text-stone-900 antialiased">
-    <header class="border-b border-stone-200 px-6 py-4">
-        <a href="/" class="font-semibold text-xl tracking-tight">Warehaus</a>
-    </header>
+<body class="bg-white text-haus-ink-800 antialiased">
+    {{ partial:partials/header }}
 
-    <main class="mx-auto max-w-4xl px-6 py-12">
+    <main>
         {{ template_content }}
     </main>
 
-    <footer class="border-t border-stone-200 mt-24 px-6 py-8 text-sm text-stone-600">
-        <p>{{ site_info:address_line_1 }} · {{ site_info:address_line_2 }} · {{ site_info:phone }} · <a href="mailto:{{ site_info:email }}">{{ site_info:email }}</a></p>
-        <p class="mt-2 text-stone-400">Migration in progress — Phase 6 placeholder layout.</p>
-    </footer>
+    {{ partial:partials/footer }}
 </body>
 </html>

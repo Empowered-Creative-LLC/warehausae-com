@@ -1,0 +1,46 @@
+{{# Sticky/fixed top nav with transparent → solid scroll behavior. The data
+    attribute is read by resources/js/app.js to toggle the solid background
+    once the user has scrolled past the hero. #}}
+
+<header
+    data-haus-header
+    class="fixed top-0 inset-x-0 z-50 transition-colors duration-300
+           bg-transparent text-white"
+>
+    <div class="container-haus flex items-center justify-between gap-8 py-5">
+        <a href="/" class="flex items-center gap-3 group">
+            <span aria-hidden="true" class="inline-block h-6 w-6 border-2 border-current relative">
+                <span class="absolute inset-y-1 left-1 right-3 bg-current"></span>
+            </span>
+            <span class="font-semibold tracking-[0.12em] uppercase text-lg">Warehaus</span>
+        </a>
+
+        <nav class="hidden md:flex items-center gap-8 text-sm font-medium tracking-wide uppercase">
+            <a href="/services/" class="hover:text-haus-amber-400 transition">Services</a>
+            <a href="/portfolio/" class="hover:text-haus-amber-400 transition">Portfolio</a>
+            <a href="/about/" class="hover:text-haus-amber-400 transition">About</a>
+            <a href="/culture/" class="hover:text-haus-amber-400 transition">Culture</a>
+            <a href="/careers/" class="hover:text-haus-amber-400 transition">Careers</a>
+        </nav>
+
+        <button
+            type="button"
+            class="md:hidden inline-flex items-center justify-center h-10 w-10 rounded hover:bg-white/10"
+            data-haus-mobile-toggle
+            aria-label="Open menu"
+        >
+            <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+    </div>
+
+    {{# Mobile nav, hidden by default. Toggled via data-haus-mobile-toggle. #}}
+    <div data-haus-mobile-nav hidden class="md:hidden border-t border-white/10 bg-haus-ink-900/95">
+        <nav class="container-haus flex flex-col gap-4 py-6 text-sm font-medium tracking-wide uppercase">
+            <a href="/services/" class="py-1">Services</a>
+            <a href="/portfolio/" class="py-1">Portfolio</a>
+            <a href="/about/" class="py-1">About</a>
+            <a href="/culture/" class="py-1">Culture</a>
+            <a href="/careers/" class="py-1">Careers</a>
+        </nav>
+    </div>
+</header>

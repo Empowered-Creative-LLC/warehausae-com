@@ -1,0 +1,13 @@
+title: Newsletter
+tabs:
+  main:
+    sections:
+      - fields:
+          - handle: email
+            field:
+              type: text
+              input_type: email
+              display: Email
+              required: true
+              validate:
+                - email

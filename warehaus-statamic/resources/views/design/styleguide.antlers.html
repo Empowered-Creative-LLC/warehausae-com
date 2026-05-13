@@ -1,0 +1,143 @@
+{{# Internal styleguide. Reference of every shared style + effect component
+    we'll compose templates from in Phase 9. Routed via routes/web.php at
+    /design/styleguide so we don't need a CMS entry for it. #}}
+
+<article class="container-haus py-32 space-y-32">
+    <header>
+        <p class="eyebrow">Internal</p>
+        <h1 class="mt-2">Warehaus design styleguide</h1>
+        <p class="mt-4 text-lg text-haus-ink-500">Reference for typography, color, and shared components used across the new site. Not linked from public nav.</p>
+    </header>
+
+    {{# Typography #}}
+    <section>
+        <p class="eyebrow">01</p>
+        <h2 class="mt-2">Typography</h2>
+        <div class="mt-10 space-y-8">
+            <div>
+                <h1>Heading 1 / Hero title</h1>
+                <p class="text-sm text-haus-ink-400 mt-2">Used as the hero headline on most templates. Tracking-tight, weight 500.</p>
+            </div>
+            <div>
+                <h2>Heading 2 / Section header</h2>
+                <p class="text-sm text-haus-ink-400 mt-2">Used for the lead heading and section dividers.</p>
+            </div>
+            <div>
+                <h3>Heading 3 / Sub-section</h3>
+                <p class="text-sm text-haus-ink-400 mt-2">Used for narrative sub-section headings (We listen / We design / We deliver) and card titles.</p>
+            </div>
+            <p class="eyebrow">EYEBROW LABEL</p>
+            <p class="prose">Body prose. Some paragraphs of body text demonstrating how multi-line content looks. Architecture / civil engineering / structural engineering / interior design / historic preservation / building sciences. These are the disciplines we orchestrate together to bring spaces to life.</p>
+        </div>
+    </section>
+
+    {{# Color #}}
+    <section>
+        <p class="eyebrow">02</p>
+        <h2 class="mt-2">Color</h2>
+        <div class="mt-10 grid grid-cols-5 gap-4">
+            <div class="space-y-2"><div class="h-20 rounded bg-haus-amber-300"></div><p class="text-xs">amber-300</p></div>
+            <div class="space-y-2"><div class="h-20 rounded bg-haus-amber-400"></div><p class="text-xs">amber-400</p></div>
+            <div class="space-y-2"><div class="h-20 rounded bg-haus-amber-500"></div><p class="text-xs">amber-500</p></div>
+            <div class="space-y-2"><div class="h-20 rounded bg-haus-amber-600"></div><p class="text-xs">amber-600</p></div>
+            <div class="space-y-2"><div class="h-20 rounded bg-haus-amber-700"></div><p class="text-xs">amber-700</p></div>
+        </div>
+        <div class="mt-6 grid grid-cols-5 gap-4">
+            <div class="space-y-2"><div class="h-20 rounded bg-haus-ink-100 border border-haus-ink-200"></div><p class="text-xs">ink-100</p></div>
+            <div class="space-y-2"><div class="h-20 rounded bg-haus-ink-300"></div><p class="text-xs">ink-300</p></div>
+            <div class="space-y-2"><div class="h-20 rounded bg-haus-ink-500"></div><p class="text-xs">ink-500</p></div>
+            <div class="space-y-2"><div class="h-20 rounded bg-haus-ink-800"></div><p class="text-xs">ink-800</p></div>
+            <div class="space-y-2"><div class="h-20 rounded bg-haus-ink-900"></div><p class="text-xs">ink-900</p></div>
+        </div>
+    </section>
+
+    {{# Fade-in-on-scroll demo #}}
+    <section>
+        <p class="eyebrow">03</p>
+        <h2 class="mt-2">Fade-in on scroll</h2>
+        <p class="mt-4 text-haus-ink-500">Each card uses data-haus-fade-in with staggered delays. Scroll back up and reload to retrigger.</p>
+        <div class="mt-10 grid md:grid-cols-3 gap-6">
+            <div data-haus-fade-in class="p-6 rounded bg-haus-ink-100">
+                <p class="eyebrow">CARD 01</p>
+                <h3 class="mt-2">Comprehensive Research</h3>
+                <p class="mt-2 text-haus-ink-500">We gain valuable insight by exploring successful solutions implemented in surprising places around the world.</p>
+            </div>
+            <div data-haus-fade-in data-haus-fade-delay="200" class="p-6 rounded bg-haus-ink-100">
+                <p class="eyebrow">CARD 02</p>
+                <h3 class="mt-2">Community Feedback</h3>
+                <p class="mt-2 text-haus-ink-500">By gathering feedback from community members early in the ideation process.</p>
+            </div>
+            <div data-haus-fade-in data-haus-fade-delay="400" class="p-6 rounded bg-haus-ink-100">
+                <p class="eyebrow">CARD 03</p>
+                <h3 class="mt-2">Design Charettes</h3>
+                <p class="mt-2 text-haus-ink-500">Design charettes fuel the ideation process by bringing together all invested parties.</p>
+            </div>
+        </div>
+    </section>
+
+    {{# Parallax background demo (the 'WE BELIEVE IN' pattern from the homepage) #}}
+    <section>
+        <p class="eyebrow">04</p>
+        <h2 class="mt-2">Parallax background ("WE BELIEVE IN" block)</h2>
+        <div class="mt-10 -mx-6 md:-mx-10 lg:-mx-16">
+            <div
+                data-haus-parallax
+                data-haus-parallax-amount="0.4"
+                class="bg-haus-ink-900 text-white py-24 bg-cover bg-center"
+                style="background-image: linear-gradient(rgba(12,10,9,0.85), rgba(12,10,9,0.85)), url('/assets/imported/2022/03/Asset-1.png');"
+            >
+                <div class="container-haus grid md:grid-cols-2 gap-12 items-center">
+                    <div data-haus-fade-in>
+                        <p class="eyebrow">WE BELIEVE IN</p>
+                        <h2 class="mt-3">Finding Good Ideas Everywhere.</h2>
+                        <p class="mt-6 text-haus-ink-300 text-lg">We like to say that good ideas come from everywhere — especially unexpected places. Together, let's create a roadmap that refines your project vision upfront.</p>
+                    </div>
+                    <div class="text-center text-9xl text-haus-amber-400" aria-hidden="true">⚡</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {{# Hover image #}}
+    <section>
+        <p class="eyebrow">05</p>
+        <h2 class="mt-2">Hover image (project tile)</h2>
+        <div class="mt-10 grid md:grid-cols-3 gap-6">
+            <a href="#" data-haus-hover-image class="group block">
+                <div class="overflow-hidden rounded">
+                    <img src="https://picsum.photos/seed/wh-a/800/600" alt="" class="w-full h-64 object-cover">
+                </div>
+                <h3 class="mt-4 text-lg">Bischoff Inn</h3>
+                <p class="text-sm text-haus-ink-400">Architecture, Historic</p>
+            </a>
+            <a href="#" data-haus-hover-image class="group block">
+                <div class="overflow-hidden rounded">
+                    <img src="https://picsum.photos/seed/wh-b/800/600" alt="" class="w-full h-64 object-cover">
+                </div>
+                <h3 class="mt-4 text-lg">WellSpan York Hospital</h3>
+                <p class="text-sm text-haus-ink-400">Civil</p>
+            </a>
+            <a href="#" data-haus-hover-image class="group block">
+                <div class="overflow-hidden rounded">
+                    <img src="https://picsum.photos/seed/wh-c/800/600" alt="" class="w-full h-64 object-cover">
+                </div>
+                <h3 class="mt-4 text-lg">Test Fit Capabilities</h3>
+                <p class="text-sm text-haus-ink-400">Architecture, Interiors</p>
+            </a>
+        </div>
+    </section>
+
+    {{# Yellow check list #}}
+    <section>
+        <p class="eyebrow">06</p>
+        <h2 class="mt-2">Yellow check-bullet list (capabilities)</h2>
+        <ul class="check-list mt-10 grid md:grid-cols-2 gap-y-2">
+            <li>In-Depth Healthcare Experience</li>
+            <li>A Focus on Patient Experience</li>
+            <li>Fluency in Healthcare Terminology</li>
+            <li>Speed-to-Market Efficiencies</li>
+            <li>Speciality Suite Design</li>
+            <li>Workflow Optimization</li>
+        </ul>
+    </section>
+</article>

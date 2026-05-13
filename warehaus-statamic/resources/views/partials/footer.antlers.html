@@ -1,0 +1,70 @@
+{{# Footer with CTA + newsletter form + address. Pulled from site_info,
+    social, and footer globals. The newsletter form points to the Statamic
+    'newsletter' form (created in Phase 8). #}}
+
+<footer class="bg-haus-ink-900 text-haus-ink-100">
+    <div class="container-haus py-20 md:py-28 grid md:grid-cols-2 gap-12">
+        {{# CTA + newsletter signup #}}
+        <div>
+            <p class="eyebrow text-haus-amber-400">Have a project in mind?</p>
+            <h2 class="mt-2 text-4xl md:text-5xl font-medium tracking-tight">{{ footer:cta_heading }}<br><span class="text-haus-amber-400">{{ footer:cta_subheading }}</span></h2>
+
+            {{# Newsletter form — stub HTML for now. The Statamic form (in
+                resources/forms/newsletter.yaml) is registered but the
+                Antlers form:create tag wasn't behaving in this layout;
+                we'll wire it up in a polish pass before launch. For now
+                this renders the visual, posts nowhere. #}}
+            <form action="#" method="post" class="mt-8 max-w-md">
+                <label class="block">
+                    <span class="sr-only">{{ footer:newsletter_label }}</span>
+                    <div class="flex">
+                        <input
+                            type="email"
+                            name="email"
+                            required
+                            placeholder="{{ footer:newsletter_label }}"
+                            class="flex-1 rounded-l border-0 bg-haus-ink-800 text-white placeholder:text-haus-ink-400 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-haus-amber-400"
+                        >
+                        <button type="submit" class="rounded-r bg-haus-amber-500 hover:bg-haus-amber-400 text-haus-ink-900 font-semibold px-6 transition">
+                            {{ footer:newsletter_button }}
+                        </button>
+                    </div>
+                </label>
+                <p class="mt-3 text-sm text-haus-ink-400">{{ footer:newsletter_disclaimer }}</p>
+            </form>
+        </div>
+
+        {{# Address + direct contact #}}
+        <div class="md:text-right space-y-6">
+            <address class="not-italic">
+                <p class="text-lg leading-relaxed">{{ site_info:address_line_1 }}<br>{{ site_info:address_line_2 }}</p>
+            </address>
+
+            <div class="space-y-2 text-sm">
+                <p class="uppercase tracking-wide text-haus-ink-400">Email Us Directly</p>
+                <p><a href="mailto:{{ site_info:email }}" class="hover:text-haus-amber-400 transition">{{ site_info:email }}</a></p>
+            </div>
+
+            <div class="space-y-2 text-sm">
+                <p class="uppercase tracking-wide text-haus-ink-400">Call Us Directly</p>
+                <p><a href="tel:{{ site_info:phone_tel }}" class="hover:text-haus-amber-400 transition">{{ site_info:phone }}</a></p>
+            </div>
+
+            <div class="flex gap-4 md:justify-end pt-4">
+                {{ if {social:facebook_url} }}<a href="{{ social:facebook_url }}" target="_blank" rel="noopener" aria-label="Facebook" class="h-10 w-10 rounded-full bg-haus-ink-800 hover:bg-haus-amber-500 hover:text-haus-ink-900 inline-flex items-center justify-center transition">f</a>{{ /if }}
+                {{ if {social:linkedin_url} }}<a href="{{ social:linkedin_url }}" target="_blank" rel="noopener" aria-label="LinkedIn" class="h-10 w-10 rounded-full bg-haus-ink-800 hover:bg-haus-amber-500 hover:text-haus-ink-900 inline-flex items-center justify-center transition">in</a>{{ /if }}
+                {{ if {social:instagram_url} }}<a href="{{ social:instagram_url }}" target="_blank" rel="noopener" aria-label="Instagram" class="h-10 w-10 rounded-full bg-haus-ink-800 hover:bg-haus-amber-500 hover:text-haus-ink-900 inline-flex items-center justify-center transition">ig</a>{{ /if }}
+            </div>
+        </div>
+    </div>
+
+    <div class="border-t border-haus-ink-800">
+        <div class="container-haus py-6 flex flex-col md:flex-row md:justify-between gap-2 text-xs text-haus-ink-400">
+            <p>&copy; {{ now format="Y" }} Warehaus Architects + Engineers</p>
+            <p class="flex gap-4">
+                <a href="/privacy-policy/" class="hover:text-haus-amber-400 transition">Privacy Policy</a>
+                <a href="/terms-and-conditions/" class="hover:text-haus-amber-400 transition">Terms &amp; Conditions</a>
+            </p>
+        </div>
+    </div>
+</footer>
