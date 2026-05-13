@@ -1,0 +1,167 @@
+title: Project
+tabs:
+  main:
+    display: Main
+    sections:
+      - fields:
+          - handle: title
+            field:
+              type: text
+              display: Title
+              required: true
+          - handle: location
+            field:
+              type: text
+              display: Location
+              instructions: Location string under the title (e.g. 'York, PA', 'Various Locations', 'Lancaster, PA').
+          - handle: lead_heading
+            field:
+              type: text
+              display: Lead Heading
+              instructions: The H2 introducing the project narrative (e.g. 'Extensive expansion at York Hospital'). May be missing on short pages.
+          - handle: intro_prose
+            field:
+              type: textarea
+              display: Intro Prose
+              instructions: Paragraph(s) of body copy immediately after the lead heading, joined with double newlines.
+          - handle: narrative
+            field:
+              type: group
+              fields:
+                - handle: we_listen
+                  field:
+                    type: textarea
+                    display: Narrative We Listen
+                    instructions: Body of the 'We listen.' section.
+                - handle: we_design
+                  field:
+                    type: textarea
+                    display: Narrative We Design
+                    instructions: Body of the 'We design.' section.
+                - handle: we_deliver
+                  field:
+                    type: textarea
+                    display: Narrative We Deliver
+                    instructions: Body of the 'We deliver.' section.
+              display: Narrative
+              instructions: Three-section narrative present on most project pages. Leave any sub-field empty if not on the page.
+          - handle: client
+            field:
+              type: text
+              display: Client
+              instructions: Client name from the Project Details sidebar.
+          - handle: size
+            field:
+              type: text
+              display: Size
+              instructions: Project size as displayed (e.g. '50,000 sf', 'Undisclosed', 'Various Projects').
+          - handle: completion_date
+            field:
+              type: text
+              display: Completion Date
+              instructions: Completion date as displayed (e.g. 'Spring 2023', 'Estimated Spring 2025', 'Various Dates'). Preserve the literal string; do not coerce to a Date.
+          - handle: services_provided
+            field:
+              type: grid
+              mode: stacked
+              fields:
+                - handle: label
+                  field:
+                    type: text
+                    display: Services Provided Label
+                    instructions: Service label as displayed (e.g. 'Architecture', 'Civil', 'Historic').
+                - handle: url
+                  field:
+                    type: text
+                    display: Services Provided Url
+                    instructions: Absolute URL to the linked service page (e.g. /service/architecture/).
+              display: Services Provided
+              instructions: Services listed under 'Services' in the Project Details sidebar.
+          - handle: industries
+            field:
+              type: grid
+              mode: stacked
+              fields:
+                - handle: label
+                  field:
+                    type: text
+                    display: Industries Label
+                    instructions: Industry/category label as displayed (e.g. 'Healthcare', 'Adaptive Reuse').
+                - handle: url
+                  field:
+                    type: text
+                    display: Industries Url
+                    instructions: Absolute URL to the linked industry page.
+              display: Industries
+              instructions: Industries listed under 'Industries' in the Project Details sidebar.
+          - handle: awards
+            field:
+              type: list
+              display: Awards
+              instructions: Award lines if shown on the page (e.g. 'Preservation Pennsylvania Award Winner'). Absent on most projects.
+          - handle: hero_image_url
+            field:
+              type: text
+              display: Hero Image Url
+              instructions: URL of the first/primary image at the top of the page.
+          - handle: gallery_images
+            field:
+              type: grid
+              mode: stacked
+              fields:
+                - handle: url
+                  field:
+                    type: text
+                    display: Gallery Images Url
+                - handle: alt
+                  field:
+                    type: text
+                    display: Gallery Images Alt
+                    instructions: Alt text or caption text shown with the image.
+              display: Gallery Images
+              instructions: All images that appear on the project page. Deduplicate by URL — galleries on this site often repeat the same images twice in markdown.
+          - handle: related_projects
+            field:
+              type: grid
+              mode: stacked
+              fields:
+                - handle: title
+                  field:
+                    type: text
+                    display: Related Projects Title
+                - handle: url
+                  field:
+                    type: text
+                    display: Related Projects Url
+                - handle: categories
+                  field:
+                    type: list
+                    display: Related Projects Categories
+              display: Related Projects
+              instructions: Similar Projects list at the bottom of the page. Deduplicate by URL.
+          - handle: is_test_fits_subpage
+            field:
+              type: toggle
+              display: Is Test Fits Subpage
+              instructions: True only when the URL is /project/test-fits/{n}/ (an individual test fit). False for ordinary projects and for the parent /project/test-fits/ index page.
+  seo:
+    display: SEO & Source
+    sections:
+      - fields:
+          - handle: source_url
+            field:
+              type: text
+              display: Source URL
+              instructions: The original WordPress URL this entry was imported from (for traceability).
+          - handle: seo_title
+            field:
+              type: text
+              display: SEO title
+          - handle: seo_description
+            field:
+              type: textarea
+              display: SEO description
+          - handle: seo_og_image_url
+            field:
+              type: text
+              display: OG image URL

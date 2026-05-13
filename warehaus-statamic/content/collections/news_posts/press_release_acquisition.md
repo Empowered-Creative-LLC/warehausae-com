@@ -1,0 +1,120 @@
+---
+id: 77ad0bc6-7fde-4185-9603-3b2ff6d12fab
+blueprint: news_post
+title: Warehaus Architects and Engineers Accelerates Growth Through Acquisition of Johnston & Associates
+slug: press_release_acquisition
+source_url: https://warehausae.com/press_release_acquisition/
+url: /press_release_acquisition/
+published_date_text: September 29, 2025
+featured_image_url: /assets/imported/2025/09/Warehaus-Press-Release-092925-1024x731.png
+categories:
+  - label: Press Releases
+    url: https://warehausae.com/press_release_acquisition/
+body_markdown: >-
+  ![David Koratich, Eric Johnston and Troy Bankert announce the acquisition of Johnston & Associates by Warehaus](/assets/imported/2025/09/Warehaus-Press-Release-092925-1024x731.png)
+
+
+  ### Warehaus Architects and Engineers Accelerates Growth Through Acquisition of Johnston & Associates
+
+
+  **York, PA – September 29, 2025**
+
+
+  **Warehaus**, an award-winning architecture, engineering, and design firm celebrating 45 years of dedicated practice, announced today the acquisition of **Johnston and Associates**, a respected
+  civil engineering firm serving clients across Pennsylvania and Maryland for more than 30 years.
+
+
+  The move reflects Warehaus’ ongoing commitment to growth and local partnerships. Since coming under the ownership of **Troy Bankert, AIA**, CEO and President, and **David Koratich,** COO, in 2021,
+  Warehaus has focused on refining processes and building efficiencies while sustaining long-term client relationships. With that strong foundation in place, the company is now ready to expand its
+  reach.
+
+
+  “This is an exciting milestone for our team,” said Bankert. “We are always growth-minded, and acquisition is one way to expand our capabilities while staying true to our values. Johnston and
+  Associates has built an outstanding reputation for client service for more than three decades. It’s a natural fit that strengthens our foundation and positions us for continued success.”
+
+
+  Founded in 1988 by **Eric Johnston**, Johnston and Associates is known for providing highly personalized service and trusted guidance to their clients. Over the years, Eric and his dedicated team
+  have served generations of clients through all facets of land development, including zoning, erosion control, environmental permitting, and wetland delineation. Their hands-on approach and deep
+  understanding of their clients’ needs have been the foundation of their success.
+
+
+  “When I met with Warehaus, it immediately felt like a natural fit,” said Johnston “They share our commitment to honest communication and relationships built on trust. This acquisition ensures our
+  clients will continue to receive the same personal service and care they’ve come to expect.”
+
+
+  The integration of Johnston and Associates’ expertise with Warehaus’ resources will allow for an enhanced client experience, now supported by the additional strength and depth of a larger,
+  growth-oriented team.
+
+
+  “Our immediate focus is on building trust,” added Koratich. “We’ll personally meet with each client to reassure them that their projects will continue seamlessly, with the same high level of
+  service—backed by the added resources and expertise of Warehaus.”
+
+
+  **About Warehaus**
+
+
+  Warehaus is an award-winning architecture, design and engineering firm based in York, Pennsylvania. The firm was originally founded in 1980 as Land Survey Consultants. Since then, the company has
+  evolved to become a multi-disciplinary firm offering architecture, civil engineering and land planning, structural engineering, interior design, historic preservation, and building sciences
+  services.
+
+
+  In 2025, Warehaus was recognized as one of the _Fastest Growing Companies_ by the **Central Pennsylvania Business Journal**, reflecting the company’s dedication to growth, client success, and
+  regional impact. Warehaus is proudly owned and led by CEO and President Troy Bankert, AIA, and COO David Koratich, both long-time employees who have shaped the company’s vision and values.
+
+
+  For more information, visit warehausae.com.
+
+
+  **Media Contact:**
+
+
+  Lauren Bergman
+
+
+  Chief Marketing and Employee Engagement Officer
+
+
+  lbergman@warehausae.com
+
+
+  717-917-0737
+
+
+  ## Have a project in mind?
+
+
+  ## Let’s talk.
+
+
+  Email
+
+
+  Subscribe
+
+
+  No worries, we don’t spam your inbox.
+
+
+  231 North George Street
+
+
+  York, Pennsylvania 17401
+
+
+  EMAIL US DIRECTLY
+
+
+  info@warehausae.com
+
+
+  CALL US DIRECTLY
+
+
+  [717 845 8383](tel:17178458383)
+inline_images:
+  - url: /assets/imported/2025/09/Warehaus-Press-Release-092925-1024x731.png
+    alt: David Koratich, Eric Johnston and Troy Bankert announce the acquisition of Johnston & Associates by Warehaus
+seo_title: Warehaus Architects and Engineers Acquires Johnston & Associates
+seo_description: Warehaus architects announce their acquisition of Johnston & Associates, enhancing their engineering capabilities.
+seo_og_image_url: /assets/imported/2025/09/Warehaus-Press-Release-092925-1024x731.png
+---

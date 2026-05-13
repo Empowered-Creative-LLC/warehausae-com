@@ -23,6 +23,8 @@ import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
+import { BUCKETS, classify } from './lib/classify.js';
+
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = dirname(__dirname);
 const OUT_DIR = join(ROOT, 'scraped', '_discovery');
@@ -90,131 +92,10 @@ if (RECLASSIFY_ONLY) {
 }
 
 // ---------------------------------------------------------------------------
-// URL classification
+// URL classification (BUCKETS + classify imported from ./lib/classify.js)
 // ---------------------------------------------------------------------------
 
-const BUCKETS = [
-    'Homepage',
-    'Portfolio index (/portfolio/)',
-    'Portfolio category (/industry/{slug}/)',
-    'Project detail (/project/{slug}/)',
-    'Project sub-page (/project/{slug}/{n}/)',
-    'Service detail (/services/{slug}/) — canonical',
-    'Service detail (/service/{slug}/) — legacy',
-    'Services index',
-    'Team member detail (/team/{slug}/)',
-    'About / Culture / Careers',
-    'Job posting (/job/{slug}/)',
-    'Blog / News category index (/Industries/{slug}/)',
-    'Blog / News post',
-    'Case study (/case-study/{slug}/)',
-    'Legal',
-    'Legacy / redirect candidate (flat industry slug)',
-    'Legacy / redirect candidate (/work/, /work__trashed/)',
-    'WordPress / plugin internals (skip)',
-    'One-off landing page',
-    'Unknown / unclassified',
-];
-
 const buckets = Object.fromEntries(BUCKETS.map((b) => [b, []]));
-
-// Known canonical industry slugs (used to detect legacy flat URLs).
-const INDUSTRY_SLUGS = new Set([
-    'adaptive-reuse',
-    'arts-and-culture',
-    'building-sciences',
-    'civil-engineering',
-    'distribution-and-manufacturing',
-    'education',
-    'healthcare',
-    'historic',
-    'multi-family',
-    'municipal',
-    'retail-and-hospitality',
-    // Legacy underscore/alternate spellings that show up flat:
-    'arts_culture',
-    'corporate-office',
-    'distribution_manufacturing',
-    'multi-family',
-    'residential-development',
-    'retail_hospitality',
-]);
-
-const legalPatterns = [/privacy/i, /^\/terms/i, /cookie/i, /disclaimer/i];
-
-// WordPress internals + plugin pages + Elementor previews + trashed/orphaned.
-const wpInternalPatterns = [
-    /^\/wp-/, /^\/feed/, /^\/xmlrpc/, /\/cdn-cgi\//, /^\/\?p=/, /^\/page\/\d+/,
-    /^\/author\//, /^\/tag\//, /^\/category\//, /^\/comments\//, /^\/wp-json\//,
-    /^\/elementor-/, /^\/themencode-/, /^\/unlimited-charts-/, /^\/layout\//,
-    /^\/work__trashed/,
-];
-
-// "Article-like" slugs we treat as Blog/News posts — single-segment URLs that
-// look like marketing/news content (long descriptive slug, no parent path).
-function looksLikeNewsPost(path) {
-    if (path.split('/').filter(Boolean).length !== 1) return false;
-    if (!/^[a-z0-9_-]+$/.test(path.slice(1))) return false;
-    // Heuristics: matches typical announcement slugs warehaus uses.
-    if (/^\/warehaus-/.test(path)) return true;
-    if (/^\/press_release/.test(path)) return true;
-    if (/^\/case-study-/.test(path)) return true;
-    return false;
-}
-
-// One-off landing pages — single-segment, descriptive, but neither industry
-// nor news.
-const ONE_OFF_LANDINGS = new Set([
-    '/future-architects-and-engineers',
-    '/get-rewarded-for-referrals',
-    '/happyholidays',
-    '/harrisburg-project-map',
-    '/interiors_visit',
-    '/lunch-and-learns',
-]);
-
-function classify(rawUrl) {
-    let path;
-    try {
-        path = new URL(rawUrl).pathname.replace(/\/+$/, '') || '/';
-    } catch {
-        return 'Unknown / unclassified';
-    }
-
-    if (path === '/' || path === '/home' || path === '/index') return 'Homepage';
-    if (wpInternalPatterns.some((re) => re.test(path))) return 'WordPress / plugin internals (skip)';
-
-    if (path === '/portfolio') return 'Portfolio index (/portfolio/)';
-    if (path === '/services') return 'Services index';
-
-    if (/^\/industry\/[^/]+$/.test(path)) return 'Portfolio category (/industry/{slug}/)';
-    if (/^\/Industries\/[^/]+$/.test(path)) return 'Blog / News category index (/Industries/{slug}/)';
-
-    if (/^\/project\/[^/]+$/.test(path)) return 'Project detail (/project/{slug}/)';
-    if (/^\/project\/[^/]+\/\d+$/.test(path)) return 'Project sub-page (/project/{slug}/{n}/)';
-
-    if (/^\/services\/[^/]+$/.test(path)) return 'Service detail (/services/{slug}/) — canonical';
-    if (/^\/service\/[^/]+$/.test(path)) return 'Service detail (/service/{slug}/) — legacy';
-
-    if (/^\/team\/[^/]+$/.test(path)) return 'Team member detail (/team/{slug}/)';
-    if (path === '/about' || path === '/culture' || path === '/careers') {
-        return 'About / Culture / Careers';
-    }
-    if (/^\/job\/[^/]+$/.test(path)) return 'Job posting (/job/{slug}/)';
-    if (/^\/case-study\/[^/]+$/.test(path)) return 'Case study (/case-study/{slug}/)';
-    if (legalPatterns.some((re) => re.test(path))) return 'Legal';
-    if (/^\/work\/[^/]+$/.test(path)) return 'Legacy / redirect candidate (/work/, /work__trashed/)';
-
-    // Flat single-segment URLs that look like legacy industry pages.
-    if (path.split('/').filter(Boolean).length === 1) {
-        const slug = path.slice(1);
-        if (INDUSTRY_SLUGS.has(slug)) return 'Legacy / redirect candidate (flat industry slug)';
-        if (ONE_OFF_LANDINGS.has(path)) return 'One-off landing page';
-        if (looksLikeNewsPost(path)) return 'Blog / News post';
-    }
-
-    return 'Unknown / unclassified';
-}
 
 for (const page of pages) {
     const url = page.metadata?.sourceURL ?? page.metadata?.url;

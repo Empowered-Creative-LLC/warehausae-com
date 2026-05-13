@@ -1,0 +1,9 @@
+title: Services
+route: "/services/{slug}"
+template: services.show
+layout: layout
+sites:
+  - default
+blueprints:
+  - service
+sort_dir: asc

@@ -1,0 +1,11 @@
+title: Projects
+route: "/project/{slug}"
+template: projects.show
+layout: layout
+sites:
+  - default
+blueprints:
+  - project
+sort_dir: asc
+taxonomies:
+  - industries_categories

@@ -1,0 +1,9 @@
+title: Industries Categories
+route: "/Industries/{slug}"
+template: industries_categories.show
+layout: layout
+sites:
+  - default
+blueprints:
+  - industries_category
+sort_dir: asc

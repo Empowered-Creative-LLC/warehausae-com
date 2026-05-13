@@ -1,0 +1,85 @@
+{
+    "_meta": {
+        "template": "case_study",
+        "applies_to_urls": [
+            "https://warehausae.com/case-study/bischoff-inn/",
+            "https://warehausae.com/case-study/municipal-engineering/",
+            "https://warehausae.com/case-study-bischoff-inn/"
+        ],
+        "notes": "Case study pages combine project-style structure with a longer-form narrative. Layout: hero image, title H1, lead intro paragraph, 'Project Info' sidebar (Location, Owner/Client, Project Type, Completion Date, sometimes Award), then multiple H3-led narrative sections each with body prose and image gallery, and (rarely) team-member spotlights. Two URL shapes exist: /case-study/{slug}/ (slash) and /case-study-{slug}/ (flat-dash) — same template, separate entries per the zero-301s constraint."
+    },
+    "prompt": "Extract a warehausae.com case study page. Capture title, lead intro, the Project Info sidebar facts, every named narrative section (heading + body + images), and any award or team callout. Preserve image URLs and captions.",
+    "systemPrompt": "Extracting one case study page on warehausae.com. Use null or empty arrays for missing fields. Do not invent narrative text.",
+    "schema": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+            "title": { "type": "string", "description": "Title shown in the H1." },
+            "hero_image_url": { "type": "string", "description": "URL of the hero image at the top of the page." },
+            "intro_prose": { "type": "string", "description": "Paragraph(s) immediately following the title, joined with double newlines." },
+            "project_info": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                    "location": { "type": "string" },
+                    "owner_client": { "type": "string", "description": "Owner/Client text (may include multiple lines like 'Engineer of Record / for New Freedom Borough')." },
+                    "project_type": { "type": "string" },
+                    "completion_date": { "type": "string" },
+                    "award": { "type": "string", "description": "Award text if displayed in the sidebar (e.g. 'Preservation Pennsylvania Award Winner')." }
+                },
+                "description": "Project Info sidebar."
+            },
+            "sections": {
+                "type": "array",
+                "items": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                        "heading": { "type": "string", "description": "H3 heading of this narrative section." },
+                        "body": { "type": "string", "description": "Body prose of the section, joined with double newlines." },
+                        "images": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "additionalProperties": false,
+                                "properties": {
+                                    "url": { "type": "string" },
+                                    "caption": { "type": "string" }
+                                },
+                                "required": ["url"]
+                            }
+                        }
+                    },
+                    "required": ["heading", "body"]
+                },
+                "description": "Named narrative sections under H3 headings."
+            },
+            "team_spotlights": {
+                "type": "array",
+                "items": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                        "name": { "type": "string" },
+                        "title_line": { "type": "string", "description": "Role line shown below the name (e.g. 'Sewage Enforcement Officer / SEO# 04183')." },
+                        "headshot_url": { "type": "string" },
+                        "blurb": { "type": "string" }
+                    },
+                    "required": ["name"]
+                },
+                "description": "Team-member callouts that appear in some case studies (e.g. the SEO Stephen Stone block on /case-study/municipal-engineering/)."
+            },
+            "related_project_url": { "type": "string", "description": "If the case study links out to a /project/{slug}/ page, that URL." },
+            "seo": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                    "title": { "type": "string" },
+                    "description": { "type": "string" },
+                    "og_image_url": { "type": "string" }
+                }
+            }
+        },
+        "required": ["title", "intro_prose"]
+    }
+}

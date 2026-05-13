@@ -1,0 +1,12 @@
+title: News Posts
+route: "{url}"
+template: news_posts.show
+layout: layout
+sites:
+  - default
+blueprints:
+  - news_post
+sort_dir: desc
+sort_field: published_date_text
+taxonomies:
+  - industries_categories

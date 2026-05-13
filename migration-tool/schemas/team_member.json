@@ -1,0 +1,42 @@
+{
+    "_meta": {
+        "template": "team_member",
+        "applies_to_urls": [
+            "https://warehausae.com/team/dan-creep/",
+            "https://warehausae.com/team/jeffrey-stough/",
+            "https://warehausae.com/team/troy-bankert/"
+        ],
+        "notes": "Team profile pages share a consistent layout: headshot, name H1, role line, two 'Years in Industry' / 'Years with Warehaus' counters, multi-paragraph bio (often ending with education), then a short contact blurb with email + phone."
+    },
+    "prompt": "Extract the team member's profile data from a warehausae.com /team/{slug}/ page. Preserve original wording in the bio and contact blurb. Email and phone must be plain (no anchor tags). If education appears in the bio, copy it verbatim into the education field while also keeping it in the bio prose.",
+    "systemPrompt": "You are extracting one team member profile from a single page on warehausae.com. Return null or empty arrays for fields that don't appear on the page. Do not invent biography or contact details.",
+    "schema": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+            "name": { "type": "string", "description": "The team member's full name as shown in the H1 (e.g. 'Dan Creep', 'Troy Bankert, AIA')." },
+            "first_name": { "type": "string", "description": "First name used in the contact card heading (e.g. 'Dan', 'Jeff'). Often shorter than the full name." },
+            "title": { "type": "string", "description": "Role/title shown directly under the name (e.g. 'Director of Engineering', 'Civil Project Manager')." },
+            "discipline": { "type": "string", "description": "The service discipline this team member primarily belongs to (architecture, civil engineering, structural, interior design, historic preservation, etc.), inferred from title and bio if not explicit." },
+            "headshot_url": { "type": "string", "description": "Absolute URL to the profile photo." },
+            "years_in_industry": { "type": "integer", "description": "Number from the 'Years in Industry' label, if present." },
+            "years_with_warehaus": { "type": "integer", "description": "Number from the 'Years with Warehaus' label, if present." },
+            "bio": { "type": "string", "description": "Multi-paragraph biography prose joined with double newlines. Preserve exact wording." },
+            "education": { "type": "string", "description": "Education sentence(s) if mentioned in the bio (e.g. 'Dan holds a degree in Civil Engineering Technology from the University of Pittsburgh-Johnstown.'). Leave empty if not present." },
+            "contact_blurb": { "type": "string", "description": "The short prompt above the email/phone (e.g. 'Have a project with civil engineering needs? Connect with Dan to discuss.')." },
+            "email": { "type": "string", "description": "Direct email address (e.g. dcreep@warehausae.com). No mailto: prefix." },
+            "phone": { "type": "string", "description": "Phone number as displayed (e.g. '(717) 815-8503')." },
+            "linkedin_url": { "type": "string", "description": "LinkedIn profile URL if shown anywhere on the page." },
+            "seo": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                    "title": { "type": "string" },
+                    "description": { "type": "string" },
+                    "og_image_url": { "type": "string" }
+                }
+            }
+        },
+        "required": ["name", "title", "bio"]
+    }
+}

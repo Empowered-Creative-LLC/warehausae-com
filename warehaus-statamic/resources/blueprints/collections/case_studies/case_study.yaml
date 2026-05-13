@@ -1,0 +1,139 @@
+title: Case Study
+tabs:
+  main:
+    display: Main
+    sections:
+      - fields:
+          - handle: title
+            field:
+              type: text
+              display: Title
+              required: true
+          - handle: url
+            field:
+              type: text
+              display: URL override
+              instructions: >-
+                Absolute path (starting with /) that this entry should serve at. Statamic uses this as the route override, allowing different entries in this collection to live at different URL shapes
+                (e.g. /healthcare/ vs /industry/civil-engineering/).
+              required: true
+          - handle: hero_image_url
+            field:
+              type: text
+              display: Hero Image Url
+              instructions: URL of the hero image at the top of the page.
+          - handle: intro_prose
+            field:
+              type: textarea
+              display: Intro Prose
+              instructions: Paragraph(s) immediately following the title, joined with double newlines.
+              required: true
+          - handle: project_info
+            field:
+              type: group
+              fields:
+                - handle: location
+                  field:
+                    type: text
+                    display: Project Info Location
+                - handle: owner_client
+                  field:
+                    type: text
+                    display: Project Info Owner Client
+                    instructions: Owner/Client text (may include multiple lines like 'Engineer of Record / for New Freedom Borough').
+                - handle: project_type
+                  field:
+                    type: text
+                    display: Project Info Project Type
+                - handle: completion_date
+                  field:
+                    type: text
+                    display: Project Info Completion Date
+                - handle: award
+                  field:
+                    type: text
+                    display: Project Info Award
+                    instructions: Award text if displayed in the sidebar (e.g. 'Preservation Pennsylvania Award Winner').
+              display: Project Info
+              instructions: Project Info sidebar.
+          - handle: sections
+            field:
+              type: grid
+              mode: stacked
+              fields:
+                - handle: heading
+                  field:
+                    type: text
+                    display: Sections Heading
+                    instructions: H3 heading of this narrative section.
+                - handle: body
+                  field:
+                    type: textarea
+                    display: Sections Body
+                    instructions: Body prose of the section, joined with double newlines.
+                - handle: images
+                  field:
+                    type: grid
+                    mode: stacked
+                    fields:
+                      - handle: url
+                        field:
+                          type: text
+                          display: Images Url
+                      - handle: caption
+                        field:
+                          type: text
+                          display: Images Caption
+                    display: Sections Images
+              display: Sections
+              instructions: Named narrative sections under H3 headings.
+          - handle: team_spotlights
+            field:
+              type: grid
+              mode: stacked
+              fields:
+                - handle: name
+                  field:
+                    type: text
+                    display: Team Spotlights Name
+                - handle: title_line
+                  field:
+                    type: text
+                    display: Team Spotlights Title Line
+                    instructions: Role line shown below the name (e.g. 'Sewage Enforcement Officer / SEO# 04183').
+                - handle: headshot_url
+                  field:
+                    type: text
+                    display: Team Spotlights Headshot Url
+                - handle: blurb
+                  field:
+                    type: textarea
+                    display: Team Spotlights Blurb
+              display: Team Spotlights
+              instructions: Team-member callouts that appear in some case studies (e.g. the SEO Stephen Stone block on /case-study/municipal-engineering/).
+          - handle: related_project_url
+            field:
+              type: text
+              display: Related Project Url
+              instructions: If the case study links out to a /project/{slug}/ page, that URL.
+  seo:
+    display: SEO & Source
+    sections:
+      - fields:
+          - handle: source_url
+            field:
+              type: text
+              display: Source URL
+              instructions: The original WordPress URL this entry was imported from (for traceability).
+          - handle: seo_title
+            field:
+              type: text
+              display: SEO title
+          - handle: seo_description
+            field:
+              type: textarea
+              display: SEO description
+          - handle: seo_og_image_url
+            field:
+              type: text
+              display: OG image URL

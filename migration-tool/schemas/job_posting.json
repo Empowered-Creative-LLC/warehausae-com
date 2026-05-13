@@ -1,0 +1,40 @@
+{
+    "_meta": {
+        "template": "job_posting",
+        "applies_to_urls": [
+            "https://warehausae.com/job/civil-project-manager-2/",
+            "https://warehausae.com/job/structural-designer-position/",
+            "https://warehausae.com/job/job-civil-designer/"
+        ],
+        "notes": "Warehaus job postings live at /job/{slug}/. Typical structure: title H1, location/department/type sidebar facts, role overview prose, responsibilities bullets, qualifications/requirements bullets, benefits bullets, and an apply CTA."
+    },
+    "prompt": "Extract a warehausae.com job posting. Capture role title, the location/department/employment-type facts, the role overview prose, and the bulleted lists for responsibilities, requirements/qualifications, and benefits. Preserve the apply URL if present.",
+    "systemPrompt": "Extracting one job posting from warehausae.com. Use null or empty arrays for missing fields. Do not invent benefits or requirements.",
+    "schema": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+            "title": { "type": "string", "description": "Job title shown in the H1." },
+            "department": { "type": "string", "description": "Department/team (e.g. 'Civil Engineering', 'Architecture'). May be missing." },
+            "location": { "type": "string", "description": "Job location (e.g. 'York, PA', 'Remote', 'Hybrid'). May be missing." },
+            "employment_type": { "type": "string", "description": "Employment type (e.g. 'Full-time', 'Part-time', 'Contract'). May be missing." },
+            "posted_date": { "type": "string", "description": "Date posted, as displayed. Preserve the literal string." },
+            "overview": { "type": "string", "description": "Role overview / intro prose, joined with double newlines." },
+            "responsibilities": { "type": "array", "items": { "type": "string" }, "description": "Bulleted responsibilities." },
+            "qualifications": { "type": "array", "items": { "type": "string" }, "description": "Bulleted qualifications / required skills / experience." },
+            "benefits": { "type": "array", "items": { "type": "string" }, "description": "Bulleted benefits or perks." },
+            "apply_url": { "type": "string", "description": "URL or mailto behind an 'Apply' button if present." },
+            "apply_email": { "type": "string", "description": "Email to send applications to, if displayed." },
+            "seo": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                    "title": { "type": "string" },
+                    "description": { "type": "string" },
+                    "og_image_url": { "type": "string" }
+                }
+            }
+        },
+        "required": ["title", "overview"]
+    }
+}

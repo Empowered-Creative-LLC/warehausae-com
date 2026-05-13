@@ -1,0 +1,110 @@
+{
+    "_meta": {
+        "template": "service",
+        "applies_to_urls": [
+            "https://warehausae.com/services/architecture/",
+            "https://warehausae.com/services/civil_engineering/",
+            "https://warehausae.com/services/historic-preservation/",
+            "https://warehausae.com/services/interior_design/",
+            "https://warehausae.com/services/structural/",
+            "https://warehausae.com/services/start-here/"
+        ],
+        "notes": "warehausae service pages share a consistent layout: hero with tagline + service name + lead heading, intro prose, capabilities bullet list, methodology/approach blocks (4 typically), team leader cards, and a recent projects list."
+    },
+    "prompt": "Extract structured data from a warehausae.com service landing page. Capture the hero text, intro prose, capabilities list, methodology blocks, team leaders, and recent projects. Preserve URLs and email addresses verbatim. Do not invent fields.",
+    "systemPrompt": "You are extracting data from a single page on warehausae.com. Return only fields that appear on the page; leave missing fields as null or empty arrays.",
+    "schema": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+            "service_name": {
+                "type": "string",
+                "description": "The service discipline shown in the hero, e.g. 'architecture', 'civil engineering', 'interior design'."
+            },
+            "tagline": {
+                "type": "string",
+                "description": "The short pre-heading or motto displayed above the service name (e.g. 'We listen. We design. We deliver.'). May be missing."
+            },
+            "lead_heading": {
+                "type": "string",
+                "description": "The primary H2/H3 below the hero that frames the value proposition."
+            },
+            "intro_prose": {
+                "type": "string",
+                "description": "The paragraph(s) of body copy immediately after the lead heading, joined with double newlines."
+            },
+            "capabilities": {
+                "type": "array",
+                "items": { "type": "string" },
+                "description": "Bulleted capabilities/disciplines shown on the page, in order."
+            },
+            "approach_heading": {
+                "type": "string",
+                "description": "Heading of the methodology section (e.g. 'Our Architectural Approach'). May be missing."
+            },
+            "approach_blocks": {
+                "type": "array",
+                "items": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                        "title": { "type": "string" },
+                        "body": { "type": "string" }
+                    },
+                    "required": ["title", "body"]
+                },
+                "description": "Sub-sections under the approach heading; typically 4 cards (e.g. Comprehensive Research, Community Feedback, Design Charettes, Concept Sketches)."
+            },
+            "team_leaders": {
+                "type": "array",
+                "items": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                        "name": { "type": "string" },
+                        "title": { "type": "string", "description": "Role / job title under the name." },
+                        "team_url": { "type": "string", "description": "Link to /team/{slug}/" },
+                        "headshot_url": { "type": "string" },
+                        "linkedin_url": { "type": "string" },
+                        "email": { "type": "string" }
+                    },
+                    "required": ["name"]
+                },
+                "description": "Team leader cards shown on the service page. Each links to a /team/{slug}/ profile."
+            },
+            "recent_projects": {
+                "type": "array",
+                "items": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                        "title": { "type": "string" },
+                        "url": { "type": "string", "description": "Absolute URL to /project/{slug}/" },
+                        "categories": {
+                            "type": "array",
+                            "items": { "type": "string" },
+                            "description": "Comma-separated category tags shown under each project link."
+                        }
+                    },
+                    "required": ["title", "url"]
+                },
+                "description": "Featured project list at the bottom of the page."
+            },
+            "hero_image_url": {
+                "type": "string",
+                "description": "Hero image at the top of the page if any. May be missing."
+            },
+            "seo": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                    "title": { "type": "string" },
+                    "description": { "type": "string" },
+                    "og_image_url": { "type": "string" }
+                },
+                "description": "SEO meta read from <title>, meta description, and og:image."
+            }
+        },
+        "required": ["service_name", "lead_heading", "capabilities"]
+    }
+}

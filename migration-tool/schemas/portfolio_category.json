@@ -1,0 +1,85 @@
+{
+    "_meta": {
+        "template": "portfolio_category",
+        "applies_to_urls": [
+            "https://warehausae.com/healthcare/",
+            "https://warehausae.com/adaptive-reuse/",
+            "https://warehausae.com/industry/civil-engineering/",
+            "https://warehausae.com/industry/municipal/"
+        ],
+        "notes": "Portfolio category pages (a.k.a. industries) share a hero with tagline + category name, a lead intro paragraph, optional bullet-list groupings (e.g. Suites/Buildings on healthcare), 1-4 'A Warehaus Partnership Brings' sub-cards (title + body), an optional pull quote testimonial with attribution, and an auto-generated Recent Projects list. 10 entries live at flat /{slug}/, 3 at /industry/{slug}/."
+    },
+    "prompt": "Extract structured fields from a warehausae.com portfolio category (a.k.a. 'industry') landing page. Capture hero text, intro prose, capability bullet groups (if any), partnership-brings cards, testimonial pull-quote, and the recent projects list.",
+    "systemPrompt": "Extracting one portfolio category page on warehausae.com. Use null or empty arrays for fields that are not present. Do not invent testimonials or capabilities.",
+    "schema": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+            "category_name": { "type": "string", "description": "Lowercase category name shown in the hero (e.g. 'healthcare', 'adaptive reuse', 'civil engineering')." },
+            "tagline": { "type": "string", "description": "Pre-hero tagline (often 'We listen. We design. We deliver.'). May be missing." },
+            "lead_heading": { "type": "string", "description": "H2 immediately below the hero framing the value (e.g. 'An Optimized Patient Experience')." },
+            "intro_prose": { "type": "string", "description": "Paragraph(s) following the lead heading, joined with double newlines." },
+            "capability_groups": {
+                "type": "array",
+                "items": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                        "heading": { "type": "string", "description": "Group heading (e.g. 'Suites', 'Buildings')." },
+                        "items": { "type": "array", "items": { "type": "string" } }
+                    },
+                    "required": ["heading", "items"]
+                },
+                "description": "Bulleted capability groupings shown on the page. Healthcare has 'Suites' and 'Buildings'. Other categories may have 0 or more groups."
+            },
+            "partnership_cards": {
+                "type": "array",
+                "items": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                        "title": { "type": "string" },
+                        "body": { "type": "string" }
+                    },
+                    "required": ["title", "body"]
+                },
+                "description": "Cards under a 'A Warehaus Partnership Brings' style heading (e.g. 'In-Depth Healthcare Experience', 'A Focus on Patient Experience')."
+            },
+            "testimonial": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                    "quote": { "type": "string" },
+                    "attribution_name": { "type": "string" },
+                    "attribution_org": { "type": "string" }
+                },
+                "description": "Pull-quote testimonial near the bottom of the page. Leave fields empty if no testimonial appears."
+            },
+            "recent_projects": {
+                "type": "array",
+                "items": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                        "title": { "type": "string" },
+                        "url": { "type": "string" },
+                        "categories": { "type": "array", "items": { "type": "string" } }
+                    },
+                    "required": ["title", "url"]
+                },
+                "description": "Project list shown under 'Recent Projects' at the bottom. Deduplicate by URL."
+            },
+            "hero_image_url": { "type": "string" },
+            "seo": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                    "title": { "type": "string" },
+                    "description": { "type": "string" },
+                    "og_image_url": { "type": "string" }
+                }
+            }
+        },
+        "required": ["category_name", "lead_heading"]
+    }
+}

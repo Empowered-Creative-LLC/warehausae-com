@@ -1,0 +1,39 @@
+{{# Phase 6 placeholder. Renders every blueprint field as a labelled block so
+    we can verify the URL → entry → blueprint pipeline before designing real
+    templates in Phase 9. #}}
+
+<article class="space-y-6">
+    <header>
+        <h1 class="text-3xl font-semibold tracking-tight">{{ title }}</h1>
+        <p class="mt-1 text-sm text-stone-500">{{ collection:handle }} · {{ url }}</p>
+        {{ if source_url }}<p class="text-xs text-stone-400">Source: <a href="{{ source_url }}" class="underline">{{ source_url }}</a></p>{{ /if }}
+    </header>
+
+    {{ if intro_prose }}
+        <section class="prose">
+            {{ intro_prose | nl2br }}
+        </section>
+    {{ /if }}
+
+    {{ if bio }}
+        <section class="prose">{{ bio | nl2br }}</section>
+    {{ /if }}
+
+    {{ if body_markdown }}
+        <section class="prose">{{ body_markdown | markdown }}</section>
+    {{ /if }}
+
+    {{ if hero_image_url }}
+        <img src="{{ hero_image_url }}" alt="" class="w-full rounded">
+    {{ /if }}
+
+    {{ if gallery_images }}
+        <section class="grid grid-cols-2 gap-4">
+            {{ gallery_images }}
+                <img src="{{ url }}" alt="{{ alt }}" class="rounded">
+            {{ /gallery_images }}
+        </section>
+    {{ /if }}
+
+    <p class="mt-12 text-xs text-stone-500">Phase 6 placeholder view. Polished template comes in Phase 9.</p>
+</article>

@@ -1,0 +1,85 @@
+title: Job Posting
+tabs:
+  main:
+    display: Main
+    sections:
+      - fields:
+          - handle: title
+            field:
+              type: text
+              display: Title
+              required: true
+          - handle: department
+            field:
+              type: text
+              display: Department
+              instructions: Department/team (e.g. 'Civil Engineering', 'Architecture'). May be missing.
+          - handle: location
+            field:
+              type: text
+              display: Location
+              instructions: Job location (e.g. 'York, PA', 'Remote', 'Hybrid'). May be missing.
+          - handle: employment_type
+            field:
+              type: text
+              display: Employment Type
+              instructions: Employment type (e.g. 'Full-time', 'Part-time', 'Contract'). May be missing.
+          - handle: posted_date
+            field:
+              type: text
+              display: Posted Date
+              instructions: Date posted, as displayed. Preserve the literal string.
+          - handle: overview
+            field:
+              type: textarea
+              display: Overview
+              instructions: Role overview / intro prose, joined with double newlines.
+              required: true
+          - handle: responsibilities
+            field:
+              type: list
+              display: Responsibilities
+              instructions: Bulleted responsibilities.
+          - handle: qualifications
+            field:
+              type: list
+              display: Qualifications
+              instructions: Bulleted qualifications / required skills / experience.
+          - handle: benefits
+            field:
+              type: list
+              display: Benefits
+              instructions: Bulleted benefits or perks.
+          - handle: apply_url
+            field:
+              type: text
+              input_type: url
+              display: Apply Url
+              instructions: URL or mailto behind an 'Apply' button if present.
+          - handle: apply_email
+            field:
+              type: text
+              input_type: email
+              display: Apply Email
+              instructions: Email to send applications to, if displayed.
+  seo:
+    display: SEO & Source
+    sections:
+      - fields:
+          - handle: source_url
+            field:
+              type: text
+              display: Source URL
+              instructions: The original WordPress URL this entry was imported from (for traceability).
+          - handle: seo_title
+            field:
+              type: text
+              display: SEO title
+          - handle: seo_description
+            field:
+              type: textarea
+              display: SEO description
+          - handle: seo_og_image_url
+            field:
+              type: text
+              display: OG image URL

@@ -1,0 +1,108 @@
+{
+    "_meta": {
+        "template": "project",
+        "applies_to_urls": [
+            "https://warehausae.com/project/wellspan-health-york-hospital/",
+            "https://warehausae.com/project/bischoff-inn/",
+            "https://warehausae.com/project/phoenix-contact-office/",
+            "https://warehausae.com/project/test-fits/",
+            "https://warehausae.com/project/test-fits/2/"
+        ],
+        "notes": "Project pages share a layout: title + location, hero/gallery images, lead heading + intro paragraph, 'Project Details' sidebar (client, size, completion date, services, industries), three-section narrative under 'We listen. / We design. / We deliver.' headings (may be absent on shorter projects), and a Similar Projects list. Test-fits sub-pages (/project/test-fits/{n}/) reuse this template with 'Various' style placeholders for client/size/date and feature an individual test-fit's images."
+    },
+    "prompt": "Extract structured fields from a warehausae.com project detail page. Capture the title, location, hero gallery, intro prose, project facts (client, size, completion date), the services and industries the project belongs to, the three-act narrative (we listen / we design / we deliver) if present, awards if mentioned, and the related projects list. Preserve URLs, including service and industry links. The full body prose should also be captured verbatim so a Bard field can recreate it.",
+    "systemPrompt": "You are extracting one project page from warehausae.com. Use null or empty arrays for missing fields. Do not invent client names, sizes, or dates.",
+    "schema": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+            "title": { "type": "string", "description": "The project title shown in the H1." },
+            "location": { "type": "string", "description": "Location string under the title (e.g. 'York, PA', 'Various Locations', 'Lancaster, PA')." },
+            "lead_heading": { "type": "string", "description": "The H2 introducing the project narrative (e.g. 'Extensive expansion at York Hospital'). May be missing on short pages." },
+            "intro_prose": { "type": "string", "description": "Paragraph(s) of body copy immediately after the lead heading, joined with double newlines." },
+            "narrative": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                    "we_listen": { "type": "string", "description": "Body of the 'We listen.' section." },
+                    "we_design": { "type": "string", "description": "Body of the 'We design.' section." },
+                    "we_deliver": { "type": "string", "description": "Body of the 'We deliver.' section." }
+                },
+                "description": "Three-section narrative present on most project pages. Leave any sub-field empty if not on the page."
+            },
+            "client": { "type": "string", "description": "Client name from the Project Details sidebar." },
+            "size": { "type": "string", "description": "Project size as displayed (e.g. '50,000 sf', 'Undisclosed', 'Various Projects')." },
+            "completion_date": { "type": "string", "description": "Completion date as displayed (e.g. 'Spring 2023', 'Estimated Spring 2025', 'Various Dates'). Preserve the literal string; do not coerce to a Date." },
+            "services_provided": {
+                "type": "array",
+                "items": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                        "label": { "type": "string", "description": "Service label as displayed (e.g. 'Architecture', 'Civil', 'Historic')." },
+                        "url": { "type": "string", "description": "Absolute URL to the linked service page (e.g. /service/architecture/)." }
+                    },
+                    "required": ["label"]
+                },
+                "description": "Services listed under 'Services' in the Project Details sidebar."
+            },
+            "industries": {
+                "type": "array",
+                "items": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                        "label": { "type": "string", "description": "Industry/category label as displayed (e.g. 'Healthcare', 'Adaptive Reuse')." },
+                        "url": { "type": "string", "description": "Absolute URL to the linked industry page." }
+                    },
+                    "required": ["label"]
+                },
+                "description": "Industries listed under 'Industries' in the Project Details sidebar."
+            },
+            "awards": {
+                "type": "array",
+                "items": { "type": "string" },
+                "description": "Award lines if shown on the page (e.g. 'Preservation Pennsylvania Award Winner'). Absent on most projects."
+            },
+            "hero_image_url": { "type": "string", "description": "URL of the first/primary image at the top of the page." },
+            "gallery_images": {
+                "type": "array",
+                "items": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                        "url": { "type": "string" },
+                        "alt": { "type": "string", "description": "Alt text or caption text shown with the image." }
+                    },
+                    "required": ["url"]
+                },
+                "description": "All images that appear on the project page. Deduplicate by URL — galleries on this site often repeat the same images twice in markdown."
+            },
+            "related_projects": {
+                "type": "array",
+                "items": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                        "title": { "type": "string" },
+                        "url": { "type": "string" },
+                        "categories": { "type": "array", "items": { "type": "string" } }
+                    },
+                    "required": ["title", "url"]
+                },
+                "description": "Similar Projects list at the bottom of the page. Deduplicate by URL."
+            },
+            "is_test_fits_subpage": { "type": "boolean", "description": "True only when the URL is /project/test-fits/{n}/ (an individual test fit). False for ordinary projects and for the parent /project/test-fits/ index page." },
+            "seo": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                    "title": { "type": "string" },
+                    "description": { "type": "string" },
+                    "og_image_url": { "type": "string" }
+                }
+            }
+        },
+        "required": ["title"]
+    }
+}

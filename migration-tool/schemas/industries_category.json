@@ -1,0 +1,51 @@
+{
+    "_meta": {
+        "template": "industries_category",
+        "applies_to_urls": [
+            "https://warehausae.com/Industries/news/",
+            "https://warehausae.com/Industries/around-the-haus/",
+            "https://warehausae.com/Industries/case-study/",
+            "https://warehausae.com/Industries/community/",
+            "https://warehausae.com/Industries/game/",
+            "https://warehausae.com/Industries/uncategorized/"
+        ],
+        "notes": "/Industries/{slug}/ pages are blog/news category index pages with capitalized 'Industries' in the URL. Typical structure: category name as heading, optional intro prose, and an auto-generated grid of posts (each with image, categories, date, title, URL). In Statamic this becomes a taxonomy with a custom route; entries hold any curated intro text."
+    },
+    "prompt": "Extract a warehausae.com /Industries/{slug}/ category page. Capture the category name, optional intro prose, and the list of posts shown on the page.",
+    "systemPrompt": "Extracting a category index page. Use null or empty arrays for missing fields.",
+    "schema": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+            "category_name": { "type": "string", "description": "Category name as displayed (e.g. 'News', 'Around the Haus')." },
+            "intro_prose": { "type": "string", "description": "Optional curated intro prose above the post grid. May be empty for auto-generated category pages." },
+            "posts": {
+                "type": "array",
+                "items": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                        "title": { "type": "string" },
+                        "url": { "type": "string" },
+                        "image_url": { "type": "string" },
+                        "date_text": { "type": "string" },
+                        "categories": { "type": "array", "items": { "type": "string" } },
+                        "excerpt": { "type": "string" }
+                    },
+                    "required": ["title", "url"]
+                },
+                "description": "Auto-generated list of posts in this category."
+            },
+            "seo": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                    "title": { "type": "string" },
+                    "description": { "type": "string" },
+                    "og_image_url": { "type": "string" }
+                }
+            }
+        },
+        "required": ["category_name"]
+    }
+}

@@ -1,0 +1,134 @@
+title: Portfolio Category
+tabs:
+  main:
+    display: Main
+    sections:
+      - fields:
+          - handle: title
+            field:
+              type: text
+              display: Title
+              required: true
+          - handle: url
+            field:
+              type: text
+              display: URL override
+              instructions: >-
+                Absolute path (starting with /) that this entry should serve at. Statamic uses this as the route override, allowing different entries in this collection to live at different URL shapes
+                (e.g. /healthcare/ vs /industry/civil-engineering/).
+              required: true
+          - handle: category_name
+            field:
+              type: text
+              display: Category Name
+              instructions: Lowercase category name shown in the hero (e.g. 'healthcare', 'adaptive reuse', 'civil engineering').
+              required: true
+          - handle: tagline
+            field:
+              type: text
+              display: Tagline
+              instructions: Pre-hero tagline (often 'We listen. We design. We deliver.'). May be missing.
+          - handle: lead_heading
+            field:
+              type: text
+              display: Lead Heading
+              instructions: H2 immediately below the hero framing the value (e.g. 'An Optimized Patient Experience').
+              required: true
+          - handle: intro_prose
+            field:
+              type: textarea
+              display: Intro Prose
+              instructions: Paragraph(s) following the lead heading, joined with double newlines.
+          - handle: capability_groups
+            field:
+              type: grid
+              mode: stacked
+              fields:
+                - handle: heading
+                  field:
+                    type: text
+                    display: Capability Groups Heading
+                    instructions: Group heading (e.g. 'Suites', 'Buildings').
+                - handle: items
+                  field:
+                    type: list
+                    display: Capability Groups Items
+              display: Capability Groups
+              instructions: Bulleted capability groupings shown on the page. Healthcare has 'Suites' and 'Buildings'. Other categories may have 0 or more groups.
+          - handle: partnership_cards
+            field:
+              type: grid
+              mode: stacked
+              fields:
+                - handle: title
+                  field:
+                    type: text
+                    display: Partnership Cards Title
+                - handle: body
+                  field:
+                    type: textarea
+                    display: Partnership Cards Body
+              display: Partnership Cards
+              instructions: Cards under a 'A Warehaus Partnership Brings' style heading (e.g. 'In-Depth Healthcare Experience', 'A Focus on Patient Experience').
+          - handle: testimonial
+            field:
+              type: group
+              fields:
+                - handle: quote
+                  field:
+                    type: textarea
+                    display: Testimonial Quote
+                - handle: attribution_name
+                  field:
+                    type: text
+                    display: Testimonial Attribution Name
+                - handle: attribution_org
+                  field:
+                    type: text
+                    display: Testimonial Attribution Org
+              display: Testimonial
+              instructions: Pull-quote testimonial near the bottom of the page. Leave fields empty if no testimonial appears.
+          - handle: recent_projects
+            field:
+              type: grid
+              mode: stacked
+              fields:
+                - handle: title
+                  field:
+                    type: text
+                    display: Recent Projects Title
+                - handle: url
+                  field:
+                    type: text
+                    display: Recent Projects Url
+                - handle: categories
+                  field:
+                    type: list
+                    display: Recent Projects Categories
+              display: Recent Projects
+              instructions: Project list shown under 'Recent Projects' at the bottom. Deduplicate by URL.
+          - handle: hero_image_url
+            field:
+              type: text
+              display: Hero Image Url
+  seo:
+    display: SEO & Source
+    sections:
+      - fields:
+          - handle: source_url
+            field:
+              type: text
+              display: Source URL
+              instructions: The original WordPress URL this entry was imported from (for traceability).
+          - handle: seo_title
+            field:
+              type: text
+              display: SEO title
+          - handle: seo_description
+            field:
+              type: textarea
+              display: SEO description
+          - handle: seo_og_image_url
+            field:
+              type: text
+              display: OG image URL

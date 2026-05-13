@@ -1,0 +1,9 @@
+title: Portfolio Categories
+route: "{url}"
+template: portfolio_categories.show
+layout: layout
+sites:
+  - default
+blueprints:
+  - portfolio_category
+sort_dir: asc

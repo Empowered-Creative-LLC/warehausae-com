@@ -1,0 +1,103 @@
+{
+    "_meta": {
+        "template": "homepage",
+        "applies_to_urls": [
+            "https://warehausae.com/"
+        ],
+        "notes": "The homepage is bespoke. Typical sections from the brief: hero video / hero image with overlay text, services strip (architecture / civil / structural / interior / historic), 'WE BELIEVE IN' repeating block list, a featured projects strip, a stats counter strip, contact/CTA at the bottom. This schema captures the variable repeater of believe-in blocks plus other named sections we surface during extraction."
+    },
+    "prompt": "Extract the warehausae.com homepage's structured content: hero overlay text, services strip with discipline labels + URLs, the 'WE BELIEVE IN' repeater blocks, a featured projects list, any stats counters, testimonials, and the CTA copy.",
+    "systemPrompt": "Extracting the homepage. Use null or empty arrays for missing fields.",
+    "schema": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+            "hero_overlay_heading": { "type": "string", "description": "Primary heading shown over the hero (often 'We listen. We design. We deliver.' or similar)." },
+            "hero_overlay_subheading": { "type": "string", "description": "Secondary subheading beneath the primary." },
+            "hero_image_url": { "type": "string", "description": "URL of the hero background image (or first frame of the hero video)." },
+            "hero_video_url": { "type": "string", "description": "URL of the hero video if used." },
+            "services_strip": {
+                "type": "array",
+                "items": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                        "label": { "type": "string" },
+                        "url": { "type": "string" },
+                        "icon_url": { "type": "string" }
+                    },
+                    "required": ["label"]
+                },
+                "description": "Service link tiles below the hero (architecture, civil, structural, interior, historic)."
+            },
+            "believe_in_blocks": {
+                "type": "array",
+                "items": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                        "title": { "type": "string", "description": "Block title (e.g. 'We believe in collaboration')." },
+                        "body": { "type": "string", "description": "Block body prose." },
+                        "image_url": { "type": "string" }
+                    },
+                    "required": ["title", "body"]
+                },
+                "description": "Repeating 'WE BELIEVE IN' blocks. Order matters."
+            },
+            "featured_projects": {
+                "type": "array",
+                "items": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                        "title": { "type": "string" },
+                        "url": { "type": "string" },
+                        "image_url": { "type": "string" },
+                        "categories": { "type": "array", "items": { "type": "string" } }
+                    },
+                    "required": ["title", "url"]
+                },
+                "description": "Featured project tiles on the homepage."
+            },
+            "stats_counters": {
+                "type": "array",
+                "items": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                        "label": { "type": "string", "description": "What the counter measures (e.g. 'Years of Experience', 'Projects Delivered')." },
+                        "value_text": { "type": "string", "description": "The displayed value, often with suffix (e.g. '45+', '500')." }
+                    },
+                    "required": ["label", "value_text"]
+                },
+                "description": "Stat/counter blocks on the homepage."
+            },
+            "testimonials": {
+                "type": "array",
+                "items": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                        "quote": { "type": "string" },
+                        "attribution_name": { "type": "string" },
+                        "attribution_org": { "type": "string" }
+                    },
+                    "required": ["quote"]
+                }
+            },
+            "cta_heading": { "type": "string", "description": "Heading of the final contact / CTA section (e.g. 'Have a project in mind?')." },
+            "cta_subheading": { "type": "string", "description": "Subheading of the CTA section (e.g. 'Let's talk.')." },
+            "cta_body": { "type": "string", "description": "Optional supporting prose for the CTA." },
+            "seo": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                    "title": { "type": "string" },
+                    "description": { "type": "string" },
+                    "og_image_url": { "type": "string" }
+                }
+            }
+        },
+        "required": ["hero_overlay_heading"]
+    }
+}

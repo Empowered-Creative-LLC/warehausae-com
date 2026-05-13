@@ -1,0 +1,150 @@
+title: Page
+tabs:
+  main:
+    display: Main
+    sections:
+      - fields:
+          - handle: title
+            field:
+              type: text
+              display: Title
+              required: true
+          - handle: url
+            field:
+              type: text
+              display: URL override
+              instructions: >-
+                Absolute path (starting with /) that this entry should serve at. Statamic uses this as the route override, allowing different entries in this collection to live at different URL shapes
+                (e.g. /healthcare/ vs /industry/civil-engineering/).
+              required: true
+          - handle: tagline
+            field:
+              type: text
+              display: Tagline
+              instructions: Secondary heading or pre-hero tagline shown above the title (e.g. 'We listen. We design. We deliver.' or the 'WAREHAUS' branding label).
+          - handle: lead_heading
+            field:
+              type: text
+              display: Lead Heading
+              instructions: First H2 below the title framing the page (e.g. 'Deep Roots. Rich History.' on /about/).
+          - handle: intro_prose
+            field:
+              type: textarea
+              display: Intro Prose
+              instructions: Paragraph(s) immediately after the lead heading.
+          - handle: sections
+            field:
+              type: grid
+              mode: stacked
+              fields:
+                - handle: heading
+                  field:
+                    type: text
+                    display: Sections Heading
+                    instructions: Section H2 or H3.
+                - handle: body
+                  field:
+                    type: textarea
+                    display: Sections Body
+                    instructions: Section body prose, joined with double newlines.
+                - handle: images
+                  field:
+                    type: grid
+                    mode: stacked
+                    fields:
+                      - handle: url
+                        field:
+                          type: text
+                          display: Images Url
+                      - handle: alt
+                        field:
+                          type: text
+                          display: Images Alt
+                    display: Sections Images
+              display: Sections
+              instructions: Named sections under H2/H3 headings, in document order.
+          - handle: leadership_cards
+            field:
+              type: grid
+              mode: stacked
+              fields:
+                - handle: name
+                  field:
+                    type: text
+                    display: Leadership Cards Name
+                - handle: title
+                  field:
+                    type: text
+                    display: Leadership Cards Title
+                - handle: team_url
+                  field:
+                    type: text
+                    display: Leadership Cards Team Url
+                - handle: headshot_url
+                  field:
+                    type: text
+                    display: Leadership Cards Headshot Url
+                - handle: linkedin_url
+                  field:
+                    type: text
+                    display: Leadership Cards Linkedin Url
+                - handle: email
+                  field:
+                    type: text
+                    input_type: email
+                    display: Leadership Cards Email
+              display: Leadership Cards
+              instructions: Leadership team cards if shown (e.g. on /about/).
+          - handle: news_feed
+            field:
+              type: grid
+              mode: stacked
+              fields:
+                - handle: title
+                  field:
+                    type: text
+                    display: News Feed Title
+                - handle: url
+                  field:
+                    type: text
+                    display: News Feed Url
+                - handle: image_url
+                  field:
+                    type: text
+                    display: News Feed Image Url
+                - handle: categories
+                  field:
+                    type: list
+                    display: News Feed Categories
+                - handle: date_text
+                  field:
+                    type: text
+                    display: News Feed Date Text
+              display: News Feed
+              instructions: Embedded news feed if shown (e.g. on /about/).
+          - handle: raw_body_markdown
+            field:
+              type: markdown
+              display: Raw Body Markdown
+              instructions: The entire body of the page in markdown form (everything below the global header), used as a fallback for fidelity.
+  seo:
+    display: SEO & Source
+    sections:
+      - fields:
+          - handle: source_url
+            field:
+              type: text
+              display: Source URL
+              instructions: The original WordPress URL this entry was imported from (for traceability).
+          - handle: seo_title
+            field:
+              type: text
+              display: SEO title
+          - handle: seo_description
+            field:
+              type: textarea
+              display: SEO description
+          - handle: seo_og_image_url
+            field:
+              type: text
+              display: OG image URL

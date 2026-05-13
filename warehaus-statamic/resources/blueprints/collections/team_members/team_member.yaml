@@ -1,0 +1,97 @@
+title: Team Member
+tabs:
+  main:
+    display: Main
+    sections:
+      - fields:
+          - handle: title
+            field:
+              type: text
+              display: Title
+              required: true
+          - handle: name
+            field:
+              type: text
+              display: Name
+              instructions: The team member's full name as shown in the H1 (e.g. 'Dan Creep', 'Troy Bankert, AIA').
+              required: true
+          - handle: first_name
+            field:
+              type: text
+              display: First Name
+              instructions: First name used in the contact card heading (e.g. 'Dan', 'Jeff'). Often shorter than the full name.
+          - handle: discipline
+            field:
+              type: text
+              display: Discipline
+              instructions: >-
+                The service discipline this team member primarily belongs to (architecture, civil engineering, structural, interior design, historic preservation, etc.), inferred from title and bio if
+                not explicit.
+          - handle: headshot_url
+            field:
+              type: text
+              display: Headshot Url
+              instructions: Absolute URL to the profile photo.
+          - handle: years_in_industry
+            field:
+              type: integer
+              display: Years In Industry
+              instructions: Number from the 'Years in Industry' label, if present.
+          - handle: years_with_warehaus
+            field:
+              type: integer
+              display: Years With Warehaus
+              instructions: Number from the 'Years with Warehaus' label, if present.
+          - handle: bio
+            field:
+              type: textarea
+              display: Bio
+              instructions: Multi-paragraph biography prose joined with double newlines. Preserve exact wording.
+              required: true
+          - handle: education
+            field:
+              type: text
+              display: Education
+              instructions: Education sentence(s) if mentioned in the bio (e.g. 'Dan holds a degree in Civil Engineering Technology from the University of Pittsburgh-Johnstown.'). Leave empty if not present.
+          - handle: contact_blurb
+            field:
+              type: text
+              display: Contact Blurb
+              instructions: The short prompt above the email/phone (e.g. 'Have a project with civil engineering needs? Connect with Dan to discuss.').
+          - handle: email
+            field:
+              type: text
+              input_type: email
+              display: Email
+              instructions: "Direct email address (e.g. dcreep@warehausae.com). No mailto: prefix."
+          - handle: phone
+            field:
+              type: text
+              display: Phone
+              instructions: Phone number as displayed (e.g. '(717) 815-8503').
+          - handle: linkedin_url
+            field:
+              type: text
+              display: Linkedin Url
+              instructions: LinkedIn profile URL if shown anywhere on the page.
+  seo:
+    display: SEO & Source
+    sections:
+      - fields:
+          - handle: source_url
+            field:
+              type: text
+              display: Source URL
+              instructions: The original WordPress URL this entry was imported from (for traceability).
+          - handle: seo_title
+            field:
+              type: text
+              display: SEO title
+          - handle: seo_description
+            field:
+              type: textarea
+              display: SEO description
+          - handle: seo_og_image_url
+            field:
+              type: text
+              display: OG image URL

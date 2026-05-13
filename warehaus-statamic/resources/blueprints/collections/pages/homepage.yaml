@@ -1,0 +1,174 @@
+title: Page
+tabs:
+  main:
+    display: Main
+    sections:
+      - fields:
+          - handle: title
+            field:
+              type: text
+              display: Title
+              required: true
+          - handle: url
+            field:
+              type: text
+              display: URL override
+              instructions: >-
+                Absolute path (starting with /) that this entry should serve at. Statamic uses this as the route override, allowing different entries in this collection to live at different URL shapes
+                (e.g. /healthcare/ vs /industry/civil-engineering/).
+              required: true
+          - handle: hero_overlay_heading
+            field:
+              type: text
+              display: Hero Overlay Heading
+              instructions: Primary heading shown over the hero (often 'We listen. We design. We deliver.' or similar).
+              required: true
+          - handle: hero_overlay_subheading
+            field:
+              type: text
+              display: Hero Overlay Subheading
+              instructions: Secondary subheading beneath the primary.
+          - handle: hero_image_url
+            field:
+              type: text
+              display: Hero Image Url
+              instructions: URL of the hero background image (or first frame of the hero video).
+          - handle: hero_video_url
+            field:
+              type: text
+              display: Hero Video Url
+              instructions: URL of the hero video if used.
+          - handle: services_strip
+            field:
+              type: grid
+              mode: stacked
+              fields:
+                - handle: label
+                  field:
+                    type: text
+                    display: Services Strip Label
+                - handle: url
+                  field:
+                    type: text
+                    display: Services Strip Url
+                - handle: icon_url
+                  field:
+                    type: text
+                    display: Services Strip Icon Url
+              display: Services Strip
+              instructions: Service link tiles below the hero (architecture, civil, structural, interior, historic).
+          - handle: believe_in_blocks
+            field:
+              type: grid
+              mode: stacked
+              fields:
+                - handle: title
+                  field:
+                    type: text
+                    display: Believe In Blocks Title
+                    instructions: Block title (e.g. 'We believe in collaboration').
+                - handle: body
+                  field:
+                    type: textarea
+                    display: Believe In Blocks Body
+                    instructions: Block body prose.
+                - handle: image_url
+                  field:
+                    type: text
+                    display: Believe In Blocks Image Url
+              display: Believe In Blocks
+              instructions: Repeating 'WE BELIEVE IN' blocks. Order matters.
+          - handle: featured_projects
+            field:
+              type: grid
+              mode: stacked
+              fields:
+                - handle: title
+                  field:
+                    type: text
+                    display: Featured Projects Title
+                - handle: url
+                  field:
+                    type: text
+                    display: Featured Projects Url
+                - handle: image_url
+                  field:
+                    type: text
+                    display: Featured Projects Image Url
+                - handle: categories
+                  field:
+                    type: list
+                    display: Featured Projects Categories
+              display: Featured Projects
+              instructions: Featured project tiles on the homepage.
+          - handle: stats_counters
+            field:
+              type: grid
+              mode: stacked
+              fields:
+                - handle: label
+                  field:
+                    type: text
+                    display: Stats Counters Label
+                    instructions: What the counter measures (e.g. 'Years of Experience', 'Projects Delivered').
+                - handle: value_text
+                  field:
+                    type: text
+                    display: Stats Counters Value Text
+                    instructions: The displayed value, often with suffix (e.g. '45+', '500').
+              display: Stats Counters
+              instructions: Stat/counter blocks on the homepage.
+          - handle: testimonials
+            field:
+              type: grid
+              mode: stacked
+              fields:
+                - handle: quote
+                  field:
+                    type: textarea
+                    display: Testimonials Quote
+                - handle: attribution_name
+                  field:
+                    type: text
+                    display: Testimonials Attribution Name
+                - handle: attribution_org
+                  field:
+                    type: text
+                    display: Testimonials Attribution Org
+              display: Testimonials
+          - handle: cta_heading
+            field:
+              type: text
+              display: Cta Heading
+              instructions: Heading of the final contact / CTA section (e.g. 'Have a project in mind?').
+          - handle: cta_subheading
+            field:
+              type: text
+              display: Cta Subheading
+              instructions: Subheading of the CTA section (e.g. 'Let's talk.').
+          - handle: cta_body
+            field:
+              type: textarea
+              display: Cta Body
+              instructions: Optional supporting prose for the CTA.
+  seo:
+    display: SEO & Source
+    sections:
+      - fields:
+          - handle: source_url
+            field:
+              type: text
+              display: Source URL
+              instructions: The original WordPress URL this entry was imported from (for traceability).
+          - handle: seo_title
+            field:
+              type: text
+              display: SEO title
+          - handle: seo_description
+            field:
+              type: textarea
+              display: SEO description
+          - handle: seo_og_image_url
+            field:
+              type: text
+              display: OG image URL

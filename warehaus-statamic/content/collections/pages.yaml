@@ -1,0 +1,12 @@
+title: Pages
+route: "{url}"
+template: pages.show
+layout: layout
+sites:
+  - default
+blueprints:
+  - page
+  - homepage
+inject:
+  - source_url
+sort_dir: asc

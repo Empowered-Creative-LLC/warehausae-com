@@ -1,0 +1,9 @@
+title: Case Studies
+route: "{url}"
+template: case_studies.show
+layout: layout
+sites:
+  - default
+blueprints:
+  - case_study
+sort_dir: desc

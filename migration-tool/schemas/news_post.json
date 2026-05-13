@@ -1,0 +1,61 @@
+{
+    "_meta": {
+        "template": "news_post",
+        "applies_to_urls": [
+            "https://warehausae.com/warehaus-announces-leadership-promotions/",
+            "https://warehausae.com/warehaus-leadership-promotions/",
+            "https://warehausae.com/warehaus-welcomes-courtney-weaver-as-chief-financial-officer/",
+            "https://warehausae.com/press_release_acquisition/",
+            "https://warehausae.com/press_release-office_purchase/"
+        ],
+        "notes": "News/announcement posts live at root flat slugs. Typical structure: featured image, title H1, posted-date or 'X months ago', category tags (linking to /Industries/{slug}/), multi-paragraph body prose, and optional image embeds within the body."
+    },
+    "prompt": "Extract a warehausae.com news/announcement post. Capture title, published date, featured image, categories (with their URLs), and the full multi-paragraph body. Inline images should be captured both in the body markdown and in the images array.",
+    "systemPrompt": "Extracting one news post from warehausae.com. Use null or empty arrays for missing fields. Do not invent dates or category tags.",
+    "schema": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+            "title": { "type": "string", "description": "Post title shown in the H1." },
+            "published_date_text": { "type": "string", "description": "Date as displayed (literal). May be relative like '5 months ago' or absolute like 'December 15, 2025'." },
+            "featured_image_url": { "type": "string", "description": "URL of the lead/featured image at the top of the post." },
+            "categories": {
+                "type": "array",
+                "items": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                        "label": { "type": "string", "description": "Category name (e.g. 'Around the Haus', 'News')." },
+                        "url": { "type": "string", "description": "Absolute URL to /Industries/{slug}/ (preserve capitalization)." }
+                    },
+                    "required": ["label"]
+                },
+                "description": "Category tags shown above or below the title."
+            },
+            "body_markdown": { "type": "string", "description": "Full body of the post in markdown form. Preserve image references inline." },
+            "inline_images": {
+                "type": "array",
+                "items": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                        "url": { "type": "string" },
+                        "alt": { "type": "string" }
+                    },
+                    "required": ["url"]
+                },
+                "description": "All images that appear in the post (deduplicated)."
+            },
+            "seo": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                    "title": { "type": "string" },
+                    "description": { "type": "string" },
+                    "og_image_url": { "type": "string" }
+                }
+            }
+        },
+        "required": ["title", "body_markdown"]
+    }
+}

@@ -1,0 +1,10 @@
+title: Job Postings
+route: "/job/{slug}"
+template: job_postings.show
+layout: layout
+sites:
+  - default
+blueprints:
+  - job_posting
+sort_dir: desc
+sort_field: posted_date

@@ -1,0 +1,140 @@
+title: Service
+tabs:
+  main:
+    display: Main
+    sections:
+      - fields:
+          - handle: title
+            field:
+              type: text
+              display: Title
+              required: true
+          - handle: service_name
+            field:
+              type: text
+              display: Service Name
+              instructions: The service discipline shown in the hero, e.g. 'architecture', 'civil engineering', 'interior design'.
+              required: true
+          - handle: tagline
+            field:
+              type: text
+              display: Tagline
+              instructions: The short pre-heading or motto displayed above the service name (e.g. 'We listen. We design. We deliver.'). May be missing.
+          - handle: lead_heading
+            field:
+              type: text
+              display: Lead Heading
+              instructions: The primary H2/H3 below the hero that frames the value proposition.
+              required: true
+          - handle: intro_prose
+            field:
+              type: textarea
+              display: Intro Prose
+              instructions: The paragraph(s) of body copy immediately after the lead heading, joined with double newlines.
+          - handle: capabilities
+            field:
+              type: list
+              display: Capabilities
+              instructions: Bulleted capabilities/disciplines shown on the page, in order.
+              required: true
+          - handle: approach_heading
+            field:
+              type: text
+              display: Approach Heading
+              instructions: Heading of the methodology section (e.g. 'Our Architectural Approach'). May be missing.
+          - handle: approach_blocks
+            field:
+              type: grid
+              mode: stacked
+              fields:
+                - handle: title
+                  field:
+                    type: text
+                    display: Approach Blocks Title
+                - handle: body
+                  field:
+                    type: textarea
+                    display: Approach Blocks Body
+              display: Approach Blocks
+              instructions: Sub-sections under the approach heading; typically 4 cards (e.g. Comprehensive Research, Community Feedback, Design Charettes, Concept Sketches).
+          - handle: team_leaders
+            field:
+              type: grid
+              mode: stacked
+              fields:
+                - handle: name
+                  field:
+                    type: text
+                    display: Team Leaders Name
+                - handle: title
+                  field:
+                    type: text
+                    display: Team Leaders Title
+                    instructions: Role / job title under the name.
+                - handle: team_url
+                  field:
+                    type: text
+                    display: Team Leaders Team Url
+                    instructions: Link to /team/{slug}/
+                - handle: headshot_url
+                  field:
+                    type: text
+                    display: Team Leaders Headshot Url
+                - handle: linkedin_url
+                  field:
+                    type: text
+                    display: Team Leaders Linkedin Url
+                - handle: email
+                  field:
+                    type: text
+                    input_type: email
+                    display: Team Leaders Email
+              display: Team Leaders
+              instructions: Team leader cards shown on the service page. Each links to a /team/{slug}/ profile.
+          - handle: recent_projects
+            field:
+              type: grid
+              mode: stacked
+              fields:
+                - handle: title
+                  field:
+                    type: text
+                    display: Recent Projects Title
+                - handle: url
+                  field:
+                    type: text
+                    display: Recent Projects Url
+                    instructions: Absolute URL to /project/{slug}/
+                - handle: categories
+                  field:
+                    type: list
+                    display: Recent Projects Categories
+                    instructions: Comma-separated category tags shown under each project link.
+              display: Recent Projects
+              instructions: Featured project list at the bottom of the page.
+          - handle: hero_image_url
+            field:
+              type: text
+              display: Hero Image Url
+              instructions: Hero image at the top of the page if any. May be missing.
+  seo:
+    display: SEO & Source
+    sections:
+      - fields:
+          - handle: source_url
+            field:
+              type: text
+              display: Source URL
+              instructions: The original WordPress URL this entry was imported from (for traceability).
+          - handle: seo_title
+            field:
+              type: text
+              display: SEO title
+          - handle: seo_description
+            field:
+              type: textarea
+              display: SEO description
+          - handle: seo_og_image_url
+            field:
+              type: text
+              display: OG image URL

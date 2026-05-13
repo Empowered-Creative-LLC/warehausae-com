@@ -1,0 +1,74 @@
+title: Industries Category
+tabs:
+  main:
+    display: Main
+    sections:
+      - fields:
+          - handle: title
+            field:
+              type: text
+              display: Title
+              required: true
+          - handle: category_name
+            field:
+              type: text
+              display: Category Name
+              instructions: Category name as displayed (e.g. 'News', 'Around the Haus').
+              required: true
+          - handle: intro_prose
+            field:
+              type: textarea
+              display: Intro Prose
+              instructions: Optional curated intro prose above the post grid. May be empty for auto-generated category pages.
+          - handle: posts
+            field:
+              type: grid
+              mode: stacked
+              fields:
+                - handle: title
+                  field:
+                    type: text
+                    display: Posts Title
+                - handle: url
+                  field:
+                    type: text
+                    display: Posts Url
+                - handle: image_url
+                  field:
+                    type: text
+                    display: Posts Image Url
+                - handle: date_text
+                  field:
+                    type: text
+                    display: Posts Date Text
+                - handle: categories
+                  field:
+                    type: list
+                    display: Posts Categories
+                - handle: excerpt
+                  field:
+                    type: textarea
+                    display: Posts Excerpt
+              display: Posts
+              instructions: Auto-generated list of posts in this category.
+  seo:
+    display: SEO & Source
+    sections:
+      - fields:
+          - handle: source_url
+            field:
+              type: text
+              display: Source URL
+              instructions: The original WordPress URL this entry was imported from (for traceability).
+          - handle: seo_title
+            field:
+              type: text
+              display: SEO title
+          - handle: seo_description
+            field:
+              type: textarea
+              display: SEO description
+          - handle: seo_og_image_url
+            field:
+              type: text
+              display: OG image URL

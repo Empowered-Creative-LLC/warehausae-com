@@ -1,0 +1,102 @@
+{
+    "_meta": {
+        "template": "page",
+        "applies_to_urls": [
+            "https://warehausae.com/about/",
+            "https://warehausae.com/culture/",
+            "https://warehausae.com/careers/",
+            "https://warehausae.com/portfolio/",
+            "https://warehausae.com/services/",
+            "https://warehausae.com/privacy-policy/",
+            "https://warehausae.com/terms-and-conditions/",
+            "https://warehausae.com/future-architects-and-engineers/",
+            "https://warehausae.com/get-rewarded-for-referrals/",
+            "https://warehausae.com/harrisburg-project-map/",
+            "https://warehausae.com/interiors_visit/",
+            "https://warehausae.com/lunch-and-learns/",
+            "https://warehausae.com/happyholidays/"
+        ],
+        "notes": "The 'page' template is the catch-all for one-off pages with varied layouts. We capture the title, optional tagline/secondary header (e.g. 'WAREHAUS / about us'), a flexible list of named sections (each section has a heading, body prose, optional images, optional sub-cards like the 1980/1998/2017/2021/2022 timeline blocks on /about/), and the full raw markdown body for fidelity. The blueprint will use a Bard field for the body so flexible structure is preserved."
+    },
+    "prompt": "Extract a one-off warehausae.com page. Identify the title, any tagline, and break the body into named sections by heading. Preserve full body markdown as well so nothing is lost. Capture image references and any team-card or news-feed embeds.",
+    "systemPrompt": "Extracting a one-off page. Use null or empty arrays for missing fields.",
+    "schema": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+            "title": { "type": "string", "description": "Main title of the page (H1 or page name shown in the hero)." },
+            "tagline": { "type": "string", "description": "Secondary heading or pre-hero tagline shown above the title (e.g. 'We listen. We design. We deliver.' or the 'WAREHAUS' branding label)." },
+            "lead_heading": { "type": "string", "description": "First H2 below the title framing the page (e.g. 'Deep Roots. Rich History.' on /about/)." },
+            "intro_prose": { "type": "string", "description": "Paragraph(s) immediately after the lead heading." },
+            "sections": {
+                "type": "array",
+                "items": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                        "heading": { "type": "string", "description": "Section H2 or H3." },
+                        "body": { "type": "string", "description": "Section body prose, joined with double newlines." },
+                        "images": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "additionalProperties": false,
+                                "properties": {
+                                    "url": { "type": "string" },
+                                    "alt": { "type": "string" }
+                                },
+                                "required": ["url"]
+                            }
+                        }
+                    },
+                    "required": ["heading"]
+                },
+                "description": "Named sections under H2/H3 headings, in document order."
+            },
+            "leadership_cards": {
+                "type": "array",
+                "items": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                        "name": { "type": "string" },
+                        "title": { "type": "string" },
+                        "team_url": { "type": "string" },
+                        "headshot_url": { "type": "string" },
+                        "linkedin_url": { "type": "string" },
+                        "email": { "type": "string" }
+                    },
+                    "required": ["name"]
+                },
+                "description": "Leadership team cards if shown (e.g. on /about/)."
+            },
+            "news_feed": {
+                "type": "array",
+                "items": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                        "title": { "type": "string" },
+                        "url": { "type": "string" },
+                        "image_url": { "type": "string" },
+                        "categories": { "type": "array", "items": { "type": "string" } },
+                        "date_text": { "type": "string" }
+                    },
+                    "required": ["title", "url"]
+                },
+                "description": "Embedded news feed if shown (e.g. on /about/)."
+            },
+            "raw_body_markdown": { "type": "string", "description": "The entire body of the page in markdown form (everything below the global header), used as a fallback for fidelity." },
+            "seo": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                    "title": { "type": "string" },
+                    "description": { "type": "string" },
+                    "og_image_url": { "type": "string" }
+                }
+            }
+        },
+        "required": ["title"]
+    }
+}

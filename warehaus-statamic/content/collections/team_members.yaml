@@ -1,0 +1,9 @@
+title: Team Members
+route: "/team/{slug}"
+template: team_members.show
+layout: layout
+sites:
+  - default
+blueprints:
+  - team_member
+sort_dir: asc
