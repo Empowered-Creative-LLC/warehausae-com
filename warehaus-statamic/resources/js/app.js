@@ -42,10 +42,31 @@ function initMobileMenu() {
     const toggle = document.querySelector('[data-haus-mobile-toggle]');
     const nav = document.querySelector('[data-haus-mobile-nav]');
     if (!toggle || !nav) return;
-    toggle.addEventListener('click', () => {
-        const hidden = nav.hasAttribute('hidden');
-        if (hidden) nav.removeAttribute('hidden');
+    const iconMenu = toggle.querySelector('[data-haus-icon="menu"]');
+    const iconClose = toggle.querySelector('[data-haus-icon="close"]');
+
+    const setOpen = (open) => {
+        if (open) nav.removeAttribute('hidden');
         else nav.setAttribute('hidden', '');
+        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+        if (iconMenu) iconMenu.classList.toggle('hidden', open);
+        if (iconClose) iconClose.classList.toggle('hidden', !open);
+    };
+
+    toggle.addEventListener('click', () => {
+        setOpen(nav.hasAttribute('hidden'));
+    });
+
+    // Close menu when a nav link is clicked (so the page navigation
+    // doesn't leave the menu open during transition).
+    nav.querySelectorAll('a').forEach((a) => {
+        a.addEventListener('click', () => setOpen(false));
+    });
+
+    // Close on Escape.
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && !nav.hasAttribute('hidden')) setOpen(false);
     });
 }
 
@@ -54,13 +75,59 @@ function initMobileMenu() {
  * enters the viewport. Optional [data-haus-fade-delay="200"] in ms.
  */
 function initFadeInOnScroll() {
-    // Fade-in is currently a no-op. The data-haus-fade-in attribute is left
-    // in the templates so we can re-enable it as a polish task in Phase 11
-    // without touching every template. To re-enable: replace this body with
-    // an IntersectionObserver implementation. Disabled now because the
-    // opacity:0 initial state caused content to flash empty during
-    // Playwright screenshots and on slow devices where the observer hadn't
-    // fired by paint.
+    const els = document.querySelectorAll('[data-haus-fade-in]');
+    if (!els.length || typeof IntersectionObserver === 'undefined') return;
+
+    // Strategy: only HIDE elements that are well below the fold AND were
+    // visible to the document when JS started (i.e. they were going to be
+    // painted). This prevents the flash of empty space we saw earlier
+    // where above-the-fold content got hidden before the observer ran.
+    // We use CSS transitions added via class so SSR / no-JS renders show
+    // everything as normal.
+    const toObserve = [];
+    els.forEach((el) => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight + 100) {
+            // Already in or near viewport — show immediately, no transition.
+            return;
+        }
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(20px)';
+        el.style.transition = 'opacity 700ms ease-out, transform 700ms ease-out';
+        el.style.transitionDelay = `${el.dataset.hausFadeDelay ?? 0}ms`;
+        el.style.willChange = 'opacity, transform';
+        toObserve.push(el);
+    });
+
+    if (toObserve.length === 0) return;
+
+    const reveal = (el) => {
+        el.style.opacity = '1';
+        el.style.transform = 'translateY(0)';
+        setTimeout(() => { el.style.willChange = 'auto'; }, 800);
+    };
+
+    const io = new IntersectionObserver((entries) => {
+        for (const entry of entries) {
+            if (!entry.isIntersecting) continue;
+            reveal(entry.target);
+            io.unobserve(entry.target);
+        }
+    }, { threshold: 0.08, rootMargin: '0px 0px -60px 0px' });
+
+    toObserve.forEach((el) => io.observe(el));
+
+    // Safety net: if anything is still hidden 3 seconds after load (e.g.
+    // headless browser captures, IntersectionObserver edge cases, or the
+    // user lands on a long page with prefers-reduced-motion), force reveal.
+    setTimeout(() => {
+        toObserve.forEach((el) => {
+            if (el.style.opacity === '0') {
+                io.unobserve(el);
+                reveal(el);
+            }
+        });
+    }, 3000);
 }
 
 /**

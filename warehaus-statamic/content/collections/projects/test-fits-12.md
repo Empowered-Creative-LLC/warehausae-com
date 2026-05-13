@@ -37,16 +37,19 @@ related_projects:
     categories:
       - Architecture
       - Interiors
+    image_url: /assets/imported/2025/04/Sterman-Masser-HQ_int-m-700x700.webp
   - title: The Barn Resort
     url: https://warehausae.com/project/the-barn-resort/
     categories:
       - Architecture
       - Civil
       - Structural
+    image_url: /assets/imported/2024/08/the-barn-resort-08152024-3-700x700.webp
   - title: WellSpan Health Bruce M. Bartels Management and Governance Center
     url: https://warehausae.com/project/bartels-center/
     categories:
       - Architecture
+    image_url: /assets/imported/2024/08/bartells-conf-center-14-700x700.jpg
 is_test_fits_subpage: true
 seo_title: Test Fit Capabilities
 seo_description: Our test fit services provide a preliminary floor plan to assess if a space can meet your specific needs.

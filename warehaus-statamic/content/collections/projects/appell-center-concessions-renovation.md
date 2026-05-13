@@ -59,22 +59,26 @@ related_projects:
     url: https://warehausae.com/project/205-state-street-apartments/
     categories:
       - Architecture
+    image_url: /assets/imported/2024/07/state-street-apartments-06192024-5-768x400.webp
   - title: "Kaltreider-Benfer Library: York County Library"
     url: https://warehausae.com/project/kaltreider-benfer-library-york-county-library/
     categories:
       - Architecture
       - Civil
       - Structural
+    image_url: /assets/imported/2024/09/Kaltreider-Benfer-DRONE-13-700x700.webp
   - title: Zion Lutheran Church Adaptive Reuse
     url: https://warehausae.com/project/zion-lutheran-church-adaptive-reuse/
     categories:
       - Architecture
       - Historic
+    image_url: /assets/imported/2025/04/1Zion-Church-Duke-St_06112024-700x700.webp
   - title: University Lofts
     url: https://warehausae.com/project/university-lofts/
     categories:
       - Architecture
       - Historic
+    image_url: /assets/imported/2023/03/University-Lofts_Rendering-052419_00024-700x700.jpg
   - title: 210 York Street Office and Recording Studio
     url: https://warehausae.com/project/210-york-street-office/
     categories:
@@ -82,6 +86,7 @@ related_projects:
       - Civil
       - Historic
       - Interiors
+    image_url: /assets/imported/2023/03/210_York_Street15-of-00-1.jpg
 is_test_fits_subpage: false
 seo_title: Appell Center Concessions Renovation
 seo_description: Project description for the Appell Center Concessions Renovation.

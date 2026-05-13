@@ -34,14 +34,17 @@ related_projects:
     url: https://warehausae.com/project/wellspan-health-shrewsbury-community-hospital/
     categories:
       - Civil
+    image_url: /assets/imported/2024/04/Wellspan-Shrewsbury-Groundbreaking-Drone-23-700x700.webp
   - title: Penn-Mar Human Services Far Hills Office Renovation
     url: https://warehausae.com/project/penn-mar-human-services-far-hills-office-renovation/
     categories:
       - Architecture
+    image_url: /assets/imported/2025/02/Penn-Mar-Far-Hills-4-700x700.webp
   - title: 4844 Market Street Self-Storage
     url: https://warehausae.com/project/4844-market-street-self-storage/
     categories:
       - Civil
+    image_url: /assets/imported/2024/04/Moove-In-Self-Storage-8-700x700.webp
 is_test_fits_subpage: true
 seo_title: Test Fit Capabilities - Warehaus
 seo_description: Explore our test fit services that provide a preliminary floor plan to assess your space needs.

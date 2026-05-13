@@ -62,17 +62,21 @@ recent_projects:
     url: https://warehausae.com/project/multi-family-land-development/
     categories:
       - Civil
+    image_url: /assets/imported/elementor/thumbs/New-Brittany-8-r342oqc28f0dszyjrv6sor827ri4ab2ilmeuy5ajs0.webp
   - title: Single Family Lots
     url: https://warehausae.com/project/single-family-lots-civil-engineering/
     categories:
       - Civil
+    image_url: /assets/imported/elementor/thumbs/Wattenschaidt-Homes_09102024_0017-qwo2aomocah9wj7x3o1vitzgierafaayrv6z0vhqjk.webp
   - title: New Freedom Borough Rail Trail Improvements
     url: https://warehausae.com/project/new-freedom-borough-rail-trail-improvements/
     categories: []
+    image_url: /assets/imported/2023/12/Rail-Trail-Improvements-4-700x700.webp
   - title: Donwood Estates
     url: https://warehausae.com/project/donwood-estates/
     categories:
       - Civil
+    image_url: /assets/imported/2023/07/Donwood-Estates-6-700x700.jpg
 hero_image_url: /assets/imported/2022/03/Asset-1.png
 seo_title: Residential Development - Warehaus
 seo_description: Warehaus specializes in residential development services including land planning, multi-family and single-family residential projects.

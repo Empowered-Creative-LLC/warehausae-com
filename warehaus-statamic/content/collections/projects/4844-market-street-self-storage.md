@@ -29,7 +29,7 @@ services_provided:
 industries:
   - label: Retail and Hospitality
     url: https://warehausae.com/industry/retail-and-hospitality/
-hero_image_url: /assets/imported/2022/03/Asset-1.png
+hero_image_url: /assets/imported/2024/04/Moove-In-Self-Storage-8-700x700.webp
 gallery_images:
   - url: /assets/imported/2024/04/Moove-In-Self-Storage-8-700x700.webp
     alt: Civil engineering design for Moove In Storage facility
@@ -46,75 +46,90 @@ related_projects:
       - Architecture
       - Civil
       - Interiors
+    image_url: /assets/imported/2026/04/Ballpark-Commons-site-image-700x700.png
   - title: Zion Lutheran Church Adaptive Reuse
     url: https://warehausae.com/project/zion-lutheran-church-adaptive-reuse/
     categories:
       - Architecture
       - Historic
+    image_url: /assets/imported/2025/04/1Zion-Church-Duke-St_06112024-700x700.webp
   - title: Susquehanna Trail Dunkin’ & Jimmy John’s
     url: https://warehausae.com/project/susquehanna-trail-dunkin-jimmy-johns/
     categories:
       - Civil
       - Civil Engineering
+    image_url: /assets/imported/2025/06/Susquehanna-Trail-Dunkin-and-Jimmy-Johns-5-700x700.webp
   - title: McHenry Row Office and Courtyard by Marriott Hotel
     url: https://warehausae.com/project/mchenry-row-office-hotel/
     categories:
       - Architecture
       - Interiors
+    image_url: /assets/imported/2023/04/2P1A5115-Copy.jpg
   - title: Blackworth Live Fire Grill
     url: https://warehausae.com/project/blackworth-live-fire-grill/
     categories:
       - Architecture
       - Interiors
+    image_url: /assets/imported/2023/04/Blackworth-Live-Fire-Grill-21060207_0111.jpg
   - title: Courtyard by Marriott at Rowan Boulevard
     url: https://warehausae.com/project/courtyard-by-marriott-rowan-boulevard/
     categories:
       - Architecture
+    image_url: /assets/imported/2023/04/Marriott_Courtyard_Rowan_Boulevard_1-700x700.jpg
   - title: Hilton Garden Inn
     url: https://warehausae.com/project/hilton-garden-inn/
     categories:
       - Architecture
       - Civil
+    image_url: /assets/imported/2023/04/Hilton-Garden-Inn-Hershey_Professional-20190521_0007.jpg
   - title: Inn at Wyndridge Farm
     url: https://warehausae.com/project/inn-at-wyndridge-farm/
     categories:
       - Interiors
+    image_url: /assets/imported/2023/04/The-Inn-at-Wyndridge-12_1979-0029-700x700.jpg
   - title: Wyndridge Farm
     url: https://warehausae.com/project/wyndridge-farm/
     categories:
       - Civil
       - Interiors
+    image_url: /assets/imported/2023/04/The-Inn-at-Wyndridge-Farm_Professional-102314_00039.jpg
   - title: Dunkin® East
     url: https://warehausae.com/project/dunkin-east-retail/
     categories:
       - Civil
+    image_url: /assets/imported/2023/06/Photo_6555.jpg
   - title: Retail and Commercial
     url: https://warehausae.com/project/retail-and-commercial/
     categories:
       - Architecture
       - Civil
+    image_url: /assets/imported/elementor/thumbs/Kennies-Market-20130926_0006-qtq3ta7rs7u29u7rmqjjkerc4ygmarv3i1figjav8g.jpg
   - title: Hershey Tanger Outlets Site and Facade Improvements
     url: https://warehausae.com/project/hershey-tanger-outlets-site-and-facade-improvements/
     categories:
       - Architecture
       - Civil
       - Structural
+    image_url: /assets/imported/2024/02/Tanger-768x400.webp
   - title: The Barn Resort
     url: https://warehausae.com/project/the-barn-resort/
     categories:
       - Architecture
       - Civil
       - Structural
+    image_url: /assets/imported/2024/08/the-barn-resort-08152024-3-700x700.webp
   - title: Test Fit Capabilities
     url: https://warehausae.com/project/test-fits/
     categories:
       - Architecture
       - Interiors
+    image_url: /assets/imported/elementor/thumbs/paypal-toronto-professional-120316-0002-r33rrjghearf953aqeny6h5ombhpgb4mvi9x0aa4kg.webp
   - title: Italian Steakhouse
     url: https://warehausae.com/project/italian-steakhouse/
     categories:
       - Architecture
       - Interiors
+    image_url: /assets/imported/2024/09/Andonias-Chophouse-High-Res-Final-Render-700x700.webp
 is_test_fits_subpage: false
 seo_title: 4844 Market Street Self-Storage - Warehaus
 seo_description: Explore the 4844 Market Street Self-Storage project by Warehaus, focusing on strategic site planning in Jackson Township, York County, PA.

@@ -50,6 +50,7 @@ related_projects:
     categories:
       - Architecture
       - Historic
+    image_url: /assets/imported/2023/03/University-Lofts_Rendering-052419_00024-700x700.jpg
   - title: 210 York Street Office and Recording Studio
     url: https://warehausae.com/project/210-york-street-office/
     categories:
@@ -57,6 +58,7 @@ related_projects:
       - Civil
       - Historic
       - Interiors
+    image_url: /assets/imported/2023/03/210_York_Street15-of-00-1.jpg
   - title: 320 North George Street Office
     url: https://warehausae.com/project/320-north-george-street-office/
     categories:
@@ -64,16 +66,19 @@ related_projects:
       - Civil
       - Historic
       - Interiors
+    image_url: /assets/imported/2023/03/Warehaus-Headquarters-08_2017-0162.jpg
   - title: Blackworth Live Fire Grill
     url: https://warehausae.com/project/blackworth-live-fire-grill/
     categories:
       - Architecture
       - Interiors
+    image_url: /assets/imported/2023/04/Blackworth-Live-Fire-Grill-21060207_0111.jpg
   - title: Bischoff Inn
     url: https://warehausae.com/project/bischoff-inn/
     categories:
       - Architecture
       - Historic
+    image_url: /assets/imported/2023/08/12-Bischoff-interior-second-flr-after-rotated-700x700.webp
   - title: York Academy Regional Charter School – Lower School
     url: https://warehausae.com/project/york-academy-regional-charter-school-lower-school/
     categories:
@@ -81,6 +86,7 @@ related_projects:
       - Civil
       - Historic
       - Interiors
+    image_url: /assets/imported/2023/04/York-Academy-Regional-Charter-Upper-School_Professional-093011_00101.webp
 is_test_fits_subpage: false
 seo_title: Office Rooftop Plaza - Warehaus
 seo_description: An adaptive reuse project with rooftop views of Harrisburg.

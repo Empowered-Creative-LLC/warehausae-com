@@ -105,6 +105,10 @@ tabs:
                   field:
                     type: list
                     display: Recent Projects Categories
+                - handle: image_url
+                  field:
+                    type: text
+                    display: Recent Projects Image Url
               display: Recent Projects
               instructions: Project list shown under 'Recent Projects' at the bottom. Deduplicate by URL.
           - handle: hero_image_url

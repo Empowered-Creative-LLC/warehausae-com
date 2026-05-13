@@ -6,7 +6,7 @@ slug: warehaus-welcomes-courtney-weaver-as-chief-financial-officer
 source_url: https://warehausae.com/warehaus-welcomes-courtney-weaver-as-chief-financial-officer/
 url: /warehaus-welcomes-courtney-weaver-as-chief-financial-officer/
 published_date_text: March 9, 2026
-featured_image_url: /assets/imported/2022/03/Asset-1.png
+featured_image_url: /assets/imported/2026/03/Courtney-Weaver-Warehaus-CFO-1024x1024.jpg
 categories:
   - label: News
     url: https://warehausae.com/category/news/

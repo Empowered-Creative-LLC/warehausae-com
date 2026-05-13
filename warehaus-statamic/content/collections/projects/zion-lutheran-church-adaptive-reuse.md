@@ -45,7 +45,7 @@ industries:
     url: https://warehausae.com/industry/retail-and-hospitality/
 awards:
   - Main Street Matters Grant Recipient
-hero_image_url: /assets/imported/2022/03/Asset-1.png
+hero_image_url: /assets/imported/2025/04/1Zion-Church-Duke-St_06112024-700x700.webp
 gallery_images:
   - url: /assets/imported/2025/04/1Zion-Church-Duke-St_06112024-700x700.webp
     alt: 1zion-church-duke-st_06112024
@@ -69,21 +69,25 @@ related_projects:
     categories:
       - Civil
       - Civil Engineering
+    image_url: /assets/imported/2025/06/Susquehanna-Trail-Dunkin-and-Jimmy-Johns-5-700x700.webp
   - title: Appell Center Concessions Renovation
     url: https://warehausae.com/project/appell-center-concessions-renovation/
     categories:
       - Architecture
+    image_url: /assets/imported/2025/06/Appell-Concessions-8-700x700.webp
   - title: York Academy Regional Charter School Legacy Hall
     url: https://warehausae.com/project/york-academy-regional-charter-school-legacy-hall/
     categories:
       - Architecture
       - Civil
       - Interiors
+    image_url: /assets/imported/2025/09/York-Academy-Legacy-Hall-2-700x700.jpg
   - title: University Lofts
     url: https://warehausae.com/project/university-lofts/
     categories:
       - Architecture
       - Historic
+    image_url: /assets/imported/2023/03/University-Lofts_Rendering-052419_00024-700x700.jpg
   - title: 210 York Street Office and Recording Studio
     url: https://warehausae.com/project/210-york-street-office/
     categories:
@@ -91,6 +95,7 @@ related_projects:
       - Civil
       - Historic
       - Interiors
+    image_url: /assets/imported/2023/03/210_York_Street15-of-00-1.jpg
   - title: 320 North George Street Office
     url: https://warehausae.com/project/320-north-george-street-office/
     categories:
@@ -98,25 +103,30 @@ related_projects:
       - Civil
       - Historic
       - Interiors
+    image_url: /assets/imported/2023/03/Warehaus-Headquarters-08_2017-0162.jpg
   - title: McHenry Row Office and Courtyard by Marriott Hotel
     url: https://warehausae.com/project/mchenry-row-office-hotel/
     categories:
       - Architecture
       - Interiors
+    image_url: /assets/imported/2023/04/2P1A5115-Copy.jpg
   - title: Blackworth Live Fire Grill
     url: https://warehausae.com/project/blackworth-live-fire-grill/
     categories:
       - Architecture
       - Interiors
+    image_url: /assets/imported/2023/04/Blackworth-Live-Fire-Grill-21060207_0111.jpg
   - title: Courtyard by Marriott at Rowan Boulevard
     url: https://warehausae.com/project/courtyard-by-marriott-rowan-boulevard/
     categories:
       - Architecture
+    image_url: /assets/imported/2023/04/Marriott_Courtyard_Rowan_Boulevard_1-700x700.jpg
   - title: Hilton Garden Inn
     url: https://warehausae.com/project/hilton-garden-inn/
     categories:
       - Architecture
       - Civil
+    image_url: /assets/imported/2023/04/Hilton-Garden-Inn-Hershey_Professional-20190521_0007.jpg
 is_test_fits_subpage: false
 seo_title: Zion Lutheran Church Adaptive Reuse
 seo_description: Zion Lutheran Church Adaptive Reuse project details.

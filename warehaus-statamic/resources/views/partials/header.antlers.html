@@ -7,7 +7,7 @@
     class="fixed top-0 inset-x-0 z-50 transition-colors duration-300
            bg-transparent text-white"
 >
-    <div class="container-haus flex items-center justify-between gap-8 py-5">
+    <div class="container-haus flex items-center justify-between gap-8 py-4 md:py-5">
         <a href="/" class="flex items-center gap-3 group">
             <span aria-hidden="true" class="inline-block h-6 w-6 border-2 border-current relative">
                 <span class="absolute inset-y-1 left-1 right-3 bg-current"></span>
@@ -25,22 +25,35 @@
 
         <button
             type="button"
-            class="md:hidden inline-flex items-center justify-center h-10 w-10 rounded hover:bg-white/10"
+            class="md:hidden inline-flex items-center justify-center h-10 w-10 rounded hover:bg-white/10 transition"
             data-haus-mobile-toggle
             aria-label="Open menu"
+            aria-expanded="false"
+            aria-controls="haus-mobile-nav"
         >
-            <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+            <svg data-haus-icon="menu" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+            <svg data-haus-icon="close" class="h-6 w-6 hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
         </button>
     </div>
 
     {{# Mobile nav, hidden by default. Toggled via data-haus-mobile-toggle. #}}
-    <div data-haus-mobile-nav hidden class="md:hidden border-t border-white/10 bg-haus-ink-900/95">
-        <nav class="container-haus flex flex-col gap-4 py-6 text-sm font-medium tracking-wide uppercase">
-            <a href="/services/" class="py-1">Services</a>
-            <a href="/portfolio/" class="py-1">Portfolio</a>
-            <a href="/about/" class="py-1">About</a>
-            <a href="/culture/" class="py-1">Culture</a>
-            <a href="/careers/" class="py-1">Careers</a>
+    <div
+        id="haus-mobile-nav"
+        data-haus-mobile-nav
+        hidden
+        class="md:hidden bg-haus-ink-900 border-t border-white/10"
+    >
+        <nav class="container-haus flex flex-col py-4 text-base font-medium tracking-wide uppercase divide-y divide-white/5">
+            <a href="/services/" class="py-4 hover:text-haus-amber-400 transition flex justify-between items-center">Services <span aria-hidden="true">→</span></a>
+            <a href="/portfolio/" class="py-4 hover:text-haus-amber-400 transition flex justify-between items-center">Portfolio <span aria-hidden="true">→</span></a>
+            <a href="/about/" class="py-4 hover:text-haus-amber-400 transition flex justify-between items-center">About <span aria-hidden="true">→</span></a>
+            <a href="/culture/" class="py-4 hover:text-haus-amber-400 transition flex justify-between items-center">Culture <span aria-hidden="true">→</span></a>
+            <a href="/careers/" class="py-4 hover:text-haus-amber-400 transition flex justify-between items-center">Careers <span aria-hidden="true">→</span></a>
         </nav>
+
+        <div class="container-haus py-6 border-t border-white/10 text-sm text-haus-ink-300 space-y-2">
+            <p><a href="mailto:{{ site_info:email }}" class="hover:text-haus-amber-400 transition">{{ site_info:email }}</a></p>
+            <p><a href="tel:{{ site_info:phone_tel }}" class="hover:text-haus-amber-400 transition">{{ site_info:phone }}</a></p>
+        </div>
     </div>
 </header>

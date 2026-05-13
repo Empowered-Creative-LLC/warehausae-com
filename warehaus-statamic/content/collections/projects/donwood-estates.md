@@ -51,13 +51,16 @@ related_projects:
     url: https://warehausae.com/project/multi-family-land-development/
     categories:
       - Civil
+    image_url: /assets/imported/elementor/thumbs/New-Brittany-8-r342oqc28f0dszyjrv6sor827ri4ab2ilmeuy5ajs0.webp
   - title: Single Family Lots
     url: https://warehausae.com/project/single-family-lots-civil-engineering/
     categories:
       - Civil
+    image_url: /assets/imported/elementor/thumbs/Wattenschaidt-Homes_09102024_0017-qwo2aomocah9wj7x3o1vitzgierafaayrv6z0vhqjk.webp
   - title: New Freedom Borough Rail Trail Improvements
     url: https://warehausae.com/project/new-freedom-borough-rail-trail-improvements/
     categories: []
+    image_url: /assets/imported/2023/12/Rail-Trail-Improvements-4-700x700.webp
 is_test_fits_subpage: false
 seo_title: Donwood Estates
 seo_description: Detailed information about the Donwood Estates project.

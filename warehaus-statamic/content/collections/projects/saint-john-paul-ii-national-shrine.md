@@ -67,15 +67,18 @@ related_projects:
       - Architecture
       - Civil
       - Structural
+    image_url: /assets/imported/2024/09/Kaltreider-Benfer-DRONE-13-700x700.webp
   - title: Gratz Bank Tower Repair
     url: https://warehausae.com/project/gratz-bank-tower-repair/
     categories:
       - Architecture
       - Structural
+    image_url: /assets/imported/2024/09/Screenshot-2024-09-17-083457-700x688.webp
   - title: Appell Center Concessions Renovation
     url: https://warehausae.com/project/appell-center-concessions-renovation/
     categories:
       - Architecture
+    image_url: /assets/imported/2025/06/Appell-Concessions-8-700x700.webp
   - title: 210 York Street Office and Recording Studio
     url: https://warehausae.com/project/210-york-street-office/
     categories:
@@ -83,12 +86,14 @@ related_projects:
       - Civil
       - Historic
       - Interiors
+    image_url: /assets/imported/2023/03/210_York_Street15-of-00-1.jpg
   - title: George Spangler Farm
     url: https://warehausae.com/project/george-spangler-farm/
     categories:
       - Architecture
       - Historic
       - Interiors
+    image_url: /assets/imported/2023/04/Warehaus_GeorgeSpanglerFarm-0032.webp
   - title: York County History Center
     url: https://warehausae.com/project/york-county-history-center/
     categories:
@@ -96,102 +101,123 @@ related_projects:
       - Historic
       - Interiors
       - Structural
+    image_url: /assets/imported/2023/04/York-County-History-Center_Rendering_Third-Floor.webp
   - title: Capitol Theatre
     url: https://warehausae.com/project/capitol-theatre/
     categories:
       - Architecture
+    image_url: /assets/imported/2023/07/Capitol_Theatre-11_2018-0001.jpg
   - title: DreamWrights Center for Community Arts
     url: https://warehausae.com/project/dreamwrights-center-for-community-arts/
     categories:
       - Architecture
+    image_url: /assets/imported/2023/04/DreamWrightsTheatre-2019-0002.webp
   - title: Gettysburg Lincoln Railroad Station
     url: https://warehausae.com/project/gettysburg-lincoln-railroad-station/
     categories:
       - Architecture
+    image_url: /assets/imported/2023/04/Gburg-Train-Station-4-2-700x700.webp
   - title: Gettysburg National Military Park Museum and Visitor Center
     url: https://warehausae.com/project/gettysburg-national-military-park-museum/
     categories:
       - Architecture
+    image_url: /assets/imported/2023/04/Gettysburg-National-Military-Museum-and-Visitor-Center-20080423_0167.jpg
   - title: Milton and Catherine Hershey Conservatory at Hershey Gardens
     url: https://warehausae.com/project/milton-and-catherine-hershey-conservatory-at-hershey-gardens/
     categories:
       - Architecture
       - Interiors
+    image_url: /assets/imported/2023/04/Grand-Conservatory-at-Hershey_Professional-20160914_0017.jpg
   - title: "Kreutz Creek Library: York County Libraries"
     url: https://warehausae.com/project/kreutz-creek-library-york-county-libraries/
     categories:
       - Architecture
+    image_url: /assets/imported/2023/04/Kreutz-Creek-Library-15.jpg
   - title: "Martin Library: York County Libraries"
     url: https://warehausae.com/project/martin-library-york-county-libraries/
     categories:
       - Architecture
       - Civil
       - Interiors
+    image_url: /assets/imported/2023/04/IMG_7052.jpg
   - title: Sinnemahoning State Park
     url: https://warehausae.com/project/sinnemahoning-state-park/
     categories:
       - Architecture
       - Civil
       - Interiors
+    image_url: /assets/imported/2023/04/Sinnemahoning-State-Park102611_00003.jpg
   - title: The Hershey Story Museum
     url: https://warehausae.com/project/the-hershey-story-museum/
     categories:
       - Architecture
+    image_url: /assets/imported/2023/04/Hershey-Story_Professional-20080210_0016.jpg
   - title: York JCC Jewish Community Center
     url: https://warehausae.com/project/york-jcc-jewish-community-center/
     categories:
       - Architecture
       - Interiors
+    image_url: /assets/imported/2023/04/JCC-6_10_21-EDITED-08.jpg
   - title: 1895 Federal Building
     url: https://warehausae.com/project/1895-federal-building/
     categories:
       - Architecture
       - Historic
+    image_url: /assets/imported/2023/04/1895_Federal_Building_2.jpg
   - title: "Berks County Heritage Lock #47 Restoration"
     url: https://warehausae.com/project/berks-county-heritage-lock-47-restoration/
     categories:
       - Architecture
       - Civil
       - Historic
+    image_url: /assets/imported/2023/04/Berks-County-Lock-Civil.jpg
   - title: Carlisle Barracks Restoration
     url: https://warehausae.com/project/carlisle-barracks-restoration/
     categories:
       - Architecture
       - Structural
+    image_url: /assets/imported/2023/04/DSCF8878-700x700.jpg
   - title: Hershey Community Building
     url: https://warehausae.com/project/hershey-historic-community-building/
     categories:
       - Architecture
       - Historic
+    image_url: /assets/imported/2023/04/DSC02854.jpg
   - title: Lancaster County Courthouse and Prison
     url: https://warehausae.com/project/lancaster-county-courthouse-and-prison/
     categories:
       - Architecture
       - Historic
+    image_url: /assets/imported/2023/04/The-Lancaster-County-Courthouse-093014_0007.jpg
   - title: Martin Brownstone
     url: https://warehausae.com/project/martin-brownstone-restoration/
     categories:
       - Architecture
       - Interiors
+    image_url: /assets/imported/2023/04/Martin_Brownstone_After_1-700x700.jpg
   - title: St. Paul Evangelical Lutheran Church
     url: https://warehausae.com/project/st-paul-evangelical-lutheran-church/
     categories:
       - Architecture
+    image_url: /assets/imported/2023/04/St.-Paul-Lutheran-Church-111414_00684_Edited.jpg
   - title: UMFP Redwood Facade Restoration
     url: https://warehausae.com/project/umfp-redwood-facade-restoration/
     categories:
       - Architecture
       - Historic
+    image_url: /assets/imported/2023/04/University-of-Maryland-Faculty-Physicians-Inc-082013_00006.jpg
   - title: Holderness School Davis Center
     url: https://warehausae.com/project/holderness-school-davis-center/
     categories:
       - Architecture
       - Interiors
       - Structural
+    image_url: /assets/imported/2023/09/Project_Holderness_Academic_Building_20210926_11-1-min.webp
   - title: Adams County Arts Council Renovation
     url: https://warehausae.com/project/adams-county-arts-council-renovation/
     categories:
       - Architecture
+    image_url: /assets/imported/2024/02/ACAC-Before-After-1-700x700.jpg
 is_test_fits_subpage: false
 seo_title: Saint John Paul II National Shrine - Warehaus
 seo_description: Transforming a cultural center into a place of pilgrimage and celebration.

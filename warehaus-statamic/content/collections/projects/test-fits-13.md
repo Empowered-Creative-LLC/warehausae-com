@@ -29,15 +29,18 @@ related_projects:
     url: https://warehausae.com/project/wellspan-health-heart-vascular-center/
     categories:
       - Civil
+    image_url: /assets/imported/2024/09/Screen-Shot-2020-03-10-at-3.15.57-PM-700x700.webp
   - title: Italian Steakhouse
     url: https://warehausae.com/project/italian-steakhouse/
     categories:
       - Architecture
       - Interiors
+    image_url: /assets/imported/2024/09/Andonias-Chophouse-High-Res-Final-Render-700x700.webp
   - title: Cove Forge Behavioral Health
     url: https://warehausae.com/project/cove-forge-behavioral-health/
     categories:
       - Architecture
+    image_url: /assets/imported/2025/09/Cove-Forge-Interiors-39-700x700.jpg
 is_test_fits_subpage: true
 seo_title: Test Fit Capabilities
 seo_description: Our test fit services provide a preliminary floor plan to assess if a space can meet your specific needs.

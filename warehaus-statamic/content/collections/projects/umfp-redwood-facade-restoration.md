@@ -32,7 +32,7 @@ industries:
     url: https://warehausae.com/industry/healthcare/
   - label: Historic
     url: https://warehausae.com/industry/historic/
-hero_image_url: /assets/imported/2022/03/Asset-1.png
+hero_image_url: /assets/imported/2023/04/University-of-Maryland-Faculty-Physicians-Inc-082013_00006.jpg
 gallery_images:
   - url: /assets/imported/2023/04/University-of-Maryland-Faculty-Physicians-Inc-082013_00006.jpg
     alt: 419 West Redwood Street envelope restoration project
@@ -49,20 +49,24 @@ related_projects:
     url: https://warehausae.com/project/cove-forge-behavioral-health/
     categories:
       - Architecture
+    image_url: /assets/imported/2025/09/Cove-Forge-Interiors-39-700x700.jpg
   - title: Zion Lutheran Church Adaptive Reuse
     url: https://warehausae.com/project/zion-lutheran-church-adaptive-reuse/
     categories:
       - Architecture
       - Historic
+    image_url: /assets/imported/2025/04/1Zion-Church-Duke-St_06112024-700x700.webp
   - title: Appell Center Concessions Renovation
     url: https://warehausae.com/project/appell-center-concessions-renovation/
     categories:
       - Architecture
+    image_url: /assets/imported/2025/06/Appell-Concessions-8-700x700.webp
   - title: University Lofts
     url: https://warehausae.com/project/university-lofts/
     categories:
       - Architecture
       - Historic
+    image_url: /assets/imported/2023/03/University-Lofts_Rendering-052419_00024-700x700.jpg
   - title: 320 North George Street Office
     url: https://warehausae.com/project/320-north-george-street-office/
     categories:
@@ -70,6 +74,7 @@ related_projects:
       - Civil
       - Historic
       - Interiors
+    image_url: /assets/imported/2023/03/Warehaus-Headquarters-08_2017-0162.jpg
 is_test_fits_subpage: false
 seo_title: UMFP Redwood Facade Restoration
 seo_description: >-

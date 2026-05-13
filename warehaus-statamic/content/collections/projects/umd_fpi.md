@@ -20,7 +20,7 @@ completion_date: Various
 services_provided:
   - label: Architecture
     url: /service/architecture/
-hero_image_url: /assets/imported/2022/03/Asset-1.png
+hero_image_url: /assets/imported/elementor/thumbs/University-of-Maryland-Faculty-Physicians-Inc_Professional-090515_00017-qtq3qlee8a5j204ec2oyxl6uy9pt9y6qsq8i11af1c.jpg
 gallery_images:
   - url: /assets/imported/elementor/thumbs/University-of-Maryland-Faculty-Physicians-Inc_Professional-090515_00017-qtq3qlee8a5j204ec2oyxl6uy9pt9y6qsq8i11af1c.jpg
     alt: University of Maryland Faculty Physicians, Inc. healthcare design
@@ -62,16 +62,19 @@ related_projects:
     categories:
       - Architecture
       - Interiors
+    image_url: /assets/imported/2023/04/Crystal-A-23.jpg
   - title: UMFP Redwood Facade Restoration
     url: https://warehausae.com/project/umfp-redwood-facade-restoration/
     categories:
       - Architecture
       - Historic
+    image_url: /assets/imported/2023/04/University-of-Maryland-Faculty-Physicians-Inc-082013_00006.jpg
   - title: Back 2 Health Chiropractic
     url: https://warehausae.com/project/back-2-health-chiropractic/
     categories:
       - Architecture
       - Interiors
+    image_url: /assets/imported/2023/05/Back2Health-2-2.jpg
 is_test_fits_subpage: false
 seo_title: University of Maryland Faculty Physicians, Inc. Projects
 seo_description: Explore the architectural and design projects undertaken for the University of Maryland Faculty Physicians, Inc. by Warehaus.

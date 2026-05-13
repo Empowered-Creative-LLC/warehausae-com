@@ -7,17 +7,19 @@
 @source '../**/*.js';
 
 @theme {
-    /* Warehaus identity */
-    --color-haus-amber-50:  #fef9eb;
-    --color-haus-amber-100: #fcedc3;
-    --color-haus-amber-200: #f9da89;
-    --color-haus-amber-300: #f4c14f;
-    --color-haus-amber-400: #eda730;
-    --color-haus-amber-500: #e89427;
-    --color-haus-amber-600: #c87320;
-    --color-haus-amber-700: #9f561d;
-    --color-haus-amber-800: #82441c;
-    --color-haus-amber-900: #6c391a;
+    /* Warehaus identity. amber-500 = #F89B02 sampled live from
+       warehausae.com (the WE BELIEVE IN yellow tag color). The rest of the
+       scale is interpolated around it. */
+    --color-haus-amber-50:  #fff7e6;
+    --color-haus-amber-100: #feeab8;
+    --color-haus-amber-200: #fcd580;
+    --color-haus-amber-300: #fabe48;
+    --color-haus-amber-400: #f9ab1f;
+    --color-haus-amber-500: #f89b02;
+    --color-haus-amber-600: #d08001;
+    --color-haus-amber-700: #a56601;
+    --color-haus-amber-800: #7c4d01;
+    --color-haus-amber-900: #5e3a00;
 
     --color-haus-ink-50:  #f5f5f4;
     --color-haus-ink-100: #e7e5e4;

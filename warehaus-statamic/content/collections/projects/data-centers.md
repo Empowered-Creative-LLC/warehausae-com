@@ -37,17 +37,20 @@ related_projects:
     url: https://warehausae.com/project/fuchs-north-america/
     categories:
       - Architecture
+    image_url: /assets/imported/2023/03/2014_0023_00_N22_lgjpg.jpg
   - title: Phoenix Contact Office
     url: https://warehausae.com/project/phoenix-contact-office/
     categories:
       - Architecture
       - Interiors
       - Structural
+    image_url: /assets/imported/2023/04/Phoenix-Contact-New-Distribution-Center-070208_0013.jpg
   - title: Procter & Gamble Tabler Station
     url: https://warehausae.com/project/pandgtablerstation/
     categories:
       - Architecture
       - Interiors
+    image_url: /assets/imported/2023/04/Procter-Gamble-Live-Wall-0621201956-of-57.jpg
 is_test_fits_subpage: false
 seo_title: Data Center Design | Warehaus
 seo_description: High-performance data center design focusing on efficiency, security, and scalability.

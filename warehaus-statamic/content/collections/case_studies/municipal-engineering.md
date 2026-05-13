@@ -5,7 +5,7 @@ title: Comprehensive Civil Engineering Services Tailored for Municipalities
 slug: municipal-engineering
 source_url: https://warehausae.com/case-study/municipal-engineering/
 url: /case-study/municipal-engineering/
-hero_image_url: /assets/imported/2022/03/Asset-1.png
+hero_image_url: /assets/imported/2023/12/Rail-Trail-Improvements-1024x683.webp
 intro_prose: >-
   Our proficiency with a wide array of disciplines and municipal regulations, laws and permitting makes Warehaus an excellent choice to represent your municipality. We bring expertise, in-depth
   knowledge of the regulatory environment, and the skills necessary to address complex infrastructure, environmental and land use issues.

@@ -38,17 +38,20 @@ related_projects:
     url: https://warehausae.com/project/york-county-spca/
     categories:
       - Architecture
+    image_url: /assets/imported/2023/10/YorkSPCA-7-700x700.jpg
   - title: Acadia Healthcare, Inc. Bowling Green Brandywine
     url: https://warehausae.com/project/acadia-healthcare-inc-bowling-green-brandywine/
     categories:
       - Architecture
       - Interiors
+    image_url: /assets/imported/2024/02/Acadia-Retouched-3-700x700.webp
   - title: Hershey Tanger Outlets Site and Facade Improvements
     url: https://warehausae.com/project/hershey-tanger-outlets-site-and-facade-improvements/
     categories:
       - Architecture
       - Civil
       - Structural
+    image_url: /assets/imported/2024/02/Tanger-768x400.webp
 is_test_fits_subpage: true
 seo_title: Test Fits
 seo_description: Explore our test fit capabilities for various projects and clients.

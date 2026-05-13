@@ -59,21 +59,25 @@ related_projects:
       - Architecture
       - Civil
       - Structural
+    image_url: /assets/imported/2025/04/Northside-Commons-Before-04082025-15-700x700.webp
   - title: Appell Center Concessions Renovation
     url: https://warehausae.com/project/appell-center-concessions-renovation/
     categories:
       - Architecture
+    image_url: /assets/imported/2025/06/Appell-Concessions-8-700x700.webp
   - title: York Academy Regional Charter School Legacy Hall
     url: https://warehausae.com/project/york-academy-regional-charter-school-legacy-hall/
     categories:
       - Architecture
       - Civil
       - Interiors
+    image_url: /assets/imported/2025/09/York-Academy-Legacy-Hall-2-700x700.jpg
   - title: University Lofts
     url: https://warehausae.com/project/university-lofts/
     categories:
       - Architecture
       - Historic
+    image_url: /assets/imported/2023/03/University-Lofts_Rendering-052419_00024-700x700.jpg
   - title: 210 York Street Office and Recording Studio
     url: https://warehausae.com/project/210-york-street-office/
     categories:
@@ -81,6 +85,7 @@ related_projects:
       - Civil
       - Historic
       - Interiors
+    image_url: /assets/imported/2023/03/210_York_Street15-of-00-1.jpg
 is_test_fits_subpage: false
 seo_title: York Academy Regional Charter School – Lower School
 seo_description: A thriving academic space emerges from an adaptive reuse transformation

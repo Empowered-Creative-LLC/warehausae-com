@@ -5,7 +5,7 @@ title: A Stay to Discover in Tamaqua, PA
 slug: case-study-bischoff-inn
 source_url: https://warehausae.com/case-study-bischoff-inn/
 url: /case-study-bischoff-inn/
-hero_image_url: /assets/imported/2022/03/Asset-1.png
+hero_image_url: /assets/imported/2023/08/2-BischoffFurnitureFactory_Rear-1024x778.jpg
 intro_prose: >-
   Completed in January 2023 at a cost of $1.2 million, this project consisted of the rehabilitation of the main building of a former planing mill and furniture factory located in the Borough of
   Tamaqua, Schuylkill County, Pennsylvania. Situated in the NPS registered Tamaqua Historic District, this 0.17-acre property consists of three contributing buildings, including the 2/3-story brick,

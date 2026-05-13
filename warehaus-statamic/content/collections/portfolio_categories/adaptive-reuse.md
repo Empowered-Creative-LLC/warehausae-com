@@ -50,17 +50,20 @@ recent_projects:
       - Architecture
       - Civil
       - Structural
+    image_url: /assets/imported/2024/08/the-barn-resort-08152024-3-700x700.webp
   - title: Zion Lutheran Church Adaptive Reuse
     url: https://warehausae.com/project/zion-lutheran-church-adaptive-reuse/
     categories:
       - Architecture
       - Historic
+    image_url: /assets/imported/2025/04/1Zion-Church-Duke-St_06112024-700x700.webp
   - title: York Academy Regional Charter School Legacy Hall
     url: https://warehausae.com/project/york-academy-regional-charter-school-legacy-hall/
     categories:
       - Architecture
       - Civil
       - Interiors
+    image_url: /assets/imported/2025/09/York-Academy-Legacy-Hall-2-700x700.jpg
   - title: 210 York Street Office and Recording Studio
     url: https://warehausae.com/project/210-york-street-office/
     categories:
@@ -68,6 +71,7 @@ recent_projects:
       - Civil
       - Historic
       - Interiors
+    image_url: /assets/imported/2023/03/210_York_Street15-of-00-1.jpg
   - title: 320 North George Street Office
     url: https://warehausae.com/project/320-north-george-street-office/
     categories:
@@ -75,21 +79,25 @@ recent_projects:
       - Civil
       - Historic
       - Interiors
+    image_url: /assets/imported/2023/03/Warehaus-Headquarters-08_2017-0162.jpg
   - title: Blackworth Live Fire Grill
     url: https://warehausae.com/project/blackworth-live-fire-grill/
     categories:
       - Architecture
       - Interiors
+    image_url: /assets/imported/2023/04/Blackworth-Live-Fire-Grill-21060207_0111.jpg
   - title: Office Rooftop Plaza
     url: https://warehausae.com/project/office-rooftop-plaza/
     categories:
       - Architecture
       - Historic
+    image_url: /assets/imported/2023/04/2020.05.16-RENDERING-AERIAL.jpg
   - title: Bischoff Inn
     url: https://warehausae.com/project/bischoff-inn/
     categories:
       - Architecture
       - Historic
+    image_url: /assets/imported/2023/08/12-Bischoff-interior-second-flr-after-rotated-700x700.webp
   - title: York Academy Regional Charter School – Lower School
     url: https://warehausae.com/project/york-academy-regional-charter-school-lower-school/
     categories:
@@ -97,18 +105,21 @@ recent_projects:
       - Civil
       - Historic
       - Interiors
+    image_url: /assets/imported/2023/04/York-Academy-Regional-Charter-Upper-School_Professional-093011_00101.webp
   - title: George Spangler Farm
     url: https://warehausae.com/project/george-spangler-farm/
     categories:
       - Architecture
       - Historic
       - Interiors
+    image_url: /assets/imported/2023/04/Warehaus_GeorgeSpanglerFarm-0032.webp
   - title: York College Civil Engineering Center
     url: https://warehausae.com/project/york-college-civil-engineering-center/
     categories:
       - Architecture
       - Civil
       - Structural
+    image_url: /assets/imported/2023/09/York-College-Civil-Engineering-Center0614201902-of-6.webp
   - title: York County History Center
     url: https://warehausae.com/project/york-county-history-center/
     categories:
@@ -116,25 +127,30 @@ recent_projects:
       - Historic
       - Interiors
       - Structural
+    image_url: /assets/imported/2023/04/York-County-History-Center_Rendering_Third-Floor.webp
   - title: Logos Academy
     url: https://warehausae.com/project/logos-academy/
     categories:
       - Architecture
       - Civil
       - Structural
+    image_url: http://www.warehausae.com/
   - title: York College of Pennsylvania Kinsley Engineering Center
     url: https://warehausae.com/project/york-college-of-pennsylvania-kinsley-engineering-center/
     categories:
       - Architecture
+    image_url: /assets/imported/2023/05/YCP-Kinsley-Engineering-Complex_Professional-091008_00066.jpg
   - title: Northern Gateway
     url: https://warehausae.com/project/northern-gateway/
     categories:
       - Architecture
       - Structural
+    image_url: /assets/imported/2023/05/2019-3D-View-INTERIOR-PERSPECTIVE-VIEW-1-700x700.jpg
   - title: 205 State Street Apartments
     url: https://warehausae.com/project/205-state-street-apartments/
     categories:
       - Architecture
+    image_url: /assets/imported/2024/07/state-street-apartments-06192024-5-768x400.webp
 hero_image_url: /assets/imported/2022/03/Asset-1.png
 seo_title: Adaptive Reuse | Warehaus
 seo_description: Discover how Warehaus transforms spaces through adaptive reuse, combining creativity and technical expertise.

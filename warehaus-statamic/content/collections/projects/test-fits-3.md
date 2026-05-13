@@ -105,17 +105,20 @@ related_projects:
     categories:
       - Architecture
       - Interiors
+    image_url: /assets/imported/2023/04/2P1A5115-Copy.jpg
   - title: PayPal Toronto Flagship Office
     url: https://warehausae.com/project/paypal-toronto-flagship-office/
     categories:
       - Architecture
       - Interiors
+    image_url: /assets/imported/2023/04/PayPal-Toronto_Professional-120316_0005.jpg
   - title: Phoenix Contact Office
     url: https://warehausae.com/project/phoenix-contact-office/
     categories:
       - Architecture
       - Interiors
       - Structural
+    image_url: /assets/imported/2023/04/Phoenix-Contact-New-Distribution-Center-070208_0013.jpg
 is_test_fits_subpage: true
 seo_title: Test Fit Capabilities
 seo_description: Explore our test fit capabilities for efficient space planning.

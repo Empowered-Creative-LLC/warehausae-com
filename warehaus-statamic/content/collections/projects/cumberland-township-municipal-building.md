@@ -63,16 +63,19 @@ related_projects:
     categories:
       - Architecture
       - Interiors
+    image_url: /assets/imported/elementor/thumbs/paypal-toronto-professional-120316-0002-r33rrjghearf953aqeny6h5ombhpgb4mvi9x0aa4kg.webp
   - title: Wagman, Inc. Office
     url: https://warehausae.com/project/wagman-inc-office/
     categories:
       - Architecture
       - Interiors
+    image_url: /assets/imported/2025/10/Wagman-offices-3265-Farmtrail-Rd-39-700x700.jpg
   - title: Volvo North America Living Office Transformation
     url: https://warehausae.com/project/volvo-north-america-office-transformation/
     categories:
       - Architecture
       - Interiors
+    image_url: /assets/imported/2025/11/Volvo-Construction-Equipment-497-HDR-700x700.jpg
   - title: 1110 East Princess Street Office
     url: https://warehausae.com/project/1110-princess-street-office/
     categories:
@@ -80,6 +83,7 @@ related_projects:
       - Civil
       - Interiors
       - Structural
+    image_url: /assets/imported/2023/03/Kinsley_1110_East_Princess_St_Interior_062619_01-of-05.jpg
   - title: 320 North George Street Office
     url: https://warehausae.com/project/320-north-george-street-office/
     categories:
@@ -87,31 +91,37 @@ related_projects:
       - Civil
       - Historic
       - Interiors
+    image_url: /assets/imported/2023/03/Warehaus-Headquarters-08_2017-0162.jpg
   - title: Fuchs North America
     url: https://warehausae.com/project/fuchs-north-america/
     categories:
       - Architecture
+    image_url: /assets/imported/2023/03/2014_0023_00_N22_lgjpg.jpg
   - title: Gettle Office
     url: https://warehausae.com/project/gettle-office/
     categories:
       - Architecture
       - Interiors
       - Structural
+    image_url: /assets/imported/2023/04/Gettle-Headquarters_Professional-20190522_0054.jpg
   - title: Harsco Corporate Headquarters
     url: https://warehausae.com/project/harsco-corporate-headquarters/
     categories:
       - Architecture
       - Interiors
+    image_url: /assets/imported/2023/04/Harsco-Corporate-Headquarters_Professional-20150801_0076.jpg
   - title: JEM Group, LLC Office
     url: https://warehausae.com/project/jem-group-llc-office/
     categories:
       - Architecture
       - Interiors
+    image_url: /assets/imported/2023/04/JEM-Office-Edited-11.jpg
   - title: McHenry Row Office and Courtyard by Marriott Hotel
     url: https://warehausae.com/project/mchenry-row-office-hotel/
     categories:
       - Architecture
       - Interiors
+    image_url: /assets/imported/2023/04/2P1A5115-Copy.jpg
 is_test_fits_subpage: false
 seo_title: Cumberland Township Municipal Building | Warehaus
 seo_description: Cumberland Township is modernizing its municipal building with a comprehensive renovation and expansion designed to better serve the community.

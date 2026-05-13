@@ -110,6 +110,11 @@ tabs:
                     type: list
                     display: Recent Projects Categories
                     instructions: Comma-separated category tags shown under each project link.
+                - handle: image_url
+                  field:
+                    type: text
+                    display: Recent Projects Image Url
+                    instructions: Populated by migration-tool/scripts/resolve-related-thumbnails.js — the related entry's hero_image_url.
               display: Recent Projects
               instructions: Featured project list at the bottom of the page.
           - handle: hero_image_url

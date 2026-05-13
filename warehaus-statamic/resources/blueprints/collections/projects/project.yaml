@@ -137,6 +137,11 @@ tabs:
                   field:
                     type: list
                     display: Related Projects Categories
+                - handle: image_url
+                  field:
+                    type: text
+                    display: Related Projects Image Url
+                    instructions: Populated by migration-tool/scripts/resolve-related-thumbnails.js — the related entry's hero_image_url.
               display: Related Projects
               instructions: Similar Projects list at the bottom of the page. Deduplicate by URL.
           - handle: is_test_fits_subpage

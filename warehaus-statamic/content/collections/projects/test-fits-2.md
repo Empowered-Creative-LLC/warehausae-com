@@ -33,16 +33,19 @@ related_projects:
       - Architecture
       - Interiors
       - Structural
+    image_url: /assets/imported/2023/04/Gettle-Headquarters_Professional-20190522_0054.jpg
   - title: Harsco Corporate Headquarters
     url: https://warehausae.com/project/harsco-corporate-headquarters/
     categories:
       - Architecture
       - Interiors
+    image_url: /assets/imported/2023/04/Harsco-Corporate-Headquarters_Professional-20150801_0076.jpg
   - title: JEM Group, LLC Office
     url: https://warehausae.com/project/jem-group-llc-office/
     categories:
       - Architecture
       - Interiors
+    image_url: /assets/imported/2023/04/JEM-Office-Edited-11.jpg
 is_test_fits_subpage: true
 seo_title: Test Fit Capabilities - Warehaus Architecture + Engineering
 seo_description: Preliminary assessments and designs tailored for your specific space needs.

@@ -38,7 +38,7 @@ industries:
     url: https://warehausae.com/industry/retail/
   - label: Commercial
     url: https://warehausae.com/industry/commercial/
-hero_image_url: /assets/imported/2022/03/Asset-1.png
+hero_image_url: /assets/imported/elementor/thumbs/Kennies-Market-20130926_0006-qtq3ta7rs7u29u7rmqjjkerc4ygmarv3i1figjav8g.jpg
 gallery_images:
   - url: /assets/imported/elementor/thumbs/Kennies-Market-20130926_0006-qtq3ta7rs7u29u7rmqjjkerc4ygmarv3i1figjav8g.jpg
     alt: Kennie's Market
@@ -68,15 +68,18 @@ related_projects:
     categories:
       - Architecture
       - Interiors
+    image_url: /assets/imported/2023/04/2P1A5115-Copy.jpg
   - title: Blackworth Live Fire Grill
     url: https://warehausae.com/project/blackworth-live-fire-grill/
     categories:
       - Architecture
       - Interiors
+    image_url: /assets/imported/2023/04/Blackworth-Live-Fire-Grill-21060207_0111.jpg
   - title: Courtyard by Marriott at Rowan Boulevard
     url: https://warehausae.com/project/courtyard-by-marriott-rowan-boulevard/
     categories:
       - Architecture
+    image_url: /assets/imported/2023/04/Marriott_Courtyard_Rowan_Boulevard_1-700x700.jpg
 is_test_fits_subpage: false
 seo_title: Retail and Commercial
 seo_description: Explore the diverse retail and commercial spaces designed by Warehaus, enhancing Visitor experiences across various locations.

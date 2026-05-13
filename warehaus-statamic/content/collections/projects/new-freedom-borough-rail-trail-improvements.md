@@ -52,20 +52,24 @@ related_projects:
     url: https://warehausae.com/project/multi-family-land-development/
     categories:
       - Civil
+    image_url: /assets/imported/elementor/thumbs/New-Brittany-8-r342oqc28f0dszyjrv6sor827ri4ab2ilmeuy5ajs0.webp
   - title: Single Family Lots
     url: https://warehausae.com/project/single-family-lots-civil-engineering/
     categories:
       - Civil
+    image_url: /assets/imported/elementor/thumbs/Wattenschaidt-Homes_09102024_0017-qwo2aomocah9wj7x3o1vitzgierafaayrv6z0vhqjk.webp
   - title: Cumberland Township Municipal Building
     url: https://warehausae.com/project/cumberland-township-municipal-building/
     categories:
       - Architecture
       - Civil
       - Interiors
+    image_url: /assets/imported/2025/06/Cumberland_Township_Municipal_Building_Groundbreaking20250617_0029-700x700.webp
   - title: Donwood Estates
     url: https://warehausae.com/project/donwood-estates/
     categories:
       - Civil
+    image_url: /assets/imported/2023/07/Donwood-Estates-6-700x700.jpg
 is_test_fits_subpage: false
 seo_title: New Freedom Borough Rail Trail Improvements
 seo_description: Enhancing the safety and aesthetics of crosswalks at New Freedom Borough.

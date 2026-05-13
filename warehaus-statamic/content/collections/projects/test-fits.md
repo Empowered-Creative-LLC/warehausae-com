@@ -88,7 +88,7 @@ industries:
     url: /industry/hospitality/
 awards:
   - 2019 AIA Central Pennsylvania Excellence in Design Award Winner
-hero_image_url: /assets/imported/2022/03/Asset-1.png
+hero_image_url: /assets/imported/elementor/thumbs/paypal-toronto-professional-120316-0002-r33rrjghearf953aqeny6h5ombhpgb4mvi9x0aa4kg.webp
 gallery_images:
   - url: /assets/imported/elementor/thumbs/paypal-toronto-professional-120316-0002-r33rrjghearf953aqeny6h5ombhpgb4mvi9x0aa4kg.webp
     alt: paypal-toronto_professional-120316_0002
@@ -106,6 +106,7 @@ related_projects:
       - Civil
       - Interiors
       - Structural
+    image_url: /assets/imported/2023/03/Kinsley_1110_East_Princess_St_Interior_062619_01-of-05.jpg
   - title: 320 North George Street Office
     url: https://warehausae.com/project/320-north-george-street-office/
     categories:
@@ -113,10 +114,12 @@ related_projects:
       - Civil
       - Historic
       - Interiors
+    image_url: /assets/imported/2023/03/Warehaus-Headquarters-08_2017-0162.jpg
   - title: Fuchs North America
     url: https://warehausae.com/project/fuchs-north-america/
     categories:
       - Architecture
+    image_url: /assets/imported/2023/03/2014_0023_00_N22_lgjpg.jpg
 is_test_fits_subpage: true
 seo_title: Test Fit Capabilities
 seo_description: Explore our Test Fit services offering preliminary space assessments for various project needs in different locations.

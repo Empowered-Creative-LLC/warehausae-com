@@ -46,6 +46,7 @@ related_projects:
       - Civil
       - Historic
       - Interiors
+    image_url: /assets/imported/2023/03/210_York_Street15-of-00-1.jpg
   - title: 320 North George Street Office
     url: https://warehausae.com/project/320-north-george-street-office/
     categories:
@@ -53,21 +54,25 @@ related_projects:
       - Civil
       - Historic
       - Interiors
+    image_url: /assets/imported/2023/03/Warehaus-Headquarters-08_2017-0162.jpg
   - title: Blackworth Live Fire Grill
     url: https://warehausae.com/project/blackworth-live-fire-grill/
     categories:
       - Architecture
       - Interiors
+    image_url: /assets/imported/2023/04/Blackworth-Live-Fire-Grill-21060207_0111.jpg
   - title: Office Rooftop Plaza
     url: https://warehausae.com/project/office-rooftop-plaza/
     categories:
       - Architecture
       - Historic
+    image_url: /assets/imported/2023/04/2020.05.16-RENDERING-AERIAL.jpg
   - title: Bischoff Inn
     url: https://warehausae.com/project/bischoff-inn/
     categories:
       - Architecture
       - Historic
+    image_url: /assets/imported/2023/08/12-Bischoff-interior-second-flr-after-rotated-700x700.webp
   - title: York Academy Regional Charter School – Lower School
     url: https://warehausae.com/project/york-academy-regional-charter-school-lower-school/
     categories:
@@ -75,12 +80,14 @@ related_projects:
       - Civil
       - Historic
       - Interiors
+    image_url: /assets/imported/2023/04/York-Academy-Regional-Charter-Upper-School_Professional-093011_00101.webp
   - title: George Spangler Farm
     url: https://warehausae.com/project/george-spangler-farm/
     categories:
       - Architecture
       - Historic
       - Interiors
+    image_url: /assets/imported/2023/04/Warehaus_GeorgeSpanglerFarm-0032.webp
   - title: York County History Center
     url: https://warehausae.com/project/york-county-history-center/
     categories:
@@ -88,16 +95,19 @@ related_projects:
       - Historic
       - Interiors
       - Structural
+    image_url: /assets/imported/2023/04/York-County-History-Center_Rendering_Third-Floor.webp
   - title: Logos Academy
     url: https://warehausae.com/project/logos-academy/
     categories:
       - Architecture
       - Civil
       - Structural
+    image_url: http://www.warehausae.com/
   - title: Penn State Bakery and Food Services
     url: https://warehausae.com/project/penn-state-bakery-and-food-services/
     categories:
       - Architecture
+    image_url: /assets/imported/2023/05/Penn-State-Warehouse-and-Bakery_Professional-041516_0015.jpg
 is_test_fits_subpage: false
 seo_title: York College Civil Engineering Center
 seo_description: Project completed by Warehaus to create a state-of-the-art Civil Engineering Center at York College, preserving the historic nature of the original structure.

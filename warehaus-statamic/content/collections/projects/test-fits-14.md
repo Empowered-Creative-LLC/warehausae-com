@@ -50,16 +50,19 @@ related_projects:
       - Architecture
       - Civil
       - Interiors
+    image_url: /assets/imported/2026/04/Ballpark-Commons-site-image-700x700.png
   - title: Zion Lutheran Church Adaptive Reuse
     url: https://warehausae.com/project/zion-lutheran-church-adaptive-reuse/
     categories:
       - Architecture
       - Historic
+    image_url: /assets/imported/2025/04/1Zion-Church-Duke-St_06112024-700x700.webp
   - title: Susquehanna Trail Dunkin’ & Jimmy John’s
     url: https://warehausae.com/project/susquehanna-trail-dunkin-jimmy-johns/
     categories:
       - Civil
       - Civil Engineering
+    image_url: /assets/imported/2025/06/Susquehanna-Trail-Dunkin-and-Jimmy-Johns-5-700x700.webp
 is_test_fits_subpage: true
 seo_title: Test Fit Capabilities | Warehaus
 seo_description: Explore our test fit capabilities which help in planning and assessing your space efficiently.

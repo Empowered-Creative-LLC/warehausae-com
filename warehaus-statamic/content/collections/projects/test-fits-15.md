@@ -37,17 +37,20 @@ related_projects:
     categories:
       - Architecture
       - Interiors
+    image_url: /assets/imported/2025/10/Wagman-offices-3265-Farmtrail-Rd-39-700x700.jpg
   - title: Cumberland Township Municipal Building
     url: https://warehausae.com/project/cumberland-township-municipal-building/
     categories:
       - Architecture
       - Civil
       - Interiors
+    image_url: /assets/imported/2025/06/Cumberland_Township_Municipal_Building_Groundbreaking20250617_0029-700x700.webp
   - title: Volvo North America Living Office Transformation
     url: https://warehausae.com/project/volvo-north-america-office-transformation/
     categories:
       - Architecture
       - Interiors
+    image_url: /assets/imported/2025/11/Volvo-Construction-Equipment-497-HDR-700x700.jpg
 is_test_fits_subpage: true
 seo_title: Test Fit Capabilities
 seo_description: Explore our test fit services, designed to ensure that spaces meet your needs through preliminary floor plans.

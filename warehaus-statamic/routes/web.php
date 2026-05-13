@@ -48,3 +48,4 @@ Route::get('/Industries/{slug}/', function (string $slug) {
         ->with($entry->toAugmentedArray())
         ->render();
 });
+

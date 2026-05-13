@@ -38,7 +38,7 @@ industries:
     url: https://warehausae.com/industry/adaptive-reuse/
   - label: Arts and Culture
     url: https://warehausae.com/industry/arts-and-culture/
-hero_image_url: /assets/imported/2022/03/Asset-1.png
+hero_image_url: /assets/imported/2023/03/210_York_Street15-of-00-1.jpg
 gallery_images:
   - url: /assets/imported/2023/03/210_York_Street15-of-00-1.jpg
     alt: Outdoor grill and kitchen area at 210 York Street Office
@@ -62,16 +62,19 @@ related_projects:
     categories:
       - Architecture
       - Historic
+    image_url: /assets/imported/2025/04/1Zion-Church-Duke-St_06112024-700x700.webp
   - title: Appell Center Concessions Renovation
     url: https://warehausae.com/project/appell-center-concessions-renovation/
     categories:
       - Architecture
+    image_url: /assets/imported/2025/06/Appell-Concessions-8-700x700.webp
   - title: York Academy Regional Charter School Legacy Hall
     url: https://warehausae.com/project/york-academy-regional-charter-school-legacy-hall/
     categories:
       - Architecture
       - Civil
       - Interiors
+    image_url: /assets/imported/2025/09/York-Academy-Legacy-Hall-2-700x700.jpg
   - title: 320 North George Street Office
     url: https://warehausae.com/project/320-north-george-street-office/
     categories:
@@ -79,16 +82,19 @@ related_projects:
       - Civil
       - Historic
       - Interiors
+    image_url: /assets/imported/2023/03/Warehaus-Headquarters-08_2017-0162.jpg
   - title: Blackworth Live Fire Grill
     url: https://warehausae.com/project/blackworth-live-fire-grill/
     categories:
       - Architecture
       - Interiors
+    image_url: /assets/imported/2023/04/Blackworth-Live-Fire-Grill-21060207_0111.jpg
   - title: Office Rooftop Plaza
     url: https://warehausae.com/project/office-rooftop-plaza/
     categories:
       - Architecture
       - Historic
+    image_url: /assets/imported/2023/04/2020.05.16-RENDERING-AERIAL.jpg
 is_test_fits_subpage: false
 seo_title: 210 York Street Office and Recording Studio
 seo_description: Learn more about the 210 York Street Office and Recording Studio project by Warehaus.

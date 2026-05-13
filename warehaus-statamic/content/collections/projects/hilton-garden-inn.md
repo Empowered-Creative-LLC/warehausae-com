@@ -58,30 +58,36 @@ related_projects:
       - Architecture
       - Civil
       - Interiors
+    image_url: /assets/imported/2026/04/Ballpark-Commons-site-image-700x700.png
   - title: Zion Lutheran Church Adaptive Reuse
     url: https://warehausae.com/project/zion-lutheran-church-adaptive-reuse/
     categories:
       - Architecture
       - Historic
+    image_url: /assets/imported/2025/04/1Zion-Church-Duke-St_06112024-700x700.webp
   - title: Susquehanna Trail Dunkin’ & Jimmy John’s
     url: https://warehausae.com/project/susquehanna-trail-dunkin-jimmy-johns/
     categories:
       - Civil
       - Civil Engineering
+    image_url: /assets/imported/2025/06/Susquehanna-Trail-Dunkin-and-Jimmy-Johns-5-700x700.webp
   - title: McHenry Row Office and Courtyard by Marriott Hotel
     url: https://warehausae.com/project/mchenry-row-office-hotel/
     categories:
       - Architecture
       - Interiors
+    image_url: /assets/imported/2023/04/2P1A5115-Copy.jpg
   - title: Blackworth Live Fire Grill
     url: https://warehausae.com/project/blackworth-live-fire-grill/
     categories:
       - Architecture
       - Interiors
+    image_url: /assets/imported/2023/04/Blackworth-Live-Fire-Grill-21060207_0111.jpg
   - title: Courtyard by Marriott at Rowan Boulevard
     url: https://warehausae.com/project/courtyard-by-marriott-rowan-boulevard/
     categories:
       - Architecture
+    image_url: /assets/imported/2023/04/Marriott_Courtyard_Rowan_Boulevard_1-700x700.jpg
 is_test_fits_subpage: false
 seo_title: Hilton Garden Inn Project Details
 seo_description: Detailed overview of the Hilton Garden Inn project including design approach and features.

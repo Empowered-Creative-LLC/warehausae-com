@@ -39,6 +39,7 @@ related_projects:
     categories:
       - Architecture
       - Civil
+    image_url: /assets/imported/elementor/thumbs/Wellspan-Family-Medicine-Roosevelt-Facility-060514_00035-r341zqsijysz6696okctwk7xq0nunyve5y36occb6o.webp
   - title: WellSpan Health Thomas Hart Medical Office Building
     url: https://warehausae.com/project/wellspan-health-thomas-hart-medical-office-building/
     categories:
@@ -46,11 +47,13 @@ related_projects:
       - Civil
       - Interiors
       - Structural
+    image_url: /assets/imported/2023/08/ST_Thomas-Hart-Medical-Dental1-768x400.webp
   - title: Retail and Commercial
     url: https://warehausae.com/project/retail-and-commercial/
     categories:
       - Architecture
       - Civil
+    image_url: /assets/imported/elementor/thumbs/Kennies-Market-20130926_0006-qtq3ta7rs7u29u7rmqjjkerc4ygmarv3i1figjav8g.jpg
 is_test_fits_subpage: true
 seo_title: Test Fits | Warehaus
 seo_description: Explore our test fit services that help assess your space needs with preliminary floor plans.

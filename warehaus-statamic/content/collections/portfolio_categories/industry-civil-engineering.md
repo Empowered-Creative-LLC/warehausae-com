@@ -32,7 +32,7 @@ testimonial:
   quote: ""
   attribution_name: ""
   attribution_org: ""
-hero_image_url: /assets/imported/2022/03/Asset-1.png
+hero_image_url: /assets/imported/2023/12/Rail-Trail-Improvements-1024x683.webp
 seo_title: Civil Engineering | Warehaus
 seo_description: Comprehensive Civil Engineering Services Tailored for Municipalities
 seo_og_image_url: /assets/imported/2022/03/Asset-1.png

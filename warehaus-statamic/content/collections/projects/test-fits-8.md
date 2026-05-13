@@ -31,14 +31,17 @@ related_projects:
     url: https://warehausae.com/project/wellspan-health-york-hospital/
     categories:
       - Civil
+    image_url: /assets/imported/2023/07/Wellspan_York_Hospital_Pedestrian_Bridge.webp
   - title: Dunkin® East
     url: https://warehausae.com/project/dunkin-east-retail/
     categories:
       - Civil
+    image_url: /assets/imported/2023/06/Photo_6555.jpg
   - title: University of Maryland Faculty Physicians, Inc. Projects
     url: https://warehausae.com/project/umd_fpi/
     categories:
       - Architecture
+    image_url: /assets/imported/elementor/thumbs/University-of-Maryland-Faculty-Physicians-Inc_Professional-090515_00017-qtq3qlee8a5j204ec2oyxl6uy9pt9y6qsq8i11af1c.jpg
 is_test_fits_subpage: true
 seo_title: Test Fit Capabilities
 seo_description: Our test fit services provide a preliminary floor plan to assess if a space can meet your specific needs.

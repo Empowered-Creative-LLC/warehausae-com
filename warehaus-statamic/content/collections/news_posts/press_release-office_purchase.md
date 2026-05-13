@@ -6,7 +6,7 @@ slug: press_release-office_purchase
 source_url: https://warehausae.com/press_release-office_purchase/
 url: /press_release-office_purchase/
 published_date_text: October 27, 2022
-featured_image_url: /assets/imported/2022/03/Asset-1.png
+featured_image_url: /assets/imported/2023/03/IMG_3184-1024x768.jpg
 categories:
   - label: News
     url: https://warehausae.com/news/

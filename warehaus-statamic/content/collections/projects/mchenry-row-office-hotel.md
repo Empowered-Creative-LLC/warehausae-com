@@ -34,7 +34,7 @@ industries:
     url: https://warehausae.com/industry/office/
   - label: Retail and Hospitality
     url: https://warehausae.com/industry/retail-and-hospitality/
-hero_image_url: /assets/imported/2022/03/Asset-1.png
+hero_image_url: /assets/imported/2023/04/2P1A5115-Copy.jpg
 gallery_images:
   - url: /assets/imported/2023/04/2P1A5115-Copy.jpg
     alt: Approved fire pit in the Courtyard Marriott hotel courtyard, designed to be safer than traditional options
@@ -66,17 +66,20 @@ related_projects:
     categories:
       - Architecture
       - Interiors
+    image_url: /assets/imported/2025/10/Wagman-offices-3265-Farmtrail-Rd-39-700x700.jpg
   - title: Cumberland Township Municipal Building
     url: https://warehausae.com/project/cumberland-township-municipal-building/
     categories:
       - Architecture
       - Civil
       - Interiors
+    image_url: /assets/imported/2025/06/Cumberland_Township_Municipal_Building_Groundbreaking20250617_0029-700x700.webp
   - title: Volvo North America Living Office Transformation
     url: https://warehausae.com/project/volvo-north-america-office-transformation/
     categories:
       - Architecture
       - Interiors
+    image_url: /assets/imported/2025/11/Volvo-Construction-Equipment-497-HDR-700x700.jpg
   - title: 1110 East Princess Street Office
     url: https://warehausae.com/project/1110-princess-street-office/
     categories:
@@ -84,6 +87,7 @@ related_projects:
       - Civil
       - Interiors
       - Structural
+    image_url: /assets/imported/2023/03/Kinsley_1110_East_Princess_St_Interior_062619_01-of-05.jpg
   - title: 320 North George Street Office
     url: https://warehausae.com/project/320-north-george-street-office/
     categories:
@@ -91,10 +95,12 @@ related_projects:
       - Civil
       - Historic
       - Interiors
+    image_url: /assets/imported/2023/03/Warehaus-Headquarters-08_2017-0162.jpg
   - title: Fuchs North America
     url: https://warehausae.com/project/fuchs-north-america/
     categories:
       - Architecture
+    image_url: /assets/imported/2023/03/2014_0023_00_N22_lgjpg.jpg
 is_test_fits_subpage: false
 seo_title: McHenry Row Office and Courtyard by Marriott Hotel
 seo_description: Explore the architectural design of the McHenry Row office and Courtyard by Marriott hotel, positioned in the revitalized Locust Point neighborhood of Baltimore.

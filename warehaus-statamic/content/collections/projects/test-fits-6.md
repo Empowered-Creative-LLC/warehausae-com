@@ -64,17 +64,20 @@ related_projects:
     url: https://warehausae.com/project/inn-at-wyndridge-farm/
     categories:
       - Interiors
+    image_url: /assets/imported/2023/04/The-Inn-at-Wyndridge-12_1979-0029-700x700.jpg
   - title: Wyndridge Farm
     url: https://warehausae.com/project/wyndridge-farm/
     categories:
       - Civil
       - Interiors
+    image_url: /assets/imported/2023/04/The-Inn-at-Wyndridge-Farm_Professional-102314_00039.jpg
   - title: George Spangler Farm
     url: https://warehausae.com/project/george-spangler-farm/
     categories:
       - Architecture
       - Historic
       - Interiors
+    image_url: /assets/imported/2023/04/Warehaus_GeorgeSpanglerFarm-0032.webp
 is_test_fits_subpage: true
 seo_title: Test Fits Project Details
 seo_description: Explore the Test Fits provided by Warehaus Architecture and Engineering.

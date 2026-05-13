@@ -39,15 +39,18 @@ related_projects:
     categories:
       - Architecture
       - Interiors
+    image_url: /assets/imported/2023/04/Procter-Gamble-Live-Wall-0621201956-of-57.jpg
   - title: Penn State Hershey Medical Center Crystal A Offices
     url: https://warehausae.com/project/pshmc-crystala-offices/
     categories:
       - Architecture
       - Interiors
+    image_url: /assets/imported/2023/04/Crystal-A-23.jpg
   - title: Volvo Construction Equipment Customer Care Center
     url: https://warehausae.com/project/volvo-customer-care-center-office/
     categories:
       - Architecture
+    image_url: /assets/imported/2023/04/111078_190_N37_medium.jpg
 is_test_fits_subpage: true
 seo_title: Test Fit Capabilities
 seo_description: Explore our test fit services to assess your space needs effectively.

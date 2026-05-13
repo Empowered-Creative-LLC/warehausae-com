@@ -54,18 +54,21 @@ related_projects:
     categories:
       - Architecture
       - Historic
+    image_url: /assets/imported/2025/04/1Zion-Church-Duke-St_06112024-700x700.webp
   - title: York College of Pennsylvania Northside Commons Addition
     url: https://warehausae.com/project/york-college-of-pennsylvania-northside-commons-addition/
     categories:
       - Architecture
       - Civil
       - Structural
+    image_url: /assets/imported/2025/04/Northside-Commons-Before-04082025-15-700x700.webp
   - title: York Academy Regional Charter School Legacy Hall
     url: https://warehausae.com/project/york-academy-regional-charter-school-legacy-hall/
     categories:
       - Architecture
       - Civil
       - Interiors
+    image_url: /assets/imported/2025/09/York-Academy-Legacy-Hall-2-700x700.jpg
   - title: 210 York Street Office and Recording Studio
     url: https://warehausae.com/project/210-york-street-office/
     categories:
@@ -73,6 +76,7 @@ related_projects:
       - Civil
       - Historic
       - Interiors
+    image_url: /assets/imported/2023/03/210_York_Street15-of-00-1.jpg
   - title: 320 North George Street Office
     url: https://warehausae.com/project/320-north-george-street-office/
     categories:
@@ -80,16 +84,19 @@ related_projects:
       - Civil
       - Historic
       - Interiors
+    image_url: /assets/imported/2023/03/Warehaus-Headquarters-08_2017-0162.jpg
   - title: Blackworth Live Fire Grill
     url: https://warehausae.com/project/blackworth-live-fire-grill/
     categories:
       - Architecture
       - Interiors
+    image_url: /assets/imported/2023/04/Blackworth-Live-Fire-Grill-21060207_0111.jpg
   - title: Office Rooftop Plaza
     url: https://warehausae.com/project/office-rooftop-plaza/
     categories:
       - Architecture
       - Historic
+    image_url: /assets/imported/2023/04/2020.05.16-RENDERING-AERIAL.jpg
   - title: York Academy Regional Charter School – Lower School
     url: https://warehausae.com/project/york-academy-regional-charter-school-lower-school/
     categories:
@@ -97,10 +104,12 @@ related_projects:
       - Civil
       - Historic
       - Interiors
+    image_url: /assets/imported/2023/04/York-Academy-Regional-Charter-Upper-School_Professional-093011_00101.webp
   - title: York College of Pennsylvania Northside Commons
     url: https://warehausae.com/project/york-college-of-pennsylvania-northside-commons/
     categories:
       - Architecture
+    image_url: /assets/imported/2023/05/202U9983-2.jpg
 is_test_fits_subpage: false
 seo_title: York College of Pennsylvania Kinsley Engineering Center
 seo_description: York College of Pennsylvania’s Kinsley Engineering Center serves as a dedicated facility for mechanical, electrical, and computer engineering programs, exemplifying adaptive reuse principles.

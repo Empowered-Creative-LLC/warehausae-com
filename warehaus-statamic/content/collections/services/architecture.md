@@ -75,31 +75,37 @@ recent_projects:
       - Architecture
       - Civil
       - Interiors
+    image_url: /assets/imported/2025/06/Cumberland_Township_Municipal_Building_Groundbreaking20250617_0029-700x700.webp
   - title: York Academy Regional Charter School Legacy Hall
     url: https://warehausae.com/project/york-academy-regional-charter-school-legacy-hall/
     categories:
       - Architecture
       - Civil
       - Interiors
+    image_url: /assets/imported/2025/09/York-Academy-Legacy-Hall-2-700x700.jpg
   - title: Volvo North America Living Office Transformation
     url: https://warehausae.com/project/volvo-north-america-office-transformation/
     categories:
       - Architecture
       - Interiors
+    image_url: /assets/imported/2025/11/Volvo-Construction-Equipment-497-HDR-700x700.jpg
   - title: Nelson Kohl Apartments
     url: https://warehausae.com/project/nelson-kohl-apartments/
     categories:
       - Architecture
       - Interiors
+    image_url: /assets/imported/2023/03/Nelson-Kohl-10_2018-0001-700x501.jpg
   - title: 12th and Macdonald Apartments
     url: https://warehausae.com/project/12th_and_macdonald/
     categories:
       - Architecture
+    image_url: /assets/imported/2023/03/CORNER.jpg
   - title: Franklin Square Multi-Family Mixed Use
     url: https://warehausae.com/project/franklin-square-multi-family-mixed-use/
     categories:
       - Architecture
-hero_image_url: /assets/imported/2022/03/Asset-1.png
+    image_url: /assets/imported/2024/05/Franklin-Square-FEATURE-700x700.webp
+hero_image_url: /assets/imported/2024/01/Bankert-Troy-1.webp
 seo_title: WAREHAUS Architecture
 seo_description: Partner with an Architect that Listens, Designs, and Delivers.
 seo_og_image_url: /assets/imported/2022/03/Asset-1.png

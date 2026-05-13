@@ -76,22 +76,26 @@ related_projects:
       - Architecture
       - Civil
       - Interiors
+    image_url: /assets/imported/2025/06/Cumberland_Township_Municipal_Building_Groundbreaking20250617_0029-700x700.webp
   - title: York Academy Regional Charter School Legacy Hall
     url: https://warehausae.com/project/york-academy-regional-charter-school-legacy-hall/
     categories:
       - Architecture
       - Civil
       - Interiors
+    image_url: /assets/imported/2025/09/York-Academy-Legacy-Hall-2-700x700.jpg
   - title: Volvo North America Living Office Transformation
     url: https://warehausae.com/project/volvo-north-america-office-transformation/
     categories:
       - Architecture
       - Interiors
+    image_url: /assets/imported/2025/11/Volvo-Construction-Equipment-497-HDR-700x700.jpg
   - title: University Lofts
     url: https://warehausae.com/project/university-lofts/
     categories:
       - Architecture
       - Historic
+    image_url: /assets/imported/2023/03/University-Lofts_Rendering-052419_00024-700x700.jpg
   - title: 1110 East Princess Street Office
     url: https://warehausae.com/project/1110-princess-street-office/
     categories:
@@ -99,6 +103,7 @@ related_projects:
       - Civil
       - Interiors
       - Structural
+    image_url: /assets/imported/2023/03/Kinsley_1110_East_Princess_St_Interior_062619_01-of-05.jpg
   - title: 210 York Street Office and Recording Studio
     url: https://warehausae.com/project/210-york-street-office/
     categories:
@@ -106,5 +111,6 @@ related_projects:
       - Civil
       - Historic
       - Interiors
+    image_url: /assets/imported/2023/03/210_York_Street15-of-00-1.jpg
 is_test_fits_subpage: false
 ---
