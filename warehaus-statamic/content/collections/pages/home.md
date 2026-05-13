@@ -1,6 +1,7 @@
 ---
 id: 6f417743-65df-4dfd-b26b-1e6189803ec2
 blueprint: homepage
+template: pages/home
 title: Design Your Project With a Partner You Can Trust.
 slug: home
 source_url: https://warehausae.com

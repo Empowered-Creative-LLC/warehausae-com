@@ -1,0 +1,298 @@
+[
+  {
+    "browser": "chromium",
+    "url": "/",
+    "status": 200,
+    "title": "Design Your Project With a Partner You Can Trust. | Warehaus",
+    "h1": "Design Your Project With a Partner You Can Trust.",
+    "errors": []
+  },
+  {
+    "browser": "chromium",
+    "url": "/about/",
+    "status": 200,
+    "title": "About - Warehaus | Warehaus",
+    "h1": "About Us",
+    "errors": []
+  },
+  {
+    "browser": "chromium",
+    "url": "/services/architecture/",
+    "status": 200,
+    "title": "WAREHAUS Architecture | Warehaus",
+    "h1": "architecture",
+    "errors": []
+  },
+  {
+    "browser": "chromium",
+    "url": "/team/troy-bankert/",
+    "status": 200,
+    "title": "Co-Owner / President & Chief Executive Officer | Warehaus",
+    "h1": "Troy Bankert, AIA",
+    "errors": []
+  },
+  {
+    "browser": "chromium",
+    "url": "/project/bischoff-inn/",
+    "status": 200,
+    "title": "Bischoff Inn - Warehaus Architecture & Engineering | Warehaus",
+    "h1": "Bischoff Inn",
+    "errors": []
+  },
+  {
+    "browser": "chromium",
+    "url": "/healthcare/",
+    "status": 200,
+    "title": "Healthcare Portfolio | Warehaus | Warehaus",
+    "h1": "healthcare",
+    "errors": []
+  },
+  {
+    "browser": "chromium",
+    "url": "/industry/civil-engineering/",
+    "status": 200,
+    "title": "Civil Engineering | Warehaus | Warehaus",
+    "h1": "civil engineering",
+    "errors": [
+      "console.error: Failed to load resource: the server responded with a status of 404 (Not Found)"
+    ]
+  },
+  {
+    "browser": "chromium",
+    "url": "/case-study/municipal-engineering/",
+    "status": 200,
+    "title": "Warehaus Case Study - Municipal Engineering | Warehaus",
+    "h1": "Comprehensive Civil Engineering Services Tailored for Municipalities",
+    "errors": [
+      "console.error: Failed to load resource: the server responded with a status of 404 (Not Found)"
+    ]
+  },
+  {
+    "browser": "chromium",
+    "url": "/Industries/news/",
+    "status": 200,
+    "title": "News - Warehaus | Warehaus",
+    "h1": "News",
+    "errors": []
+  },
+  {
+    "browser": "chromium",
+    "url": "/warehaus-announces-leadership-promotions/",
+    "status": 200,
+    "title": "Warehaus Announces Strategic Leadership Promotions | Warehaus",
+    "h1": "Warehaus Announces Strategic Leadership Promotions to Strengthen Project Deliver",
+    "errors": []
+  },
+  {
+    "browser": "chromium",
+    "url": "/job/civil-project-manager-2/",
+    "status": 200,
+    "title": "Civil Project Manager | Warehaus",
+    "h1": "Civil Project Manager",
+    "errors": []
+  },
+  {
+    "browser": "chromium",
+    "url": "/design/styleguide",
+    "status": 200,
+    "title": "Styleguide | Warehaus",
+    "h1": "Warehaus design styleguide",
+    "errors": []
+  },
+  {
+    "browser": "firefox",
+    "url": "/",
+    "status": 200,
+    "title": "Design Your Project With a Partner You Can Trust. | Warehaus",
+    "h1": "Design Your Project With a Partner You Can Trust.",
+    "errors": []
+  },
+  {
+    "browser": "firefox",
+    "url": "/about/",
+    "status": 200,
+    "title": "About - Warehaus | Warehaus",
+    "h1": "About Us",
+    "errors": []
+  },
+  {
+    "browser": "firefox",
+    "url": "/services/architecture/",
+    "status": 200,
+    "title": "WAREHAUS Architecture | Warehaus",
+    "h1": "architecture",
+    "errors": []
+  },
+  {
+    "browser": "firefox",
+    "url": "/team/troy-bankert/",
+    "status": 200,
+    "title": "Co-Owner / President & Chief Executive Officer | Warehaus",
+    "h1": "Troy Bankert, AIA",
+    "errors": []
+  },
+  {
+    "browser": "firefox",
+    "url": "/project/bischoff-inn/",
+    "status": 200,
+    "title": "Bischoff Inn - Warehaus Architecture & Engineering | Warehaus",
+    "h1": "Bischoff Inn",
+    "errors": []
+  },
+  {
+    "browser": "firefox",
+    "url": "/healthcare/",
+    "status": 200,
+    "title": "Healthcare Portfolio | Warehaus | Warehaus",
+    "h1": "healthcare",
+    "errors": []
+  },
+  {
+    "browser": "firefox",
+    "url": "/industry/civil-engineering/",
+    "status": 200,
+    "title": "Civil Engineering | Warehaus | Warehaus",
+    "h1": "civil engineering",
+    "errors": []
+  },
+  {
+    "browser": "firefox",
+    "url": "/case-study/municipal-engineering/",
+    "status": 200,
+    "title": "Warehaus Case Study - Municipal Engineering | Warehaus",
+    "h1": "Comprehensive Civil Engineering Services Tailored for Municipalities",
+    "errors": []
+  },
+  {
+    "browser": "firefox",
+    "url": "/Industries/news/",
+    "status": 200,
+    "title": "News - Warehaus | Warehaus",
+    "h1": "News",
+    "errors": []
+  },
+  {
+    "browser": "firefox",
+    "url": "/warehaus-announces-leadership-promotions/",
+    "status": 200,
+    "title": "Warehaus Announces Strategic Leadership Promotions | Warehaus",
+    "h1": "Warehaus Announces Strategic Leadership Promotions to Strengthen Project Deliver",
+    "errors": []
+  },
+  {
+    "browser": "firefox",
+    "url": "/job/civil-project-manager-2/",
+    "status": 200,
+    "title": "Civil Project Manager | Warehaus",
+    "h1": "Civil Project Manager",
+    "errors": []
+  },
+  {
+    "browser": "firefox",
+    "url": "/design/styleguide",
+    "status": 200,
+    "title": "Styleguide | Warehaus",
+    "h1": "Warehaus design styleguide",
+    "errors": []
+  },
+  {
+    "browser": "webkit",
+    "url": "/",
+    "status": 200,
+    "title": "Design Your Project With a Partner You Can Trust. | Warehaus",
+    "h1": "Design Your Project With a Partner You Can Trust.",
+    "errors": []
+  },
+  {
+    "browser": "webkit",
+    "url": "/about/",
+    "status": 200,
+    "title": "About - Warehaus | Warehaus",
+    "h1": "About Us",
+    "errors": []
+  },
+  {
+    "browser": "webkit",
+    "url": "/services/architecture/",
+    "status": 200,
+    "title": "WAREHAUS Architecture | Warehaus",
+    "h1": "architecture",
+    "errors": []
+  },
+  {
+    "browser": "webkit",
+    "url": "/team/troy-bankert/",
+    "status": 200,
+    "title": "Co-Owner / President & Chief Executive Officer | Warehaus",
+    "h1": "Troy Bankert, AIA",
+    "errors": []
+  },
+  {
+    "browser": "webkit",
+    "url": "/project/bischoff-inn/",
+    "status": 200,
+    "title": "Bischoff Inn - Warehaus Architecture & Engineering | Warehaus",
+    "h1": "Bischoff Inn",
+    "errors": []
+  },
+  {
+    "browser": "webkit",
+    "url": "/healthcare/",
+    "status": 200,
+    "title": "Healthcare Portfolio | Warehaus | Warehaus",
+    "h1": "healthcare",
+    "errors": []
+  },
+  {
+    "browser": "webkit",
+    "url": "/industry/civil-engineering/",
+    "status": 200,
+    "title": "Civil Engineering | Warehaus | Warehaus",
+    "h1": "civil engineering",
+    "errors": [
+      "console.error: Failed to load resource: the server responded with a status of 404 (Not Found)"
+    ]
+  },
+  {
+    "browser": "webkit",
+    "url": "/case-study/municipal-engineering/",
+    "status": 200,
+    "title": "Warehaus Case Study - Municipal Engineering | Warehaus",
+    "h1": "Comprehensive Civil Engineering Services Tailored for Municipalities",
+    "errors": [
+      "console.error: Failed to load resource: the server responded with a status of 404 (Not Found)"
+    ]
+  },
+  {
+    "browser": "webkit",
+    "url": "/Industries/news/",
+    "status": 200,
+    "title": "News - Warehaus | Warehaus",
+    "h1": "News",
+    "errors": []
+  },
+  {
+    "browser": "webkit",
+    "url": "/warehaus-announces-leadership-promotions/",
+    "status": 200,
+    "title": "Warehaus Announces Strategic Leadership Promotions | Warehaus",
+    "h1": "Warehaus Announces Strategic Leadership Promotions to Strengthen Project Deliver",
+    "errors": []
+  },
+  {
+    "browser": "webkit",
+    "url": "/job/civil-project-manager-2/",
+    "status": 200,
+    "title": "Civil Project Manager | Warehaus",
+    "h1": "Civil Project Manager",
+    "errors": []
+  },
+  {
+    "browser": "webkit",
+    "url": "/design/styleguide",
+    "status": 200,
+    "title": "Styleguide | Warehaus",
+    "h1": "Warehaus design styleguide",
+    "errors": []
+  }
+]

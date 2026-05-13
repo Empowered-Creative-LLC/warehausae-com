@@ -34,6 +34,13 @@ migration-tool/scraped/_discovery/*
 !migration-tool/scraped/_motion/
 migration-tool/scraped/_motion/*
 !migration-tool/scraped/_motion/inventory.md
+!migration-tool/scraped/_qa/
+migration-tool/scraped/_qa/*
+!migration-tool/scraped/_qa/qa-report.md
+!migration-tool/scraped/_qa/cross-browser.json
+!migration-tool/scraped/_qa/lighthouse/
+migration-tool/scraped/_qa/lighthouse/*
+!migration-tool/scraped/_qa/lighthouse/summary.json
 
 # Laravel / Statamic app
 warehaus-statamic/vendor/

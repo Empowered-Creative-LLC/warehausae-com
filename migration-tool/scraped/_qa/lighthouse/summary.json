@@ -1,0 +1,90 @@
+[
+  {
+    "site": "local",
+    "slug": "home",
+    "path": "/",
+    "scores": {
+      "performance": 85,
+      "accessibility": 77,
+      "best-practices": 100,
+      "seo": 92
+    }
+  },
+  {
+    "site": "live",
+    "slug": "home",
+    "path": "/",
+    "scores": {
+      "performance": 56,
+      "accessibility": 89,
+      "best-practices": 54,
+      "seo": 100
+    }
+  },
+  {
+    "site": "local",
+    "slug": "project-bischoff",
+    "path": "/project/bischoff-inn/",
+    "scores": {
+      "performance": 65,
+      "accessibility": 77,
+      "best-practices": 100,
+      "seo": 100
+    }
+  },
+  {
+    "site": "live",
+    "slug": "project-bischoff",
+    "path": "/project/bischoff-inn/",
+    "scores": {
+      "performance": 60,
+      "accessibility": 85,
+      "best-practices": 100,
+      "seo": 100
+    }
+  },
+  {
+    "site": "local",
+    "slug": "service-architecture",
+    "path": "/services/architecture/",
+    "scores": {
+      "performance": 72,
+      "accessibility": 79,
+      "best-practices": 100,
+      "seo": 100
+    }
+  },
+  {
+    "site": "live",
+    "slug": "service-architecture",
+    "path": "/services/architecture/",
+    "scores": {
+      "performance": 60,
+      "accessibility": 79,
+      "best-practices": 100,
+      "seo": 100
+    }
+  },
+  {
+    "site": "local",
+    "slug": "team-troy",
+    "path": "/team/troy-bankert/",
+    "scores": {
+      "performance": 88,
+      "accessibility": 79,
+      "best-practices": 100,
+      "seo": 92
+    }
+  },
+  {
+    "site": "live",
+    "slug": "team-troy",
+    "path": "/team/troy-bankert/",
+    "scores": {
+      "performance": 76,
+      "accessibility": 89,
+      "best-practices": 100,
+      "seo": 100
+    }
+  }
+]
