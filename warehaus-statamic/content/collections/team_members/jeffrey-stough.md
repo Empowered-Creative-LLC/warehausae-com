@@ -31,4 +31,5 @@ education: >-
 contact_blurb: Have a project with civil engineering needs? Connect with Jeff to discuss.
 email: jstough@warehausae.com
 phone: (717) 815-8564
+seo_description: Jeff Stough brings over two decades of expertise in civil engineering, land development, and project management to Warehaus. As a Civil Project Manager, Jeff…
 ---

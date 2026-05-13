@@ -1,6 +1,7 @@
 ---
 id: cf3a5434-2db3-41c6-a36f-7c1fab4cf3fc
 blueprint: page
+template: pages/culture
 title: WAREHAUS
 slug: culture
 source_url: https://warehausae.com/culture/

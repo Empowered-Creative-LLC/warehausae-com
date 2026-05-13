@@ -24,4 +24,5 @@ bio: >-
 contact_blurb: Have a project with architectural needs? Connect with Matt to discuss.
 email: mrobertson@warehausae.com
 phone: (717) 893-0007
+seo_description: Matt is an Architectural Project Manager with nine years of experience at Warehaus, known for his team-oriented approach and steady project leadership. He…
 ---

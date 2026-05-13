@@ -6,6 +6,7 @@ title: Design Your Project With a Partner You Can Trust.
 slug: home
 source_url: https://warehausae.com
 url: /
+seo_description: "Warehaus is an award-winning architecture, civil engineering, structural engineering, interior design, and historic preservation firm based in York, Pennsylvania."
 hero_overlay_heading: Design Your Project With a Partner You Can Trust.
 hero_overlay_subheading: >-
   Trust is worth its weight in gold, especially when a trusted partner can save you time, money and stress. Earning trust isn’t an easy thing to do – but we’re ready to show you how collaboration can

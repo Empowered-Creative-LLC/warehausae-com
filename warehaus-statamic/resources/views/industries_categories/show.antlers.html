@@ -15,10 +15,10 @@
                         {{ if image_url }}<img src="{{ image_url }}" alt="" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">{{ /if }}
                     </div>
                     {{ if categories }}
-                        <p class="mt-4 text-xs uppercase tracking-wide text-haus-amber-500">{{ categories | join:", " }}</p>
+                        <p class="mt-4 text-xs uppercase tracking-wide text-haus-amber-700">{{ categories | join:", " }}</p>
                     {{ /if }}
                     {{ if date_text }}<p class="mt-1 text-xs text-haus-ink-400">{{ date_text }}</p>{{ /if }}
-                    <h3 class="mt-2 text-lg font-medium leading-snug group-hover:text-haus-amber-500 transition">{{ title }}</h3>
+                    <h3 class="mt-2 text-lg font-medium leading-snug group-hover:text-haus-amber-700 transition">{{ title }}</h3>
                     {{ if excerpt }}<p class="mt-2 text-sm text-haus-ink-600 leading-relaxed">{{ excerpt }}</p>{{ /if }}
                 </a>
             {{ /posts }}

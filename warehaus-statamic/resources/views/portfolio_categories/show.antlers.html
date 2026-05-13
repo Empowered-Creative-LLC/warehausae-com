@@ -37,7 +37,7 @@
             <div class="mt-12 grid md:grid-cols-2 gap-x-12 gap-y-8">
                 {{ partnership_cards }}
                     <div class="flex gap-4">
-                        <span class="text-haus-amber-500 text-xl shrink-0">✓</span>
+                        <span class="text-haus-amber-700 text-xl shrink-0">✓</span>
                         <div>
                             <h3 class="text-lg font-medium">{{ title }}</h3>
                             <p class="mt-1 text-haus-ink-600">{{ body }}</p>
@@ -71,7 +71,7 @@
                         <div class="aspect-[4/3] bg-haus-ink-200 rounded overflow-hidden">
                             {{ if image_url }}<img src="{{ image_url }}" alt="{{ title }}" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">{{ /if }}
                         </div>
-                        <h3 class="mt-4 text-lg font-medium group-hover:text-haus-amber-500 transition">{{ title }}</h3>
+                        <h3 class="mt-4 text-lg font-medium group-hover:text-haus-amber-700 transition">{{ title }}</h3>
                         {{ if categories }}<p class="mt-1 text-sm text-haus-ink-500">{{ categories | join:", " }}</p>{{ /if }}
                     </a>
                 {{ /recent_projects }}

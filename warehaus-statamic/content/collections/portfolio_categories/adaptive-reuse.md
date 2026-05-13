@@ -151,7 +151,7 @@ recent_projects:
     categories:
       - Architecture
     image_url: /assets/imported/2024/07/state-street-apartments-06192024-5-768x400.webp
-hero_image_url: /assets/imported/2022/03/Asset-1.png
+hero_image_url: /assets/imported/2023/03/Warehaus-Headquarters-05_2014-0443-1.jpg
 seo_title: Adaptive Reuse | Warehaus
 seo_description: Discover how Warehaus transforms spaces through adaptive reuse, combining creativity and technical expertise.
 seo_og_image_url: /assets/imported/2022/03/Asset-1.png

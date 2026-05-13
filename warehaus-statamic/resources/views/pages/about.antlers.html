@@ -1,0 +1,92 @@
+{{# About template — history timeline + mission + leadership + news feed. #}}
+
+<section class="container-haus pt-32 md:pt-40 pb-16 text-center">
+    {{ if tagline }}<p class="eyebrow">{{ tagline }}</p>{{ /if }}
+    <h1 class="mt-4">About Us</h1>
+    {{ if lead_heading }}<p class="mt-6 text-2xl md:text-3xl text-haus-ink-500 max-w-3xl mx-auto">{{ lead_heading }}</p>{{ /if }}
+</section>
+
+{{ if intro_prose }}
+    <section class="container-haus pb-16 max-w-3xl">
+        <div class="text-lg leading-relaxed text-haus-ink-700 space-y-4">{{ intro_prose | nl2br }}</div>
+    </section>
+{{ /if }}
+
+{{# History timeline. The about entry's sections are: 1980, 1998, 2017, 2021,
+    2022 — year labels with image + paragraph. Alternate left/right. #}}
+{{ if sections }}
+    <section class="bg-haus-ink-50 py-16 md:py-24">
+        <div class="container-haus max-w-5xl">
+            <h2 class="text-3xl md:text-4xl font-medium tracking-tight text-center mb-16">Our History</h2>
+            <div class="relative">
+                <div class="absolute top-0 bottom-0 left-1/2 -ml-px w-px bg-haus-ink-200 hidden md:block"></div>
+                {{ sections }}
+                    <div class="relative mb-12 md:mb-20 grid md:grid-cols-2 gap-8 items-center {{ if index | mod:2 == 0 }}md:[&>*:first-child]:order-2{{ /if }}">
+                        <div class="md:text-right {{ if index | mod:2 == 0 }}md:text-left{{ /if }}">
+                            <p class="inline-block bg-haus-amber-500 text-haus-ink-900 px-4 py-1 rounded font-bold tracking-wider">{{ heading }}</p>
+                            {{ if body }}<div class="mt-4 text-haus-ink-700 leading-relaxed">{{ body | nl2br }}</div>{{ /if }}
+                        </div>
+                        <div>
+                            {{ if images }}
+                                <div class="space-y-3">
+                                    {{ images limit="1" }}
+                                        <img src="{{ url }}" alt="{{ if alt }}{{ alt }}{{ else }}Warehaus history milestone{{ /if }}" class="w-full rounded-lg shadow-sm">
+                                    {{ /images }}
+                                </div>
+                            {{ /if }}
+                        </div>
+                    </div>
+                {{ /sections }}
+            </div>
+        </div>
+    </section>
+{{ /if }}
+
+{{# Our Mission band #}}
+<section class="bg-haus-ink-900 text-white py-16 md:py-24">
+    <div class="container-haus max-w-3xl text-center">
+        <h2 class="text-3xl md:text-4xl font-medium tracking-tight">Our Mission</h2>
+        <p class="mt-6 text-lg md:text-xl text-haus-ink-200 leading-relaxed">We are Design Partners. We guide you through a collaborative experience with a common purpose, to deliver well-crafted solutions that benefit our clients, employees, shareholders, and communities.</p>
+    </div>
+</section>
+
+{{# Leadership cards #}}
+{{ if leadership_cards }}
+    <section class="container-haus py-16 md:py-24">
+        <h2 class="text-3xl md:text-4xl font-medium tracking-tight text-center">Meet Our Leadership</h2>
+        <div class="mt-12 grid sm:grid-cols-2 md:grid-cols-4 gap-8">
+            {{ leadership_cards }}
+                <a href="{{ team_url }}" class="group block text-center">
+                    {{ if headshot_url }}
+                        <div class="aspect-square overflow-hidden rounded-lg bg-haus-ink-200">
+                            <img src="{{ headshot_url }}" alt="{{ name }}" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                        </div>
+                    {{ /if }}
+                    <h3 class="mt-4 text-lg font-medium group-hover:text-haus-amber-700 transition">{{ name }}</h3>
+                    {{ if title }}<p class="mt-1 text-sm text-haus-ink-500">{{ title }}</p>{{ /if }}
+                </a>
+            {{ /leadership_cards }}
+        </div>
+    </section>
+{{ /if }}
+
+{{# News feed #}}
+{{ if news_feed }}
+    <section class="bg-haus-ink-50 py-16 md:py-24">
+        <div class="container-haus">
+            <h2 class="text-3xl md:text-4xl font-medium tracking-tight text-center">News Feed</h2>
+            <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                {{ news_feed }}
+                    <a href="{{ url }}" class="group block">
+                        <div class="aspect-[4/3] overflow-hidden rounded-lg bg-haus-ink-100">
+                            {{ if image_url }}<img src="{{ image_url }}" alt="" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">{{ /if }}
+                        </div>
+                        {{ if categories }}<p class="mt-3 text-xs uppercase tracking-wide text-haus-amber-700">{{ categories | join:", " }}</p>{{ /if }}
+                        {{ if date_text }}<p class="mt-1 text-xs text-haus-ink-400">{{ date_text }}</p>{{ /if }}
+                        <h3 class="mt-2 text-base font-medium leading-snug group-hover:text-haus-amber-700 transition">{{ title }}</h3>
+                    </a>
+                {{ /news_feed }}
+            </div>
+        </div>
+    </section>
+{{ /if }}

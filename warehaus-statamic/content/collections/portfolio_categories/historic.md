@@ -165,7 +165,7 @@ recent_projects:
       - Architecture
       - Structural
     image_url: /assets/imported/2024/11/Fox-Apartments-10302024-27-700x700.webp
-hero_image_url: /assets/imported/2022/03/Asset-1.png
+hero_image_url: /assets/imported/2023/04/Warehaus_GeorgeSpanglerFarm-0032.webp
 seo_title: Historic Architecture - Warehaus
 seo_description: Explore our portfolio of historic architecture projects that celebrate and preserve the character of historic buildings while meeting modern needs. Learn more about our approach.
 seo_og_image_url: /assets/imported/2022/03/Asset-1.png

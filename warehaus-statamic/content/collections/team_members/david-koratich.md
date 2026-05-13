@@ -24,4 +24,5 @@ education: David holds a degree in Civil Engineering from Penn State University.
 contact_blurb: Have a project with civil engineering needs? Connect with David to discuss.
 email: dkoratich@warehausae.com
 phone: (717) 815 8540
+seo_description: Along with Warehaus’ CEO Troy Bankert, David took ownership of the firm in 2021 and has been a part of the company since 1999. Over his 26 years at Warehaus,…
 ---

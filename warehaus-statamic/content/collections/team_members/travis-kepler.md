@@ -28,4 +28,5 @@ bio: >-
 contact_blurb: Have a project with architectural needs? Connect with Travis to discuss.
 email: tkepler@warehausae.com
 phone: (717) 815-8592
+seo_description: Travis Kepler has been practicing architecture for over 25 years, bringing deep experience across education, museums, retail environments, assisted living,…
 ---

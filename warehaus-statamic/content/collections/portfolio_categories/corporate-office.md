@@ -183,7 +183,7 @@ recent_projects:
       - Architecture
       - Interiors
     image_url: /assets/imported/elementor/thumbs/paypal-toronto-professional-120316-0002-r33rrjghearf953aqeny6h5ombhpgb4mvi9x0aa4kg.webp
-hero_image_url: /assets/imported/2022/03/Asset-1.png
+hero_image_url: /assets/imported/2023/04/PayPal-Toronto_Professional-120316_0000.jpg
 seo_title: Warehaus Corporate Office Projects
 seo_description: Explore our portfolio of corporate office designs that reflect workplace culture and creativity.
 seo_og_image_url: /assets/imported/2022/03/Asset-1.png

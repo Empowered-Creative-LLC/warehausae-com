@@ -34,4 +34,5 @@ qualifications:
   - EIT certification preferred; candidates pursuing licensure encouraged
 apply_url: https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=0558471b-f007-4ae9-b382-7a759ecfe7a4&ccId=9200228181608_2&jobId=588592&lang=en_US
 apply_email: info@warehausae.com
+seo_description: This position blends civil site design with project coordination. You’ll support Civil Project Managers with scheduling, communication, and permitting while…
 ---

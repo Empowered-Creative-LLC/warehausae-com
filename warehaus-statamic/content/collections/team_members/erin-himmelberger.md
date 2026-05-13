@@ -25,4 +25,5 @@ education: Erin holds an Architectural Design degree from York Technical Institu
 contact_blurb: Have a project with architectural, historic preservation or interior design needs? Connect with Erin to discuss.
 email: ehimmelberger@warehausae.com
 phone: (717) 815-8522
+seo_description: Erin has been practicing in the architectural field for 28 years; 20 of them directly with Warehaus. She manages an Architectural staff of 19 and oversees…
 ---

@@ -53,4 +53,5 @@ raw_body_markdown: |
   CALL US DIRECTLY  
   [717 845 8383](tel:17178458383)  
 seo_title: Terms and Conditions
+seo_description: Let’s talk. Email Subscribe No worries, we don’t spam your inbox. 231 North George Street York, Pennsylvania 17401
 ---

@@ -126,7 +126,7 @@ recent_projects:
     categories:
       - Architecture
     image_url: /assets/imported/2024/08/bartells-conf-center-14-700x700.jpg
-hero_image_url: /assets/imported/2022/03/Asset-1.png
+hero_image_url: /assets/imported/2023/05/IMG_5584.jpg
 seo_title: Healthcare Portfolio | Warehaus
 seo_description: Explore our healthcare projects that focus on delivering optimized patient experiences through innovative designs.
 seo_og_image_url: /assets/imported/2022/03/Asset-1.png

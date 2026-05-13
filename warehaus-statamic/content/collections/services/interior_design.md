@@ -81,7 +81,7 @@ recent_projects:
       - Historic
       - Interiors
     image_url: /assets/imported/2023/03/210_York_Street15-of-00-1.jpg
-hero_image_url: /assets/imported/2024/01/Himmelberger-Erin-1.webp
+hero_image_url: /assets/imported/2023/04/The-Inn-at-Wyndridge-12_1979-0029.jpg
 seo_title: Warehaus - Interior Design
 seo_description: Expert commercial interior design solutions focusing on human-centered designs.
 seo_og_image_url: /assets/imported/2022/03/Asset-1.png

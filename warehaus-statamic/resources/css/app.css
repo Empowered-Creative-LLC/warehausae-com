@@ -50,6 +50,16 @@
     h1 { @apply text-4xl md:text-5xl lg:text-6xl; }
     h2 { @apply text-3xl md:text-4xl; }
     h3 { @apply text-xl md:text-2xl; }
+
+    /* Visible focus rings for keyboard navigation. We only target
+       :focus-visible so mouse clicks don't show the ring. */
+    a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible {
+        @apply outline-none ring-2 ring-haus-amber-400 ring-offset-2 ring-offset-white rounded-sm;
+    }
+    /* On dark headers/footers, ring offset should be ink, not white. */
+    [data-haus-header] :focus-visible, footer :focus-visible {
+        @apply ring-offset-haus-ink-900;
+    }
 }
 
 @layer components {

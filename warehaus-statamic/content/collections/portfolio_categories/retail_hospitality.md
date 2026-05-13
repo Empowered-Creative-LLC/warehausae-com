@@ -133,7 +133,7 @@ recent_projects:
       - Architecture
       - Interiors
     image_url: /assets/imported/2024/09/Andonias-Chophouse-High-Res-Final-Render-700x700.webp
-hero_image_url: /assets/imported/2023/04/CY_BWICS_Bistro_Evening.jpg
+hero_image_url: /assets/imported/2023/04/CY_BWICS_Firepit.jpg
 seo_title: Retail & Hospitality Design | Warehaus
 seo_description: Explore Retail and Hospitality Design by Warehaus. We specialize in hotel, restaurant, and retail designs that create unique experiences.
 seo_og_image_url: /assets/imported/2022/03/Asset-1.png

@@ -77,7 +77,7 @@ recent_projects:
     categories:
       - Civil
     image_url: /assets/imported/2023/07/Donwood-Estates-6-700x700.jpg
-hero_image_url: /assets/imported/2022/03/Asset-1.png
+hero_image_url: /assets/imported/2023/07/Spring-Forge-12.webp
 seo_title: Residential Development - Warehaus
 seo_description: Warehaus specializes in residential development services including land planning, multi-family and single-family residential projects.
 seo_og_image_url: /assets/imported/2022/03/Asset-1.png

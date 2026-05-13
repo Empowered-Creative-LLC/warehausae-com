@@ -91,4 +91,5 @@ raw_body_markdown: |-
   [717 845 8383](tel:17178458383)
 seo_title: PORTFOLIO
 seo_og_image_url: /assets/imported/2022/03/Asset-1.png
+seo_description: "# PORTFOLIO - [Adaptive Reuse](https://warehausae.com/adaptive-reuse/) - [Arts & Culture](https://warehausae.com/arts_culture/) - [Building…"
 ---

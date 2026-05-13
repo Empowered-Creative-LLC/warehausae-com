@@ -1,0 +1,43 @@
+{{# Careers template — intro + open positions list pulled from the
+    job_postings collection. #}}
+
+<section class="container-haus pt-32 md:pt-40 pb-12 text-center max-w-4xl">
+    {{ if tagline }}<p class="eyebrow">{{ tagline }}</p>{{ /if }}
+    <h1 class="mt-4">{{ if lead_heading }}{{ lead_heading }}{{ else }}Careers at Warehaus{{ /if }}</h1>
+    {{ if intro_prose }}<div class="mt-8 text-lg leading-relaxed text-haus-ink-700 space-y-4">{{ intro_prose | nl2br }}</div>{{ /if }}
+</section>
+
+{{# Auto-populated list of currently-open positions from the job_postings
+    collection. The collection has 5 entries at /job/{slug}/ #}}
+<section class="container-haus py-16 md:py-24">
+    <h2 class="text-3xl md:text-4xl font-medium tracking-tight text-center">Open Positions</h2>
+
+    {{ collection:job_postings sort="title:asc" }}
+        {{ if first }}<div class="mt-12 max-w-3xl mx-auto divide-y divide-haus-ink-200 border-y border-haus-ink-200">{{ /if }}
+            <a href="{{ url }}" class="group flex items-center justify-between gap-6 py-6 hover:bg-haus-ink-50 transition px-2">
+                <div>
+                    <h3 class="text-xl md:text-2xl font-medium group-hover:text-haus-amber-700 transition">{{ title }}</h3>
+                    <dl class="mt-2 flex flex-wrap gap-x-6 gap-y-1 text-xs uppercase tracking-wider text-haus-ink-500">
+                        {{ if department }}<div><dt class="sr-only">Department</dt><dd>{{ department }}</dd></div>{{ /if }}
+                        {{ if location }}<div><dt class="sr-only">Location</dt><dd>{{ location }}</dd></div>{{ /if }}
+                        {{ if employment_type }}<div><dt class="sr-only">Type</dt><dd>{{ employment_type }}</dd></div>{{ /if }}
+                    </dl>
+                </div>
+                <span class="text-haus-amber-700 text-2xl group-hover:translate-x-1 transition-transform" aria-hidden="true">→</span>
+            </a>
+        {{ if last }}</div>{{ /if }}
+    {{ /collection:job_postings }}
+
+    {{ if no_results }}
+        <p class="mt-12 text-center text-haus-ink-500">No open positions at the moment. Check back soon, or send us your resume — we'd love to hear from you.</p>
+    {{ /if }}
+</section>
+
+{{ if sections }}
+    {{ sections }}
+        <section class="container-haus pb-12 max-w-4xl">
+            <h2 class="text-2xl md:text-3xl font-medium tracking-tight">{{ heading }}</h2>
+            {{ if body }}<div class="mt-4 text-haus-ink-700 leading-relaxed space-y-4">{{ body | nl2br }}</div>{{ /if }}
+        </section>
+    {{ /sections }}
+{{ /if }}

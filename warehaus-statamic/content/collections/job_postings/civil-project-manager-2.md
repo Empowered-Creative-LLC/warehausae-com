@@ -32,4 +32,5 @@ qualifications:
   - Familiarity with Civil 3D a plus
 apply_url: https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=0558471b-f007-4ae9-b382-7a759ecfe7a4&ccId=9200228181608_2&jobId=588753&lang=en_US
 apply_email: info@warehausae.com
+seo_description: This position is responsible for managing land development projects from early planning through permitting and construction. You’ll lead coordination across…
 ---

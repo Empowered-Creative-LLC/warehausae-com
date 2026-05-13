@@ -109,7 +109,7 @@ recent_projects:
       - Civil
       - Interiors
     image_url: /assets/imported/2025/09/York-Academy-Legacy-Hall-2-700x700.jpg
-hero_image_url: /assets/imported/2022/03/Asset-1.png
+hero_image_url: /assets/imported/2023/05/YARCS-Upper-Schoo.l-11142018-04-of-09.jpg
 seo_title: Warehaus Education
 seo_description: Innovative architectural design focused on enriching educational experiences.
 seo_og_image_url: /assets/imported/2022/03/Asset-1.png

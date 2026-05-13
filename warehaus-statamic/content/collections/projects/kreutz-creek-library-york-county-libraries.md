@@ -157,4 +157,5 @@ related_projects:
       - Interiors
     image_url: /assets/imported/2023/04/JCC-6_10_21-EDITED-08.jpg
 is_test_fits_subpage: false
+seo_description: As the foundation of the community, libraries help people meet their highest potential. York County Libraries mission to provide access to education,…
 ---

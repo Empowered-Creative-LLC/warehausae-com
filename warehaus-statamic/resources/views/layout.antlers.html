@@ -6,7 +6,17 @@
     <meta name="theme-color" content="#0c0a09">
 
     <title>{{ if seo_title }}{{ seo_title }}{{ else }}{{ title }}{{ /if }} | {{ config:app:name }}</title>
-    <meta name="description" content="{{ if seo_description }}{{ seo_description }}{{ else }}{{ seo_defaults:default_description }}{{ /if }}">
+
+    {{# Meta description fallback chain: seo_description (per entry, set by
+        the client in the CP) → first ~160 chars of intro_prose → the
+        seo_defaults global default_description. #}}
+    {{ if seo_description }}
+        <meta name="description" content="{{ seo_description }}">
+    {{ elseif intro_prose }}
+        <meta name="description" content="{{ intro_prose | strip_tags | truncate:160 }}">
+    {{ else }}
+        <meta name="description" content="{{ seo_defaults:default_description }}">
+    {{ /if }}
 
     {{# Canonical link uses the entry's permalink (Statamic auto-builds this) #}}
     <link rel="canonical" href="{{ permalink }}">
@@ -14,7 +24,13 @@
     {{# Open Graph #}}
     <meta property="og:type" content="website">
     <meta property="og:title" content="{{ if seo_title }}{{ seo_title }}{{ else }}{{ title }}{{ /if }}">
-    <meta property="og:description" content="{{ if seo_description }}{{ seo_description }}{{ else }}{{ seo_defaults:default_description }}{{ /if }}">
+    {{ if seo_description }}
+        <meta property="og:description" content="{{ seo_description }}">
+    {{ elseif intro_prose }}
+        <meta property="og:description" content="{{ intro_prose | strip_tags | truncate:160 }}">
+    {{ else }}
+        <meta property="og:description" content="{{ seo_defaults:default_description }}">
+    {{ /if }}
     <meta property="og:url" content="{{ permalink }}">
     {{ if seo_og_image_url }}<meta property="og:image" content="{{ seo_og_image_url }}">{{ /if }}
 
@@ -27,9 +43,14 @@
     {{ vite src="resources/css/app.css|resources/js/app.js" }}
 </head>
 <body class="bg-white text-haus-ink-800 antialiased">
+    {{# Skip-to-content link. Visually hidden until focused via keyboard. #}}
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[60] focus:px-4 focus:py-2 focus:bg-haus-amber-500 focus:text-haus-ink-900 focus:font-semibold focus:rounded">
+        Skip to content
+    </a>
+
     {{ partial:partials/header }}
 
-    <main>
+    <main id="main-content">
         {{ template_content }}
     </main>
 

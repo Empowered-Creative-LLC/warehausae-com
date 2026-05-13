@@ -113,4 +113,5 @@ related_projects:
       - Interiors
     image_url: /assets/imported/2023/03/210_York_Street15-of-00-1.jpg
 is_test_fits_subpage: false
+seo_description: The George Spangler Farmstead, listed on the National Register of Historic Places, is located within the boundary of the Gettysburg National Military Park and…
 ---

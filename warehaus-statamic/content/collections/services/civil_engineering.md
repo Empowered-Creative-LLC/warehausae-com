@@ -116,7 +116,7 @@ recent_projects:
       - Historic
       - Interiors
     image_url: /assets/imported/2023/03/Warehaus-Headquarters-08_2017-0162.jpg
-hero_image_url: /assets/imported/2023/10/Asset-1.svg
+hero_image_url: /assets/imported/2023/07/Spring-Forge-12.webp
 seo_title: Civil Engineering Services | Warehaus
 seo_description: Expert civil engineering, land development, and site design services in York and Central Pennsylvania.
 seo_og_image_url: /assets/imported/2022/03/Asset-1.png

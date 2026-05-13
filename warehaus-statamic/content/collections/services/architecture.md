@@ -105,7 +105,7 @@ recent_projects:
     categories:
       - Architecture
     image_url: /assets/imported/2024/05/Franklin-Square-FEATURE-700x700.webp
-hero_image_url: /assets/imported/2024/01/Bankert-Troy-1.webp
+hero_image_url: /assets/imported/2024/08/holderness-davis-center-3.jpg
 seo_title: WAREHAUS Architecture
 seo_description: Partner with an Architect that Listens, Designs, and Delivers.
 seo_og_image_url: /assets/imported/2022/03/Asset-1.png

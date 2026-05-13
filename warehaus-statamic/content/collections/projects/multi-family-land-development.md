@@ -52,4 +52,5 @@ related_projects:
     categories: []
     image_url: /assets/imported/2023/12/Rail-Trail-Improvements-4-700x700.webp
 is_test_fits_subpage: false
+seo_description: Warehaus’ Civil Engineering team has contributed to noteworthy development projects across Pennsylvania and Maryland, including masterplans for gated…
 ---

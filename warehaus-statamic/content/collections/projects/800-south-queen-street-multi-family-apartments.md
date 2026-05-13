@@ -109,4 +109,5 @@ related_projects:
       - Architecture
     image_url: /assets/imported/2023/10/2023-04-28-Sycamore-Homes-Updated-Perspective-VE-Options-700x700.webp
 is_test_fits_subpage: false
+seo_description: Recent studies show a typical employee working 40 hours a week is unable to afford rent for a two-bedroom apartment anywhere in the nation. The U.S. has faced…
 ---

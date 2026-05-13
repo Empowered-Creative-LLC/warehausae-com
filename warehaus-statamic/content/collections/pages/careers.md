@@ -1,6 +1,7 @@
 ---
 id: 3a4b0771-6308-4ae6-81e6-90ad8240e08a
 blueprint: page
+template: pages/careers
 title: WAREHAUS
 slug: careers
 source_url: https://warehausae.com/careers/

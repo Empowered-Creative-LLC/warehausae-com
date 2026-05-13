@@ -26,7 +26,7 @@ approach_blocks:
     body: Warehaus laid out the steps clearly, including the order and level of complexity involved. Having Warehaus guiding the process behind the scenes has given me the confidence to move forward.
   - title: Pre-Engineered Structure Installation
     body: Warehaus reviewed the structure information and site location, then prepared a foundation design tailored to the project, resulting in a clear, permit-ready document.
-hero_image_url: /assets/imported/2026/03/When-you-dont-know-where-to-start-start-here.-1024-x-1024-px-1024-x-800-px-1.png
+hero_image_url: /assets/imported/2026/03/green-blue-gradient-background.jpg
 seo_title: Services - Warehaus
 seo_description: Discover how Warehaus can support your project, offering guidance on zoning, permits, and design.
 seo_og_image_url: /assets/imported/2022/03/Asset-1.png

@@ -15,4 +15,5 @@ education: Dan holds a degree in Civil Engineering Technology from the Universit
 contact_blurb: Have a project with civil engineering needs? Connect with Dan to discuss.
 email: dcreep@warehausae.com
 phone: (717) 815-8503
+seo_description: Dan brings more than 18 years of experience to his role as Director of Engineering for Warehaus, where he is responsible for the operations of the civil…
 ---

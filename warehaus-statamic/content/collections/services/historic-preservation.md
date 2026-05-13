@@ -120,7 +120,7 @@ recent_projects:
       - Architecture
       - Historic
     image_url: /assets/imported/2023/04/DSC02854.jpg
-hero_image_url: /assets/imported/2024/01/Himmelberger-Erin-1.webp
+hero_image_url: /assets/imported/2023/04/Warehaus_GeorgeSpanglerFarm-0032.webp
 seo_title: Historic Preservation - Warehaus
 seo_description: Our interdisciplinary team provides expert historic preservation services, combining modern needs with historical integrity.
 seo_og_image_url: /assets/imported/2022/03/Asset-1.png

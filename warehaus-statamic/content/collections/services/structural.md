@@ -160,7 +160,7 @@ recent_projects:
       - Civil
       - Structural
     image_url: /assets/imported/2024/08/the-barn-resort-08152024-3-700x700.webp
-hero_image_url: http://warehausae.com/wp-content/uploads/2023/06/9.png
+hero_image_url: /assets/imported/2023/09/Project_Holderness_Academic_Building_20210926_11-1-min.webp
 seo_title: Structural Engineering | Warehaus
 seo_description: Offering comprehensive structural engineering services, Warehaus excels in design, coordination, inspection, and rehabilitation for various projects.
 seo_og_image_url: /assets/imported/2022/03/Asset-1.png

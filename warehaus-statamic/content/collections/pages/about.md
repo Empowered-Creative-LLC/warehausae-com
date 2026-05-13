@@ -1,6 +1,7 @@
 ---
 id: 7fa75d1b-708d-4219-9b27-9b7854a29c35
 blueprint: page
+template: pages/about
 title: About Us
 slug: about
 source_url: https://warehausae.com/about/

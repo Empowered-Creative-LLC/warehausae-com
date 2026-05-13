@@ -105,7 +105,7 @@ recent_projects:
     categories:
       - Architecture
     image_url: /assets/imported/2024/01/800-S-Queen-view-BRANDED-700x700.jpg
-hero_image_url: /assets/imported/2022/03/Asset-1.png
+hero_image_url: /assets/imported/2024/08/nelson-kohl-10-18-0004.webp
 seo_title: Multi-Family | WAREHAUS
 seo_description: Explore vibrant living spaces designed by WAREHAUS across the country, focusing on community, safety, and aesthetic appeal.
 seo_og_image_url: /assets/imported/2022/03/Asset-1.png

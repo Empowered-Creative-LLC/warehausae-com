@@ -106,7 +106,7 @@ recent_projects:
     categories:
       - Architecture, Civil
     image_url: /assets/imported/2023/05/Southwire-Company-111313_00574.jpg
-hero_image_url: /assets/imported/2022/03/Asset-1.png
+hero_image_url: /assets/imported/2024/08/procter-gamble-live-wall-0621201955-of-57.jpg
 seo_title: Warehaus - Distribution & Manufacturing
 seo_description: We listen. We design. We deliver. With hundreds of projects in distribution and manufacturing, we enhance productivity & minimize costs.
 seo_og_image_url: /assets/imported/2022/03/Asset-1.png

@@ -52,4 +52,5 @@ recent_projects:
     categories: []
     image_url: /assets/imported/2023/04/The-Lancaster-County-Courthouse-093014_0007.jpg
 hero_image_url: /assets/imported/2025/06/Appell-Concessions-3-1024x683.webp
+seo_description: We are drawn to historic buildings because of what they can tell us about ourselves – about the history of our cultures and our communities. Our long-term…
 ---

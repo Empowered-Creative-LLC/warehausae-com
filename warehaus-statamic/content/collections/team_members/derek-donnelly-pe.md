@@ -22,4 +22,5 @@ education: A graduate of University of Pittsburgh-Johnstown with a degree in Civ
 contact_blurb: Have a project with structural engineering needs? Connect with Derek to discuss.
 email: ddonnelly@warehausae.com
 phone: (717) 815-8537
+seo_description: Derek Donnelly has been practicing structural engineering for more than 24 years, building expertise in structural building design and project management. His…
 ---

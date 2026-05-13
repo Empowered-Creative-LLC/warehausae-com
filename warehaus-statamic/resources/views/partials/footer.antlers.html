@@ -11,21 +11,19 @@
 
             <div class="mt-8 max-w-md">
                 {{ form:newsletter }}
-                    <label class="block">
-                        <span class="sr-only">{{ footer:newsletter_label }}</span>
-                        <div class="flex">
-                            <input
-                                type="email"
-                                name="email"
-                                required
-                                placeholder="{{ footer:newsletter_label }}"
-                                class="flex-1 rounded-l border-0 bg-haus-ink-800 text-white placeholder:text-haus-ink-400 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-haus-amber-400"
-                            >
-                            <button type="submit" class="rounded-r bg-haus-amber-500 hover:bg-haus-amber-400 text-haus-ink-900 font-semibold px-6 transition">
-                                {{ footer:newsletter_button }}
-                            </button>
-                        </div>
-                    </label>
+                    <div class="flex">
+                        <input
+                            type="email"
+                            name="email"
+                            required
+                            placeholder="{{ footer:newsletter_label }}"
+                            aria-label="Email address"
+                            class="flex-1 rounded-l border-0 bg-haus-ink-800 text-white placeholder:text-haus-ink-400 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-haus-amber-400"
+                        >
+                        <button type="submit" aria-label="{{ footer:newsletter_button }} to newsletter" class="rounded-r bg-haus-amber-500 hover:bg-haus-amber-400 text-haus-ink-900 font-semibold px-6 transition">
+                            {{ footer:newsletter_button }}
+                        </button>
+                    </div>
                     <p class="mt-3 text-sm text-haus-ink-400">{{ footer:newsletter_disclaimer }}</p>
                     {{ if success }}
                         <p class="mt-4 text-haus-amber-300 font-medium">Thanks for subscribing.</p>

@@ -23,4 +23,5 @@ education: Joe holds a degree in Environmental Science from Wilkes University.
 contact_blurb: Have a project with civil engineering needs? Connect with Joseph to discuss.
 email: jstein@warehausae.com
 phone: (717) 815-8563
+seo_description: Joseph Stein brings more than 19 years of experience to his role as Civil Project Director, where Joe is responsible for the overall success of civil project…
 ---

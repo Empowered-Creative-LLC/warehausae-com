@@ -103,7 +103,7 @@ recent_projects:
     categories:
       - Architecture
     image_url: /assets/imported/2023/04/St.-Paul-Lutheran-Church-111414_00684_Edited.jpg
-hero_image_url: /assets/imported/2022/03/Asset-1.png
+hero_image_url: /assets/imported/2023/03/Warehaus-Headquarters-05_2014-0289.jpg
 seo_title: Building Sciences | Warehaus
 seo_description: Discover Warehaus' approach to building sciences, focusing on repair, restoration, and architectural services.
 seo_og_image_url: /assets/imported/2022/03/Asset-1.png

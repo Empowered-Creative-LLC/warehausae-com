@@ -29,4 +29,5 @@ education: A graduate of Leadership York and an Engineer in Training (EIT), Zach
 contact_blurb: Have a project with civil engineering needs? Connect with Zach to discuss.
 email: zmichali@warehausae.com
 phone: (717) 324-2279
+seo_description: Zach brings dedication, curiosity, and hands-on experience to his role as Civil Project Manager at Warehaus. His journey with the firm began as a Civil…
 ---

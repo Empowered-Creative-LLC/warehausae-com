@@ -148,7 +148,7 @@ recent_projects:
       - Architecture
       - Interiors
     image_url: /assets/imported/2023/04/JCC-6_10_21-EDITED-08.jpg
-hero_image_url: /assets/imported/2022/03/Asset-1.png
+hero_image_url: /assets/imported/2023/04/Gettysburg_National_Military_Museum_and_Visitor_Center_01-of-00.jpg
 seo_title: Arts & Culture Projects | Warehaus
 seo_description: Explore our portfolio of arts and culture projects that celebrate and enhance visitor experiences.
 seo_og_image_url: /assets/imported/2022/03/Asset-1.png
