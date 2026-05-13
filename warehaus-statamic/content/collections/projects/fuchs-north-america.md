@@ -1,5 +1,5 @@
 ---
-id: bcc4c5fa-28a6-449f-bd3b-ce10886bff12
+id: 969bb8bf-e504-42f6-8d73-601bae66b06b
 blueprint: project
 title: Fuchs North America
 slug: fuchs-north-america

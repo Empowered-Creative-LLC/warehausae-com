@@ -1,5 +1,5 @@
 ---
-id: 8eaa79b9-95fc-4de8-b6c1-c554591f9d96
+id: eb70d930-6866-4e45-9a60-5a006b01ca22
 blueprint: project
 title: WellSpan Health Shrewsbury Community Hospital
 slug: wellspan-health-shrewsbury-community-hospital

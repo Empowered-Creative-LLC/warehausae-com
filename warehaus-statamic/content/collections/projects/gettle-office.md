@@ -1,5 +1,5 @@
 ---
-id: ed0262a1-f638-48c0-a9e7-747e435f3217
+id: 19898fbf-c08c-4757-bdcd-e6005a78d4ea
 blueprint: project
 title: Gettle Office
 slug: gettle-office

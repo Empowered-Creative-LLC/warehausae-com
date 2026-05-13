@@ -1,5 +1,5 @@
 ---
-id: dcf60482-ceb1-4a3f-aac0-d0f5f21f633a
+id: b9dc7aa4-228f-40e0-929e-519fd670395b
 blueprint: project
 title: York College of Pennsylvania Kinsley Engineering Center
 slug: york-college-of-pennsylvania-kinsley-engineering-center

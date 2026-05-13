@@ -1,5 +1,5 @@
 ---
-id: 77ad0bc6-7fde-4185-9603-3b2ff6d12fab
+id: 1c0bfd78-c798-4066-a872-a76bb9547aa3
 blueprint: news_post
 title: Warehaus Architects and Engineers Accelerates Growth Through Acquisition of Johnston & Associates
 slug: press_release_acquisition

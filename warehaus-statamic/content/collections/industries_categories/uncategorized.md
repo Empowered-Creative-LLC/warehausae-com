@@ -1,5 +1,5 @@
 ---
-id: b4085d99-abc5-42d0-8624-f66e86e7fc2d
+id: 8ea308fd-0e59-4b32-9a54-c2816f3128ec
 blueprint: industries_category
 title: Uncategorized
 slug: uncategorized

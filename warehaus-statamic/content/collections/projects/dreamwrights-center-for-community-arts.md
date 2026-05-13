@@ -1,5 +1,5 @@
 ---
-id: 25fb8b8b-5b40-4fdf-80e7-40cdc18588a6
+id: f8fb7ccb-7fa3-4af8-a5c7-b5cffb31f43b
 blueprint: project
 title: DreamWrights Center for Community Arts
 slug: dreamwrights-center-for-community-arts

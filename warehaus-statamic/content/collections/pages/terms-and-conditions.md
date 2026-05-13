@@ -1,5 +1,5 @@
 ---
-id: eb234eb0-4f0d-4517-9dc1-e41a283e6c29
+id: 965f471c-6214-4583-8210-0860738f6c2c
 blueprint: page
 title: Terms and Conditions
 slug: terms-and-conditions

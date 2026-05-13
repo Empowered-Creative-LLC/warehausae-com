@@ -1,5 +1,5 @@
 ---
-id: b469b8a3-3fdd-4fae-bfc1-a97e7a3aa903
+id: e495293a-2e39-43e8-ad1e-41fab9575d1d
 blueprint: project
 title: York Academy Regional Charter School Legacy Hall
 slug: york-academy-regional-charter-school-legacy-hall

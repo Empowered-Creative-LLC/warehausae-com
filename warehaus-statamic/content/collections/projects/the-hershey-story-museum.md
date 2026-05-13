@@ -1,5 +1,5 @@
 ---
-id: a8905797-34f6-43fd-8197-924d4b614e48
+id: 09323d36-6b76-4e78-94bf-7ba663785316
 blueprint: project
 title: The Hershey Story Museum
 slug: the-hershey-story-museum

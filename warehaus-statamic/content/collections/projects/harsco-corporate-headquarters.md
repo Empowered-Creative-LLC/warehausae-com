@@ -1,5 +1,5 @@
 ---
-id: 90f6a793-609c-4011-8801-cf31fb03255e
+id: 7978a109-3942-4af7-b9b8-16e3eff43504
 blueprint: project
 title: Harsco Corporate Headquarters
 slug: harsco-corporate-headquarters

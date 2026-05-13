@@ -1,5 +1,5 @@
 ---
-id: 40513d7d-8d03-443e-baf0-7010178df4be
+id: 47824852-2b32-412a-b8cb-23ce2414f800
 blueprint: project
 title: Volvo Construction Equipment Customer Care Center
 slug: volvo-customer-care-center-office

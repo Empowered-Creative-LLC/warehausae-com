@@ -1,5 +1,5 @@
 ---
-id: bdb45a29-532f-44cf-b1b6-6a44a380a818
+id: a0f51b46-0ce9-4aeb-9863-da0f98cb257f
 blueprint: industries_category
 title: Around the Haus
 slug: around-the-haus

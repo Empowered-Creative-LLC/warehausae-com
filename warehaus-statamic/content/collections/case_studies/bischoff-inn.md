@@ -1,5 +1,5 @@
 ---
-id: 9789ca56-1bb0-463a-89b0-f6856f4329e9
+id: 000330f3-2fd3-46ea-baf8-9e36e4d585fa
 blueprint: case_study
 title: "Preservation Pennsylvania Award Winner: Bischoff Inn"
 slug: bischoff-inn

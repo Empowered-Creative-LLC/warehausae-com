@@ -1,5 +1,5 @@
 ---
-id: 13cab64b-2241-4c7d-b395-d2695cb8307f
+id: 8ca657af-5e1e-4719-9325-d1bafc2afc6e
 blueprint: project
 title: Hilton Garden Inn
 slug: hilton-garden-inn

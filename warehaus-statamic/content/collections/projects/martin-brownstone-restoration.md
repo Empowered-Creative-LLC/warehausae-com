@@ -1,5 +1,5 @@
 ---
-id: 66735876-9889-4d43-8ab7-589acd2bc960
+id: c970805b-ecf0-4dc9-81a0-40fa3097c0e6
 blueprint: project
 title: Martin Brownstone
 slug: martin-brownstone-restoration

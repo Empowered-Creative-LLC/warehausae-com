@@ -1,5 +1,5 @@
 ---
-id: 4711f52e-fbf9-4ae1-b7e9-095901757ca6
+id: 4da433a7-b61b-44b3-9e1e-f3461c24b1d5
 blueprint: project
 title: Bischoff Inn
 slug: bischoff-inn

@@ -1,5 +1,5 @@
 ---
-id: 819f1366-0bb6-4d97-814c-e786ea0361f4
+id: cf3a5434-2db3-41c6-a36f-7c1fab4cf3fc
 blueprint: page
 title: WAREHAUS
 slug: culture

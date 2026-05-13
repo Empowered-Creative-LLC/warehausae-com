@@ -1,5 +1,5 @@
 ---
-id: 8ebeecbc-e27a-493c-bd35-523ac581480d
+id: 92856725-87ae-4a67-b193-e11abdf6e428
 blueprint: portfolio_category
 title: education
 slug: education

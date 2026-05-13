@@ -1,5 +1,5 @@
 ---
-id: 8c348fc1-4eae-400f-88ea-ac5314687870
+id: e956a1b3-b06a-4ad0-9923-27c9073b360f
 blueprint: team_member
 title: Co-Owner / President & Chief Executive Officer
 slug: troy-bankert

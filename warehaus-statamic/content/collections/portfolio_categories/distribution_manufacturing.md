@@ -1,5 +1,5 @@
 ---
-id: 1e93e006-0048-446f-b67b-4c98f5da21b6
+id: 1900a093-c60a-4f58-ae81-f16ccf35c2d0
 blueprint: portfolio_category
 title: distribution & manufacturing
 slug: distribution_manufacturing

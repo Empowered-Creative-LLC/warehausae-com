@@ -1,5 +1,5 @@
 ---
-id: 3fbcdcce-ca81-47b4-9b2d-2f5be9b65aeb
+id: 282403c7-4d48-43cb-b1b4-1f615c1dbe71
 blueprint: service
 title: architecture
 slug: architecture

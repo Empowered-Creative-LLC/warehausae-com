@@ -1,5 +1,5 @@
 ---
-id: 94bc0850-e52b-44ed-be14-e1458c71f23c
+id: 00944580-13e8-4469-998d-8ec673d38d34
 blueprint: project
 title: Capitol Theatre
 slug: capitol-theatre

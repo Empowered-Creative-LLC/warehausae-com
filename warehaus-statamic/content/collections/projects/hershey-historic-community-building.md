@@ -1,5 +1,5 @@
 ---
-id: 6aae4e5e-111c-4bd8-a136-6fc32d86527e
+id: 14283df1-0868-47e2-ad99-549993c8b500
 blueprint: project
 title: Hershey Community Building
 slug: hershey-historic-community-building

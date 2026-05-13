@@ -1,5 +1,5 @@
 ---
-id: f9475c99-2239-434a-9293-ba99b399d18b
+id: 22f07788-dda5-445a-8ac2-5a8afe2ca017
 blueprint: project
 title: York Academy Regional Charter School – Upper School
 slug: york-academy-regional-charter-school-upper-school

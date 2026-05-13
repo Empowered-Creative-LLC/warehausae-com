@@ -1,5 +1,5 @@
 ---
-id: a40e4227-ab3a-4bc0-a3bb-ed2802c47961
+id: 7c96bb8c-dc9b-4eaf-b3bb-7eb4e4a6884b
 blueprint: team_member
 title: Co-Owner / Chief Operating Officer
 slug: david-koratich

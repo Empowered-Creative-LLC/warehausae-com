@@ -1,5 +1,5 @@
 ---
-id: d91e0368-2611-469e-86fc-1f57669a3275
+id: 6ebdb7ca-fb79-4558-b029-0b54d220c303
 blueprint: case_study
 title: Comprehensive Civil Engineering Services Tailored for Municipalities
 slug: municipal-engineering

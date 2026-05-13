@@ -1,5 +1,5 @@
 ---
-id: ff794f92-83d4-42f6-8e08-e8bd95a1cfa1
+id: 795f9d6b-0f27-4e11-9a6e-1c4819dfb888
 blueprint: project
 title: The Barn Resort
 slug: the-barn-resort

@@ -1,5 +1,5 @@
 ---
-id: 4a77ec7e-2ecd-4964-9123-818ec47ebd4e
+id: 1552b226-cb14-495a-921c-7f5421f68297
 blueprint: project
 title: Sterman Masser, Inc. Office
 slug: sterman-masser-inc-office

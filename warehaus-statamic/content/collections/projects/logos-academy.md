@@ -1,5 +1,5 @@
 ---
-id: 5ba6001d-000e-4b1e-ace5-175e0f3ed54b
+id: 580a3882-ca35-4906-b4eb-608107a3636b
 blueprint: project
 title: Logos Academy
 slug: logos-academy

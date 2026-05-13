@@ -1,5 +1,5 @@
 ---
-id: 6a2f9a07-d06c-412b-8659-06e91846ccd1
+id: fe7b90ab-d28d-4c60-a6a7-f80fde2e33a2
 blueprint: industries_category
 title: News
 slug: news

@@ -1,5 +1,5 @@
 ---
-id: 6f73e3d2-d72f-4da2-b409-2dabaca9a258
+id: d5311452-6c38-450f-98e4-38da226f11b4
 blueprint: project
 title: Inn at Wyndridge Farm
 slug: inn-at-wyndridge-farm

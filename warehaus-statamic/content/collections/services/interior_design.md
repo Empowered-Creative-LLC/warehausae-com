@@ -1,5 +1,5 @@
 ---
-id: b13b8329-4b0a-4a6f-8e85-64b47f99e088
+id: b26ba1ba-60ef-455d-86dd-2b2db24f4533
 blueprint: service
 title: interior design
 slug: interior_design

@@ -1,5 +1,5 @@
 ---
-id: 14ca3c77-2848-4a14-8d67-d3403de480c6
+id: 6b9e64dd-57a2-42af-928f-869395fc745e
 blueprint: case_study
 title: A Stay to Discover in Tamaqua, PA
 slug: case-study-bischoff-inn

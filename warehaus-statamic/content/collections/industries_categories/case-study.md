@@ -1,5 +1,5 @@
 ---
-id: 0ef6d45a-7114-442b-ba80-2f7002719a8b
+id: cffc6fd4-4774-488c-896d-c586768f2302
 blueprint: industries_category
 title: Case Study
 slug: case-study

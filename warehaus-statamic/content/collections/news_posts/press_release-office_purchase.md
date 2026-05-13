@@ -1,5 +1,5 @@
 ---
-id: d98787da-e811-4f9e-af08-8f925ad79266
+id: 699aae73-43b8-45b5-8fd2-2d089f6d3ac8
 blueprint: news_post
 title: Warehaus Purchases Office on North George Street
 slug: press_release-office_purchase

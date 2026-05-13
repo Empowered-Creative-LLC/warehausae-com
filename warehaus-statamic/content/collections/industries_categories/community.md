@@ -1,5 +1,5 @@
 ---
-id: 286a08c5-a085-46af-8a31-f63097b67b45
+id: 4d23f6cd-8f61-403d-94dd-6d1f0684ca8d
 blueprint: industries_category
 title: In the Community
 slug: community

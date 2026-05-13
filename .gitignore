@@ -31,6 +31,9 @@ migration-tool/scraped/_discovery/*
 !migration-tool/scraped/_discovery/crawl-result.json
 !migration-tool/scraped/_discovery/canonical-url-map.md
 !migration-tool/scraped/_discovery/url-status.json
+!migration-tool/scraped/_motion/
+migration-tool/scraped/_motion/*
+!migration-tool/scraped/_motion/inventory.md
 
 # Laravel / Statamic app
 warehaus-statamic/vendor/
@@ -55,4 +58,9 @@ warehaus-statamic/auth.json
 # Statamic file-based user accounts contain PII + bcrypt hashes. Each dev /
 # environment should create their own admin via `php artisan statamic:make:user`.
 warehaus-statamic/users/*.yaml
+
+# Imported WP assets are ~350MB; not worth bloating git history. Regenerated
+# by running migration-tool/scripts/import-to-statamic.js (downloads from
+# warehausae.com/wp-content/uploads/ to public/assets/imported/).
+warehaus-statamic/public/assets/imported/
 .claude/

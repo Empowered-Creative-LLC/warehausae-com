@@ -1,5 +1,5 @@
 ---
-id: 467b271a-c832-4c71-9968-2e2cfed171f6
+id: 41a3ac11-28f6-4bfa-b1f3-4bf2fb8b990a
 blueprint: news_post
 title: Warehaus Announces Strategic Leadership Promotions to Strengthen Project Delivery and Client Experience
 slug: warehaus-announces-leadership-promotions

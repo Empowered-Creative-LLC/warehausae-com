@@ -1,5 +1,5 @@
 ---
-id: 92093897-341b-4b2c-8f70-addeedbfc293
+id: 2196312f-3f6d-4e31-b0b7-d0264b39c5de
 blueprint: project
 title: WellSpan Health Bruce M. Bartels Management and Governance Center
 slug: bartels-center

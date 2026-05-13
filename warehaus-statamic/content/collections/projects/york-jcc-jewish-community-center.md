@@ -1,5 +1,5 @@
 ---
-id: f7f800e9-03d4-4399-9383-83f40915751a
+id: 8600dc9b-89d3-4b41-8fc9-7eacd4d03b6d
 blueprint: project
 title: York JCC Jewish Community Center
 slug: york-jcc-jewish-community-center

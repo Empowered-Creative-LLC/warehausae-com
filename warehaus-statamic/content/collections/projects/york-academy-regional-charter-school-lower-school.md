@@ -1,5 +1,5 @@
 ---
-id: 79181601-df87-409b-a7d2-03f31226537d
+id: c506f580-4fe3-4dc1-9a12-1f2c90b8eb5e
 blueprint: project
 title: York Academy Regional Charter School – Lower School
 slug: york-academy-regional-charter-school-lower-school

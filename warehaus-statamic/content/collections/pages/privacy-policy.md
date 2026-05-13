@@ -1,5 +1,5 @@
 ---
-id: b52e2fea-94aa-43d6-9ec7-52e323202b44
+id: 7b3b2609-0e17-4842-b2e3-42415c4af040
 blueprint: page
 title: Privacy Policy
 slug: privacy-policy

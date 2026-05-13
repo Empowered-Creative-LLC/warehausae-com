@@ -1,5 +1,5 @@
 ---
-id: 3ee5dcd7-bdfc-408b-8cc1-c1a9a4f98a3d
+id: 9696056d-1823-45bc-8993-eaf3c6026b66
 blueprint: project
 title: University Lofts
 slug: university-lofts

@@ -1,5 +1,5 @@
 ---
-id: 0a7d74a9-2562-4baf-bce7-29c8e433f243
+id: a42334b0-72b0-42ab-aa14-c6437d39446d
 blueprint: industries_category
 title: Game
 slug: game

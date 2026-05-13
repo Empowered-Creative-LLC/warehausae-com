@@ -1,5 +1,5 @@
 ---
-id: 17bf8a42-83c4-47c3-9673-0c2a2fdbd2eb
+id: eff525b1-0fc4-49ba-a77f-0237a53ab29a
 blueprint: project
 title: Data Center Design
 slug: data-centers

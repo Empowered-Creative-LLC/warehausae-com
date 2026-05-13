@@ -1,5 +1,5 @@
 ---
-id: eb8fd1f7-41e5-4160-ad88-5f43c9d8ec9c
+id: 0353f85c-0266-4664-a454-0a370895fb06
 blueprint: project
 title: Fox Apartments
 slug: fox-apartments

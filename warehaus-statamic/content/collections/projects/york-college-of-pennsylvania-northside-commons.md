@@ -1,5 +1,5 @@
 ---
-id: b7877028-8f2d-4a4a-820d-76328ccaaff3
+id: 77f03fe6-1300-4fa9-b849-d59d2cbe72ce
 blueprint: project
 title: York College of Pennsylvania Northside Commons
 slug: york-college-of-pennsylvania-northside-commons
