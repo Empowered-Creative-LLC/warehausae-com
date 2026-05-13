@@ -1,5 +1,9 @@
 title: Projects
-route: "/project/{slug}"
+# Default route is /project/{slug}, but the 14 test-fits children (test-fits-2
+# through test-fits-15) have a per-entry url: override of /project/test-fits/{n}/
+# to preserve the live site's URLs exactly. The Antlers conditional honors
+# the url field when set, otherwise falls back to the standard route.
+route: "{{ if url }}{{ url }}{{ else }}/project/{{ slug }}{{ /if }}"
 template: projects.show
 layout: layout
 sites:

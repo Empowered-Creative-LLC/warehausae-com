@@ -1,0 +1,101 @@
+---
+id: 09185a9d-3ba7-4160-b772-76c7150017f1
+blueprint: project
+title: Gratz Bank Tower Repair
+slug: gratz-bank-tower-repair
+source_url: https://warehausae.com/project/gratz-bank-tower-repair/
+location: Minersville, PA
+lead_heading: Repair and Preservation Efforts for Lightning-Damaged Tower
+intro_prose: >-
+  Warehaus was tasked with managing the repair and restoration efforts for the historic tower at Gratz Bank in Minersville, PA, following damage caused by a recent lightning strike. The coordination
+  efforts involved multiple stages to stabilize the immediate damage and plan for permanent repairs in compliance with historic preservation requirements.
+narrative:
+  we_listen: >-
+    Initially, Warehaus conducted comprehensive field work to document the extent of the damage. This included assessing the dislodged stone masonry units and shifted lintels at the southeastern
+    corner of the tower. Notably, two stone masonry units had fallen to the street, and both eastern and southern stone lintels had shifted outward, impacting the existing copper roof and interior
+    wood structural elements. Additional damage to brick masonry, stucco, and windows was also documented around the tower.
+  we_design: >-
+    Following the damage assessment, Warehaus prioritized stabilization measures to prevent further deterioration. They proposed various options for repair, each addressing the specific challenges
+    presented by the lightning strike. These options ranged from repairing and replacing masonry in-kind while stabilizing the copper roof and wood structure, to more extensive approaches involving
+    the removal of existing components and installation of a new flat roof.
+  we_deliver: >-
+    Throughout the project, Warehaus maintained close coordination with local authorities and HARB to ensure all necessary permits and clearances were obtained for the repair and restoration work.
+    This involved preparing and submitting documentation to support the building permit applications, detailing the planned repairs and restoration efforts to restore the tower to its historic
+    integrity.
+client: LINKBANK
+size: N/A
+completion_date: "2023"
+services_provided:
+  - label: Architecture
+    url: https://warehausae.com/service/architecture/
+  - label: Structural
+    url: https://warehausae.com/service/structural/
+industries:
+  - label: Building Sciences
+    url: https://warehausae.com/industry/building-sciences/
+hero_image_url: /assets/imported/2022/03/Asset-1.png
+gallery_images:
+  - url: /assets/imported/2024/09/Screenshot-2024-09-17-083457-700x688.webp
+    alt: screenshot-2024-09-17-083457
+  - url: /assets/imported/2024/09/DJI_0029-700x700.webp
+    alt: default
+  - url: /assets/imported/2024/09/2023_12_05T16_23_26-700x700.webp
+    alt: 2023_12_05t16_23_26
+  - url: /assets/imported/2024/09/2023_12_05T16_19_04-700x700.webp
+    alt: 2023_12_05t16_19_04
+related_projects:
+  - title: St. Paul Evangelical Lutheran Church
+    url: https://warehausae.com/project/st-paul-evangelical-lutheran-church/
+    categories:
+      - Architecture
+  - title: UMFP Redwood Facade Restoration
+    url: https://warehausae.com/project/umfp-redwood-facade-restoration/
+    categories:
+      - Architecture
+      - Historic
+  - title: Adams County Arts Council Renovation
+    url: https://warehausae.com/project/adams-county-arts-council-renovation/
+    categories:
+      - Architecture
+  - title: Saint John Paul II National Shrine
+    url: https://warehausae.com/project/saint-john-paul-ii-national-shrine/
+    categories:
+      - Architecture
+      - Civil
+      - Interiors
+  - title: 1895 Federal Building
+    url: https://warehausae.com/project/1895-federal-building/
+    categories:
+      - Architecture
+      - Historic
+  - title: "Berks County Heritage Lock #47 Restoration"
+    url: https://warehausae.com/project/berks-county-heritage-lock-47-restoration/
+    categories:
+      - Architecture
+      - Civil
+      - Historic
+  - title: Carlisle Barracks Restoration
+    url: https://warehausae.com/project/carlisle-barracks-restoration/
+    categories:
+      - Architecture
+      - Structural
+  - title: Hershey Community Building
+    url: https://warehausae.com/project/hershey-historic-community-building/
+    categories:
+      - Architecture
+      - Historic
+  - title: Lancaster County Courthouse and Prison
+    url: https://warehausae.com/project/lancaster-county-courthouse-and-prison/
+    categories:
+      - Architecture
+      - Historic
+  - title: Martin Brownstone
+    url: https://warehausae.com/project/martin-brownstone-restoration/
+    categories:
+      - Architecture
+      - Interiors
+is_test_fits_subpage: false
+seo_title: Gratz Bank Tower Repair - Warehaus
+seo_description: Repair and Preservation Efforts for Lightning-Damaged Tower at Gratz Bank in Minersville, PA.
+seo_og_image_url: /assets/imported/2022/03/Asset-1.png
+---

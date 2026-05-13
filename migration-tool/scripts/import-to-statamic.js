@@ -176,6 +176,24 @@ function buildFrontmatter({ data, sourceUrl, template, collection, slug, canonic
 
     if (PER_ENTRY_URL_COLLECTIONS.has(collection) || (collection === 'pages' && canonicalPath === '/')) {
         fm.url = canonicalPath;
+    } else {
+        // For collections with a fixed route like /project/{slug} or
+        // /services/{slug}, set an explicit url override only when the
+        // canonical path doesn't match what the collection route would
+        // produce. Example: /project/test-fits/3/ has slug "test-fits-3"
+        // and route "/project/{slug}" would yield "/project/test-fits-3/",
+        // so we need url: "/project/test-fits/3/" to preserve the
+        // canonical URL exactly.
+        const routePrefix = {
+            projects: '/project/',
+            services: '/services/',
+            team_members: '/team/',
+            job_postings: '/job/',
+        }[collection];
+        const expected = routePrefix ? `${routePrefix}${slug}/` : null;
+        if (expected && canonicalPath !== expected) {
+            fm.url = canonicalPath;
+        }
     }
 
     // Copy every field from the extracted data into front-matter,
