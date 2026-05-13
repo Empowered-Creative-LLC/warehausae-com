@@ -1,1 +1,152 @@
-{{ partial:_placeholder }}
+{{# Project detail template.
+
+    Layout (matches the live site's /project/{slug}/ pages, with deliberate
+    alignment cleanups vs the WP version — see CHANGES.md):
+
+      1. Full-bleed hero with project image + title overlay + location
+      2. Image strip below hero (gallery thumbnails)
+      3. Two-column lead block: heading + intro prose on left,
+         Project Details sidebar on right
+      4. Three-act narrative (We listen / We design / We deliver) with
+         alternating image-text rows
+      5. Similar Projects strip
+      6. Footer CTA (provided by layout)
+#}}
+
+{{# 1. Hero #}}
+<section class="relative h-[60vh] md:h-[75vh] min-h-[480px] flex items-end overflow-hidden bg-haus-ink-900">
+    {{ if hero_image_url }}
+        <img src="{{ hero_image_url }}" alt="" class="absolute inset-0 w-full h-full object-cover opacity-90">
+        <div class="absolute inset-0 bg-gradient-to-t from-haus-ink-900/90 via-haus-ink-900/40 to-transparent"></div>
+    {{ /if }}
+    <div class="relative container-haus pb-12 md:pb-20 text-white">
+        <h1 class="text-4xl md:text-6xl lg:text-7xl font-medium tracking-tight uppercase">{{ title }}</h1>
+        {{ if location }}<p class="mt-4 text-lg md:text-2xl text-haus-amber-300 tracking-wide">{{ location }}</p>{{ /if }}
+    </div>
+</section>
+
+{{# 2. Image strip / gallery preview #}}
+{{ if gallery_images }}
+    <section class="bg-haus-ink-50 py-6">
+        <div class="container-haus">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+                {{ gallery_images limit="4" }}
+                    <a href="{{ url }}" target="_blank" rel="noopener" class="block aspect-square overflow-hidden rounded">
+                        <img src="{{ url }}" alt="{{ alt }}" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                    </a>
+                {{ /gallery_images }}
+            </div>
+        </div>
+    </section>
+{{ /if }}
+
+{{# 3. Lead block: heading + prose + sidebar #}}
+<section class="container-haus py-16 md:py-24 grid lg:grid-cols-3 gap-12">
+    <div class="lg:col-span-2" data-haus-fade-in>
+        {{ if lead_heading }}<h2 class="text-3xl md:text-4xl font-medium tracking-tight">{{ lead_heading }}</h2>{{ /if }}
+        {{ if intro_prose }}<div class="mt-6 space-y-4 text-haus-ink-600 text-lg leading-relaxed">{{ intro_prose | nl2br }}</div>{{ /if }}
+    </div>
+
+    <aside class="lg:col-span-1" data-haus-fade-in data-haus-fade-delay="150">
+        <div class="bg-haus-ink-50 rounded-lg p-6 lg:p-8 space-y-6">
+            <h3 class="eyebrow">Project Details</h3>
+            {{ if client }}
+                <div>
+                    <p class="text-sm text-haus-ink-400 uppercase tracking-wide">Client</p>
+                    <p class="mt-1 text-haus-ink-800 font-medium">{{ client }}</p>
+                </div>
+            {{ /if }}
+            {{ if size }}
+                <div>
+                    <p class="text-sm text-haus-ink-400 uppercase tracking-wide">Size</p>
+                    <p class="mt-1 text-haus-ink-800 font-medium">{{ size }}</p>
+                </div>
+            {{ /if }}
+            {{ if completion_date }}
+                <div>
+                    <p class="text-sm text-haus-ink-400 uppercase tracking-wide">Completion Date</p>
+                    <p class="mt-1 text-haus-ink-800 font-medium">{{ completion_date }}</p>
+                </div>
+            {{ /if }}
+            {{ if services_provided }}
+                <div>
+                    <p class="text-sm text-haus-ink-400 uppercase tracking-wide">Services</p>
+                    <p class="mt-1 text-haus-ink-800 font-medium">
+                        {{ services_provided }}{{ if first == false }}, {{ /if }}{{ label }}{{ /services_provided }}
+                    </p>
+                </div>
+            {{ /if }}
+            {{ if industries }}
+                <div>
+                    <p class="text-sm text-haus-ink-400 uppercase tracking-wide">Industries</p>
+                    <p class="mt-1 text-haus-ink-800 font-medium">
+                        {{ industries }}{{ if first == false }}, {{ /if }}{{ label }}{{ /industries }}
+                    </p>
+                </div>
+            {{ /if }}
+            {{ if awards }}
+                <div>
+                    <p class="text-sm text-haus-ink-400 uppercase tracking-wide">Awards</p>
+                    <ul class="mt-1 text-haus-ink-800 font-medium space-y-1">
+                        {{ awards }}<li>{{ value }}</li>{{ /awards }}
+                    </ul>
+                </div>
+            {{ /if }}
+        </div>
+    </aside>
+</section>
+
+{{# 4. Three-act narrative #}}
+{{ if narrative:we_listen || narrative:we_design || narrative:we_deliver }}
+    <section class="bg-haus-ink-50">
+        <div class="container-haus py-16 md:py-24 space-y-16 md:space-y-24">
+            {{ if narrative:we_listen }}
+                <div class="grid md:grid-cols-2 gap-10 items-center" data-haus-fade-in>
+                    {{ if gallery_images:1 }}<img src="{{ gallery_images:1:url }}" alt="" class="w-full rounded-lg shadow-sm object-cover aspect-[4/3]">{{ /if }}
+                    <div>
+                        <h3 class="eyebrow">We listen.</h3>
+                        <div class="mt-4 text-haus-ink-700 text-lg leading-relaxed space-y-4">{{ narrative:we_listen | nl2br }}</div>
+                    </div>
+                </div>
+            {{ /if }}
+            {{ if narrative:we_design }}
+                <div class="grid md:grid-cols-2 gap-10 items-center" data-haus-fade-in>
+                    <div class="md:order-2">
+                        <h3 class="eyebrow">We design.</h3>
+                        <div class="mt-4 text-haus-ink-700 text-lg leading-relaxed space-y-4">{{ narrative:we_design | nl2br }}</div>
+                    </div>
+                    {{ if gallery_images:2 }}<img src="{{ gallery_images:2:url }}" alt="" class="w-full rounded-lg shadow-sm object-cover aspect-[4/3] md:order-1">{{ /if }}
+                </div>
+            {{ /if }}
+            {{ if narrative:we_deliver }}
+                <div class="grid md:grid-cols-2 gap-10 items-center" data-haus-fade-in>
+                    {{ if gallery_images:3 }}<img src="{{ gallery_images:3:url }}" alt="" class="w-full rounded-lg shadow-sm object-cover aspect-[4/3]">{{ /if }}
+                    <div>
+                        <h3 class="eyebrow">We deliver.</h3>
+                        <div class="mt-4 text-haus-ink-700 text-lg leading-relaxed space-y-4">{{ narrative:we_deliver | nl2br }}</div>
+                    </div>
+                </div>
+            {{ /if }}
+        </div>
+    </section>
+{{ /if }}
+
+{{# 5. Similar Projects #}}
+{{ if related_projects }}
+    <section class="container-haus py-16 md:py-24">
+        <h2 class="text-3xl md:text-4xl font-medium tracking-tight text-center">Similar Projects</h2>
+        <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {{ related_projects limit="6" }}
+                <a href="{{ url }}" class="group block" data-haus-fade-in>
+                    <div class="overflow-hidden rounded">
+                        <div class="aspect-[4/3] bg-haus-ink-100 transition-transform duration-500 group-hover:scale-105"></div>
+                    </div>
+                    <h3 class="mt-4 text-lg font-medium group-hover:text-haus-amber-500 transition">{{ title }}</h3>
+                    {{ if categories }}
+                        <p class="mt-1 text-sm text-haus-ink-400">{{ categories | join:", " }}</p>
+                    {{ /if }}
+                </a>
+            {{ /related_projects }}
+        </div>
+    </section>
+{{ /if }}

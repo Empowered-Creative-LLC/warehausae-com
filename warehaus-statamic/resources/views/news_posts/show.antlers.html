@@ -1,1 +1,27 @@
-{{ partial:_placeholder }}
+{{# News post template. #}}
+
+<article>
+    <header class="container-haus pt-32 pb-12 md:pt-40 max-w-4xl">
+        {{ if categories }}
+            <p class="flex flex-wrap gap-3 text-sm">
+                {{ categories }}
+                    {{ if url }}<a href="{{ url }}" class="text-haus-amber-500 hover:text-haus-amber-400 uppercase tracking-wide transition">{{ label }}</a>{{ else }}<span class="text-haus-amber-500 uppercase tracking-wide">{{ label }}</span>{{ /if }}
+                {{ /categories }}
+            </p>
+        {{ /if }}
+        <h1 class="mt-4 text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight">{{ title }}</h1>
+        {{ if published_date_text }}<p class="mt-4 text-haus-ink-500">{{ published_date_text }}</p>{{ /if }}
+    </header>
+
+    {{ if featured_image_url }}
+        <figure class="container-haus mb-12">
+            <img src="{{ featured_image_url }}" alt="" class="w-full max-h-[60vh] object-cover rounded-lg">
+        </figure>
+    {{ /if }}
+
+    <div class="container-haus pb-16 md:pb-24 max-w-3xl">
+        {{ if body_markdown }}
+            <div class="prose prose-lg max-w-none text-haus-ink-700 leading-relaxed space-y-6">{{ body_markdown | markdown }}</div>
+        {{ /if }}
+    </div>
+</article>

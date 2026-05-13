@@ -1,1 +1,27 @@
-{{ partial:_placeholder }}
+{{# Industries (blog/news category) index template. #}}
+
+<section class="container-haus pt-32 pb-12 md:pt-40 max-w-4xl">
+    <p class="eyebrow">Category</p>
+    <h1 class="mt-4 text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight">{{ category_name }}</h1>
+    {{ if intro_prose }}<div class="mt-6 text-lg leading-relaxed text-haus-ink-600">{{ intro_prose | nl2br }}</div>{{ /if }}
+</section>
+
+{{ if posts }}
+    <section class="container-haus pb-16 md:pb-24">
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {{ posts }}
+                <a href="{{ url }}" class="group block">
+                    <div class="aspect-[4/3] overflow-hidden rounded-lg bg-haus-ink-100">
+                        {{ if image_url }}<img src="{{ image_url }}" alt="" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">{{ /if }}
+                    </div>
+                    {{ if categories }}
+                        <p class="mt-4 text-xs uppercase tracking-wide text-haus-amber-500">{{ categories | join:", " }}</p>
+                    {{ /if }}
+                    {{ if date_text }}<p class="mt-1 text-xs text-haus-ink-400">{{ date_text }}</p>{{ /if }}
+                    <h3 class="mt-2 text-lg font-medium leading-snug group-hover:text-haus-amber-500 transition">{{ title }}</h3>
+                    {{ if excerpt }}<p class="mt-2 text-sm text-haus-ink-600 leading-relaxed">{{ excerpt }}</p>{{ /if }}
+                </a>
+            {{ /posts }}
+        </div>
+    </section>
+{{ /if }}

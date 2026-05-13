@@ -54,27 +54,13 @@ function initMobileMenu() {
  * enters the viewport. Optional [data-haus-fade-delay="200"] in ms.
  */
 function initFadeInOnScroll() {
-    const els = document.querySelectorAll('[data-haus-fade-in]');
-    if (!els.length || typeof IntersectionObserver === 'undefined') return;
-
-    els.forEach((el) => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(24px)';
-        el.style.transition = 'opacity 800ms ease-out, transform 800ms ease-out';
-        el.style.transitionDelay = `${el.dataset.hausFadeDelay ?? 0}ms`;
-    });
-
-    const io = new IntersectionObserver((entries) => {
-        for (const entry of entries) {
-            if (!entry.isIntersecting) continue;
-            const el = entry.target;
-            el.style.opacity = '1';
-            el.style.transform = 'translateY(0)';
-            io.unobserve(el);
-        }
-    }, { threshold: 0.12 });
-
-    els.forEach((el) => io.observe(el));
+    // Fade-in is currently a no-op. The data-haus-fade-in attribute is left
+    // in the templates so we can re-enable it as a polish task in Phase 11
+    // without touching every template. To re-enable: replace this body with
+    // an IntersectionObserver implementation. Disabled now because the
+    // opacity:0 initial state caused content to flash empty during
+    // Playwright screenshots and on slow devices where the observer hadn't
+    // fired by paint.
 }
 
 /**

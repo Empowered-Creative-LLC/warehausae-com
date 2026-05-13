@@ -1,1 +1,85 @@
-{{ partial:_placeholder }}
+{{# Default page template. The 13 one-off page entries vary widely; this
+    handles the simple case (legal, indexes, landings). For pages with
+    unique structure (homepage, about, careers, culture), Statamic resolves
+    a more specific template if pages/{slug}.antlers.html exists. #}}
+
+<section class="container-haus pt-32 pb-12 md:pt-40">
+    {{ if tagline }}<p class="eyebrow">{{ tagline }}</p>{{ /if }}
+    <h1 class="mt-4 text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight">{{ title }}</h1>
+    {{ if lead_heading }}<p class="mt-6 text-2xl md:text-3xl text-haus-ink-500">{{ lead_heading }}</p>{{ /if }}
+</section>
+
+{{ if intro_prose }}
+    <section class="container-haus pb-12 max-w-3xl">
+        <div class="text-lg leading-relaxed text-haus-ink-700 space-y-4">{{ intro_prose | nl2br }}</div>
+    </section>
+{{ /if }}
+
+{{ if sections }}
+    <section class="container-haus pb-16 md:pb-24 max-w-4xl space-y-16">
+        {{ sections }}
+            <div>
+                <h2 class="text-2xl md:text-3xl font-medium tracking-tight">{{ heading }}</h2>
+                {{ if body }}<div class="mt-4 text-haus-ink-700 leading-relaxed space-y-4">{{ body | nl2br }}</div>{{ /if }}
+                {{ if images }}
+                    <div class="mt-6 grid sm:grid-cols-2 gap-4">
+                        {{ images }}
+                            <figure>
+                                <img src="{{ url }}" alt="{{ alt }}" class="w-full aspect-[4/3] object-cover rounded">
+                                {{ if alt }}<figcaption class="mt-2 text-xs text-haus-ink-500">{{ alt }}</figcaption>{{ /if }}
+                            </figure>
+                        {{ /images }}
+                    </div>
+                {{ /if }}
+            </div>
+        {{ /sections }}
+    </section>
+{{ /if }}
+
+{{# Leadership cards (used on /about/) #}}
+{{ if leadership_cards }}
+    <section class="bg-haus-ink-50 py-16 md:py-24">
+        <div class="container-haus">
+            <h2 class="text-3xl md:text-4xl font-medium tracking-tight text-center">Meet Our Leadership</h2>
+            <div class="mt-12 grid sm:grid-cols-2 md:grid-cols-4 gap-8">
+                {{ leadership_cards }}
+                    <a href="{{ team_url }}" class="group block text-center">
+                        {{ if headshot_url }}
+                            <div class="aspect-square overflow-hidden rounded-lg bg-haus-ink-200">
+                                <img src="{{ headshot_url }}" alt="{{ name }}" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                            </div>
+                        {{ /if }}
+                        <h3 class="mt-4 text-lg font-medium group-hover:text-haus-amber-500 transition">{{ name }}</h3>
+                        {{ if title }}<p class="mt-1 text-sm text-haus-ink-500">{{ title }}</p>{{ /if }}
+                    </a>
+                {{ /leadership_cards }}
+            </div>
+        </div>
+    </section>
+{{ /if }}
+
+{{# News feed cards (used on /about/) #}}
+{{ if news_feed }}
+    <section class="container-haus py-16 md:py-24">
+        <h2 class="text-3xl md:text-4xl font-medium tracking-tight text-center">News Feed</h2>
+        <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {{ news_feed }}
+                <a href="{{ url }}" class="group block">
+                    <div class="aspect-[4/3] overflow-hidden rounded-lg bg-haus-ink-100">
+                        {{ if image_url }}<img src="{{ image_url }}" alt="" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">{{ /if }}
+                    </div>
+                    {{ if categories }}<p class="mt-3 text-xs uppercase tracking-wide text-haus-amber-500">{{ categories | join:", " }}</p>{{ /if }}
+                    {{ if date_text }}<p class="mt-1 text-xs text-haus-ink-400">{{ date_text }}</p>{{ /if }}
+                    <h3 class="mt-2 text-base font-medium leading-snug group-hover:text-haus-amber-500 transition">{{ title }}</h3>
+                </a>
+            {{ /news_feed }}
+        </div>
+    </section>
+{{ /if }}
+
+{{# Raw markdown fallback (used when Phase 4 extraction couldn't fill sections, e.g. /about/) #}}
+{{ if raw_body_markdown && sections | length == 0 }}
+    <section class="container-haus pb-16 md:pb-24 max-w-3xl">
+        <div class="prose prose-lg max-w-none text-haus-ink-700 leading-relaxed">{{ raw_body_markdown | markdown }}</div>
+    </section>
+{{ /if }}

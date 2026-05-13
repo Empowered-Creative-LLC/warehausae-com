@@ -1,1 +1,84 @@
-{{ partial:_placeholder }}
+{{# Service detail template. #}}
+
+<section class="relative h-[55vh] md:h-[70vh] min-h-[440px] flex items-center justify-center overflow-hidden bg-haus-ink-900 text-white">
+    {{ if hero_image_url }}
+        <img src="{{ hero_image_url }}" alt="" class="absolute inset-0 w-full h-full object-cover opacity-50">
+    {{ /if }}
+    <div class="absolute inset-0 bg-haus-ink-900/40"></div>
+    <div class="relative container-haus text-center">
+        {{ if tagline }}<p class="eyebrow text-haus-amber-300">{{ tagline }}</p>{{ /if }}
+        <p class="mt-6 text-base md:text-lg uppercase tracking-[0.4em] text-white/80">Warehaus</p>
+        <h1 class="mt-3 text-5xl md:text-7xl lg:text-8xl font-medium tracking-tight lowercase">{{ service_name }}</h1>
+    </div>
+</section>
+
+<section class="container-haus py-16 md:py-24 grid lg:grid-cols-3 gap-12">
+    <div class="lg:col-span-2">
+        {{ if lead_heading }}<h2 class="text-3xl md:text-4xl font-medium tracking-tight">{{ lead_heading }}</h2>{{ /if }}
+        {{ if intro_prose }}<div class="mt-6 space-y-4 text-haus-ink-600 text-lg leading-relaxed">{{ intro_prose | nl2br }}</div>{{ /if }}
+    </div>
+    {{ if capabilities }}
+        <aside class="lg:col-span-1">
+            <h3 class="eyebrow">Capabilities</h3>
+            <ul class="check-list mt-4 space-y-2 text-haus-ink-700">
+                {{ capabilities }}<li>{{ value }}</li>{{ /capabilities }}
+            </ul>
+        </aside>
+    {{ /if }}
+</section>
+
+{{ if approach_blocks }}
+    <section class="bg-haus-ink-50 py-16 md:py-24">
+        <div class="container-haus">
+            {{ if approach_heading }}<h2 class="text-3xl md:text-4xl font-medium tracking-tight">{{ approach_heading }}</h2>{{ /if }}
+            <div class="mt-12 grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                {{ approach_blocks }}
+                    <div class="bg-white rounded p-6 lg:p-8">
+                        <h3 class="text-xl font-medium tracking-tight">{{ title }}</h3>
+                        <p class="mt-3 text-haus-ink-600 leading-relaxed">{{ body }}</p>
+                    </div>
+                {{ /approach_blocks }}
+            </div>
+        </div>
+    </section>
+{{ /if }}
+
+{{ if team_leaders }}
+    <section class="container-haus py-16 md:py-24">
+        <h2 class="text-3xl md:text-4xl font-medium tracking-tight text-center">Meet Our Team Leaders</h2>
+        <div class="mt-12 grid sm:grid-cols-2 md:grid-cols-3 gap-8">
+            {{ team_leaders }}
+                <a href="{{ team_url }}" class="group block text-center">
+                    {{ if headshot_url }}
+                        <div class="aspect-square overflow-hidden rounded-lg bg-haus-ink-100">
+                            <img src="{{ headshot_url }}" alt="{{ name }}" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                        </div>
+                    {{ /if }}
+                    <h3 class="mt-4 text-lg font-medium group-hover:text-haus-amber-500 transition">{{ name }}</h3>
+                    {{ if title }}<p class="mt-1 text-sm text-haus-ink-500">{{ title }}</p>{{ /if }}
+                    <div class="mt-3 flex justify-center gap-3 text-haus-ink-400">
+                        {{ if linkedin_url }}<a href="{{ linkedin_url }}" target="_blank" rel="noopener" aria-label="LinkedIn" class="hover:text-haus-amber-500 transition">in</a>{{ /if }}
+                        {{ if email }}<a href="mailto:{{ email }}" aria-label="Email" class="hover:text-haus-amber-500 transition">@</a>{{ /if }}
+                    </div>
+                </a>
+            {{ /team_leaders }}
+        </div>
+    </section>
+{{ /if }}
+
+{{ if recent_projects }}
+    <section class="bg-haus-ink-50 py-16 md:py-24">
+        <div class="container-haus">
+            <h2 class="text-3xl md:text-4xl font-medium tracking-tight text-center">Recent Projects</h2>
+            <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                {{ recent_projects limit="9" }}
+                    <a href="{{ url }}" class="group block">
+                        <div class="aspect-[4/3] bg-haus-ink-100 rounded overflow-hidden"></div>
+                        <h3 class="mt-4 text-lg font-medium group-hover:text-haus-amber-500 transition">{{ title }}</h3>
+                        {{ if categories }}<p class="mt-1 text-sm text-haus-ink-500">{{ categories | join:", " }}</p>{{ /if }}
+                    </a>
+                {{ /recent_projects }}
+            </div>
+        </div>
+    </section>
+{{ /if }}

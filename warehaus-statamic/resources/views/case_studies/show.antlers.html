@@ -1,1 +1,86 @@
-{{ partial:_placeholder }}
+{{# Case study template. #}}
+
+<section class="container-haus pt-32 pb-12 md:pt-40 grid md:grid-cols-2 gap-8 lg:gap-12">
+    <div class="aspect-[4/3] overflow-hidden rounded-lg bg-haus-ink-100">
+        {{ if hero_image_url }}<img src="{{ hero_image_url }}" alt="" class="w-full h-full object-cover">{{ /if }}
+    </div>
+    <aside class="bg-haus-ink-50 rounded-lg p-8 self-start">
+        <h2 class="eyebrow text-haus-amber-500">Project Info</h2>
+        <dl class="mt-6 space-y-4 text-sm">
+            {{ if project_info:location }}
+                <div>
+                    <dt class="uppercase tracking-wide text-haus-ink-400">Project Location</dt>
+                    <dd class="mt-1 text-haus-ink-800 font-medium">{{ project_info:location }}</dd>
+                </div>
+            {{ /if }}
+            {{ if project_info:owner_client }}
+                <div>
+                    <dt class="uppercase tracking-wide text-haus-ink-400">Owner / Client</dt>
+                    <dd class="mt-1 text-haus-ink-800 font-medium">{{ project_info:owner_client | nl2br }}</dd>
+                </div>
+            {{ /if }}
+            {{ if project_info:project_type }}
+                <div>
+                    <dt class="uppercase tracking-wide text-haus-ink-400">Project Type</dt>
+                    <dd class="mt-1 text-haus-ink-800 font-medium">{{ project_info:project_type }}</dd>
+                </div>
+            {{ /if }}
+            {{ if project_info:completion_date }}
+                <div>
+                    <dt class="uppercase tracking-wide text-haus-ink-400">Completion Date</dt>
+                    <dd class="mt-1 text-haus-ink-800 font-medium">{{ project_info:completion_date }}</dd>
+                </div>
+            {{ /if }}
+            {{ if project_info:award }}
+                <div>
+                    <dt class="uppercase tracking-wide text-haus-ink-400">Award</dt>
+                    <dd class="mt-1 text-haus-ink-800 font-medium">{{ project_info:award }}</dd>
+                </div>
+            {{ /if }}
+        </dl>
+    </aside>
+</section>
+
+<section class="container-haus py-16 md:py-24 max-w-4xl">
+    <h1 class="text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight">{{ title }}</h1>
+    {{ if intro_prose }}<div class="mt-8 space-y-4 text-haus-ink-700 text-lg leading-relaxed">{{ intro_prose | nl2br }}</div>{{ /if }}
+</section>
+
+{{ if sections }}
+    <section class="container-haus pb-16 md:pb-24 space-y-16 md:space-y-24">
+        {{ sections }}
+            <div class="max-w-4xl">
+                <h2 class="text-2xl md:text-3xl font-medium tracking-tight">{{ heading }}</h2>
+                {{ if body }}<div class="mt-4 space-y-4 text-haus-ink-700 leading-relaxed">{{ body | nl2br }}</div>{{ /if }}
+                {{ if images }}
+                    <div class="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4">
+                        {{ images }}
+                            <figure>
+                                <img src="{{ url }}" alt="{{ caption }}" class="w-full aspect-square object-cover rounded">
+                                {{ if caption }}<figcaption class="mt-2 text-xs text-haus-ink-500">{{ caption }}</figcaption>{{ /if }}
+                            </figure>
+                        {{ /images }}
+                    </div>
+                {{ /if }}
+            </div>
+        {{ /sections }}
+    </section>
+{{ /if }}
+
+{{ if team_spotlights }}
+    <section class="bg-haus-ink-50 py-16 md:py-24">
+        <div class="container-haus">
+            <h2 class="text-2xl md:text-3xl font-medium tracking-tight text-center">Project team</h2>
+            <div class="mt-12 grid sm:grid-cols-2 md:grid-cols-3 gap-8">
+                {{ team_spotlights }}
+                    <div class="text-center">
+                        {{ if headshot_url }}<img src="{{ headshot_url }}" alt="{{ name }}" class="mx-auto w-32 h-32 rounded-full object-cover">{{ /if }}
+                        <h3 class="mt-4 text-lg font-medium">{{ name }}</h3>
+                        {{ if title_line }}<p class="mt-1 text-sm text-haus-ink-500">{{ title_line | nl2br }}</p>{{ /if }}
+                        {{ if blurb }}<p class="mt-3 text-sm text-haus-ink-600 leading-relaxed">{{ blurb }}</p>{{ /if }}
+                    </div>
+                {{ /team_spotlights }}
+            </div>
+        </div>
+    </section>
+{{ /if }}

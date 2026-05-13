@@ -1,1 +1,79 @@
-{{ partial:_placeholder }}
+{{# Portfolio category template. #}}
+
+<section class="relative h-[50vh] md:h-[65vh] min-h-[400px] flex items-center justify-center overflow-hidden bg-haus-ink-900 text-white">
+    {{ if hero_image_url }}
+        <img src="{{ hero_image_url }}" alt="" class="absolute inset-0 w-full h-full object-cover opacity-60">
+    {{ /if }}
+    <div class="absolute inset-0 bg-haus-ink-900/30"></div>
+    <div class="relative container-haus text-center">
+        {{ if tagline }}<p class="eyebrow text-haus-amber-300">{{ tagline }}</p>{{ /if }}
+        <h1 class="mt-6 text-5xl md:text-7xl lg:text-8xl font-medium tracking-tight uppercase">{{ category_name }}</h1>
+    </div>
+</section>
+
+<section class="container-haus py-16 md:py-24 grid lg:grid-cols-3 gap-12">
+    <div class="lg:col-span-2">
+        {{ if lead_heading }}<h2 class="text-3xl md:text-4xl font-medium tracking-tight">{{ lead_heading }}</h2>{{ /if }}
+        {{ if intro_prose }}<div class="mt-6 space-y-4 text-haus-ink-600 text-lg leading-relaxed">{{ intro_prose | nl2br }}</div>{{ /if }}
+    </div>
+    {{ if capability_groups }}
+        <aside class="lg:col-span-1 space-y-8">
+            {{ capability_groups }}
+                <div>
+                    <h3 class="eyebrow">{{ heading }}</h3>
+                    <ul class="check-list mt-3 space-y-1.5 text-haus-ink-700">
+                        {{ items }}<li>{{ value }}</li>{{ /items }}
+                    </ul>
+                </div>
+            {{ /capability_groups }}
+        </aside>
+    {{ /if }}
+</section>
+
+{{ if partnership_cards }}
+    <section class="bg-haus-ink-50 py-16 md:py-24">
+        <div class="container-haus">
+            <h2 class="text-3xl md:text-4xl font-medium tracking-tight text-center">A Warehaus Partnership Brings</h2>
+            <div class="mt-12 grid md:grid-cols-2 gap-x-12 gap-y-8">
+                {{ partnership_cards }}
+                    <div class="flex gap-4">
+                        <span class="text-haus-amber-500 text-xl shrink-0">✓</span>
+                        <div>
+                            <h3 class="text-lg font-medium">{{ title }}</h3>
+                            <p class="mt-1 text-haus-ink-600">{{ body }}</p>
+                        </div>
+                    </div>
+                {{ /partnership_cards }}
+            </div>
+        </div>
+    </section>
+{{ /if }}
+
+{{ if testimonial:quote }}
+    <section class="container-haus py-16 md:py-24">
+        <blockquote class="max-w-3xl mx-auto text-center">
+            <p class="text-xl md:text-2xl leading-relaxed text-haus-ink-700">&ldquo;{{ testimonial:quote }}&rdquo;</p>
+            <footer class="mt-6">
+                <p class="font-medium text-haus-ink-800">{{ testimonial:attribution_name }}</p>
+                {{ if testimonial:attribution_org }}<p class="text-sm text-haus-ink-500">{{ testimonial:attribution_org }}</p>{{ /if }}
+            </footer>
+        </blockquote>
+    </section>
+{{ /if }}
+
+{{ if recent_projects }}
+    <section class="bg-haus-ink-50 py-16 md:py-24">
+        <div class="container-haus">
+            <h2 class="text-3xl md:text-4xl font-medium tracking-tight text-center">Recent Projects</h2>
+            <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                {{ recent_projects limit="9" }}
+                    <a href="{{ url }}" class="group block">
+                        <div class="aspect-[4/3] bg-haus-ink-200 rounded overflow-hidden"></div>
+                        <h3 class="mt-4 text-lg font-medium group-hover:text-haus-amber-500 transition">{{ title }}</h3>
+                        {{ if categories }}<p class="mt-1 text-sm text-haus-ink-500">{{ categories | join:", " }}</p>{{ /if }}
+                    </a>
+                {{ /recent_projects }}
+            </div>
+        </div>
+    </section>
+{{ /if }}

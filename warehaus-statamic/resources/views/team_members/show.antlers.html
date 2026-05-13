@@ -1,1 +1,66 @@
-{{ partial:_placeholder }}
+{{# Team member profile template. #}}
+
+<section class="bg-haus-ink-50 pt-32 pb-16 md:pt-40 md:pb-24">
+    <div class="container-haus grid md:grid-cols-3 gap-8 lg:gap-12">
+        {{# Portrait #}}
+        <div class="md:col-span-2 aspect-[4/3] md:aspect-[3/2] overflow-hidden rounded-lg bg-haus-ink-200">
+            {{ if headshot_url }}
+                <img src="{{ headshot_url }}" alt="{{ name }}" class="w-full h-full object-cover">
+            {{ /if }}
+        </div>
+        {{# Contact card #}}
+        <aside class="md:col-span-1 bg-haus-ink-900 text-white rounded-lg p-8 flex flex-col justify-between">
+            <div>
+                <p class="eyebrow text-haus-amber-300">Send a Message</p>
+                <h2 class="mt-3 text-2xl md:text-3xl font-medium tracking-tight">Contact {{ if first_name }}{{ first_name }}{{ else }}this team member{{ /if }}</h2>
+                {{ if contact_blurb }}<p class="mt-4 text-haus-ink-300 text-sm leading-relaxed">{{ contact_blurb }}</p>{{ /if }}
+            </div>
+            <dl class="mt-8 space-y-4 text-sm">
+                {{ if email }}
+                    <div>
+                        <dt class="eyebrow text-haus-amber-300">Email</dt>
+                        <dd class="mt-1"><a href="mailto:{{ email }}" class="hover:text-haus-amber-400 transition">{{ email }}</a></dd>
+                    </div>
+                {{ /if }}
+                {{ if phone }}
+                    <div>
+                        <dt class="eyebrow text-haus-amber-300">Phone</dt>
+                        <dd class="mt-1"><a href="tel:{{ phone }}" class="hover:text-haus-amber-400 transition">{{ phone }}</a></dd>
+                    </div>
+                {{ /if }}
+                {{ if linkedin_url }}
+                    <div>
+                        <dt class="eyebrow text-haus-amber-300">LinkedIn</dt>
+                        <dd class="mt-1"><a href="{{ linkedin_url }}" target="_blank" rel="noopener" class="hover:text-haus-amber-400 transition">View profile</a></dd>
+                    </div>
+                {{ /if }}
+            </dl>
+        </aside>
+    </div>
+</section>
+
+<section class="container-haus py-16 md:py-24">
+    <div class="max-w-3xl">
+        <h1 class="text-4xl md:text-5xl font-medium tracking-tight">{{ name }}</h1>
+        {{ if title }}<p class="mt-2 text-haus-ink-500 uppercase tracking-wide text-sm md:text-base">{{ title }}</p>{{ /if }}
+
+        <dl class="mt-8 flex flex-wrap gap-8 text-haus-ink-700">
+            {{ if years_in_industry }}
+                <div>
+                    <dt class="eyebrow">Years in Industry</dt>
+                    <dd class="mt-1 text-2xl font-medium">{{ years_in_industry }}</dd>
+                </div>
+            {{ /if }}
+            {{ if years_with_warehaus }}
+                <div>
+                    <dt class="eyebrow">Years with Warehaus</dt>
+                    <dd class="mt-1 text-2xl font-medium">{{ years_with_warehaus }}</dd>
+                </div>
+            {{ /if }}
+        </dl>
+
+        {{ if bio }}
+            <div class="mt-12 space-y-6 text-haus-ink-700 text-lg leading-relaxed">{{ bio | nl2br }}</div>
+        {{ /if }}
+    </div>
+</section>
