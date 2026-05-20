@@ -24,6 +24,9 @@ capabilities:
   - Code & Accessibility Consulting
   - Building Sciences
 approach_heading: Our Architectural Approach
+approach_intro_prose: >-
+  We like to say that good ideas come from everywhere – especially unexpected places. By investing in a robust upfront discovery process, we've built a well-rounded approach to problem-solving.
+mid_image_url: /assets/imported/2023/04/Blackworth-Live-Fire-Grill.jpg
 approach_blocks:
   - title: Comprehensive Research
     body: We gain valuable insight by exploring successful solutions implemented in surprising places around the world. Precedent images help to illustrate intentions.
@@ -40,68 +43,68 @@ approach_blocks:
 team_leaders:
   - name: Troy Bankert, AIA
     title: Co-Owner / President & Chief Executive Officer
-    team_url: https://warehausae.com/team/troy-bankert/
+    team_url: /team/troy-bankert/
     headshot_url: /assets/imported/2024/01/Bankert-Troy-1.webp
     linkedin_url: https://www.linkedin.com/in/troy-bankert-aia-8ba36421/
     email: tbankert@warehausae.com
   - name: Erin Himmelberger, AIA
     title: Director of Architecture
-    team_url: https://warehausae.com/team/erin-himmelberger/
+    team_url: /team/erin-himmelberger/
     headshot_url: /assets/imported/2024/01/Himmelberger-Erin-1.webp
     linkedin_url: https://www.linkedin.com/in/erin-himmelberger-98318735/
     email: ehimmelberger@warehausae.com
   - name: Craig Campbell
     title: Architectural Project Director
-    team_url: https://warehausae.com/team/craig-campbell/
+    team_url: /team/craig-campbell/
     headshot_url: /assets/imported/2024/01/Campbell-Craig-1.webp
     linkedin_url: https://www.linkedin.com/in/craig-campbell-98880b11/
     email: ccampbell@warehausae.com
   - name: Travis Kepler, AIA
     title: Architectural Process Director
-    team_url: https://warehausae.com/team/travis-kepler/
+    team_url: /team/travis-kepler/
     headshot_url: /assets/imported/2024/01/Kepler-Travis-1.webp
     linkedin_url: https://www.linkedin.com/in/travis-kepler-422b97a3/
     email: tkepler@warehausae.com
   - name: Matt Robertson
     title: Architectural Project Manager
-    team_url: https://warehausae.com/team/matt-robertson/
+    team_url: /team/matt-robertson/
     headshot_url: /assets/imported/2026/04/Robertson-Matt-1024x683.jpg
     linkedin_url: https://www.linkedin.com/in/matt-robertson-b14b6157/
     email: mrobertson@warehausae.com
 recent_projects:
   - title: Cumberland Township Municipal Building
-    url: https://warehausae.com/project/cumberland-township-municipal-building/
+    url: /project/cumberland-township-municipal-building/
     categories:
       - Architecture
       - Civil
       - Interiors
     image_url: /assets/imported/2025/06/Cumberland_Township_Municipal_Building_Groundbreaking20250617_0029-700x700.webp
   - title: York Academy Regional Charter School Legacy Hall
-    url: https://warehausae.com/project/york-academy-regional-charter-school-legacy-hall/
+    url: /project/york-academy-regional-charter-school-legacy-hall/
     categories:
       - Architecture
       - Civil
       - Interiors
     image_url: /assets/imported/2025/09/York-Academy-Legacy-Hall-2-700x700.jpg
   - title: Volvo North America Living Office Transformation
-    url: https://warehausae.com/project/volvo-north-america-office-transformation/
+    url: /project/volvo-north-america-office-transformation/
     categories:
       - Architecture
       - Interiors
     image_url: /assets/imported/2025/11/Volvo-Construction-Equipment-497-HDR-700x700.jpg
   - title: Nelson Kohl Apartments
-    url: https://warehausae.com/project/nelson-kohl-apartments/
+    url: /project/nelson-kohl-apartments/
     categories:
       - Architecture
       - Interiors
     image_url: /assets/imported/2023/03/Nelson-Kohl-10_2018-0001-700x501.jpg
   - title: 12th and Macdonald Apartments
-    url: https://warehausae.com/project/12th_and_macdonald/
+    url: /project/12th_and_macdonald/
     categories:
       - Architecture
     image_url: /assets/imported/2023/03/CORNER.jpg
   - title: Franklin Square Multi-Family Mixed Use
-    url: https://warehausae.com/project/franklin-square-multi-family-mixed-use/
+    url: /project/franklin-square-multi-family-mixed-use/
     categories:
       - Architecture
     image_url: /assets/imported/2024/05/Franklin-Square-FEATURE-700x700.webp

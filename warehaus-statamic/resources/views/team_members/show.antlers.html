@@ -1,66 +1,73 @@
-{{# Team member profile template. #}}
+{{# Team member profile template. Live layout:
+      1. Top: large portrait photo on left + Contact card (dark gray bg)
+         on right.
+      2. Below: centered name + title eyebrow + years stats + bio prose.
+      3. Footer (provided by layout).
 
-<section class="bg-haus-ink-50 pt-32 pb-16 md:pt-40 md:pb-24">
-    <div class="container-haus grid md:grid-cols-3 gap-8 lg:gap-12">
-        {{# Portrait #}}
-        <div class="md:col-span-2 aspect-[4/3] md:aspect-[3/2] overflow-hidden rounded-lg bg-haus-ink-200">
+    Matches /team/{slug}/ on warehausae.com. #}}
+
+{{# 1. Portrait + contact card row #}}
+<section class="bg-white pt-28 md:pt-32 pb-12">
+    <div class="mx-auto max-w-[1170px] px-6 md:px-10 grid md:grid-cols-[1.4fr_1fr] gap-8 lg:gap-12 items-stretch">
+        <div class="overflow-hidden bg-haus-ink-100" data-haus-fade-in>
             {{ if headshot_url }}
-                <img src="{{ headshot_url }}" alt="{{ name }}" class="w-full h-full object-cover">
+                <img src="{{ headshot_url }}" alt="{{ name }}" class="w-full h-full object-cover" style="min-height: 460px;">
             {{ /if }}
         </div>
-        {{# Contact card #}}
-        <aside class="md:col-span-1 bg-haus-ink-900 text-white rounded-lg p-8 flex flex-col justify-between">
-            <div>
-                <p class="eyebrow text-haus-amber-300">Send a Message</p>
-                <h2 class="mt-3 text-2xl md:text-3xl font-medium tracking-tight">Contact {{ if first_name }}{{ first_name }}{{ else }}this team member{{ /if }}</h2>
-                {{ if contact_blurb }}<p class="mt-4 text-haus-ink-300 text-sm leading-relaxed">{{ contact_blurb }}</p>{{ /if }}
-            </div>
-            <dl class="mt-8 space-y-4 text-sm">
+        <aside class="bg-[#333334] text-white p-8 lg:p-10 flex flex-col" data-haus-fade-in data-haus-fade-delay="120">
+            <p class="text-[12px] uppercase tracking-[0.12em] font-bold text-haus-amber-500">Send a Message</p>
+            <h2 class="mt-4 text-3xl md:text-[36px] font-bold leading-tight">Contact {{ if first_name }}{{ first_name }}{{ else }}{{ name | explode:" "  | first }}{{ /if }}</h2>
+            {{ if contact_blurb }}<p class="mt-4 text-[15px] text-white/80 leading-[1.6]">{{ contact_blurb }}</p>{{ /if }}
+
+            <dl class="mt-auto pt-10 space-y-5 text-[14px]">
                 {{ if email }}
-                    <div>
-                        <dt class="eyebrow text-haus-amber-300">Email</dt>
-                        <dd class="mt-1"><a href="mailto:{{ email }}" class="hover:text-haus-amber-400 transition">{{ email }}</a></dd>
+                    <div class="grid grid-cols-[70px_1fr] gap-3 items-baseline">
+                        <dt class="text-[12px] uppercase tracking-[0.1em] font-bold text-white/60">Email</dt>
+                        <dd class="text-right text-white text-[16px] font-medium"><a href="mailto:{{ email }}" class="hover:text-haus-amber-400 transition break-all">{{ email }}</a></dd>
                     </div>
                 {{ /if }}
                 {{ if phone }}
-                    <div>
-                        <dt class="eyebrow text-haus-amber-300">Phone</dt>
-                        <dd class="mt-1"><a href="tel:{{ phone }}" class="hover:text-haus-amber-400 transition">{{ phone }}</a></dd>
-                    </div>
-                {{ /if }}
-                {{ if linkedin_url }}
-                    <div>
-                        <dt class="eyebrow text-haus-amber-300">LinkedIn</dt>
-                        <dd class="mt-1"><a href="{{ linkedin_url }}" target="_blank" rel="noopener" class="hover:text-haus-amber-400 transition">View profile</a></dd>
+                    <div class="grid grid-cols-[70px_1fr] gap-3 items-baseline">
+                        <dt class="text-[12px] uppercase tracking-[0.1em] font-bold text-white/60">Phone</dt>
+                        <dd class="text-right text-white text-[16px] font-medium"><a href="tel:{{ phone }}" class="hover:text-haus-amber-400 transition">{{ phone }}</a></dd>
                     </div>
                 {{ /if }}
             </dl>
+
+            {{ if linkedin_url }}
+                <div class="mt-8 flex justify-end">
+                    <a href="{{ linkedin_url }}" target="_blank" rel="noopener" aria-label="LinkedIn profile" class="w-10 h-10 rounded-full bg-white text-[#333334] inline-flex items-center justify-center hover:bg-haus-amber-500 hover:text-white transition">
+                        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    </a>
+                </div>
+            {{ /if }}
         </aside>
     </div>
 </section>
 
-<section class="container-haus py-16 md:py-24">
-    <div class="max-w-3xl">
-        <h1 class="text-4xl md:text-5xl font-medium tracking-tight">{{ name }}</h1>
-        {{ if title }}<p class="mt-2 text-haus-ink-500 uppercase tracking-wide text-sm md:text-base">{{ title }}</p>{{ /if }}
+{{# 2. Name + title + years stats + bio #}}
+<section class="bg-white pb-16 md:pb-24">
+    <div class="mx-auto max-w-[1170px] px-6 md:px-10">
+        <h1 class="text-3xl md:text-[32px] font-bold text-[#4b4b4b] leading-tight">{{ name }}</h1>
+        {{ if title }}<p class="mt-1 text-[13px] uppercase tracking-[0.08em] text-haus-amber-600 font-semibold">{{ title }}</p>{{ /if }}
 
-        <dl class="mt-8 flex flex-wrap gap-8 text-haus-ink-700">
+        <dl class="mt-8 flex flex-wrap gap-12 text-[#4b4b4b]">
             {{ if years_in_industry }}
                 <div>
-                    <dt class="eyebrow">Years in Industry</dt>
-                    <dd class="mt-1 text-2xl font-medium">{{ years_in_industry }}</dd>
+                    <dt class="text-[13px] text-[#888]">Years in Industry:</dt>
+                    <dd class="mt-0.5 text-[15px] font-bold">{{ years_in_industry }}</dd>
                 </div>
             {{ /if }}
             {{ if years_with_warehaus }}
                 <div>
-                    <dt class="eyebrow">Years with Warehaus</dt>
-                    <dd class="mt-1 text-2xl font-medium">{{ years_with_warehaus }}</dd>
+                    <dt class="text-[13px] text-[#888]">Years with Warehaus:</dt>
+                    <dd class="mt-0.5 text-[15px] font-bold">{{ years_with_warehaus }}</dd>
                 </div>
             {{ /if }}
         </dl>
 
         {{ if bio }}
-            <div class="mt-12 space-y-6 text-haus-ink-700 text-lg leading-relaxed">{{ bio | nl2br }}</div>
+            <div class="mt-10 max-w-[900px] space-y-5 text-[#666] text-[17px] leading-[1.7]">{{ bio | nl2br }}</div>
         {{ /if }}
     </div>
 </section>

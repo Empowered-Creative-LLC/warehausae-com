@@ -27,14 +27,14 @@ size: N/A - facade restoration
 completion_date: "2015"
 services_provided:
   - label: Architecture
-    url: https://warehausae.com/service/architecture/
+    url: /services/architecture/
   - label: Historic
-    url: https://warehausae.com/service/historic/
+    url: /services/historic/
 industries:
   - label: Building Sciences
-    url: https://warehausae.com/industry/building-sciences/
+    url: /building-sciences/
   - label: Historic
-    url: https://warehausae.com/industry/historic/
+    url: /industry/historic/
 hero_image_url: /assets/imported/2023/04/The-Lancaster-County-Courthouse-093014_0007.jpg
 gallery_images:
   - url: /assets/imported/2023/04/The-Lancaster-County-Courthouse-093014_0007.jpg
@@ -45,30 +45,30 @@ gallery_images:
     alt: Building maintenance plan for historic structures
 related_projects:
   - title: Gratz Bank Tower Repair
-    url: https://warehausae.com/project/gratz-bank-tower-repair/
+    url: /project/gratz-bank-tower-repair/
     categories:
       - Architecture
       - Structural
     image_url: /assets/imported/2024/09/Screenshot-2024-09-17-083457-700x688.webp
   - title: Zion Lutheran Church Adaptive Reuse
-    url: https://warehausae.com/project/zion-lutheran-church-adaptive-reuse/
+    url: /project/zion-lutheran-church-adaptive-reuse/
     categories:
       - Architecture
       - Historic
     image_url: /assets/imported/2025/04/1Zion-Church-Duke-St_06112024-700x700.webp
   - title: Appell Center Concessions Renovation
-    url: https://warehausae.com/project/appell-center-concessions-renovation/
+    url: /project/appell-center-concessions-renovation/
     categories:
       - Architecture
     image_url: /assets/imported/2025/06/Appell-Concessions-8-700x700.webp
   - title: University Lofts
-    url: https://warehausae.com/project/university-lofts/
+    url: /project/university-lofts/
     categories:
       - Architecture
       - Historic
     image_url: /assets/imported/2023/03/University-Lofts_Rendering-052419_00024-700x700.jpg
   - title: 320 North George Street Office
-    url: https://warehausae.com/project/320-north-george-street-office/
+    url: /project/320-north-george-street-office/
     categories:
       - Architecture
       - Civil
@@ -76,7 +76,7 @@ related_projects:
       - Interiors
     image_url: /assets/imported/2023/03/Warehaus-Headquarters-08_2017-0162.jpg
   - title: Office Rooftop Plaza
-    url: https://warehausae.com/project/office-rooftop-plaza/
+    url: /project/office-rooftop-plaza/
     categories:
       - Architecture
       - Historic

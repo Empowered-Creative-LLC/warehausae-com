@@ -7,6 +7,7 @@ slug: culture
 source_url: https://warehausae.com/culture/
 url: /culture/
 tagline: We listen. We design. We deliver.
+hero_image_url: /assets/imported/2025/02/cornhole-1-scaled.webp
 lead_heading: Welcome to  Warehaus
 intro_prose: >-
   Our dynamic team is driven by hard work and a passion for what we do. But we also believe in fostering a collaborative culture that embraces fun and camaraderie. We know that a strong team is built

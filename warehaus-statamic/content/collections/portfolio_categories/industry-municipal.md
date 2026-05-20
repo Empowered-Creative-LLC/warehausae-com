@@ -12,11 +12,11 @@ testimonial:
   attribution_org: ""
 recent_projects:
   - title: Cumberland Township Municipal Building
-    url: https://warehausae.com/project/cumberland-township-municipal-building/
+    url: /project/cumberland-township-municipal-building/
     categories: []
     image_url: /assets/imported/2025/06/Cumberland_Township_Municipal_Building_Groundbreaking20250617_0029-700x700.webp
   - title: New Freedom Borough Rail Trail Improvements
-    url: https://warehausae.com/project/new-freedom-borough-rail-trail-improvements/
+    url: /project/new-freedom-borough-rail-trail-improvements/
     categories: []
     image_url: /assets/imported/2023/12/Rail-Trail-Improvements-4-700x700.webp
 hero_image_url: /assets/imported/2025/06/Cumberland-Twp-Bldg-Front-1024x668.webp

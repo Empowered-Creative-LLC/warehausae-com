@@ -42,6 +42,16 @@ tabs:
               type: text
               display: Approach Heading
               instructions: Heading of the methodology section (e.g. 'Our Architectural Approach'). May be missing.
+          - handle: approach_intro_prose
+            field:
+              type: textarea
+              display: Approach Intro Prose
+              instructions: Short paragraph below the approach heading, before the accordion of approach blocks.
+          - handle: mid_image_url
+            field:
+              type: text
+              display: Mid-section Image URL
+              instructions: Full-bleed photograph displayed between the lead block and the approach section.
           - handle: approach_blocks
             field:
               type: grid

@@ -37,63 +37,63 @@ approach_blocks:
 team_leaders:
   - name: David Koratich, EIT
     title: Co-Owner / Chief Operating Officer
-    team_url: https://warehausae.com/team/david-koratich/
+    team_url: /team/david-koratich/
     headshot_url: /assets/imported/2024/01/Koratich-David-1.webp
     linkedin_url: https://www.linkedin.com/in/david-koratich-94327b75/
     email: dkoratich@warehausae.com
   - name: Dan Creep
     title: Director of Engineering
-    team_url: https://warehausae.com/team/dan-creep/
+    team_url: /team/dan-creep/
     headshot_url: /assets/imported/2024/01/Creep-Dan-1.webp
     linkedin_url: https://www.linkedin.com/in/daniel-creep-93101676/
     email: dcreep@warehausae.com
   - name: Joseph Stein
     title: Civil Project Director
-    team_url: https://warehausae.com/team/joseph-stein/
+    team_url: /team/joseph-stein/
     headshot_url: /assets/imported/2024/01/Stein-Joe-1.webp
     linkedin_url: https://www.linkedin.com/in/joe-stein-10962954/
     email: jstein@warehausae.com
   - name: Jeffrey Stough
     title: Civil Project Manager
-    team_url: https://warehausae.com/team/jeffrey-stough/
+    team_url: /team/jeffrey-stough/
     headshot_url: /assets/imported/2024/05/Stough-Jeff-1024x1024.jpg
     linkedin_url: https://www.linkedin.com/in/jeffstough/
     email: jstough@warehausae.com
   - name: Stephen Stone, EIT
     title: Civil Designer and Sewage Enforcement Officer
-    team_url: https://warehausae.com/team/seo-stephenstone/
+    team_url: /team/seo-stephenstone/
     headshot_url: /assets/imported/2025/02/Stone-Stephen.webp
     linkedin_url: https://www.linkedin.com/services/civil_engineering/#
     email: info@warehausae.com
   - name: Zach Michali, EIT
     title: Civil Project Manager
-    team_url: https://warehausae.com/team/zach-michali-eit/
+    team_url: /team/zach-michali-eit/
     headshot_url: /assets/imported/2026/03/Michali-Zach-1.jpg
     linkedin_url: https://www.linkedin.com/in/zach-michali-eit-658b34180/
     email: zmichali@warehausae.com
 recent_projects:
   - title: Susquehanna Trail Dunkin’ & Jimmy John’s
-    url: https://warehausae.com/project/susquehanna-trail-dunkin-jimmy-johns/
+    url: /project/susquehanna-trail-dunkin-jimmy-johns/
     categories:
       - Civil
       - Civil Engineering
     image_url: /assets/imported/2025/06/Susquehanna-Trail-Dunkin-and-Jimmy-Johns-5-700x700.webp
   - title: Cumberland Township Municipal Building
-    url: https://warehausae.com/project/cumberland-township-municipal-building/
+    url: /project/cumberland-township-municipal-building/
     categories:
       - Architecture
       - Civil
       - Interiors
     image_url: /assets/imported/2025/06/Cumberland_Township_Municipal_Building_Groundbreaking20250617_0029-700x700.webp
   - title: York Academy Regional Charter School Legacy Hall
-    url: https://warehausae.com/project/york-academy-regional-charter-school-legacy-hall/
+    url: /project/york-academy-regional-charter-school-legacy-hall/
     categories:
       - Architecture
       - Civil
       - Interiors
     image_url: /assets/imported/2025/09/York-Academy-Legacy-Hall-2-700x700.jpg
   - title: 1110 East Princess Street Office
-    url: https://warehausae.com/project/1110-princess-street-office/
+    url: /project/1110-princess-street-office/
     categories:
       - Architecture
       - Civil
@@ -101,7 +101,7 @@ recent_projects:
       - Structural
     image_url: /assets/imported/2023/03/Kinsley_1110_East_Princess_St_Interior_062619_01-of-05.jpg
   - title: 210 York Street Office and Recording Studio
-    url: https://warehausae.com/project/210-york-street-office/
+    url: /project/210-york-street-office/
     categories:
       - Architecture
       - Civil
@@ -109,7 +109,7 @@ recent_projects:
       - Interiors
     image_url: /assets/imported/2023/03/210_York_Street15-of-00-1.jpg
   - title: 320 North George Street Office
-    url: https://warehausae.com/project/320-north-george-street-office/
+    url: /project/320-north-george-street-office/
     categories:
       - Architecture
       - Civil

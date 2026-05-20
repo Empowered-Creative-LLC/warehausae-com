@@ -20,24 +20,24 @@ size: Various Projects
 completion_date: Various Dates
 services_provided:
   - label: Architecture
-    url: /service/architecture/
+    url: /services/architecture/
   - label: Interiors
-    url: /service/interiors/
+    url: /services/interiors/
 hero_image_url: /assets/imported/2022/03/Asset-1.png
 related_projects:
   - title: WellSpan Health Heart & Vascular Center
-    url: https://warehausae.com/project/wellspan-health-heart-vascular-center/
+    url: /project/wellspan-health-heart-vascular-center/
     categories:
       - Civil
     image_url: /assets/imported/2024/09/Screen-Shot-2020-03-10-at-3.15.57-PM-700x700.webp
   - title: Italian Steakhouse
-    url: https://warehausae.com/project/italian-steakhouse/
+    url: /project/italian-steakhouse/
     categories:
       - Architecture
       - Interiors
     image_url: /assets/imported/2024/09/Andonias-Chophouse-High-Res-Final-Render-700x700.webp
   - title: Cove Forge Behavioral Health
-    url: https://warehausae.com/project/cove-forge-behavioral-health/
+    url: /project/cove-forge-behavioral-health/
     categories:
       - Architecture
     image_url: /assets/imported/2025/09/Cove-Forge-Interiors-39-700x700.jpg

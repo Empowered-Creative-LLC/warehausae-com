@@ -20,27 +20,27 @@ size: Various Projects
 completion_date: Various Dates
 services_provided:
   - label: Architecture
-    url: /service/architecture/
+    url: /services/architecture/
   - label: Interiors
-    url: /service/interiors/
+    url: /services/interiors/
 awards:
   - 2019 AIA Central Pennsylvania Excellence in Design Award Winner
 hero_image_url: /assets/imported/2022/03/Asset-1.png
 related_projects:
   - title: UMFP Redwood Facade Restoration
-    url: https://warehausae.com/project/umfp-redwood-facade-restoration/
+    url: /project/umfp-redwood-facade-restoration/
     categories:
       - Architecture
       - Historic
     image_url: /assets/imported/2023/04/University-of-Maryland-Faculty-Physicians-Inc-082013_00006.jpg
   - title: Southwire
-    url: https://warehausae.com/project/southwire/
+    url: /project/southwire/
     categories:
       - Architecture
       - Civil
     image_url: /assets/imported/2023/05/Southwire-Company-111313_00574.jpg
   - title: Back 2 Health Chiropractic
-    url: https://warehausae.com/project/back-2-health-chiropractic/
+    url: /project/back-2-health-chiropractic/
     categories:
       - Architecture
       - Interiors

@@ -20,10 +20,10 @@ size: 6,000 sf
 completion_date: "2019"
 services_provided:
   - label: Interiors
-    url: https://warehausae.com/service/interiors/
+    url: /services/interiors/
 industries:
   - label: Retail and Hospitality
-    url: https://warehausae.com/industry/retail-and-hospitality/
+    url: /retail-and-hospitality/
 hero_image_url: /assets/imported/2023/04/The-Inn-at-Wyndridge-12_1979-0029-700x700.jpg
 gallery_images:
   - url: /assets/imported/2023/04/The-Inn-at-Wyndridge-12_1979-0029-700x700.jpg
@@ -36,55 +36,55 @@ gallery_images:
     alt: Wyndridge Inn elegant bedroom suite
 related_projects:
   - title: Ballpark Commons
-    url: https://warehausae.com/project/ballpark-commons/
+    url: /project/ballpark-commons/
     categories:
       - Architecture
       - Civil
       - Interiors
     image_url: /assets/imported/2026/04/Ballpark-Commons-site-image-700x700.png
   - title: Zion Lutheran Church Adaptive Reuse
-    url: https://warehausae.com/project/zion-lutheran-church-adaptive-reuse/
+    url: /project/zion-lutheran-church-adaptive-reuse/
     categories:
       - Architecture
       - Historic
     image_url: /assets/imported/2025/04/1Zion-Church-Duke-St_06112024-700x700.webp
   - title: Susquehanna Trail Dunkin’ & Jimmy John’s
-    url: https://warehausae.com/project/susquehanna-trail-dunkin-jimmy-johns/
+    url: /project/susquehanna-trail-dunkin-jimmy-johns/
     categories:
       - Civil
       - Civil Engineering
     image_url: /assets/imported/2025/06/Susquehanna-Trail-Dunkin-and-Jimmy-Johns-5-700x700.webp
   - title: McHenry Row Office and Courtyard by Marriott Hotel
-    url: https://warehausae.com/project/mchenry-row-office-hotel/
+    url: /project/mchenry-row-office-hotel/
     categories:
       - Architecture
       - Interiors
     image_url: /assets/imported/2023/04/2P1A5115-Copy.jpg
   - title: Blackworth Live Fire Grill
-    url: https://warehausae.com/project/blackworth-live-fire-grill/
+    url: /project/blackworth-live-fire-grill/
     categories:
       - Architecture
       - Interiors
     image_url: /assets/imported/2023/04/Blackworth-Live-Fire-Grill-21060207_0111.jpg
   - title: Courtyard by Marriott at Rowan Boulevard
-    url: https://warehausae.com/project/courtyard-by-marriott-rowan-boulevard/
+    url: /project/courtyard-by-marriott-rowan-boulevard/
     categories:
       - Architecture
     image_url: /assets/imported/2023/04/Marriott_Courtyard_Rowan_Boulevard_1-700x700.jpg
   - title: Hilton Garden Inn
-    url: https://warehausae.com/project/hilton-garden-inn/
+    url: /project/hilton-garden-inn/
     categories:
       - Architecture
       - Civil
     image_url: /assets/imported/2023/04/Hilton-Garden-Inn-Hershey_Professional-20190521_0007.jpg
   - title: Wyndridge Farm
-    url: https://warehausae.com/project/wyndridge-farm/
+    url: /project/wyndridge-farm/
     categories:
       - Civil
       - Interiors
     image_url: /assets/imported/2023/04/The-Inn-at-Wyndridge-Farm_Professional-102314_00039.jpg
   - title: Dunkin® East
-    url: https://warehausae.com/project/dunkin-east-retail/
+    url: /project/dunkin-east-retail/
     categories:
       - Civil
     image_url: /assets/imported/2023/06/Photo_6555.jpg

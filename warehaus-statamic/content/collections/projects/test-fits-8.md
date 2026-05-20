@@ -20,25 +20,25 @@ size: Various Projects
 completion_date: Various Dates
 services_provided:
   - label: Architecture
-    url: /service/architecture/
+    url: /services/architecture/
   - label: Interiors
-    url: /service/interiors/
+    url: /services/interiors/
 awards:
   - 2019 AIA Central Pennsylvania Excellence in Design Award Winner
 hero_image_url: /assets/imported/2022/03/Asset-1.png
 related_projects:
   - title: WellSpan Health York Hospital Expansion
-    url: https://warehausae.com/project/wellspan-health-york-hospital/
+    url: /project/wellspan-health-york-hospital/
     categories:
       - Civil
     image_url: /assets/imported/2023/07/Wellspan_York_Hospital_Pedestrian_Bridge.webp
   - title: Dunkin® East
-    url: https://warehausae.com/project/dunkin-east-retail/
+    url: /project/dunkin-east-retail/
     categories:
       - Civil
     image_url: /assets/imported/2023/06/Photo_6555.jpg
   - title: University of Maryland Faculty Physicians, Inc. Projects
-    url: https://warehausae.com/project/umd_fpi/
+    url: /project/umd_fpi/
     categories:
       - Architecture
     image_url: /assets/imported/elementor/thumbs/University-of-Maryland-Faculty-Physicians-Inc_Professional-090515_00017-qtq3qlee8a5j204ec2oyxl6uy9pt9y6qsq8i11af1c.jpg

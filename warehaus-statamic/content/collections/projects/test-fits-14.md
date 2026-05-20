@@ -30,35 +30,35 @@ size: Various Projects
 completion_date: Various Dates
 services_provided:
   - label: Architecture
-    url: /service/architecture/
+    url: /services/architecture/
   - label: Interiors
-    url: /service/interiors/
+    url: /services/interiors/
 industries:
   - label: Office
-    url: /industry/office/
+    url: /office/
   - label: Medical
-    url: /industry/medical/
+    url: /medical/
   - label: Hospitality
-    url: /industry/hospitality/
+    url: /hospitality/
 awards:
   - 2019 AIA Central Pennsylvania Excellence in Design Award Winner
 hero_image_url: /assets/imported/2022/03/Asset-1.png
 related_projects:
   - title: Ballpark Commons
-    url: https://warehausae.com/project/ballpark-commons/
+    url: /project/ballpark-commons/
     categories:
       - Architecture
       - Civil
       - Interiors
     image_url: /assets/imported/2026/04/Ballpark-Commons-site-image-700x700.png
   - title: Zion Lutheran Church Adaptive Reuse
-    url: https://warehausae.com/project/zion-lutheran-church-adaptive-reuse/
+    url: /project/zion-lutheran-church-adaptive-reuse/
     categories:
       - Architecture
       - Historic
     image_url: /assets/imported/2025/04/1Zion-Church-Duke-St_06112024-700x700.webp
   - title: Susquehanna Trail Dunkin’ & Jimmy John’s
-    url: https://warehausae.com/project/susquehanna-trail-dunkin-jimmy-johns/
+    url: /project/susquehanna-trail-dunkin-jimmy-johns/
     categories:
       - Civil
       - Civil Engineering

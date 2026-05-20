@@ -25,14 +25,14 @@ size: 5,309 sf
 completion_date: "2019"
 services_provided:
   - label: Architecture
-    url: https://warehausae.com/service/architecture/
+    url: /services/architecture/
   - label: Interiors
-    url: https://warehausae.com/service/interiors/
+    url: /services/interiors/
 industries:
   - label: Adaptive Reuse
-    url: https://warehausae.com/industry/adaptive-reuse/
+    url: /adaptive-reuse/
   - label: Retail and Hospitality
-    url: https://warehausae.com/industry/retail-and-hospitality/
+    url: /retail-and-hospitality/
 hero_image_url: /assets/imported/2023/04/Blackworth-Live-Fire-Grill-21060207_0111.jpg
 gallery_images:
   - url: /assets/imported/2023/04/Blackworth-Live-Fire-Grill-21060207_0111.jpg
@@ -57,26 +57,26 @@ gallery_images:
     alt: Original brick walls and wood columns highlighted in Blackworth restaurant design
 related_projects:
   - title: Zion Lutheran Church Adaptive Reuse
-    url: https://warehausae.com/project/zion-lutheran-church-adaptive-reuse/
+    url: /project/zion-lutheran-church-adaptive-reuse/
     categories:
       - Architecture
       - Historic
     image_url: /assets/imported/2025/04/1Zion-Church-Duke-St_06112024-700x700.webp
   - title: Susquehanna Trail Dunkin’ & Jimmy John’s
-    url: https://warehausae.com/project/susquehanna-trail-dunkin-jimmy-johns/
+    url: /project/susquehanna-trail-dunkin-jimmy-johns/
     categories:
       - Civil
       - Civil Engineering
     image_url: /assets/imported/2025/06/Susquehanna-Trail-Dunkin-and-Jimmy-Johns-5-700x700.webp
   - title: York Academy Regional Charter School Legacy Hall
-    url: https://warehausae.com/project/york-academy-regional-charter-school-legacy-hall/
+    url: /project/york-academy-regional-charter-school-legacy-hall/
     categories:
       - Architecture
       - Civil
       - Interiors
     image_url: /assets/imported/2025/09/York-Academy-Legacy-Hall-2-700x700.jpg
   - title: 210 York Street Office and Recording Studio
-    url: https://warehausae.com/project/210-york-street-office/
+    url: /project/210-york-street-office/
     categories:
       - Architecture
       - Civil
@@ -84,7 +84,7 @@ related_projects:
       - Interiors
     image_url: /assets/imported/2023/03/210_York_Street15-of-00-1.jpg
   - title: 320 North George Street Office
-    url: https://warehausae.com/project/320-north-george-street-office/
+    url: /project/320-north-george-street-office/
     categories:
       - Architecture
       - Civil
@@ -92,47 +92,47 @@ related_projects:
       - Interiors
     image_url: /assets/imported/2023/03/Warehaus-Headquarters-08_2017-0162.jpg
   - title: McHenry Row Office and Courtyard by Marriott Hotel
-    url: https://warehausae.com/project/mchenry-row-office-hotel/
+    url: /project/mchenry-row-office-hotel/
     categories:
       - Architecture
       - Interiors
     image_url: /assets/imported/2023/04/2P1A5115-Copy.jpg
   - title: Courtyard by Marriott at Rowan Boulevard
-    url: https://warehausae.com/project/courtyard-by-marriott-rowan-boulevard/
+    url: /project/courtyard-by-marriott-rowan-boulevard/
     categories:
       - Architecture
     image_url: /assets/imported/2023/04/Marriott_Courtyard_Rowan_Boulevard_1-700x700.jpg
   - title: Hilton Garden Inn
-    url: https://warehausae.com/project/hilton-garden-inn/
+    url: /project/hilton-garden-inn/
     categories:
       - Architecture
       - Civil
     image_url: /assets/imported/2023/04/Hilton-Garden-Inn-Hershey_Professional-20190521_0007.jpg
   - title: Inn at Wyndridge Farm
-    url: https://warehausae.com/project/inn-at-wyndridge-farm/
+    url: /project/inn-at-wyndridge-farm/
     categories:
       - Interiors
     image_url: /assets/imported/2023/04/The-Inn-at-Wyndridge-12_1979-0029-700x700.jpg
   - title: Wyndridge Farm
-    url: https://warehausae.com/project/wyndridge-farm/
+    url: /project/wyndridge-farm/
     categories:
       - Civil
       - Interiors
     image_url: /assets/imported/2023/04/The-Inn-at-Wyndridge-Farm_Professional-102314_00039.jpg
   - title: Office Rooftop Plaza
-    url: https://warehausae.com/project/office-rooftop-plaza/
+    url: /project/office-rooftop-plaza/
     categories:
       - Architecture
       - Historic
     image_url: /assets/imported/2023/04/2020.05.16-RENDERING-AERIAL.jpg
   - title: Bischoff Inn
-    url: https://warehausae.com/project/bischoff-inn/
+    url: /project/bischoff-inn/
     categories:
       - Architecture
       - Historic
     image_url: /assets/imported/2023/08/12-Bischoff-interior-second-flr-after-rotated-700x700.webp
   - title: York Academy Regional Charter School – Lower School
-    url: https://warehausae.com/project/york-academy-regional-charter-school-lower-school/
+    url: /project/york-academy-regional-charter-school-lower-school/
     categories:
       - Architecture
       - Civil
@@ -140,21 +140,21 @@ related_projects:
       - Interiors
     image_url: /assets/imported/2023/04/York-Academy-Regional-Charter-Upper-School_Professional-093011_00101.webp
   - title: George Spangler Farm
-    url: https://warehausae.com/project/george-spangler-farm/
+    url: /project/george-spangler-farm/
     categories:
       - Architecture
       - Historic
       - Interiors
     image_url: /assets/imported/2023/04/Warehaus_GeorgeSpanglerFarm-0032.webp
   - title: York College Civil Engineering Center
-    url: https://warehausae.com/project/york-college-civil-engineering-center/
+    url: /project/york-college-civil-engineering-center/
     categories:
       - Architecture
       - Civil
       - Structural
     image_url: /assets/imported/2023/09/York-College-Civil-Engineering-Center0614201902-of-6.webp
   - title: York County History Center
-    url: https://warehausae.com/project/york-county-history-center/
+    url: /project/york-county-history-center/
     categories:
       - Architecture
       - Historic
@@ -162,72 +162,72 @@ related_projects:
       - Structural
     image_url: /assets/imported/2023/04/York-County-History-Center_Rendering_Third-Floor.webp
   - title: Logos Academy
-    url: https://warehausae.com/project/logos-academy/
+    url: /project/logos-academy/
     categories:
       - Architecture
       - Civil
       - Structural
-    image_url: http://www.warehausae.com/
+    image_url: /assets/imported/2023/04/Logos-Academy-20110505_0159.jpg
   - title: York College of Pennsylvania Kinsley Engineering Center
-    url: https://warehausae.com/project/york-college-of-pennsylvania-kinsley-engineering-center/
+    url: /project/york-college-of-pennsylvania-kinsley-engineering-center/
     categories:
       - Architecture
     image_url: /assets/imported/2023/05/YCP-Kinsley-Engineering-Complex_Professional-091008_00066.jpg
   - title: Northern Gateway
-    url: https://warehausae.com/project/northern-gateway/
+    url: /project/northern-gateway/
     categories:
       - Architecture
       - Structural
     image_url: /assets/imported/2023/05/2019-3D-View-INTERIOR-PERSPECTIVE-VIEW-1-700x700.jpg
   - title: Dunkin® East
-    url: https://warehausae.com/project/dunkin-east-retail/
+    url: /project/dunkin-east-retail/
     categories:
       - Civil
     image_url: /assets/imported/2023/06/Photo_6555.jpg
   - title: Retail and Commercial
-    url: https://warehausae.com/project/retail-and-commercial/
+    url: /project/retail-and-commercial/
     categories:
       - Architecture
       - Civil
     image_url: /assets/imported/elementor/thumbs/Kennies-Market-20130926_0006-qtq3ta7rs7u29u7rmqjjkerc4ygmarv3i1figjav8g.jpg
   - title: Hershey Tanger Outlets Site and Facade Improvements
-    url: https://warehausae.com/project/hershey-tanger-outlets-site-and-facade-improvements/
+    url: /project/hershey-tanger-outlets-site-and-facade-improvements/
     categories:
       - Architecture
       - Civil
       - Structural
     image_url: /assets/imported/2024/02/Tanger-768x400.webp
   - title: 4844 Market Street Self-Storage
-    url: https://warehausae.com/project/4844-market-street-self-storage/
+    url: /project/4844-market-street-self-storage/
     categories:
       - Civil
     image_url: /assets/imported/2024/04/Moove-In-Self-Storage-8-700x700.webp
   - title: 205 State Street Apartments
-    url: https://warehausae.com/project/205-state-street-apartments/
+    url: /project/205-state-street-apartments/
     categories:
       - Architecture
     image_url: /assets/imported/2024/07/state-street-apartments-06192024-5-768x400.webp
   - title: The Barn Resort
-    url: https://warehausae.com/project/the-barn-resort/
+    url: /project/the-barn-resort/
     categories:
       - Architecture
       - Civil
       - Structural
     image_url: /assets/imported/2024/08/the-barn-resort-08152024-3-700x700.webp
   - title: Test Fit Capabilities
-    url: https://warehausae.com/project/test-fits/
+    url: /project/test-fits/
     categories:
       - Architecture
       - Interiors
     image_url: /assets/imported/elementor/thumbs/paypal-toronto-professional-120316-0002-r33rrjghearf953aqeny6h5ombhpgb4mvi9x0aa4kg.webp
   - title: Italian Steakhouse
-    url: https://warehausae.com/project/italian-steakhouse/
+    url: /project/italian-steakhouse/
     categories:
       - Architecture
       - Interiors
     image_url: /assets/imported/2024/09/Andonias-Chophouse-High-Res-Final-Render-700x700.webp
   - title: Ballpark Commons
-    url: https://warehausae.com/project/ballpark-commons/
+    url: /project/ballpark-commons/
     categories:
       - Architecture
       - Civil

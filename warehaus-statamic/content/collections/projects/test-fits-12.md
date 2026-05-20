@@ -20,33 +20,33 @@ size: Various Projects
 completion_date: Various Dates
 services_provided:
   - label: Architecture
-    url: /service/architecture/
+    url: /services/architecture/
   - label: Interiors
-    url: /service/interiors/
+    url: /services/interiors/
 industries:
   - label: Office
-    url: /industry/office/
+    url: /office/
   - label: Medical
-    url: /industry/medical/
+    url: /medical/
   - label: Hospitality
-    url: /industry/hospitality/
+    url: /hospitality/
 hero_image_url: /assets/imported/2022/03/Asset-1.png
 related_projects:
   - title: Sterman Masser, Inc. Office
-    url: https://warehausae.com/project/sterman-masser-inc-office/
+    url: /project/sterman-masser-inc-office/
     categories:
       - Architecture
       - Interiors
     image_url: /assets/imported/2025/04/Sterman-Masser-HQ_int-m-700x700.webp
   - title: The Barn Resort
-    url: https://warehausae.com/project/the-barn-resort/
+    url: /project/the-barn-resort/
     categories:
       - Architecture
       - Civil
       - Structural
     image_url: /assets/imported/2024/08/the-barn-resort-08152024-3-700x700.webp
   - title: WellSpan Health Bruce M. Bartels Management and Governance Center
-    url: https://warehausae.com/project/bartels-center/
+    url: /project/bartels-center/
     categories:
       - Architecture
     image_url: /assets/imported/2024/08/bartells-conf-center-14-700x700.jpg

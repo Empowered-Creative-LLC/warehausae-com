@@ -20,33 +20,33 @@ size: Various Projects
 completion_date: Various Dates
 services_provided:
   - label: Architecture
-    url: /service/architecture/
+    url: /services/architecture/
   - label: Interiors
-    url: /service/interiors/
+    url: /services/interiors/
 industries:
   - label: Office
-    url: /industry/office/
+    url: /office/
   - label: Medical
-    url: /industry/medical/
+    url: /medical/
   - label: Hospitality
-    url: /industry/hospitality/
+    url: /hospitality/
 awards:
   - 2019 AIA Central Pennsylvania Excellence in Design Award Winner
 hero_image_url: /assets/imported/2022/03/Asset-1.png
 related_projects:
   - title: York County SPCA
-    url: https://warehausae.com/project/york-county-spca/
+    url: /project/york-county-spca/
     categories:
       - Architecture
     image_url: /assets/imported/2023/10/YorkSPCA-7-700x700.jpg
   - title: Acadia Healthcare, Inc. Bowling Green Brandywine
-    url: https://warehausae.com/project/acadia-healthcare-inc-bowling-green-brandywine/
+    url: /project/acadia-healthcare-inc-bowling-green-brandywine/
     categories:
       - Architecture
       - Interiors
     image_url: /assets/imported/2024/02/Acadia-Retouched-3-700x700.webp
   - title: Hershey Tanger Outlets Site and Facade Improvements
-    url: https://warehausae.com/project/hershey-tanger-outlets-site-and-facade-improvements/
+    url: /project/hershey-tanger-outlets-site-and-facade-improvements/
     categories:
       - Architecture
       - Civil

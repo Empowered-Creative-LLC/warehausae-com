@@ -25,12 +25,12 @@ size: 450 seats
 completion_date: "2018"
 services_provided:
   - label: Architecture
-    url: https://warehausae.com/service/architecture/
+    url: /services/architecture/
 industries:
   - label: Arts and Culture
-    url: https://warehausae.com/industry/arts-and-culture/
+    url: /arts-and-culture/
   - label: Historic
-    url: https://warehausae.com/industry/historic/
+    url: /industry/historic/
 hero_image_url: /assets/imported/2023/07/Capitol_Theatre-11_2018-0001.jpg
 gallery_images:
   - url: /assets/imported/2023/07/Strand-Capitol-Historic_Professional-052119_00766-700x700.jpg
@@ -41,31 +41,31 @@ gallery_images:
     alt: Renovations at the Capitol Theatre at the Appell Center for Performing Arts
 related_projects:
   - title: "Kaltreider-Benfer Library: York County Library"
-    url: https://warehausae.com/project/kaltreider-benfer-library-york-county-library/
+    url: /project/kaltreider-benfer-library-york-county-library/
     categories:
       - Architecture
       - Civil
       - Structural
     image_url: /assets/imported/2024/09/Kaltreider-Benfer-DRONE-13-700x700.webp
   - title: Zion Lutheran Church Adaptive Reuse
-    url: https://warehausae.com/project/zion-lutheran-church-adaptive-reuse/
+    url: /project/zion-lutheran-church-adaptive-reuse/
     categories:
       - Architecture
       - Historic
     image_url: /assets/imported/2025/04/1Zion-Church-Duke-St_06112024-700x700.webp
   - title: Appell Center Concessions Renovation
-    url: https://warehausae.com/project/appell-center-concessions-renovation/
+    url: /project/appell-center-concessions-renovation/
     categories:
       - Architecture
     image_url: /assets/imported/2025/06/Appell-Concessions-8-700x700.webp
   - title: University Lofts
-    url: https://warehausae.com/project/university-lofts/
+    url: /project/university-lofts/
     categories:
       - Architecture
       - Historic
     image_url: /assets/imported/2023/03/University-Lofts_Rendering-052419_00024-700x700.jpg
   - title: 210 York Street Office and Recording Studio
-    url: https://warehausae.com/project/210-york-street-office/
+    url: /project/210-york-street-office/
     categories:
       - Architecture
       - Civil

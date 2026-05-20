@@ -1,26 +1,46 @@
 {{# Industries (blog/news category) index template. #}}
 
-<section class="container-haus pt-32 pb-12 md:pt-40 max-w-4xl">
-    <p class="eyebrow">Category</p>
-    <h1 class="mt-4 text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight">{{ category_name }}</h1>
-    {{ if intro_prose }}<div class="mt-6 text-lg leading-relaxed text-haus-ink-600">{{ intro_prose | nl2br }}</div>{{ /if }}
+{{# Industries category — live uses a simple "Category: X" header,
+    followed by a featured (large) first article and a list of more
+    articles beneath it. No watermark pattern. #}}
+<section class="bg-white pt-28 pb-8 md:pt-32">
+    <div class="mx-auto max-w-[1170px] px-6 md:px-10">
+        <h1 class="text-2xl md:text-[28px] text-[#4b4b4b]">
+            <span class="text-[#888]">Category:</span> <span class="font-bold">{{ category_name }}</span>
+        </h1>
+        {{ if intro_prose }}<div class="mt-5 text-[15px] leading-[1.7] text-[#666] max-w-3xl">{{ intro_prose | nl2br }}</div>{{ /if }}
+    </div>
 </section>
 
 {{ if posts }}
-    <section class="container-haus pb-16 md:pb-24">
-        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+    <section class="bg-white pb-16 md:pb-24">
+        <div class="mx-auto max-w-[1170px] px-6 md:px-10 space-y-10">
             {{ posts }}
-                <a href="{{ url }}" class="group block">
-                    <div class="aspect-[4/3] overflow-hidden rounded-lg bg-haus-ink-100">
-                        {{ if image_url }}<img src="{{ image_url }}" alt="" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">{{ /if }}
-                    </div>
-                    {{ if categories }}
-                        <p class="mt-4 text-xs uppercase tracking-wide text-haus-amber-700">{{ categories | join:", " }}</p>
-                    {{ /if }}
-                    {{ if date_text }}<p class="mt-1 text-xs text-haus-ink-400">{{ date_text }}</p>{{ /if }}
-                    <h3 class="mt-2 text-lg font-medium leading-snug group-hover:text-haus-amber-700 transition">{{ title }}</h3>
-                    {{ if excerpt }}<p class="mt-2 text-sm text-haus-ink-600 leading-relaxed">{{ excerpt }}</p>{{ /if }}
-                </a>
+                {{ if first }}
+                    {{# Featured first article — large image on top, title overlay /
+                        large H2 below #}}
+                    <a href="{{ url }}" class="group block" data-haus-fade-in>
+                        <div class="aspect-[2/1] overflow-hidden bg-haus-ink-100">
+                            {{ if image_url }}<img src="{{ image_url }}" alt="" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">{{ /if }}
+                        </div>
+                        <h2 class="mt-5 text-[22px] md:text-[26px] font-bold text-haus-amber-600 leading-snug group-hover:text-haus-amber-700 transition">{{ title }}</h2>
+                        {{ if excerpt }}<p class="mt-3 text-[15px] text-[#666] leading-[1.7] max-w-3xl">{{ excerpt }}</p>{{ /if }}
+                        {{ if date_text }}<p class="mt-3 text-[12px] uppercase tracking-[0.08em] text-[#888]">{{ date_text }}</p>{{ /if }}
+                    </a>
+                {{ else }}
+                    {{# Smaller subsequent articles — single column with thumbnail
+                        left + text right (matches live's list style). #}}
+                    <a href="{{ url }}" class="group block border-t border-haus-ink-200/60 pt-10" data-haus-fade-in>
+                        {{ if image_url }}
+                            <div class="aspect-[2/1] overflow-hidden bg-haus-ink-100">
+                                <img src="{{ image_url }}" alt="" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                            </div>
+                        {{ /if }}
+                        <h3 class="mt-4 text-[18px] md:text-[20px] font-bold text-haus-amber-600 leading-snug group-hover:text-haus-amber-700 transition">{{ title }}</h3>
+                        {{ if excerpt }}<p class="mt-2 text-[14px] text-[#666] leading-[1.6] max-w-3xl">{{ excerpt }}</p>{{ /if }}
+                        {{ if date_text }}<p class="mt-2 text-[12px] uppercase tracking-[0.08em] text-[#888]">{{ date_text }}</p>{{ /if }}
+                    </a>
+                {{ /if }}
             {{ /posts }}
         </div>
     </section>

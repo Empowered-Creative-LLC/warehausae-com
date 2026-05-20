@@ -1,0 +1,11 @@
+title: Social
+sections:
+  main:
+    display: Main
+    fields:
+      - handle: facebook_url
+        field: { type: text, display: Facebook URL }
+      - handle: instagram_url
+        field: { type: text, display: Instagram URL }
+      - handle: linkedin_url
+        field: { type: text, display: LinkedIn URL }

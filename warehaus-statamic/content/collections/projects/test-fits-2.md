@@ -20,28 +20,28 @@ size: Various Projects
 completion_date: Various Dates
 services_provided:
   - label: Architecture
-    url: /service/architecture/
+    url: /services/architecture/
   - label: Interiors
-    url: /service/interiors/
+    url: /services/interiors/
 awards:
   - 2019 AIA Central Pennsylvania Excellence in Design Award Winner
 hero_image_url: /assets/imported/2022/03/Asset-1.png
 related_projects:
   - title: Gettle Office
-    url: https://warehausae.com/project/gettle-office/
+    url: /project/gettle-office/
     categories:
       - Architecture
       - Interiors
       - Structural
     image_url: /assets/imported/2023/04/Gettle-Headquarters_Professional-20190522_0054.jpg
   - title: Harsco Corporate Headquarters
-    url: https://warehausae.com/project/harsco-corporate-headquarters/
+    url: /project/harsco-corporate-headquarters/
     categories:
       - Architecture
       - Interiors
     image_url: /assets/imported/2023/04/Harsco-Corporate-Headquarters_Professional-20150801_0076.jpg
   - title: JEM Group, LLC Office
-    url: https://warehausae.com/project/jem-group-llc-office/
+    url: /project/jem-group-llc-office/
     categories:
       - Architecture
       - Interiors

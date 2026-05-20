@@ -20,34 +20,34 @@ size: Various Projects
 completion_date: Various Dates
 services_provided:
   - label: Architecture
-    url: /service/architecture/
+    url: /services/architecture/
   - label: Interiors
-    url: /service/interiors/
+    url: /services/interiors/
 industries:
   - label: Office
-    url: /industry/office/
+    url: /office/
   - label: Medical
-    url: /industry/medical/
+    url: /medical/
   - label: Hospitality
-    url: /industry/hospitality/
+    url: /hospitality/
 awards:
   - 2019 AIA Central Pennsylvania Excellence in Design Award Winner
 hero_image_url: /assets/imported/2022/03/Asset-1.png
 related_projects:
   - title: Procter & Gamble Tabler Station
-    url: https://warehausae.com/project/pandgtablerstation/
+    url: /project/pandgtablerstation/
     categories:
       - Architecture
       - Interiors
     image_url: /assets/imported/2023/04/Procter-Gamble-Live-Wall-0621201956-of-57.jpg
   - title: Penn State Hershey Medical Center Crystal A Offices
-    url: https://warehausae.com/project/pshmc-crystala-offices/
+    url: /project/pshmc-crystala-offices/
     categories:
       - Architecture
       - Interiors
     image_url: /assets/imported/2023/04/Crystal-A-23.jpg
   - title: Volvo Construction Equipment Customer Care Center
-    url: https://warehausae.com/project/volvo-customer-care-center-office/
+    url: /project/volvo-customer-care-center-office/
     categories:
       - Architecture
     image_url: /assets/imported/2023/04/111078_190_N37_medium.jpg

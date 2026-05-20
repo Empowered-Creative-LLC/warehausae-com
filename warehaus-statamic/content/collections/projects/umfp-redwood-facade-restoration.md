@@ -22,16 +22,16 @@ size: N/A - facade restoration
 completion_date: "2014"
 services_provided:
   - label: Architecture
-    url: https://warehausae.com/service/architecture/
+    url: /services/architecture/
   - label: Historic
-    url: https://warehausae.com/service/historic/
+    url: /services/historic/
 industries:
   - label: Building Sciences
-    url: https://warehausae.com/industry/building-sciences/
+    url: /building-sciences/
   - label: Healthcare
-    url: https://warehausae.com/industry/healthcare/
+    url: /healthcare/
   - label: Historic
-    url: https://warehausae.com/industry/historic/
+    url: /industry/historic/
 hero_image_url: /assets/imported/2023/04/University-of-Maryland-Faculty-Physicians-Inc-082013_00006.jpg
 gallery_images:
   - url: /assets/imported/2023/04/University-of-Maryland-Faculty-Physicians-Inc-082013_00006.jpg
@@ -46,29 +46,29 @@ gallery_images:
     alt: 419 West Redwood Street envelope restoration project
 related_projects:
   - title: Cove Forge Behavioral Health
-    url: https://warehausae.com/project/cove-forge-behavioral-health/
+    url: /project/cove-forge-behavioral-health/
     categories:
       - Architecture
     image_url: /assets/imported/2025/09/Cove-Forge-Interiors-39-700x700.jpg
   - title: Zion Lutheran Church Adaptive Reuse
-    url: https://warehausae.com/project/zion-lutheran-church-adaptive-reuse/
+    url: /project/zion-lutheran-church-adaptive-reuse/
     categories:
       - Architecture
       - Historic
     image_url: /assets/imported/2025/04/1Zion-Church-Duke-St_06112024-700x700.webp
   - title: Appell Center Concessions Renovation
-    url: https://warehausae.com/project/appell-center-concessions-renovation/
+    url: /project/appell-center-concessions-renovation/
     categories:
       - Architecture
     image_url: /assets/imported/2025/06/Appell-Concessions-8-700x700.webp
   - title: University Lofts
-    url: https://warehausae.com/project/university-lofts/
+    url: /project/university-lofts/
     categories:
       - Architecture
       - Historic
     image_url: /assets/imported/2023/03/University-Lofts_Rendering-052419_00024-700x700.jpg
   - title: 320 North George Street Office
-    url: https://warehausae.com/project/320-north-george-street-office/
+    url: /project/320-north-george-street-office/
     categories:
       - Architecture
       - Civil

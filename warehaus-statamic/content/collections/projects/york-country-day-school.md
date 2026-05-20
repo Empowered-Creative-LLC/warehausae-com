@@ -27,14 +27,14 @@ size: 73,000 sf; 16 acre campus
 completion_date: "2015"
 services_provided:
   - label: Architecture
-    url: https://warehausae.com/service/architecture/
+    url: /services/architecture/
   - label: Civil
-    url: https://warehausae.com/service/civil/
+    url: /services/civil_engineering/
   - label: Interiors
-    url: https://warehausae.com/service/interiors/
+    url: /services/interiors/
 industries:
   - label: Education
-    url: https://warehausae.com/industry/education/
+    url: /education/
 hero_image_url: /assets/imported/2023/05/H-04.jpg
 gallery_images:
   - url: /assets/imported/2023/05/H-04.jpg
@@ -55,26 +55,26 @@ gallery_images:
     alt: Comfortable living room space in York Country Day School STEAM facility lobby
 related_projects:
   - title: York College of Pennsylvania Kinsley Engineering Center
-    url: https://warehausae.com/project/york-college-of-pennsylvania-kinsley-engineering-center/
+    url: /project/york-college-of-pennsylvania-kinsley-engineering-center/
     categories:
       - Architecture
     image_url: /assets/imported/2023/05/YCP-Kinsley-Engineering-Complex_Professional-091008_00066.jpg
   - title: York College of Pennsylvania Northside Commons Addition
-    url: https://warehausae.com/project/york-college-of-pennsylvania-northside-commons-addition/
+    url: /project/york-college-of-pennsylvania-northside-commons-addition/
     categories:
       - Architecture
       - Civil
       - Structural
     image_url: /assets/imported/2025/04/Northside-Commons-Before-04082025-15-700x700.webp
   - title: York Academy Regional Charter School Legacy Hall
-    url: https://warehausae.com/project/york-academy-regional-charter-school-legacy-hall/
+    url: /project/york-academy-regional-charter-school-legacy-hall/
     categories:
       - Architecture
       - Civil
       - Interiors
     image_url: /assets/imported/2025/09/York-Academy-Legacy-Hall-2-700x700.jpg
   - title: York Academy Regional Charter School – Lower School
-    url: https://warehausae.com/project/york-academy-regional-charter-school-lower-school/
+    url: /project/york-academy-regional-charter-school-lower-school/
     categories:
       - Architecture
       - Civil
@@ -82,43 +82,43 @@ related_projects:
       - Interiors
     image_url: /assets/imported/2023/04/York-Academy-Regional-Charter-Upper-School_Professional-093011_00101.webp
   - title: York College Civil Engineering Center
-    url: https://warehausae.com/project/york-college-civil-engineering-center/
+    url: /project/york-college-civil-engineering-center/
     categories:
       - Architecture
       - Civil
       - Structural
     image_url: /assets/imported/2023/09/York-College-Civil-Engineering-Center0614201902-of-6.webp
   - title: Logos Academy
-    url: https://warehausae.com/project/logos-academy/
+    url: /project/logos-academy/
     categories:
       - Architecture
       - Civil
       - Structural
-    image_url: http://www.warehausae.com/
+    image_url: /assets/imported/2023/04/Logos-Academy-20110505_0159.jpg
   - title: Penn State Bakery and Food Services
-    url: https://warehausae.com/project/penn-state-bakery-and-food-services/
+    url: /project/penn-state-bakery-and-food-services/
     categories:
       - Architecture
     image_url: /assets/imported/2023/05/Penn-State-Warehouse-and-Bakery_Professional-041516_0015.jpg
   - title: Holderness School Davis Center
-    url: https://warehausae.com/project/holderness-school-davis-center/
+    url: /project/holderness-school-davis-center/
     categories:
       - Architecture
       - Interiors
       - Structural
     image_url: /assets/imported/2023/09/Project_Holderness_Academic_Building_20210926_11-1-min.webp
   - title: Holderness School Masterplan
-    url: https://warehausae.com/project/holderness-school-masterplan/
+    url: /project/holderness-school-masterplan/
     categories:
       - Architecture
     image_url: /assets/imported/2023/05/POST.jpg
   - title: York College of Pennsylvania Northside Commons
-    url: https://warehausae.com/project/york-college-of-pennsylvania-northside-commons/
+    url: /project/york-college-of-pennsylvania-northside-commons/
     categories:
       - Architecture
     image_url: /assets/imported/2023/05/202U9983-2.jpg
   - title: York Academy Regional Charter School – Upper School
-    url: https://warehausae.com/project/york-academy-regional-charter-school-upper-school/
+    url: /project/york-academy-regional-charter-school-upper-school/
     categories:
       - Architecture
       - Civil

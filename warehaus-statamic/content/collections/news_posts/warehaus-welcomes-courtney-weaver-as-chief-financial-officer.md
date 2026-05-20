@@ -9,9 +9,9 @@ published_date_text: March 9, 2026
 featured_image_url: /assets/imported/2026/03/Courtney-Weaver-Warehaus-CFO-1024x1024.jpg
 categories:
   - label: News
-    url: https://warehausae.com/category/news/
+    url: /Industries/news/
   - label: Announcements
-    url: https://warehausae.com/category/announcements/
+    url: /Industries/announcements/
 body_markdown: >-
   ![Courtney Weaver - Warehaus CFO](/assets/imported/2026/03/Courtney-Weaver-Warehaus-CFO-1024x1024.jpg)
 

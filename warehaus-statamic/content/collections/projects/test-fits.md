@@ -76,16 +76,16 @@ size: Various Projects
 completion_date: Various Dates
 services_provided:
   - label: Architecture
-    url: /service/architecture/
+    url: /services/architecture/
   - label: Interiors
-    url: /service/interiors/
+    url: /services/interiors/
 industries:
   - label: Office
-    url: /industry/office/
+    url: /office/
   - label: Medical
-    url: /industry/medical/
+    url: /medical/
   - label: Hospitality
-    url: /industry/hospitality/
+    url: /hospitality/
 awards:
   - 2019 AIA Central Pennsylvania Excellence in Design Award Winner
 hero_image_url: /assets/imported/elementor/thumbs/paypal-toronto-professional-120316-0002-r33rrjghearf953aqeny6h5ombhpgb4mvi9x0aa4kg.webp
@@ -100,7 +100,7 @@ gallery_images:
     alt: default
 related_projects:
   - title: 1110 East Princess Street Office
-    url: https://warehausae.com/project/1110-princess-street-office/
+    url: /project/1110-princess-street-office/
     categories:
       - Architecture
       - Civil
@@ -108,7 +108,7 @@ related_projects:
       - Structural
     image_url: /assets/imported/2023/03/Kinsley_1110_East_Princess_St_Interior_062619_01-of-05.jpg
   - title: 320 North George Street Office
-    url: https://warehausae.com/project/320-north-george-street-office/
+    url: /project/320-north-george-street-office/
     categories:
       - Architecture
       - Civil
@@ -116,7 +116,7 @@ related_projects:
       - Interiors
     image_url: /assets/imported/2023/03/Warehaus-Headquarters-08_2017-0162.jpg
   - title: Fuchs North America
-    url: https://warehausae.com/project/fuchs-north-america/
+    url: /project/fuchs-north-america/
     categories:
       - Architecture
     image_url: /assets/imported/2023/03/2014_0023_00_N22_lgjpg.jpg

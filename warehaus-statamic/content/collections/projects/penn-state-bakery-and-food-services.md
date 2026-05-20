@@ -20,12 +20,12 @@ size: 25,000 sf addition; 19,000 sf freezer
 completion_date: "2016"
 services_provided:
   - label: Architecture
-    url: https://warehausae.com/service/architecture/
+    url: /services/architecture/
 industries:
   - label: Distribution and Manufacturing
-    url: https://warehausae.com/industry/distribution-and-manufacturing/
+    url: /distribution-and-manufacturing/
   - label: Education
-    url: https://warehausae.com/industry/education/
+    url: /education/
 hero_image_url: /assets/imported/2023/05/Penn-State-Warehouse-and-Bakery_Professional-041516_0015.jpg
 gallery_images:
   - url: /assets/imported/2023/05/Penn-State-Warehouse-and-Bakery_Professional-041516_0015.jpg
@@ -44,38 +44,38 @@ gallery_images:
     alt: New Addition to Penn State Bakery and Warehouse
 related_projects:
   - title: Data Center Design
-    url: https://warehausae.com/project/data-centers/
+    url: /project/data-centers/
     categories:
       - Architecture
     image_url: /assets/imported/elementor/thumbs/Unbranded-Rendering-Money-Shot-r2dtdginn6rhzqa5i5tbaxgfihbbw69y2gm9f1st5s.webp
   - title: York College of Pennsylvania Northside Commons Addition
-    url: https://warehausae.com/project/york-college-of-pennsylvania-northside-commons-addition/
+    url: /project/york-college-of-pennsylvania-northside-commons-addition/
     categories:
       - Architecture
       - Civil
       - Structural
     image_url: /assets/imported/2025/04/Northside-Commons-Before-04082025-15-700x700.webp
   - title: York Academy Regional Charter School Legacy Hall
-    url: https://warehausae.com/project/york-academy-regional-charter-school-legacy-hall/
+    url: /project/york-academy-regional-charter-school-legacy-hall/
     categories:
       - Architecture
       - Civil
       - Interiors
     image_url: /assets/imported/2025/09/York-Academy-Legacy-Hall-2-700x700.jpg
   - title: Fuchs North America
-    url: https://warehausae.com/project/fuchs-north-america/
+    url: /project/fuchs-north-america/
     categories:
       - Architecture
     image_url: /assets/imported/2023/03/2014_0023_00_N22_lgjpg.jpg
   - title: Phoenix Contact Office
-    url: https://warehausae.com/project/phoenix-contact-office/
+    url: /project/phoenix-contact-office/
     categories:
       - Architecture
       - Interiors
       - Structural
     image_url: /assets/imported/2023/04/Phoenix-Contact-New-Distribution-Center-070208_0013.jpg
   - title: Procter & Gamble Tabler Station
-    url: https://warehausae.com/project/pandgtablerstation/
+    url: /project/pandgtablerstation/
     categories:
       - Architecture
       - Interiors

@@ -1,0 +1,15 @@
+title: Footer
+sections:
+  main:
+    display: Main
+    fields:
+      - handle: cta_heading
+        field: { type: text, display: CTA Heading }
+      - handle: cta_subheading
+        field: { type: text, display: CTA Subheading }
+      - handle: newsletter_label
+        field: { type: text, display: Newsletter Email Placeholder }
+      - handle: newsletter_button
+        field: { type: text, display: Newsletter Button Text }
+      - handle: newsletter_disclaimer
+        field: { type: text, display: Newsletter Disclaimer }

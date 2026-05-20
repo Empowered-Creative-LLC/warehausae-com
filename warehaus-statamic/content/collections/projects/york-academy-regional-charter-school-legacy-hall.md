@@ -30,16 +30,16 @@ size: 9,254 sf
 completion_date: "2025"
 services_provided:
   - label: Architecture
-    url: https://warehausae.com/service/architecture/
+    url: /services/architecture/
   - label: Civil
-    url: https://warehausae.com/service/civil/
+    url: /services/civil_engineering/
   - label: Interiors
-    url: https://warehausae.com/service/interiors/
+    url: /services/interiors/
 industries:
   - label: Adaptive Reuse
-    url: https://warehausae.com/industry/adaptive-reuse/
+    url: /adaptive-reuse/
   - label: Education
-    url: https://warehausae.com/industry/education/
+    url: /education/
 hero_image_url: /assets/imported/2025/09/York-Academy-Legacy-Hall-2-700x700.jpg
 gallery_images:
   - url: /assets/imported/2025/09/York-Academy-Legacy-Hall-2-700x700.jpg
@@ -56,27 +56,27 @@ gallery_images:
     alt: Classroom at York Academy Legacy Hall
 related_projects:
   - title: The Barn Resort
-    url: https://warehausae.com/project/the-barn-resort/
+    url: /project/the-barn-resort/
     categories:
       - Architecture
       - Civil
       - Structural
     image_url: /assets/imported/2024/08/the-barn-resort-08152024-3-700x700.webp
   - title: Zion Lutheran Church Adaptive Reuse
-    url: https://warehausae.com/project/zion-lutheran-church-adaptive-reuse/
+    url: /project/zion-lutheran-church-adaptive-reuse/
     categories:
       - Architecture
       - Historic
     image_url: /assets/imported/2025/04/1Zion-Church-Duke-St_06112024-700x700.webp
   - title: York College of Pennsylvania Northside Commons Addition
-    url: https://warehausae.com/project/york-college-of-pennsylvania-northside-commons-addition/
+    url: /project/york-college-of-pennsylvania-northside-commons-addition/
     categories:
       - Architecture
       - Civil
       - Structural
     image_url: /assets/imported/2025/04/Northside-Commons-Before-04082025-15-700x700.webp
   - title: 210 York Street Office and Recording Studio
-    url: https://warehausae.com/project/210-york-street-office/
+    url: /project/210-york-street-office/
     categories:
       - Architecture
       - Civil
@@ -84,7 +84,7 @@ related_projects:
       - Interiors
     image_url: /assets/imported/2023/03/210_York_Street15-of-00-1.jpg
   - title: 320 North George Street Office
-    url: https://warehausae.com/project/320-north-george-street-office/
+    url: /project/320-north-george-street-office/
     categories:
       - Architecture
       - Civil
@@ -92,7 +92,7 @@ related_projects:
       - Interiors
     image_url: /assets/imported/2023/03/Warehaus-Headquarters-08_2017-0162.jpg
   - title: Blackworth Live Fire Grill
-    url: https://warehausae.com/project/blackworth-live-fire-grill/
+    url: /project/blackworth-live-fire-grill/
     categories:
       - Architecture
       - Interiors

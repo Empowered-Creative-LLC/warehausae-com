@@ -34,39 +34,39 @@ approach_blocks:
 team_leaders:
   - name: Erin Himmelberger, AIA
     title: Director of Architecture
-    team_url: https://warehausae.com/team/erin-himmelberger/
+    team_url: /team/erin-himmelberger/
     headshot_url: /assets/imported/2024/01/Himmelberger-Erin-1.webp
     linkedin_url: https://www.linkedin.com/in/erin-himmelberger-98318735/
     email: ehimmelberger@warehausae.com
 recent_projects:
   - title: Cumberland Township Municipal Building
-    url: https://warehausae.com/project/cumberland-township-municipal-building/
+    url: /project/cumberland-township-municipal-building/
     categories:
       - Architecture
       - Civil
       - Interiors
     image_url: /assets/imported/2025/06/Cumberland_Township_Municipal_Building_Groundbreaking20250617_0029-700x700.webp
   - title: York Academy Regional Charter School Legacy Hall
-    url: https://warehausae.com/project/york-academy-regional-charter-school-legacy-hall/
+    url: /project/york-academy-regional-charter-school-legacy-hall/
     categories:
       - Architecture
       - Civil
       - Interiors
     image_url: /assets/imported/2025/09/York-Academy-Legacy-Hall-2-700x700.jpg
   - title: Volvo North America Living Office Transformation
-    url: https://warehausae.com/project/volvo-north-america-office-transformation/
+    url: /project/volvo-north-america-office-transformation/
     categories:
       - Architecture
       - Interiors
     image_url: /assets/imported/2025/11/Volvo-Construction-Equipment-497-HDR-700x700.jpg
   - title: Nelson Kohl Apartments
-    url: https://warehausae.com/project/nelson-kohl-apartments/
+    url: /project/nelson-kohl-apartments/
     categories:
       - Architecture
       - Interiors
     image_url: /assets/imported/2023/03/Nelson-Kohl-10_2018-0001-700x501.jpg
   - title: 1110 East Princess Street Office
-    url: https://warehausae.com/project/1110-princess-street-office/
+    url: /project/1110-princess-street-office/
     categories:
       - Architecture
       - Civil
@@ -74,7 +74,7 @@ recent_projects:
       - Structural
     image_url: /assets/imported/2023/03/Kinsley_1110_East_Princess_St_Interior_062619_01-of-05.jpg
   - title: 210 York Street Office and Recording Studio
-    url: https://warehausae.com/project/210-york-street-office/
+    url: /project/210-york-street-office/
     categories:
       - Architecture
       - Civil

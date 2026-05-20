@@ -24,19 +24,19 @@ size: 42,000 sf
 completion_date: "2011"
 services_provided:
   - label: Architecture
-    url: https://warehausae.com/service/architecture/
+    url: /services/architecture/
   - label: Civil
-    url: https://warehausae.com/service/civil/
+    url: /services/civil_engineering/
   - label: Structural
-    url: https://warehausae.com/service/structural/
+    url: /services/structural/
 industries:
   - label: Adaptive Reuse
-    url: https://warehausae.com/industry/adaptive-reuse/
+    url: /adaptive-reuse/
   - label: Education
-    url: https://warehausae.com/industry/education/
+    url: /education/
 awards:
   - LEED New Construction – Certified Level (v 2.2)
-hero_image_url: http://www.warehausae.com/
+hero_image_url: /assets/imported/2023/04/Logos-Academy-20110505_0159.jpg
 gallery_images:
   - url: /assets/imported/2023/04/Logos-Academy_Professional-20110203_0001.jpg
     alt: Cafeteria and commercial kitchen used for the school and a catering business
@@ -64,27 +64,27 @@ gallery_images:
     alt: Historic paper recycling plant turned into a LEED-Silver Certified Consolidated Campus
 related_projects:
   - title: Zion Lutheran Church Adaptive Reuse
-    url: https://warehausae.com/project/zion-lutheran-church-adaptive-reuse/
+    url: /project/zion-lutheran-church-adaptive-reuse/
     categories:
       - Architecture
       - Historic
     image_url: /assets/imported/2025/04/1Zion-Church-Duke-St_06112024-700x700.webp
   - title: York College of Pennsylvania Northside Commons Addition
-    url: https://warehausae.com/project/york-college-of-pennsylvania-northside-commons-addition/
+    url: /project/york-college-of-pennsylvania-northside-commons-addition/
     categories:
       - Architecture
       - Civil
       - Structural
     image_url: /assets/imported/2025/04/Northside-Commons-Before-04082025-15-700x700.webp
   - title: York Academy Regional Charter School Legacy Hall
-    url: https://warehausae.com/project/york-academy-regional-charter-school-legacy-hall/
+    url: /project/york-academy-regional-charter-school-legacy-hall/
     categories:
       - Architecture
       - Civil
       - Interiors
     image_url: /assets/imported/2025/09/York-Academy-Legacy-Hall-2-700x700.jpg
   - title: 210 York Street Office and Recording Studio
-    url: https://warehausae.com/project/210-york-street-office/
+    url: /project/210-york-street-office/
     categories:
       - Architecture
       - Civil
@@ -92,7 +92,7 @@ related_projects:
       - Interiors
     image_url: /assets/imported/2023/03/210_York_Street15-of-00-1.jpg
   - title: 320 North George Street Office
-    url: https://warehausae.com/project/320-north-george-street-office/
+    url: /project/320-north-george-street-office/
     categories:
       - Architecture
       - Civil
@@ -100,7 +100,7 @@ related_projects:
       - Interiors
     image_url: /assets/imported/2023/03/Warehaus-Headquarters-08_2017-0162.jpg
   - title: Blackworth Live Fire Grill
-    url: https://warehausae.com/project/blackworth-live-fire-grill/
+    url: /project/blackworth-live-fire-grill/
     categories:
       - Architecture
       - Interiors

@@ -1,5 +1,30 @@
 @import 'tailwindcss';
 
+/* TODO at launch: drop licensed Neue Haas Unica Pro WOFF2 files into
+   public/fonts/ and uncomment this block.
+@font-face {
+    font-family: 'Neue Haas Unica Pro';
+    src: url('/fonts/neue-haas-unica-pro-regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Neue Haas Unica Pro';
+    src: url('/fonts/neue-haas-unica-pro-medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Neue Haas Unica Pro';
+    src: url('/fonts/neue-haas-unica-pro-bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+*/
+
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
 @source '../../storage/framework/views/*.php';
 @source '../**/*.antlers.html';
@@ -32,10 +57,14 @@
     --color-haus-ink-800: #1c1917;
     --color-haus-ink-900: #0c0a09;
 
-    /* Live site uses Neue Haas Unica Pro (paid). Inter is a free
-       near-substitute with the same geometric character. The client can
-       swap to the licensed font at launch via this token. */
-    --font-sans: 'Inter', 'Helvetica Neue', 'Helvetica', ui-sans-serif, system-ui, sans-serif;
+    /* Live site uses Neue Haas Unica Pro (paid). Until the client provides
+       the licensed font files, we use the system Helvetica Neue stack —
+       Mac/iOS users see actual Helvetica Neue (the closest commonly
+       available cousin to Neue Haas Unica Pro). Other OSes fall back to
+       Arial. When the licensed font arrives, drop the WOFF2 files into
+       public/fonts/, uncomment the @font-face block below, and prepend
+       'Neue Haas Unica Pro' to this token. */
+    --font-sans: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
     /* Typography scale to match the live site's rhythm */
     --text-eyebrow: 0.75rem;           /* yellow uppercase tag text */
@@ -82,5 +111,145 @@
     .check-list li::before {
         content: "✓";
         @apply absolute left-0 top-0 text-haus-amber-400 font-bold;
+    }
+
+    /* Watermark hero — used on every non-homepage page. Giant translucent
+       "WAREHAUS" wordmark sliding in from the left; rotating amber-highlighted
+       "We listen. / We design. / We deliver." tagline overlaid horizontally
+       across the middle of the watermark; page subtitle below. CSS values
+       sampled from warehausae.com live. */
+    .haus-watermark-stack {
+        position: relative;
+        display: inline-block;
+    }
+    .haus-watermark-text {
+        font-size: clamp(72px, 12vw, 168px);
+        line-height: 1;
+        font-weight: 900;
+        letter-spacing: normal;
+        color: rgba(255, 255, 255, 0.59);
+        white-space: nowrap;
+        animation: haus-fadeInLeft 0.8s 20ms ease both;
+        margin: 0;
+        text-transform: uppercase;
+    }
+    /* The tagline is absolutely positioned to overlap the watermark text
+       horizontally across its middle. The .cd-words-wrapper inside has a
+       fixed width set by JS (sizeCdWordsWrappers). */
+    .haus-tagline {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: clamp(24px, 3vw, 46px);
+        line-height: 1.15;
+        font-weight: 700;
+        color: rgb(245, 245, 245);
+        text-transform: uppercase;
+        white-space: nowrap;
+        margin: 0;
+        z-index: 2;
+    }
+    .haus-page-subtitle {
+        font-size: clamp(28px, 4vw, 60px);
+        line-height: 1;
+        font-weight: 400;
+        color: #fff;
+        text-transform: uppercase;
+        margin: 0;
+    }
+    @keyframes haus-fadeInLeft {
+        from { opacity: 0; transform: translate3d(-120px, 0, 0); }
+        to   { opacity: 1; transform: none; }
+    }
+    /* Rotating-words wrapper. Mirrors the "Coderex Designer" plugin output
+       used by Elementor on the live site. */
+    .cd-words-wrapper {
+        display: inline-block;
+        position: relative;
+        text-align: left;
+        vertical-align: baseline;
+    }
+    .cd-words-wrapper b {
+        display: inline-block;
+        position: absolute;
+        white-space: nowrap;
+        left: 0;
+        top: 0;
+        padding: 0 5px;
+        font-weight: inherit;
+        color: #fff;
+        background: #f89b02;
+        opacity: 0.1;
+        transition: opacity 200ms ease;
+    }
+    .cd-words-wrapper b.is-visible {
+        position: relative;
+        opacity: 0.9;
+    }
+    @media (prefers-reduced-motion: reduce) {
+        .haus-watermark-text { animation: none; }
+        .cd-words-wrapper b { transition: none; }
+    }
+
+    /* Hide native scrollbar on the recent-projects carousel track (mobile) */
+    .scrollbar-hide { scrollbar-width: none; -ms-overflow-style: none; }
+    .scrollbar-hide::-webkit-scrollbar { display: none; }
+
+    /* Civil Engineers Serving PA + MD map. Each .haus-pin is positioned
+       absolutely over the SVG using inline left/top percentages. Uses an
+       amber teardrop SVG icon plus a CSS tooltip that fades in on hover. */
+    .haus-pa-md-map { position: relative; }
+    .haus-pin {
+        position: absolute;
+        width: 26px;
+        height: 32px;
+        margin-left: -13px;
+        margin-top: -32px;
+        background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26 32'><path d='M13 0C5.82 0 0 5.82 0 13c0 9.75 13 19 13 19s13-9.25 13-19C26 5.82 20.18 0 13 0z' fill='%23f89b02'/><circle cx='13' cy='13' r='4.5' fill='white'/></svg>");
+        background-repeat: no-repeat;
+        background-size: contain;
+        cursor: pointer;
+        z-index: 2;
+        transition: transform 200ms ease;
+        filter: drop-shadow(0 2px 3px rgba(0,0,0,0.18));
+    }
+    .haus-pin:hover { transform: scale(1.18); z-index: 3; }
+    .haus-pin::after {
+        content: attr(data-haus-pin-label);
+        position: absolute;
+        left: 50%;
+        bottom: 100%;
+        transform: translate(-50%, -4px);
+        background: #4b4b4b;
+        color: #fff;
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 1;
+        white-space: nowrap;
+        padding: 6px 10px;
+        border-radius: 3px;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 180ms ease;
+    }
+    .haus-pin::before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: 100%;
+        transform: translate(-50%, 0);
+        border: 5px solid transparent;
+        border-top-color: #4b4b4b;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 180ms ease;
+    }
+    .haus-pin:hover::after, .haus-pin:hover::before,
+    .haus-pin:focus::after, .haus-pin:focus::before {
+        opacity: 1;
+    }
+    @media (prefers-reduced-motion: reduce) {
+        .haus-pin, .haus-pin::after, .haus-pin::before { transition: none; }
     }
 }

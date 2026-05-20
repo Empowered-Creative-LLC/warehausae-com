@@ -25,39 +25,39 @@ approach_heading: Leading-Edge Technology
 team_leaders:
   - name: Troy Bankert, AIA
     title: Co-Owner / President & Chief Executive Officer
-    team_url: https://warehausae.com/team/troy-bankert/
+    team_url: /team/troy-bankert/
     headshot_url: /assets/imported/2024/01/Bankert-Troy-1.webp
     linkedin_url: https://www.linkedin.com/in/troy-bankert-aia-8ba36421/
     email: tbankert@warehausae.com
   - name: Derek Donnelly, PE
     title: Structural Engineer
-    team_url: https://warehausae.com/team/derek-donnelly-pe/
+    team_url: /team/derek-donnelly-pe/
     headshot_url: /assets/imported/2024/06/Derek-Donnelly-1024x682.webp
     linkedin_url: https://www.linkedin.com/in/derek-d-118612b3/
     email: ddonnelly@warehausae.com
 recent_projects:
   - title: "Kaltreider-Benfer Library: York County Library"
-    url: https://warehausae.com/project/kaltreider-benfer-library-york-county-library/
+    url: /project/kaltreider-benfer-library-york-county-library/
     categories:
       - Architecture
       - Civil
       - Structural
     image_url: /assets/imported/2024/09/Kaltreider-Benfer-DRONE-13-700x700.webp
   - title: Gratz Bank Tower Repair
-    url: https://warehausae.com/project/gratz-bank-tower-repair/
+    url: /project/gratz-bank-tower-repair/
     categories:
       - Architecture
       - Structural
     image_url: /assets/imported/2024/09/Screenshot-2024-09-17-083457-700x688.webp
   - title: York College of Pennsylvania Northside Commons Addition
-    url: https://warehausae.com/project/york-college-of-pennsylvania-northside-commons-addition/
+    url: /project/york-college-of-pennsylvania-northside-commons-addition/
     categories:
       - Architecture
       - Civil
       - Structural
     image_url: /assets/imported/2025/04/Northside-Commons-Before-04082025-15-700x700.webp
   - title: 1110 East Princess Street Office
-    url: https://warehausae.com/project/1110-princess-street-office/
+    url: /project/1110-princess-street-office/
     categories:
       - Architecture
       - Civil
@@ -65,28 +65,28 @@ recent_projects:
       - Structural
     image_url: /assets/imported/2023/03/Kinsley_1110_East_Princess_St_Interior_062619_01-of-05.jpg
   - title: Gettle Office
-    url: https://warehausae.com/project/gettle-office/
+    url: /project/gettle-office/
     categories:
       - Architecture
       - Interiors
       - Structural
     image_url: /assets/imported/2023/04/Gettle-Headquarters_Professional-20190522_0054.jpg
   - title: Phoenix Contact Office
-    url: https://warehausae.com/project/phoenix-contact-office/
+    url: /project/phoenix-contact-office/
     categories:
       - Architecture
       - Interiors
       - Structural
     image_url: /assets/imported/2023/04/Phoenix-Contact-New-Distribution-Center-070208_0013.jpg
   - title: York College Civil Engineering Center
-    url: https://warehausae.com/project/york-college-civil-engineering-center/
+    url: /project/york-college-civil-engineering-center/
     categories:
       - Architecture
       - Civil
       - Structural
     image_url: /assets/imported/2023/09/York-College-Civil-Engineering-Center0614201902-of-6.webp
   - title: York County History Center
-    url: https://warehausae.com/project/york-county-history-center/
+    url: /project/york-county-history-center/
     categories:
       - Architecture
       - Historic
@@ -94,40 +94,40 @@ recent_projects:
       - Structural
     image_url: /assets/imported/2023/04/York-County-History-Center_Rendering_Third-Floor.webp
   - title: Logos Academy
-    url: https://warehausae.com/project/logos-academy/
+    url: /project/logos-academy/
     categories:
       - Architecture
       - Civil
       - Structural
-    image_url: http://www.warehausae.com/
+    image_url: /assets/imported/2023/04/Logos-Academy-20110505_0159-700x700.jpg
   - title: Carlisle Barracks Restoration
-    url: https://warehausae.com/project/carlisle-barracks-restoration/
+    url: /project/carlisle-barracks-restoration/
     categories:
       - Architecture
       - Structural
     image_url: /assets/imported/2023/04/DSCF8878-700x700.jpg
   - title: Mobile Climate Control
-    url: https://warehausae.com/project/mobile-climate-control/
+    url: /project/mobile-climate-control/
     categories:
       - Architecture
       - Civil
       - Structural
     image_url: /assets/imported/2023/05/Mobile-Climate-Control-34-700x700.jpg
   - title: Holderness School Davis Center
-    url: https://warehausae.com/project/holderness-school-davis-center/
+    url: /project/holderness-school-davis-center/
     categories:
       - Architecture
       - Interiors
       - Structural
     image_url: /assets/imported/2023/09/Project_Holderness_Academic_Building_20210926_11-1-min.webp
   - title: Northern Gateway
-    url: https://warehausae.com/project/northern-gateway/
+    url: /project/northern-gateway/
     categories:
       - Architecture
       - Structural
     image_url: /assets/imported/2023/05/2019-3D-View-INTERIOR-PERSPECTIVE-VIEW-1-700x700.jpg
   - title: WellSpan Health Thomas Hart Medical Office Building
-    url: https://warehausae.com/project/wellspan-health-thomas-hart-medical-office-building/
+    url: /project/wellspan-health-thomas-hart-medical-office-building/
     categories:
       - Architecture
       - Civil
@@ -135,26 +135,26 @@ recent_projects:
       - Structural
     image_url: /assets/imported/2023/08/ST_Thomas-Hart-Medical-Dental1-768x400.webp
   - title: Hershey Tanger Outlets Site and Facade Improvements
-    url: https://warehausae.com/project/hershey-tanger-outlets-site-and-facade-improvements/
+    url: /project/hershey-tanger-outlets-site-and-facade-improvements/
     categories:
       - Architecture
       - Civil
       - Structural
     image_url: /assets/imported/2024/02/Tanger-768x400.webp
   - title: Catalyst Muddy Creek Warehouse
-    url: https://warehausae.com/project/catalyst-muddy-creek-warehouse/
+    url: /project/catalyst-muddy-creek-warehouse/
     categories:
       - Architecture
       - Structural
     image_url: /assets/imported/2024/03/Catalyst-Muddy-Creek-10-700x700.webp
   - title: Fox Apartments
-    url: https://warehausae.com/project/fox-apartments/
+    url: /project/fox-apartments/
     categories:
       - Architecture
       - Structural
     image_url: /assets/imported/2024/11/Fox-Apartments-10302024-27-700x700.webp
   - title: The Barn Resort
-    url: https://warehausae.com/project/the-barn-resort/
+    url: /project/the-barn-resort/
     categories:
       - Architecture
       - Civil

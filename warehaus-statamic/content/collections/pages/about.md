@@ -7,6 +7,7 @@ slug: about
 source_url: https://warehausae.com/about/
 url: /about/
 tagline: We listen. We design. We deliver.
+hero_image_url: /assets/imported/2023/09/tree-1.webp
 lead_heading: Deep Roots. Rich History.
 raw_body_markdown: >-
   [Skip to content](https://warehausae.com/about/#content)

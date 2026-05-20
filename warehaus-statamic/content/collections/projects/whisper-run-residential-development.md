@@ -22,10 +22,10 @@ size: 31.5 acres
 completion_date: "2024"
 services_provided:
   - label: Civil
-    url: https://warehausae.com/service/civil/
+    url: /services/civil_engineering/
 industries:
   - label: Multi-Family
-    url: https://warehausae.com/industry/multi-family/
+    url: /multi-family/
 hero_image_url: /assets/imported/2024/09/Whisper-Run.jpg
 gallery_images:
   - url: /assets/imported/2024/09/IMG_3926-700x700.jpg
@@ -42,65 +42,65 @@ gallery_images:
     alt: Whisper Run Residential Development Civil Engineering Rain Garden
 related_projects:
   - title: 800 South Queen Street Multi-Family Apartments
-    url: https://warehausae.com/project/800-south-queen-street-multi-family-apartments/
+    url: /project/800-south-queen-street-multi-family-apartments/
     categories:
       - Architecture
     image_url: /assets/imported/2024/01/800-S-Queen-view-BRANDED-700x700.jpg
   - title: Fox Apartments
-    url: https://warehausae.com/project/fox-apartments/
+    url: /project/fox-apartments/
     categories:
       - Architecture
       - Structural
     image_url: /assets/imported/2024/11/Fox-Apartments-10302024-27-700x700.webp
   - title: 205 State Street Apartments
-    url: https://warehausae.com/project/205-state-street-apartments/
+    url: /project/205-state-street-apartments/
     categories:
       - Architecture
     image_url: /assets/imported/2024/07/state-street-apartments-06192024-5-768x400.webp
   - title: Nelson Kohl Apartments
-    url: https://warehausae.com/project/nelson-kohl-apartments/
+    url: /project/nelson-kohl-apartments/
     categories:
       - Architecture
       - Interiors
     image_url: /assets/imported/2023/03/Nelson-Kohl-10_2018-0001-700x501.jpg
   - title: 12th and Macdonald Apartments
-    url: https://warehausae.com/project/12th_and_macdonald/
+    url: /project/12th_and_macdonald/
     categories:
       - Architecture
     image_url: /assets/imported/2023/03/CORNER.jpg
   - title: Franklin Square Multi-Family Mixed Use
-    url: https://warehausae.com/project/franklin-square-multi-family-mixed-use/
+    url: /project/franklin-square-multi-family-mixed-use/
     categories:
       - Architecture
     image_url: /assets/imported/2024/05/Franklin-Square-FEATURE-700x700.webp
   - title: The Flats at Hampden
-    url: https://warehausae.com/project/flats-at-hampden-apartments/
+    url: /project/flats-at-hampden-apartments/
     categories:
       - Architecture
     image_url: /assets/imported/2024/05/Flats-at-Hampden-18-700x588.webp
   - title: The Steel Works Mixed-Use Development
-    url: https://warehausae.com/project/the-steel-works-mixed-use-development/
+    url: /project/the-steel-works-mixed-use-development/
     categories:
       - Architecture
     image_url: /assets/imported/2023/03/Steelworks-2.jpg
   - title: Union Flats Apartments
-    url: https://warehausae.com/project/union-flats-apartments/
+    url: /project/union-flats-apartments/
     categories:
       - Architecture
     image_url: /assets/imported/2023/03/Union-Flats-Luxury-Apartments-in-Mechanicsburg-PA.jpg
   - title: University Lofts
-    url: https://warehausae.com/project/university-lofts/
+    url: /project/university-lofts/
     categories:
       - Architecture
       - Historic
     image_url: /assets/imported/2023/03/University-Lofts_Rendering-052419_00024-700x700.jpg
   - title: 3400 Boston Street Apartments
-    url: https://warehausae.com/project/3400-boston-street/
+    url: /project/3400-boston-street/
     categories:
       - Architecture
     image_url: /assets/imported/2023/05/3400-Boston-Street_Rendering-20190521_0004.jpg
   - title: Sycamore Homes
-    url: https://warehausae.com/project/sycamore-homes/
+    url: /project/sycamore-homes/
     categories:
       - Architecture
     image_url: /assets/imported/2023/10/2023-04-28-Sycamore-Homes-Updated-Perspective-VE-Options-700x700.webp

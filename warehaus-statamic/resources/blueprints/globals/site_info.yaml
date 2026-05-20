@@ -1,0 +1,17 @@
+title: Site Info
+sections:
+  main:
+    display: Main
+    fields:
+      - handle: address_line_1
+        field: { type: text, display: Address Line 1 }
+      - handle: address_line_2
+        field: { type: text, display: Address Line 2 }
+      - handle: phone
+        field: { type: text, display: Phone (display) }
+      - handle: phone_tel
+        field: { type: text, display: Phone (tel: link) }
+      - handle: email
+        field: { type: text, display: Email }
+      - handle: business_hours
+        field: { type: text, display: Business Hours }

@@ -17,9 +17,9 @@ size: Various
 completion_date: Various
 services_provided:
   - label: Architecture
-    url: /service/architecture/
+    url: /services/architecture/
   - label: Civil
-    url: /service/civil/
+    url: /services/civil/
 hero_image_url: /assets/imported/elementor/thumbs/Wellspan-Family-Medicine-Roosevelt-Facility-060514_00035-r341zqsijysz6696okctwk7xq0nunyve5y36occb6o.webp
 gallery_images:
   - url: /assets/imported/elementor/thumbs/Wellspan-Family-Medicine-Roosevelt-Facility-060514_00035-r341zqsijysz6696okctwk7xq0nunyve5y36occb6o.webp
@@ -46,19 +46,19 @@ gallery_images:
     alt: WellSpan Health Thomas Hart Medical Office
 related_projects:
   - title: Penn State Hershey Medical Center Crystal A Offices
-    url: https://warehausae.com/project/pshmc-crystala-offices/
+    url: /project/pshmc-crystala-offices/
     categories:
       - Architecture
       - Interiors
     image_url: /assets/imported/2023/04/Crystal-A-23.jpg
   - title: UMFP Redwood Facade Restoration
-    url: https://warehausae.com/project/umfp-redwood-facade-restoration/
+    url: /project/umfp-redwood-facade-restoration/
     categories:
       - Architecture
       - Historic
     image_url: /assets/imported/2023/04/University-of-Maryland-Faculty-Physicians-Inc-082013_00006.jpg
   - title: Back 2 Health Chiropractic
-    url: https://warehausae.com/project/back-2-health-chiropractic/
+    url: /project/back-2-health-chiropractic/
     categories:
       - Architecture
       - Interiors
