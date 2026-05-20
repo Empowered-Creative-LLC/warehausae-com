@@ -72,10 +72,16 @@ tabs:
                     type: textarea
                     display: Believe In Blocks Body
                     instructions: Block body prose.
-                - handle: image_url
+                - handle: lottie_url
                   field:
                     type: text
-                    display: Believe In Blocks Image Url
+                    display: Believe In Blocks Lottie URL
+                    instructions: Path to a Lottie JSON animation file for the block icon (e.g. /assets/imported/2023/06/Brainwave.json).
+                - handle: bg_image_url
+                  field:
+                    type: text
+                    display: Believe In Blocks Background Image URL
+                    instructions: Optional. If set, the block renders as a full-bleed photo with this image as the background (e.g. the 'Cookouts and Cornhole' block).
               display: Believe In Blocks
               instructions: Repeating 'WE BELIEVE IN' blocks. Order matters.
           - handle: featured_projects

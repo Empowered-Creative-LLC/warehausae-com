@@ -1,0 +1,46 @@
+{{# Civil Engineers Serving Pennsylvania and Maryland — interactive SVG map
+    of PA + MD with amber pin markers on 17 counties / locations. Matches
+    live /services/civil_engineering/ exactly. Each pin shows the county
+    name on hover via a CSS tooltip.
+
+    Used only on the civil engineering service page. Conditionally
+    rendered from services/show.antlers.html when the slug matches.
+
+    Pin coordinates are in % of map container size, sampled live from
+    warehausae.com. Hover tooltip is pure CSS (no tippy.js dependency). #}}
+
+<section class="bg-white py-16 md:py-24" aria-labelledby="civil-engineers-map-heading">
+    <div class="mx-auto max-w-[1170px] px-6 md:px-10 grid md:grid-cols-[1.1fr_1fr] gap-12 lg:gap-16 items-center">
+        {{# Map (left column) #}}
+        <div class="haus-pa-md-map relative w-full" data-haus-fade-in>
+            <img src="/assets/imported/2023/10/Asset-1.svg" alt="Map of Pennsylvania and Maryland highlighting Warehaus civil engineering service area" class="block w-full h-auto" loading="lazy">
+
+            {{# Pins — positioned absolutely as percentages of the map container. #}}
+            <span class="haus-pin" style="left:16%;top:43%" data-haus-pin-label="Westmoreland" aria-label="Westmoreland"></span>
+            <span class="haus-pin" style="left:12%;top:51%" data-haus-pin-label="Fayette" aria-label="Fayette"></span>
+            <span class="haus-pin" style="left:38%;top:19%" data-haus-pin-label="Cameron" aria-label="Cameron"></span>
+            <span class="haus-pin" style="left:45%;top:50%" data-haus-pin-label="Franklin" aria-label="Franklin"></span>
+            <span class="haus-pin" style="left:51%;top:45%" data-haus-pin-label="Cumberland" aria-label="Cumberland"></span>
+            <span class="haus-pin" style="left:53%;top:52%" data-haus-pin-label="Adams" aria-label="Adams"></span>
+            <span class="haus-pin" style="left:62%;top:51%" data-haus-pin-label="York" aria-label="York"></span>
+            <span class="haus-pin" style="left:61%;top:39%" data-haus-pin-label="Dauphin" aria-label="Dauphin"></span>
+            <span class="haus-pin" style="left:67%;top:42%" data-haus-pin-label="Lebanon" aria-label="Lebanon"></span>
+            <span class="haus-pin" style="left:70%;top:34%" data-haus-pin-label="Schuylkill" aria-label="Schuylkill"></span>
+            <span class="haus-pin" style="left:77%;top:40%" data-haus-pin-label="Berks" aria-label="Berks"></span>
+            <span class="haus-pin" style="left:72%;top:48%" data-haus-pin-label="Lancaster" aria-label="Lancaster"></span>
+            <span class="haus-pin" style="left:78%;top:58%" data-haus-pin-label="Cecil" aria-label="Cecil"></span>
+            <span class="haus-pin" style="left:64%;top:61%" data-haus-pin-label="Baltimore" aria-label="Baltimore"></span>
+            <span class="haus-pin" style="left:58%;top:58%" data-haus-pin-label="Carroll" aria-label="Carroll"></span>
+            <span class="haus-pin" style="left:52%;top:62%" data-haus-pin-label="Frederick" aria-label="Frederick"></span>
+            <span class="haus-pin" style="left:58%;top:74%" data-haus-pin-label="D.C." aria-label="D.C."></span>
+        </div>
+
+        {{# Heading + body (right column) #}}
+        <div data-haus-fade-in data-haus-fade-delay="120">
+            <h2 id="civil-engineers-map-heading" class="text-3xl md:text-[46px] font-bold text-[#4b4b4b] leading-[1.13]">Civil Engineers Serving Pennsylvania and Maryland</h2>
+            <p class="mt-8 text-[#666] text-[17px] leading-[1.6]">
+                Warehaus’ <a href="/services/civil_engineering/" class="text-haus-amber-600 hover:text-haus-amber-700 transition">Civil Engineering Team</a> is experienced in townships, cities and boroughs across Pennsylvania and Maryland. In fact, we’ve worked in all 72 municipalities in York County. Whether it’s civil design, land development, or site planning, we have the local knowledge and expertise to deliver.
+            </p>
+        </div>
+    </div>
+</section>

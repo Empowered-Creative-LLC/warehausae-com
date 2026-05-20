@@ -25,20 +25,20 @@ size: 90 acres; 4 buildings
 completion_date: "2019"
 services_provided:
   - label: Architecture
-    url: https://warehausae.com/service/architecture/
+    url: /services/architecture/
   - label: Historic
-    url: https://warehausae.com/service/historic/
+    url: /services/historic/
   - label: Interiors
-    url: https://warehausae.com/service/interiors/
+    url: /services/interiors/
 industries:
   - label: Adaptive Reuse
-    url: https://warehausae.com/industry/adaptive-reuse/
+    url: /adaptive-reuse/
   - label: Arts and Culture
-    url: https://warehausae.com/industry/arts-and-culture/
+    url: /arts-and-culture/
   - label: Historic
-    url: https://warehausae.com/industry/historic/
+    url: /industry/historic/
   - label: Office
-    url: https://warehausae.com/industry/office/
+    url: /office/
 awards:
   - Winner of a 2020 Preservation Pennsylvania Historic Preservation Award
 hero_image_url: /assets/imported/2023/04/Warehaus_GeorgeSpanglerFarm-0032.webp
@@ -71,33 +71,33 @@ gallery_images:
     alt: Meticulously restored smokehouse at George Spangler Farm
 related_projects:
   - title: Cumberland Township Municipal Building
-    url: https://warehausae.com/project/cumberland-township-municipal-building/
+    url: /project/cumberland-township-municipal-building/
     categories:
       - Architecture
       - Civil
       - Interiors
     image_url: /assets/imported/2025/06/Cumberland_Township_Municipal_Building_Groundbreaking20250617_0029-700x700.webp
   - title: York Academy Regional Charter School Legacy Hall
-    url: https://warehausae.com/project/york-academy-regional-charter-school-legacy-hall/
+    url: /project/york-academy-regional-charter-school-legacy-hall/
     categories:
       - Architecture
       - Civil
       - Interiors
     image_url: /assets/imported/2025/09/York-Academy-Legacy-Hall-2-700x700.jpg
   - title: Volvo North America Living Office Transformation
-    url: https://warehausae.com/project/volvo-north-america-office-transformation/
+    url: /project/volvo-north-america-office-transformation/
     categories:
       - Architecture
       - Interiors
     image_url: /assets/imported/2025/11/Volvo-Construction-Equipment-497-HDR-700x700.jpg
   - title: University Lofts
-    url: https://warehausae.com/project/university-lofts/
+    url: /project/university-lofts/
     categories:
       - Architecture
       - Historic
     image_url: /assets/imported/2023/03/University-Lofts_Rendering-052419_00024-700x700.jpg
   - title: 1110 East Princess Street Office
-    url: https://warehausae.com/project/1110-princess-street-office/
+    url: /project/1110-princess-street-office/
     categories:
       - Architecture
       - Civil
@@ -105,7 +105,7 @@ related_projects:
       - Structural
     image_url: /assets/imported/2023/03/Kinsley_1110_East_Princess_St_Interior_062619_01-of-05.jpg
   - title: 210 York Street Office and Recording Studio
-    url: https://warehausae.com/project/210-york-street-office/
+    url: /project/210-york-street-office/
     categories:
       - Architecture
       - Civil

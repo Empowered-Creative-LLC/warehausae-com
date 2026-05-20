@@ -88,32 +88,32 @@ size: Various Projects
 completion_date: Various Dates
 services_provided:
   - label: Architecture
-    url: /service/architecture/
+    url: /services/architecture/
   - label: Interiors
-    url: /service/interiors/
+    url: /services/interiors/
 industries:
   - label: Architecture
-    url: /industry/architecture/
+    url: /architecture/
   - label: Interiors
-    url: /industry/interiors/
+    url: /interiors/
 awards:
   - 2019 AIA Central Pennsylvania Excellence in Design Award Winner
 hero_image_url: /assets/imported/2022/03/Asset-1.png
 related_projects:
   - title: McHenry Row Office and Courtyard by Marriott Hotel
-    url: https://warehausae.com/project/mchenry-row-office-hotel/
+    url: /project/mchenry-row-office-hotel/
     categories:
       - Architecture
       - Interiors
     image_url: /assets/imported/2023/04/2P1A5115-Copy.jpg
   - title: PayPal Toronto Flagship Office
-    url: https://warehausae.com/project/paypal-toronto-flagship-office/
+    url: /project/paypal-toronto-flagship-office/
     categories:
       - Architecture
       - Interiors
     image_url: /assets/imported/2023/04/PayPal-Toronto_Professional-120316_0005.jpg
   - title: Phoenix Contact Office
-    url: https://warehausae.com/project/phoenix-contact-office/
+    url: /project/phoenix-contact-office/
     categories:
       - Architecture
       - Interiors

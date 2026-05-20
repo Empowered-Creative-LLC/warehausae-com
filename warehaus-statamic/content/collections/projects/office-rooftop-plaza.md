@@ -30,14 +30,14 @@ size: Undisclosed
 completion_date: In Process
 services_provided:
   - label: Architecture
-    url: https://warehausae.com/service/architecture/
+    url: /services/architecture/
   - label: Historic
-    url: https://warehausae.com/service/historic/
+    url: /services/historic/
 industries:
   - label: Adaptive Reuse
-    url: https://warehausae.com/industry/adaptive-reuse/
+    url: /adaptive-reuse/
   - label: Historic
-    url: https://warehausae.com/industry/historic/
+    url: /industry/historic/
 hero_image_url: /assets/imported/2023/04/2020.05.16-RENDERING-AERIAL.jpg
 gallery_images:
   - url: /assets/imported/2023/04/2020.05.16-RENDERING-TURRET.webp
@@ -46,13 +46,13 @@ gallery_images:
     alt: Historic building exterior with rooftop plaza
 related_projects:
   - title: University Lofts
-    url: https://warehausae.com/project/university-lofts/
+    url: /project/university-lofts/
     categories:
       - Architecture
       - Historic
     image_url: /assets/imported/2023/03/University-Lofts_Rendering-052419_00024-700x700.jpg
   - title: 210 York Street Office and Recording Studio
-    url: https://warehausae.com/project/210-york-street-office/
+    url: /project/210-york-street-office/
     categories:
       - Architecture
       - Civil
@@ -60,7 +60,7 @@ related_projects:
       - Interiors
     image_url: /assets/imported/2023/03/210_York_Street15-of-00-1.jpg
   - title: 320 North George Street Office
-    url: https://warehausae.com/project/320-north-george-street-office/
+    url: /project/320-north-george-street-office/
     categories:
       - Architecture
       - Civil
@@ -68,19 +68,19 @@ related_projects:
       - Interiors
     image_url: /assets/imported/2023/03/Warehaus-Headquarters-08_2017-0162.jpg
   - title: Blackworth Live Fire Grill
-    url: https://warehausae.com/project/blackworth-live-fire-grill/
+    url: /project/blackworth-live-fire-grill/
     categories:
       - Architecture
       - Interiors
     image_url: /assets/imported/2023/04/Blackworth-Live-Fire-Grill-21060207_0111.jpg
   - title: Bischoff Inn
-    url: https://warehausae.com/project/bischoff-inn/
+    url: /project/bischoff-inn/
     categories:
       - Architecture
       - Historic
     image_url: /assets/imported/2023/08/12-Bischoff-interior-second-flr-after-rotated-700x700.webp
   - title: York Academy Regional Charter School – Lower School
-    url: https://warehausae.com/project/york-academy-regional-charter-school-lower-school/
+    url: /project/york-academy-regional-charter-school-lower-school/
     categories:
       - Architecture
       - Civil

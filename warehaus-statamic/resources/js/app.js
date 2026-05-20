@@ -7,10 +7,209 @@ gsap.registerPlugin(ScrollTrigger);
 document.addEventListener('DOMContentLoaded', () => {
     initStickyHeader();
     initMobileMenu();
+    initDesktopDropdowns();
     initFadeInOnScroll();
     initParallaxBackgrounds();
     initHoverImages();
+    initLottieAnimations();
+    initRotatingWords();
+    sizeCdWordsWrappers();
+    initRecentProjectsCarousel();
 });
+
+/**
+ * Recent Projects carousel — paginates through the card list on desktop,
+ * scrolls natively on mobile. Mirrors warehausae.com's "1 / 96" carousel.
+ */
+function initRecentProjectsCarousel() {
+    document.querySelectorAll('[data-haus-recent-carousel]').forEach((root) => {
+        const track = root.querySelector('[data-haus-carousel-track]');
+        const items = [...root.querySelectorAll('[data-haus-carousel-card]')];
+        const prev = root.querySelector('[data-haus-carousel-prev]');
+        const next = root.querySelector('[data-haus-carousel-next]');
+        const currentEl = root.parentElement.querySelector('[data-haus-carousel-current]');
+        const totalEl = root.parentElement.querySelector('[data-haus-carousel-total]');
+        if (!track || !items.length) return;
+
+        if (totalEl) totalEl.textContent = items.length;
+
+        // How many cards fit in the viewport — read from a sample card width.
+        const cardsPerView = () => {
+            const viewWidth = track.clientWidth;
+            const cardWidth = items[0].getBoundingClientRect().width;
+            return Math.max(1, Math.round(viewWidth / (cardWidth + 24)));
+        };
+
+        // Index of the leftmost visible card.
+        let index = 0;
+        const update = () => {
+            const perView = cardsPerView();
+            const max = Math.max(0, items.length - perView);
+            if (index < 0) index = 0;
+            if (index > max) index = max;
+            const target = items[index];
+            if (target) {
+                track.scrollTo({ left: target.offsetLeft - track.offsetLeft, behavior: 'smooth' });
+            }
+            if (currentEl) currentEl.textContent = index + 1;
+            if (prev) prev.disabled = index <= 0;
+            if (next) next.disabled = index >= max;
+        };
+
+        prev?.addEventListener('click', () => { index -= cardsPerView(); update(); });
+        next?.addEventListener('click', () => { index += cardsPerView(); update(); });
+
+        // On native scroll (mobile), sync the counter to the leftmost visible card.
+        let scrollTimer;
+        track.addEventListener('scroll', () => {
+            clearTimeout(scrollTimer);
+            scrollTimer = setTimeout(() => {
+                const scrollLeft = track.scrollLeft;
+                let closest = 0;
+                let closestDist = Infinity;
+                items.forEach((el, i) => {
+                    const dist = Math.abs(el.offsetLeft - track.offsetLeft - scrollLeft);
+                    if (dist < closestDist) { closestDist = dist; closest = i; }
+                });
+                index = closest;
+                if (currentEl) currentEl.textContent = index + 1;
+            }, 100);
+        }, { passive: true });
+
+        update();
+        // Re-sync on resize.
+        let resizeTimer;
+        window.addEventListener('resize', () => {
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(update, 150);
+        });
+    });
+}
+
+/**
+ * "We listen. We design. We deliver." word rotator on the watermark hero.
+ * Cycles is-visible across the <b> children every 2400ms (matches live).
+ */
+function initRotatingWords() {
+    const wrappers = document.querySelectorAll('[data-haus-cd-words]');
+    if (!wrappers.length || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    wrappers.forEach((wrapper) => {
+        const words = [...wrapper.querySelectorAll('b')];
+        if (words.length < 2) return;
+        let i = words.findIndex(b => b.classList.contains('is-visible'));
+        if (i < 0) i = 0;
+        setInterval(() => {
+            words[i].classList.remove('is-visible');
+            i = (i + 1) % words.length;
+            words[i].classList.add('is-visible');
+        }, 2400);
+    });
+}
+
+/**
+ * Size each .cd-words-wrapper to the width of its widest <b> so the layout
+ * doesn't jump as words rotate. Matches live's fixed-width behavior.
+ */
+function sizeCdWordsWrappers() {
+    document.querySelectorAll('[data-haus-cd-words]').forEach((wrapper) => {
+        let maxW = 0;
+        wrapper.querySelectorAll('b').forEach((b) => {
+            const prev = b.style.cssText;
+            b.style.position = 'relative';
+            b.style.opacity = '1';
+            const w = b.getBoundingClientRect().width;
+            if (w > maxW) maxW = w;
+            b.style.cssText = prev;
+        });
+        if (maxW > 0) wrapper.style.width = `${Math.ceil(maxW)}px`;
+    });
+}
+
+/**
+ * Desktop nav dropdowns. Click or hover opens; click outside or Escape closes.
+ */
+function initDesktopDropdowns() {
+    const dropdowns = document.querySelectorAll('[data-haus-dropdown]');
+    if (!dropdowns.length) return;
+
+    const closeAll = () => dropdowns.forEach((d) => {
+        const menu = d.querySelector('[data-haus-dropdown-menu]');
+        const trigger = d.querySelector('[data-haus-dropdown-trigger]');
+        menu?.classList.add('hidden');
+        trigger?.setAttribute('aria-expanded', 'false');
+    });
+
+    dropdowns.forEach((d) => {
+        const trigger = d.querySelector('[data-haus-dropdown-trigger]');
+        const menu = d.querySelector('[data-haus-dropdown-menu]');
+        if (!trigger || !menu) return;
+        let openTimer;
+
+        const open = () => {
+            clearTimeout(openTimer);
+            closeAll();
+            menu.classList.remove('hidden');
+            trigger.setAttribute('aria-expanded', 'true');
+        };
+        const scheduleClose = () => {
+            openTimer = setTimeout(() => {
+                menu.classList.add('hidden');
+                trigger.setAttribute('aria-expanded', 'false');
+            }, 200);
+        };
+
+        d.addEventListener('mouseenter', open);
+        d.addEventListener('mouseleave', scheduleClose);
+        trigger.addEventListener('focus', open);
+    });
+
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeAll(); });
+}
+
+/**
+ * Lottie player. Any element with [data-haus-lottie="/path/to/lottie.json"]
+ * gets the animation loaded and played on viewport entry (loops).
+ * lottie-web is bundled via npm.
+ */
+function initLottieAnimations() {
+    const els = document.querySelectorAll('[data-haus-lottie]');
+    if (!els.length) return;
+
+    let lottiePromise;
+    const loadLottie = () => {
+        if (!lottiePromise) lottiePromise = import('lottie-web');
+        return lottiePromise;
+    };
+
+    const play = async (el) => {
+        const path = el.dataset.hausLottie;
+        if (!path || el.dataset.hausLottieLoaded === '1') return;
+        el.dataset.hausLottieLoaded = '1';
+        const mod = await loadLottie();
+        const lottie = mod.default || mod;
+        lottie.loadAnimation({
+            container: el,
+            renderer: 'svg',
+            loop: true,
+            autoplay: true,
+            path,
+        });
+    };
+
+    if (typeof IntersectionObserver === 'undefined') {
+        els.forEach(play);
+        return;
+    }
+    const io = new IntersectionObserver((entries) => {
+        for (const entry of entries) {
+            if (entry.isIntersecting) {
+                play(entry.target);
+                io.unobserve(entry.target);
+            }
+        }
+    }, { rootMargin: '0px 0px -10% 0px', threshold: 0.05 });
+    els.forEach((el) => io.observe(el));
+}
 
 /**
  * Sticky header transparent → solid as user scrolls past the hero.
@@ -22,8 +221,8 @@ function initStickyHeader() {
     const header = document.querySelector('[data-haus-header]');
     if (!header) return;
 
-    const TRANSPARENT = ['bg-transparent', 'text-white'];
-    const SOLID = ['bg-haus-ink-900/95', 'backdrop-blur', 'shadow-sm', 'text-white'];
+    const TRANSPARENT = ['bg-transparent'];
+    const SOLID = ['bg-haus-ink-900/95', 'backdrop-blur', 'shadow-sm'];
 
     const apply = (solid) => {
         for (const c of TRANSPARENT) header.classList.toggle(c, !solid);

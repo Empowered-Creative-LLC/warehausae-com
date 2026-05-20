@@ -20,14 +20,14 @@ size: 3,400 sf
 completion_date: April 2024
 services_provided:
   - label: Architecture
-    url: https://warehausae.com/service/architecture/
+    url: /services/architecture/
 industries:
   - label: Adaptive Reuse
-    url: https://warehausae.com/industry/adaptive-reuse/
+    url: /adaptive-reuse/
   - label: Historic
-    url: https://warehausae.com/industry/historic/
+    url: /industry/historic/
   - label: Multi-Family
-    url: https://warehausae.com/industry/multi-family/
+    url: /multi-family/
 hero_image_url: /assets/imported/2024/07/state-street-apartments-06192024-5-768x400.webp
 gallery_images:
   - url: /assets/imported/2024/07/state-street-apartments-06192024-13-700x700.webp
@@ -46,56 +46,56 @@ gallery_images:
     alt: ""
 related_projects:
   - title: Zion Lutheran Church Adaptive Reuse
-    url: https://warehausae.com/project/zion-lutheran-church-adaptive-reuse/
+    url: /project/zion-lutheran-church-adaptive-reuse/
     categories:
       - Architecture
       - Historic
     image_url: /assets/imported/2025/04/1Zion-Church-Duke-St_06112024-700x700.webp
   - title: Appell Center Concessions Renovation
-    url: https://warehausae.com/project/appell-center-concessions-renovation/
+    url: /project/appell-center-concessions-renovation/
     categories:
       - Architecture
     image_url: /assets/imported/2025/06/Appell-Concessions-8-700x700.webp
   - title: York Academy Regional Charter School Legacy Hall
-    url: https://warehausae.com/project/york-academy-regional-charter-school-legacy-hall/
+    url: /project/york-academy-regional-charter-school-legacy-hall/
     categories:
       - Architecture
       - Civil
       - Interiors
     image_url: /assets/imported/2025/09/York-Academy-Legacy-Hall-2-700x700.jpg
   - title: Nelson Kohl Apartments
-    url: https://warehausae.com/project/nelson-kohl-apartments/
+    url: /project/nelson-kohl-apartments/
     categories:
       - Architecture
       - Interiors
     image_url: /assets/imported/2023/03/Nelson-Kohl-10_2018-0001-700x501.jpg
   - title: 12th and Macdonald Apartments
-    url: https://warehausae.com/project/12th_and_macdonald/
+    url: /project/12th_and_macdonald/
     categories:
       - Architecture
     image_url: /assets/imported/2023/03/CORNER.jpg
   - title: Franklin Square Multi-Family Mixed Use
-    url: https://warehausae.com/project/franklin-square-multi-family-mixed-use/
+    url: /project/franklin-square-multi-family-mixed-use/
     categories:
       - Architecture
     image_url: /assets/imported/2024/05/Franklin-Square-FEATURE-700x700.webp
   - title: The Flats at Hampden
-    url: https://warehausae.com/project/flats-at-hampden-apartments/
+    url: /project/flats-at-hampden-apartments/
     categories:
       - Architecture
     image_url: /assets/imported/2024/05/Flats-at-Hampden-18-700x588.webp
   - title: The Steel Works Mixed-Use Development
-    url: https://warehausae.com/project/the-steel-works-mixed-use-development/
+    url: /project/the-steel-works-mixed-use-development/
     categories:
       - Architecture
     image_url: /assets/imported/2023/03/Steelworks-2.jpg
   - title: Union Flats Apartments
-    url: https://warehausae.com/project/union-flats-apartments/
+    url: /project/union-flats-apartments/
     categories:
       - Architecture
     image_url: /assets/imported/2023/03/Union-Flats-Luxury-Apartments-in-Mechanicsburg-PA.jpg
   - title: University Lofts
-    url: https://warehausae.com/project/university-lofts/
+    url: /project/university-lofts/
     categories:
       - Architecture
       - Historic

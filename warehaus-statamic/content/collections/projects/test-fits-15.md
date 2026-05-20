@@ -20,33 +20,33 @@ size: Various Projects
 completion_date: Various Dates
 services_provided:
   - label: Architecture
-    url: /service/architecture/
+    url: /services/architecture/
   - label: Interiors
-    url: /service/interiors/
+    url: /services/interiors/
 industries:
   - label: Office
-    url: /industry/office/
+    url: /office/
   - label: Medical
-    url: /industry/medical/
+    url: /medical/
   - label: Hospitality
-    url: /industry/hospitality/
+    url: /hospitality/
 hero_image_url: /assets/imported/2022/03/Asset-1.png
 related_projects:
   - title: Wagman, Inc. Office
-    url: https://warehausae.com/project/wagman-inc-office/
+    url: /project/wagman-inc-office/
     categories:
       - Architecture
       - Interiors
     image_url: /assets/imported/2025/10/Wagman-offices-3265-Farmtrail-Rd-39-700x700.jpg
   - title: Cumberland Township Municipal Building
-    url: https://warehausae.com/project/cumberland-township-municipal-building/
+    url: /project/cumberland-township-municipal-building/
     categories:
       - Architecture
       - Civil
       - Interiors
     image_url: /assets/imported/2025/06/Cumberland_Township_Municipal_Building_Groundbreaking20250617_0029-700x700.webp
   - title: Volvo North America Living Office Transformation
-    url: https://warehausae.com/project/volvo-north-america-office-transformation/
+    url: /project/volvo-north-america-office-transformation/
     categories:
       - Architecture
       - Interiors

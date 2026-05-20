@@ -22,9 +22,9 @@ client: Various Clients
 size: Various Projects
 services_provided:
   - label: Architecture
-    url: /service/architecture/
+    url: /services/architecture/
   - label: Civil Engineering
-    url: /service/civil-engineering/
+    url: /services/civil-engineering/
 industries:
   - label: Data Centers
     url: /industries/data-centers/
@@ -34,19 +34,19 @@ gallery_images:
     alt: Data Center architectural design for an unnamed client
 related_projects:
   - title: Fuchs North America
-    url: https://warehausae.com/project/fuchs-north-america/
+    url: /project/fuchs-north-america/
     categories:
       - Architecture
     image_url: /assets/imported/2023/03/2014_0023_00_N22_lgjpg.jpg
   - title: Phoenix Contact Office
-    url: https://warehausae.com/project/phoenix-contact-office/
+    url: /project/phoenix-contact-office/
     categories:
       - Architecture
       - Interiors
       - Structural
     image_url: /assets/imported/2023/04/Phoenix-Contact-New-Distribution-Center-070208_0013.jpg
   - title: Procter & Gamble Tabler Station
-    url: https://warehausae.com/project/pandgtablerstation/
+    url: /project/pandgtablerstation/
     categories:
       - Architecture
       - Interiors

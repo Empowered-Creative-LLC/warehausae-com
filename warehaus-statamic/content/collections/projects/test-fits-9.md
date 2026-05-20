@@ -20,28 +20,28 @@ size: Various Projects
 completion_date: Various Dates
 services_provided:
   - label: Architecture
-    url: /service/architecture/
+    url: /services/architecture/
   - label: Interiors
-    url: /service/interiors/
+    url: /services/interiors/
 industries:
   - label: Office
-    url: /industry/office/
+    url: /office/
   - label: Medical
-    url: /industry/medical/
+    url: /medical/
   - label: Hospitality
-    url: /industry/hospitality/
+    url: /hospitality/
 awards:
   - 2019 AIA Central Pennsylvania Excellence in Design Award Winner
 hero_image_url: /assets/imported/2022/03/Asset-1.png
 related_projects:
   - title: WellSpan Health
-    url: https://warehausae.com/project/wellspan-health/
+    url: /project/wellspan-health/
     categories:
       - Architecture
       - Civil
     image_url: /assets/imported/elementor/thumbs/Wellspan-Family-Medicine-Roosevelt-Facility-060514_00035-r341zqsijysz6696okctwk7xq0nunyve5y36occb6o.webp
   - title: WellSpan Health Thomas Hart Medical Office Building
-    url: https://warehausae.com/project/wellspan-health-thomas-hart-medical-office-building/
+    url: /project/wellspan-health-thomas-hart-medical-office-building/
     categories:
       - Architecture
       - Civil
@@ -49,7 +49,7 @@ related_projects:
       - Structural
     image_url: /assets/imported/2023/08/ST_Thomas-Hart-Medical-Dental1-768x400.webp
   - title: Retail and Commercial
-    url: https://warehausae.com/project/retail-and-commercial/
+    url: /project/retail-and-commercial/
     categories:
       - Architecture
       - Civil

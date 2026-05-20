@@ -1,69 +1,76 @@
-{{# Case study template. #}}
+{{# Case study template. Live layout: photo + Project Info sidebar on top,
+    then H2 title + intro, then sections with H3 + body + image grid. #}}
 
-<section class="container-haus pt-32 pb-12 md:pt-40 grid md:grid-cols-2 gap-8 lg:gap-12">
-    <div class="aspect-[4/3] overflow-hidden rounded-lg bg-haus-ink-100">
-        {{ if hero_image_url }}<img src="{{ hero_image_url }}" alt="" class="w-full h-full object-cover">{{ /if }}
+<section class="bg-white pt-28 md:pt-32 pb-12">
+    <div class="mx-auto max-w-[1170px] px-6 md:px-10 grid md:grid-cols-[1.4fr_1fr] gap-8 lg:gap-12 items-start">
+        <div class="overflow-hidden bg-haus-ink-100" data-haus-fade-in>
+            {{ if hero_image_url }}<img src="{{ hero_image_url }}" alt="" class="w-full h-full object-cover" style="min-height: 420px;">{{ /if }}
+        </div>
+        <aside class="border border-haus-ink-200/60 shadow-sm bg-white px-6 py-7 lg:px-8 lg:py-8" data-haus-fade-in data-haus-fade-delay="120">
+            <p class="text-[15px] font-bold uppercase tracking-[0.1em] text-[#4b4b4b]">Project Info</p>
+            <dl class="mt-5 divide-y divide-haus-ink-200/60">
+                {{ if project_info:location }}
+                    <div class="py-3 grid grid-cols-[140px_1fr] gap-3 text-[14px]">
+                        <dt class="uppercase tracking-[0.06em] text-[#888]">Project Location</dt>
+                        <dd class="text-[#4b4b4b]">{{ project_info:location }}</dd>
+                    </div>
+                {{ /if }}
+                {{ if project_info:owner_client }}
+                    <div class="py-3 grid grid-cols-[140px_1fr] gap-3 text-[14px]">
+                        <dt class="uppercase tracking-[0.06em] text-[#888]">Owner / Client</dt>
+                        <dd class="text-[#4b4b4b]">{{ project_info:owner_client | nl2br }}</dd>
+                    </div>
+                {{ /if }}
+                {{ if project_info:project_type }}
+                    <div class="py-3 grid grid-cols-[140px_1fr] gap-3 text-[14px]">
+                        <dt class="uppercase tracking-[0.06em] text-[#888]">Project Type</dt>
+                        <dd class="text-[#4b4b4b]">{{ project_info:project_type }}</dd>
+                    </div>
+                {{ /if }}
+                {{ if project_info:completion_date }}
+                    <div class="py-3 grid grid-cols-[140px_1fr] gap-3 text-[14px]">
+                        <dt class="uppercase tracking-[0.06em] text-[#888]">Completion</dt>
+                        <dd class="text-[#4b4b4b]">{{ project_info:completion_date }}</dd>
+                    </div>
+                {{ /if }}
+                {{ if project_info:award }}
+                    <div class="py-3 grid grid-cols-[140px_1fr] gap-3 text-[14px]">
+                        <dt class="uppercase tracking-[0.06em] text-[#888]">Award</dt>
+                        <dd class="text-[#4b4b4b]">{{ project_info:award }}</dd>
+                    </div>
+                {{ /if }}
+            </dl>
+        </aside>
     </div>
-    <aside class="bg-haus-ink-50 rounded-lg p-8 self-start">
-        <h2 class="eyebrow text-haus-amber-700">Project Info</h2>
-        <dl class="mt-6 space-y-4 text-sm">
-            {{ if project_info:location }}
-                <div>
-                    <dt class="uppercase tracking-wide text-haus-ink-400">Project Location</dt>
-                    <dd class="mt-1 text-haus-ink-800 font-medium">{{ project_info:location }}</dd>
-                </div>
-            {{ /if }}
-            {{ if project_info:owner_client }}
-                <div>
-                    <dt class="uppercase tracking-wide text-haus-ink-400">Owner / Client</dt>
-                    <dd class="mt-1 text-haus-ink-800 font-medium">{{ project_info:owner_client | nl2br }}</dd>
-                </div>
-            {{ /if }}
-            {{ if project_info:project_type }}
-                <div>
-                    <dt class="uppercase tracking-wide text-haus-ink-400">Project Type</dt>
-                    <dd class="mt-1 text-haus-ink-800 font-medium">{{ project_info:project_type }}</dd>
-                </div>
-            {{ /if }}
-            {{ if project_info:completion_date }}
-                <div>
-                    <dt class="uppercase tracking-wide text-haus-ink-400">Completion Date</dt>
-                    <dd class="mt-1 text-haus-ink-800 font-medium">{{ project_info:completion_date }}</dd>
-                </div>
-            {{ /if }}
-            {{ if project_info:award }}
-                <div>
-                    <dt class="uppercase tracking-wide text-haus-ink-400">Award</dt>
-                    <dd class="mt-1 text-haus-ink-800 font-medium">{{ project_info:award }}</dd>
-                </div>
-            {{ /if }}
-        </dl>
-    </aside>
 </section>
 
-<section class="container-haus py-16 md:py-24 max-w-4xl">
-    <h1 class="text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight">{{ title }}</h1>
-    {{ if intro_prose }}<div class="mt-8 space-y-4 text-haus-ink-700 text-lg leading-relaxed">{{ intro_prose | nl2br }}</div>{{ /if }}
+<section class="bg-white pb-12">
+    <div class="mx-auto max-w-[1170px] px-6 md:px-10">
+        <h1 class="text-2xl md:text-[28px] font-bold text-[#4b4b4b] leading-snug max-w-[800px]">{{ title }}</h1>
+        {{ if intro_prose }}<div class="mt-6 space-y-4 text-[#666] text-[15px] leading-[1.7] max-w-[800px]">{{ intro_prose | nl2br }}</div>{{ /if }}
+    </div>
 </section>
 
 {{ if sections }}
-    <section class="container-haus pb-16 md:pb-24 space-y-16 md:space-y-24">
-        {{ sections }}
-            <div class="max-w-4xl">
-                <h2 class="text-2xl md:text-3xl font-medium tracking-tight">{{ heading }}</h2>
-                {{ if body }}<div class="mt-4 space-y-4 text-haus-ink-700 leading-relaxed">{{ body | nl2br }}</div>{{ /if }}
-                {{ if images }}
-                    <div class="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4">
-                        {{ images }}
-                            <figure>
-                                <img src="{{ url }}" alt="{{ caption }}" class="w-full aspect-square object-cover rounded">
-                                {{ if caption }}<figcaption class="mt-2 text-xs text-haus-ink-500">{{ caption }}</figcaption>{{ /if }}
-                            </figure>
-                        {{ /images }}
-                    </div>
-                {{ /if }}
-            </div>
-        {{ /sections }}
+    <section class="bg-white pb-16 md:pb-24">
+        <div class="mx-auto max-w-[1170px] px-6 md:px-10 space-y-12 md:space-y-16">
+            {{ sections }}
+                <div data-haus-fade-in>
+                    <h2 class="text-[22px] font-bold text-[#4b4b4b]">{{ heading }}</h2>
+                    {{ if body }}<div class="mt-3 space-y-4 text-[#666] text-[15px] leading-[1.7] max-w-[800px]">{{ body | nl2br }}</div>{{ /if }}
+                    {{ if images }}
+                        <div class="mt-6 grid grid-cols-2 md:grid-cols-4 gap-3">
+                            {{ images }}
+                                <figure>
+                                    <img src="{{ url }}" alt="{{ caption }}" class="w-full aspect-square object-cover">
+                                    {{ if caption }}<figcaption class="mt-2 text-[12px] text-[#888]">{{ caption }}</figcaption>{{ /if }}
+                                </figure>
+                            {{ /images }}
+                        </div>
+                    {{ /if }}
+                </div>
+            {{ /sections }}
+        </div>
     </section>
 {{ /if }}
 

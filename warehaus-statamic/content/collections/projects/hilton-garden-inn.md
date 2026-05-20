@@ -25,12 +25,12 @@ size: 100 room hotel
 completion_date: "2015"
 services_provided:
   - label: Architecture
-    url: https://warehausae.com/service/architecture/
+    url: /services/architecture/
   - label: Civil
-    url: https://warehausae.com/service/civil/
+    url: /services/civil_engineering/
 industries:
   - label: Retail and Hospitality
-    url: https://warehausae.com/industry/retail-and-hospitality/
+    url: /retail-and-hospitality/
 hero_image_url: /assets/imported/2023/04/Hilton-Garden-Inn-Hershey_Professional-20190521_0007.jpg
 gallery_images:
   - url: /assets/imported/2023/04/Hilton-Garden-Inn-Hershey_Professional-20190521_0007.jpg
@@ -53,38 +53,38 @@ gallery_images:
     alt: Indoor pool at Hilton Garden Inn in Hummelstown, Pennsylvania
 related_projects:
   - title: Ballpark Commons
-    url: https://warehausae.com/project/ballpark-commons/
+    url: /project/ballpark-commons/
     categories:
       - Architecture
       - Civil
       - Interiors
     image_url: /assets/imported/2026/04/Ballpark-Commons-site-image-700x700.png
   - title: Zion Lutheran Church Adaptive Reuse
-    url: https://warehausae.com/project/zion-lutheran-church-adaptive-reuse/
+    url: /project/zion-lutheran-church-adaptive-reuse/
     categories:
       - Architecture
       - Historic
     image_url: /assets/imported/2025/04/1Zion-Church-Duke-St_06112024-700x700.webp
   - title: Susquehanna Trail Dunkin’ & Jimmy John’s
-    url: https://warehausae.com/project/susquehanna-trail-dunkin-jimmy-johns/
+    url: /project/susquehanna-trail-dunkin-jimmy-johns/
     categories:
       - Civil
       - Civil Engineering
     image_url: /assets/imported/2025/06/Susquehanna-Trail-Dunkin-and-Jimmy-Johns-5-700x700.webp
   - title: McHenry Row Office and Courtyard by Marriott Hotel
-    url: https://warehausae.com/project/mchenry-row-office-hotel/
+    url: /project/mchenry-row-office-hotel/
     categories:
       - Architecture
       - Interiors
     image_url: /assets/imported/2023/04/2P1A5115-Copy.jpg
   - title: Blackworth Live Fire Grill
-    url: https://warehausae.com/project/blackworth-live-fire-grill/
+    url: /project/blackworth-live-fire-grill/
     categories:
       - Architecture
       - Interiors
     image_url: /assets/imported/2023/04/Blackworth-Live-Fire-Grill-21060207_0111.jpg
   - title: Courtyard by Marriott at Rowan Boulevard
-    url: https://warehausae.com/project/courtyard-by-marriott-rowan-boulevard/
+    url: /project/courtyard-by-marriott-rowan-boulevard/
     categories:
       - Architecture
     image_url: /assets/imported/2023/04/Marriott_Courtyard_Rowan_Boulevard_1-700x700.jpg

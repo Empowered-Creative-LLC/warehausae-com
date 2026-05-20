@@ -1,23 +1,32 @@
-{{# News post template. #}}
+{{# News post template. Live layout:
+      - Featured image full-bleed at top
+      - Category eyebrow + H1 title + date below the photo
+      - Body prose
+
+    Matches /{news-slug}/ on warehausae.com. #}}
 
 <article>
-    <header class="container-haus pt-32 pb-12 md:pt-40 max-w-4xl">
-        {{ if categories }}
-            <p class="flex flex-wrap gap-3 text-sm">
-                {{ categories }}
-                    {{ if url }}<a href="{{ url }}" class="text-haus-amber-700 hover:text-haus-amber-600 uppercase tracking-wide transition">{{ label }}</a>{{ else }}<span class="text-haus-amber-700 uppercase tracking-wide">{{ label }}</span>{{ /if }}
-                {{ /categories }}
-            </p>
-        {{ /if }}
-        <h1 class="mt-4 text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight">{{ title }}</h1>
-        {{ if published_date_text }}<p class="mt-4 text-haus-ink-500">{{ published_date_text }}</p>{{ /if }}
-    </header>
-
     {{ if featured_image_url }}
-        <figure class="container-haus mb-12">
-            <img src="{{ featured_image_url }}" alt="" class="w-full max-h-[60vh] object-cover rounded-lg">
+        <figure class="bg-white pt-24 md:pt-28">
+            <div class="mx-auto max-w-[1170px] px-6 md:px-10">
+                <img src="{{ featured_image_url }}" alt="" class="w-full max-h-[640px] object-cover" data-haus-fade-in>
+            </div>
         </figure>
     {{ /if }}
+
+    <header class="bg-white pt-10 pb-8">
+        <div class="mx-auto max-w-[1170px] px-6 md:px-10">
+            {{ if categories }}
+                <p class="flex flex-wrap gap-3 text-[12px] uppercase tracking-[0.1em] font-semibold">
+                    {{ categories }}
+                        {{ if url }}<a href="{{ url }}" class="text-haus-amber-600 hover:text-haus-amber-700 transition">{{ label }}</a>{{ else }}<span class="text-haus-amber-600">{{ label }}</span>{{ /if }}
+                    {{ /categories }}
+                </p>
+            {{ /if }}
+            <h1 class="mt-4 text-3xl md:text-[40px] font-bold text-[#4b4b4b] leading-tight max-w-[900px]">{{ title }}</h1>
+            {{ if published_date_text }}<p class="mt-4 text-[14px] text-[#888]">{{ published_date_text }}</p>{{ /if }}
+        </div>
+    </header>
 
     <div class="container-haus pb-16 md:pb-24 max-w-3xl">
         {{ if body_markdown }}

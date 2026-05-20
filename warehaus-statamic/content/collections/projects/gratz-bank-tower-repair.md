@@ -27,12 +27,12 @@ size: N/A
 completion_date: "2023"
 services_provided:
   - label: Architecture
-    url: https://warehausae.com/service/architecture/
+    url: /services/architecture/
   - label: Structural
-    url: https://warehausae.com/service/structural/
+    url: /services/structural/
 industries:
   - label: Building Sciences
-    url: https://warehausae.com/industry/building-sciences/
+    url: /building-sciences/
 hero_image_url: /assets/imported/2024/09/Screenshot-2024-09-17-083457-700x688.webp
 gallery_images:
   - url: /assets/imported/2024/09/Screenshot-2024-09-17-083457-700x688.webp
@@ -45,61 +45,61 @@ gallery_images:
     alt: 2023_12_05t16_19_04
 related_projects:
   - title: St. Paul Evangelical Lutheran Church
-    url: https://warehausae.com/project/st-paul-evangelical-lutheran-church/
+    url: /project/st-paul-evangelical-lutheran-church/
     categories:
       - Architecture
     image_url: /assets/imported/2023/04/St.-Paul-Lutheran-Church-111414_00684_Edited.jpg
   - title: UMFP Redwood Facade Restoration
-    url: https://warehausae.com/project/umfp-redwood-facade-restoration/
+    url: /project/umfp-redwood-facade-restoration/
     categories:
       - Architecture
       - Historic
     image_url: /assets/imported/2023/04/University-of-Maryland-Faculty-Physicians-Inc-082013_00006.jpg
   - title: Adams County Arts Council Renovation
-    url: https://warehausae.com/project/adams-county-arts-council-renovation/
+    url: /project/adams-county-arts-council-renovation/
     categories:
       - Architecture
     image_url: /assets/imported/2024/02/ACAC-Before-After-1-700x700.jpg
   - title: Saint John Paul II National Shrine
-    url: https://warehausae.com/project/saint-john-paul-ii-national-shrine/
+    url: /project/saint-john-paul-ii-national-shrine/
     categories:
       - Architecture
       - Civil
       - Interiors
     image_url: /assets/imported/2023/04/Saint-John-Paul-National-Shrine_Professional-042015_0010.jpg
   - title: 1895 Federal Building
-    url: https://warehausae.com/project/1895-federal-building/
+    url: /project/1895-federal-building/
     categories:
       - Architecture
       - Historic
     image_url: /assets/imported/2023/04/1895_Federal_Building_2.jpg
   - title: "Berks County Heritage Lock #47 Restoration"
-    url: https://warehausae.com/project/berks-county-heritage-lock-47-restoration/
+    url: /project/berks-county-heritage-lock-47-restoration/
     categories:
       - Architecture
       - Civil
       - Historic
     image_url: /assets/imported/2023/04/Berks-County-Lock-Civil.jpg
   - title: Carlisle Barracks Restoration
-    url: https://warehausae.com/project/carlisle-barracks-restoration/
+    url: /project/carlisle-barracks-restoration/
     categories:
       - Architecture
       - Structural
     image_url: /assets/imported/2023/04/DSCF8878-700x700.jpg
   - title: Hershey Community Building
-    url: https://warehausae.com/project/hershey-historic-community-building/
+    url: /project/hershey-historic-community-building/
     categories:
       - Architecture
       - Historic
     image_url: /assets/imported/2023/04/DSC02854.jpg
   - title: Lancaster County Courthouse and Prison
-    url: https://warehausae.com/project/lancaster-county-courthouse-and-prison/
+    url: /project/lancaster-county-courthouse-and-prison/
     categories:
       - Architecture
       - Historic
     image_url: /assets/imported/2023/04/The-Lancaster-County-Courthouse-093014_0007.jpg
   - title: Martin Brownstone
-    url: https://warehausae.com/project/martin-brownstone-restoration/
+    url: /project/martin-brownstone-restoration/
     categories:
       - Architecture
       - Interiors

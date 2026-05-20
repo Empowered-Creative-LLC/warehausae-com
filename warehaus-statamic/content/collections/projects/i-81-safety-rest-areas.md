@@ -26,9 +26,9 @@ size: Undisclosed
 completion_date: "2021"
 services_provided:
   - label: Architecture
-    url: https://warehausae.com/service/architecture/
+    url: /services/architecture/
   - label: Civil
-    url: https://warehausae.com/service/civil/
+    url: /services/civil_engineering/
 hero_image_url: /assets/imported/2023/07/I-81-Rest-Area-700x700.webp
 gallery_images:
   - url: /assets/imported/2023/07/I-81-Rest-Area-700x700.webp

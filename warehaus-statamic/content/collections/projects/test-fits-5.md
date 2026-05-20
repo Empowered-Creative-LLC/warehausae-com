@@ -20,26 +20,26 @@ size: Various Projects
 completion_date: Various Dates
 services_provided:
   - label: Architecture
-    url: /service/architecture/
+    url: /services/architecture/
   - label: Interiors
-    url: /service/interiors/
+    url: /services/interiors/
 awards:
   - 2019 AIA Central Pennsylvania Excellence in Design Award Winner
 hero_image_url: /assets/imported/2022/03/Asset-1.png
 related_projects:
   - title: Blackworth Live Fire Grill
-    url: https://warehausae.com/project/blackworth-live-fire-grill/
+    url: /project/blackworth-live-fire-grill/
     categories:
       - Architecture
       - Interiors
     image_url: /assets/imported/2023/04/Blackworth-Live-Fire-Grill-21060207_0111.jpg
   - title: Courtyard by Marriott at Rowan Boulevard
-    url: https://warehausae.com/project/courtyard-by-marriott-rowan-boulevard/
+    url: /project/courtyard-by-marriott-rowan-boulevard/
     categories:
       - Architecture
     image_url: /assets/imported/2023/04/Marriott_Courtyard_Rowan_Boulevard_1-700x700.jpg
   - title: Hilton Garden Inn
-    url: https://warehausae.com/project/hilton-garden-inn/
+    url: /project/hilton-garden-inn/
     categories:
       - Architecture
       - Civil

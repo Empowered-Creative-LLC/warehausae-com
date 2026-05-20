@@ -1,46 +1,70 @@
 {{# Portfolio category template. #}}
 
-<section class="relative h-[50vh] md:h-[65vh] min-h-[400px] flex items-center justify-center overflow-hidden bg-haus-ink-900 text-white">
-    {{ if hero_image_url }}
-        <img src="{{ hero_image_url }}" alt="" class="absolute inset-0 w-full h-full object-cover opacity-60">
-    {{ /if }}
-    <div class="absolute inset-0 bg-haus-ink-900/30"></div>
-    <div class="relative container-haus text-center">
-        {{ if tagline }}<p class="eyebrow text-haus-amber-300">{{ tagline }}</p>{{ /if }}
-        <h1 class="mt-6 text-5xl md:text-7xl lg:text-8xl font-medium tracking-tight uppercase">{{ category_name }}</h1>
+{{# Portfolio categories come in two shapes:
+      - "Flat" categories at /{slug}/ (e.g. /healthcare/) use the watermark
+        hero with the category name as the subtitle.
+      - "Industry" categories at /industry/{slug}/ (e.g. /industry/civil-
+        engineering/) use a simple "Industry: X" header — no watermark. #}}
+
+{{ if url | starts_with:"/industry/" }}
+    <section class="container-haus pt-32 pb-6 md:pt-40">
+        <h1 class="text-3xl md:text-4xl text-haus-ink-800">
+            <span class="text-haus-ink-400">Industry:</span> {{ category_name }}
+        </h1>
+        {{ if lead_heading }}<p class="mt-4 text-haus-amber-600 font-medium">{{ lead_heading }}</p>{{ /if }}
+    </section>
+{{ else }}
+    {{ partial:watermark_hero page_subtitle="{category_name}" }}
+{{ /if }}
+
+{{# Lead block — heading + intro prose on left (46px/700 with amber
+    divider, matches live's "An Optimized Patient Experience"), capability
+    groups on the right in two columns labeled by heading. #}}
+<section class="bg-white py-16 md:py-24">
+    <div class="mx-auto max-w-[1170px] px-6 md:px-10 grid lg:grid-cols-[1fr_1fr] gap-12 lg:gap-16 items-start">
+        <div data-haus-fade-in>
+            {{ if lead_heading }}
+                <h2 class="text-3xl md:text-[46px] font-bold text-[#4b4b4b] leading-[1.13]">{{ lead_heading }}</h2>
+                <div class="mt-4 w-[60px] h-[3px] bg-haus-amber-500"></div>
+            {{ /if }}
+            {{ if intro_prose }}<div class="mt-8 space-y-4 text-[#666] text-[17px] leading-[1.6]">{{ intro_prose | nl2br }}</div>{{ /if }}
+        </div>
+        {{ if capability_groups }}
+            <aside class="grid sm:grid-cols-2 gap-x-8 gap-y-4" data-haus-fade-in data-haus-fade-delay="150">
+                {{ capability_groups }}
+                    <div>
+                        <h3 class="text-[18px] font-bold text-[#4b4b4b]">{{ heading }}</h3>
+                        <ul class="mt-3 space-y-1.5 text-[15px] text-[#666]">
+                            {{ items }}<li>{{ value }}</li>{{ /items }}
+                        </ul>
+                    </div>
+                {{ /capability_groups }}
+            </aside>
+        {{ /if }}
     </div>
 </section>
 
-<section class="container-haus py-16 md:py-24 grid lg:grid-cols-3 gap-12">
-    <div class="lg:col-span-2">
-        {{ if lead_heading }}<h2 class="text-3xl md:text-4xl font-medium tracking-tight">{{ lead_heading }}</h2>{{ /if }}
-        {{ if intro_prose }}<div class="mt-6 space-y-4 text-haus-ink-600 text-lg leading-relaxed">{{ intro_prose | nl2br }}</div>{{ /if }}
-    </div>
-    {{ if capability_groups }}
-        <aside class="lg:col-span-1 space-y-8">
-            {{ capability_groups }}
-                <div>
-                    <h3 class="eyebrow">{{ heading }}</h3>
-                    <ul class="check-list mt-3 space-y-1.5 text-haus-ink-700">
-                        {{ items }}<li>{{ value }}</li>{{ /items }}
-                    </ul>
-                </div>
-            {{ /capability_groups }}
-        </aside>
-    {{ /if }}
-</section>
+{{# Mid-page photo strip (full-bleed image between sections) #}}
+{{ if mid_image_url }}
+    <section class="bg-haus-ink-900">
+        <img src="{{ mid_image_url }}" alt="" class="w-full h-[420px] md:h-[540px] object-cover">
+    </section>
+{{ /if }}
 
+{{# A Warehaus Partnership Brings — centered heading + amber divider, then
+    a 2x2 grid of large amber checkmark icons with title + body. #}}
 {{ if partnership_cards }}
-    <section class="bg-haus-ink-50 py-16 md:py-24">
-        <div class="container-haus">
-            <h2 class="text-3xl md:text-4xl font-medium tracking-tight text-center">A Warehaus Partnership Brings</h2>
-            <div class="mt-12 grid md:grid-cols-2 gap-x-12 gap-y-8">
+    <section class="bg-white py-16 md:py-24">
+        <div class="mx-auto max-w-[1170px] px-6 md:px-10">
+            <h2 class="text-3xl md:text-[46px] font-bold text-[#4b4b4b] leading-[1.13] text-center">A Warehaus Partnership Brings</h2>
+            <div class="mt-4 mx-auto w-[60px] h-[3px] bg-haus-amber-500"></div>
+            <div class="mt-12 md:mt-16 grid md:grid-cols-2 gap-x-16 gap-y-12">
                 {{ partnership_cards }}
-                    <div class="flex gap-4">
-                        <span class="text-haus-amber-700 text-xl shrink-0">✓</span>
+                    <div class="grid grid-cols-[60px_1fr] gap-x-6 items-start" data-haus-fade-in>
+                        <span aria-hidden="true" class="text-haus-amber-500 text-[44px] leading-none font-bold">&#10003;</span>
                         <div>
-                            <h3 class="text-lg font-medium">{{ title }}</h3>
-                            <p class="mt-1 text-haus-ink-600">{{ body }}</p>
+                            <h3 class="text-[22px] font-medium text-[#4b4b4b] leading-tight">{{ title }}</h3>
+                            <p class="mt-2 text-[15px] text-[#666] leading-[1.6]">{{ body }}</p>
                         </div>
                     </div>
                 {{ /partnership_cards }}
@@ -49,33 +73,24 @@
     </section>
 {{ /if }}
 
+{{# Testimonial — left card with quote in a bordered/light-gray box, right
+    column with H2 heading + amber divider. #}}
 {{ if testimonial:quote }}
-    <section class="container-haus py-16 md:py-24">
-        <blockquote class="max-w-3xl mx-auto text-center">
-            <p class="text-xl md:text-2xl leading-relaxed text-haus-ink-700">&ldquo;{{ testimonial:quote }}&rdquo;</p>
-            <footer class="mt-6">
-                <p class="font-medium text-haus-ink-800">{{ testimonial:attribution_name }}</p>
-                {{ if testimonial:attribution_org }}<p class="text-sm text-haus-ink-500">{{ testimonial:attribution_org }}</p>{{ /if }}
-            </footer>
-        </blockquote>
-    </section>
-{{ /if }}
-
-{{ if recent_projects }}
-    <section class="bg-haus-ink-50 py-16 md:py-24">
-        <div class="container-haus">
-            <h2 class="text-3xl md:text-4xl font-medium tracking-tight text-center">Recent Projects</h2>
-            <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                {{ recent_projects limit="9" }}
-                    <a href="{{ url }}" class="group block">
-                        <div class="aspect-[4/3] bg-haus-ink-200 rounded overflow-hidden">
-                            {{ if image_url }}<img src="{{ image_url }}" alt="{{ title }}" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">{{ /if }}
-                        </div>
-                        <h3 class="mt-4 text-lg font-medium group-hover:text-haus-amber-700 transition">{{ title }}</h3>
-                        {{ if categories }}<p class="mt-1 text-sm text-haus-ink-500">{{ categories | join:", " }}</p>{{ /if }}
-                    </a>
-                {{ /recent_projects }}
+    <section class="bg-white py-16 md:py-24">
+        <div class="mx-auto max-w-[1170px] px-6 md:px-10 grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
+            <blockquote class="border border-haus-ink-200/60 bg-white shadow-sm px-8 py-10 text-center">
+                <p class="text-[15px] font-bold text-[#4b4b4b] leading-relaxed">&ldquo;{{ testimonial:quote }}&rdquo;</p>
+                <footer class="mt-8 bg-[#f5f5f5] -mx-8 -mb-10 px-8 py-5 text-center">
+                    <p class="text-[13px] uppercase tracking-[0.08em] text-[#4b4b4b]">{{ testimonial:attribution_name }}</p>
+                    {{ if testimonial:attribution_org }}<p class="mt-0.5 text-[13px] uppercase tracking-[0.08em] text-[#888]">{{ testimonial:attribution_org }}</p>{{ /if }}
+                </footer>
+            </blockquote>
+            <div>
+                <h2 class="text-3xl md:text-[46px] font-bold text-[#4b4b4b] leading-[1.13]">What our clients, partners, and community are saying about our work.</h2>
+                <div class="mt-4 w-[60px] h-[3px] bg-haus-amber-500"></div>
             </div>
         </div>
     </section>
 {{ /if }}
+
+{{ partial:recent_projects_carousel :projects="recent_projects" }}

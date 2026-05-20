@@ -48,31 +48,31 @@ size: Various Projects
 completion_date: Various Dates
 services_provided:
   - label: Architecture
-    url: /service/architecture/
+    url: /services/architecture/
   - label: Interiors
-    url: /service/interiors/
+    url: /services/interiors/
 industries:
   - label: Office
-    url: /industry/office/
+    url: /office/
   - label: Medical
-    url: /industry/medical/
+    url: /medical/
   - label: Hospitality
-    url: /industry/hospitality/
+    url: /hospitality/
 hero_image_url: /assets/imported/2022/03/Asset-1.png
 related_projects:
   - title: Inn at Wyndridge Farm
-    url: https://warehausae.com/project/inn-at-wyndridge-farm/
+    url: /project/inn-at-wyndridge-farm/
     categories:
       - Interiors
     image_url: /assets/imported/2023/04/The-Inn-at-Wyndridge-12_1979-0029-700x700.jpg
   - title: Wyndridge Farm
-    url: https://warehausae.com/project/wyndridge-farm/
+    url: /project/wyndridge-farm/
     categories:
       - Civil
       - Interiors
     image_url: /assets/imported/2023/04/The-Inn-at-Wyndridge-Farm_Professional-102314_00039.jpg
   - title: George Spangler Farm
-    url: https://warehausae.com/project/george-spangler-farm/
+    url: /project/george-spangler-farm/
     categories:
       - Architecture
       - Historic

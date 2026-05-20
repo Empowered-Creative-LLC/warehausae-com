@@ -32,10 +32,10 @@ size: 150 acres
 completion_date: "2019"
 services_provided:
   - label: Civil
-    url: https://warehausae.com/service/civil/
+    url: /services/civil_engineering/
 industries:
   - label: Residential Development
-    url: https://warehausae.com/industry/residential-development/
+    url: /residential-development/
 hero_image_url: /assets/imported/2023/07/Donwood-Estates-6-700x700.jpg
 gallery_images:
   - url: /assets/imported/2023/07/Donwood-Estates-4-700x700.webp
@@ -48,17 +48,17 @@ gallery_images:
     alt: Donwood Estates
 related_projects:
   - title: Multi-Family Developments
-    url: https://warehausae.com/project/multi-family-land-development/
+    url: /project/multi-family-land-development/
     categories:
       - Civil
     image_url: /assets/imported/elementor/thumbs/New-Brittany-8-r342oqc28f0dszyjrv6sor827ri4ab2ilmeuy5ajs0.webp
   - title: Single Family Lots
-    url: https://warehausae.com/project/single-family-lots-civil-engineering/
+    url: /project/single-family-lots-civil-engineering/
     categories:
       - Civil
     image_url: /assets/imported/elementor/thumbs/Wattenschaidt-Homes_09102024_0017-qwo2aomocah9wj7x3o1vitzgierafaayrv6z0vhqjk.webp
   - title: New Freedom Borough Rail Trail Improvements
-    url: https://warehausae.com/project/new-freedom-borough-rail-trail-improvements/
+    url: /project/new-freedom-borough-rail-trail-improvements/
     categories: []
     image_url: /assets/imported/2023/12/Rail-Trail-Improvements-4-700x700.webp
 is_test_fits_subpage: false

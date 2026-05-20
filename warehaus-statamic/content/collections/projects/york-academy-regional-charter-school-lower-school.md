@@ -24,20 +24,20 @@ size: 86,000 sf
 completion_date: "2015"
 services_provided:
   - label: Architecture
-    url: https://warehausae.com/service/architecture/
+    url: /services/architecture/
   - label: Civil
-    url: https://warehausae.com/service/civil/
+    url: /services/civil_engineering/
   - label: Historic
-    url: https://warehausae.com/service/historic/
+    url: /services/historic/
   - label: Interiors
-    url: https://warehausae.com/service/interiors/
+    url: /services/interiors/
 industries:
   - label: Adaptive Reuse
-    url: https://warehausae.com/industry/adaptive-reuse/
+    url: /adaptive-reuse/
   - label: Education
-    url: https://warehausae.com/industry/education/
+    url: /education/
   - label: Historic
-    url: https://warehausae.com/industry/historic/
+    url: /industry/historic/
 hero_image_url: /assets/imported/2023/04/York-Academy-Regional-Charter-Upper-School_Professional-093011_00101.webp
 gallery_images:
   - url: /assets/imported/2023/04/York-Academy-Regional-Charter-Upper-School_Professional-093011_00101.webp
@@ -54,32 +54,32 @@ gallery_images:
     alt: K-8 students at York Academy Regional Charter School
 related_projects:
   - title: York College of Pennsylvania Northside Commons Addition
-    url: https://warehausae.com/project/york-college-of-pennsylvania-northside-commons-addition/
+    url: /project/york-college-of-pennsylvania-northside-commons-addition/
     categories:
       - Architecture
       - Civil
       - Structural
     image_url: /assets/imported/2025/04/Northside-Commons-Before-04082025-15-700x700.webp
   - title: Appell Center Concessions Renovation
-    url: https://warehausae.com/project/appell-center-concessions-renovation/
+    url: /project/appell-center-concessions-renovation/
     categories:
       - Architecture
     image_url: /assets/imported/2025/06/Appell-Concessions-8-700x700.webp
   - title: York Academy Regional Charter School Legacy Hall
-    url: https://warehausae.com/project/york-academy-regional-charter-school-legacy-hall/
+    url: /project/york-academy-regional-charter-school-legacy-hall/
     categories:
       - Architecture
       - Civil
       - Interiors
     image_url: /assets/imported/2025/09/York-Academy-Legacy-Hall-2-700x700.jpg
   - title: University Lofts
-    url: https://warehausae.com/project/university-lofts/
+    url: /project/university-lofts/
     categories:
       - Architecture
       - Historic
     image_url: /assets/imported/2023/03/University-Lofts_Rendering-052419_00024-700x700.jpg
   - title: 210 York Street Office and Recording Studio
-    url: https://warehausae.com/project/210-york-street-office/
+    url: /project/210-york-street-office/
     categories:
       - Architecture
       - Civil

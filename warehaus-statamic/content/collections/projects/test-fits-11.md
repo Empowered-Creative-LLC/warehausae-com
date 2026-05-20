@@ -20,9 +20,9 @@ size: Various Projects
 completion_date: Various Dates
 services_provided:
   - label: Architecture
-    url: /service/architecture/
+    url: /services/architecture/
   - label: Interiors
-    url: /service/interiors/
+    url: /services/interiors/
 awards:
   - 2019 AIA Central Pennsylvania Excellence in Design Award Winner
 hero_image_url: /assets/imported/2022/03/Asset-1.png
@@ -31,17 +31,17 @@ gallery_images:
     alt: Test Fit Capabilities
 related_projects:
   - title: WellSpan Health Shrewsbury Community Hospital
-    url: https://warehausae.com/project/wellspan-health-shrewsbury-community-hospital/
+    url: /project/wellspan-health-shrewsbury-community-hospital/
     categories:
       - Civil
     image_url: /assets/imported/2024/04/Wellspan-Shrewsbury-Groundbreaking-Drone-23-700x700.webp
   - title: Penn-Mar Human Services Far Hills Office Renovation
-    url: https://warehausae.com/project/penn-mar-human-services-far-hills-office-renovation/
+    url: /project/penn-mar-human-services-far-hills-office-renovation/
     categories:
       - Architecture
     image_url: /assets/imported/2025/02/Penn-Mar-Far-Hills-4-700x700.webp
   - title: 4844 Market Street Self-Storage
-    url: https://warehausae.com/project/4844-market-street-self-storage/
+    url: /project/4844-market-street-self-storage/
     categories:
       - Civil
     image_url: /assets/imported/2024/04/Moove-In-Self-Storage-8-700x700.webp

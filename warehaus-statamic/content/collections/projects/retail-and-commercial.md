@@ -30,14 +30,14 @@ size: Various Projects
 completion_date: Various Dates
 services_provided:
   - label: Architecture
-    url: https://warehausae.com/service/architecture/
+    url: /services/architecture/
   - label: Civil
-    url: https://warehausae.com/service/civil/
+    url: /services/civil_engineering/
 industries:
   - label: Retail
-    url: https://warehausae.com/industry/retail/
+    url: /retail/
   - label: Commercial
-    url: https://warehausae.com/industry/commercial/
+    url: /commercial/
 hero_image_url: /assets/imported/elementor/thumbs/Kennies-Market-20130926_0006-qtq3ta7rs7u29u7rmqjjkerc4ygmarv3i1figjav8g.jpg
 gallery_images:
   - url: /assets/imported/elementor/thumbs/Kennies-Market-20130926_0006-qtq3ta7rs7u29u7rmqjjkerc4ygmarv3i1figjav8g.jpg
@@ -64,19 +64,19 @@ gallery_images:
     alt: Hanover Crossings 49
 related_projects:
   - title: McHenry Row Office and Courtyard by Marriott Hotel
-    url: https://warehausae.com/project/mchenry-row-office-hotel/
+    url: /project/mchenry-row-office-hotel/
     categories:
       - Architecture
       - Interiors
     image_url: /assets/imported/2023/04/2P1A5115-Copy.jpg
   - title: Blackworth Live Fire Grill
-    url: https://warehausae.com/project/blackworth-live-fire-grill/
+    url: /project/blackworth-live-fire-grill/
     categories:
       - Architecture
       - Interiors
     image_url: /assets/imported/2023/04/Blackworth-Live-Fire-Grill-21060207_0111.jpg
   - title: Courtyard by Marriott at Rowan Boulevard
-    url: https://warehausae.com/project/courtyard-by-marriott-rowan-boulevard/
+    url: /project/courtyard-by-marriott-rowan-boulevard/
     categories:
       - Architecture
     image_url: /assets/imported/2023/04/Marriott_Courtyard_Rowan_Boulevard_1-700x700.jpg

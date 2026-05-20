@@ -22,16 +22,16 @@ size: 13,000 sf
 completion_date: "2018"
 services_provided:
   - label: Architecture
-    url: https://warehausae.com/service/architecture/
+    url: /services/architecture/
   - label: Civil
-    url: https://warehausae.com/service/civil/
+    url: /services/civil_engineering/
   - label: Structural
-    url: https://warehausae.com/service/structural/
+    url: /services/structural/
 industries:
   - label: Adaptive Reuse
-    url: https://warehausae.com/industry/adaptive-reuse/
+    url: /adaptive-reuse/
   - label: Education
-    url: https://warehausae.com/industry/education/
+    url: /education/
 hero_image_url: /assets/imported/2023/09/York-College-Civil-Engineering-Center0614201902-of-6.webp
 gallery_images:
   - url: /assets/imported/2023/04/York-College-Civil-Engineering-Center0614201904-of-6.webp
@@ -40,7 +40,7 @@ gallery_images:
     alt: Dynamic space design for growing civil engineering program
 related_projects:
   - title: 210 York Street Office and Recording Studio
-    url: https://warehausae.com/project/210-york-street-office/
+    url: /project/210-york-street-office/
     categories:
       - Architecture
       - Civil
@@ -48,7 +48,7 @@ related_projects:
       - Interiors
     image_url: /assets/imported/2023/03/210_York_Street15-of-00-1.jpg
   - title: 320 North George Street Office
-    url: https://warehausae.com/project/320-north-george-street-office/
+    url: /project/320-north-george-street-office/
     categories:
       - Architecture
       - Civil
@@ -56,25 +56,25 @@ related_projects:
       - Interiors
     image_url: /assets/imported/2023/03/Warehaus-Headquarters-08_2017-0162.jpg
   - title: Blackworth Live Fire Grill
-    url: https://warehausae.com/project/blackworth-live-fire-grill/
+    url: /project/blackworth-live-fire-grill/
     categories:
       - Architecture
       - Interiors
     image_url: /assets/imported/2023/04/Blackworth-Live-Fire-Grill-21060207_0111.jpg
   - title: Office Rooftop Plaza
-    url: https://warehausae.com/project/office-rooftop-plaza/
+    url: /project/office-rooftop-plaza/
     categories:
       - Architecture
       - Historic
     image_url: /assets/imported/2023/04/2020.05.16-RENDERING-AERIAL.jpg
   - title: Bischoff Inn
-    url: https://warehausae.com/project/bischoff-inn/
+    url: /project/bischoff-inn/
     categories:
       - Architecture
       - Historic
     image_url: /assets/imported/2023/08/12-Bischoff-interior-second-flr-after-rotated-700x700.webp
   - title: York Academy Regional Charter School – Lower School
-    url: https://warehausae.com/project/york-academy-regional-charter-school-lower-school/
+    url: /project/york-academy-regional-charter-school-lower-school/
     categories:
       - Architecture
       - Civil
@@ -82,14 +82,14 @@ related_projects:
       - Interiors
     image_url: /assets/imported/2023/04/York-Academy-Regional-Charter-Upper-School_Professional-093011_00101.webp
   - title: George Spangler Farm
-    url: https://warehausae.com/project/george-spangler-farm/
+    url: /project/george-spangler-farm/
     categories:
       - Architecture
       - Historic
       - Interiors
     image_url: /assets/imported/2023/04/Warehaus_GeorgeSpanglerFarm-0032.webp
   - title: York County History Center
-    url: https://warehausae.com/project/york-county-history-center/
+    url: /project/york-county-history-center/
     categories:
       - Architecture
       - Historic
@@ -97,14 +97,14 @@ related_projects:
       - Structural
     image_url: /assets/imported/2023/04/York-County-History-Center_Rendering_Third-Floor.webp
   - title: Logos Academy
-    url: https://warehausae.com/project/logos-academy/
+    url: /project/logos-academy/
     categories:
       - Architecture
       - Civil
       - Structural
-    image_url: http://www.warehausae.com/
+    image_url: /assets/imported/2023/04/Logos-Academy-20110505_0159.jpg
   - title: Penn State Bakery and Food Services
-    url: https://warehausae.com/project/penn-state-bakery-and-food-services/
+    url: /project/penn-state-bakery-and-food-services/
     categories:
       - Architecture
     image_url: /assets/imported/2023/05/Penn-State-Warehouse-and-Bakery_Professional-041516_0015.jpg

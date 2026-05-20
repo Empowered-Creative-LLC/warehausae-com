@@ -34,11 +34,10 @@
     <meta property="og:url" content="{{ permalink }}">
     {{ if seo_og_image_url }}<meta property="og:image" content="{{ seo_og_image_url }}">{{ /if }}
 
-    {{# Fonts: free Inter as a stand-in for the licensed Neue Haas Unica Pro
-        on the live site. Swap at launch once the client supplies licensed
-        font files. #}}
-    <link rel="preconnect" href="https://fonts.bunny.net">
-    <link href="https://fonts.bunny.net/css?family=inter:300,400,500,600,700" rel="stylesheet">
+    {{# Using the system Helvetica Neue stack as a free stand-in for the
+        licensed Neue Haas Unica Pro. No web font import needed — fonts come
+        from the OS. Swap at launch once Neue Haas Unica Pro WOFF2 files
+        land under public/fonts/. #}}
 
     {{ vite src="resources/css/app.css|resources/js/app.js" }}
 </head>

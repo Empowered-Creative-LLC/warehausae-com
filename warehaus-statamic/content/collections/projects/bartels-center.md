@@ -39,12 +39,12 @@ size: 3,500 sf
 completion_date: "2023"
 services_provided:
   - label: Architecture
-    url: https://warehausae.com/service/architecture/
+    url: /services/architecture/
 industries:
   - label: Healthcare
-    url: https://warehausae.com/industry/healthcare/
+    url: /healthcare/
   - label: Office
-    url: https://warehausae.com/industry/office/
+    url: /office/
 hero_image_url: /assets/imported/2024/08/bartells-conf-center-14-700x700.jpg
 gallery_images:
   - url: /assets/imported/2024/08/bartells-conf-center-13-700x700.webp
@@ -65,26 +65,26 @@ gallery_images:
     alt: WellSpan Health Bruce M. Bartels Management and Governance Center
 related_projects:
   - title: Wagman, Inc. Office
-    url: https://warehausae.com/project/wagman-inc-office/
+    url: /project/wagman-inc-office/
     categories:
       - Architecture
       - Interiors
     image_url: /assets/imported/2025/10/Wagman-offices-3265-Farmtrail-Rd-39-700x700.jpg
   - title: Cumberland Township Municipal Building
-    url: https://warehausae.com/project/cumberland-township-municipal-building/
+    url: /project/cumberland-township-municipal-building/
     categories:
       - Architecture
       - Civil
       - Interiors
     image_url: /assets/imported/2025/06/Cumberland_Township_Municipal_Building_Groundbreaking20250617_0029-700x700.webp
   - title: Volvo North America Living Office Transformation
-    url: https://warehausae.com/project/volvo-north-america-office-transformation/
+    url: /project/volvo-north-america-office-transformation/
     categories:
       - Architecture
       - Interiors
     image_url: /assets/imported/2025/11/Volvo-Construction-Equipment-497-HDR-700x700.jpg
   - title: 1110 East Princess Street Office
-    url: https://warehausae.com/project/1110-princess-street-office/
+    url: /project/1110-princess-street-office/
     categories:
       - Architecture
       - Civil
@@ -92,7 +92,7 @@ related_projects:
       - Structural
     image_url: /assets/imported/2023/03/Kinsley_1110_East_Princess_St_Interior_062619_01-of-05.jpg
   - title: 320 North George Street Office
-    url: https://warehausae.com/project/320-north-george-street-office/
+    url: /project/320-north-george-street-office/
     categories:
       - Architecture
       - Civil
@@ -100,7 +100,7 @@ related_projects:
       - Interiors
     image_url: /assets/imported/2023/03/Warehaus-Headquarters-08_2017-0162.jpg
   - title: Fuchs North America
-    url: https://warehausae.com/project/fuchs-north-america/
+    url: /project/fuchs-north-america/
     categories:
       - Architecture
     image_url: /assets/imported/2023/03/2014_0023_00_N22_lgjpg.jpg

@@ -26,10 +26,10 @@ client: Various Clients
 size: Various Projects
 services_provided:
   - label: Civil
-    url: /service/civil/
+    url: /services/civil/
 industries:
   - label: Civil
-    url: /service/civil/
+    url: /services/civil/
 hero_image_url: /assets/imported/elementor/thumbs/Wattenschaidt-Homes_09102024_0017-qwo2aomocah9wj7x3o1vitzgierafaayrv6z0vhqjk.webp
 gallery_images:
   - url: /assets/imported/elementor/thumbs/Wattenschaidt-Homes_09102024_0017-qwo2aomocah9wj7x3o1vitzgierafaayrv6z0vhqjk.webp
@@ -48,17 +48,17 @@ gallery_images:
     alt: wattenschaidt-homes_09102024_0001
 related_projects:
   - title: Donwood Estates
-    url: https://warehausae.com/project/donwood-estates/
+    url: /project/donwood-estates/
     categories:
       - Civil
     image_url: /assets/imported/2023/07/Donwood-Estates-6-700x700.jpg
   - title: Multi-Family Developments
-    url: https://warehausae.com/project/multi-family-land-development/
+    url: /project/multi-family-land-development/
     categories:
       - Civil
     image_url: /assets/imported/elementor/thumbs/New-Brittany-8-r342oqc28f0dszyjrv6sor827ri4ab2ilmeuy5ajs0.webp
   - title: New Freedom Borough Rail Trail Improvements
-    url: https://warehausae.com/project/new-freedom-borough-rail-trail-improvements/
+    url: /project/new-freedom-borough-rail-trail-improvements/
     categories:
       - Civil
     image_url: /assets/imported/2023/12/Rail-Trail-Improvements-4-700x700.webp

@@ -27,14 +27,14 @@ size: 29,305 sf
 completion_date: In Process
 services_provided:
   - label: Architecture
-    url: https://warehausae.com/service/architecture/
+    url: /services/architecture/
   - label: Historic
-    url: https://warehausae.com/service/historic/
+    url: /services/historic/
 industries:
   - label: Building Sciences
-    url: https://warehausae.com/industry/building-sciences/
+    url: /building-sciences/
   - label: Historic
-    url: https://warehausae.com/industry/historic/
+    url: /industry/historic/
 hero_image_url: /assets/imported/2023/04/1895_Federal_Building_2.jpg
 gallery_images:
   - url: /assets/imported/2023/04/1895_Federal_Building-1-700x700.jpg
@@ -45,30 +45,30 @@ gallery_images:
     alt: Rendering of the 1895 Federal Building in York, Pennsylvania
 related_projects:
   - title: Gratz Bank Tower Repair
-    url: https://warehausae.com/project/gratz-bank-tower-repair/
+    url: /project/gratz-bank-tower-repair/
     categories:
       - Architecture
       - Structural
     image_url: /assets/imported/2024/09/Screenshot-2024-09-17-083457-700x688.webp
   - title: Zion Lutheran Church Adaptive Reuse
-    url: https://warehausae.com/project/zion-lutheran-church-adaptive-reuse/
+    url: /project/zion-lutheran-church-adaptive-reuse/
     categories:
       - Architecture
       - Historic
     image_url: /assets/imported/2025/04/1Zion-Church-Duke-St_06112024-700x700.webp
   - title: Appell Center Concessions Renovation
-    url: https://warehausae.com/project/appell-center-concessions-renovation/
+    url: /project/appell-center-concessions-renovation/
     categories:
       - Architecture
     image_url: /assets/imported/2025/06/Appell-Concessions-8-700x700.webp
   - title: University Lofts
-    url: https://warehausae.com/project/university-lofts/
+    url: /project/university-lofts/
     categories:
       - Architecture
       - Historic
     image_url: /assets/imported/2023/03/University-Lofts_Rendering-052419_00024-700x700.jpg
   - title: 320 North George Street Office
-    url: https://warehausae.com/project/320-north-george-street-office/
+    url: /project/320-north-george-street-office/
     categories:
       - Architecture
       - Civil
@@ -76,19 +76,19 @@ related_projects:
       - Interiors
     image_url: /assets/imported/2023/03/Warehaus-Headquarters-08_2017-0162.jpg
   - title: Office Rooftop Plaza
-    url: https://warehausae.com/project/office-rooftop-plaza/
+    url: /project/office-rooftop-plaza/
     categories:
       - Architecture
       - Historic
     image_url: /assets/imported/2023/04/2020.05.16-RENDERING-AERIAL.jpg
   - title: Bischoff Inn
-    url: https://warehausae.com/project/bischoff-inn/
+    url: /project/bischoff-inn/
     categories:
       - Architecture
       - Historic
     image_url: /assets/imported/2023/08/12-Bischoff-interior-second-flr-after-rotated-700x700.webp
   - title: York Academy Regional Charter School – Lower School
-    url: https://warehausae.com/project/york-academy-regional-charter-school-lower-school/
+    url: /project/york-academy-regional-charter-school-lower-school/
     categories:
       - Architecture
       - Civil
@@ -96,14 +96,14 @@ related_projects:
       - Interiors
     image_url: /assets/imported/2023/04/York-Academy-Regional-Charter-Upper-School_Professional-093011_00101.webp
   - title: George Spangler Farm
-    url: https://warehausae.com/project/george-spangler-farm/
+    url: /project/george-spangler-farm/
     categories:
       - Architecture
       - Historic
       - Interiors
     image_url: /assets/imported/2023/04/Warehaus_GeorgeSpanglerFarm-0032.webp
   - title: York County History Center
-    url: https://warehausae.com/project/york-county-history-center/
+    url: /project/york-county-history-center/
     categories:
       - Architecture
       - Historic
@@ -111,84 +111,84 @@ related_projects:
       - Structural
     image_url: /assets/imported/2023/04/York-County-History-Center_Rendering_Third-Floor.webp
   - title: Capitol Theatre
-    url: https://warehausae.com/project/capitol-theatre/
+    url: /project/capitol-theatre/
     categories:
       - Architecture
     image_url: /assets/imported/2023/07/Capitol_Theatre-11_2018-0001.jpg
   - title: Saint John Paul II National Shrine
-    url: https://warehausae.com/project/saint-john-paul-ii-national-shrine/
+    url: /project/saint-john-paul-ii-national-shrine/
     categories:
       - Architecture
       - Civil
       - Interiors
     image_url: /assets/imported/2023/04/Saint-John-Paul-National-Shrine_Professional-042015_0010.jpg
   - title: "Berks County Heritage Lock #47 Restoration"
-    url: https://warehausae.com/project/berks-county-heritage-lock-47-restoration/
+    url: /project/berks-county-heritage-lock-47-restoration/
     categories:
       - Architecture
       - Civil
       - Historic
     image_url: /assets/imported/2023/04/Berks-County-Lock-Civil.jpg
   - title: Carlisle Barracks Restoration
-    url: https://warehausae.com/project/carlisle-barracks-restoration/
+    url: /project/carlisle-barracks-restoration/
     categories:
       - Architecture
       - Structural
     image_url: /assets/imported/2023/04/DSCF8878-700x700.jpg
   - title: Hershey Community Building
-    url: https://warehausae.com/project/hershey-historic-community-building/
+    url: /project/hershey-historic-community-building/
     categories:
       - Architecture
       - Historic
     image_url: /assets/imported/2023/04/DSC02854.jpg
   - title: Lancaster County Courthouse and Prison
-    url: https://warehausae.com/project/lancaster-county-courthouse-and-prison/
+    url: /project/lancaster-county-courthouse-and-prison/
     categories:
       - Architecture
       - Historic
     image_url: /assets/imported/2023/04/The-Lancaster-County-Courthouse-093014_0007.jpg
   - title: Martin Brownstone
-    url: https://warehausae.com/project/martin-brownstone-restoration/
+    url: /project/martin-brownstone-restoration/
     categories:
       - Architecture
       - Interiors
     image_url: /assets/imported/2023/04/Martin_Brownstone_After_1-700x700.jpg
   - title: St. Paul Evangelical Lutheran Church
-    url: https://warehausae.com/project/st-paul-evangelical-lutheran-church/
+    url: /project/st-paul-evangelical-lutheran-church/
     categories:
       - Architecture
     image_url: /assets/imported/2023/04/St.-Paul-Lutheran-Church-111414_00684_Edited.jpg
   - title: UMFP Redwood Facade Restoration
-    url: https://warehausae.com/project/umfp-redwood-facade-restoration/
+    url: /project/umfp-redwood-facade-restoration/
     categories:
       - Architecture
       - Historic
     image_url: /assets/imported/2023/04/University-of-Maryland-Faculty-Physicians-Inc-082013_00006.jpg
   - title: Little Round Top
-    url: https://warehausae.com/project/little-round-top/
+    url: /project/little-round-top/
     categories:
       - Architecture
       - Civil
     image_url: /assets/imported/2023/05/Little_Round_Top_1.jpg
   - title: Northern Gateway
-    url: https://warehausae.com/project/northern-gateway/
+    url: /project/northern-gateway/
     categories:
       - Architecture
       - Structural
     image_url: /assets/imported/2023/05/2019-3D-View-INTERIOR-PERSPECTIVE-VIEW-1-700x700.jpg
   - title: Adams County Arts Council Renovation
-    url: https://warehausae.com/project/adams-county-arts-council-renovation/
+    url: /project/adams-county-arts-council-renovation/
     categories:
       - Architecture
     image_url: /assets/imported/2024/02/ACAC-Before-After-1-700x700.jpg
   - title: Fox Apartments
-    url: https://warehausae.com/project/fox-apartments/
+    url: /project/fox-apartments/
     categories:
       - Architecture
       - Structural
     image_url: /assets/imported/2024/11/Fox-Apartments-10302024-27-700x700.webp
   - title: 205 State Street Apartments
-    url: https://warehausae.com/project/205-state-street-apartments/
+    url: /project/205-state-street-apartments/
     categories:
       - Architecture
     image_url: /assets/imported/2024/07/state-street-apartments-06192024-5-768x400.webp
