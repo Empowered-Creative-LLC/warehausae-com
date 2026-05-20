@@ -1,3 +1,6 @@
+# Monorepo root — Laravel Cloud detection files only; run Composer in warehaus-statamic/
+/vendor/
+
 # OS
 .DS_Store
 Thumbs.db

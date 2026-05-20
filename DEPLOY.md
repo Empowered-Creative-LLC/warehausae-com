@@ -143,3 +143,34 @@ The old WordPress site stays live until DNS is cut over. If you find a critical 
 ## Contact for migration questions
 
 Refer to commits on the main branch — each phase commit message has detailed notes on what was implemented and any decisions made. The plan file at `~/.claude/plans/warehaus-site-migration-delightful-creek.md` has the original architecture rationale.
+
+## Laravel Cloud (monorepo)
+
+This repository is a **monorepo**. The deployable Laravel + Statamic app is in `warehaus-statamic/`.
+
+### Repository root markers
+
+`composer.json`, `composer.lock`, and `artisan` at the repository root exist so **Laravel Cloud can detect this repo as a Laravel project** during import. They are not for local development — always work inside `warehaus-statamic/` locally.
+
+The root `composer.lock` does not need to stay in sync with `warehaus-statamic/composer.lock` ([Laravel Cloud monorepo docs](https://cloud.laravel.com/docs/knowledge-base/monorepo-support)).
+
+### Build script
+
+After creating the application in Laravel Cloud, set a **custom build script** on your environment:
+
+```bash
+# Promote warehaus-statamic to the deployment root
+mkdir /tmp/monorepo_tmp
+mv migration-tool /tmp/monorepo_tmp/ 2>/dev/null || true
+cp -Rf warehaus-statamic/. .
+rm -rf /tmp/monorepo_tmp warehaus-statamic
+
+# Remove monorepo root markers (optional)
+rm -f composer.json composer.lock artisan
+
+composer install --no-dev --no-interaction --prefer-dist --optimize-autoloader
+npm install
+npm run build
+```
+
+If Laravel Cloud already runs default `npm` steps, align or remove them so they run against the promoted app.
