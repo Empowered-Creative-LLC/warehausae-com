@@ -45,9 +45,9 @@
 </section>
 
 {{# Mid-page photo strip (full-bleed image between sections) #}}
-{{ if mid_image_url }}
+{{ if mid_image || mid_image_url }}
     <section class="bg-haus-ink-900">
-        <img src="{{ mid_image_url }}" alt="" class="w-full h-[420px] md:h-[540px] object-cover">
+        {{ partial:img :asset="mid_image" :legacy_url="mid_image_url" class="w-full h-[420px] md:h-[540px] object-cover" :glide="false" }}
     </section>
 {{ /if }}
 

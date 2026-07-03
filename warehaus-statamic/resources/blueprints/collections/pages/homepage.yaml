@@ -28,11 +28,19 @@ tabs:
               type: text
               display: Hero Overlay Subheading
               instructions: Secondary subheading beneath the primary.
+          - handle: hero_image
+            field:
+              type: assets
+              display: Hero Image
+              container: main
+              folder: uploads/pages
+              max_files: 1
+              instructions: Upload or browse for the hero background image.
           - handle: hero_image_url
             field:
               type: text
-              display: Hero Image Url
-              instructions: URL of the hero background image (or first frame of the hero video).
+              display: Hero Image Url (imported)
+              instructions: Legacy imported path. Use Hero Image above for new uploads.
           - handle: hero_video_url
             field:
               type: text
@@ -51,10 +59,30 @@ tabs:
                   field:
                     type: text
                     display: Services Strip Url
+                - handle: icon
+                  field:
+                    type: assets
+                    display: Icon
+                    container: main
+                    folder: uploads/icons
+                    max_files: 1
                 - handle: icon_url
                   field:
                     type: text
-                    display: Services Strip Icon Url
+                    display: Services Strip Icon Url (imported)
+                - handle: hover_image
+                  field:
+                    type: assets
+                    display: Hover Preview Image
+                    container: main
+                    folder: uploads/services
+                    max_files: 1
+                    instructions: Photo shown on hover beneath the service icon. Swap this out when final assets are ready.
+                - handle: hover_image_url
+                  field:
+                    type: text
+                    display: Hover Preview Image URL (imported)
+                    instructions: Legacy imported path. Use Hover Preview Image above for new uploads.
               display: Services Strip
               instructions: Service link tiles below the hero (architecture, civil, structural, interior, historic).
           - handle: believe_in_blocks
@@ -77,11 +105,18 @@ tabs:
                     type: text
                     display: Believe In Blocks Lottie URL
                     instructions: Path to a Lottie JSON animation file for the block icon (e.g. /assets/imported/2023/06/Brainwave.json).
+                - handle: bg_image
+                  field:
+                    type: assets
+                    display: Background Image
+                    container: main
+                    folder: uploads/pages
+                    max_files: 1
+                    instructions: Full-bleed background photo for this block.
                 - handle: bg_image_url
                   field:
                     type: text
-                    display: Believe In Blocks Background Image URL
-                    instructions: Optional. If set, the block renders as a full-bleed photo with this image as the background (e.g. the 'Cookouts and Cornhole' block).
+                    display: Believe In Blocks Background Image URL (imported)
               display: Believe In Blocks
               instructions: Repeating 'WE BELIEVE IN' blocks. Order matters.
           - handle: featured_projects
@@ -97,10 +132,17 @@ tabs:
                   field:
                     type: text
                     display: Featured Projects Url
+                - handle: image
+                  field:
+                    type: assets
+                    display: Thumbnail
+                    container: main
+                    folder: uploads/projects
+                    max_files: 1
                 - handle: image_url
                   field:
                     type: text
-                    display: Featured Projects Image Url
+                    display: Featured Projects Image Url (imported)
                 - handle: categories
                   field:
                     type: list
@@ -174,7 +216,14 @@ tabs:
             field:
               type: textarea
               display: SEO description
+          - handle: seo_og_image
+            field:
+              type: assets
+              display: OG Image
+              container: main
+              folder: uploads
+              max_files: 1
           - handle: seo_og_image_url
             field:
               type: text
-              display: OG image URL
+              display: OG image URL (imported)

@@ -23,5 +23,6 @@ bio: >-
 contact_blurb: Have a project with architectural or structural engineering needs? Connect with Troy to discuss.
 email: tbankert@warehausae.com
 phone: (717) 815 8512
+linkedin_url: https://www.linkedin.com/in/troy-bankert-aia-8ba36421/
 seo_description: Since 2021, Troy has served as Co-Owner of Warehaus, to which he brings deep historic knowledge as an employee of the organization since its beginnings in the…
 ---
