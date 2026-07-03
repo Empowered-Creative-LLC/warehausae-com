@@ -35,7 +35,7 @@
     {{ if seo_og_image }}
         <meta property="og:image" content="{{ seo_og_image:url }}">
     {{ elseif seo_og_image_url }}
-        <meta property="og:image" content="{{ seo_og_image_url }}">
+        <meta property="og:image" content="{{ seo_og_image_url | imported_asset_url }}">
     {{ /if }}
 
     {{# Using the system Helvetica Neue stack as a free stand-in for the

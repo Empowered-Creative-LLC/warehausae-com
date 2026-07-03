@@ -200,7 +200,7 @@
                         {{# Icon layer — fades out on hover #}}
                         {{ if icon_url }}
                             <div class="svc-icon">
-                                <img src="{{ icon_url }}" alt="" aria-hidden="true">
+                                <img src="{{ icon_url | imported_asset_url }}" alt="" aria-hidden="true">
                             </div>
                         {{ /if }}
                         {{# Photo layer — fades in on hover, fills the circle #}}
@@ -368,7 +368,7 @@
                 {{ culture_photos }}
                     <div class="cult-photo cult-p-{{ count }}">
                         {{ if url }}
-                            <img src="{{ url }}" alt="{{ alt }}" loading="lazy">
+                            <img src="{{ url | imported_asset_url }}" alt="{{ alt }}" loading="lazy">
                         {{ /if }}
                     </div>
                 {{ /culture_photos }}

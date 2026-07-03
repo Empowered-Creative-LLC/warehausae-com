@@ -13,7 +13,7 @@
     <div class="mx-auto max-w-[1170px] px-6 md:px-10 grid md:grid-cols-[1.1fr_1fr] gap-12 lg:gap-16 items-center">
         {{# Map (left column) #}}
         <div class="haus-pa-md-map relative w-full" data-haus-fade-in>
-            <img src="/assets/imported/2023/10/Asset-1.svg" alt="Map of Pennsylvania and Maryland highlighting Warehaus civil engineering service area" class="block w-full h-auto" loading="lazy">
+            <img src="{{ '/assets/imported/2023/10/Asset-1.svg' | imported_asset_url }}" alt="Map of Pennsylvania and Maryland highlighting Warehaus civil engineering service area" class="block w-full h-auto" loading="lazy">
 
             {{# Pins — positioned absolutely as percentages of the map container. #}}
             <span class="haus-pin" style="left:16%;top:43%" data-haus-pin-label="Westmoreland" aria-label="Westmoreland"></span>

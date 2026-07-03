@@ -1,9 +1,12 @@
 {{#
   Prefer a Statamic asset; fall back to a legacy imported URL string.
   Params: asset, legacy_url, width, class, alt, fetchpriority, glide (default true)
+
+  When AWS_URL is set, legacy /assets/imported/ paths resolve to object storage
+  and skip Glide (files are not on the app server's disk).
 #}}
 {{ if asset || legacy_url }}
-    {{ if glide !== false }}
+    {{ if glide !== false && !config:warehaus:imported_assets_base_url }}
         {{ if asset }}
             {{ glide :src="asset" :width="width ?? 2400" format="webp" quality="82" }}
                 <img src="{{ url }}" alt="{{ alt ?? asset:alt ?? '' }}" class="{{ class ?? '' }}" {{ if fetchpriority }}fetchpriority="{{ fetchpriority }}"{{ /if }}>
@@ -17,7 +20,7 @@
         {{ if asset }}
             <img src="{{ asset:url }}" alt="{{ alt ?? asset:alt ?? '' }}" class="{{ class ?? '' }}" {{ if fetchpriority }}fetchpriority="{{ fetchpriority }}"{{ /if }}{{ if loading }} loading="{{ loading }}"{{ /if }}>
         {{ else }}
-            <img src="{{ legacy_url }}" alt="{{ alt ?? '' }}" class="{{ class ?? '' }}" {{ if fetchpriority }}fetchpriority="{{ fetchpriority }}"{{ /if }}{{ if loading }} loading="{{ loading }}"{{ /if }}>
+            <img src="{{ legacy_url | imported_asset_url }}" alt="{{ alt ?? '' }}" class="{{ class ?? '' }}" {{ if fetchpriority }}fetchpriority="{{ fetchpriority }}"{{ /if }}{{ if loading }} loading="{{ loading }}"{{ /if }}>
         {{ /if }}
     {{ /if }}
 {{ /if }}

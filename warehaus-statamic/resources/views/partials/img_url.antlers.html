@@ -5,5 +5,9 @@
 {{ if asset }}
     {{ glide :src="asset" :width="width ?? 1200" format="webp" quality="82" }}{{ url }}{{ /glide }}
 {{ elseif legacy_url }}
-    {{ glide src="{legacy_url}" :width="width ?? 1200" format="webp" quality="82" }}{{ url }}{{ /glide }}
+    {{ if config:warehaus:imported_assets_base_url }}
+        {{ legacy_url | imported_asset_url }}
+    {{ else }}
+        {{ glide src="{legacy_url}" :width="width ?? 1200" format="webp" quality="82" }}{{ url }}{{ /glide }}
+    {{ /if }}
 {{ /if }}

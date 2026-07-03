@@ -191,4 +191,7 @@ APP_URL=https://your-env.laravel.cloud
 APP_ENV=production
 APP_DEBUG=false
 STATAMIC_LICENSE_KEY=...
+AWS_URL=...                   # public R2 bucket URL (from bucket settings; enables /assets/imported/ images)
 ```
+
+Upload migrated images to the bucket under the `imported/` prefix (see `scripts/sync-laravel-cloud-composer.sh` and object storage docs above).

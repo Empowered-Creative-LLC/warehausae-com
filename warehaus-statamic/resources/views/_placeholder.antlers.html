@@ -20,17 +20,17 @@
     {{ /if }}
 
     {{ if body_markdown }}
-        <section class="prose">{{ body_markdown | markdown }}</section>
+        <section class="prose">{{ body_markdown | markdown | imported_asset_urls_in_html }}</section>
     {{ /if }}
 
     {{ if hero_image_url }}
-        <img src="{{ hero_image_url }}" alt="" class="w-full rounded">
+        <img src="{{ hero_image_url | imported_asset_url }}" alt="" class="w-full rounded">
     {{ /if }}
 
     {{ if gallery_images }}
         <section class="grid grid-cols-2 gap-4">
             {{ gallery_images }}
-                <img src="{{ url }}" alt="{{ alt }}" class="rounded">
+                <img src="{{ url | imported_asset_url }}" alt="{{ alt }}" class="rounded">
             {{ /gallery_images }}
         </section>
     {{ /if }}
