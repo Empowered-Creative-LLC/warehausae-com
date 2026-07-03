@@ -103,11 +103,17 @@ return [
     |
     */
 
-    'custom_cms_name' => env('STATAMIC_CUSTOM_CMS_NAME', 'Statamic'),
+    'custom_cms_name' => env('STATAMIC_CUSTOM_CMS_NAME', 'Warehaus'),
 
-    'custom_logo_url' => env('STATAMIC_CUSTOM_LOGO_URL', null),
+    'custom_logo_url' => env('STATAMIC_CUSTOM_LOGO_URL') ?: [
+        'nav' => '/assets/brand/warehaus-logo.png',
+        'outside' => '/assets/brand/warehaus-logo.png',
+    ],
 
-    'custom_dark_logo_url' => env('STATAMIC_CUSTOM_DARK_LOGO_URL', null),
+    'custom_dark_logo_url' => env('STATAMIC_CUSTOM_DARK_LOGO_URL') ?: [
+        'nav' => '/assets/brand/warehaus-logo.png',
+        'outside' => '/assets/brand/warehaus-logo.png',
+    ],
 
     'custom_logo_text' => env('STATAMIC_CUSTOM_LOGO_TEXT', null),
 
