@@ -156,21 +156,33 @@ The root `composer.lock` does not need to stay in sync with `warehaus-statamic/c
 
 ### Build script
 
-After creating the application in Laravel Cloud, set a **custom build script** on your environment:
+Laravel Cloud serves from `public/index.php` at the **repository root**. This monorepo keeps the app in `warehaus-statamic/`, so the build must promote that directory to the deployment root before `composer install` and `npm run build` run.
+
+After creating the application in Laravel Cloud, set the environment **Build commands** to:
 
 ```bash
-# Promote warehaus-statamic to the deployment root
-mkdir /tmp/monorepo_tmp
-mv migration-tool /tmp/monorepo_tmp/ 2>/dev/null || true
-cp -Rf warehaus-statamic/. .
-rm -rf /tmp/monorepo_tmp warehaus-statamic
-
-# Remove monorepo root markers (optional)
-rm -f composer.json composer.lock artisan
-
-composer install --no-dev --no-interaction --prefer-dist --optimize-autoloader
-npm install
-npm run build
+bash scripts/laravel-cloud-build.sh
 ```
 
-If Laravel Cloud already runs default `npm` steps, align or remove them so they run against the promoted app.
+The script lives at `scripts/laravel-cloud-build.sh` in this repo. It copies `warehaus-statamic/` to the deployment root (so `public/index.php` is in the right place), then installs PHP/JS dependencies and compiles assets.
+
+**Important:** Disable Laravel Cloud's default `npm install` / `npm run build` steps if they are configured separately — they run against the repo root (which has no `package.json`) and will fail or no-op before the promotion step.
+
+### Deploy commands
+
+Set **Deploy commands** on the environment to:
+
+```bash
+php artisan migrate --force
+php artisan statamic:stache:warm
+```
+
+### Required environment variables
+
+```
+APP_KEY=...                   # php artisan key:generate --show (run locally)
+APP_URL=https://your-env.laravel.cloud
+APP_ENV=production
+APP_DEBUG=false
+STATAMIC_LICENSE_KEY=...
+```
