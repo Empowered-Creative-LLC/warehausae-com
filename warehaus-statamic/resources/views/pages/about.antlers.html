@@ -38,7 +38,7 @@
 
 {{ if intro_prose }}
     <section class="container-haus pb-8 max-w-3xl mx-auto">
-        <div class="text-lg leading-relaxed text-haus-ink-700 space-y-4 prose prose-lg max-w-none">{{ intro_prose | markdown }}</div>
+        <div class="text-lg leading-relaxed text-haus-ink-700 space-y-4 prose prose-lg max-w-none">{{ intro_prose | markdown | imported_asset_urls_in_html }}</div>
     </section>
 {{ /if }}
 

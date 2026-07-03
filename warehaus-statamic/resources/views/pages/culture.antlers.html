@@ -181,7 +181,7 @@
             </div>
             {{ if intro_image_url }}
                 <div class="overflow-hidden rounded-lg">
-                    <img src="{{ intro_image_url }}" alt="Warehaus team" class="w-full h-full object-cover">
+                    <img src="{{ intro_image_url | imported_asset_url }}" alt="Warehaus team" class="w-full h-full object-cover">
                 </div>
             {{ /if }}
         </div>
@@ -273,7 +273,7 @@
     <div class="haus-accordion" id="haus-accordion">
         {{ gallery_photos }}
             <div class="haus-accordion__panel{{ if index == 0 }} is-active{{ /if }}" data-panel>
-                <img src="{{ url }}" alt="{{ label }}" class="haus-accordion__img" loading="lazy">
+                <img src="{{ url | imported_asset_url }}" alt="{{ label }}" class="haus-accordion__img" loading="lazy">
                 <div class="haus-accordion__label">{{ label }}</div>
             </div>
         {{ /gallery_photos }}

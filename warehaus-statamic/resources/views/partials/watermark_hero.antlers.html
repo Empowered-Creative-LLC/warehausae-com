@@ -16,9 +16,13 @@
     {{ if hero_image || hero_image_url }}
         {{ partial:img :asset="hero_image" :legacy_url="hero_image_url" class="absolute inset-0 w-full h-full object-cover" fetchpriority="high" }}
     {{ else }}
-        {{ glide src="/assets/imported/2023/06/2022_03_15_0094.webp" width="2400" format="webp" quality="82" }}
-            <img src="{{ url }}" alt="" class="absolute inset-0 w-full h-full object-cover" fetchpriority="high">
-        {{ /glide }}
+        {{ if config:warehaus:imported_assets_base_url }}
+            <img src="{{ '/assets/imported/2023/06/2022_03_15_0094.webp' | imported_asset_url }}" alt="" class="absolute inset-0 w-full h-full object-cover" fetchpriority="high">
+        {{ else }}
+            {{ glide src="/assets/imported/2023/06/2022_03_15_0094.webp" width="2400" format="webp" quality="82" }}
+                <img src="{{ url }}" alt="" class="absolute inset-0 w-full h-full object-cover" fetchpriority="high">
+            {{ /glide }}
+        {{ /if }}
     {{ /if }}
     <div class="absolute inset-0 bg-haus-ink-900/45"></div>
 
