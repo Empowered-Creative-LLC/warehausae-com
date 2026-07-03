@@ -33,10 +33,17 @@ tabs:
                   field:
                     type: text
                     display: Posts Url
+                - handle: image
+                  field:
+                    type: assets
+                    display: Thumbnail
+                    container: main
+                    folder: uploads/news
+                    max_files: 1
                 - handle: image_url
                   field:
                     type: text
-                    display: Posts Image Url
+                    display: Posts Image Url (imported)
                 - handle: date_text
                   field:
                     type: text
@@ -68,7 +75,14 @@ tabs:
             field:
               type: textarea
               display: SEO description
+          - handle: seo_og_image
+            field:
+              type: assets
+              display: OG Image
+              container: main
+              folder: uploads
+              max_files: 1
           - handle: seo_og_image_url
             field:
               type: text
-              display: OG image URL
+              display: OG image URL (imported)

@@ -99,20 +99,35 @@ tabs:
               type: list
               display: Awards
               instructions: Award lines if shown on the page (e.g. 'Preservation Pennsylvania Award Winner'). Absent on most projects.
+          - handle: hero_image
+            field:
+              type: assets
+              display: Hero Image
+              container: main
+              folder: uploads/projects
+              max_files: 1
+              instructions: Upload or browse for the primary hero image.
           - handle: hero_image_url
             field:
               type: text
-              display: Hero Image Url
-              instructions: URL of the first/primary image at the top of the page.
+              display: Hero Image Url (imported)
+              instructions: Legacy imported path. Use Hero Image above for new uploads.
           - handle: gallery_images
             field:
               type: grid
               mode: stacked
               fields:
+                - handle: image
+                  field:
+                    type: assets
+                    display: Image
+                    container: main
+                    folder: uploads/projects
+                    max_files: 1
                 - handle: url
                   field:
                     type: text
-                    display: Gallery Images Url
+                    display: Gallery Images Url (imported)
                 - handle: alt
                   field:
                     type: text
@@ -137,11 +152,17 @@ tabs:
                   field:
                     type: list
                     display: Related Projects Categories
+                - handle: image
+                  field:
+                    type: assets
+                    display: Thumbnail
+                    container: main
+                    folder: uploads/projects
+                    max_files: 1
                 - handle: image_url
                   field:
                     type: text
-                    display: Related Projects Image Url
-                    instructions: Populated by migration-tool/scripts/resolve-related-thumbnails.js — the related entry's hero_image_url.
+                    display: Related Projects Image Url (imported)
               display: Related Projects
               instructions: Similar Projects list at the bottom of the page. Deduplicate by URL.
           - handle: is_test_fits_subpage
@@ -166,7 +187,14 @@ tabs:
             field:
               type: textarea
               display: SEO description
+          - handle: seo_og_image
+            field:
+              type: assets
+              display: OG Image
+              container: main
+              folder: uploads
+              max_files: 1
           - handle: seo_og_image_url
             field:
               type: text
-              display: OG image URL
+              display: OG image URL (imported)

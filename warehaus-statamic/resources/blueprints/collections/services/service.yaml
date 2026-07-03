@@ -47,11 +47,18 @@ tabs:
               type: textarea
               display: Approach Intro Prose
               instructions: Short paragraph below the approach heading, before the accordion of approach blocks.
+          - handle: mid_image
+            field:
+              type: assets
+              display: Mid-section Image
+              container: main
+              folder: uploads/services
+              max_files: 1
+              instructions: Full-bleed photograph between the lead block and the approach section.
           - handle: mid_image_url
             field:
               type: text
-              display: Mid-section Image URL
-              instructions: Full-bleed photograph displayed between the lead block and the approach section.
+              display: Mid-section Image URL (imported)
           - handle: approach_blocks
             field:
               type: grid
@@ -86,10 +93,17 @@ tabs:
                     type: text
                     display: Team Leaders Team Url
                     instructions: Link to /team/{slug}/
+                - handle: headshot
+                  field:
+                    type: assets
+                    display: Headshot
+                    container: main
+                    folder: uploads/team
+                    max_files: 1
                 - handle: headshot_url
                   field:
                     type: text
-                    display: Team Leaders Headshot Url
+                    display: Team Leaders Headshot Url (imported)
                 - handle: linkedin_url
                   field:
                     type: text
@@ -120,17 +134,30 @@ tabs:
                     type: list
                     display: Recent Projects Categories
                     instructions: Comma-separated category tags shown under each project link.
+                - handle: image
+                  field:
+                    type: assets
+                    display: Thumbnail
+                    container: main
+                    folder: uploads/projects
+                    max_files: 1
                 - handle: image_url
                   field:
                     type: text
-                    display: Recent Projects Image Url
-                    instructions: Populated by migration-tool/scripts/resolve-related-thumbnails.js — the related entry's hero_image_url.
+                    display: Recent Projects Image Url (imported)
               display: Recent Projects
               instructions: Featured project list at the bottom of the page.
+          - handle: hero_image
+            field:
+              type: assets
+              display: Hero Image
+              container: main
+              folder: uploads/services
+              max_files: 1
           - handle: hero_image_url
             field:
               type: text
-              display: Hero Image Url
+              display: Hero Image Url (imported)
               instructions: Hero image at the top of the page if any. May be missing.
   seo:
     display: SEO & Source
@@ -149,7 +176,14 @@ tabs:
             field:
               type: textarea
               display: SEO description
+          - handle: seo_og_image
+            field:
+              type: assets
+              display: OG Image
+              container: main
+              folder: uploads
+              max_files: 1
           - handle: seo_og_image_url
             field:
               type: text
-              display: OG image URL
+              display: OG image URL (imported)

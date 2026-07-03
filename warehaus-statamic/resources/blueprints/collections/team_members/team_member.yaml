@@ -27,11 +27,19 @@ tabs:
               instructions: >-
                 The service discipline this team member primarily belongs to (architecture, civil engineering, structural, interior design, historic preservation, etc.), inferred from title and bio if
                 not explicit.
+          - handle: headshot
+            field:
+              type: assets
+              display: Headshot
+              container: main
+              folder: uploads/team
+              max_files: 1
+              instructions: Upload or browse for the profile photo.
           - handle: headshot_url
             field:
               type: text
-              display: Headshot Url
-              instructions: Absolute URL to the profile photo.
+              display: Headshot Url (imported)
+              instructions: Legacy imported path. Use Headshot above for new uploads.
           - handle: years_in_industry
             field:
               type: integer
@@ -91,7 +99,14 @@ tabs:
             field:
               type: textarea
               display: SEO description
+          - handle: seo_og_image
+            field:
+              type: assets
+              display: OG Image
+              container: main
+              folder: uploads
+              max_files: 1
           - handle: seo_og_image_url
             field:
               type: text
-              display: OG image URL
+              display: OG image URL (imported)

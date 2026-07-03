@@ -1,0 +1,9 @@
+{{#
+  Output a resolved image URL for glide/meta tags (no <img> tag).
+  Params: asset, legacy_url, width
+#}}
+{{ if asset }}
+    {{ glide :src="asset" :width="width ?? 1200" format="webp" quality="82" }}{{ url }}{{ /glide }}
+{{ elseif legacy_url }}
+    {{ glide src="{legacy_url}" :width="width ?? 1200" format="webp" quality="82" }}{{ url }}{{ /glide }}
+{{ /if }}

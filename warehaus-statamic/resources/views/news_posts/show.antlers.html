@@ -6,16 +6,16 @@
     Matches /{news-slug}/ on warehausae.com. #}}
 
 <article>
-    {{ if featured_image_url }}
+    {{ if featured_image || featured_image_url }}
         <figure class="bg-white pt-24 md:pt-28">
-            <div class="mx-auto max-w-[1170px] px-6 md:px-10">
-                <img src="{{ featured_image_url }}" alt="" class="w-full max-h-[640px] object-cover" data-haus-fade-in>
+            <div class="container-haus max-w-3xl">
+                {{ partial:img :asset="featured_image" :legacy_url="featured_image_url" class="w-full max-h-[640px] object-cover" :glide="false" }}
             </div>
         </figure>
     {{ /if }}
 
     <header class="bg-white pt-10 pb-8">
-        <div class="mx-auto max-w-[1170px] px-6 md:px-10">
+        <div class="container-haus max-w-3xl">
             {{ if categories }}
                 <p class="flex flex-wrap gap-3 text-[12px] uppercase tracking-[0.1em] font-semibold">
                     {{ categories }}
@@ -27,6 +27,12 @@
             {{ if published_date_text }}<p class="mt-4 text-[14px] text-[#888]">{{ published_date_text }}</p>{{ /if }}
         </div>
     </header>
+
+    {{ if subtitle }}
+        <div class="container-haus max-w-3xl pb-2">
+            <p class="text-lg italic text-haus-ink-500 leading-relaxed">{{ subtitle }}</p>
+        </div>
+    {{ /if }}
 
     <div class="container-haus pb-16 md:pb-24 max-w-3xl">
         {{ if body_markdown }}

@@ -79,7 +79,14 @@ tabs:
             field:
               type: textarea
               display: SEO description
+          - handle: seo_og_image
+            field:
+              type: assets
+              display: OG Image
+              container: main
+              folder: uploads
+              max_files: 1
           - handle: seo_og_image_url
             field:
               type: text
-              display: OG image URL
+              display: OG image URL (imported)
