@@ -64,24 +64,56 @@ MAIL_FROM_NAME=Warehaus
 # GA4_MEASUREMENT_ID=G-XXXXXXXX
 ```
 
-## Content strategy
+## Content strategy (CP-authoritative)
 
-The new site uses Statamic's file-based content driver. This means:
+The client edits **only through the Statamic Control Panel** — no GitHub access required.
 
-- Every content edit in the CP is a file write under `warehaus-statamic/content/`.
-- The CP can edit in production but those edits won't be in your git repo unless you have a workflow to commit them. Two common patterns:
-  - Edits flow only through git (developer edits + push). Disable the CP's save buttons or restrict CP write access.
-  - Edits flow through both: configure Statamic's git integration so each CP save creates a commit (see `config/statamic/git.php`).
-- The client probably wants the CP to be authoritative — set up the git-integration option.
+Statamic uses a **flat-file** content driver (not a CMS database):
+
+- Entries, pages, globals, and navigation live as YAML/Markdown under `warehaus-statamic/content/`.
+- CP uploads land in `public/assets/` (except legacy `imported/`, which is served from R2 — see Asset strategy).
+- **Laravel's database** stores sessions, cache, and queue jobs only — not CMS content.
+
+### Production workflow
+
+1. Client saves in Statamic CP → files written on the server.
+2. Statamic Git integration queues a commit job (requires a **queue worker**).
+3. Server runs `git add`, `git commit`, and `git push` to the `dev` branch.
+4. Laravel Cloud auto-deploys from `dev` with the latest content.
+
+Enable on Laravel Cloud only (see [Laravel Cloud CP setup](#laravel-cloud-cp-setup)):
+
+```
+STATAMIC_GIT_ENABLED=true
+STATAMIC_GIT_PUSH=true
+STATAMIC_GIT_DISPATCH_DELAY=2
+```
+
+### Developer workflow guardrails
+
+- **Code changes:** feature branch → PR → merge to `dev` → Cloud deploys.
+- **Content changes:** production (or staging) CP only; auto-push back to `dev`.
+- **Before merging code PRs:** `git pull origin dev` to incorporate any production content commits.
+- **Never** `git push --force` to `dev`.
+
+### Admin users
+
+`warehaus-statamic/users/*.yaml` is gitignored (bcrypt hashes). Statamic Git does **not** back up CP-created accounts. Create production admins with `php artisan statamic:make:user` after each fresh environment bootstrap.
 
 ## Asset strategy
 
-The migration imported 350MB of images under `warehaus-statamic/public/assets/imported/`. These are currently gitignored (see root .gitignore) — you'll need a strategy to deploy them to production:
+Legacy WordPress images (~350MB) live in `warehaus-statamic/public/assets/imported/` and are **gitignored**.
 
-- **Option A (recommended for v1):** Run `node migration-tool/scripts/import-to-statamic.js` (without --no-images) on the production host once. This re-downloads from the live WP site to populate `public/assets/imported/`. Fast and simple. Risk: if warehausae.com goes down after the cutover, you lose access to the source images. Mitigation: snapshot the directory locally before launch.
-- **Option B (better long-term):** Move imported assets to S3 / CloudFront / Bunny CDN. Rewrite the `/assets/imported/` paths in content files to a CDN domain. Requires more setup; worth doing once site traffic is meaningful.
+**Laravel Cloud (R2):**
 
-For launch: take a tarball of your local `public/assets/imported/` directory, SCP it to the host, extract. One-time operation.
+1. Create an object storage bucket on Laravel Cloud (e.g. `warehaus-com`).
+2. Upload local `imported/` once: `bash scripts/upload-imported-to-r2.sh` (requires AWS CLI + R2 credentials).
+3. Set `AWS_URL` on the environment to the bucket **public** URL.
+4. [`ImportedAssetUrl`](warehaus-statamic/app/Support/ImportedAssetUrl.php) rewrites `/assets/imported/...` in templates to `{AWS_URL}/imported/...`.
+
+**CP uploads** to `public/assets/images/...` are tracked by Statamic Git and deploy via the normal commit/push flow.
+
+**Homepage and design assets** under `public/assets/images/home/` are in Git and deploy normally.
 
 ## DNS cutover
 
@@ -183,6 +215,8 @@ php artisan migrate --force
 php artisan statamic:stache:warm
 ```
 
+If using Statamic Git push with a deploy key, also run the git SSH setup from [Git push credentials](#3-git-push-credentials-server-side-client-has-no-github-access) as additional deploy commands, or use [`warehaus-statamic/scripts/laravel-cloud-deploy.sh`](warehaus-statamic/scripts/laravel-cloud-deploy.sh) after copying it into the promoted app (see script header).
+
 ### Required environment variables
 
 ```
@@ -191,7 +225,108 @@ APP_URL=https://your-env.laravel.cloud
 APP_ENV=production
 APP_DEBUG=false
 STATAMIC_LICENSE_KEY=...
-AWS_URL=...                   # public R2 bucket URL (from bucket settings; enables /assets/imported/ images)
+
+# Managed database (Laravel Cloud injects DB_* when attached)
+DB_CONNECTION=mysql
+SESSION_DRIVER=database
+CACHE_STORE=database
+QUEUE_CONNECTION=database
+
+# R2 object storage for legacy /assets/imported/ images
+AWS_URL=...                   # public bucket URL from Laravel Cloud bucket settings
+AWS_ACCESS_KEY_ID=...
+AWS_SECRET_ACCESS_KEY=...
+AWS_DEFAULT_REGION=auto
+AWS_BUCKET=warehaus-com
+AWS_ENDPOINT=...              # R2 S3 API endpoint
+
+# Statamic Git — CP content auto-push to dev (production only)
+STATAMIC_GIT_ENABLED=true
+STATAMIC_GIT_AUTOMATIC=true
+STATAMIC_GIT_PUSH=true
+STATAMIC_GIT_DISPATCH_DELAY=2
+STATAMIC_GIT_USER_NAME=Warehaus CMS
+STATAMIC_GIT_USER_EMAIL=cms@warehausae.com
 ```
 
-Upload migrated images to the bucket under the `imported/` prefix (see `scripts/sync-laravel-cloud-composer.sh` and object storage docs above).
+### Laravel Cloud CP setup
+
+Complete these steps in the Laravel Cloud dashboard after the first successful build.
+
+#### 1. Managed database
+
+1. Laravel Cloud → **Resources** → **Create database** (MySQL or Postgres).
+2. Attach the database to your environment.
+3. Confirm `DB_*` variables appear in **Environment variables** (Cloud usually injects them).
+4. Deploy commands already run `php artisan migrate --force` — verify migrations succeed in deploy logs.
+
+The database powers **sessions, cache, and queues** — not Statamic entries.
+
+#### 2. Queue worker (required for Statamic Git)
+
+Statamic Git commits are **queued**. Without a worker, CP saves write files but never push to GitHub.
+
+Laravel Cloud → **Resources** → **Workers** → add:
+
+```bash
+php artisan queue:work --sleep=3 --tries=3 --max-time=3600
+```
+
+#### 3. Git push credentials (server-side; client has no GitHub access)
+
+The runtime must `git push` to `dev` after each CP save.
+
+**Option A — GitHub deploy key (recommended):**
+
+1. Generate an SSH key pair: `ssh-keygen -t ed25519 -C "warehaus-cloud-statamic" -f warehaus-cloud-git -N ""`
+2. GitHub → repo **Settings** → **Deploy keys** → add public key with **Allow write access**.
+3. Laravel Cloud → **Environment variables** → add secret `GIT_SSH_PRIVATE_KEY` (full private key contents).
+4. Add a **Deploy command** (runs after each deploy) to configure git for push:
+
+```bash
+mkdir -p ~/.ssh && chmod 700 ~/.ssh
+echo "$GIT_SSH_PRIVATE_KEY" > ~/.ssh/id_ed25519 && chmod 600 ~/.ssh/id_ed25519
+ssh-keyscan github.com >> ~/.ssh/known_hosts 2>/dev/null
+git config --global user.email "${STATAMIC_GIT_USER_EMAIL}"
+git config --global user.name "${STATAMIC_GIT_USER_NAME}"
+git remote set-url origin git@github.com:Empowered-Creative-LLC/warehausae-com.git 2>/dev/null || true
+```
+
+**Option B — fine-grained PAT:**
+
+Set remote to `https://x-access-token:TOKEN@github.com/Empowered-Creative-LLC/warehausae-com.git` via a deploy command or build hook.
+
+**Validate:** After deploy, confirm `.git` exists in the app root and `git remote -v` shows the correct origin. If Laravel Cloud strips `.git` at runtime, contact Laravel Cloud support or use persistent storage for `content/` as a fallback.
+
+#### 4. One-time bootstrap
+
+Run via Laravel Cloud **Commands** (one-off) after first deploy:
+
+```bash
+php artisan statamic:make:user
+```
+
+Upload legacy images to R2 from your local machine (not on Cloud):
+
+```bash
+bash scripts/upload-imported-to-r2.sh
+```
+
+Set `AWS_URL` to the bucket public URL, then verify a project page loads an `/assets/imported/` image.
+
+#### 5. Staging verification checklist
+
+Before DNS cutover, on staging URL:
+
+- [ ] Cloud build succeeds (`bash scripts/laravel-cloud-build.sh` in build logs)
+- [ ] Deploy commands complete (`migrate`, `stache:warm`)
+- [ ] CP login works
+- [ ] Queue worker is running (check Workers tab)
+- [ ] Legacy `/assets/imported/` image loads (R2 + `AWS_URL`)
+- [ ] Create a test news entry in CP
+- [ ] Within ~2 minutes, commit appears on `dev` in GitHub
+- [ ] Cloud redeploys and entry is visible on frontend
+- [ ] Code PR merged to `dev` does not wipe recent CP content (`git pull` before merge test)
+- [ ] `BASE=https://staging.example.com node migration-tool/scripts/verify-urls.js` (optional)
+
+Upload migrated images to the bucket under the `imported/` prefix using `scripts/upload-imported-to-r2.sh`.
