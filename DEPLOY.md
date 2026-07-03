@@ -221,7 +221,7 @@ If using Statamic Git push with a deploy key, also run the git SSH setup from [G
 
 ```
 APP_KEY=...                   # php artisan key:generate --show (run locally)
-APP_URL=https://your-env.laravel.cloud
+APP_URL=https://warehausae.com
 APP_ENV=production
 APP_DEBUG=false
 STATAMIC_LICENSE_KEY=...
@@ -252,6 +252,8 @@ STATAMIC_GIT_USER_EMAIL=cms@warehausae.com
 ### Laravel Cloud CP setup
 
 Complete these steps in the Laravel Cloud dashboard after the first successful build.
+
+**`APP_URL`:** Set to `https://warehausae.com` (production canonical URL). Add `warehausae.com` as a custom domain on the environment when ready for DNS cutover. Until then, the Cloud dev URL (`warehausae-com-dev-ee1qzs.laravel.cloud`) can be used to visit the site, but keep `APP_URL` on `warehausae.com` so Statamic generates correct absolute URLs once DNS points here.
 
 #### 1. Managed database
 
