@@ -152,7 +152,13 @@ This repository is a **monorepo**. The deployable Laravel + Statamic app is in `
 
 `composer.json`, `composer.lock`, and `artisan` at the repository root exist so **Laravel Cloud can detect this repo as a Laravel project** during import. They are not for local development — always work inside `warehaus-statamic/` locally.
 
-The root `composer.lock` does not need to stay in sync with `warehaus-statamic/composer.lock` ([Laravel Cloud monorepo docs](https://cloud.laravel.com/docs/knowledge-base/monorepo-support)).
+The root `composer.lock` and `require` block must stay in sync with `warehaus-statamic/` — Laravel Cloud validates them **before** the build script runs (e.g. object storage requires `league/flysystem-aws-s3-v3` in the root lock). After any `composer require` / `composer update` in `warehaus-statamic/`, run:
+
+```bash
+bash scripts/sync-laravel-cloud-composer.sh
+```
+
+This also runs automatically via `warehaus-statamic`'s `post-update-cmd` Composer hook.
 
 ### Build script
 
