@@ -7,7 +7,7 @@ Migration of warehausae.com from WordPress/Elementor to Laravel + Statamic 5.
 - `warehaus-statamic/` — the Laravel + Statamic 5 app (production target)
 - `migration-tool/` — Node-based scrapers and importers used to pull content off the existing WordPress site and load it into Statamic
 
-Root-level `composer.json`, `composer.lock`, and `artisan` are **Laravel Cloud detection markers** for this monorepo; see [DEPLOY.md](DEPLOY.md).
+Root-level `composer.json`, `composer.lock`, and `artisan` are **Laravel Cloud detection markers** for this monorepo. The deployable app still lives in `warehaus-statamic/`; Laravel Cloud runs `scripts/laravel-cloud-build.sh` to promote it so `public/index.php` is served correctly. See [DEPLOY.md](DEPLOY.md).
 
 ## Running the app
 
