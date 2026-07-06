@@ -5,6 +5,7 @@ title: Architectural Project Manager
 slug: matt-robertson
 source_url: https://warehausae.com/team/matt-robertson/
 name: Matt Robertson
+show_on_about: false
 first_name: Matt
 discipline: architecture
 headshot_url: /assets/imported/2026/04/Robertson-Matt-1024x683.jpg

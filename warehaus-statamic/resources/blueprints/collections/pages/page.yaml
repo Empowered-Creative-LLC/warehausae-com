@@ -66,7 +66,7 @@ tabs:
             field:
               type: list
               display: Leadership Team Slugs
-              instructions: Team member entry slugs to show under Meet Our Leadership, in display order.
+              instructions: Deprecated — the About page leadership section is now populated automatically from team members with “Show on About Page” enabled.
           - handle: news_slugs
             field:
               type: list

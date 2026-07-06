@@ -5,6 +5,7 @@ title: Director of Architecture
 slug: erin-himmelberger
 source_url: https://warehausae.com/team/erin-himmelberger/
 name: Erin Himmelberger, AIA
+show_on_about: false
 first_name: Erin
 discipline: architecture
 headshot_url: /assets/imported/2024/01/Himmelberger-Erin-1.webp

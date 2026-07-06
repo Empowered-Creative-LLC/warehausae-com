@@ -5,6 +5,12 @@ title: interior design
 slug: interior_design
 source_url: https://warehausae.com/services/interior_design/
 service_name: interior design
+nav_label: Interior Design
+nav_order: 4
+show_in_nav: true
+show_on_homepage_strip: true
+strip_icon_url: /assets/icons/home/Interior-0.png
+strip_hover_image_url: /assets/images/home/iconbar/Interiors.png
 tagline: We listen. We design. We deliver.
 lead_heading: Commercial Interior Design Solutions
 intro_prose: |-

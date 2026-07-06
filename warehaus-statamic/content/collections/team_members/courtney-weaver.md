@@ -5,6 +5,8 @@ title: Chief Financial Officer
 slug: courtney-weaver
 source_url: https://warehausae.com/team/courtney-weaver/
 name: Courtney Weaver
+show_on_about: true
+about_order: 4
 first_name: Courtney
 discipline: finance
 headshot_url: /assets/imported/2026/03/O39A1948-1024x683.jpg

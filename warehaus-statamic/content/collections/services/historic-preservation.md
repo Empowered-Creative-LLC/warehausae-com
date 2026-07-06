@@ -5,6 +5,12 @@ title: historic preservation
 slug: historic-preservation
 source_url: https://warehausae.com/services/historic-preservation/
 service_name: historic preservation
+nav_label: Historic Preservation
+nav_order: 3
+show_in_nav: true
+show_on_homepage_strip: true
+strip_icon_url: /assets/icons/home/Historical-0.png
+strip_hover_image_url: /assets/images/home/iconbar/Historic.png
 tagline: We listen. We design. We deliver.
 lead_heading: Preserving History
 intro_prose: >-

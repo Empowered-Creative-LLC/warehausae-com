@@ -15,6 +15,55 @@ tabs:
               display: Service Name
               instructions: The service discipline shown in the hero, e.g. 'architecture', 'civil engineering', 'interior design'.
               required: true
+          - handle: nav_label
+            field:
+              type: text
+              display: Navigation Label
+              instructions: Short label used in the site header navigation (e.g. 'Civil', 'Interior Design'). Falls back to the service name when empty.
+          - handle: nav_order
+            field:
+              type: integer
+              display: Navigation Order
+              instructions: Controls ordering in the header navigation and homepage services strip. Lower numbers appear first.
+              default: 100
+          - handle: show_in_nav
+            field:
+              type: toggle
+              display: Show in Navigation
+              instructions: When enabled, this service appears in the site header Services menu.
+              default: true
+          - handle: show_on_homepage_strip
+            field:
+              type: toggle
+              display: Show on Homepage Strip
+              instructions: When enabled, this service appears in the circular icon strip on the homepage. Requires strip icon assets below.
+              default: false
+          - handle: strip_icon
+            field:
+              type: assets
+              display: Homepage Strip Icon
+              container: main
+              folder: uploads/icons
+              max_files: 1
+              instructions: Circular icon shown in the homepage services strip.
+          - handle: strip_icon_url
+            field:
+              type: text
+              display: Homepage Strip Icon URL (imported)
+              instructions: Legacy imported icon path for the homepage services strip.
+          - handle: strip_hover_image
+            field:
+              type: assets
+              display: Homepage Strip Hover Image
+              container: main
+              folder: uploads/services
+              max_files: 1
+              instructions: Photo shown on hover in the homepage services strip.
+          - handle: strip_hover_image_url
+            field:
+              type: text
+              display: Homepage Strip Hover Image URL (imported)
+              instructions: Legacy imported hover image path for the homepage services strip.
           - handle: tagline
             field:
               type: text
@@ -146,7 +195,7 @@ tabs:
                     type: text
                     display: Recent Projects Image Url (imported)
               display: Recent Projects
-              instructions: Featured project list at the bottom of the page.
+              instructions: Deprecated — the Recent Projects carousel is now populated automatically from the Projects collection.
           - handle: hero_image
             field:
               type: assets

@@ -5,6 +5,12 @@ title: architecture
 slug: architecture
 source_url: https://warehausae.com/services/architecture/
 service_name: architecture
+nav_label: Architecture
+nav_order: 1
+show_in_nav: true
+show_on_homepage_strip: true
+strip_icon_url: /assets/icons/home/Archit1-0.png
+strip_hover_image_url: /assets/images/home/iconbar/Architecture.png
 tagline: We listen. We design. We deliver.
 lead_heading: Partner with an Architect that Listens, Designs, and Delivers.
 intro_prose: |-

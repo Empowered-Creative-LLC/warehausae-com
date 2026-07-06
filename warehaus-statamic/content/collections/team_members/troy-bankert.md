@@ -5,6 +5,8 @@ title: Co-Owner / President & Chief Executive Officer
 slug: troy-bankert
 source_url: https://warehausae.com/team/troy-bankert/
 name: Troy Bankert, AIA
+show_on_about: true
+about_order: 2
 first_name: Troy
 discipline: architecture
 headshot_url: /assets/imported/2024/01/Bankert-Troy-1.webp

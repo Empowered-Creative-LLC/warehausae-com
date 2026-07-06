@@ -5,6 +5,8 @@ title: Co-Owner / Chief Operating Officer
 slug: david-koratich
 source_url: https://warehausae.com/team/david-koratich/
 name: David Koratich, EIT
+show_on_about: true
+about_order: 1
 first_name: David
 discipline: civil engineering
 headshot_url: /assets/imported/2024/01/Koratich-David-1.webp

@@ -145,4 +145,6 @@
     </section>
 {{ /if }}
 
-{{ partial:recent_projects_carousel :projects="related_projects" }}
+{{ projects_carousel context="related" }}
+    {{ partial:recent_projects_carousel }}
+{{ /projects_carousel }}

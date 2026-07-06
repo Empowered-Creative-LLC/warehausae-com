@@ -115,4 +115,6 @@
     </section>
 {{ /if }}
 
-{{ partial:recent_projects_carousel :projects="recent_projects" }}
+{{ projects_carousel context="service" }}
+    {{ partial:recent_projects_carousel }}
+{{ /projects_carousel }}
