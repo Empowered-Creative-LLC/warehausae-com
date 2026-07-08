@@ -64,12 +64,10 @@ return [
     'providers' => [
         'users' => [
             'driver' => 'statamic',
+            // Statamic's eloquent user repository reads the backing model from
+            // here (see Statamic\Auth\UserRepositoryManager::createEloquentDriver).
+            'model' => App\Models\User::class,
         ],
-
-        // 'users' => [
-        //     'driver' => 'eloquent',
-        //     'model' => env('AUTH_MODEL', User::class),
-        // ],
     ],
 
     /*
