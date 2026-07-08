@@ -1,6 +1,6 @@
 {{# Auto-populated case studies list — shown on the portfolio page. #}}
 
-{{ collection:case_studies sort="title:asc" as="case_study_entries" }}
+{{ collection:case_studies slug:not="_template" sort="title:asc" as="case_study_entries" }}
 {{ if case_study_entries }}
     <section class="container-haus py-16 md:py-24">
         <h2 class="text-3xl md:text-4xl font-medium tracking-tight text-center">Case Studies</h2>

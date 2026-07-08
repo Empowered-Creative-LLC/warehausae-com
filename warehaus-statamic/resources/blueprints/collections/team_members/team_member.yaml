@@ -3,7 +3,16 @@ tabs:
   main:
     display: Main
     sections:
-      - fields:
+      - display: Getting started
+        instructions: |-
+          **To add a team member**
+          1. Click **Create Entry** and enter the person's full **Name** as it should appear on the page.
+          2. Upload a **Headshot**, write the **Bio**, and add contact details (email, phone, LinkedIn).
+          3. Toggle **Show on About Page** to include them in the leadership section on `/about/`. Use **About Page Order** to control position (lower numbers appear first).
+          4. **Publish** when ready. The profile is available at `/team/member-slug/`.
+
+          Ignore the legacy "Headshot Url (imported)" field unless restoring old imported content.
+        fields:
           - handle: title
             field:
               type: text

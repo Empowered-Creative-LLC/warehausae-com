@@ -4,7 +4,6 @@ blueprint: portfolio_category
 title: arts & culture
 slug: arts_culture
 source_url: https://warehausae.com/arts_culture/
-url: /arts_culture/
 category_name: arts & culture
 tagline: We listen. We design. We deliver.
 lead_heading: An Enhanced Visitor Experience

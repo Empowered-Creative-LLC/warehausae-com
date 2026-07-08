@@ -4,7 +4,6 @@ blueprint: portfolio_category
 title: retail & hospitality
 slug: retail_hospitality
 source_url: https://warehausae.com/retail_hospitality/
-url: /retail_hospitality/
 category_name: retail & hospitality
 tagline: We listen. We design. We deliver.
 lead_heading: Hotel, Retail & Restaurant Design

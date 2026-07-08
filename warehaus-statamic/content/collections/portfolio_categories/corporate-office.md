@@ -4,7 +4,6 @@ blueprint: portfolio_category
 title: corporate office
 slug: corporate-office
 source_url: https://warehausae.com/corporate-office/
-url: /corporate-office/
 category_name: corporate office
 tagline: We listen. We design. We deliver.
 lead_heading: A Reflection of Workplace Culture and Creativity

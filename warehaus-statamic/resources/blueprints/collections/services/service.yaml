@@ -3,7 +3,17 @@ tabs:
   main:
     display: Main
     sections:
-      - fields:
+      - display: Getting started
+        instructions: |-
+          **To add or edit a service page**
+          1. Find **"★ TEMPLATE — Duplicate me"** in the entry list (keep it as a draft — never publish it).
+          2. To start a new service, open its **⋯** menu and choose **Duplicate**.
+          3. Fill in the service name, lead copy, capabilities, approach blocks, and hero image.
+          4. Use **Show in Navigation** and **Show on Homepage Strip** to control where the service appears. Set **Navigation Order** to control position (lower numbers appear first).
+          5. **Publish** when ready. Projects linked under **Services Provided** automatically appear in the Recent Projects carousel.
+
+          **Do not publish or delete the template entry.** New service pages may need a developer to wire up design before going live.
+        fields:
           - handle: title
             field:
               type: text

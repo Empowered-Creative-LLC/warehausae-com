@@ -3,19 +3,20 @@ tabs:
   main:
     display: Main
     sections:
-      - fields:
+      - display: Getting started
+        instructions: |-
+          **To add a news post**
+          1. Click **Create Entry** and enter a **Title** (the URL is automatic: `/news/your-title-slug/`).
+          2. Add a **Published Date**, optional **Subtitle**, and a **Featured Image**.
+          3. Write the article in **Body Markdown**. Use the image button to upload photos inside the body.
+          4. **Publish** when ready. The post appears on the homepage news section and on `/news/`.
+
+          Ignore the legacy "Featured Image Url (imported)" and "Categories Url" fields unless restoring old imported content.
+        fields:
           - handle: title
             field:
               type: text
               display: Title
-              required: true
-          - handle: url
-            field:
-              type: text
-              display: URL override
-              instructions: >-
-                Absolute path (starting with /) that this entry should serve at. Statamic uses this as the route override, allowing different entries in this collection to live at different URL shapes
-                (e.g. /healthcare/ vs /industry/civil-engineering/).
               required: true
           - handle: subtitle
             field:

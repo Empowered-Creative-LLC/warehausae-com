@@ -3,19 +3,21 @@ tabs:
   main:
     display: Main
     sections:
-      - fields:
+      - display: Getting started
+        instructions: |-
+          **To add a case study**
+          1. Find **"★ TEMPLATE — Duplicate me"** in the entry list (keep it as a draft — never publish it).
+          2. Open its **⋯** menu and choose **Duplicate**.
+          3. Enter a **Title** and intro prose. The page URL is automatic (`/case-studies/your-slug/`).
+          4. Fill in **Project Info** (sidebar), narrative **Sections** (heading + body + images), and optional team spotlights.
+          5. **Publish** when ready. The case study appears on the Portfolio page case studies list.
+
+          **Do not publish or delete the template entry.**
+        fields:
           - handle: title
             field:
               type: text
               display: Title
-              required: true
-          - handle: url
-            field:
-              type: text
-              display: URL override
-              instructions: >-
-                Absolute path (starting with /) that this entry should serve at. Statamic uses this as the route override, allowing different entries in this collection to live at different URL shapes
-                (e.g. /healthcare/ vs /industry/civil-engineering/).
               required: true
           - handle: hero_image
             field:

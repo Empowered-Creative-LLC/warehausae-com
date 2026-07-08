@@ -4,7 +4,6 @@ blueprint: portfolio_category
 title: multi-family
 slug: multi-family
 source_url: https://warehausae.com/multi-family/
-url: /multi-family/
 category_name: multi-family
 tagline: We listen. We design. We deliver.
 lead_heading: Vibrant Living Spaces from Coast to Coast

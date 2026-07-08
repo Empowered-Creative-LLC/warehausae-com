@@ -221,6 +221,10 @@ function initStickyHeader() {
     const header = document.querySelector('[data-haus-header]');
     if (!header) return;
 
+    // Some pages (e.g. news entries) have a white top, so the header must
+    // stay solid/dark even at scroll position 0 to keep the wordmark legible.
+    const forceSolid = header.hasAttribute('data-haus-header-solid');
+
     const TRANSPARENT = ['bg-transparent'];
     const SOLID = ['bg-haus-ink-900/95', 'backdrop-blur', 'shadow-sm'];
 
@@ -229,7 +233,7 @@ function initStickyHeader() {
         for (const c of SOLID) header.classList.toggle(c, solid);
     };
 
-    const update = () => apply(window.scrollY > 60);
+    const update = () => apply(forceSolid || window.scrollY > 60);
     update();
     window.addEventListener('scroll', update, { passive: true });
 }

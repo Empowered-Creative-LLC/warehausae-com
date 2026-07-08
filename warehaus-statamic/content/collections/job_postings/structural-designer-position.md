@@ -7,7 +7,8 @@ source_url: https://warehausae.com/job/structural-designer-position/
 department: Structural Engineering
 location: York, Pennsylvania
 employment_type: Full-time
-posted_date: Not specified
+posted_date: November 26, 2025
+posted_time: 1:53 pm
 overview: >-
   This position focuses on structural modeling, drafting, and design support across a range of projects. You’ll work alongside project managers and engineers to develop construction documents,
   coordinate with other disciplines, and build your technical expertise through hands-on project experience.

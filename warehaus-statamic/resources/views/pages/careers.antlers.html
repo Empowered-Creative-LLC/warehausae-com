@@ -3,31 +3,67 @@
 
 {{ partial:watermark_hero page_subtitle="Careers" }}
 
-{{ if lead_heading or intro_prose }}
-    <section class="container-haus pt-16 pb-8 text-center max-w-4xl mx-auto">
-        {{ if lead_heading }}<h2 class="text-2xl md:text-3xl text-haus-ink-500">{{ lead_heading }}</h2>{{ /if }}
-        {{ if intro_prose }}<div class="mt-8 text-lg leading-relaxed text-haus-ink-700 space-y-4">{{ intro_prose | nl2br }}</div>{{ /if }}
+{{ if lead_heading or intro_prose or intro_video_id }}
+    <section class="container-haus pt-16 pb-8 md:pb-12 text-center">
+        <div class="max-w-4xl mx-auto">
+            {{ if lead_heading }}
+                <h2 class="text-3xl md:text-4xl font-medium tracking-tight text-haus-ink-800">{{ lead_heading }}</h2>
+                <span class="mt-4 inline-block h-1 w-14 rounded bg-haus-amber-500" aria-hidden="true"></span>
+            {{ /if }}
+            {{ if intro_prose }}<div class="mt-8 text-lg leading-relaxed text-haus-ink-700 space-y-4 [&_a]:text-haus-amber-700 [&_a]:underline [&_a]:underline-offset-2 [&_a]:hover:text-haus-amber-800">{{ intro_prose | markdown | imported_asset_urls_in_html }}</div>{{ /if }}
+        </div>
+
+        {{ if intro_video_id }}
+            <div class="mt-10 md:mt-12 max-w-3xl mx-auto">
+                <iframe
+                    class="w-full aspect-video rounded-lg shadow-md"
+                    src="https://www.youtube.com/embed/{{ intro_video_id }}?rel=0"
+                    title="Warehaus — Join Our Team"
+                    loading="lazy"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen
+                ></iframe>
+            </div>
+        {{ /if }}
     </section>
 {{ /if }}
 
-{{# Auto-populated list of currently-open positions from the job_postings
-    collection. The collection has 5 entries at /job/{slug}/ #}}
+{{# "Join Our Team" — open positions rendered as a two-column card grid,
+    mirroring the live warehausae.com/careers layout (amber date + time meta,
+    role blurb, amber "More" button, divider under each card). Auto-populated
+    from the job_postings collection, so new postings appear automatically. #}}
 <section class="container-haus py-16 md:py-24">
-    <h2 class="text-3xl md:text-4xl font-medium tracking-tight text-center">Open Positions</h2>
+    <div class="text-center">
+        <h2 class="text-3xl md:text-4xl font-medium tracking-tight">Join Our Team</h2>
+        <span class="mt-4 inline-block h-1 w-14 rounded bg-haus-amber-500" aria-hidden="true"></span>
+    </div>
 
     {{ collection:job_postings sort="title:asc" }}
-        {{ if first }}<div class="mt-12 max-w-3xl mx-auto divide-y divide-haus-ink-200 border-y border-haus-ink-200">{{ /if }}
-            <a href="{{ url }}" class="group flex items-center justify-between gap-6 py-6 hover:bg-haus-ink-50 transition px-2">
-                <div>
-                    <h3 class="text-xl md:text-2xl font-medium group-hover:text-haus-amber-700 transition">{{ title }}</h3>
-                    <dl class="mt-2 flex flex-wrap gap-x-6 gap-y-1 text-xs uppercase tracking-wider text-haus-ink-500">
-                        {{ if department }}<div><dt class="sr-only">Department</dt><dd>{{ department }}</dd></div>{{ /if }}
-                        {{ if location }}<div><dt class="sr-only">Location</dt><dd>{{ location }}</dd></div>{{ /if }}
-                        {{ if employment_type }}<div><dt class="sr-only">Type</dt><dd>{{ employment_type }}</dd></div>{{ /if }}
-                    </dl>
+        {{ if first }}<div class="mt-12 grid gap-x-12 md:grid-cols-2 max-w-5xl mx-auto">{{ /if }}
+            <article class="flex flex-col py-8 border-b border-haus-ink-200">
+                <h3 class="text-xl md:text-2xl font-medium tracking-tight text-haus-ink-800">{{ title }}</h3>
+                {{ if posted_date || posted_time }}
+                    <div class="mt-3 flex flex-wrap items-center gap-x-5 gap-y-1 text-sm">
+                        {{ if posted_date }}
+                            <a href="{{ url }}" class="inline-flex items-center gap-2 text-haus-amber-600 hover:text-haus-amber-700 transition">
+                                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 8.25h18M4.5 5.25h15A1.5 1.5 0 0 1 21 6.75v12A1.5 1.5 0 0 1 19.5 20.25h-15A1.5 1.5 0 0 1 3 18.75v-12A1.5 1.5 0 0 1 4.5 5.25Z"/></svg>
+                                <span>{{ posted_date }}</span>
+                            </a>
+                        {{ /if }}
+                        {{ if posted_time }}
+                            <span class="inline-flex items-center gap-2 text-haus-ink-500">
+                                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
+                                <span>{{ posted_time }}</span>
+                            </span>
+                        {{ /if }}
+                    </div>
+                {{ /if }}
+                {{ if overview }}<p class="mt-4 text-haus-ink-600 leading-relaxed">{{ overview }}</p>{{ /if }}
+                <div class="mt-6">
+                    <a href="{{ url }}" class="inline-flex items-center justify-center bg-haus-amber-500 hover:bg-haus-amber-400 text-haus-ink-900 font-semibold px-7 py-2.5 rounded transition">More</a>
                 </div>
-                <span class="text-haus-amber-700 text-2xl group-hover:translate-x-1 transition-transform" aria-hidden="true">→</span>
-            </a>
+            </article>
         {{ if last }}</div>{{ /if }}
     {{ /collection:job_postings }}
 
@@ -36,11 +72,45 @@
     {{ /if }}
 </section>
 
+{{# Content bands (Our Benefits, Opportunities for Students, …). A section
+    with accordion items renders as a collapsible accordion; the theme field
+    switches between the dark charcoal band and the white band, mirroring the
+    live warehausae.com/careers layout. First item opens by default. #}}
 {{ if sections }}
     {{ sections }}
-        <section class="container-haus pb-12 max-w-4xl">
-            <h2 class="text-2xl md:text-3xl font-medium tracking-tight">{{ heading }}</h2>
-            {{ if body }}<div class="mt-4 text-haus-ink-700 leading-relaxed space-y-4">{{ body | nl2br }}</div>{{ /if }}
+        <section class="{{ if theme == 'dark' }}bg-[#333334] text-white{{ else }}bg-white{{ /if }} py-16 md:py-24">
+            <div class="container-haus">
+                <div class="text-center">
+                    <h2 class="text-3xl md:text-4xl font-medium tracking-tight {{ if theme == 'dark' }}text-white{{ else }}text-haus-ink-800{{ /if }}">{{ heading }}</h2>
+                    <span class="mt-4 inline-block h-1 w-14 rounded bg-haus-amber-500" aria-hidden="true"></span>
+                </div>
+
+                {{ if accordion }}
+                    <div class="mt-10 md:mt-12 max-w-4xl mx-auto {{ if theme == 'dark' }}border-t border-white/20{{ else }}space-y-1{{ /if }}">
+                        {{ accordion }}
+                            {{ if theme == 'dark' }}
+                                <details class="group border-b border-white/20" name="acc-{{ heading | slugify }}"{{ if first }} open{{ /if }}>
+                                    <summary class="flex items-center gap-3 cursor-pointer list-none [&::-webkit-details-marker]:hidden py-4 px-1 text-[17px] font-semibold text-[#f5f5f5] hover:text-white transition">
+                                        <span class="text-haus-amber-400 text-xl leading-none w-4 text-center" aria-hidden="true"><span class="group-open:hidden">+</span><span class="hidden group-open:inline">&minus;</span></span>
+                                        <span>{{ title }}</span>
+                                    </summary>
+                                    <div class="pb-5 pl-8 pr-4 text-white/85 leading-relaxed [&_ul]:list-disc [&_ul]:pl-5 [&_ul]:space-y-1.5 [&_li]:marker:text-white/40 [&_a]:text-haus-amber-300 [&_a]:underline [&_a]:underline-offset-2">{{ content | markdown }}</div>
+                                </details>
+                            {{ else }}
+                                <details class="group" name="acc-{{ heading | slugify }}"{{ if first }} open{{ /if }}>
+                                    <summary class="flex items-center gap-3 cursor-pointer list-none [&::-webkit-details-marker]:hidden py-4 px-5 bg-[#555555] hover:bg-[#4a4a4a] text-white text-[17px] font-semibold transition">
+                                        <span class="text-xl leading-none w-4 text-center" aria-hidden="true"><span class="group-open:hidden">+</span><span class="hidden group-open:inline">&minus;</span></span>
+                                        <span>{{ title }}</span>
+                                    </summary>
+                                    <div class="border border-t-0 border-haus-ink-200 py-4 px-5 text-haus-ink-700 leading-relaxed [&_ul]:list-disc [&_ul]:pl-5 [&_ul]:space-y-1.5 [&_a]:text-haus-amber-700 [&_a]:underline [&_a]:underline-offset-2">{{ content | markdown }}</div>
+                                </details>
+                            {{ /if }}
+                        {{ /accordion }}
+                    </div>
+                {{ elseif body }}
+                    <div class="mt-8 max-w-4xl mx-auto prose prose-lg max-w-none {{ if theme == 'dark' }}prose-invert{{ /if }}">{{ body | markdown | imported_asset_urls_in_html }}</div>
+                {{ /if }}
+            </div>
         </section>
     {{ /sections }}
 {{ /if }}

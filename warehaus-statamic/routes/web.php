@@ -49,3 +49,33 @@ Route::get('/Industries/{slug}/', function (string $slug) {
         ->render();
 });
 
+// Permanent (301) redirects preserving inbound links after collections moved
+// to slug-based routes (news → /news/{slug}, case studies → /case-studies/{slug},
+// and the three /industry/{x}/ portfolio categories → /industry-{x}/). Registered
+// explicitly so they take precedence over Statamic's catch-all dispatcher. Both
+// slashed and unslashed variants are covered.
+$permanentRedirects = [
+    // News posts (previously served at the site root)
+    '/press_release_acquisition' => '/news/press_release_acquisition/',
+    '/press_release-office_purchase' => '/news/press_release-office_purchase/',
+    '/warehaus-announces-leadership-promotions' => '/news/warehaus-announces-leadership-promotions/',
+    '/warehaus-leadership-promotions' => '/news/warehaus-leadership-promotions/',
+    '/warehaus-named-national-finalist-for-holiday-campaign-celebrating-york-county' => '/news/warehaus-named-national-finalist-for-holiday-campaign-celebrating-york-county/',
+    '/warehaus-welcomes-courtney-weaver-as-chief-financial-officer' => '/news/warehaus-welcomes-courtney-weaver-as-chief-financial-officer/',
+
+    // Case studies (previously under /case-study/, plus a legacy duplicate slug)
+    '/case-study/bischoff-inn' => '/case-studies/bischoff-inn/',
+    '/case-study-bischoff-inn' => '/case-studies/bischoff-inn/',
+    '/case-study/municipal-engineering' => '/case-studies/municipal-engineering/',
+
+    // Portfolio categories previously nested under /industry/
+    '/industry/historic' => '/industry-historic/',
+    '/industry/municipal' => '/industry-municipal/',
+    '/industry/civil-engineering' => '/industry-civil-engineering/',
+];
+
+foreach ($permanentRedirects as $from => $to) {
+    Route::redirect($from, $to, 301);
+    Route::redirect($from.'/', $to, 301);
+}
+

@@ -4,7 +4,6 @@ blueprint: portfolio_category
 title: education
 slug: education
 source_url: https://warehausae.com/education/
-url: /education/
 category_name: education
 tagline: We listen. We design. We deliver.
 lead_heading: Enriched Educational Experiences

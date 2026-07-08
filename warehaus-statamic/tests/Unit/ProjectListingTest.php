@@ -30,6 +30,58 @@ class ProjectListingTest extends TestCase
         $this->assertTrue(ProjectListing::projectBelongsToCategory($rows, '/healthcare/') === false);
     }
 
+    public function test_project_belongs_to_category_matches_by_label_when_url_differs(): void
+    {
+        $rows = [['label' => 'Municipal', 'url' => '/industry/municipal/']];
+
+        // After the route change the category serves at /industry-municipal/, which
+        // no longer matches the imported /industry/municipal/ path — the label keeps it linked.
+        $this->assertTrue(ProjectListing::projectBelongsToCategory($rows, '/industry-municipal/', 'municipal'));
+        $this->assertFalse(ProjectListing::projectBelongsToCategory($rows, '/industry-municipal/', 'healthcare'));
+    }
+
+    public function test_is_editor_template_entry_matches_flag_and_slug(): void
+    {
+        $flagged = new class implements \Statamic\Contracts\Entries\Entry
+        {
+            public function get($key, $fallback = null)
+            {
+                return $key === 'is_editor_template' ? true : $fallback;
+            }
+
+            public function slug()
+            {
+                return 'some-slug';
+            }
+
+            public function __call($method, $parameters)
+            {
+                throw new \BadMethodCallException("Method {$method} is not implemented.");
+            }
+        };
+
+        $slugOnly = new class implements \Statamic\Contracts\Entries\Entry
+        {
+            public function get($key, $fallback = null)
+            {
+                return $fallback;
+            }
+
+            public function slug()
+            {
+                return '_template';
+            }
+
+            public function __call($method, $parameters)
+            {
+                throw new \BadMethodCallException("Method {$method} is not implemented.");
+            }
+        };
+
+        $this->assertTrue(ProjectListing::isEditorTemplateEntry($flagged));
+        $this->assertTrue(ProjectListing::isEditorTemplateEntry($slugOnly));
+    }
+
     public function test_to_carousel_item_prefers_service_labels(): void
     {
         $entry = new class implements \Statamic\Contracts\Entries\Entry

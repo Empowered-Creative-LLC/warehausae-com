@@ -1,5 +1,5 @@
 title: News Posts
-route: "{url}"
+route: "/news/{slug}"
 template: news_posts.show
 layout: layout
 sites:

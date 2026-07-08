@@ -4,7 +4,6 @@ blueprint: portfolio_category
 title: civil engineering
 slug: industry-civil-engineering
 source_url: https://warehausae.com/industry/civil-engineering/
-url: /industry/civil-engineering/
 category_name: civil engineering
 tagline: Comprehensive Civil Engineering Services Tailored for Municipalities
 lead_heading: Have a project in mind?

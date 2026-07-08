@@ -4,7 +4,6 @@ blueprint: portfolio_category
 title: historic architecture
 slug: historic
 source_url: https://warehausae.com/historic/
-url: /historic/
 category_name: historic architecture
 tagline: We listen. We design. We deliver.
 lead_heading: Respect for Historic Character

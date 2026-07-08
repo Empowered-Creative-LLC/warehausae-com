@@ -36,7 +36,7 @@
 
     <div class="container-haus pb-16 md:pb-24 max-w-3xl">
         {{ if body_markdown }}
-            <div class="prose prose-lg max-w-none text-haus-ink-700 leading-relaxed space-y-6">{{ body_markdown | markdown | imported_asset_urls_in_html }}</div>
+            <div class="prose prose-lg max-w-none text-haus-ink-700 leading-relaxed space-y-6">{{ body_markdown | strip_markdown_image | markdown | imported_asset_urls_in_html }}</div>
         {{ /if }}
     </div>
 </article>
