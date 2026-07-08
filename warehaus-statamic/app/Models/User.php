@@ -7,6 +7,8 @@ use Database\Factories\UserFactory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Statamic\Notifications\ActivateAccount;
+use Statamic\Notifications\PasswordReset;
 
 class User extends Authenticatable
 {
@@ -51,5 +53,22 @@ class User extends Authenticatable
             'preferences' => 'array',
             'last_login' => 'datetime',
         ];
+    }
+
+    /**
+     * Statamic's Eloquent user wrapper delegates password-reset mail to this
+     * model when the method exists. The inherited Laravel trait would send the
+     * framework's default notification, which builds route('password.reset') —
+     * a route Statamic does not define (it uses its own CP reset routes). Send
+     * Statamic's notification instead so the correct reset URL is generated.
+     */
+    public function sendPasswordResetNotification($token): void
+    {
+        $this->notify(new PasswordReset($token));
+    }
+
+    public function sendActivateAccountNotification($token): void
+    {
+        $this->notify(new ActivateAccount($token));
     }
 }
