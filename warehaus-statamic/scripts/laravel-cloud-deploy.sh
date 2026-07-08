@@ -9,6 +9,14 @@ set -euo pipefail
 # or copy this file into warehaus-statamic/ if needed.
 
 php artisan migrate --force
+
+# Refresh Statamic's flat-file content cache. `stache:warm` alone can keep
+# serving a stale index across deploys (the Stache is persisted in the DB cache
+# store), so git-committed content changes wouldn't appear on the site. Clearing
+# the app cache + the Stache first, then warming, guarantees deployed content
+# (content/*.md, blueprints) takes effect.
+php artisan cache:clear
+php artisan statamic:stache:clear
 php artisan statamic:stache:warm
 
 # Optional: configure git push when GIT_SSH_PRIVATE_KEY is set (Statamic CP workflow)

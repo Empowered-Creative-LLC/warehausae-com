@@ -212,8 +212,12 @@ Set **Deploy commands** on the environment to:
 
 ```bash
 php artisan migrate --force
+php artisan cache:clear
+php artisan statamic:stache:clear
 php artisan statamic:stache:warm
 ```
+
+> **Why the clear steps:** Statamic's Stache is persisted in the database cache store, so `stache:warm` on its own can keep serving a stale content index across deploys — git-committed content changes (`content/*.md`, blueprints) then won't appear on the site even though the code deployed. Clearing the app cache and the Stache before warming forces the deployed content to take effect. `scripts/laravel-cloud-deploy.sh` already does this.
 
 If using Statamic Git push with a deploy key, also run the git SSH setup from [Git push credentials](#3-git-push-credentials-server-side-client-has-no-github-access) as additional deploy commands, or use [`warehaus-statamic/scripts/laravel-cloud-deploy.sh`](warehaus-statamic/scripts/laravel-cloud-deploy.sh) after copying it into the promoted app (see script header).
 
