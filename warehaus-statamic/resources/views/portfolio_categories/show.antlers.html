@@ -93,4 +93,6 @@
     </section>
 {{ /if }}
 
-{{ partial:recent_projects_carousel :projects="recent_projects" }}
+{{ projects_carousel context="portfolio_category" }}
+    {{ partial:recent_projects_carousel }}
+{{ /projects_carousel }}

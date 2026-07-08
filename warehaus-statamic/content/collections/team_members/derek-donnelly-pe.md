@@ -5,6 +5,7 @@ title: Structural Engineer
 slug: derek-donnelly-pe
 source_url: https://warehausae.com/team/derek-donnelly-pe/
 name: Derek Donnelly, PE
+show_on_about: false
 first_name: Derek
 discipline: structural engineering
 headshot_url: /assets/imported/2024/06/Derek-Donnelly-1024x682.webp

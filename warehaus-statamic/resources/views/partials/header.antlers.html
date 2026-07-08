@@ -20,11 +20,9 @@
                     <svg class="h-3 w-3" viewBox="0 0 12 8" fill="none" aria-hidden="true"><path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </a>
                 <ul data-haus-dropdown-menu class="hidden absolute left-0 top-full mt-2 min-w-[200px] bg-haus-ink-900/95 backdrop-blur rounded shadow-lg py-2 text-white normal-case tracking-normal font-medium text-sm">
-                    <li><a href="/services/architecture/" class="block px-4 py-2 hover:bg-white/5 hover:text-haus-amber-400 transition">Architecture</a></li>
-                    <li><a href="/services/civil_engineering/" class="block px-4 py-2 hover:bg-white/5 hover:text-haus-amber-400 transition">Civil</a></li>
-                    <li><a href="/services/historic-preservation/" class="block px-4 py-2 hover:bg-white/5 hover:text-haus-amber-400 transition">Historic Preservation</a></li>
-                    <li><a href="/services/interior_design/" class="block px-4 py-2 hover:bg-white/5 hover:text-haus-amber-400 transition">Interior Design</a></li>
-                    <li><a href="/services/structural/" class="block px-4 py-2 hover:bg-white/5 hover:text-haus-amber-400 transition">Structural</a></li>
+                    {{ collection:services show_in_nav:is="true" sort="nav_order:asc|title:asc" }}
+                        <li><a href="{{ url }}" class="block px-4 py-2 hover:bg-white/5 hover:text-haus-amber-400 transition">{{ nav_label ?? service_name | title }}</a></li>
+                    {{ /collection:services }}
                 </ul>
             </div>
             <div class="relative" data-haus-dropdown>

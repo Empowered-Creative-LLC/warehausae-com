@@ -5,6 +5,7 @@ title: Architectural Project Director
 slug: craig-campbell
 source_url: https://warehausae.com/team/craig-campbell/
 name: Craig Campbell
+show_on_about: false
 first_name: Craig
 discipline: architecture
 headshot_url: /assets/imported/2024/01/Campbell-Craig-1.webp

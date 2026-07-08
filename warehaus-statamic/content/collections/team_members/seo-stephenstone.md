@@ -5,6 +5,7 @@ title: Civil Designer and Sewage Enforcement Officer
 slug: seo-stephenstone
 source_url: https://warehausae.com/team/seo-stephenstone/
 name: Stephen Stone, EIT
+show_on_about: false
 first_name: Stephen
 discipline: civil engineering
 headshot_url: /assets/imported/2025/02/Stone-Stephen.webp

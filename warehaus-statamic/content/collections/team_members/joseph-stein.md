@@ -5,6 +5,7 @@ title: Civil Project Director
 slug: joseph-stein
 source_url: https://warehausae.com/team/joseph-stein/
 name: Joseph Stein
+show_on_about: false
 first_name: Joseph
 discipline: civil engineering
 headshot_url: /assets/imported/2024/01/Stein-Joe-1.webp

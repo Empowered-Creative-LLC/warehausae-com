@@ -15,6 +15,18 @@ tabs:
               display: Name
               instructions: The team member's full name as shown in the H1 (e.g. 'Dan Creep', 'Troy Bankert, AIA').
               required: true
+          - handle: show_on_about
+            field:
+              type: toggle
+              display: Show on About Page
+              instructions: When enabled, this team member appears in the leadership section on the About page.
+              default: true
+          - handle: about_order
+            field:
+              type: integer
+              display: About Page Order
+              instructions: Controls ordering in the About page leadership section. Lower numbers appear first.
+              default: 100
           - handle: first_name
             field:
               type: text

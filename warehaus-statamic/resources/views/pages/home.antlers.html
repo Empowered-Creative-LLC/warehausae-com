@@ -189,34 +189,40 @@
 </section>
 
 {{# ── 2. SERVICES STRIP — circular icons + hover image panel ──── #}}
-{{ if services_strip }}
+{{ collection:services show_on_homepage_strip:is="true" sort="nav_order:asc|title:asc" as="homepage_services" }}
+{{ if homepage_services }}
 <section class="bg-white border-b border-haus-ink-100 overflow-visible" style="position:relative;z-index:10;">
     <div class="container-haus">
         <div class="flex flex-wrap justify-center">
-            {{ services_strip }}
-                <a href="{{ url }}" class="haus-service-item" aria-label="{{ label }}">
+            {{ homepage_services }}
+                <a href="{{ url }}" class="haus-service-item" aria-label="{{ nav_label ?? service_name | title }}">
                     {{# Circle contains both the icon (default) and the hover photo (fades in) #}}
                     <div class="svc-circle">
                         {{# Icon layer — fades out on hover #}}
-                        {{ if icon_url }}
+                        {{ if strip_icon_url }}
                             <div class="svc-icon">
-                                <img src="{{ icon_url | imported_asset_url }}" alt="" aria-hidden="true">
+                                <img src="{{ strip_icon_url | imported_asset_url }}" alt="" aria-hidden="true">
+                            </div>
+                        {{ elseif strip_icon }}
+                            <div class="svc-icon">
+                                {{ partial:img :asset="strip_icon" class="w-full h-full object-contain" :glide="false" alt="" }}
                             </div>
                         {{ /if }}
                         {{# Photo layer — fades in on hover, fills the circle #}}
-                        {{ if hover_image || hover_image_url }}
+                        {{ if strip_hover_image || strip_hover_image_url }}
                             <div class="svc-hover-img">
-                                {{ partial:img :asset="hover_image" :legacy_url="hover_image_url" :alt="label" class="w-full h-full object-cover" :glide="false" loading="lazy" }}
+                                {{ partial:img :asset="strip_hover_image" :legacy_url="strip_hover_image_url" :alt="nav_label ?? service_name | title" class="w-full h-full object-cover" :glide="false" loading="lazy" }}
                             </div>
                         {{ /if }}
                     </div>
-                    <span class="svc-label">{{ label }}</span>
+                    <span class="svc-label">{{ nav_label ?? service_name | title }}</span>
                 </a>
-            {{ /services_strip }}
+            {{ /homepage_services }}
         </div>
     </div>
 </section>
 {{ /if }}
+{{ /collection:services }}
 
 {{# ── 3. MISSION BAND ─────────────────────────────────────────────── #}}
 <section class="py-12 md:py-16 bg-white">
@@ -238,25 +244,26 @@
 </section>
 
 {{# ── 4. FEATURED PROJECTS ───────────────────────────────────────── #}}
-{{ if featured_projects }}
+{{ projects_carousel context="featured" limit="6" }}
+{{ if projects }}
 <section class="bg-white pt-14 pb-10">
     <div class="container-haus">
         <h2 class="haus-section-heading text-3xl md:text-4xl font-bold text-haus-ink-800 leading-tight">Featured Projects</h2>
         <div class="haus-section-divider"></div>
         <div class="grid grid-cols-3 grid-rows-2 gap-px bg-gray-300">
-            {{ featured_projects }}
+            {{ projects }}
                 <a href="{{ url }}" class="haus-proj-card" style="aspect-ratio:4/3;">
                     {{ if image || image_url }}
                         {{ partial:img :asset="image" :legacy_url="image_url" :alt="title" class="absolute inset-0 w-full h-full object-cover" :glide="false" loading="lazy" }}
                     {{ /if }}
                     <div class="overlay">
                         {{ if categories }}
-                            <p class="proj-cats">{{ categories }}<span class="cat-item">{{ value }}</span>{{ /categories }}</p>
+                            <p class="proj-cats">{{ categories | join:", " }}</p>
                         {{ /if }}
                         <h3 class="proj-title">{{ title }}</h3>
                     </div>
                 </a>
-            {{ /featured_projects }}
+            {{ /projects }}
         </div>
         <div class="flex justify-end mt-5">
             <a href="/portfolio/" class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest transition-colors duration-200 text-haus-ink-800 hover:text-haus-amber-600">
@@ -267,6 +274,7 @@
     </div>
 </section>
 {{ /if }}
+{{ /projects_carousel }}
 
 {{# ── 5. NEWS & ANNOUNCEMENTS ────────────────────────────────────── #}}
 {{ if news_slugs }}

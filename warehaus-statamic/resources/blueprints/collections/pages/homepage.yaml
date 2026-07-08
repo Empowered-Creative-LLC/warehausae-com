@@ -84,7 +84,7 @@ tabs:
                     display: Hover Preview Image URL (imported)
                     instructions: Legacy imported path. Use Hover Preview Image above for new uploads.
               display: Services Strip
-              instructions: Service link tiles below the hero (architecture, civil, structural, interior, historic).
+              instructions: Deprecated — the homepage services strip is now populated automatically from Services entries with “Show on Homepage Strip” enabled.
           - handle: believe_in_blocks
             field:
               type: grid
@@ -148,7 +148,7 @@ tabs:
                     type: list
                     display: Featured Projects Categories
               display: Featured Projects
-              instructions: Featured project tiles on the homepage.
+              instructions: Deprecated — the homepage featured projects grid is now populated automatically from the Projects collection.
           - handle: stats_counters
             field:
               type: grid

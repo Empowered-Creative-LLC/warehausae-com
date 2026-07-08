@@ -94,50 +94,50 @@
 {{# Leadership — 2-column card grid matching the live site's Elementor loop
     template (ID 16823): white card, subtle shadow, amber bottom-border on
     hover, tall portrait photo, UPPERCASE name, bare social icons, muted role. #}}
-{{ if leadership_slugs }}
+{{ collection:team_members show_on_about:is="true" sort="about_order:asc|name:asc" as="about_leadership" }}
+{{ if about_leadership }}
     <section class="container-haus py-16 md:py-24">
         <h2 class="text-3xl md:text-4xl font-medium tracking-tight text-center">Meet Our Leadership</h2>
         {{# Amber rule under the heading — matches the divider in Elementor #}}
         <div class="mt-3 mx-auto w-24 h-[3px] bg-haus-amber-500 rounded"></div>
         <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-6">
-            {{ leadership_slugs }}
-                {{ collection:team_members :slug:is="value" }}
-                    <div class="group bg-white rounded-[9px] shadow-[0_3px_36px_rgba(0,0,0,0.09)] border-b-4 border-transparent hover:border-haus-amber-500 hover:shadow-[0_0_10px_rgba(0,0,0,0.5)] transition-all duration-200 overflow-hidden p-5">
-                        {{# Portrait photo #}}
-                        {{ if headshot || headshot_url }}
-                            <a href="/team/{{ slug }}/" class="block overflow-hidden rounded-[9px] bg-haus-ink-100">
-                                {{ partial:img :asset="headshot" :legacy_url="headshot_url" :alt="name" class="w-full object-cover object-center rounded-[9px]" style="height:374px;" :glide="false" }}
-                            </a>
-                        {{ /if }}
-                        {{# Name + social icons row #}}
-                        <div class="mt-4 flex items-start justify-between gap-2">
-                            <a href="/team/{{ slug }}/" class="text-[18px] font-normal uppercase leading-snug text-haus-ink-800 hover:text-haus-amber-600 transition-colors" style="letter-spacing:0.02em;">{{ name }}</a>
-                            <div class="flex items-center gap-3 text-haus-ink-900 shrink-0 mt-0.5">
-                                {{ if linkedin_url }}
-                                    <a href="{{ linkedin_url }}" target="_blank" rel="noopener" aria-label="LinkedIn" class="hover:text-haus-amber-500 transition-colors">
-                                        <svg class="w-[18px] h-[18px]" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-                                    </a>
-                                {{ /if }}
-                                {{ if email }}
-                                    <a href="mailto:{{ email }}" aria-label="Email" class="hover:text-haus-amber-500 transition-colors">
-                                        <svg class="w-[18px] h-[18px]" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 12.713l-11.985-9.713h23.97l-11.985 9.713zm0 2.574l-12-9.725v15.438h24v-15.438l-12 9.725z"/></svg>
-                                    </a>
-                                {{ /if }}
-                                {{ if phone }}
-                                    <a href="tel:{{ phone }}" aria-label="Phone" class="hover:text-haus-amber-500 transition-colors">
-                                        <svg class="w-[18px] h-[18px]" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 15.5c-1.25 0-2.45-.2-3.57-.57-.35-.11-.74-.03-1.02.24l-2.2 2.2c-2.83-1.44-5.15-3.75-6.59-6.59l2.2-2.21c.28-.27.36-.66.25-1.01C8.7 6.45 8.5 5.25 8.5 4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.5c0-.55-.45-1-1-1z"/></svg>
-                                    </a>
-                                {{ /if }}
-                            </div>
+            {{ about_leadership }}
+                <div class="group bg-white rounded-[9px] shadow-[0_3px_36px_rgba(0,0,0,0.09)] border-b-4 border-transparent hover:border-haus-amber-500 hover:shadow-[0_0_10px_rgba(0,0,0,0.5)] transition-all duration-200 overflow-hidden p-5">
+                    {{# Portrait photo #}}
+                    {{ if headshot || headshot_url }}
+                        <a href="/team/{{ slug }}/" class="block overflow-hidden rounded-[9px] bg-haus-ink-100">
+                            {{ partial:img :asset="headshot" :legacy_url="headshot_url" :alt="name" class="w-full object-cover object-center rounded-[9px]" style="height:374px;" :glide="false" }}
+                        </a>
+                    {{ /if }}
+                    {{# Name + social icons row #}}
+                    <div class="mt-4 flex items-start justify-between gap-2">
+                        <a href="/team/{{ slug }}/" class="text-[18px] font-normal uppercase leading-snug text-haus-ink-800 hover:text-haus-amber-600 transition-colors" style="letter-spacing:0.02em;">{{ name }}</a>
+                        <div class="flex items-center gap-3 text-haus-ink-900 shrink-0 mt-0.5">
+                            {{ if linkedin_url }}
+                                <a href="{{ linkedin_url }}" target="_blank" rel="noopener" aria-label="LinkedIn" class="hover:text-haus-amber-500 transition-colors">
+                                    <svg class="w-[18px] h-[18px]" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                                </a>
+                            {{ /if }}
+                            {{ if email }}
+                                <a href="mailto:{{ email }}" aria-label="Email" class="hover:text-haus-amber-500 transition-colors">
+                                    <svg class="w-[18px] h-[18px]" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 12.713l-11.985-9.713h23.97l-11.985 9.713zm0 2.574l-12-9.725v15.438h24v-15.438l-12 9.725z"/></svg>
+                                </a>
+                            {{ /if }}
+                            {{ if phone }}
+                                <a href="tel:{{ phone }}" aria-label="Phone" class="hover:text-haus-amber-500 transition-colors">
+                                    <svg class="w-[18px] h-[18px]" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 15.5c-1.25 0-2.45-.2-3.57-.57-.35-.11-.74-.03-1.02.24l-2.2 2.2c-2.83-1.44-5.15-3.75-6.59-6.59l2.2-2.21c.28-.27.36-.66.25-1.01C8.7 6.45 8.5 5.25 8.5 4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.5c0-.55-.45-1-1-1z"/></svg>
+                                </a>
+                            {{ /if }}
                         </div>
-                        {{# Role/title in muted gray, capitalized #}}
-                        {{ if title }}<p class="mt-2 text-sm capitalize" style="color:#666666;">{{ title }}</p>{{ /if }}
                     </div>
-                {{ /collection:team_members }}
-            {{ /leadership_slugs }}
+                    {{# Role/title in muted gray, capitalized #}}
+                    {{ if title }}<p class="mt-2 text-sm capitalize" style="color:#666666;">{{ title }}</p>{{ /if }}
+                </div>
+            {{ /about_leadership }}
         </div>
     </section>
 {{ /if }}
+{{ /collection:team_members }}
 
 {{# News feed — pulled from news_posts collection in slug order #}}
 {{ if news_slugs }}

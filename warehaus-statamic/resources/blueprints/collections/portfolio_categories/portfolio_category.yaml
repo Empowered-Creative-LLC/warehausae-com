@@ -117,7 +117,7 @@ tabs:
                     type: text
                     display: Recent Projects Image Url (imported)
               display: Recent Projects
-              instructions: Project list shown under 'Recent Projects' at the bottom. Deduplicate by URL.
+              instructions: Deprecated — the Recent Projects carousel is now populated automatically from the Projects collection.
           - handle: mid_image
             field:
               type: assets
