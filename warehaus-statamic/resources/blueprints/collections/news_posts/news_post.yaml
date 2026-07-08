@@ -7,7 +7,7 @@ tabs:
         instructions: |-
           **To add a news post**
           1. Click **Create Entry** and enter a **Title** (the URL is automatic: `/news/your-title-slug/`).
-          2. Add a **Published Date**, optional **Subtitle**, and a **Featured Image**.
+          2. Set the **Published Date** (this controls the order on the News page — newest first), add an optional **Subtitle**, and a **Featured Image**.
           3. Write the article in **Body Markdown**. Use the image button to upload photos inside the body.
           4. **Publish** when ready. The post appears on the homepage news section and on `/news/`.
 
@@ -23,11 +23,12 @@ tabs:
               type: text
               display: Subtitle / Descriptor
               instructions: Optional short italic descriptor shown below the title. Matches the italicised lead sentence on some WordPress posts.
-          - handle: published_date_text
+          - handle: date
             field:
-              type: text
-              display: Published Date Text
-              instructions: Date as displayed (literal). May be relative like '5 months ago' or absolute like 'December 15, 2025'.
+              type: date
+              display: Published Date
+              instructions: The article's publish date. Controls the order on the News page (newest first).
+              required: true
           - handle: featured_image
             field:
               type: assets

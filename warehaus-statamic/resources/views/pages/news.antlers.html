@@ -10,7 +10,7 @@
 {{ /if }}
 
 <section class="container-haus py-12 md:py-20">
-    {{ collection:news_posts sort="published_date_text:desc" as="posts" }}
+    {{ collection:news_posts sort="date:desc" as="posts" }}
         {{ if no_results }}
             <p class="text-center text-haus-ink-500">No news yet. Check back soon.</p>
         {{ /if }}
@@ -29,7 +29,7 @@
                             </div>
                         {{ /if }}
                         <h3 class="text-lg font-medium leading-snug text-haus-ink-800 group-hover:text-haus-amber-700 transition">{{ title }}</h3>
-                        {{ if published_date_text }}<p class="mt-2 text-xs uppercase tracking-wide text-haus-ink-400">{{ published_date_text }}</p>{{ /if }}
+                        {{ if date }}<p class="mt-2 text-xs uppercase tracking-wide text-haus-ink-400">{{ date format="F j, Y" }}</p>{{ /if }}
                     </div>
                 </a>
             {{ /posts }}
