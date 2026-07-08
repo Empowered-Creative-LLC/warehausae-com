@@ -24,7 +24,7 @@
                 </p>
             {{ /if }}
             <h1 class="mt-4 text-3xl md:text-[40px] font-bold text-[#4b4b4b] leading-tight max-w-[900px]">{{ title }}</h1>
-            {{ if published_date_text }}<p class="mt-4 text-[14px] text-[#888]">{{ published_date_text }}</p>{{ /if }}
+            {{ if date }}<p class="mt-4 text-[14px] text-[#888]">{{ date format="F j, Y" }}</p>{{ /if }}
         </div>
     </header>
 
