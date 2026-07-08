@@ -65,6 +65,14 @@ return [
             'transport' => 'resend',
         ],
 
+        // Symfony SendGrid API transport. Registered in AppServiceProvider via
+        // Mail::extend('sendgrid'). Uses the sendgrid+api scheme (HTTPS API),
+        // which works on hosts that block outbound SMTP ports (e.g. Laravel Cloud).
+        'sendgrid' => [
+            'transport' => 'sendgrid',
+            'key' => env('SENDGRID_API_KEY'),
+        ],
+
         'sendmail' => [
             'transport' => 'sendmail',
             'path' => env('MAIL_SENDMAIL_PATH', '/usr/sbin/sendmail -bs -i'),

@@ -8,7 +8,7 @@ These are blocking before launch. Each has a one-touch follow-up step.
 
 1. **Font license.** The new site uses Inter as a free stand-in for the licensed Neue Haas Unica Pro. Once the client provides licensed Neue Haas Unica Pro web fonts, drop the WOFF2 files into `warehaus-statamic/public/fonts/`, register them in `warehaus-statamic/resources/css/app.css` via @font-face, and change the `--font-sans` token from "Inter" to "Neue Haas Unica Pro". Single CSS commit.
 
-2. **Newsletter destination.** The Statamic form at `warehaus-statamic/resources/forms/newsletter.yaml` currently stores submissions in Statamic but emails nowhere. To enable email notifications, fill the `email:` block in that file with a target address (likely info@warehausae.com) and set SMTP credentials in production .env (MAIL_HOST, MAIL_PORT, MAIL_USERNAME, MAIL_PASSWORD, MAIL_FROM_ADDRESS, MAIL_FROM_NAME). Alternative: pipe to Mailchimp or ConvertKit via their API webhook.
+2. **Newsletter destination.** The Statamic form at `warehaus-statamic/resources/forms/newsletter.yaml` currently stores submissions in Statamic but emails nowhere. To enable email notifications, fill the `email:` block in that file with a target address (likely info@warehausae.com). Outbound mail is sent through SendGrid (Symfony SendGrid API transport) — set `MAIL_MAILER=sendgrid`, `SENDGRID_API_KEY`, `MAIL_FROM_ADDRESS`, and `MAIL_FROM_NAME` in production .env (see the env-var section below). Alternative: pipe to Mailchimp or ConvertKit via their API webhook.
 
 3. **Analytics platform.** No tracking is installed. To add: pick Plausible / GA4 / Fathom / Matomo, drop the snippet into `warehaus-statamic/resources/views/layout.antlers.html` just before `</head>`, and configure any environment-specific token.
 
@@ -49,13 +49,10 @@ APP_URL=https://warehausae.com
 
 STATAMIC_LICENSE_KEY=...      from statamic.com → My Account
 
-# Mail (once newsletter destination is decided)
-MAIL_MAILER=smtp
-MAIL_HOST=...
-MAIL_PORT=587
-MAIL_USERNAME=...
-MAIL_PASSWORD=...
-MAIL_FROM_ADDRESS=info@warehausae.com
+# Mail — SendGrid (used for CP password resets, user invites, form notifications)
+MAIL_MAILER=sendgrid
+SENDGRID_API_KEY=SG.xxxxxxxxxxxxxxxxxxxxxx   # SendGrid → Settings → API Keys ("Mail Send" scope)
+MAIL_FROM_ADDRESS=info@warehausae.com        # must be a SendGrid verified sender / authenticated domain
 MAIL_FROM_NAME=Warehaus
 
 # Analytics (once platform is decided)
