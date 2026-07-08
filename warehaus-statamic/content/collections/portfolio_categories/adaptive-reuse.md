@@ -4,7 +4,6 @@ blueprint: portfolio_category
 title: adaptive reuse
 slug: adaptive-reuse
 source_url: https://warehausae.com/adaptive-reuse/
-url: /adaptive-reuse/
 category_name: adaptive reuse
 tagline: We listen. We design. We deliver.
 lead_heading: Creative and Technical Expertise Combine to Transform Your Space

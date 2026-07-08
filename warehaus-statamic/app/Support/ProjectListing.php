@@ -54,10 +54,10 @@ class ProjectListing
     /**
      * @return Collection<int, Entry>
      */
-    public static function forPortfolioCategory(string $categoryUrl, int $limit = 96): Collection
+    public static function forPortfolioCategory(string $categoryUrl, ?string $categoryName = null, int $limit = 96): Collection
     {
         return self::baseQuery()
-            ->filter(fn (Entry $entry) => self::entryMatchesPortfolioCategory($entry, $categoryUrl))
+            ->filter(fn (Entry $entry) => self::entryMatchesPortfolioCategory($entry, $categoryUrl, $categoryName))
             ->take($limit)
             ->values();
     }
@@ -113,6 +113,15 @@ class ProjectListing
         ];
     }
 
+    public static function isEditorTemplateEntry(Entry $entry): bool
+    {
+        if ((bool) $entry->get('is_editor_template')) {
+            return true;
+        }
+
+        return $entry->slug() === '_template';
+    }
+
     /**
      * @return Collection<int, Entry>
      */
@@ -122,7 +131,7 @@ class ProjectListing
             ->where('collection', 'projects')
             ->where('published', true)
             ->get()
-            ->reject(fn (Entry $entry) => (bool) $entry->get('is_test_fits_subpage'))
+            ->reject(fn (Entry $entry) => self::isEditorTemplateEntry($entry) || (bool) $entry->get('is_test_fits_subpage'))
             ->sortBy(fn (Entry $entry) => strtolower((string) $entry->get('title')));
     }
 
@@ -157,13 +166,19 @@ class ProjectListing
     }
 
     /**
+     * A project belongs to a category when any of its industry rows match the
+     * category by URL (legacy imported paths) or by label (resilient to the
+     * URL restructuring, since imported category URLs and slugs disagree).
+     *
      * @param  list<array<string, mixed>>  $industries
      */
-    public static function projectBelongsToCategory(array $industries, string $categoryUrl): bool
+    public static function projectBelongsToCategory(array $industries, string $categoryUrl, ?string $categoryName = null): bool
     {
         if ($industries === []) {
             return false;
         }
+
+        $categoryNameKey = $categoryName !== null ? self::slugKey($categoryName) : '';
 
         foreach ($industries as $row) {
             if (! is_array($row)) {
@@ -173,6 +188,12 @@ class ProjectListing
             $rowUrl = (string) ($row['url'] ?? '');
 
             if ($rowUrl !== '' && self::pathsMatch($rowUrl, $categoryUrl)) {
+                return true;
+            }
+
+            $rowLabel = (string) ($row['label'] ?? '');
+
+            if ($categoryNameKey !== '' && $rowLabel !== '' && self::slugKey($rowLabel) === $categoryNameKey) {
                 return true;
             }
         }
@@ -188,12 +209,12 @@ class ProjectListing
             && self::projectProvidesService($rows, $serviceSlug, $serviceUrl);
     }
 
-    private static function entryMatchesPortfolioCategory(Entry $entry, string $categoryUrl): bool
+    private static function entryMatchesPortfolioCategory(Entry $entry, string $categoryUrl, ?string $categoryName = null): bool
     {
         $rows = $entry->get('industries', []);
 
         return is_array($rows)
-            && self::projectBelongsToCategory($rows, $categoryUrl);
+            && self::projectBelongsToCategory($rows, $categoryUrl, $categoryName);
     }
 
     private static function serviceSlugMatches(string $serviceSlug, string $projectServiceKey): bool

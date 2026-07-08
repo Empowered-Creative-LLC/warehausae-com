@@ -4,7 +4,6 @@ blueprint: portfolio_category
 title: municipal
 slug: industry-municipal
 source_url: https://warehausae.com/industry/municipal/
-url: /industry/municipal/
 category_name: municipal
 testimonial:
   quote: ""

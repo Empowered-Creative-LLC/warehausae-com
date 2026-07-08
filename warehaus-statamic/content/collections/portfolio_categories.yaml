@@ -1,5 +1,5 @@
 title: Portfolio Categories
-route: "{url}"
+route: "/{slug}"
 template: portfolio_categories.show
 layout: layout
 sites:

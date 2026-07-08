@@ -8,7 +8,7 @@ url: /Industries/case-study/
 category_name: Case Study
 posts:
   - title: Bischoff Inn
-    url: /case-study/bischoff-inn/
+    url: /case-studies/bischoff-inn/
     image_url: /assets/imported/2023/08/14-Bischoff-Ribbon-Cutting-1024x768.jpeg
     date_text: ""
     categories: []

@@ -6,6 +6,8 @@ slug: civil-assistant-project-manager
 source_url: https://warehausae.com/job/civil-assistant-project-manager/
 department: Civil Engineering
 location: York, Pennsylvania
+posted_date: March 9, 2026
+posted_time: 1:41 pm
 overview: >+
   This position blends civil site design with project coordination. You’ll support Civil Project Managers with scheduling, communication, and permitting while continuing to produce plans in Civil 3D.
   It’s a strong fit for someone growing into project management but not ready to step away from design.

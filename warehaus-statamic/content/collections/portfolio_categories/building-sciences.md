@@ -4,7 +4,6 @@ blueprint: portfolio_category
 title: building sciences
 slug: building-sciences
 source_url: https://warehausae.com/building-sciences/
-url: /building-sciences/
 category_name: building sciences
 tagline: We listen. We design. We deliver.
 lead_heading: An Exacting Approach to Repair and Restoration

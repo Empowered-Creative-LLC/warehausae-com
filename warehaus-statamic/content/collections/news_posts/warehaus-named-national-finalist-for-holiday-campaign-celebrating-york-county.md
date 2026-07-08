@@ -4,7 +4,6 @@ blueprint: news_post
 title: Warehaus Named National Finalist for Holiday Campaign Celebrating York County
 slug: warehaus-named-national-finalist-for-holiday-campaign-celebrating-york-county
 source_url: https://warehausae.com/warehaus-named-national-finalist-for-holiday-campaign-celebrating-york-county/
-url: /warehaus-named-national-finalist-for-holiday-campaign-celebrating-york-county/
 subtitle: "Campaign inspired by York County's 275th anniversary earned First Place and Best in Show honors from SMPS Philadelphia before advancing to national competition."
 published_date_text: June 2, 2026
 featured_image_url: /assets/imported/2026/06/Warehaus-Team-SMPS-Marketing-Communication-Award-June-2026.jpg

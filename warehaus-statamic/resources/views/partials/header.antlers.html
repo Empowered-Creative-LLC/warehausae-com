@@ -3,10 +3,14 @@
     SERVICES/PORTFOLIO with dropdowns, ABOUT/CULTURE/CAREERS flat links,
     minimal-skin search field on the right. #}}
 
+{{# Pages with a light (white) top need the header to arrive solid/dark so
+    the white wordmark and nav stay legible. news_posts.show is one such
+    template. #}}
 <header
     data-haus-header
-    class="fixed top-0 inset-x-0 z-50 transition-colors duration-300
-           bg-transparent text-white"
+    {{ if collection == 'news_posts' }}data-haus-header-solid{{ /if }}
+    class="fixed top-0 inset-x-0 z-50 transition-colors duration-300 text-white
+           {{ if collection == 'news_posts' }}bg-haus-ink-900/95 backdrop-blur shadow-sm{{ else }}bg-transparent{{ /if }}"
 >
     <div class="px-6 md:px-10 lg:px-12 flex items-center justify-between gap-6 py-4 md:py-5">
         <a href="/" class="block shrink-0" aria-label="Warehaus home">

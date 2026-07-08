@@ -4,7 +4,6 @@ blueprint: case_study
 title: "Preservation Pennsylvania Award Winner: Bischoff Inn"
 slug: bischoff-inn
 source_url: https://warehausae.com/case-study/bischoff-inn/
-url: /case-study/bischoff-inn/
 hero_image_url: /assets/imported/2023/08/14-Bischoff-Ribbon-Cutting-1024x768.jpeg
 intro_prose: >-
   Located in the residential west end of the National Register listed Tamaqua Historic District, a former furniture factory from the 1870s now serves as the newest boutique hotel in town. With the

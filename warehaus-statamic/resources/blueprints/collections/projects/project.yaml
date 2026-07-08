@@ -3,7 +3,18 @@ tabs:
   main:
     display: Main
     sections:
-      - fields:
+      - display: Getting started
+        instructions: |-
+          **To add a new project**
+          1. Find **"★ TEMPLATE — Duplicate me"** in the entry list (keep it as a draft — never publish it).
+          2. Open its **⋯** menu and choose **Duplicate**.
+          3. Enter a real **Title**. The page URL is created automatically (`/project/your-project-slug/`).
+          4. Add a **Hero Image**, location, narrative sections, and sidebar details (client, size, completion date).
+          5. Under **Services Provided** and **Industries**, link the service and portfolio category pages this project belongs to — this controls where it appears in carousels across the site.
+          6. **Publish** when ready. New projects automatically appear in Featured Projects, service pages, portfolio categories, and related-project carousels.
+
+          **Do not publish or delete the template entry.**
+        fields:
           - handle: title
             field:
               type: text

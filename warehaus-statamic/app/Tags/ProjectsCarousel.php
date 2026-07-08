@@ -21,11 +21,12 @@ class ProjectsCarousel extends Tags
         $currentSlug = (string) ($this->params->get('slug') ?? $this->context->value('slug') ?? '');
         $currentUrl = (string) ($this->params->get('url') ?? $this->context->value('url') ?? '');
         $currentId = $this->params->get('id') ?? $this->context->value('id');
+        $categoryName = (string) ($this->context->value('category_name') ?? $this->context->value('title') ?? '');
 
         $projects = match ($context) {
             'featured' => ProjectListing::featured($limit),
             'service' => ProjectListing::forService($currentSlug, $currentUrl ?: null, $limit),
-            'portfolio_category' => ProjectListing::forPortfolioCategory($currentUrl, $limit),
+            'portfolio_category' => ProjectListing::forPortfolioCategory($currentUrl, $categoryName ?: null, $limit),
             'related' => $this->related($currentId, $limit),
             default => ProjectListing::all($limit),
         };
