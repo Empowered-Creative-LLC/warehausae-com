@@ -17,37 +17,35 @@ class ProjectsCarousel extends Tags
     {
         $context = (string) $this->params->get('context', 'all');
         $limit = max(1, (int) $this->params->get('limit', 96));
-        $entry = $this->context->value();
+
+        $currentSlug = (string) ($this->params->get('slug') ?? $this->context->value('slug') ?? '');
+        $currentUrl = (string) ($this->params->get('url') ?? $this->context->value('url') ?? '');
+        $currentId = $this->params->get('id') ?? $this->context->value('id');
 
         $projects = match ($context) {
             'featured' => ProjectListing::featured($limit),
-            'service' => ProjectListing::forService(
-                (string) ($entry?->slug() ?? $this->params->get('slug', '')),
-                $entry?->url(),
-                $limit,
-            ),
-            'portfolio_category' => ProjectListing::forPortfolioCategory(
-                (string) ($entry?->get('url') ?? $this->params->get('url', '')),
-                $limit,
-            ),
-            'related' => $entry
-                ? ProjectListing::relatedTo($entry, $limit)
-                : collect(),
+            'service' => ProjectListing::forService($currentSlug, $currentUrl ?: null, $limit),
+            'portfolio_category' => ProjectListing::forPortfolioCategory($currentUrl, $limit),
+            'related' => $this->related($currentId, $limit),
             default => ProjectListing::all($limit),
         };
-
-        if ($context === 'related' && $entry === null && $this->params->has('id')) {
-            $relatedEntry = Entry::find($this->params->get('id'));
-
-            if ($relatedEntry) {
-                $projects = ProjectListing::relatedTo($relatedEntry, $limit);
-            }
-        }
 
         return [
             'projects' => $projects
                 ->map(fn ($project) => ProjectListing::toCarouselItem($project))
                 ->all(),
         ];
+    }
+
+    /**
+     * @return \Illuminate\Support\Collection<int, \Statamic\Contracts\Entries\Entry>
+     */
+    private function related(mixed $id, int $limit): \Illuminate\Support\Collection
+    {
+        $entry = $id ? Entry::find($id) : null;
+
+        return $entry
+            ? ProjectListing::relatedTo($entry, $limit)
+            : collect();
     }
 }
