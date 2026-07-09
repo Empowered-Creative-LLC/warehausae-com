@@ -3,7 +3,15 @@ tabs:
   main:
     display: Main
     sections:
-      - fields:
+      - display: Getting started
+        instructions: |-
+          **To add a job posting**
+          1. Click **Create Entry** and enter the job **Title** (e.g. "Civil Designer").
+          2. Add department, location, employment type, and posted date.
+          3. Write the **Overview**, then add bullet lists for **Responsibilities**, **Qualifications**, and **Benefits**.
+          4. Add an **Apply URL** (link to the application page) or **Apply Email**.
+          5. **Publish** when ready. Open positions appear on the `/careers/` page automatically.
+        fields:
           - handle: title
             field:
               type: text
@@ -28,7 +36,12 @@ tabs:
             field:
               type: text
               display: Posted Date
-              instructions: Date posted, as displayed. Preserve the literal string.
+              instructions: Date posted, as displayed (e.g. 'April 23, 2026'). Shown on the careers page job cards.
+          - handle: posted_time
+            field:
+              type: text
+              display: Posted Time
+              instructions: Time posted, as displayed (e.g. '9:57 am'). Shown next to the date on the careers page job cards.
           - handle: overview
             field:
               type: textarea
@@ -79,7 +92,14 @@ tabs:
             field:
               type: textarea
               display: SEO description
+          - handle: seo_og_image
+            field:
+              type: assets
+              display: OG Image
+              container: main
+              folder: uploads
+              max_files: 1
           - handle: seo_og_image_url
             field:
               type: text
-              display: OG image URL
+              display: OG image URL (imported)

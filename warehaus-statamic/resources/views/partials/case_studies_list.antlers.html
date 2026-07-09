@@ -1,0 +1,25 @@
+{{# Auto-populated case studies list — shown on the portfolio page. #}}
+
+{{ collection:case_studies slug:not="_template" sort="title:asc" as="case_study_entries" }}
+{{ if case_study_entries }}
+    <section class="container-haus py-16 md:py-24">
+        <h2 class="text-3xl md:text-4xl font-medium tracking-tight text-center">Case Studies</h2>
+        <div class="mt-3 mx-auto w-24 h-[3px] bg-haus-amber-500 rounded"></div>
+        <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {{ case_study_entries }}
+                <a href="{{ url }}" class="group block bg-white border border-haus-ink-200/70 shadow-sm hover:shadow-md transition overflow-hidden">
+                    <div class="aspect-[4/3] overflow-hidden bg-haus-ink-100">
+                        {{ if hero_image || hero_image_url }}
+                            {{ partial:img :asset="hero_image" :legacy_url="hero_image_url" :alt="title" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" :glide="false" loading="lazy" }}
+                        {{ /if }}
+                    </div>
+                    <div class="px-5 py-5">
+                        <h3 class="text-lg font-medium leading-snug text-haus-ink-800 group-hover:text-haus-amber-700 transition">{{ title }}</h3>
+                        {{ if project_info:project_type }}<p class="mt-2 text-sm text-haus-ink-500">{{ project_info:project_type }}</p>{{ /if }}
+                    </div>
+                </a>
+            {{ /case_study_entries }}
+        </div>
+    </section>
+{{ /if }}
+{{ /collection:case_studies }}

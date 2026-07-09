@@ -4,7 +4,6 @@ blueprint: portfolio_category
 title: historic
 slug: industry-historic
 source_url: https://warehausae.com/industry/historic/
-url: /industry/historic/
 category_name: historic
 tagline: We listen. We design. We deliver.
 lead_heading: Respect for Historic Character

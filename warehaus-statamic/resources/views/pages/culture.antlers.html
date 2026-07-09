@@ -1,34 +1,308 @@
-{{# Culture template — hero + intro + image grid + sections. #}}
+{{# Culture page — matches warehausae.com/culture/ layout:
+    1. Watermark hero
+    2. Welcome — white bg, two-column (text left, photo right)
+    3. Our Values — dark charcoal bg, 4 CSS flip cards with icons
+    4. Photo accordion — horizontal expanding panels with labels
+    5. Haus Perks — white bg, heading + prose
+#}}
+
+<style>
+    /* ── Values flip cards ───────────────────────────────────────────── */
+    .haus-flip-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        margin-top: 45px;
+        margin-bottom: 45px;
+    }
+    @media (min-width: 768px) {
+        .haus-flip-grid { grid-template-columns: repeat(4, 1fr); }
+    }
+    .haus-flip-card {
+        perspective: 1000px;
+        min-height: 280px;
+        cursor: pointer;
+    }
+    .haus-flip-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        min-height: 280px;
+        transform-style: preserve-3d;
+        transition: transform 0.55s cubic-bezier(0.4, 0, 0.2, 1);
+        border-radius: 6px;
+    }
+    .haus-flip-card:hover .haus-flip-inner,
+    .haus-flip-card:focus-within .haus-flip-inner {
+        transform: rotateY(180deg);
+    }
+    .haus-flip-front,
+    .haus-flip-back {
+        position: absolute;
+        inset: 0;
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+        background-color: #4D4D4D;
+        border-radius: 6px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 28px 20px;
+        text-align: center;
+    }
+    .haus-flip-back { transform: rotateY(180deg); }
+
+    .haus-value-icon {
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        border: 2px solid #f89b02;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 18px;
+        flex-shrink: 0;
+    }
+    .haus-value-icon svg {
+        width: 28px;
+        height: 28px;
+        stroke: #f89b02;
+        fill: none;
+        stroke-width: 1.6;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+    }
+    .haus-flip-front__title {
+        color: #ffffff;
+        font-size: 24px;
+        font-weight: 800;
+        line-height: 1.1;
+        margin: 0 0 10px;
+    }
+    .haus-flip-front__tagline {
+        color: #ffffff;
+        font-size: 15px;
+        font-weight: 300;
+        line-height: 1.5;
+        margin: 0;
+    }
+    .haus-flip-back__title {
+        color: #f89b02;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 1.15;
+        margin: 0 0 14px;
+    }
+    .haus-flip-back__description {
+        color: #ffffff;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.65;
+        margin: 0;
+    }
+    @media (prefers-reduced-motion: reduce) {
+        .haus-flip-inner { transition: none; }
+    }
+
+    /* ── Photo accordion ─────────────────────────────────────────────── */
+    .haus-accordion {
+        display: flex;
+        width: 100%;
+        height: 420px;
+        overflow: hidden;
+    }
+    .haus-accordion__panel {
+        position: relative;
+        flex: 1;
+        overflow: hidden;
+        cursor: pointer;
+        transition: flex 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .haus-accordion__panel.is-active { flex: 7.5; }
+    .haus-accordion__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        display: block;
+    }
+    .haus-accordion__label {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 16px 20px;
+        background: linear-gradient(to top, rgba(0,0,0,0.65) 0%, transparent 100%);
+        color: #ffffff;
+        font-size: 20px;
+        font-weight: 700;
+        text-transform: lowercase;
+        letter-spacing: 0.02em;
+        opacity: 0;
+        transform: translateY(6px);
+        transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+    .haus-accordion__panel.is-active .haus-accordion__label {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    @media (max-width: 640px) {
+        .haus-accordion { height: 260px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+        .haus-accordion__panel, .haus-accordion__label { transition: none; }
+    }
+
+    /* ── Shared amber section rule ───────────────────────────────────── */
+    .haus-section-rule {
+        width: 100px;
+        height: 3px;
+        background-color: #f89b02;
+        margin-top: 12px;
+        border-radius: 1px;
+    }
+</style>
 
 {{ partial:watermark_hero page_subtitle="Culture" }}
 
-{{ if lead_heading or intro_prose }}
-    <section class="container-haus pt-16 pb-8 text-center max-w-4xl mx-auto">
-        {{ if lead_heading }}<h2 class="text-2xl md:text-3xl text-haus-ink-500">{{ lead_heading }}</h2>{{ /if }}
-        {{ if intro_prose }}<div class="mt-8 text-lg leading-relaxed text-haus-ink-700 space-y-4">{{ intro_prose | nl2br }}</div>{{ /if }}
-    </section>
-{{ /if }}
-
-{{ if sections }}
-    {{ sections }}
-        <section class="container-haus py-12 md:py-16 max-w-5xl">
-            <h2 class="text-2xl md:text-3xl font-medium tracking-tight">{{ heading }}</h2>
-            {{ if body }}<div class="mt-4 max-w-3xl text-haus-ink-700 leading-relaxed space-y-4">{{ body | nl2br }}</div>{{ /if }}
-            {{ if images }}
-                <div class="mt-8 grid grid-cols-2 md:grid-cols-3 gap-4">
-                    {{ images }}
-                        <figure class="aspect-square overflow-hidden rounded-lg bg-haus-ink-100">
-                            <img src="{{ url }}" alt="{{ if alt }}{{ alt }}{{ else }}Warehaus culture{{ /if }}" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
-                        </figure>
-                    {{ /images }}
+{{# ── 1. Welcome to Warehaus — white background ────────────────────── #}}
+<section class="bg-white py-16 md:py-24">
+    <div class="container-haus max-w-6xl">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                {{ if lead_heading }}
+                    <h2 class="text-3xl md:text-4xl font-medium tracking-tight text-haus-ink-800">{{ lead_heading }}</h2>
+                    <div class="haus-section-rule"></div>
+                {{ /if }}
+                {{ if intro_prose }}
+                    <p class="mt-8 text-base md:text-lg text-haus-ink-600 leading-relaxed font-light">{{ intro_prose }}</p>
+                {{ /if }}
+            </div>
+            {{ if intro_image_url }}
+                <div class="overflow-hidden rounded-lg">
+                    <img src="{{ intro_image_url | imported_asset_url }}" alt="Warehaus team" class="w-full h-full object-cover">
                 </div>
             {{ /if }}
-        </section>
-    {{ /sections }}
+        </div>
+    </div>
+</section>
+
+{{# ── 2. Our Values — dark charcoal, 4 flip cards (hardcoded to avoid
+         Antlers cascade scoping issues with undeclared blueprint fields) ── #}}
+<section style="background-color:#3A3A3A;" class="py-16 md:py-24">
+    <div class="container-haus max-w-6xl text-center">
+        <h2 class="text-3xl md:text-4xl font-medium tracking-tight text-white">Our Values</h2>
+        <div class="haus-section-rule mx-auto"></div>
+        <div class="haus-flip-grid">
+
+            {{# Conscience #}}
+            <div class="haus-flip-card" tabindex="0">
+                <div class="haus-flip-inner">
+                    <div class="haus-flip-front">
+                        <div class="haus-value-icon">
+                            <svg viewBox="0 0 24 24"><path d="M12 3L3 7v5c0 5 3.8 9.3 9 10.3C18.2 21.3 22 17 22 12V7L12 3z"/><path d="M9 12l2 2 4-4"/></svg>
+                        </div>
+                        <h3 class="haus-flip-front__title">Conscience</h3>
+                        <p class="haus-flip-front__tagline">I am accountable for my actions.</p>
+                    </div>
+                    <div class="haus-flip-back">
+                        <h3 class="haus-flip-back__title">Conscience</h3>
+                        <p class="haus-flip-back__description">I contribute to Warehaus' legacy with integrity, by upholding our vision and mission. I can be trusted to do what I say I will do – thoroughly, accurately and on time.</p>
+                    </div>
+                </div>
+            </div>
+
+            {{# Collaboration #}}
+            <div class="haus-flip-card" tabindex="0">
+                <div class="haus-flip-inner">
+                    <div class="haus-flip-front">
+                        <div class="haus-value-icon">
+                            <svg viewBox="0 0 24 24"><circle cx="9" cy="7" r="3"/><circle cx="15" cy="7" r="3"/><path d="M3 21v-2a4 4 0 014-4h4a4 4 0 014 4v2"/><path d="M16 11a3 3 0 013 3v2"/></svg>
+                        </div>
+                        <h3 class="haus-flip-front__title">Collaboration</h3>
+                        <p class="haus-flip-front__tagline">I am a partner.</p>
+                    </div>
+                    <div class="haus-flip-back">
+                        <h3 class="haus-flip-back__title">Collaboration</h3>
+                        <p class="haus-flip-back__description">I value individual strengths and strive for team success. I communicate clearly and make it a priority to respect my colleagues', clients' and communities' ideas and needs.</p>
+                    </div>
+                </div>
+            </div>
+
+            {{# Curiosity #}}
+            <div class="haus-flip-card" tabindex="0">
+                <div class="haus-flip-inner">
+                    <div class="haus-flip-front">
+                        <div class="haus-value-icon">
+                            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+                        </div>
+                        <h3 class="haus-flip-front__title">Curiosity</h3>
+                        <p class="haus-flip-front__tagline">I seek out knowledge so I can grow.</p>
+                    </div>
+                    <div class="haus-flip-back">
+                        <h3 class="haus-flip-back__title">Curiosity</h3>
+                        <p class="haus-flip-back__description">I actively listen, ask questions, am open to change and adapt as needed. I strive to improve, and I find solutions when faced with challenges.</p>
+                    </div>
+                </div>
+            </div>
+
+            {{# Conservation #}}
+            <div class="haus-flip-card" tabindex="0">
+                <div class="haus-flip-inner">
+                    <div class="haus-flip-front">
+                        <div class="haus-value-icon">
+                            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/><path d="M12 6v6l4 2"/></svg>
+                        </div>
+                        <h3 class="haus-flip-front__title">Conservation</h3>
+                        <p class="haus-flip-front__tagline">I respect time, energy and resources.</p>
+                    </div>
+                    <div class="haus-flip-back">
+                        <h3 class="haus-flip-back__title">Conservation</h3>
+                        <p class="haus-flip-back__description">In the interest of Warehaus and our clients, I follow a budget, stay informed on how my actions impact our financials, and take action to ensure efficiency and cost effectiveness.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+{{# ── 3. Photo accordion ───────────────────────────────────────────────── #}}
+{{ if gallery_photos }}
+    <div class="haus-accordion" id="haus-accordion">
+        {{ gallery_photos }}
+            <div class="haus-accordion__panel{{ if index == 0 }} is-active{{ /if }}" data-panel>
+                <img src="{{ url | imported_asset_url }}" alt="{{ label }}" class="haus-accordion__img" loading="lazy">
+                <div class="haus-accordion__label">{{ label }}</div>
+            </div>
+        {{ /gallery_photos }}
+    </div>
+    <script>
+        (function () {
+            var accordion = document.getElementById('haus-accordion');
+            var panels = accordion.querySelectorAll('[data-panel]');
+            panels.forEach(function (panel) {
+                panel.addEventListener('mouseenter', function () {
+                    panels.forEach(function (p) { p.classList.remove('is-active'); });
+                    panel.classList.add('is-active');
+                });
+            });
+            accordion.addEventListener('mouseleave', function () {
+                panels.forEach(function (p) { p.classList.remove('is-active'); });
+                if (panels[0]) panels[0].classList.add('is-active');
+            });
+        })();
+    </script>
 {{ /if }}
 
-{{ if raw_body_markdown && sections | length == 0 }}
-    <section class="container-haus pb-16 md:pb-24 max-w-3xl">
-        <div class="prose prose-lg max-w-none text-haus-ink-700 leading-relaxed">{{ raw_body_markdown | markdown }}</div>
+{{# ── 4. Haus Perks — white background ───────────────────────────────── #}}
+{{ if perks_text }}
+    <section class="bg-white py-16 md:py-24">
+        <div class="container-haus max-w-6xl">
+            <h2 class="text-3xl md:text-4xl font-medium tracking-tight text-haus-ink-800"><span class="text-haus-amber-500">Haus</span> Perks</h2>
+            <div class="haus-section-rule"></div>
+            <p class="mt-8 text-base md:text-lg text-haus-ink-600 leading-relaxed max-w-3xl font-light">{{ perks_text }}</p>
+        </div>
     </section>
 {{ /if }}

@@ -7,6 +7,8 @@ source_url: https://warehausae.com/job/civil-project-manager-2/
 department: Civil Engineering
 location: York, Pennsylvania
 employment_type: Full-time
+posted_date: March 10, 2026
+posted_time: 3:04 pm
 overview: >-
   This position is responsible for managing land development projects from early planning through permitting and construction. You’ll lead coordination across clients, agencies, and internal teams
   while overseeing budgets, schedules, and overall project execution.

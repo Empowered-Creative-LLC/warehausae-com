@@ -1,12 +1,16 @@
 title: News Posts
-route: "{url}"
+route: "/news/{slug}"
 template: news_posts.show
 layout: layout
 sites:
   - default
 blueprints:
   - news_post
+date: true
+date_behavior:
+  past: public
+  future: public
 sort_dir: desc
-sort_field: published_date_text
+sort_field: date
 taxonomies:
   - industries_categories

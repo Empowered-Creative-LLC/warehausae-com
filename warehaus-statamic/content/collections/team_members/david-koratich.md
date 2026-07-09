@@ -5,6 +5,8 @@ title: Co-Owner / Chief Operating Officer
 slug: david-koratich
 source_url: https://warehausae.com/team/david-koratich/
 name: David Koratich, EIT
+show_on_about: true
+about_order: 1
 first_name: David
 discipline: civil engineering
 headshot_url: /assets/imported/2024/01/Koratich-David-1.webp
@@ -24,5 +26,6 @@ education: David holds a degree in Civil Engineering from Penn State University.
 contact_blurb: Have a project with civil engineering needs? Connect with David to discuss.
 email: dkoratich@warehausae.com
 phone: (717) 815 8540
+linkedin_url: https://www.linkedin.com/in/david-koratich-94327b75/
 seo_description: Along with Warehaus’ CEO Troy Bankert, David took ownership of the firm in 2021 and has been a part of the company since 1999. Over his 26 years at Warehaus,…
 ---

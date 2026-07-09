@@ -8,7 +8,7 @@ These are blocking before launch. Each has a one-touch follow-up step.
 
 1. **Font license.** The new site uses Inter as a free stand-in for the licensed Neue Haas Unica Pro. Once the client provides licensed Neue Haas Unica Pro web fonts, drop the WOFF2 files into `warehaus-statamic/public/fonts/`, register them in `warehaus-statamic/resources/css/app.css` via @font-face, and change the `--font-sans` token from "Inter" to "Neue Haas Unica Pro". Single CSS commit.
 
-2. **Newsletter destination.** The Statamic form at `warehaus-statamic/resources/forms/newsletter.yaml` currently stores submissions in Statamic but emails nowhere. To enable email notifications, fill the `email:` block in that file with a target address (likely info@warehausae.com) and set SMTP credentials in production .env (MAIL_HOST, MAIL_PORT, MAIL_USERNAME, MAIL_PASSWORD, MAIL_FROM_ADDRESS, MAIL_FROM_NAME). Alternative: pipe to Mailchimp or ConvertKit via their API webhook.
+2. **Newsletter destination.** The Statamic form at `warehaus-statamic/resources/forms/newsletter.yaml` currently stores submissions in Statamic but emails nowhere. To enable email notifications, fill the `email:` block in that file with a target address (likely info@warehausae.com). Outbound mail is sent through SendGrid (Symfony SendGrid API transport) — set `MAIL_MAILER=sendgrid`, `SENDGRID_API_KEY`, `MAIL_FROM_ADDRESS`, and `MAIL_FROM_NAME` in production .env (see the env-var section below). Alternative: pipe to Mailchimp or ConvertKit via their API webhook.
 
 3. **Analytics platform.** No tracking is installed. To add: pick Plausible / GA4 / Fathom / Matomo, drop the snippet into `warehaus-statamic/resources/views/layout.antlers.html` just before `</head>`, and configure any environment-specific token.
 
@@ -49,13 +49,10 @@ APP_URL=https://warehausae.com
 
 STATAMIC_LICENSE_KEY=...      from statamic.com → My Account
 
-# Mail (once newsletter destination is decided)
-MAIL_MAILER=smtp
-MAIL_HOST=...
-MAIL_PORT=587
-MAIL_USERNAME=...
-MAIL_PASSWORD=...
-MAIL_FROM_ADDRESS=info@warehausae.com
+# Mail — SendGrid (used for CP password resets, user invites, form notifications)
+MAIL_MAILER=sendgrid
+SENDGRID_API_KEY=SG.xxxxxxxxxxxxxxxxxxxxxx   # SendGrid → Settings → API Keys ("Mail Send" scope)
+MAIL_FROM_ADDRESS=info@warehausae.com        # must be a SendGrid verified sender / authenticated domain
 MAIL_FROM_NAME=Warehaus
 
 # Analytics (once platform is decided)
@@ -64,24 +61,56 @@ MAIL_FROM_NAME=Warehaus
 # GA4_MEASUREMENT_ID=G-XXXXXXXX
 ```
 
-## Content strategy
+## Content strategy (CP-authoritative)
 
-The new site uses Statamic's file-based content driver. This means:
+The client edits **only through the Statamic Control Panel** — no GitHub access required.
 
-- Every content edit in the CP is a file write under `warehaus-statamic/content/`.
-- The CP can edit in production but those edits won't be in your git repo unless you have a workflow to commit them. Two common patterns:
-  - Edits flow only through git (developer edits + push). Disable the CP's save buttons or restrict CP write access.
-  - Edits flow through both: configure Statamic's git integration so each CP save creates a commit (see `config/statamic/git.php`).
-- The client probably wants the CP to be authoritative — set up the git-integration option.
+Statamic uses a **flat-file** content driver (not a CMS database):
+
+- Entries, pages, globals, and navigation live as YAML/Markdown under `warehaus-statamic/content/`.
+- CP uploads land in `public/assets/` (except legacy `imported/`, which is served from R2 — see Asset strategy).
+- **Laravel's database** stores sessions, cache, and queue jobs only — not CMS content.
+
+### Production workflow
+
+1. Client saves in Statamic CP → files written on the server.
+2. Statamic Git integration queues a commit job (requires a **queue worker**).
+3. Server runs `git add`, `git commit`, and `git push` to the `dev` branch.
+4. Laravel Cloud auto-deploys from `dev` with the latest content.
+
+Enable on Laravel Cloud only (see [Laravel Cloud CP setup](#laravel-cloud-cp-setup)):
+
+```
+STATAMIC_GIT_ENABLED=true
+STATAMIC_GIT_PUSH=true
+STATAMIC_GIT_DISPATCH_DELAY=2
+```
+
+### Developer workflow guardrails
+
+- **Code changes:** feature branch → PR → merge to `dev` → Cloud deploys.
+- **Content changes:** production (or staging) CP only; auto-push back to `dev`.
+- **Before merging code PRs:** `git pull origin dev` to incorporate any production content commits.
+- **Never** `git push --force` to `dev`.
+
+### Admin users
+
+`warehaus-statamic/users/*.yaml` is gitignored (bcrypt hashes). Statamic Git does **not** back up CP-created accounts. Create production admins with `php artisan statamic:make:user` after each fresh environment bootstrap.
 
 ## Asset strategy
 
-The migration imported 350MB of images under `warehaus-statamic/public/assets/imported/`. These are currently gitignored (see root .gitignore) — you'll need a strategy to deploy them to production:
+Legacy WordPress images (~350MB) live in `warehaus-statamic/public/assets/imported/` and are **gitignored**.
 
-- **Option A (recommended for v1):** Run `node migration-tool/scripts/import-to-statamic.js` (without --no-images) on the production host once. This re-downloads from the live WP site to populate `public/assets/imported/`. Fast and simple. Risk: if warehausae.com goes down after the cutover, you lose access to the source images. Mitigation: snapshot the directory locally before launch.
-- **Option B (better long-term):** Move imported assets to S3 / CloudFront / Bunny CDN. Rewrite the `/assets/imported/` paths in content files to a CDN domain. Requires more setup; worth doing once site traffic is meaningful.
+**Laravel Cloud (R2):**
 
-For launch: take a tarball of your local `public/assets/imported/` directory, SCP it to the host, extract. One-time operation.
+1. Create an object storage bucket on Laravel Cloud (e.g. `warehaus-com`).
+2. Upload local `imported/` once: `bash scripts/upload-imported-to-r2.sh` (requires AWS CLI + R2 credentials).
+3. Set `AWS_URL` on the environment to the bucket **public** URL.
+4. [`ImportedAssetUrl`](warehaus-statamic/app/Support/ImportedAssetUrl.php) rewrites `/assets/imported/...` in templates to `{AWS_URL}/imported/...`.
+
+**CP uploads** to `public/assets/images/...` are tracked by Statamic Git and deploy via the normal commit/push flow.
+
+**Homepage and design assets** under `public/assets/images/home/` are in Git and deploy normally.
 
 ## DNS cutover
 
@@ -152,25 +181,156 @@ This repository is a **monorepo**. The deployable Laravel + Statamic app is in `
 
 `composer.json`, `composer.lock`, and `artisan` at the repository root exist so **Laravel Cloud can detect this repo as a Laravel project** during import. They are not for local development — always work inside `warehaus-statamic/` locally.
 
-The root `composer.lock` does not need to stay in sync with `warehaus-statamic/composer.lock` ([Laravel Cloud monorepo docs](https://cloud.laravel.com/docs/knowledge-base/monorepo-support)).
+The root `composer.lock` and `require` block must stay in sync with `warehaus-statamic/` — Laravel Cloud validates them **before** the build script runs (e.g. object storage requires `league/flysystem-aws-s3-v3` in the root lock). After any `composer require` / `composer update` in `warehaus-statamic/`, run:
+
+```bash
+bash scripts/sync-laravel-cloud-composer.sh
+```
+
+This also runs automatically via `warehaus-statamic`'s `post-update-cmd` Composer hook.
 
 ### Build script
 
-After creating the application in Laravel Cloud, set a **custom build script** on your environment:
+Laravel Cloud serves from `public/index.php` at the **repository root**. This monorepo keeps the app in `warehaus-statamic/`, so the build must promote that directory to the deployment root before `composer install` and `npm run build` run.
+
+After creating the application in Laravel Cloud, set the environment **Build commands** to:
 
 ```bash
-# Promote warehaus-statamic to the deployment root
-mkdir /tmp/monorepo_tmp
-mv migration-tool /tmp/monorepo_tmp/ 2>/dev/null || true
-cp -Rf warehaus-statamic/. .
-rm -rf /tmp/monorepo_tmp warehaus-statamic
-
-# Remove monorepo root markers (optional)
-rm -f composer.json composer.lock artisan
-
-composer install --no-dev --no-interaction --prefer-dist --optimize-autoloader
-npm install
-npm run build
+bash scripts/laravel-cloud-build.sh
 ```
 
-If Laravel Cloud already runs default `npm` steps, align or remove them so they run against the promoted app.
+The script lives at `scripts/laravel-cloud-build.sh` in this repo. It copies `warehaus-statamic/` to the deployment root (so `public/index.php` is in the right place), then installs PHP/JS dependencies and compiles assets.
+
+**Important:** Disable Laravel Cloud's default `npm install` / `npm run build` steps if they are configured separately — they run against the repo root (which has no `package.json`) and will fail or no-op before the promotion step.
+
+### Deploy commands
+
+Set **Deploy commands** on the environment to:
+
+```bash
+php artisan migrate --force
+php artisan cache:clear
+php artisan statamic:stache:clear
+php artisan statamic:stache:warm
+php artisan statamic:search:update --all
+```
+
+> **Why the clear steps:** Statamic's Stache is persisted in the database cache store, so `stache:warm` on its own can keep serving a stale content index across deploys — git-committed content changes (`content/*.md`, blueprints) then won't appear on the site even though the code deployed. Clearing the app cache and the Stache before warming forces the deployed content to take effect. `scripts/laravel-cloud-deploy.sh` already does this.
+
+If using Statamic Git push with a deploy key, also run the git SSH setup from [Git push credentials](#3-git-push-credentials-server-side-client-has-no-github-access) as additional deploy commands, or use [`warehaus-statamic/scripts/laravel-cloud-deploy.sh`](warehaus-statamic/scripts/laravel-cloud-deploy.sh) after copying it into the promoted app (see script header).
+
+### Required environment variables
+
+```
+APP_KEY=...                   # php artisan key:generate --show (run locally)
+APP_URL=https://warehausae.com
+APP_ENV=production
+APP_DEBUG=false
+STATAMIC_LICENSE_KEY=...
+
+# Managed database (Laravel Cloud injects DB_* when attached)
+DB_CONNECTION=mysql
+SESSION_DRIVER=database
+CACHE_STORE=database
+QUEUE_CONNECTION=database
+
+# R2 object storage for legacy /assets/imported/ images
+AWS_URL=...                   # public bucket URL from Laravel Cloud bucket settings
+AWS_ACCESS_KEY_ID=...
+AWS_SECRET_ACCESS_KEY=...
+AWS_DEFAULT_REGION=auto
+AWS_BUCKET=warehaus-com
+AWS_ENDPOINT=...              # R2 S3 API endpoint
+
+# Statamic Git — CP content auto-push to dev (production only)
+STATAMIC_GIT_ENABLED=true
+STATAMIC_GIT_AUTOMATIC=true
+STATAMIC_GIT_PUSH=true
+STATAMIC_GIT_DISPATCH_DELAY=2
+STATAMIC_GIT_USER_NAME=Warehaus CMS
+STATAMIC_GIT_USER_EMAIL=cms@warehausae.com
+```
+
+### Laravel Cloud CP setup
+
+Complete these steps in the Laravel Cloud dashboard after the first successful build.
+
+**`APP_URL`:** Set to `https://warehausae.com` (production canonical URL). Add `warehausae.com` as a custom domain on the environment when ready for DNS cutover. Until then, the Cloud dev URL (`warehausae-com-dev-ee1qzs.laravel.cloud`) can be used to visit the site, but keep `APP_URL` on `warehausae.com` so Statamic generates correct absolute URLs once DNS points here.
+
+#### 1. Managed database
+
+1. Laravel Cloud → **Resources** → **Create database** (MySQL or Postgres).
+2. Attach the database to your environment.
+3. Confirm `DB_*` variables appear in **Environment variables** (Cloud usually injects them).
+4. Deploy commands already run `php artisan migrate --force` — verify migrations succeed in deploy logs.
+
+The database powers **sessions, cache, and queues** — not Statamic entries.
+
+#### 2. Queue worker (required for Statamic Git)
+
+Statamic Git commits are **queued**. Without a worker, CP saves write files but never push to GitHub.
+
+Laravel Cloud → **Resources** → **Workers** → add:
+
+```bash
+php artisan queue:work --sleep=3 --tries=3 --max-time=3600
+```
+
+#### 3. Git push credentials (server-side; client has no GitHub access)
+
+The runtime must `git push` to `dev` after each CP save.
+
+**Option A — GitHub deploy key (recommended):**
+
+1. Generate an SSH key pair: `ssh-keygen -t ed25519 -C "warehaus-cloud-statamic" -f warehaus-cloud-git -N ""`
+2. GitHub → repo **Settings** → **Deploy keys** → add public key with **Allow write access**.
+3. Laravel Cloud → **Environment variables** → add secret `GIT_SSH_PRIVATE_KEY` (full private key contents).
+4. Add a **Deploy command** (runs after each deploy) to configure git for push:
+
+```bash
+mkdir -p ~/.ssh && chmod 700 ~/.ssh
+echo "$GIT_SSH_PRIVATE_KEY" > ~/.ssh/id_ed25519 && chmod 600 ~/.ssh/id_ed25519
+ssh-keyscan github.com >> ~/.ssh/known_hosts 2>/dev/null
+git config --global user.email "${STATAMIC_GIT_USER_EMAIL}"
+git config --global user.name "${STATAMIC_GIT_USER_NAME}"
+git remote set-url origin git@github.com:Empowered-Creative-LLC/warehausae-com.git 2>/dev/null || true
+```
+
+**Option B — fine-grained PAT:**
+
+Set remote to `https://x-access-token:TOKEN@github.com/Empowered-Creative-LLC/warehausae-com.git` via a deploy command or build hook.
+
+**Validate:** After deploy, confirm `.git` exists in the app root and `git remote -v` shows the correct origin. If Laravel Cloud strips `.git` at runtime, contact Laravel Cloud support or use persistent storage for `content/` as a fallback.
+
+#### 4. One-time bootstrap
+
+Run via Laravel Cloud **Commands** (one-off) after first deploy:
+
+```bash
+php artisan statamic:make:user
+```
+
+Upload legacy images to R2 from your local machine (not on Cloud):
+
+```bash
+bash scripts/upload-imported-to-r2.sh
+```
+
+Set `AWS_URL` to the bucket public URL, then verify a project page loads an `/assets/imported/` image.
+
+#### 5. Staging verification checklist
+
+Before DNS cutover, on staging URL:
+
+- [ ] Cloud build succeeds (`bash scripts/laravel-cloud-build.sh` in build logs)
+- [ ] Deploy commands complete (`migrate`, `stache:warm`)
+- [ ] CP login works
+- [ ] Queue worker is running (check Workers tab)
+- [ ] Legacy `/assets/imported/` image loads (R2 + `AWS_URL`)
+- [ ] Create a test news entry in CP
+- [ ] Within ~2 minutes, commit appears on `dev` in GitHub
+- [ ] Cloud redeploys and entry is visible on frontend
+- [ ] Code PR merged to `dev` does not wipe recent CP content (`git pull` before merge test)
+- [ ] `BASE=https://staging.example.com node migration-tool/scripts/verify-urls.js` (optional)
+
+Upload migrated images to the bucket under the `imported/` prefix using `scripts/upload-imported-to-r2.sh`.

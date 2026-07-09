@@ -3,24 +3,33 @@ tabs:
   main:
     display: Main
     sections:
-      - fields:
+      - display: Getting started
+        instructions: |-
+          **To add a case study**
+          1. Find **"★ TEMPLATE — Duplicate me"** in the entry list (keep it as a draft — never publish it).
+          2. Open its **⋯** menu and choose **Duplicate**.
+          3. Enter a **Title** and intro prose. The page URL is automatic (`/case-studies/your-slug/`).
+          4. Fill in **Project Info** (sidebar), narrative **Sections** (heading + body + images), and optional team spotlights.
+          5. **Publish** when ready. The case study appears on the Portfolio page case studies list.
+
+          **Do not publish or delete the template entry.**
+        fields:
           - handle: title
             field:
               type: text
               display: Title
               required: true
-          - handle: url
+          - handle: hero_image
             field:
-              type: text
-              display: URL override
-              instructions: >-
-                Absolute path (starting with /) that this entry should serve at. Statamic uses this as the route override, allowing different entries in this collection to live at different URL shapes
-                (e.g. /healthcare/ vs /industry/civil-engineering/).
-              required: true
+              type: assets
+              display: Hero Image
+              container: main
+              folder: uploads/case-studies
+              max_files: 1
           - handle: hero_image_url
             field:
               type: text
-              display: Hero Image Url
+              display: Hero Image Url (imported)
               instructions: URL of the hero image at the top of the page.
           - handle: intro_prose
             field:
@@ -76,10 +85,17 @@ tabs:
                     type: grid
                     mode: stacked
                     fields:
+                      - handle: image
+                        field:
+                          type: assets
+                          display: Image
+                          container: main
+                          folder: uploads/case-studies
+                          max_files: 1
                       - handle: url
                         field:
                           type: text
-                          display: Images Url
+                          display: Images Url (imported)
                       - handle: caption
                         field:
                           type: text
@@ -101,10 +117,17 @@ tabs:
                     type: text
                     display: Team Spotlights Title Line
                     instructions: Role line shown below the name (e.g. 'Sewage Enforcement Officer / SEO# 04183').
+                - handle: headshot
+                  field:
+                    type: assets
+                    display: Headshot
+                    container: main
+                    folder: uploads/team
+                    max_files: 1
                 - handle: headshot_url
                   field:
                     type: text
-                    display: Team Spotlights Headshot Url
+                    display: Team Spotlights Headshot Url (imported)
                 - handle: blurb
                   field:
                     type: textarea
@@ -133,7 +156,14 @@ tabs:
             field:
               type: textarea
               display: SEO description
+          - handle: seo_og_image
+            field:
+              type: assets
+              display: OG Image
+              container: main
+              folder: uploads
+              max_files: 1
           - handle: seo_og_image_url
             field:
               type: text
-              display: OG image URL
+              display: OG image URL (imported)

@@ -10,24 +10,20 @@
         overlaid horizontally across the center of the watermark.
       - Page subtitle (the entry title) below the watermark.
 
-    Parameters:
-      hero_image_url  — required, URL of the hero photo
-      page_subtitle   — optional, defaults to {{ title }} (lowercased then
-                        uppercased via CSS text-transform on the live site) #}}
+    Uses hero_image (upload) with fallback to hero_image_url (imported). #}}
 
 <section class="haus-watermark-hero relative h-screen min-h-[640px] overflow-hidden bg-haus-ink-900 text-white">
-    {{# Use the entry's hero_image_url; fall back to a generic architectural
-        drawings photo for entries that don't define one (e.g. job postings).
-        The site_hero_fallback path matches what the live site uses on /job/*. #}}
-    {{ unless hero_image_url }}
-        {{ glide src="/assets/imported/2023/06/2022_03_15_0094.webp" width="2400" format="webp" quality="82" }}
-            <img src="{{ url }}" alt="" class="absolute inset-0 w-full h-full object-cover" fetchpriority="high">
-        {{ /glide }}
+    {{ if hero_image || hero_image_url }}
+        {{ partial:img :asset="hero_image" :legacy_url="hero_image_url" class="absolute inset-0 w-full h-full object-cover" fetchpriority="high" }}
     {{ else }}
-        {{ glide src="{hero_image_url}" width="2400" format="webp" quality="82" }}
-            <img src="{{ url }}" alt="" class="absolute inset-0 w-full h-full object-cover" fetchpriority="high">
-        {{ /glide }}
-    {{ /unless }}
+        {{ if config:warehaus:imported_assets_base_url }}
+            <img src="{{ '/assets/imported/2023/06/2022_03_15_0094.webp' | imported_asset_url }}" alt="" class="absolute inset-0 w-full h-full object-cover" fetchpriority="high">
+        {{ else }}
+            {{ glide src="/assets/imported/2023/06/2022_03_15_0094.webp" width="2400" format="webp" quality="82" }}
+                <img src="{{ url }}" alt="" class="absolute inset-0 w-full h-full object-cover" fetchpriority="high">
+            {{ /glide }}
+        {{ /if }}
+    {{ /if }}
     <div class="absolute inset-0 bg-haus-ink-900/45"></div>
 
     <div class="relative h-full w-full flex items-center justify-center px-6">

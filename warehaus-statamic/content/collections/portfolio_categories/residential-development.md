@@ -4,7 +4,6 @@ blueprint: portfolio_category
 title: residential development
 slug: residential-development
 source_url: https://warehausae.com/residential-development/
-url: /residential-development/
 category_name: residential development
 tagline: We listen. We design. We deliver.
 lead_heading: Planning our Communities

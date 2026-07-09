@@ -3,28 +3,31 @@
     SERVICES/PORTFOLIO with dropdowns, ABOUT/CULTURE/CAREERS flat links,
     minimal-skin search field on the right. #}}
 
+{{# Pages with a light (white) top need the header to arrive solid/dark so
+    the white wordmark and nav stay legible. news_posts.show is one such
+    template. #}}
 <header
     data-haus-header
-    class="fixed top-0 inset-x-0 z-50 transition-colors duration-300
-           bg-transparent text-white"
+    {{ if collection == 'news_posts' || slug == 'portfolio' }}data-haus-header-solid{{ /if }}
+    class="fixed top-0 inset-x-0 z-50 transition-colors duration-300 text-white
+           {{ if collection == 'news_posts' || slug == 'portfolio' }}bg-haus-ink-900/95 backdrop-blur shadow-sm{{ else }}bg-transparent{{ /if }}"
 >
     <div class="px-6 md:px-10 lg:px-12 flex items-center justify-between gap-6 py-4 md:py-5">
         <a href="/" class="block shrink-0" aria-label="Warehaus home">
-            <img src="/assets/imported/2022/03/Asset-1.png" width="220" height="25" alt="Warehaus" class="h-6 md:h-7 w-auto">
+            <img src="{{ '/assets/imported/2022/03/Asset-1.png' | imported_asset_url }}" width="220" height="25" alt="Warehaus" class="h-6 md:h-7 w-auto">
         </a>
 
         <nav class="hidden md:flex items-center gap-7 lg:gap-9 text-xs lg:text-sm font-semibold tracking-[0.08em] uppercase text-white" data-haus-desktop-nav>
             <div class="relative" data-haus-dropdown>
-                <a href="/services/" class="inline-flex items-center gap-1.5 hover:text-haus-amber-400 transition" data-haus-dropdown-trigger aria-haspopup="true" aria-expanded="false">
+                {{# No landing page — opens the submenu only (matches live site). #}}
+                <button type="button" class="inline-flex items-center gap-1.5 uppercase font-semibold tracking-[0.08em] text-xs lg:text-sm text-white bg-transparent border-0 p-0 hover:text-haus-amber-400 transition cursor-pointer" data-haus-dropdown-trigger aria-haspopup="true" aria-expanded="false">
                     Services
                     <svg class="h-3 w-3" viewBox="0 0 12 8" fill="none" aria-hidden="true"><path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                </a>
+                </button>
                 <ul data-haus-dropdown-menu class="hidden absolute left-0 top-full mt-2 min-w-[200px] bg-haus-ink-900/95 backdrop-blur rounded shadow-lg py-2 text-white normal-case tracking-normal font-medium text-sm">
-                    <li><a href="/services/architecture/" class="block px-4 py-2 hover:bg-white/5 hover:text-haus-amber-400 transition">Architecture</a></li>
-                    <li><a href="/services/civil_engineering/" class="block px-4 py-2 hover:bg-white/5 hover:text-haus-amber-400 transition">Civil</a></li>
-                    <li><a href="/services/historic-preservation/" class="block px-4 py-2 hover:bg-white/5 hover:text-haus-amber-400 transition">Historic Preservation</a></li>
-                    <li><a href="/services/interior_design/" class="block px-4 py-2 hover:bg-white/5 hover:text-haus-amber-400 transition">Interior Design</a></li>
-                    <li><a href="/services/structural/" class="block px-4 py-2 hover:bg-white/5 hover:text-haus-amber-400 transition">Structural</a></li>
+                    {{ collection:services show_in_nav:is="true" sort="nav_order:asc|title:asc" }}
+                        <li><a href="{{ url }}" class="block px-4 py-2 hover:bg-white/5 hover:text-haus-amber-400 transition">{{ nav_label ?? service_name | title }}</a></li>
+                    {{ /collection:services }}
                 </ul>
             </div>
             <div class="relative" data-haus-dropdown>
@@ -51,7 +54,7 @@
             <a href="/careers/" class="hover:text-haus-amber-400 transition">Careers</a>
         </nav>
 
-        <form role="search" action="/search" method="get" class="hidden md:flex items-center gap-2 bg-white/10 rounded px-3 py-1.5 w-[180px] lg:w-[220px]">
+        <form role="search" action="/search/" method="get" class="hidden md:flex items-center gap-2 bg-white/10 rounded px-3 py-1.5 w-[180px] lg:w-[220px]">
             <svg class="h-3.5 w-3.5 opacity-70 shrink-0" viewBox="0 0 16 16" fill="none" aria-hidden="true">
                 <circle cx="7" cy="7" r="5" stroke="currentColor" stroke-width="1.5"/>
                 <path d="M11 11L14 14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
@@ -80,7 +83,17 @@
         class="md:hidden bg-haus-ink-900 border-t border-white/10"
     >
         <nav class="container-haus flex flex-col py-4 text-base font-medium tracking-wide uppercase divide-y divide-white/5">
-            <a href="/services/" class="py-4 hover:text-haus-amber-400 transition flex justify-between items-center">Services <span aria-hidden="true">→</span></a>
+            <div data-haus-mobile-disclosure>
+                <button type="button" class="w-full py-4 uppercase font-medium tracking-wide text-left bg-transparent border-0 hover:text-haus-amber-400 transition flex justify-between items-center" data-haus-mobile-disclosure-trigger aria-expanded="false">
+                    Services
+                    <svg class="h-4 w-4 shrink-0 transition-transform" data-haus-mobile-disclosure-chevron viewBox="0 0 12 8" fill="none" aria-hidden="true"><path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </button>
+                <div hidden data-haus-mobile-disclosure-panel class="pb-3 pl-4 space-y-2 text-sm font-medium normal-case tracking-normal">
+                    {{ collection:services show_in_nav:is="true" sort="nav_order:asc|title:asc" }}
+                        <a href="{{ url }}" class="block py-1.5 text-haus-ink-300 hover:text-haus-amber-400 transition">{{ nav_label ?? service_name | title }}</a>
+                    {{ /collection:services }}
+                </div>
+            </div>
             <a href="/portfolio/" class="py-4 hover:text-haus-amber-400 transition flex justify-between items-center">Portfolio <span aria-hidden="true">→</span></a>
             <a href="/about/" class="py-4 hover:text-haus-amber-400 transition flex justify-between items-center">About <span aria-hidden="true">→</span></a>
             <a href="/culture/" class="py-4 hover:text-haus-amber-400 transition flex justify-between items-center">Culture <span aria-hidden="true">→</span></a>

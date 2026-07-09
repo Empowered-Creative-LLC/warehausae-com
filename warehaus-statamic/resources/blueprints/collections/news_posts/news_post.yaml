@@ -3,30 +3,45 @@ tabs:
   main:
     display: Main
     sections:
-      - fields:
+      - display: Getting started
+        instructions: |-
+          **To add a news post**
+          1. Click **Create Entry** and enter a **Title** (the URL is automatic: `/news/your-title-slug/`).
+          2. Set the **Published Date** (this controls the order on the News page — newest first), add an optional **Subtitle**, and a **Featured Image**.
+          3. Write the article in **Body Markdown**. Use the image button to upload photos inside the body.
+          4. **Publish** when ready. The post appears on the homepage news section and on `/news/`.
+
+          Ignore the legacy "Featured Image Url (imported)" and "Categories Url" fields unless restoring old imported content.
+        fields:
           - handle: title
             field:
               type: text
               display: Title
               required: true
-          - handle: url
+          - handle: subtitle
             field:
               type: text
-              display: URL override
-              instructions: >-
-                Absolute path (starting with /) that this entry should serve at. Statamic uses this as the route override, allowing different entries in this collection to live at different URL shapes
-                (e.g. /healthcare/ vs /industry/civil-engineering/).
+              display: Subtitle / Descriptor
+              instructions: Optional short italic descriptor shown below the title. Matches the italicised lead sentence on some WordPress posts.
+          - handle: date
+            field:
+              type: date
+              display: Published Date
+              instructions: The article's publish date. Controls the order on the News page (newest first).
               required: true
-          - handle: published_date_text
+          - handle: featured_image
             field:
-              type: text
-              display: Published Date Text
-              instructions: Date as displayed (literal). May be relative like '5 months ago' or absolute like 'December 15, 2025'.
+              type: assets
+              display: Featured Image
+              container: main
+              folder: uploads/news
+              max_files: 1
+              instructions: Upload or browse for the lead image at the top of the post.
           - handle: featured_image_url
             field:
               type: text
-              display: Featured Image Url
-              instructions: URL of the lead/featured image at the top of the post.
+              display: Featured Image Url (imported)
+              instructions: Legacy imported path. Use Featured Image above for new uploads.
           - handle: categories
             field:
               type: grid
@@ -82,7 +97,14 @@ tabs:
             field:
               type: textarea
               display: SEO description
+          - handle: seo_og_image
+            field:
+              type: assets
+              display: OG Image
+              container: main
+              folder: uploads
+              max_files: 1
           - handle: seo_og_image_url
             field:
               type: text
-              display: OG image URL
+              display: OG image URL (imported)

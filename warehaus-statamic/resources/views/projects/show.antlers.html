@@ -13,14 +13,10 @@
       6. Footer CTA (provided by layout)
 #}}
 
-{{# 1. Hero — projects use a different pattern from the rest of the site:
-    full-bleed photo with the project title centered, location subtitle
-    in amber underneath. Matches /project/{slug}/ on live. #}}
+{{# 1. Hero #}}
 <section class="relative h-[791px] flex items-center justify-center overflow-hidden bg-haus-ink-900 text-white">
-    {{ if hero_image_url }}
-        {{ glide src="{hero_image_url}" width="2400" format="webp" quality="82" }}
-            <img src="{{ url }}" alt="" class="absolute inset-0 w-full h-full object-cover" fetchpriority="high">
-        {{ /glide }}
+    {{ if hero_image || hero_image_url }}
+        {{ partial:img :asset="hero_image" :legacy_url="hero_image_url" class="absolute inset-0 w-full h-full object-cover" fetchpriority="high" }}
     {{ /if }}
     <div class="absolute inset-0 bg-haus-ink-900/45"></div>
     <div class="relative container-haus text-center">
@@ -29,21 +25,17 @@
     </div>
 </section>
 
-{{# 2. Gallery strip — 4-up row with pagination dots beneath. Matches live's
-    carousel shown above the lead block. #}}
+{{# 2. Gallery strip #}}
 {{ if gallery_images }}
     <section class="bg-white py-8 md:py-10">
         <div class="mx-auto max-w-[1170px] px-6 md:px-10">
             <div class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4" data-haus-fade-in>
                 {{ gallery_images limit="4" }}
-                    <a href="{{ url }}" target="_blank" rel="noopener" class="block aspect-[4/3] overflow-hidden bg-haus-ink-100">
-                        <img src="{{ url }}" alt="{{ alt }}" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                    <a href="{{ if image }}{{ image:url }}{{ else }}{{ url }}{{ /if }}" target="_blank" rel="noopener" class="block aspect-[4/3] overflow-hidden bg-haus-ink-100">
+                        {{ partial:img :asset="image" :legacy_url="url" :alt="alt" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" :glide="false" }}
                     </a>
                 {{ /gallery_images }}
             </div>
-            {{# Pagination dots (one per image) — purely decorative to match
-                live's carousel pagination. JS-driven scrolling can be added
-                later if the client wants real interactivity. #}}
             <div class="mt-5 flex items-center justify-center gap-2" aria-hidden="true">
                 {{ gallery_images }}<span class="w-1.5 h-1.5 rounded-full {{ if first }}bg-haus-ink-700{{ else }}bg-haus-ink-300{{ /if }}"></span>{{ /gallery_images }}
             </div>
@@ -51,10 +43,7 @@
     </section>
 {{ /if }}
 
-{{# 3. Lead block: heading + prose on left, Project Details card on right.
-    Matches live: 46px/700 heading with NO amber divider beneath, card has a
-    light-gray "Project Details" header strip, then 2-column grid content
-    inside a white box with subtle border/shadow. #}}
+{{# 3. Lead block #}}
 <section class="bg-white py-16 md:py-20">
     <div class="mx-auto max-w-[1170px] px-6 md:px-10 grid lg:grid-cols-[1.4fr_1fr] gap-12 lg:gap-16 items-start">
         <div data-haus-fade-in>
@@ -112,15 +101,15 @@
     </div>
 </section>
 
-{{# 4. Three-act narrative — alternating photo-text rows on light gray bg.
-    Each row has a large H3 ("We listen.") with an amber underline below
-    plus body paragraphs. Photo aspect matches live (~4:3). #}}
+{{# 4. Three-act narrative #}}
 {{ if narrative:we_listen || narrative:we_design || narrative:we_deliver }}
     <section class="bg-[#f1f1f1]">
         <div class="mx-auto max-w-[1170px] px-6 md:px-10 py-16 md:py-24 space-y-16 md:space-y-24">
             {{ if narrative:we_listen }}
                 <div class="grid md:grid-cols-2 gap-10 lg:gap-16 items-center" data-haus-fade-in>
-                    {{ if gallery_images:1 }}<img src="{{ gallery_images:1:url }}" alt="" class="w-full object-cover aspect-[4/5] md:aspect-[3/4]">{{ /if }}
+                    {{ if gallery_images:1:image || gallery_images:1:url }}
+                        {{ partial:img :asset="gallery_images:1:image" :legacy_url="gallery_images:1:url" class="w-full object-cover aspect-[4/5] md:aspect-[3/4]" :glide="false" }}
+                    {{ /if }}
                     <div>
                         <h3 class="text-[34px] md:text-[42px] font-light text-[#4b4b4b] leading-tight">We listen.</h3>
                         <div class="mt-3 w-[60px] h-[3px] bg-haus-amber-500"></div>
@@ -135,12 +124,16 @@
                         <div class="mt-3 w-[60px] h-[3px] bg-haus-amber-500"></div>
                         <div class="mt-6 text-[#666] text-[17px] leading-[1.6] space-y-4">{{ narrative:we_design | nl2br }}</div>
                     </div>
-                    {{ if gallery_images:2 }}<img src="{{ gallery_images:2:url }}" alt="" class="w-full object-cover aspect-[4/5] md:aspect-[3/4] md:order-1">{{ /if }}
+                    {{ if gallery_images:2:image || gallery_images:2:url }}
+                        {{ partial:img :asset="gallery_images:2:image" :legacy_url="gallery_images:2:url" class="w-full object-cover aspect-[4/5] md:aspect-[3/4] md:order-1" :glide="false" }}
+                    {{ /if }}
                 </div>
             {{ /if }}
             {{ if narrative:we_deliver }}
                 <div class="grid md:grid-cols-2 gap-10 lg:gap-16 items-center" data-haus-fade-in>
-                    {{ if gallery_images:3 }}<img src="{{ gallery_images:3:url }}" alt="" class="w-full object-cover aspect-[4/5] md:aspect-[3/4]">{{ /if }}
+                    {{ if gallery_images:3:image || gallery_images:3:url }}
+                        {{ partial:img :asset="gallery_images:3:image" :legacy_url="gallery_images:3:url" class="w-full object-cover aspect-[4/5] md:aspect-[3/4]" :glide="false" }}
+                    {{ /if }}
                     <div>
                         <h3 class="text-[34px] md:text-[42px] font-light text-[#4b4b4b] leading-tight">We deliver.</h3>
                         <div class="mt-3 w-[60px] h-[3px] bg-haus-amber-500"></div>
@@ -152,6 +145,6 @@
     </section>
 {{ /if }}
 
-{{# 5. Recent Projects carousel — same component used across services and
-    portfolio category pages for consistent styling and behavior. #}}
-{{ partial:recent_projects_carousel :projects="related_projects" }}
+{{ projects_carousel context="related" }}
+    {{ partial:recent_projects_carousel }}
+{{ /projects_carousel }}

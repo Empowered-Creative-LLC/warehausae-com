@@ -1,0 +1,53 @@
+{{# Search results page. The header search form submits GET /search?s=...
+    We query the default local index (see config/statamic/search.php) using
+    the `s` request param and render matches. A dark hero band keeps the
+    fixed transparent header legible and hosts a pre-filled search field. #}}
+
+<section class="relative bg-haus-ink-900 text-white pt-32 pb-16 md:pt-40 md:pb-20">
+    <div class="container-haus max-w-3xl">
+        <p class="text-xs uppercase tracking-[0.2em] text-haus-amber-400">Search</p>
+        <h1 class="mt-3 text-3xl md:text-5xl font-medium tracking-tight">
+            {{ if get:s }}Results for &ldquo;{{ get:s }}&rdquo;{{ else }}Search Warehaus{{ /if }}
+        </h1>
+
+        <form role="search" action="/search/" method="get" class="mt-8 flex items-center gap-3 bg-white/10 rounded px-4 py-3">
+            <svg class="h-4 w-4 opacity-70 shrink-0" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <circle cx="7" cy="7" r="5" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M11 11L14 14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+            <input type="search" name="s" value="{{ get:s }}" placeholder="Search the site..." autofocus class="bg-transparent border-0 outline-0 text-base placeholder-white/60 w-full" aria-label="Search">
+            <button type="submit" class="shrink-0 text-sm font-semibold uppercase tracking-[0.08em] text-haus-amber-400 hover:text-haus-amber-300 transition">Go</button>
+        </form>
+    </div>
+</section>
+
+<section class="container-haus max-w-3xl py-16 md:py-20">
+    {{ if get:s }}
+        {{ search:results query="s" as="results" }}
+            {{ if no_results }}
+                <p class="text-lg text-haus-ink-500">No results found for &ldquo;{{ get:s }}&rdquo;. Try a different keyword.</p>
+            {{ else }}
+                <p class="text-sm text-haus-ink-400 mb-8">{{ total_results }} result{{ if total_results != 1 }}s{{ /if }}</p>
+                <ul class="divide-y divide-haus-ink-100">
+                    {{ results }}
+                        <li class="py-6">
+                            <a href="{{ url }}" class="group block">
+                                <h2 class="text-xl md:text-2xl font-medium tracking-tight group-hover:text-haus-amber-700 transition">
+                                    {{ seo_title ?? title }}
+                                </h2>
+                                {{ if intro_prose }}
+                                    <p class="mt-2 text-haus-ink-600 leading-relaxed">{{ intro_prose | strip_tags | truncate:180 }}</p>
+                                {{ elseif seo_description }}
+                                    <p class="mt-2 text-haus-ink-600 leading-relaxed">{{ seo_description | strip_tags | truncate:180 }}</p>
+                                {{ /if }}
+                                <p class="mt-2 text-xs uppercase tracking-wide text-haus-ink-400">{{ permalink }}</p>
+                            </a>
+                        </li>
+                    {{ /results }}
+                </ul>
+            {{ /if }}
+        {{ /search:results }}
+    {{ else }}
+        <p class="text-lg text-haus-ink-500">Enter a keyword above to search Warehaus projects, services, news, and more.</p>
+    {{ /if }}
+</section>

@@ -5,6 +5,8 @@ title: Chief Marketing and Employee Engagement Officer
 slug: lauren-bergman
 source_url: https://warehausae.com/team/lauren-bergman/
 name: Lauren Bergman
+show_on_about: true
+about_order: 3
 first_name: Lauren
 discipline: marketing
 headshot_url: /assets/imported/2024/01/Bergman-Lauren-1.webp

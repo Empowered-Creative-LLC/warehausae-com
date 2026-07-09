@@ -5,6 +5,7 @@ title: Civil Project Manager
 slug: zach-michali-eit
 source_url: https://warehausae.com/team/zach-michali-eit/
 name: Zach Michali, EIT
+show_on_about: false
 first_name: Zach
 discipline: civil engineering
 headshot_url: /assets/imported/2026/03/Michali-Zach-1.jpg

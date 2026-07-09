@@ -22,6 +22,19 @@ tabs:
               type: text
               display: Tagline
               instructions: Secondary heading or pre-hero tagline shown above the title (e.g. 'We listen. We design. We deliver.' or the 'WAREHAUS' branding label).
+          - handle: hero_image
+            field:
+              type: assets
+              display: Hero Image
+              container: main
+              folder: uploads/pages
+              max_files: 1
+              instructions: Hero background for watermark hero pages (about, culture, etc.).
+          - handle: hero_image_url
+            field:
+              type: text
+              display: Hero Image Url (imported)
+              instructions: Legacy imported hero path used by watermark hero partial.
           - handle: lead_heading
             field:
               type: text
@@ -32,6 +45,38 @@ tabs:
               type: textarea
               display: Intro Prose
               instructions: Paragraph(s) immediately after the lead heading.
+          - handle: intro_video_id
+            field:
+              type: text
+              display: Intro Video (YouTube ID)
+              instructions: "Optional YouTube video shown below the intro prose (e.g. the careers recruiting video). Enter just the video ID, not the full URL — for https://youtu.be/Xr2PLlP-WV4 enter Xr2PLlP-WV4."
+          - handle: intro_image
+            field:
+              type: assets
+              display: Intro Image
+              container: main
+              folder: uploads/pages
+              max_files: 1
+              instructions: Optional image below the intro prose (e.g. co-owners photo on /about/).
+          - handle: intro_image_url
+            field:
+              type: text
+              display: Intro Image Url (imported)
+          - handle: mission_prose
+            field:
+              type: textarea
+              display: Mission Prose
+              instructions: Body copy for the Our Mission band (e.g. on /about/).
+          - handle: leadership_slugs
+            field:
+              type: list
+              display: Leadership Team Slugs
+              instructions: Deprecated — the About page leadership section is now populated automatically from team members with “Show on About Page” enabled.
+          - handle: news_slugs
+            field:
+              type: list
+              display: News Feed Slugs
+              instructions: News post entry slugs for the embedded news feed, in display order.
           - handle: sections
             field:
               type: grid
@@ -42,20 +87,52 @@ tabs:
                     type: text
                     display: Sections Heading
                     instructions: Section H2 or H3.
+                - handle: theme
+                  field:
+                    type: select
+                    display: Section Theme
+                    instructions: "Background treatment. 'Dark' renders a charcoal band with light text (e.g. the careers 'Our Benefits' band); 'Light' renders on white."
+                    default: light
+                    options:
+                      light: Light (white background)
+                      dark: Dark (charcoal background)
+                - handle: accordion
+                  field:
+                    type: grid
+                    mode: stacked
+                    fields:
+                      - handle: title
+                        field:
+                          type: text
+                          display: Accordion Title
+                      - handle: content
+                        field:
+                          type: markdown
+                          display: Accordion Content
+                          instructions: Markdown shown when this item is expanded (bulleted list or prose).
+                    display: Accordion Items
+                    instructions: Optional collapsible items. If set, the section renders as an accordion (like the careers Benefits / Students bands) instead of prose. The first item is open by default.
                 - handle: body
                   field:
                     type: textarea
                     display: Sections Body
-                    instructions: Section body prose, joined with double newlines.
+                    instructions: Section body prose, joined with double newlines. Ignored when Accordion Items are set.
                 - handle: images
                   field:
                     type: grid
                     mode: stacked
                     fields:
+                      - handle: image
+                        field:
+                          type: assets
+                          display: Image
+                          container: main
+                          folder: uploads/pages
+                          max_files: 1
                       - handle: url
                         field:
                           type: text
-                          display: Images Url
+                          display: Images Url (imported)
                       - handle: alt
                         field:
                           type: text
@@ -80,10 +157,17 @@ tabs:
                   field:
                     type: text
                     display: Leadership Cards Team Url
+                - handle: headshot
+                  field:
+                    type: assets
+                    display: Headshot
+                    container: main
+                    folder: uploads/team
+                    max_files: 1
                 - handle: headshot_url
                   field:
                     type: text
-                    display: Leadership Cards Headshot Url
+                    display: Leadership Cards Headshot Url (imported)
                 - handle: linkedin_url
                   field:
                     type: text
@@ -108,10 +192,17 @@ tabs:
                   field:
                     type: text
                     display: News Feed Url
+                - handle: image
+                  field:
+                    type: assets
+                    display: Thumbnail
+                    container: main
+                    folder: uploads/news
+                    max_files: 1
                 - handle: image_url
                   field:
                     type: text
-                    display: News Feed Image Url
+                    display: News Feed Image Url (imported)
                 - handle: categories
                   field:
                     type: list
@@ -144,7 +235,14 @@ tabs:
             field:
               type: textarea
               display: SEO description
+          - handle: seo_og_image
+            field:
+              type: assets
+              display: OG Image
+              container: main
+              folder: uploads
+              max_files: 1
           - handle: seo_og_image_url
             field:
               type: text
-              display: OG image URL
+              display: OG image URL (imported)

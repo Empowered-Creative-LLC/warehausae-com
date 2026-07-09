@@ -5,6 +5,7 @@ title: Civil Project Manager
 slug: jeffrey-stough
 source_url: https://warehausae.com/team/jeffrey-stough/
 name: Jeffrey Stough
+show_on_about: false
 first_name: Jeff
 discipline: civil engineering
 headshot_url: /assets/imported/2024/05/Stough-Jeff-1024x1024.jpg

@@ -5,6 +5,7 @@ title: Architectural Process Director
 slug: travis-kepler
 source_url: https://warehausae.com/team/travis-kepler/
 name: Travis Kepler, AIA
+show_on_about: false
 first_name: Travis
 discipline: architecture
 headshot_url: /assets/imported/2024/01/Kepler-Travis-1.webp

@@ -3,7 +3,16 @@ tabs:
   main:
     display: Main
     sections:
-      - fields:
+      - display: Getting started
+        instructions: |-
+          **To add a team member**
+          1. Click **Create Entry** and enter the person's full **Name** as it should appear on the page.
+          2. Upload a **Headshot**, write the **Bio**, and add contact details (email, phone, LinkedIn).
+          3. Toggle **Show on About Page** to include them in the leadership section on `/about/`. Use **About Page Order** to control position (lower numbers appear first).
+          4. **Publish** when ready. The profile is available at `/team/member-slug/`.
+
+          Ignore the legacy "Headshot Url (imported)" field unless restoring old imported content.
+        fields:
           - handle: title
             field:
               type: text
@@ -15,6 +24,18 @@ tabs:
               display: Name
               instructions: The team member's full name as shown in the H1 (e.g. 'Dan Creep', 'Troy Bankert, AIA').
               required: true
+          - handle: show_on_about
+            field:
+              type: toggle
+              display: Show on About Page
+              instructions: When enabled, this team member appears in the leadership section on the About page.
+              default: true
+          - handle: about_order
+            field:
+              type: integer
+              display: About Page Order
+              instructions: Controls ordering in the About page leadership section. Lower numbers appear first.
+              default: 100
           - handle: first_name
             field:
               type: text
@@ -27,11 +48,19 @@ tabs:
               instructions: >-
                 The service discipline this team member primarily belongs to (architecture, civil engineering, structural, interior design, historic preservation, etc.), inferred from title and bio if
                 not explicit.
+          - handle: headshot
+            field:
+              type: assets
+              display: Headshot
+              container: main
+              folder: uploads/team
+              max_files: 1
+              instructions: Upload or browse for the profile photo.
           - handle: headshot_url
             field:
               type: text
-              display: Headshot Url
-              instructions: Absolute URL to the profile photo.
+              display: Headshot Url (imported)
+              instructions: Legacy imported path. Use Headshot above for new uploads.
           - handle: years_in_industry
             field:
               type: integer
@@ -91,7 +120,14 @@ tabs:
             field:
               type: textarea
               display: SEO description
+          - handle: seo_og_image
+            field:
+              type: assets
+              display: OG Image
+              container: main
+              folder: uploads
+              max_files: 1
           - handle: seo_og_image_url
             field:
               type: text
-              display: OG image URL
+              display: OG image URL (imported)

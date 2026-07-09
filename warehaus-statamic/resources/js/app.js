@@ -7,6 +7,7 @@ gsap.registerPlugin(ScrollTrigger);
 document.addEventListener('DOMContentLoaded', () => {
     initStickyHeader();
     initMobileMenu();
+    initMobileNavDisclosures();
     initDesktopDropdowns();
     initFadeInOnScroll();
     initParallaxBackgrounds();
@@ -15,7 +16,100 @@ document.addEventListener('DOMContentLoaded', () => {
     initRotatingWords();
     sizeCdWordsWrappers();
     initRecentProjectsCarousel();
+    initPortfolioLoadMore();
+    initMissionTypewriter();
 });
+
+/**
+ * Typewriter effect for the homepage mission statement. Types the copy out
+ * character by character (preserving the amber .highlight spans) when the
+ * element scrolls into view. Falls back to the fully-rendered text when JS is
+ * unavailable or the user prefers reduced motion.
+ */
+function initMissionTypewriter() {
+    const els = document.querySelectorAll('[data-haus-typewriter]');
+    if (!els.length) return;
+
+    const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    els.forEach((el) => {
+        // Snapshot the original segments (text + whether it's a highlight span).
+        const segments = [...el.childNodes]
+            .map((node) => {
+                if (node.nodeType === Node.TEXT_NODE) {
+                    return { text: node.textContent.replace(/\s+/g, ' '), highlight: false };
+                }
+                if (node.nodeType === Node.ELEMENT_NODE) {
+                    return {
+                        text: node.textContent.replace(/\s+/g, ' '),
+                        highlight: node.classList.contains('highlight'),
+                    };
+                }
+                return null;
+            })
+            .filter((seg) => seg && seg.text.length);
+
+        if (!segments.length) return;
+
+        // Trim the leading/trailing whitespace introduced by HTML indentation.
+        segments[0].text = segments[0].text.replace(/^\s+/, '');
+        segments[segments.length - 1].text = segments[segments.length - 1].text.replace(/\s+$/, '');
+
+        if (reduceMotion || typeof IntersectionObserver === 'undefined') {
+            return; // Leave the pre-rendered text as-is.
+        }
+
+        let started = false;
+        const io = new IntersectionObserver((entries) => {
+            for (const entry of entries) {
+                if (entry.isIntersecting && !started) {
+                    started = true;
+                    io.unobserve(entry.target);
+                    typeSegments(el, segments);
+                }
+            }
+        }, { threshold: 0.4 });
+
+        io.observe(el);
+    });
+}
+
+function typeSegments(el, segments) {
+    const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
+    // Rebuild the element empty, pre-creating each segment node so the caret
+    // trails the typed text without layout jumps.
+    el.textContent = '';
+    el.classList.add('is-typing');
+
+    const nodes = segments.map((seg) => {
+        const node = seg.highlight ? document.createElement('span') : document.createTextNode('');
+        if (seg.highlight) node.className = 'highlight';
+        el.appendChild(node);
+        return node;
+    });
+
+    const caret = document.createElement('span');
+    caret.className = 'haus-caret';
+    caret.setAttribute('aria-hidden', 'true');
+    el.appendChild(caret);
+
+    (async () => {
+        for (let s = 0; s < segments.length; s++) {
+            const { text, highlight } = segments[s];
+            const node = nodes[s];
+            for (let i = 0; i < text.length; i++) {
+                const ch = text[i];
+                if (highlight) node.textContent += ch;
+                else node.nodeValue += ch;
+                // Brief pause after sentence punctuation for a natural cadence.
+                await sleep(/[.,]/.test(ch) ? 180 : 20);
+            }
+        }
+        // Typing done — let the caret blink idly.
+        el.classList.remove('is-typing');
+    })();
+}
 
 /**
  * Recent Projects carousel — paginates through the card list on desktop,
@@ -221,6 +315,10 @@ function initStickyHeader() {
     const header = document.querySelector('[data-haus-header]');
     if (!header) return;
 
+    // Some pages (e.g. news entries) have a white top, so the header must
+    // stay solid/dark even at scroll position 0 to keep the wordmark legible.
+    const forceSolid = header.hasAttribute('data-haus-header-solid');
+
     const TRANSPARENT = ['bg-transparent'];
     const SOLID = ['bg-haus-ink-900/95', 'backdrop-blur', 'shadow-sm'];
 
@@ -229,7 +327,7 @@ function initStickyHeader() {
         for (const c of SOLID) header.classList.toggle(c, solid);
     };
 
-    const update = () => apply(window.scrollY > 60);
+    const update = () => apply(forceSolid || window.scrollY > 60);
     update();
     window.addEventListener('scroll', update, { passive: true });
 }
@@ -266,6 +364,56 @@ function initMobileMenu() {
     // Close on Escape.
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && !nav.hasAttribute('hidden')) setOpen(false);
+    });
+}
+
+/**
+ * Portfolio index — reveal additional project cards in batches of nine.
+ */
+function initPortfolioLoadMore() {
+    const grid = document.querySelector('[data-haus-portfolio-grid]');
+    const button = document.querySelector('[data-haus-portfolio-load-more]');
+    const wrap = document.querySelector('[data-haus-portfolio-load-more-wrap]');
+    if (!grid || !button) return;
+
+    const items = [...grid.querySelectorAll('[data-haus-portfolio-item]')];
+    const batchSize = 9;
+    let visible = items.filter((item) => !item.classList.contains('hidden')).length;
+
+    const updateButton = () => {
+        if (visible >= items.length) {
+            wrap?.remove();
+            return;
+        }
+        button.textContent = 'Load More';
+    };
+
+    button.addEventListener('click', () => {
+        const next = items.slice(visible, visible + batchSize);
+        next.forEach((item) => item.classList.remove('hidden'));
+        visible += next.length;
+        updateButton();
+    });
+
+    updateButton();
+}
+
+/**
+ * Mobile nav submenus (e.g. Services) — toggle panel without navigating away.
+ */
+function initMobileNavDisclosures() {
+    document.querySelectorAll('[data-haus-mobile-disclosure]').forEach((root) => {
+        const trigger = root.querySelector('[data-haus-mobile-disclosure-trigger]');
+        const panel = root.querySelector('[data-haus-mobile-disclosure-panel]');
+        const chevron = root.querySelector('[data-haus-mobile-disclosure-chevron]');
+        if (!trigger || !panel) return;
+
+        trigger.addEventListener('click', () => {
+            const open = panel.hasAttribute('hidden');
+            panel.toggleAttribute('hidden', !open);
+            trigger.setAttribute('aria-expanded', open ? 'true' : 'false');
+            chevron?.classList.toggle('rotate-180', open);
+        });
     });
 }
 

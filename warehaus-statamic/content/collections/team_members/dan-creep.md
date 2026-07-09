@@ -5,6 +5,7 @@ title: Director of Engineering
 slug: dan-creep
 source_url: https://warehausae.com/team/dan-creep/
 name: Dan Creep
+show_on_about: false
 first_name: Dan
 discipline: civil engineering
 headshot_url: /assets/imported/2024/01/Creep-Dan-1.webp

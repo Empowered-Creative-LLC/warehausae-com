@@ -3,7 +3,17 @@ tabs:
   main:
     display: Main
     sections:
-      - fields:
+      - display: Getting started
+        instructions: |-
+          **To add or edit a service page**
+          1. Find **"★ TEMPLATE — Duplicate me"** in the entry list (keep it as a draft — never publish it).
+          2. To start a new service, open its **⋯** menu and choose **Duplicate**.
+          3. Fill in the service name, lead copy, capabilities, approach blocks, and hero image.
+          4. Use **Show in Navigation** and **Show on Homepage Strip** to control where the service appears. Set **Navigation Order** to control position (lower numbers appear first).
+          5. **Publish** when ready. Projects linked under **Services Provided** automatically appear in the Recent Projects carousel.
+
+          **Do not publish or delete the template entry.** New service pages may need a developer to wire up design before going live.
+        fields:
           - handle: title
             field:
               type: text
@@ -15,6 +25,55 @@ tabs:
               display: Service Name
               instructions: The service discipline shown in the hero, e.g. 'architecture', 'civil engineering', 'interior design'.
               required: true
+          - handle: nav_label
+            field:
+              type: text
+              display: Navigation Label
+              instructions: Short label used in the site header navigation (e.g. 'Civil', 'Interior Design'). Falls back to the service name when empty.
+          - handle: nav_order
+            field:
+              type: integer
+              display: Navigation Order
+              instructions: Controls ordering in the header navigation and homepage services strip. Lower numbers appear first.
+              default: 100
+          - handle: show_in_nav
+            field:
+              type: toggle
+              display: Show in Navigation
+              instructions: When enabled, this service appears in the site header Services menu.
+              default: true
+          - handle: show_on_homepage_strip
+            field:
+              type: toggle
+              display: Show on Homepage Strip
+              instructions: When enabled, this service appears in the circular icon strip on the homepage. Requires strip icon assets below.
+              default: false
+          - handle: strip_icon
+            field:
+              type: assets
+              display: Homepage Strip Icon
+              container: main
+              folder: uploads/icons
+              max_files: 1
+              instructions: Circular icon shown in the homepage services strip.
+          - handle: strip_icon_url
+            field:
+              type: text
+              display: Homepage Strip Icon URL (imported)
+              instructions: Legacy imported icon path for the homepage services strip.
+          - handle: strip_hover_image
+            field:
+              type: assets
+              display: Homepage Strip Hover Image
+              container: main
+              folder: uploads/services
+              max_files: 1
+              instructions: Photo shown on hover in the homepage services strip.
+          - handle: strip_hover_image_url
+            field:
+              type: text
+              display: Homepage Strip Hover Image URL (imported)
+              instructions: Legacy imported hover image path for the homepage services strip.
           - handle: tagline
             field:
               type: text
@@ -47,11 +106,18 @@ tabs:
               type: textarea
               display: Approach Intro Prose
               instructions: Short paragraph below the approach heading, before the accordion of approach blocks.
+          - handle: mid_image
+            field:
+              type: assets
+              display: Mid-section Image
+              container: main
+              folder: uploads/services
+              max_files: 1
+              instructions: Full-bleed photograph between the lead block and the approach section.
           - handle: mid_image_url
             field:
               type: text
-              display: Mid-section Image URL
-              instructions: Full-bleed photograph displayed between the lead block and the approach section.
+              display: Mid-section Image URL (imported)
           - handle: approach_blocks
             field:
               type: grid
@@ -86,10 +152,17 @@ tabs:
                     type: text
                     display: Team Leaders Team Url
                     instructions: Link to /team/{slug}/
+                - handle: headshot
+                  field:
+                    type: assets
+                    display: Headshot
+                    container: main
+                    folder: uploads/team
+                    max_files: 1
                 - handle: headshot_url
                   field:
                     type: text
-                    display: Team Leaders Headshot Url
+                    display: Team Leaders Headshot Url (imported)
                 - handle: linkedin_url
                   field:
                     type: text
@@ -120,17 +193,30 @@ tabs:
                     type: list
                     display: Recent Projects Categories
                     instructions: Comma-separated category tags shown under each project link.
+                - handle: image
+                  field:
+                    type: assets
+                    display: Thumbnail
+                    container: main
+                    folder: uploads/projects
+                    max_files: 1
                 - handle: image_url
                   field:
                     type: text
-                    display: Recent Projects Image Url
-                    instructions: Populated by migration-tool/scripts/resolve-related-thumbnails.js — the related entry's hero_image_url.
+                    display: Recent Projects Image Url (imported)
               display: Recent Projects
-              instructions: Featured project list at the bottom of the page.
+              instructions: Deprecated — the Recent Projects carousel is now populated automatically from the Projects collection.
+          - handle: hero_image
+            field:
+              type: assets
+              display: Hero Image
+              container: main
+              folder: uploads/services
+              max_files: 1
           - handle: hero_image_url
             field:
               type: text
-              display: Hero Image Url
+              display: Hero Image Url (imported)
               instructions: Hero image at the top of the page if any. May be missing.
   seo:
     display: SEO & Source
@@ -149,7 +235,14 @@ tabs:
             field:
               type: textarea
               display: SEO description
+          - handle: seo_og_image
+            field:
+              type: assets
+              display: OG Image
+              container: main
+              folder: uploads
+              max_files: 1
           - handle: seo_og_image_url
             field:
               type: text
-              display: OG image URL
+              display: OG image URL (imported)

@@ -4,7 +4,6 @@ blueprint: portfolio_category
 title: distribution & manufacturing
 slug: distribution_manufacturing
 source_url: https://warehausae.com/distribution_manufacturing/
-url: /distribution_manufacturing/
 category_name: distribution & manufacturing
 tagline: We listen. We design. We deliver.
 lead_heading: We've designed more than 50M sf of distribution and manufacturing space

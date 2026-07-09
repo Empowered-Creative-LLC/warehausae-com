@@ -4,7 +4,6 @@ blueprint: portfolio_category
 title: healthcare
 slug: healthcare
 source_url: https://warehausae.com/healthcare/
-url: /healthcare/
 category_name: healthcare
 tagline: We listen. We design. We deliver.
 lead_heading: An Optimized Patient Experience

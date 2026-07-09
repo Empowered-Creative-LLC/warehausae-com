@@ -4,7 +4,9 @@
 <section class="bg-white pt-28 md:pt-32 pb-12">
     <div class="mx-auto max-w-[1170px] px-6 md:px-10 grid md:grid-cols-[1.4fr_1fr] gap-8 lg:gap-12 items-start">
         <div class="overflow-hidden bg-haus-ink-100" data-haus-fade-in>
-            {{ if hero_image_url }}<img src="{{ hero_image_url }}" alt="" class="w-full h-full object-cover" style="min-height: 420px;">{{ /if }}
+            {{ if hero_image || hero_image_url }}
+                {{ partial:img :asset="hero_image" :legacy_url="hero_image_url" class="w-full h-full object-cover" :glide="false" }}
+            {{ /if }}
         </div>
         <aside class="border border-haus-ink-200/60 shadow-sm bg-white px-6 py-7 lg:px-8 lg:py-8" data-haus-fade-in data-haus-fade-delay="120">
             <p class="text-[15px] font-bold uppercase tracking-[0.1em] text-[#4b4b4b]">Project Info</p>
@@ -62,7 +64,7 @@
                         <div class="mt-6 grid grid-cols-2 md:grid-cols-4 gap-3">
                             {{ images }}
                                 <figure>
-                                    <img src="{{ url }}" alt="{{ caption }}" class="w-full aspect-square object-cover">
+                                    {{ partial:img :asset="image" :legacy_url="url" :alt="caption" class="w-full aspect-square object-cover" :glide="false" }}
                                     {{ if caption }}<figcaption class="mt-2 text-[12px] text-[#888]">{{ caption }}</figcaption>{{ /if }}
                                 </figure>
                             {{ /images }}
@@ -81,7 +83,9 @@
             <div class="mt-12 grid sm:grid-cols-2 md:grid-cols-3 gap-8">
                 {{ team_spotlights }}
                     <div class="text-center">
-                        {{ if headshot_url }}<img src="{{ headshot_url }}" alt="{{ name }}" class="mx-auto w-32 h-32 rounded-full object-cover">{{ /if }}
+                        {{ if headshot || headshot_url }}
+                            {{ partial:img :asset="headshot" :legacy_url="headshot_url" :alt="name" class="mx-auto w-32 h-32 rounded-full object-cover" :glide="false" }}
+                        {{ /if }}
                         <h3 class="mt-4 text-lg font-medium">{{ name }}</h3>
                         {{ if title_line }}<p class="mt-1 text-sm text-haus-ink-500">{{ title_line | nl2br }}</p>{{ /if }}
                         {{ if blurb }}<p class="mt-3 text-sm text-haus-ink-600 leading-relaxed">{{ blurb }}</p>{{ /if }}

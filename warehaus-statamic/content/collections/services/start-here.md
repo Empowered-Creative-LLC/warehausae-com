@@ -5,6 +5,8 @@ title: design support
 slug: start-here
 source_url: https://warehausae.com/services/start-here/
 service_name: design support
+show_in_nav: false
+show_on_homepage_strip: false
 tagline: "Because even small projects come with complex questions:"
 lead_heading: Sometimes, the hardest part of a project is figuring out the first step.
 intro_prose: |-

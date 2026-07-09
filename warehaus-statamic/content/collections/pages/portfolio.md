@@ -1,6 +1,7 @@
 ---
 id: 4cd158ec-682f-418a-b89a-8c349a635ca7
 blueprint: page
+template: pages/portfolio
 title: PORTFOLIO
 slug: portfolio
 source_url: https://warehausae.com/portfolio/

@@ -27,7 +27,7 @@
                     <div class="mt-6 grid sm:grid-cols-2 gap-4">
                         {{ images }}
                             <figure>
-                                <img src="{{ url }}" alt="{{ alt }}" class="w-full aspect-[4/3] object-cover rounded">
+                                {{ partial:img :asset="image" :legacy_url="url" :alt="alt" class="w-full aspect-[4/3] object-cover rounded" :glide="false" }}
                                 {{ if alt }}<figcaption class="mt-2 text-xs text-haus-ink-500">{{ alt }}</figcaption>{{ /if }}
                             </figure>
                         {{ /images }}
@@ -46,11 +46,11 @@
             <div class="mt-12 grid sm:grid-cols-2 md:grid-cols-4 gap-8">
                 {{ leadership_cards }}
                     <a href="{{ team_url }}" class="group block text-center">
-                        {{ if headshot_url }}
-                            <div class="aspect-square overflow-hidden rounded-lg bg-haus-ink-200">
-                                <img src="{{ headshot_url }}" alt="{{ name }}" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-                            </div>
-                        {{ /if }}
+                    {{ if headshot || headshot_url }}
+                        <div class="aspect-square overflow-hidden rounded-lg bg-haus-ink-200">
+                            {{ partial:img :asset="headshot" :legacy_url="headshot_url" :alt="name" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" :glide="false" }}
+                        </div>
+                    {{ /if }}
                         <h3 class="mt-4 text-lg font-medium group-hover:text-haus-amber-700 transition">{{ name }}</h3>
                         {{ if title }}<p class="mt-1 text-sm text-haus-ink-500">{{ title }}</p>{{ /if }}
                     </a>
@@ -68,7 +68,9 @@
             {{ news_feed }}
                 <a href="{{ url }}" class="group block">
                     <div class="aspect-[4/3] overflow-hidden rounded-lg bg-haus-ink-100">
-                        {{ if image_url }}<img src="{{ image_url }}" alt="" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">{{ /if }}
+                        {{ if image || image_url }}
+                            {{ partial:img :asset="image" :legacy_url="image_url" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" :glide="false" }}
+                        {{ /if }}
                     </div>
                     {{ if categories }}<p class="mt-3 text-xs uppercase tracking-wide text-haus-amber-700">{{ categories | join:", " }}</p>{{ /if }}
                     {{ if date_text }}<p class="mt-1 text-xs text-haus-ink-400">{{ date_text }}</p>{{ /if }}
@@ -82,6 +84,6 @@
 {{# Raw markdown fallback (used when Phase 4 extraction couldn't fill sections, e.g. /about/) #}}
 {{ if raw_body_markdown && sections | length == 0 }}
     <section class="container-haus pb-16 md:pb-24 max-w-3xl">
-        <div class="prose prose-lg max-w-none text-haus-ink-700 leading-relaxed">{{ raw_body_markdown | markdown }}</div>
+        <div class="prose prose-lg max-w-none text-haus-ink-700 leading-relaxed">{{ raw_body_markdown | markdown | imported_asset_urls_in_html }}</div>
     </section>
 {{ /if }}

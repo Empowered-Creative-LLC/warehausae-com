@@ -10,8 +10,8 @@
 <section class="bg-white pt-28 md:pt-32 pb-12">
     <div class="mx-auto max-w-[1170px] px-6 md:px-10 grid md:grid-cols-[1.4fr_1fr] gap-8 lg:gap-12 items-stretch">
         <div class="overflow-hidden bg-haus-ink-100" data-haus-fade-in>
-            {{ if headshot_url }}
-                <img src="{{ headshot_url }}" alt="{{ name }}" class="w-full h-full object-cover" style="min-height: 460px;">
+            {{ if headshot || headshot_url }}
+                {{ partial:img :asset="headshot" :legacy_url="headshot_url" :alt="name" class="w-full h-full object-cover" :glide="false" }}
             {{ /if }}
         </div>
         <aside class="bg-[#333334] text-white p-8 lg:p-10 flex flex-col" data-haus-fade-in data-haus-fade-delay="120">

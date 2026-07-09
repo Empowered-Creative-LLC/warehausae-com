@@ -7,6 +7,8 @@ source_url: https://warehausae.com/job/structural-engineer-2024/
 department: Engineering
 location: York, Pennsylvania
 employment_type: Full-time
+posted_date: April 23, 2026
+posted_time: 9:57 am
 overview: >-
   This position leads the structural design and technical execution of projects from early concept through construction. You’ll oversee design development, perform analysis, and guide team members
   while coordinating with other disciplines to deliver well-executed, buildable solutions.

@@ -1,0 +1,11 @@
+title: Asset
+tabs:
+  main:
+    display: Main
+    sections:
+      - fields:
+          - handle: alt
+            field:
+              type: text
+              display: Alt Text
+              instructions: Describe the image for screen readers and SEO.

@@ -1,125 +1,436 @@
-{{# Homepage template — visual parity target: warehausae.com/
+{{# Homepage — visual target: Warehaus_Homepage reference image.
+    Sections (top to bottom):
+      1. Hero — full-bleed photo + centered headline + amber rule + subheading + CTA
+      2. Services strip — 5 circular thin-line icons, hover shows photo panel below
+      3. Mission band — dark charcoal, large Poppins mixed solid/outline text
+      4. Featured Projects — 3×2 grid with image overlay captions + ALL PROJECTS link
+      5. News & Announcements — 4 horizontal news cards + ALL NEWS link
+      6. Culture — heading + body + CTA + Lottie grill + 3 photos
+#}}
 
-    Sections (in order):
-      1. Hero with full-bleed dark photo + headline + yellow underline + body.
-      2. Five WE BELIEVE blocks, alternating icon-side, dark background. Icons
-         are Lottie animations (Brainwave, team-work, Target2, GRill). The
-         fourth block ("Cookouts and Cornhole") uses a full-bleed cornhole
-         photo background instead of the standard two-column layout. #}}
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
 
-{{# Hero — photo anchored bottom-right at 76% width (matches live), dark
-    background fills the rest so the headline sits in a clean dark area. #}}
-<section class="relative h-screen min-h-[640px] overflow-hidden bg-haus-ink-900 text-white">
-    {{ if hero_image_url }}
-        {{ glide src="{hero_image_url}" width="2400" format="webp" quality="82" }}
-            <div
-                class="absolute inset-0 bg-no-repeat"
-                style="background-image: url('{{ url }}'); background-size: 76%; background-position: 100% 100%;"
-                aria-hidden="true"
-            ></div>
-        {{ /glide }}
+    /* ── Mission band ── */
+    .haus-mission-box {
+        background-color: #1a1a1a;
+        padding: 56px 64px;
+        text-align: center;
+    }
+    .haus-mission-text {
+        font-size: clamp(16.5px, 1.55vw, 20px);
+        font-weight: 500;
+        line-height: 1.75;
+        color: #e8e8e8;
+    }
+    .haus-mission-text .highlight {
+        color: #f89b02;
+        font-weight: 700;
+    }
+    /* Typewriter caret — shown while the mission types out, blinks when idle. */
+    .haus-mission-text .haus-caret {
+        display: inline-block;
+        width: 2px;
+        margin-left: 2px;
+        background: #f89b02;
+        animation: haus-caret-blink 1s step-end infinite;
+        vertical-align: -0.12em;
+        height: 1.05em;
+    }
+    .haus-mission-text.is-typing .haus-caret { animation: none; }
+    @keyframes haus-caret-blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+    @media (prefers-reduced-motion: reduce) {
+        .haus-mission-text .haus-caret { display: none; }
+    }
+
+    /* ── Featured project card overlay ── */
+    .haus-proj-card { position: relative; overflow: hidden; display: block; }
+    .haus-proj-card img { transition: transform 0.5s ease; width: 100%; height: 100%; object-fit: cover; }
+    .haus-proj-card:hover img { transform: scale(1.06); }
+    .haus-proj-card .overlay {
+        position: absolute; bottom: 0; left: 0; right: 0;
+        background: rgba(40, 40, 40, 0.90);
+        padding: 10px 14px 12px;
+    }
+    .haus-proj-card .proj-cats {
+        font-size: 10px;
+        font-weight: 400;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: #f89b02;
+        margin-bottom: 3px;
+        line-height: 1.4;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0;
+    }
+    .haus-proj-card .proj-cats .cat-item + .cat-item::before {
+        content: " | ";
+        white-space: pre;
+    }
+    .haus-proj-card .proj-title {
+        font-size: 15px;
+        font-weight: 700;
+        color: #ffffff;
+        line-height: 1.25;
+    }
+    /* ── Section heading with short amber bar ── */
+    .haus-section-heading { margin-bottom: 6px; }
+    .haus-section-divider {
+        width: 80px;
+        height: 3px;
+        background: #f89b02;
+        margin-bottom: 28px;
+    }
+
+    /* ── Services strip ── */
+    .haus-services-row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px 12px;
+    }
+    .haus-service-item {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 14px;
+        padding: 28px 16px;
+        text-align: center;
+        text-decoration: none;
+        cursor: pointer;
+        flex: 0 1 auto;
+    }
+    /* Circle — clips both the icon and the hover image */
+    .haus-service-item .svc-circle {
+        position: relative;
+        width: 128px; height: 128px;
+        border-radius: 50%;
+        border: 1.5px solid #c0c0c0;
+        flex-shrink: 0;
+        overflow: hidden;
+        background: white;
+        transition: border-color 0.3s;
+    }
+    /* Icon — sits centered, fades out on hover */
+    .haus-service-item .svc-icon {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: opacity 0.3s ease;
+    }
+    .haus-service-item .svc-icon img {
+        width: 78px; height: 78px;
+        object-fit: contain;
+        mix-blend-mode: multiply;
+        opacity: 0.55;
+    }
+    /* Hover photo — fills the circle, fades in on hover */
+    .haus-service-item .svc-hover-img {
+        position: absolute;
+        inset: 0;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+    .haus-service-item .svc-hover-img img {
+        width: 100%; height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+    .haus-service-item .svc-label {
+        font-size: 0.625rem; font-weight: 700;
+        text-transform: uppercase; letter-spacing: 0.06em;
+        color: #777; line-height: 1.2;
+        white-space: nowrap;
+        transition: color 0.3s;
+    }
+    @media (min-width: 1024px) {
+        .haus-services-row { gap: 8px 20px; }
+        .haus-service-item { padding: 28px 20px; }
+        .haus-service-item .svc-label { font-size: 0.65rem; }
+    }
+    /* Hover state — photo fades in, icon fades out, border + label go amber */
+    .haus-service-item:hover .svc-circle { border-color: #f89b02; }
+    .haus-service-item:hover .svc-icon { opacity: 0; }
+    .haus-service-item:hover .svc-hover-img { opacity: 1; }
+    .haus-service-item:hover .svc-label { color: #f89b02; }
+
+    /* ── News card ── */
+    .haus-news-card { }
+    .haus-news-card .news-img { transition: box-shadow 0.25s ease; }
+    .haus-news-card:hover .news-img { box-shadow: 0 6px 24px rgba(0,0,0,0.18); }
+    .haus-news-card .news-text { padding: 0; }
+    .haus-news-card .news-cat-tag {
+        font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em;
+        color: #6b7280; background: transparent;
+        border: 1px solid #d1d5db; padding: 2px 8px;
+        transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+    }
+    .haus-news-card:hover .news-cat-tag {
+        background: #f89b02;
+        color: #ffffff;
+        border-color: #f89b02;
+    }
+
+    /* ── Shared amber CTA button ── */
+    .haus-amber-btn {
+        display: inline-flex; align-items: center; gap: 8px;
+        background-color: #f89b02; color: #fff;
+        font-size: 0.7rem; font-weight: 700;
+        letter-spacing: 0.12em; text-transform: uppercase;
+        padding: 14px 28px;
+        transition: background-color 0.2s;
+        text-decoration: none;
+        white-space: nowrap;
+    }
+    .haus-amber-btn:hover { background-color: #e08900; }
+</style>
+
+{{# ── 1. HERO — centered layout ───────────────────────────────── #}}
+<section class="relative overflow-hidden bg-haus-ink-900 text-white" style="height:90vh;min-height:600px;">
+    {{ if hero_image || hero_image_url }}
+        {{ partial:img :asset="hero_image" :legacy_url="hero_image_url" class="absolute inset-0 w-full h-full object-cover object-center" fetchpriority="high" }}
     {{ /if }}
-    <div class="relative container-haus h-full flex items-start pt-[14rem]">
-        <div class="max-w-[42rem]">
-            <h1 class="text-4xl sm:text-5xl md:text-[60px] font-semibold leading-none">{{ hero_overlay_heading }}</h1>
-            <div class="mt-7 w-10 h-0.5 bg-haus-amber-500"></div>
-            {{ if hero_overlay_subheading }}<p class="mt-7 text-[17px] text-haus-ink-100 leading-[1.6] max-w-[36rem]">{{ hero_overlay_subheading }}</p>{{ /if }}
+    {{# Uniform dark overlay across the full photo #}}
+    <div class="absolute inset-0" style="background:rgba(0,0,0,0.52);"></div>
+
+    <div class="relative h-full flex items-center justify-center text-center px-6">
+        <div class="max-w-[760px]">
+            <h1 class="text-4xl sm:text-5xl md:text-[62px] font-bold leading-[1.05] uppercase tracking-tight">{{ hero_overlay_heading }}</h1>
+            {{ if hero_overlay_subheading }}
+                <p class="mt-6 text-base sm:text-lg text-white/85 leading-relaxed max-w-[540px] mx-auto">{{ hero_overlay_subheading }}</p>
+            {{ /if }}
+            {{ if hero_cta_text }}
+                <div class="mt-8">
+                    <a href="{{ hero_cta_url }}" class="haus-amber-btn">
+                        {{ hero_cta_text }}
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </a>
+                </div>
+            {{ /if }}
         </div>
     </div>
 </section>
 
-{{# WE BELIEVE IN repeater #}}
-{{ if believe_in_blocks }}
-    {{ believe_in_blocks }}
-        {{ if bg_image_url }}
-            {{# Full-bleed photo background variant (block 2 "Access to Experienced",
-                block 4 "Cookouts and Cornhole" on the live site). Section is
-                100vh; photo fills the background with a dark overlay; text
-                sits left (eyebrow + headline + body), lottie icon natural
-                size centered in the right column. Live SVG sizes:
-                team-work 345×345, GRill 464×464. #}}
-            <section class="relative bg-haus-ink-900 text-white overflow-hidden h-screen min-h-[640px]">
-                <img src="{{ bg_image_url }}" alt="" class="absolute inset-0 w-full h-full object-cover">
-                <div class="absolute inset-0 bg-haus-ink-900/65"></div>
-                <div class="relative h-full mx-auto max-w-[88rem] px-6 md:px-10 grid md:grid-cols-[1.6fr_1fr] gap-12 items-center" data-haus-fade-in>
-                    <div>
-                        <p class="text-white/40 uppercase tracking-[0.04em] text-[28px] font-light leading-[1.68]">We Believe In</p>
-                        <h2 class="mt-1 text-3xl sm:text-4xl md:text-5xl lg:text-[60px] font-semibold leading-none max-w-[44rem]">{{ title }}</h2>
-                        {{ if body }}<p class="mt-6 text-[17px] text-haus-ink-100 leading-[1.6] max-w-[36rem]">{{ body }}</p>{{ /if }}
+{{# ── 2. SERVICES STRIP — circular icons + hover image panel ──── #}}
+{{ collection:services show_on_homepage_strip:is="true" sort="nav_order:asc|title:asc" as="homepage_services" }}
+{{ if homepage_services }}
+<section class="bg-white border-b border-haus-ink-100 overflow-visible" style="position:relative;z-index:10;">
+    <div class="container-haus">
+        <div class="haus-services-row">
+            {{ homepage_services }}
+                <a href="{{ url }}" class="haus-service-item" aria-label="{{ nav_label ?? service_name | title }}">
+                    {{# Circle contains both the icon (default) and the hover photo (fades in) #}}
+                    <div class="svc-circle">
+                        {{# Icon layer — fades out on hover #}}
+                        {{ if strip_icon_url }}
+                            <div class="svc-icon">
+                                <img src="{{ strip_icon_url | imported_asset_url }}" alt="" aria-hidden="true">
+                            </div>
+                        {{ elseif strip_icon }}
+                            <div class="svc-icon">
+                                {{ partial:img :asset="strip_icon" class="w-full h-full object-contain" :glide="false" alt="" }}
+                            </div>
+                        {{ /if }}
+                        {{# Photo layer — fades in on hover, fills the circle #}}
+                        {{ if strip_hover_image || strip_hover_image_url }}
+                            <div class="svc-hover-img">
+                                {{ partial:img :asset="strip_hover_image" :legacy_url="strip_hover_image_url" :alt="nav_label ?? service_name | title" class="w-full h-full object-cover" :glide="false" loading="lazy" }}
+                            </div>
+                        {{ /if }}
                     </div>
-                    {{ if lottie_url }}
-                        <div class="flex items-center justify-center" aria-hidden="true">
-                            <div class="w-[260px] h-[260px] md:w-[345px] md:h-[345px] lg:w-[464px] lg:h-[464px]" data-haus-lottie="{{ lottie_url }}"></div>
-                        </div>
-                    {{ /if }}
-                </div>
-            </section>
-        {{ elseif lottie_url }}
-            <section class="bg-haus-ink-900 text-white h-screen min-h-[640px] flex items-center border-t border-white/5">
-                <div class="mx-auto max-w-[88rem] px-6 md:px-10 w-full grid md:grid-cols-2 gap-12 items-center" data-haus-fade-in>
-                    {{ if index | mod:2 == 0 }}
-                        <div class="flex items-center justify-center" aria-hidden="true">
-                            <div class="w-[240px] h-[240px] md:w-[300px] md:h-[300px] lg:w-[340px] lg:h-[340px]" data-haus-lottie="{{ lottie_url }}"></div>
-                        </div>
-                    {{ /if }}
-                    <div>
-                        <p class="text-white/40 uppercase tracking-[0.04em] text-[28px] font-light leading-[1.68]">We Believe In</p>
-                        <h2 class="mt-1 text-3xl sm:text-4xl md:text-5xl lg:text-[60px] font-semibold leading-none">{{ title }}</h2>
-                        {{ if body }}<p class="mt-6 text-[17px] text-haus-ink-200 leading-[1.6] max-w-[36rem]">{{ body }}</p>{{ /if }}
-                    </div>
-                    {{ if index | mod:2 != 0 }}
-                        <div class="flex items-center justify-center md:order-last" aria-hidden="true">
-                            <div class="w-[240px] h-[240px] md:w-[300px] md:h-[300px] lg:w-[340px] lg:h-[340px]" data-haus-lottie="{{ lottie_url }}"></div>
-                        </div>
-                    {{ /if }}
-                </div>
-            </section>
-        {{ else }}
-            {{# Block 5 ("Trust Builds Relationships") on live — no icon, no bg.
-                Live's section bg is #191919 (slightly lighter than ink-900).
-                Title left-aligned in its own 100vh section. #}}
-            <section class="bg-[#191919] text-white h-screen min-h-[640px] flex items-center">
-                <div class="mx-auto max-w-[88rem] px-6 md:px-10 w-full" data-haus-fade-in>
-                    <p class="text-white/40 uppercase tracking-[0.04em] text-[28px] font-light leading-[1.68]">We Believe In</p>
-                    <h2 class="mt-1 text-3xl sm:text-4xl md:text-5xl lg:text-[60px] font-semibold leading-none max-w-[44rem]">{{ title }}</h2>
-                    {{ if body }}<p class="mt-6 text-[17px] text-haus-ink-200 leading-[1.6] max-w-[36rem]">{{ body }}</p>{{ /if }}
-                </div>
-            </section>
-        {{ /if }}
-    {{ /believe_in_blocks }}
-{{ /if }}
-
-{{# Featured projects — only if data is present #}}
-{{ if featured_projects }}
-    <section class="bg-haus-ink-50 py-16 md:py-24">
-        <div class="container-haus">
-            <h2 class="text-3xl md:text-4xl font-medium tracking-tight text-center">Featured Projects</h2>
-            <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                {{ featured_projects limit="6" }}
-                    <a href="{{ url }}" class="group block">
-                        <div class="aspect-[4/3] overflow-hidden rounded bg-haus-ink-200">
-                            {{ if image_url }}<img src="{{ image_url }}" alt="{{ title }}" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">{{ /if }}
-                        </div>
-                        <h3 class="mt-4 text-lg font-medium group-hover:text-haus-amber-700 transition">{{ title }}</h3>
-                        {{ if categories }}<p class="mt-1 text-sm text-haus-ink-500">{{ categories | join:", " }}</p>{{ /if }}
-                    </a>
-                {{ /featured_projects }}
-            </div>
+                    <span class="svc-label">{{ nav_label ?? service_name | title }}</span>
+                </a>
+            {{ /homepage_services }}
         </div>
-    </section>
+    </div>
+</section>
+{{ /if }}
+{{ /collection:services }}
+
+{{# ── 3. MISSION BAND ─────────────────────────────────────────────── #}}
+<section class="py-12 md:py-16 bg-white">
+    <div class="container-haus">
+        <div class="haus-mission-box">
+            <p class="haus-mission-text" data-haus-typewriter>
+                We are <span class="highlight">design partners</span> who guide you through a collaborative experience
+                with a common purpose, to <span class="highlight">deliver well-crafted solutions</span> that benefit our
+                clients, employees, shareholders, and communities.
+            </p>
+        </div>
+        <div class="flex justify-end mt-5">
+            <a href="/about/" class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest transition-colors duration-200" style="color:#1a1a1a;">
+                More About Us
+                <svg width="28" height="10" viewBox="0 0 28 10" fill="none" aria-hidden="true"><path d="M0 5h26M22 1l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+        </div>
+    </div>
+</section>
+
+{{# ── 4. FEATURED PROJECTS ───────────────────────────────────────── #}}
+{{# Curated in the homepage entry (featured_projects grid) with custom
+    thumbnails from public/assets/images/home/feature-projects/. #}}
+{{ if featured_projects }}
+<section class="bg-white pt-14 pb-10">
+    <div class="container-haus">
+        <h2 class="haus-section-heading text-3xl md:text-4xl font-bold text-haus-ink-800 leading-tight">Featured Projects</h2>
+        <div class="haus-section-divider"></div>
+        <div class="grid grid-cols-3 grid-rows-2 gap-px bg-gray-300">
+            {{ featured_projects }}
+                <a href="{{ url }}" class="haus-proj-card" style="aspect-ratio:4/3;">
+                    {{ if image || image_url }}
+                        {{ partial:img :asset="image" :legacy_url="image_url" :alt="title" class="absolute inset-0 w-full h-full object-cover" :glide="false" loading="lazy" }}
+                    {{ /if }}
+                    <div class="overlay">
+                        {{ if categories }}
+                            <p class="proj-cats">{{ categories }}<span class="cat-item">{{ value }}</span>{{ /categories }}</p>
+                        {{ /if }}
+                        <h3 class="proj-title">{{ title }}</h3>
+                    </div>
+                </a>
+            {{ /featured_projects }}
+        </div>
+        <div class="flex justify-end mt-5">
+            <a href="/portfolio/" class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest transition-colors duration-200 text-haus-ink-800 hover:text-haus-amber-600">
+                All Projects
+                <svg width="32" height="10" viewBox="0 0 32 10" fill="none" aria-hidden="true"><path d="M0 5h30M26 1l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+        </div>
+    </div>
+</section>
 {{ /if }}
 
-{{# Testimonials — only if data is present #}}
-{{ if testimonials }}
-    <section class="container-haus py-16 md:py-24">
-        {{ testimonials }}
-            <blockquote class="max-w-3xl mx-auto text-center">
-                <p class="text-xl md:text-2xl leading-relaxed text-haus-ink-700">&ldquo;{{ quote }}&rdquo;</p>
-                <footer class="mt-6">
-                    {{ if attribution_name }}<p class="font-medium text-haus-ink-800">{{ attribution_name }}</p>{{ /if }}
-                    {{ if attribution_org }}<p class="text-sm text-haus-ink-500">{{ attribution_org }}</p>{{ /if }}
-                </footer>
-            </blockquote>
-        {{ /testimonials }}
-    </section>
+{{# ── 5. NEWS & ANNOUNCEMENTS ────────────────────────────────────── #}}
+{{ if news_slugs }}
+<section class="py-14 md:py-20" style="background-color:#f4f4f4;">
+    <div class="container-haus">
+        <h2 class="haus-section-heading text-3xl md:text-4xl font-bold text-haus-ink-800 leading-tight">News &amp; Announcements</h2>
+        <div class="haus-section-divider"></div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {{ news_slugs }}
+                {{ collection:news_posts :slug:is="value" }}
+                    <a href="{{ url }}" class="haus-news-card group block">
+                        <div class="news-img aspect-square overflow-hidden bg-haus-ink-100">
+                            {{ if featured_image || featured_image_url }}
+                                {{ partial:img :asset="featured_image" :legacy_url="featured_image_url" :alt="title" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" :glide="false" loading="lazy" }}
+                            {{ /if }}
+                        </div>
+                        <div class="news-text">
+                            {{ if categories }}
+                                <div class="flex flex-wrap gap-1.5 mt-3 mb-2">
+                                    {{ categories }}
+                                        <span class="news-cat-tag">{{ label }}</span>
+                                    {{ /categories }}
+                                </div>
+                            {{ /if }}
+                            {{ if subtitle }}
+                                <p class="text-sm text-haus-ink-700 leading-snug line-clamp-4">{{ subtitle }}</p>
+                            {{ else }}
+                                <p class="text-sm text-haus-ink-700 leading-snug line-clamp-4">{{ title }}</p>
+                            {{ /if }}
+                        </div>
+                    </a>
+                {{ /collection:news_posts }}
+            {{ /news_slugs }}
+        </div>
+        <div class="flex justify-end mt-6">
+            <a href="/news/" class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest transition-colors duration-200 text-haus-ink-800 hover:text-haus-amber-600">
+                All News &amp; Updates
+                <svg width="32" height="10" viewBox="0 0 32 10" fill="none" aria-hidden="true"><path d="M0 5h30M26 1l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+        </div>
+    </div>
+</section>
+{{ /if }}
+
+{{# ── 6. CULTURE SECTION ─────────────────────────────────────────── #}}
+{{ if culture_heading }}
+<style>
+    .culture-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+            "ca cb cc"
+            "cd cb ce";
+        gap: 4px;
+    }
+    .cult-p-1 { grid-area: ca; }
+    .cult-p-2 { grid-area: cd; }
+    .cult-p-3 { grid-area: cb; }
+    .cult-p-4 { grid-area: cc; }
+    .cult-p-5 { grid-area: ce; }
+    .culture-grid .cult-photo {
+        position: relative;
+        overflow: hidden;
+        background: #e5e7eb;
+    }
+    .culture-grid .cult-photo img {
+        width: 100%; height: 100%; object-fit: cover; display: block;
+        transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+        will-change: transform;
+    }
+    .culture-grid .cult-photo:hover img {
+        transform: scale(1.08);
+    }
+    @media (prefers-reduced-motion: reduce) {
+        .culture-grid .cult-photo img { transition: none; }
+        .culture-grid .cult-photo:hover img { transform: none; }
+    }
+    .cult-p-1, .cult-p-2, .cult-p-4, .cult-p-5 { aspect-ratio: 4/3; }
+    .cult-p-3 { aspect-ratio: auto; }
+</style>
+<section class="bg-white py-14 md:py-20">
+    <div class="container-haus">
+        {{# Text + Lottie row #}}
+        <div class="grid md:grid-cols-[1fr_300px] gap-10 items-center mb-10">
+            <div>
+                <h2 class="haus-section-heading text-3xl md:text-4xl lg:text-5xl font-bold text-haus-ink-800 leading-tight">{{ culture_heading }}</h2>
+                <div class="haus-section-divider"></div>
+                {{ if culture_body }}
+                    <p class="text-base text-haus-ink-600 leading-relaxed max-w-xl mt-2">{{ culture_body }}</p>
+                {{ /if }}
+                {{ if culture_cta_text }}
+                    <a href="{{ culture_cta_url }}" class="haus-amber-btn mt-7">
+                        {{ culture_cta_text }}
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </a>
+                {{ /if }}
+            </div>
+            {{ if culture_lottie_url }}
+                <div class="flex items-center justify-center md:justify-end" aria-hidden="true">
+                    <div class="w-[220px] h-[220px] md:w-[280px] md:h-[280px]" data-haus-lottie="{{ culture_lottie_url }}"></div>
+                </div>
+            {{ /if }}
+        </div>
+
+        {{# Asymmetric photo grid: left×2 | center tall | right×2 #}}
+        {{ if culture_photos }}
+            <div class="culture-grid">
+                {{ culture_photos }}
+                    <div class="cult-photo cult-p-{{ count }}">
+                        {{ if url }}
+                            <img src="{{ url | imported_asset_url }}" alt="{{ alt }}" loading="lazy">
+                        {{ /if }}
+                    </div>
+                {{ /culture_photos }}
+            </div>
+            {{# Pagination dots #}}
+            <div class="flex justify-center mt-4">
+                <div class="w-10 h-1.5 rounded-full bg-haus-ink-700"></div>
+            </div>
+        {{ /if }}
+
+        {{# Work With Us link #}}
+        <div class="flex justify-end mt-5">
+            <a href="/careers/" class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest transition-colors duration-200 text-haus-ink-800 hover:text-haus-amber-600">
+                Work With Us
+                <svg width="32" height="10" viewBox="0 0 32 10" fill="none" aria-hidden="true"><path d="M0 5h30M26 1l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+        </div>
+    </div>
+</section>
 {{ /if }}
