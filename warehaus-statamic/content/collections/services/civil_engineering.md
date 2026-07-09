@@ -5,7 +5,7 @@ title: civil & land planning
 slug: civil_engineering
 source_url: https://warehausae.com/services/civil_engineering/
 service_name: civil & land planning
-nav_label: Civil
+nav_label: Civil Engineering
 nav_order: 2
 show_in_nav: true
 show_on_homepage_strip: true
