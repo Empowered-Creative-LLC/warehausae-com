@@ -5,7 +5,7 @@ title: structural engineering
 slug: structural
 source_url: https://warehausae.com/services/structural/
 service_name: structural engineering
-nav_label: Structural
+nav_label: Structural Engineering
 nav_order: 5
 show_in_nav: true
 show_on_homepage_strip: true

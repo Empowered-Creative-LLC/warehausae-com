@@ -84,16 +84,23 @@
     }
 
     /* ── Services strip ── */
+    .haus-services-row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px 12px;
+    }
     .haus-service-item {
         position: relative;
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 14px;
-        padding: 28px 32px;
+        padding: 28px 16px;
         text-align: center;
         text-decoration: none;
         cursor: pointer;
+        flex: 0 1 auto;
     }
     /* Circle — clips both the icon and the hover image */
     .haus-service-item .svc-circle {
@@ -134,11 +141,16 @@
         display: block;
     }
     .haus-service-item .svc-label {
-        font-size: 0.7rem; font-weight: 700;
-        text-transform: uppercase; letter-spacing: 0.08em;
-        color: #777; line-height: 1.35;
-        max-width: 90px;
+        font-size: 0.625rem; font-weight: 700;
+        text-transform: uppercase; letter-spacing: 0.06em;
+        color: #777; line-height: 1.2;
+        white-space: nowrap;
         transition: color 0.3s;
+    }
+    @media (min-width: 1024px) {
+        .haus-services-row { gap: 8px 20px; }
+        .haus-service-item { padding: 28px 20px; }
+        .haus-service-item .svc-label { font-size: 0.65rem; }
     }
     /* Hover state — photo fades in, icon fades out, border + label go amber */
     .haus-service-item:hover .svc-circle { border-color: #f89b02; }
@@ -208,7 +220,7 @@
 {{ if homepage_services }}
 <section class="bg-white border-b border-haus-ink-100 overflow-visible" style="position:relative;z-index:10;">
     <div class="container-haus">
-        <div class="flex flex-wrap justify-center">
+        <div class="haus-services-row">
             {{ homepage_services }}
                 <a href="{{ url }}" class="haus-service-item" aria-label="{{ nav_label ?? service_name | title }}">
                     {{# Circle contains both the icon (default) and the hover photo (fades in) #}}
