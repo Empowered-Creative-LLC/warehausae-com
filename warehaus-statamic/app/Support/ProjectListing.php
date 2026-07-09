@@ -132,7 +132,7 @@ class ProjectListing
             ->where('published', true)
             ->get()
             ->reject(fn (Entry $entry) => self::isEditorTemplateEntry($entry) || (bool) $entry->get('is_test_fits_subpage'))
-            ->sortBy(fn (Entry $entry) => strtolower((string) $entry->get('title')));
+            ->sortByDesc(fn (Entry $entry) => $entry->lastModified());
     }
 
   /**

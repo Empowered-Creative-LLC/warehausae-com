@@ -15,7 +15,99 @@ document.addEventListener('DOMContentLoaded', () => {
     initRotatingWords();
     sizeCdWordsWrappers();
     initRecentProjectsCarousel();
+    initMissionTypewriter();
 });
+
+/**
+ * Typewriter effect for the homepage mission statement. Types the copy out
+ * character by character (preserving the amber .highlight spans) when the
+ * element scrolls into view. Falls back to the fully-rendered text when JS is
+ * unavailable or the user prefers reduced motion.
+ */
+function initMissionTypewriter() {
+    const els = document.querySelectorAll('[data-haus-typewriter]');
+    if (!els.length) return;
+
+    const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    els.forEach((el) => {
+        // Snapshot the original segments (text + whether it's a highlight span).
+        const segments = [...el.childNodes]
+            .map((node) => {
+                if (node.nodeType === Node.TEXT_NODE) {
+                    return { text: node.textContent.replace(/\s+/g, ' '), highlight: false };
+                }
+                if (node.nodeType === Node.ELEMENT_NODE) {
+                    return {
+                        text: node.textContent.replace(/\s+/g, ' '),
+                        highlight: node.classList.contains('highlight'),
+                    };
+                }
+                return null;
+            })
+            .filter((seg) => seg && seg.text.length);
+
+        if (!segments.length) return;
+
+        // Trim the leading/trailing whitespace introduced by HTML indentation.
+        segments[0].text = segments[0].text.replace(/^\s+/, '');
+        segments[segments.length - 1].text = segments[segments.length - 1].text.replace(/\s+$/, '');
+
+        if (reduceMotion || typeof IntersectionObserver === 'undefined') {
+            return; // Leave the pre-rendered text as-is.
+        }
+
+        let started = false;
+        const io = new IntersectionObserver((entries) => {
+            for (const entry of entries) {
+                if (entry.isIntersecting && !started) {
+                    started = true;
+                    io.unobserve(entry.target);
+                    typeSegments(el, segments);
+                }
+            }
+        }, { threshold: 0.4 });
+
+        io.observe(el);
+    });
+}
+
+function typeSegments(el, segments) {
+    const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
+    // Rebuild the element empty, pre-creating each segment node so the caret
+    // trails the typed text without layout jumps.
+    el.textContent = '';
+    el.classList.add('is-typing');
+
+    const nodes = segments.map((seg) => {
+        const node = seg.highlight ? document.createElement('span') : document.createTextNode('');
+        if (seg.highlight) node.className = 'highlight';
+        el.appendChild(node);
+        return node;
+    });
+
+    const caret = document.createElement('span');
+    caret.className = 'haus-caret';
+    caret.setAttribute('aria-hidden', 'true');
+    el.appendChild(caret);
+
+    (async () => {
+        for (let s = 0; s < segments.length; s++) {
+            const { text, highlight } = segments[s];
+            const node = nodes[s];
+            for (let i = 0; i < text.length; i++) {
+                const ch = text[i];
+                if (highlight) node.textContent += ch;
+                else node.nodeValue += ch;
+                // Brief pause after sentence punctuation for a natural cadence.
+                await sleep(/[.,]/.test(ch) ? 180 : 20);
+            }
+        }
+        // Typing done — let the caret blink idly.
+        el.classList.remove('is-typing');
+    })();
+}
 
 /**
  * Recent Projects carousel — paginates through the card list on desktop,

@@ -27,6 +27,21 @@
         color: #f89b02;
         font-weight: 700;
     }
+    /* Typewriter caret — shown while the mission types out, blinks when idle. */
+    .haus-mission-text .haus-caret {
+        display: inline-block;
+        width: 2px;
+        margin-left: 2px;
+        background: #f89b02;
+        animation: haus-caret-blink 1s step-end infinite;
+        vertical-align: -0.12em;
+        height: 1.05em;
+    }
+    .haus-mission-text.is-typing .haus-caret { animation: none; }
+    @keyframes haus-caret-blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+    @media (prefers-reduced-motion: reduce) {
+        .haus-mission-text .haus-caret { display: none; }
+    }
 
     /* ── Featured project card overlay ── */
     .haus-proj-card { position: relative; overflow: hidden; display: block; }
@@ -228,7 +243,7 @@
 <section class="py-12 md:py-16 bg-white">
     <div class="container-haus">
         <div class="haus-mission-box">
-            <p class="haus-mission-text">
+            <p class="haus-mission-text" data-haus-typewriter>
                 We are <span class="highlight">design partners</span> who guide you through a collaborative experience
                 with a common purpose, to <span class="highlight">deliver well-crafted solutions</span> that benefit our
                 clients, employees, shareholders, and communities.
@@ -244,26 +259,27 @@
 </section>
 
 {{# ── 4. FEATURED PROJECTS ───────────────────────────────────────── #}}
-{{ projects_carousel context="featured" limit="6" }}
-{{ if projects }}
+{{# Curated in the homepage entry (featured_projects grid) with custom
+    thumbnails from public/assets/images/home/feature-projects/. #}}
+{{ if featured_projects }}
 <section class="bg-white pt-14 pb-10">
     <div class="container-haus">
         <h2 class="haus-section-heading text-3xl md:text-4xl font-bold text-haus-ink-800 leading-tight">Featured Projects</h2>
         <div class="haus-section-divider"></div>
         <div class="grid grid-cols-3 grid-rows-2 gap-px bg-gray-300">
-            {{ projects }}
+            {{ featured_projects }}
                 <a href="{{ url }}" class="haus-proj-card" style="aspect-ratio:4/3;">
                     {{ if image || image_url }}
                         {{ partial:img :asset="image" :legacy_url="image_url" :alt="title" class="absolute inset-0 w-full h-full object-cover" :glide="false" loading="lazy" }}
                     {{ /if }}
                     <div class="overlay">
                         {{ if categories }}
-                            <p class="proj-cats">{{ categories | join:", " }}</p>
+                            <p class="proj-cats">{{ categories }}<span class="cat-item">{{ value }}</span>{{ /categories }}</p>
                         {{ /if }}
                         <h3 class="proj-title">{{ title }}</h3>
                     </div>
                 </a>
-            {{ /projects }}
+            {{ /featured_projects }}
         </div>
         <div class="flex justify-end mt-5">
             <a href="/portfolio/" class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest transition-colors duration-200 text-haus-ink-800 hover:text-haus-amber-600">
@@ -274,7 +290,6 @@
     </div>
 </section>
 {{ /if }}
-{{ /projects_carousel }}
 
 {{# ── 5. NEWS & ANNOUNCEMENTS ────────────────────────────────────── #}}
 {{ if news_slugs }}
@@ -337,11 +352,21 @@
     .cult-p-4 { grid-area: cc; }
     .cult-p-5 { grid-area: ce; }
     .culture-grid .cult-photo {
+        position: relative;
         overflow: hidden;
         background: #e5e7eb;
     }
     .culture-grid .cult-photo img {
         width: 100%; height: 100%; object-fit: cover; display: block;
+        transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+        will-change: transform;
+    }
+    .culture-grid .cult-photo:hover img {
+        transform: scale(1.08);
+    }
+    @media (prefers-reduced-motion: reduce) {
+        .culture-grid .cult-photo img { transition: none; }
+        .culture-grid .cult-photo:hover img { transform: none; }
     }
     .cult-p-1, .cult-p-2, .cult-p-4, .cult-p-5 { aspect-ratio: 4/3; }
     .cult-p-3 { aspect-ratio: auto; }

@@ -148,7 +148,7 @@ tabs:
                     type: list
                     display: Featured Projects Categories
               display: Featured Projects
-              instructions: Deprecated — the homepage featured projects grid is now populated automatically from the Projects collection.
+              instructions: Curated 3×2 grid on the homepage. Order matters. Use thumbnails from assets/images/home/feature-projects/ for the custom crop shown on the live site.
           - handle: stats_counters
             field:
               type: grid
