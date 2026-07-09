@@ -212,6 +212,7 @@ php artisan migrate --force
 php artisan cache:clear
 php artisan statamic:stache:clear
 php artisan statamic:stache:warm
+php artisan statamic:search:update --all
 ```
 
 > **Why the clear steps:** Statamic's Stache is persisted in the database cache store, so `stache:warm` on its own can keep serving a stale content index across deploys — git-committed content changes (`content/*.md`, blueprints) then won't appear on the site even though the code deployed. Clearing the app cache and the Stache before warming forces the deployed content to take effect. `scripts/laravel-cloud-deploy.sh` already does this.

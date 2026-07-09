@@ -19,10 +19,11 @@
 
         <nav class="hidden md:flex items-center gap-7 lg:gap-9 text-xs lg:text-sm font-semibold tracking-[0.08em] uppercase text-white" data-haus-desktop-nav>
             <div class="relative" data-haus-dropdown>
-                <a href="/services/" class="inline-flex items-center gap-1.5 hover:text-haus-amber-400 transition" data-haus-dropdown-trigger aria-haspopup="true" aria-expanded="false">
+                {{# No landing page — opens the submenu only (matches live site). #}}
+                <button type="button" class="inline-flex items-center gap-1.5 hover:text-haus-amber-400 transition cursor-pointer" data-haus-dropdown-trigger aria-haspopup="true" aria-expanded="false">
                     Services
                     <svg class="h-3 w-3" viewBox="0 0 12 8" fill="none" aria-hidden="true"><path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                </a>
+                </button>
                 <ul data-haus-dropdown-menu class="hidden absolute left-0 top-full mt-2 min-w-[200px] bg-haus-ink-900/95 backdrop-blur rounded shadow-lg py-2 text-white normal-case tracking-normal font-medium text-sm">
                     {{ collection:services show_in_nav:is="true" sort="nav_order:asc|title:asc" }}
                         <li><a href="{{ url }}" class="block px-4 py-2 hover:bg-white/5 hover:text-haus-amber-400 transition">{{ nav_label ?? service_name | title }}</a></li>
@@ -53,7 +54,7 @@
             <a href="/careers/" class="hover:text-haus-amber-400 transition">Careers</a>
         </nav>
 
-        <form role="search" action="/search" method="get" class="hidden md:flex items-center gap-2 bg-white/10 rounded px-3 py-1.5 w-[180px] lg:w-[220px]">
+        <form role="search" action="/search/" method="get" class="hidden md:flex items-center gap-2 bg-white/10 rounded px-3 py-1.5 w-[180px] lg:w-[220px]">
             <svg class="h-3.5 w-3.5 opacity-70 shrink-0" viewBox="0 0 16 16" fill="none" aria-hidden="true">
                 <circle cx="7" cy="7" r="5" stroke="currentColor" stroke-width="1.5"/>
                 <path d="M11 11L14 14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
@@ -82,7 +83,17 @@
         class="md:hidden bg-haus-ink-900 border-t border-white/10"
     >
         <nav class="container-haus flex flex-col py-4 text-base font-medium tracking-wide uppercase divide-y divide-white/5">
-            <a href="/services/" class="py-4 hover:text-haus-amber-400 transition flex justify-between items-center">Services <span aria-hidden="true">→</span></a>
+            <div data-haus-mobile-disclosure>
+                <button type="button" class="w-full py-4 hover:text-haus-amber-400 transition flex justify-between items-center" data-haus-mobile-disclosure-trigger aria-expanded="false">
+                    Services
+                    <svg class="h-4 w-4 shrink-0 transition-transform" data-haus-mobile-disclosure-chevron viewBox="0 0 12 8" fill="none" aria-hidden="true"><path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </button>
+                <div hidden data-haus-mobile-disclosure-panel class="pb-3 pl-4 space-y-2 text-sm font-medium normal-case tracking-normal">
+                    {{ collection:services show_in_nav:is="true" sort="nav_order:asc|title:asc" }}
+                        <a href="{{ url }}" class="block py-1.5 text-haus-ink-300 hover:text-haus-amber-400 transition">{{ nav_label ?? service_name | title }}</a>
+                    {{ /collection:services }}
+                </div>
+            </div>
             <a href="/portfolio/" class="py-4 hover:text-haus-amber-400 transition flex justify-between items-center">Portfolio <span aria-hidden="true">→</span></a>
             <a href="/about/" class="py-4 hover:text-haus-amber-400 transition flex justify-between items-center">About <span aria-hidden="true">→</span></a>
             <a href="/culture/" class="py-4 hover:text-haus-amber-400 transition flex justify-between items-center">Culture <span aria-hidden="true">→</span></a>
