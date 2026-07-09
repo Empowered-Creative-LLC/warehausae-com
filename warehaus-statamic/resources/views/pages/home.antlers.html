@@ -266,9 +266,9 @@
     <div class="container-haus">
         <h2 class="haus-section-heading text-3xl md:text-4xl font-bold text-haus-ink-800 leading-tight">Featured Projects</h2>
         <div class="haus-section-divider"></div>
-        <div class="grid grid-cols-3 grid-rows-2 gap-px bg-gray-300">
+        <div class="grid grid-cols-1 md:grid-cols-3 md:grid-rows-2 gap-px bg-gray-300">
             {{ featured_projects }}
-                <a href="{{ url }}" class="haus-proj-card" style="aspect-ratio:4/3;">
+                <a href="{{ url }}" class="haus-proj-card aspect-[4/3]">
                     {{ if image || image_url }}
                         {{ partial:img :asset="image" :legacy_url="image_url" :alt="title" class="absolute inset-0 w-full h-full object-cover" :glide="false" loading="lazy" }}
                     {{ /if }}
@@ -370,6 +370,23 @@
     }
     .cult-p-1, .cult-p-2, .cult-p-4, .cult-p-5 { aspect-ratio: 4/3; }
     .cult-p-3 { aspect-ratio: auto; }
+    @media (max-width: 767px) {
+        .culture-grid {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto;
+            grid-template-areas:
+                "ca cd"
+                "cb cb"
+                "cc cc"
+                "ce ce";
+        }
+        .cult-p-1, .cult-p-2 { aspect-ratio: 4/3; }
+        .cult-p-3, .cult-p-5 { aspect-ratio: 4/5; }
+        .cult-p-4 { aspect-ratio: 4/3; }
+        .cult-p-3 img,
+        .cult-p-5 img { object-position: center top; }
+        .cult-p-4 img { object-position: center 20%; }
+    }
 </style>
 <section class="bg-white py-14 md:py-20">
     <div class="container-haus">
