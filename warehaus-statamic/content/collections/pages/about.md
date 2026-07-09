@@ -14,7 +14,8 @@ intro_prose: |-
 
   Warehaus co-owners [Troy Bankert](/team/troy-bankert/) and [David Koratich](/team/david-koratich/) each have a long history at Warehaus, spanning as far back as 1988. Today, they oversee the day-to-day operations of the firm as well as overall asset management, guiding the strategic vision for ongoing growth and advancement.
 intro_image_url: /assets/imported/2025/09/Troy-Bankert-and-David-Koratich-2025-1-1024x683.jpg
-mission_prose: We are Design Partners. We guide you through a collaborative experience with a common purpose, to deliver well-crafted solutions that benefit our clients, employees, shareholders, and communities.
+mission_prose: >-
+  We are design partners who guide you through a collaborative experience with a common purpose, to deliver well-crafted solutions that benefit our clients, employees, shareholders, and communities.
 leadership_slugs:
   - david-koratich
   - troy-bankert
