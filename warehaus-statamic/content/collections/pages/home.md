@@ -97,7 +97,7 @@ culture_photos:
     alt: Warehaus Champs
   - url: "/assets/images/home/collaboration/United Way Day of Action - Food Bank - 2024 - 11.jpg"
     alt: United Way food bank volunteers
-culture_lottie_url: /assets/imported/2023/06/GRill.json
+culture_image_url: /assets/images/home/Grill.png
 believe_in_blocks:
   - title: Finding Good Ideas Everywhere.
     body: >-
