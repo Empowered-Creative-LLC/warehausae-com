@@ -7,6 +7,7 @@ gsap.registerPlugin(ScrollTrigger);
 document.addEventListener('DOMContentLoaded', () => {
     initStickyHeader();
     initMobileMenu();
+    initMobileNavDisclosures();
     initDesktopDropdowns();
     initFadeInOnScroll();
     initParallaxBackgrounds();
@@ -362,6 +363,25 @@ function initMobileMenu() {
     // Close on Escape.
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && !nav.hasAttribute('hidden')) setOpen(false);
+    });
+}
+
+/**
+ * Mobile nav submenus (e.g. Services) — toggle panel without navigating away.
+ */
+function initMobileNavDisclosures() {
+    document.querySelectorAll('[data-haus-mobile-disclosure]').forEach((root) => {
+        const trigger = root.querySelector('[data-haus-mobile-disclosure-trigger]');
+        const panel = root.querySelector('[data-haus-mobile-disclosure-panel]');
+        const chevron = root.querySelector('[data-haus-mobile-disclosure-chevron]');
+        if (!trigger || !panel) return;
+
+        trigger.addEventListener('click', () => {
+            const open = panel.hasAttribute('hidden');
+            panel.toggleAttribute('hidden', !open);
+            trigger.setAttribute('aria-expanded', open ? 'true' : 'false');
+            chevron?.classList.toggle('rotate-180', open);
+        });
     });
 }
 

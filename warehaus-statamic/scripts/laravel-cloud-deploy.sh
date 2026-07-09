@@ -18,6 +18,7 @@ php artisan migrate --force
 php artisan cache:clear
 php artisan statamic:stache:clear
 php artisan statamic:stache:warm
+php artisan statamic:search:update --all
 
 # Optional: configure git push when GIT_SSH_PRIVATE_KEY is set (Statamic CP workflow)
 if [[ -n "${GIT_SSH_PRIVATE_KEY:-}" ]]; then
