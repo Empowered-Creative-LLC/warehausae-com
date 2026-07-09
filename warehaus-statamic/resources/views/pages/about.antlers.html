@@ -1,5 +1,19 @@
 {{# About template — history timeline + mission + leadership + news feed. #}}
 <style>
+    /* ── Shared amber section rule ── */
+    .haus-section-rule {
+        display: block;
+        width: 6rem;
+        height: 3px;
+        margin-top: 1rem;
+        border-radius: 1px;
+        background-color: #f89b02;
+    }
+    .haus-section-rule--center {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     /* ── Mission band (matches homepage) ── */
     .haus-mission-box {
         background-color: #1a1a1a;
@@ -39,7 +53,8 @@
 
 {{ if lead_heading }}
     <section class="container-haus pt-16 pb-8 text-center">
-        <p class="text-2xl md:text-3xl text-haus-ink-500 max-w-3xl mx-auto">{{ lead_heading }}</p>
+        <h2 class="text-2xl md:text-3xl text-haus-ink-500 max-w-3xl mx-auto font-medium tracking-tight">{{ lead_heading }}</h2>
+        <span class="haus-section-rule haus-section-rule--center" aria-hidden="true"></span>
     </section>
 {{ /if }}
 
@@ -59,7 +74,10 @@
 {{ if sections }}
     <section class="bg-haus-ink-50 py-16 md:py-24">
         <div class="container-haus max-w-5xl">
-            <h2 class="text-3xl md:text-4xl font-medium tracking-tight text-center mb-16">Our History</h2>
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-medium tracking-tight text-haus-ink-800">Our History</h2>
+                <span class="haus-section-rule haus-section-rule--center" aria-hidden="true"></span>
+            </div>
             <div class="relative">
                 <div class="absolute top-0 bottom-0 left-1/2 -ml-px w-px bg-haus-ink-200 hidden md:block"></div>
                 {{ sections }}
@@ -88,7 +106,10 @@
 {{ if mission_prose }}
     <section class="bg-white py-16 md:py-24">
         <div class="container-haus max-w-4xl">
-            <h2 class="text-3xl md:text-4xl font-medium tracking-tight text-center text-haus-ink-800 mb-10">Our Mission</h2>
+            <div class="text-center mb-10">
+                <h2 class="text-3xl md:text-4xl font-medium tracking-tight text-haus-ink-800">Our Mission</h2>
+                <span class="haus-section-rule haus-section-rule--center" aria-hidden="true"></span>
+            </div>
             <div class="haus-mission-box">
                 <p class="haus-mission-text" data-haus-typewriter>
                     We are <span class="highlight">design partners</span> who guide you through a collaborative experience
@@ -107,8 +128,7 @@
 {{ if about_leadership }}
     <section class="container-haus py-16 md:py-24">
         <h2 class="text-3xl md:text-4xl font-medium tracking-tight text-center">Meet Our Leadership</h2>
-        {{# Amber rule under the heading — matches the divider in Elementor #}}
-        <div class="mt-3 mx-auto w-24 h-[3px] bg-haus-amber-500 rounded"></div>
+        <span class="haus-section-rule haus-section-rule--center" aria-hidden="true"></span>
         <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-6">
             {{ about_leadership }}
                 <div class="group bg-white rounded-[9px] shadow-[0_3px_36px_rgba(0,0,0,0.09)] border-b-4 border-transparent hover:border-haus-amber-500 hover:shadow-[0_0_10px_rgba(0,0,0,0.5)] transition-all duration-200 overflow-hidden p-5">
@@ -152,7 +172,10 @@
 {{ if news_slugs }}
     <section class="bg-haus-ink-50 py-16 md:py-24">
         <div class="container-haus max-w-5xl">
-            <h2 class="text-3xl md:text-4xl font-medium tracking-tight text-center mb-12">News Feed</h2>
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-medium tracking-tight text-haus-ink-800">News Feed</h2>
+                <span class="haus-section-rule haus-section-rule--center" aria-hidden="true"></span>
+            </div>
             <div class="space-y-8">
                 {{ news_slugs }}
                     {{ collection:news_posts :slug:is="value" }}
