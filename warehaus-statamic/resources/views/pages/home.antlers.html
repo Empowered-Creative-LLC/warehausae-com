@@ -189,11 +189,47 @@
     .haus-amber-btn:hover { background-color: #e08900; }
 </style>
 
-{{# ── 1. HERO — centered layout ───────────────────────────────── #}}
-<section class="relative overflow-hidden bg-haus-ink-900 text-white" style="height:90vh;min-height:600px;">
-    {{ if hero_image || hero_image_url }}
-        {{ partial:img :asset="hero_image" :legacy_url="hero_image_url" class="absolute inset-0 w-full h-full object-cover object-center" fetchpriority="high" }}
-    {{ /if }}
+{{# ── 1. HERO — centered layout, rotating background per session ── #}}
+<section
+    id="haus-home-hero"
+    class="relative overflow-hidden bg-haus-ink-900 text-white"
+    style="height:90vh;min-height:600px;"
+    data-hero-images='{{ "" | home_hero_rotation }}'
+>
+    <div
+        data-haus-home-hero-bg
+        class="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        role="img"
+        aria-label="Warehaus project photography"
+    ></div>
+    <script>
+        (function () {
+            var section = document.currentScript.parentElement;
+            var images = JSON.parse(section.getAttribute('data-hero-images') || '[]');
+            if (!images.length) return;
+
+            var indexKey = 'hausHomeHeroIndex';
+            var sessionKey = 'hausHomeHeroSet';
+            var index;
+
+            try {
+                if (!sessionStorage.getItem(sessionKey)) {
+                    var last = parseInt(localStorage.getItem(indexKey) ?? '-1', 10);
+                    index = (last + 1) % images.length;
+                    localStorage.setItem(indexKey, String(index));
+                    sessionStorage.setItem(sessionKey, '1');
+                } else {
+                    index = parseInt(localStorage.getItem(indexKey) ?? '0', 10);
+                    if (Number.isNaN(index) || index < 0 || index >= images.length) index = 0;
+                }
+            } catch (e) {
+                index = 0;
+            }
+
+            var bg = section.querySelector('[data-haus-home-hero-bg]');
+            if (bg) bg.style.backgroundImage = 'url("' + images[index] + '")';
+        })();
+    </script>
     {{# Uniform dark overlay across the full photo #}}
     <div class="absolute inset-0" style="background:rgba(0,0,0,0.52);"></div>
 

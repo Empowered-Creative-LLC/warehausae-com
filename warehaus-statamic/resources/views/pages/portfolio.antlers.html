@@ -1,0 +1,49 @@
+{{# Portfolio index — matches warehausae.com/portfolio/ layout:
+    1. Faded PORTFOLIO watermark header (no full-screen hero)
+    2. Category filter links
+    3. Metro-style project grid with load more
+#}}
+
+<section class="haus-portfolio-hero bg-white">
+    <div class="container-haus text-center">
+        <h1 class="haus-portfolio-watermark">Portfolio</h1>
+    </div>
+</section>
+
+{{ partial:portfolio_category_nav }}
+
+{{ projects_carousel context="all" limit="96" }}
+    {{ if projects }}
+        <section class="bg-white pb-16 md:pb-24">
+            <div class="container-haus">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6" data-haus-portfolio-grid>
+                    {{ projects }}
+                        <article
+                            class="haus-portfolio-card{{ if index >= 9 }} hidden{{ /if }}"
+                            data-haus-portfolio-item
+                        >
+                            <a href="{{ url }}" class="haus-portfolio-card__link group">
+                                <div class="haus-portfolio-card__media">
+                                    {{ if image || image_url }}
+                                        {{ partial:img :asset="image" :legacy_url="image_url" :alt="title" class="haus-portfolio-card__image" :glide="false" loading="lazy" }}
+                                    {{ /if }}
+                                </div>
+                                <div class="haus-portfolio-card__caption">
+                                    <h3 class="haus-portfolio-card__title">{{ title }}</h3>
+                                </div>
+                            </a>
+                        </article>
+                    {{ /projects }}
+                </div>
+
+                {{ if projects | length > 9 }}
+                    <div class="mt-12 text-center" data-haus-portfolio-load-more-wrap>
+                        <button type="button" class="haus-portfolio-load-more" data-haus-portfolio-load-more>
+                            Load More
+                        </button>
+                    </div>
+                {{ /if }}
+            </div>
+        </section>
+    {{ /if }}
+{{ /projects_carousel }}
