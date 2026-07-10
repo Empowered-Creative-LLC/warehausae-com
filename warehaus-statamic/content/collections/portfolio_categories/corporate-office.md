@@ -161,6 +161,11 @@ recent_projects:
       - Civil
       - Interiors
     image_url: /assets/imported/2025/06/Cumberland_Township_Municipal_Building_Groundbreaking20250617_0029-700x700.webp
+  - title: 333 Market Street Exterior Renovation
+    url: /project/333-market-street-exterior-renovation/
+    categories:
+      - Architecture
+    image_url: /assets/imported/2026/05/333-Market-Street-700x700.jpg
   - title: Volvo North America Living Office Transformation
     url: /project/volvo-north-america-office-transformation/
     categories:
