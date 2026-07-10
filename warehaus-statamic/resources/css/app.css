@@ -196,6 +196,137 @@
     .scrollbar-hide { scrollbar-width: none; -ms-overflow-style: none; }
     .scrollbar-hide::-webkit-scrollbar { display: none; }
 
+    /* Portfolio index (/portfolio/) — faded title, category nav, metro grid */
+    .haus-portfolio-hero {
+        padding-top: clamp(6.5rem, 14vw, 8.5rem);
+        padding-bottom: clamp(1.5rem, 4vw, 2.5rem);
+    }
+    .haus-portfolio-watermark {
+        font-size: clamp(72px, 12vw, 168px);
+        line-height: 1;
+        font-weight: 900;
+        letter-spacing: 0.043em;
+        color: rgba(85, 85, 85, 0.42);
+        text-transform: uppercase;
+        margin: 0;
+    }
+    .haus-portfolio-cat-nav {
+        background: #fff;
+        padding: 0.5rem 0 1.5rem;
+    }
+    .haus-portfolio-cat-nav__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 0.55rem 1.15rem;
+        max-width: 72rem;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+        list-style: none;
+    }
+    @media (min-width: 768px) {
+        .haus-portfolio-cat-nav__list { padding: 0 2.5rem; }
+    }
+    .haus-portfolio-cat-nav__list > li {
+        display: inline-flex;
+        align-items: center;
+    }
+    .haus-portfolio-cat-nav__link {
+        display: inline-block;
+        padding: 0.25rem 0;
+        font-size: 1.0625rem;
+        line-height: 1.35;
+        font-weight: 500;
+        color: #f89b02;
+        text-decoration: none;
+        transition: color 180ms ease, opacity 180ms ease;
+        white-space: nowrap;
+    }
+    .haus-portfolio-cat-nav__link:hover,
+    .haus-portfolio-cat-nav__link:focus-visible {
+        color: #e08900;
+    }
+    @media (max-width: 767px) {
+        .haus-portfolio-cat-nav {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+        }
+        .haus-portfolio-cat-nav::-webkit-scrollbar { display: none; }
+        .haus-portfolio-cat-nav__list {
+            flex-wrap: nowrap;
+            justify-content: flex-start;
+            width: max-content;
+            min-width: 100%;
+        }
+    }
+    .haus-portfolio-card__link {
+        display: block;
+        position: relative;
+        overflow: hidden;
+        background: #f7f7f7;
+        aspect-ratio: 4 / 3;
+        border-radius: 5px;
+        text-decoration: none;
+    }
+    .haus-portfolio-card__link::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0.08) 42%, transparent 68%);
+        pointer-events: none;
+        transition: opacity 300ms ease;
+    }
+    .haus-portfolio-card__media,
+    .haus-portfolio-card__image {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 500ms ease;
+    }
+    .haus-portfolio-card__link:hover .haus-portfolio-card__image,
+    .haus-portfolio-card__link:focus-visible .haus-portfolio-card__image {
+        transform: scale(1.04);
+    }
+    .haus-portfolio-card__caption {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 2.5rem;
+        padding: 0 1.25rem;
+        pointer-events: none;
+        z-index: 1;
+    }
+    .haus-portfolio-card__title {
+        margin: 0;
+        font-size: 17px;
+        line-height: 1.35;
+        font-weight: 600;
+        color: #f5f5f5;
+        text-shadow: 0 1px 8px rgba(0, 0, 0, 0.45);
+    }
+    .haus-portfolio-load-more {
+        display: inline-block;
+        padding: 10px 20px;
+        border: 1px solid #4b4b4b;
+        background: transparent;
+        color: #4b4b4b;
+        font-size: 0.9375rem;
+        font-weight: 500;
+        line-height: 1.2;
+        cursor: pointer;
+        transition: color 180ms ease, border-color 180ms ease, background-color 180ms ease;
+    }
+    .haus-portfolio-load-more:hover,
+    .haus-portfolio-load-more:focus-visible {
+        color: #f89b02;
+        border-color: #f89b02;
+        background: rgba(248, 155, 2, 0.04);
+    }
+
     /* Civil Engineers Serving PA + MD map. Each .haus-pin is positioned
        absolutely over the SVG using inline left/top percentages. Uses an
        amber teardrop SVG icon plus a CSS tooltip that fades in on hover. */

@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
     sizeCdWordsWrappers();
     initRecentProjectsCarousel();
     initMissionTypewriter();
+    initPortfolioLoadMore();
 });
 
 /**
@@ -364,6 +365,37 @@ function initMobileMenu() {
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && !nav.hasAttribute('hidden')) setOpen(false);
     });
+}
+
+/**
+ * Portfolio index — reveal additional project cards in batches of nine.
+ */
+function initPortfolioLoadMore() {
+    const grid = document.querySelector('[data-haus-portfolio-grid]');
+    const button = document.querySelector('[data-haus-portfolio-load-more]');
+    const wrap = document.querySelector('[data-haus-portfolio-load-more-wrap]');
+    if (!grid || !button) return;
+
+    const items = [...grid.querySelectorAll('[data-haus-portfolio-item]')];
+    const batchSize = 9;
+    let visible = items.filter((item) => !item.classList.contains('hidden')).length;
+
+    const updateButton = () => {
+        if (visible >= items.length) {
+            wrap?.remove();
+            return;
+        }
+        button.textContent = 'Load More';
+    };
+
+    button.addEventListener('click', () => {
+        const next = items.slice(visible, visible + batchSize);
+        next.forEach((item) => item.classList.remove('hidden'));
+        visible += next.length;
+        updateButton();
+    });
+
+    updateButton();
 }
 
 /**
