@@ -7,54 +7,21 @@ source_url: https://warehausae.com/historic/
 category_name: historic architecture
 tagline: We listen. We design. We deliver.
 lead_heading: Respect for Historic Character
-intro_prose: >-
-  We are drawn to historic buildings because of what they can tell us about ourselves – about the history of our cultures and our communities. Our long-term relationship with a highly regarded
-  historic preservationist, coupled with our collective expertise in architecture and structural engineering, ensures we respect a place’s historic character and significance while preparing it to
-  function into its next century.
-
-
-  - Building Science is our forte
-
-  - We have strong relationships with local masonry contractors and historic preservationists
-
-  - Collaboration is enhanced with architectural and structural resources under one roof
+intro_prose: We are drawn to historic buildings because of what they can tell us about ourselves – about the history of our cultures and our communities. Our long-term relationship with a highly regarded historic preservationist, coupled with our collective expertise in [architecture](/services/architecture/) and [structural engineering](/services/structural/), ensures we respect a place’s historic character and significance while preparing it to function into its next century.
 partnership_cards:
   - title: Knowledgeable Resources
-    body: Our long-term relationship with a highly regarded historic preservationist enables our team to hit the ground running on historic preservation projects.
+    body: Our long-term relationship with a highly regarded historic preservationist enables our team to hit the ground running on [historic preservation projects](/case-study/bischoff-inn/).
   - title: Government Funding Experience
-    body: Throughout the history of our company, Warehaus has worked with clients, owners, and developers to navigate successfully through the requirements of government funding.
+    body: Throughout the history of our company, Warehaus has worked with clients, owners, and developers to navigate successfully through the requirements of [government funding.](/case-study/bischoff-inn/)
   - title: A Diverse Project Portfolio
-    body: >-
-      Our consultation on a diverse array of projects, ranging from landscapes and battlefields to farms and apartment buildings, gives us the experience to confirm that all aspects of a project’s
-      design are compatible with the historic character of the property and meet the Secretary of the Interior’s Standards for the Treatment of Historic Properties.
+    body: Our consultation on a diverse array of projects, ranging from landscapes and [battlefields](/project/little-round-top/) to [farms](/project/george-spangler-farm/) and [apartment buildings](/project/205-state-street-apartments/), gives us the experience to confirm that all aspects of a project’s design are compatible with the historic character of the property and meet the Secretary of the Interior’s Standards for the Treatment of Historic Properties.
   - title: Thorough Research
-    body: >-
-      Detailed analysis and documentation of individual properties and historic districts is performed for clients seeking Determinations of Eligibility and/ or nomination to the National Register of
-      Historic Places, which makes them eligible for relevant grants, protective easements and historic tax credits.
+    body: Detailed analysis and documentation of individual properties and historic districts is performed for clients seeking Determinations of Eligibility and/ or nomination to the National Register of Historic Places, which makes them eligible for relevant [grants](/project/lancaster-county-courthouse-and-prison/), protective easements and [historic tax credits](/project/1895-federal-building/).
 testimonial:
-  quote: >-
-    The George Spangler Farm transformation began in 2008 when the Gettysburg Foundation acquired this historic 80-acre property. Since then, we’ve embarked on a once-in-a-lifetime journey of
-    discovery and preservation alongside our incredible partners, Warehaus and Kinsley Construction. The hard work, craftsmanship, and commitment to the preservation and education of our nation’s
-    history is inspiring. We’re proud they received this well-deserved recognition – the 2020 Pennsylvania Historic Preservation Award Winner for Restoration - and are honored to be a part of it.
+  quote: The George Spangler Farm transformation began in 2008 when the Gettysburg Foundation acquired this historic 80-acre property. Since then, we’ve embarked on a once-in-a-lifetime journey of discovery and preservation alongside our incredible partners, Warehaus and Kinsley Construction. The hard work, craftsmanship, and commitment to the preservation and education of our nation’s history is inspiring. We’re proud they received this well-deserved recognition – the 2020 Pennsylvania Historic Preservation Award Winner for Restoration - and are honored to be a part of it.
   attribution_name: Elle Lamboy
   attribution_org: Gettysburg Foundation Vice President for Philanthropy
 recent_projects:
-  - title: 205 State Street Apartments
-    url: /project/205-state-street-apartments/
-    categories:
-      - Architecture
-    image_url: /assets/imported/2024/07/state-street-apartments-06192024-5-768x400.webp
-  - title: Zion Lutheran Church Adaptive Reuse
-    url: /project/zion-lutheran-church-adaptive-reuse/
-    categories:
-      - Architecture
-      - Historic
-    image_url: /assets/imported/2025/04/1Zion-Church-Duke-St_06112024-700x700.webp
-  - title: Appell Center Concessions Renovation
-    url: /project/appell-center-concessions-renovation/
-    categories:
-      - Architecture
-    image_url: /assets/imported/2025/06/Appell-Concessions-8-700x700.webp
   - title: University Lofts
     url: /project/university-lofts/
     categories:
@@ -164,8 +131,41 @@ recent_projects:
       - Architecture
       - Structural
     image_url: /assets/imported/2024/11/Fox-Apartments-10302024-27-700x700.webp
+  - title: 205 State Street Apartments
+    url: /project/205-state-street-apartments/
+    categories:
+      - Architecture
+    image_url: /assets/imported/2024/07/state-street-apartments-06192024-5-768x400.webp
+  - title: Zion Lutheran Church Adaptive Reuse
+    url: /project/zion-lutheran-church-adaptive-reuse/
+    categories:
+      - Architecture
+      - Historic
+    image_url: /assets/imported/2025/04/1Zion-Church-Duke-St_06112024-700x700.webp
+  - title: Appell Center Concessions Renovation
+    url: /project/appell-center-concessions-renovation/
+    categories:
+      - Architecture
+    image_url: /assets/imported/2025/06/Appell-Concessions-8-700x700.webp
 hero_image_url: /assets/imported/2023/04/Warehaus_GeorgeSpanglerFarm-0032.webp
 seo_title: Historic Architecture - Warehaus
 seo_description: Explore our portfolio of historic architecture projects that celebrate and preserve the character of historic buildings while meeting modern needs. Learn more about our approach.
 seo_og_image_url: /assets/imported/2022/03/Asset-1.png
+capability_groups:
+  - items:
+      - label: Building Science is our forte
+        url: /building-sciences/
+      - label: We have strong relationships with local masonry contractors and historic preservationists
+      - label: Collaboration is enhanced with architectural and structural resources under one roof
+photo_gallery:
+  - image_url: /assets/imported/2023/04/KitchenetteAndFrontDoor.webp
+  - image_url: /assets/imported/2023/05/Little_Round_Top_2-700x700.jpg
+  - image_url: /assets/imported/2023/07/Capitol_Theatre-11_2018-0001.jpg
+  - image_url: /assets/imported/2023/04/20230127_165442.jpg
+  - image_url: /assets/imported/2023/04/20230127_172832-700x700.jpg
+  - image_url: /assets/imported/2023/04/George_Spangler_Farm_20191101_0050-1.jpg
+  - image_url: /assets/imported/2023/04/14-East-Chocolate-Avenue-The-Hershey-Community-Building-05_16-0005.jpg
+  - image_url: /assets/imported/2023/03/KitchenetteAndLounge.jpg
+  - image_url: /assets/imported/2023/04/George_Spangler_Farm_20191101_0045.jpg
+  - image_url: /assets/imported/2023/04/George_Spangler_Farm_20191101_0079.jpg
 ---

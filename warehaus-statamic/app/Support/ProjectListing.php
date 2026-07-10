@@ -9,6 +9,21 @@ use Statamic\Facades\Entry as EntryFacade;
 class ProjectListing
 {
     /** @var array<string, list<string>> */
+    private const PORTFOLIO_CATEGORY_INDUSTRY_KEYS = [
+        'adaptive-reuse' => ['adaptive-reuse', 'adaptivereuse'],
+        'arts_culture' => ['arts-and-culture', 'artsculture'],
+        'building-sciences' => ['building-sciences', 'buildingsciences'],
+        'corporate-office' => ['office'],
+        'distribution_manufacturing' => ['distribution-and-manufacturing', 'distributionmanufacturing', 'data-centers', 'datacenters'],
+        'education' => ['education'],
+        'healthcare' => ['medical'],
+        'historic' => ['historic'],
+        'multi-family' => ['multi-family', 'multifamily'],
+        'residential-development' => ['residential-development', 'residentialdevelopment'],
+        'retail_hospitality' => ['retail', 'hospitality', 'commercial', 'retail-and-hospitality'],
+    ];
+
+    /** @var array<string, list<string>> */
     private const SERVICE_MATCH_KEYS = [
         'architecture' => ['architecture'],
         'civil_engineering' => ['civil', 'civil_engineering'],
@@ -54,10 +69,76 @@ class ProjectListing
     /**
      * @return Collection<int, Entry>
      */
-    public static function forPortfolioCategory(string $categoryUrl, ?string $categoryName = null, int $limit = 96): Collection
+    /**
+     * @param  list<string>  $baselineUrls
+     * @return Collection<int, Entry>
+     */
+    public static function forPortfolioCategory(
+        string $categoryUrl,
+        ?string $categoryName = null,
+        int $limit = 96,
+        array $baselineUrls = [],
+    ): Collection {
+        $baselineKeys = self::normalizedUrlKeys($baselineUrls);
+
+        $matched = self::baseQuery()
+            ->filter(function (Entry $entry) use ($categoryUrl, $categoryName, $baselineKeys) {
+                if (isset($baselineKeys[self::normalizePath((string) $entry->url())])) {
+                    return true;
+                }
+
+                return self::entryMatchesPortfolioCategory($entry, $categoryUrl, $categoryName);
+            });
+
+        if ($baselineKeys !== []) {
+            $matchedIds = $matched->mapWithKeys(fn (Entry $entry) => [$entry->id() => true]);
+
+            $baselineOnly = EntryFacade::query()
+                ->where('collection', 'projects')
+                ->where('published', true)
+                ->get()
+                ->reject(fn (Entry $entry) => self::isEditorTemplateEntry($entry))
+                ->filter(function (Entry $entry) use ($baselineKeys, $matchedIds) {
+                    if (isset($matchedIds[$entry->id()])) {
+                        return false;
+                    }
+
+                    return isset($baselineKeys[self::normalizePath((string) $entry->url())]);
+                });
+
+            $matched = $matched->concat($baselineOnly);
+        }
+
+        return $matched->pipe(fn (Collection $entries) => self::sortPortfolioCategoryCarousel($entries, $baselineUrls, $limit));
+    }
+
+    /**
+     * New projects (not in the baseline list) appear first by last modified; known
+     * projects keep the baseline order scraped from the live site.
+     *
+     * @param  Collection<int, Entry>  $entries
+     * @param  list<string>  $baselineUrls
+     * @return Collection<int, Entry>
+     */
+    public static function sortPortfolioCategoryCarousel(Collection $entries, array $baselineUrls, int $limit = 96): Collection
     {
-        return self::baseQuery()
-            ->filter(fn (Entry $entry) => self::entryMatchesPortfolioCategory($entry, $categoryUrl, $categoryName))
+        if ($baselineUrls === []) {
+            return $entries->take($limit)->values();
+        }
+
+        $baselineIndex = self::normalizedUrlKeys($baselineUrls);
+
+        [$known, $new] = $entries->partition(
+            fn (Entry $entry) => isset($baselineIndex[self::normalizePath((string) $entry->url())])
+        );
+
+        return $new
+            ->sortByDesc(fn (Entry $entry) => $entry->lastModified())
+            ->concat(
+                $known->sortBy(
+                    fn (Entry $entry) => $baselineIndex[self::normalizePath((string) $entry->url())]
+                )
+            )
             ->take($limit)
             ->values();
     }
@@ -104,12 +185,15 @@ class ProjectListing
             ->values()
             ->all();
 
+        $labels = $serviceLabels !== [] ? $serviceLabels : $industryLabels;
+
         return [
             'title' => (string) $entry->get('title'),
             'url' => $entry->url(),
             'image' => $entry->get('hero_image'),
             'image_url' => $entry->get('hero_image_url'),
-            'categories' => $serviceLabels !== [] ? $serviceLabels : $industryLabels,
+            'categories' => $labels,
+            'categories_label' => implode(', ', $labels),
         ];
     }
 
@@ -179,6 +263,8 @@ class ProjectListing
         }
 
         $categoryNameKey = $categoryName !== null ? self::slugKey($categoryName) : '';
+        $categorySlug = basename(rtrim($categoryUrl, '/'));
+        $industryKeys = self::PORTFOLIO_CATEGORY_INDUSTRY_KEYS[$categorySlug] ?? [];
 
         foreach ($industries as $row) {
             if (! is_array($row)) {
@@ -192,9 +278,19 @@ class ProjectListing
             }
 
             $rowLabel = (string) ($row['label'] ?? '');
+            $rowLabelKey = self::slugKey($rowLabel);
+            $rowUrlKey = self::slugKey(basename(rtrim($rowUrl, '/')));
 
-            if ($categoryNameKey !== '' && $rowLabel !== '' && self::slugKey($rowLabel) === $categoryNameKey) {
+            if ($categoryNameKey !== '' && $rowLabel !== '' && $rowLabelKey === $categoryNameKey) {
                 return true;
+            }
+
+            foreach ($industryKeys as $industryKey) {
+                $key = self::slugKey($industryKey);
+
+                if ($key !== '' && ($key === $rowLabelKey || $key === $rowUrlKey)) {
+                    return true;
+                }
             }
         }
 
@@ -262,5 +358,24 @@ class ProjectListing
         $normalized = preg_replace('/[^a-z0-9]/', '', strtolower($value)) ?? '';
 
         return str_replace('and', '', $normalized);
+    }
+
+    /**
+     * @param  list<string>  $urls
+     * @return array<string, int>
+     */
+    private static function normalizedUrlKeys(array $urls): array
+    {
+        $keys = [];
+
+        foreach ($urls as $index => $url) {
+            $key = self::normalizePath($url);
+
+            if ($key !== '') {
+                $keys[$key] = $index;
+            }
+        }
+
+        return $keys;
     }
 }

@@ -1,0 +1,11 @@
+{{# Full-bleed Ken Burns photo slideshow — matches Elementor background
+    slideshow on live portfolio category pages. #}}
+{{ if photo_gallery }}
+    <section class="haus-portfolio-slideshow relative h-[320px] sm:h-[420px] md:h-[540px] overflow-hidden bg-haus-ink-900" data-haus-portfolio-slideshow aria-label="Project photo gallery">
+        {{ photo_gallery }}
+            <div class="haus-portfolio-slideshow__slide{{ if first }} is-active{{ /if }}" data-haus-slideshow-slide>
+                {{ partial:img :asset="image" :legacy_url="image_url" class="haus-portfolio-slideshow__img w-full h-full object-cover" :glide="false" alt="" }}
+            </div>
+        {{ /photo_gallery }}
+    </section>
+{{ /if }}
