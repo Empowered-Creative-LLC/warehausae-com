@@ -7,62 +7,38 @@ source_url: https://warehausae.com/adaptive-reuse/
 category_name: adaptive reuse
 tagline: We listen. We design. We deliver.
 lead_heading: Creative and Technical Expertise Combine to Transform Your Space
-intro_prose: >-
-  For a space you can count on for decades to come, you need a partner with the vision to transform and the technical expertise to ensure it lasts. Warehaus combines creative problem-solving with our
-  knowledge of building materials and proper applications for varied building construction types to ensure you receive a space that is high-performing in all areas.
+intro_prose: For a space you can count on for decades to come, you need a partner with the vision to transform and the technical expertise to ensure it lasts. Warehaus combines creative problem-solving with our knowledge of building materials and proper applications for varied building construction types to ensure you receive a space that is high-performing in all areas.
 capability_groups:
-  - heading: Services
-    items:
-      - Facade Modifications
-      - Rehabilitation
-      - Renovation Fit-Outs
-      - Restoration
-      - Historic Preservation
-      - Building Materials
-      - Envelope Repair
+  - items:
+      - label: Facade Modifications
+        url: /project/umfp-redwood-facade-restoration/
+      - label: Rehabilitation
+        url: /project/1895-federal-building/
+      - label: Renovation Fit-Outs
+        url: /project/320-north-george-street-office/
+      - label: Restoration
+        url: /case-study/bischoff-inn/
+  - items:
+      - label: Historic Preservation
+        url: /project/george-spangler-farm/
+      - label: Building Materials
+        url: /project/hershey-historic-community-building/
+      - label: Envelope Repair
+        url: /project/carlisle-barracks-restoration/
 partnership_cards:
   - title: Investment in Technology
-    body: >-
-      Our resources enable us to identify the causes of building damage, such as water infiltration, vapor condensation, thermal breach, physical building movement, lack of maintenance damage,
-      environmental impacts such as wind and water erosion, and structure overloading.
+    body: Our resources enable us to identify the causes of building damage, such as water infiltration, vapor condensation, thermal breach, physical building movement, lack of maintenance damage, [environmental impacts](/project/gratz-bank-tower-repair/) such as wind and water erosion, and structure overloading.
   - title: Building Science Expertise
-    body: We have extensive experience with rehabilitation, renovation and restoration of aging structures.
+    body: We have extensive experience with rehabilitation, renovation and restoration of [aging structures](/building-sciences/).
   - title: Relationship Driven Collaboration
-    body: >-
-      We draw on a supporting network of high quality specialists from all areas of the industry, from masonry restorationists, envelope specialists, concrete manufacturers, acoustics, and structural,
-      mechanical, plumbing, civil, electrical and lighting engineers.
+    body: We draw on a supporting network of high quality specialists from all areas of the industry, from masonry restorationists, [envelope specialists](/building-sciences/), concrete manufacturers, acoustics, and [structural](/services/structural/), mechanical, plumbing, [civil](/services/civil_engineering/), electrical and lighting engineers.
   - title: A Multi-Disciplinary Team
-    body: >-
-      With architects and engineers under one roof, our comprehensive team has the skills needed to provide streamlined building evaluations and programming assessments. One team that can deliver in
-      one site visit.
+    body: With [architects](/services/architecture/) and [engineers](/services/civil_engineering/) under one roof, our comprehensive team has the skills needed to provide streamlined building evaluations and programming assessments. One team that can deliver in one site visit.
 testimonial:
-  quote: >-
-    Another successful adaptive reuse of the historic urban “fabric” – which is so important to the character of these towns and cities in which these projects are located. Aligning the entry, the
-    auditorium, and the open work spaces underneath the taller roof, and using the existing clerestory windows to bring natural light into the space were good design decisions that made the most of
-    the existing building.
+  quote: Another successful adaptive reuse of the historic urban “fabric” – which is so important to the character of these towns and cities in which these projects are located. Aligning the entry, the auditorium, and the open work spaces underneath the taller roof, and using the existing clerestory windows to bring natural light into the space were good design decisions that made the most of the existing building.
   attribution_name: AIA Central Pennsylvania Citation Award 2013
   attribution_org: "Jury Comments: 320 North George Street Office"
 recent_projects:
-  - title: The Barn Resort
-    url: /project/the-barn-resort/
-    categories:
-      - Architecture
-      - Civil
-      - Structural
-    image_url: /assets/imported/2024/08/the-barn-resort-08152024-3-700x700.webp
-  - title: Zion Lutheran Church Adaptive Reuse
-    url: /project/zion-lutheran-church-adaptive-reuse/
-    categories:
-      - Architecture
-      - Historic
-    image_url: /assets/imported/2025/04/1Zion-Church-Duke-St_06112024-700x700.webp
-  - title: York Academy Regional Charter School Legacy Hall
-    url: /project/york-academy-regional-charter-school-legacy-hall/
-    categories:
-      - Architecture
-      - Civil
-      - Interiors
-    image_url: /assets/imported/2025/09/York-Academy-Legacy-Hall-2-700x700.jpg
   - title: 210 York Street Office and Recording Studio
     url: /project/210-york-street-office/
     categories:
@@ -150,8 +126,35 @@ recent_projects:
     categories:
       - Architecture
     image_url: /assets/imported/2024/07/state-street-apartments-06192024-5-768x400.webp
+  - title: The Barn Resort
+    url: /project/the-barn-resort/
+    categories:
+      - Architecture
+      - Civil
+      - Structural
+    image_url: /assets/imported/2024/08/the-barn-resort-08152024-3-700x700.webp
+  - title: Zion Lutheran Church Adaptive Reuse
+    url: /project/zion-lutheran-church-adaptive-reuse/
+    categories:
+      - Architecture
+      - Historic
+    image_url: /assets/imported/2025/04/1Zion-Church-Duke-St_06112024-700x700.webp
+  - title: York Academy Regional Charter School Legacy Hall
+    url: /project/york-academy-regional-charter-school-legacy-hall/
+    categories:
+      - Architecture
+      - Civil
+      - Interiors
+    image_url: /assets/imported/2025/09/York-Academy-Legacy-Hall-2-700x700.jpg
 hero_image_url: /assets/imported/2023/03/Warehaus-Headquarters-05_2014-0443-1.jpg
 seo_title: Adaptive Reuse | Warehaus
 seo_description: Discover how Warehaus transforms spaces through adaptive reuse, combining creativity and technical expertise.
 seo_og_image_url: /assets/imported/2022/03/Asset-1.png
+lead_video_id: Oox5sqk9Ows
+photo_gallery:
+  - image_url: /assets/imported/2023/03/210_York_Street10-of-00-1-700x700.jpg
+  - image_url: /assets/imported/2023/04/Blackworth-Live-Fire-Grill-21060207_0107.jpg
+  - image_url: /assets/imported/2023/04/York-College-Civil-Engineering-Center0614201903-of-6.webp
+  - image_url: /assets/imported/2023/03/Kinsley_1110_East_Princess_Street_062619_08-of-08-1.jpg
+  - image_url: /assets/imported/2023/04/York-Academy-Regional-Charter-Upper-School_Professional-042815_00106.jpg
 ---

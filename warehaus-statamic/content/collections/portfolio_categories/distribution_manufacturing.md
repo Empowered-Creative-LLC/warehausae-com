@@ -8,58 +8,36 @@ category_name: distribution & manufacturing
 tagline: We listen. We design. We deliver.
 lead_heading: We've designed more than 50M sf of distribution and manufacturing space
 intro_prose: >-
-  With hundreds of warehouse, distribution and production projects in our portfolio, we are committed to the goal of increasing productivity and minimizing operations costs at every industrial
-  facility we design. Our solutions are driven by asking the right questions and working side-by-side with our clients’ operations and material handling experts, to learn their process from the inside
-  out.
+  With hundreds of [warehouse](/project/ollies-bargain-outlet/), [distribution](/project/starbucks-coffee-roasting-plant/) and [production](/project/mobile-climate-control/) projects in our portfolio, we are committed to the goal of increasing productivity and minimizing operations costs at every industrial facility we design. Our solutions are driven by asking the right questions and working side-by-side with our clients’ operations and material handling experts, to learn their process from the inside out.
 capability_groups:
-  - heading: Design Capabilities
-    items:
-      - Material Handling
-      - Efficiencies/Coordination
-      - Site Access and Traffic Flow
-      - Shipping and Receiving Patterns
-      - Concrete Slab Design
-      - Dock Optimization
-      - Security Access
-      - Lighting Efficiencies
-      - Office and Warehouse Integration
-      - Subconsultant Coordination and Management
-      - Cold Storage/Dry Storage/Food Production Facilities
+  - items:
+      - label: Material Handling
+      - label: Efficiencies/Coordination
+      - label: Site Access and Traffic Flow
+      - label: Shipping and Receiving Patterns
+      - label: Concrete Slab Design
+      - label: Dock Optimization
+      - label: Security Access
+    heading: Design Capabilities
+  - items:
+      - label: Lighting Efficiencies
+      - label: Office and Warehouse Integration
+      - label: Subconsultant Coordination and Management
+      - label: Cold Storage/Dry Storage/Food Production Facilities
 partnership_cards:
   - title: A Multi-Disciplinary Team
-    body: >-
-      With architects and engineers under one roof, our comprehensive team has the skills needed to provide streamlined building evaluations and programming assessments. One team that can deliver in
-      one site visit.
+    body: With [architects](/services/architecture/) and [engineers](/services/structural/) under one roof, our comprehensive team has the skills needed to provide streamlined building evaluations and programming assessments. One team that can deliver in one site visit.
   - title: Strong Relationships
-    body: >-
-      Established relationships with local government enable us to understand and streamline approval processes. We listen carefully to our clients’ needs and navigate through regulatory requirements
-      to ensure those needs are met efficiently and effectively.
+    body: Established relationships with local government enable us to understand and streamline approval processes. We listen carefully to our clients’ needs and navigate through regulatory requirements to ensure those needs are met efficiently and effectively.
   - title: Collaboration as a Key Value
     body: Our seamless working relationships with valued partners such as process engineers and material handling specialists ensures that your project team is aligned from day one.
   - title: Speed to Market Efficiencies
     body: Our tested and proven speed to market efficiencies translate to effective coordination on key issues like schedule and budget.
 testimonial:
-  quote: >-
-    New and existing facilities are wonderfully unified in a program type that is rarely recognized for achieving design excellence. This design uses the simple but powerful qualities of natural
-    daylight, visual access to vegetation and the outdoors, and direct and honest form to create a work environment that is generous and considerate of all employees.
+  quote: New and existing facilities are wonderfully unified in a program type that is rarely recognized for achieving design excellence. This design uses the simple but powerful qualities of natural daylight, visual access to vegetation and the outdoors, and direct and honest form to create a work environment that is generous and considerate of all employees.
   attribution_name: AIA Central Pennsylvania Honor Award 2016
   attribution_org: "Jury Comments: Phoenix Contact"
 recent_projects:
-  - title: Starbucks Coffee Roasting Plant
-    url: /project/starbucks-coffee-roasting-plant/
-    categories:
-      - Architecture
-    image_url: /assets/imported/2023/05/Starbucks-Coffee-Roasting-Plant-Distribution-Center-052119_00758.jpg
-  - title: Catalyst Muddy Creek Warehouse
-    url: /project/catalyst-muddy-creek-warehouse/
-    categories:
-      - Architecture, Structural
-    image_url: /assets/imported/2024/03/Catalyst-Muddy-Creek-10-700x700.webp
-  - title: Data Center Design
-    url: /project/data-centers/
-    categories:
-      - Architecture
-    image_url: /assets/imported/elementor/thumbs/Unbranded-Rendering-Money-Shot-r2dtdginn6rhzqa5i5tbaxgfihbbw69y2gm9f1st5s.webp
   - title: Fuchs North America
     url: /project/fuchs-north-america/
     categories:
@@ -105,8 +83,35 @@ recent_projects:
     categories:
       - Architecture, Civil
     image_url: /assets/imported/2023/05/Southwire-Company-111313_00574.jpg
+  - title: Starbucks Coffee Roasting Plant
+    url: /project/starbucks-coffee-roasting-plant/
+    categories:
+      - Architecture
+    image_url: /assets/imported/2023/05/Starbucks-Coffee-Roasting-Plant-Distribution-Center-052119_00758.jpg
+  - title: Catalyst Muddy Creek Warehouse
+    url: /project/catalyst-muddy-creek-warehouse/
+    categories:
+      - Architecture, Structural
+    image_url: /assets/imported/2024/03/Catalyst-Muddy-Creek-10-700x700.webp
+  - title: Data Center Design
+    url: /project/data-centers/
+    categories:
+      - Architecture
+    image_url: /assets/imported/elementor/thumbs/Unbranded-Rendering-Money-Shot-r2dtdginn6rhzqa5i5tbaxgfihbbw69y2gm9f1st5s.webp
 hero_image_url: /assets/imported/2024/08/procter-gamble-live-wall-0621201955-of-57.jpg
 seo_title: Warehaus - Distribution & Manufacturing
 seo_description: We listen. We design. We deliver. With hundreds of projects in distribution and manufacturing, we enhance productivity & minimize costs.
 seo_og_image_url: /assets/imported/2022/03/Asset-1.png
+lead_video_id: j0n6IxMB284
+photo_gallery:
+  - image_url: /assets/imported/2023/05/Mobile-Climate-Control-9-700x700.jpg
+  - image_url: /assets/imported/2023/05/Mobile-Climate-Control-50.jpg
+  - image_url: /assets/imported/2023/05/small-007.jpg
+  - image_url: /assets/imported/2023/04/Phoenix-Contact-New-Distribution-Center_Professional-051714_0012.jpg
+  - image_url: /assets/imported/2023/03/Fuchs_North-America_Professional-20161212_0008.jpg
+  - image_url: /assets/imported/2023/04/Volvo-Paint-Line-07_2013-0003.jpg
+  - image_url: /assets/imported/2023/04/Procter-Gamble-Tabler-Station-Plant-0621201927-of-36.jpg
+  - image_url: /assets/imported/2023/03/Fuchs-North-America-12_2016-0000-700x501.jpg
+  - image_url: /assets/imported/2023/04/Phoenix-Contact-New-Distribution-Center_Professional-051714_0016.jpg
+  - image_url: /assets/imported/2023/05/Mobile-Climate-Control-34-700x700.jpg
 ---

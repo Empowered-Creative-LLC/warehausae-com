@@ -28,8 +28,8 @@ services_provided:
   - label: Civil
     url: /services/civil/
 industries:
-  - label: Civil
-    url: /services/civil/
+  - label: Residential Development
+    url: /residential-development/
 hero_image_url: /assets/imported/elementor/thumbs/Wattenschaidt-Homes_09102024_0017-qwo2aomocah9wj7x3o1vitzgierafaayrv6z0vhqjk.webp
 gallery_images:
   - url: /assets/imported/elementor/thumbs/Wattenschaidt-Homes_09102024_0017-qwo2aomocah9wj7x3o1vitzgierafaayrv6z0vhqjk.webp

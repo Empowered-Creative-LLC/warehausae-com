@@ -7,23 +7,21 @@ source_url: https://warehausae.com/education/
 category_name: education
 tagline: We listen. We design. We deliver.
 lead_heading: Enriched Educational Experiences
-intro_prose: >-
-  The classroom is more than just a space for learning. It’s the place where experiences unfold and ignite lifelong passions for writing, drama, music, science and more. What fuels our passion is
-  designing spaces where those experiences impact the learner, and that requires more than showstoping aesthetics. It requires a team willing to dig deep to discover solutions that enrich living,
-  working and learning.
+intro_prose: The classroom is more than just a space for learning. It’s the place where experiences unfold and ignite lifelong passions for writing, drama, music, science and more. What fuels our passion is designing spaces where those experiences impact the learner, and that requires more than showstoping aesthetics. It requires a team willing to dig deep to discover solutions that enrich living, working and learning.
 capability_groups:
-  - heading: Understanding of Various Educational Methodologies
-    items:
-      - Furniture and Finish Selection
-      - Acoustics and Lighting Systems
-      - Technology Integration
+  - items:
+      - label: Understanding of Various Educational Methodologies
+      - label: Furniture and Finish Selection
+  - items:
+      - label: Acoustics and Lighting Systems
+      - label: Technology Integration
 partnership_cards:
   - title: An Investment in Thought Leadership
-    body: Warehaus values and contributes to thought leadership in the academic arena to ensure we are always progressing in the mission to design 21st-century learning environments.
+    body: 'Warehaus values and contributes to thought leadership in the academic arena to ensure we are always progressing in the mission to design [21st-century learning environments](/project/holderness-school-davis-center/). Our passion for [educational design](/project/york-country-day-school/) drives us to continually seek knowledge to support our education clients.'
   - title: An Informed Toolkit for Design
-    body: We design from the inside out. Before pencil ever goes to paper, we work with you to develop a rich program that dives deeper than just ceilings, floors, walls and square footage.
+    body: 'We design from the inside out. Before pencil ever goes to paper, we work with you to develop a rich program that dives deeper than just ceilings, floors, walls and square footage. Together, we build a toolkit that takes into account all space parameters, to ensure you have all the tools necessary to deliver enriched [educational experiences](/project/york-academy-regional-charter-school-upper-school/) within your walls and beyond.'
   - title: A Commitment to Sustainability
-    body: We’ve completed more than 20 LEED projects for elementary schools, colleges, offices and corporate environments. These projects exemplify Warehaus’ commitment to sustainable design principles.
+    body: 'We’ve completed more than 20 LEED projects for elementary schools, [colleges](/project/york-college-of-pennsylvania-kinsley-engineering-center/), [offices](/project/320-north-george-street-office/) and [corporate environments](/project/pandgtablerstation/). These projects exemplify Warehaus’ commitment to sustainable design principles, which we apply as an integral part of our services.'
   - title: Building Science Knowledge
     body: Our expertise in building materials and systems and construction types creates high-performing buildings you can count on for decades.
 testimonial:
@@ -112,4 +110,25 @@ hero_image_url: /assets/imported/2023/05/YARCS-Upper-Schoo.l-11142018-04-of-09.j
 seo_title: Warehaus Education
 seo_description: Innovative architectural design focused on enriching educational experiences.
 seo_og_image_url: /assets/imported/2022/03/Asset-1.png
+photo_gallery:
+  - image_url: /assets/imported/2023/05/York-Country-Day-School_Professional-101916_00023.jpg
+  - image_url: /assets/imported/2023/05/Project_Holderness_Academic_Building_20210926_13.png
+  - image_url: /assets/imported/2023/05/YARCS-Upper-Schoo.l-11142018-01-of-09.jpg
+  - image_url: /assets/imported/2023/05/Project_Holderness_Academic_Building_20210926_24.jpg
+  - image_url: /assets/imported/2023/05/YARCS-Upper-Schoo.l-11142018-02-of-09.jpg
+  - image_url: /assets/imported/2023/05/Project_Holderness_Academic_Building_20210926_08.jpg
+  - image_url: /assets/imported/2023/05/G-05.jpg
+  - image_url: /assets/imported/2023/05/F-01.jpg
+  - image_url: /assets/imported/2023/05/York-Country-Day-School_Professional-101916_00013.jpg
+  - image_url: /assets/imported/2023/05/York-Country-Day-School_Professional-101916_00009.jpg
+  - image_url: /assets/imported/2023/05/York-Country-Day-School_Professional-101916_00030.jpg
+  - image_url: /assets/imported/2023/05/York-Country-Day-School_Professional-101916_00011.jpg
+  - image_url: /assets/imported/2023/05/YARCS-Upper-Schoo.l-11142018-06-of-09.jpg
+  - image_url: /assets/imported/2023/05/York-Country-Day-School_Professional-101816_00033.jpg
+  - image_url: /assets/imported/2023/05/YARCS-Upper-School-2018-0002.jpg
+  - image_url: /assets/imported/2023/05/York-Country-Day-School_Professional-101916_00019.jpg
+  - image_url: /assets/imported/2023/05/02U9868.jpg
+  - image_url: /assets/imported/2023/05/H-04.jpg
+  - image_url: /assets/imported/2023/05/C-03.jpg
+  - image_url: /assets/imported/2023/05/Project_Holderness_Academic_Building_20210926_09.jpg
 ---

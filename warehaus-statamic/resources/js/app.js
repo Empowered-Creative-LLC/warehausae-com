@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initRecentProjectsCarousel();
     initPortfolioLoadMore();
     initMissionTypewriter();
+    initPortfolioSlideshows();
 });
 
 /**
@@ -512,5 +513,31 @@ function initHoverImages() {
         const img = el.querySelector('img');
         if (!img) return;
         img.classList.add('transition-transform', 'duration-500', 'group-hover:scale-105');
+    });
+}
+
+/**
+ * Portfolio category Ken Burns photo slideshow — fades between full-bleed
+ * images, matching the Elementor background slideshow on warehausae.com.
+ */
+function initPortfolioSlideshows() {
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    document.querySelectorAll('[data-haus-portfolio-slideshow]').forEach((root) => {
+        const slides = [...root.querySelectorAll('[data-haus-slideshow-slide]')];
+        if (slides.length < 2) return;
+
+        let index = 0;
+        const show = (next) => {
+            slides[index].classList.remove('is-active');
+            index = next;
+            slides[index].classList.add('is-active');
+        };
+
+        if (reducedMotion) return;
+
+        setInterval(() => {
+            show((index + 1) % slides.length);
+        }, 5000);
     });
 }

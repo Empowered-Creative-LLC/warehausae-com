@@ -7,56 +7,38 @@ source_url: https://warehausae.com/residential-development/
 category_name: residential development
 tagline: We listen. We design. We deliver.
 lead_heading: Planning our Communities
-intro_prose: >-
-  In both rural and urban environments, Warehaus is adept at land planning and development for many types of residential projects – including multi-family and single-family sites – including
-  garden-style units, townhomes, and high-rise construction.
-
-
-  - Site Development and Grading Plans
-
-  - Subdivision
-
-  - Stormwater Management
-
-  - Utility Coordination
-
-
-  - Geotechnical Investigations
-
-  - Erosion and Sediment Control Plans
-
-  - Zoning and Municipal Ordinance Approvals
-
-  - Coordination with PennDOT for State Road Access
+intro_prose: In both rural and urban environments, Warehaus is adept at [land planning](/services/civil_engineering/) and development for many types of residential projects – including [multi-family](/project/donwood-estates/) and [single-family sites](/project/single-family-lots-civil-engineering/) – including garden-style units, townhomes, and high-rise construction.
 capability_groups:
-  - heading: Services
-    items:
-      - Site Development and Grading Plans
-      - Subdivision
-      - Stormwater Management
-      - Utility Coordination
-      - Geotechnical Investigations
-      - Erosion and Sediment Control Plans
-      - Zoning and Municipal Ordinance Approvals
-      - Coordination with PennDOT for State Road Access
+  - items:
+      - label: Site Development and Grading Plans
+      - label: Subdivision
+      - label: Stormwater Management
+      - label: Utility Coordination
+    heading: Services
+  - items:
+      - label: Geotechnical Investigations
+      - label: Erosion and Sediment Control Plans
+      - label: Zoning and Municipal Ordinance Approvals
+      - label: Coordination with PennDOT for State Road Access
 partnership_cards:
   - title: A Focus on Your Needs
     body: We listen carefully to our clients’ needs and navigate through regulatory requirements to ensure those needs are met efficiently and effectively.
   - title: Municipal Experience
-    body: >-
-      We work with our clients to ensure their vision of development aligns with municipal land use and zoning regulations. Our team of experts provides detailed guidance to navigate through the
-      necessary municipal approval process.
+    body: We work with our clients to ensure their vision of development aligns with municipal land use and zoning regulations. Our team of experts provides detailed guidance to navigate through the necessary municipal approval process.
   - title: Strong Relationships
     body: Our strong relationships with local government throughout the Mid-Atlantic enables us to understand and streamline approval processes.
   - title: Sub-Division Expertise
-    body: >-
-      When a client’s vision requires creation or adjustment of property lines, we have the expertise to manage the land development process, including infrastructure design such as roadways,
-      utilities and stormwater management.
+    body: When a client’s vision requires creation or adjustment of property lines, we have the expertise to manage the land development process, including infrastructure design such as roadways, utilities and stormwater management.
 testimonial:
   quote: ""
   attribution_name: ""
   attribution_org: ""
 recent_projects:
+  - title: Donwood Estates
+    url: /project/donwood-estates/
+    categories:
+      - Civil
+    image_url: /assets/imported/2023/07/Donwood-Estates-6-700x700.jpg
   - title: Multi-Family Developments
     url: /project/multi-family-land-development/
     categories:
@@ -71,13 +53,13 @@ recent_projects:
     url: /project/new-freedom-borough-rail-trail-improvements/
     categories: []
     image_url: /assets/imported/2023/12/Rail-Trail-Improvements-4-700x700.webp
-  - title: Donwood Estates
-    url: /project/donwood-estates/
-    categories:
-      - Civil
-    image_url: /assets/imported/2023/07/Donwood-Estates-6-700x700.jpg
 hero_image_url: /assets/imported/2023/07/Spring-Forge-12.webp
 seo_title: Residential Development - Warehaus
 seo_description: Warehaus specializes in residential development services including land planning, multi-family and single-family residential projects.
 seo_og_image_url: /assets/imported/2022/03/Asset-1.png
+photo_gallery:
+  - image_url: /assets/imported/2023/07/Donwood-Estates-700x700.webp
+  - image_url: /assets/imported/2023/07/Donwood-Estates-4-700x700.webp
+  - image_url: /assets/imported/2023/07/Spring-Forge-12.webp
+  - image_url: /assets/imported/2023/07/Spring-Forge-18.jpg
 ---

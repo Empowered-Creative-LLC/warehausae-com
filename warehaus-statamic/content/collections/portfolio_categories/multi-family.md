@@ -7,51 +7,30 @@ source_url: https://warehausae.com/multi-family/
 category_name: multi-family
 tagline: We listen. We design. We deliver.
 lead_heading: Vibrant Living Spaces from Coast to Coast
-intro_prose: >-
-  We examine every facet of an environment, contributing to strong communities and providing safe and secure homes and prosperous businesses. We’ve utilized this process to design vibrant living
-  spaces – like apartments and multi-family, mixed-use projects – that incorporate sought-after amenities and appealing aesthetics to attract discerning residents.
+intro_prose: We examine every facet of an environment, contributing to strong communities and providing safe and secure homes and prosperous businesses. We’ve utilized this process to design vibrant living spaces – like [apartments](/project/nelson-kohl-apartments/) and [multi-family](/project/franklin-square-multi-family-mixed-use/), [mixed-use projects](/project/the-steel-works-mixed-use-development/) – that incorporate sought-after amenities and appealing aesthetics to attract discerning residents.
 capability_groups:
-  - heading: Design Capabilities
-    items:
-      - Design Advisory
-      - Material Selection
-      - Decorative Lighting
-  - heading: Space Planning
-    items:
-      - Space Planning
-      - Custom Furniture
+  - items:
+      - label: Design Advisory
+      - label: Material Selection
+      - label: Decorative Lighting
+    heading: Design Capabilities
+  - items:
+      - label: Space Planning
+      - label: Custom Furniture
 partnership_cards:
   - title: A 40+ Year Legacy
-    body: Our 40+ years of experience informs our innovative, award-winning designs. Contextual storytelling will make your project a destination.
+    body: Our 40+ years of experience informs our innovative, award-winning designs. Contextual storytelling will make your project [a destination](/project/nelson-kohl-apartments/).
   - title: Creative Approach to Site Adaptation
-    body: Your project site’s geography, climate and context is unique. We thoughtfully adapt designs to your site and mitigate regulatory challenges so that your project kicks off successfully.
+    body: Your project site’s geography, climate and context is unique. We thoughtfully [adapt designs to your site](/project/800-south-queen-street-multi-family-apartments/) and mitigate regulatory challenges so that your project kicks off successfully.
   - title: Relationship Driven Focus
     body: We work hand-in-hand to guide our clients through an inclusive design process.
   - title: Speed to Market Efficiencies
     body: Our tested and proven speed to market efficiencies translate to effective coordination on key issues like schedule and budget.
 testimonial:
-  quote: >-
-    The Nelson Kohl Apartments project is transformational. Its exterior is a conceptual canvas, bringing color and movement to a once desolate lot, while being informed by the existing neighborhood.
-    The simple form is sensitively crafted and boldly unconventional, and the Nelson Kohl Apartments is a model for projects that aspire to civic engagement and discernible impact.
+  quote: The Nelson Kohl Apartments project is transformational. Its exterior is a conceptual canvas, bringing color and movement to a once desolate lot, while being informed by the existing neighborhood. The simple form is sensitively crafted and boldly unconventional, and the Nelson Kohl Apartments is a model for projects that aspire to civic engagement and discernible impact.
   attribution_name: AIA Central Pennsylvania Merit Award 2019
   attribution_org: "Jury Comments: Nelson Kohl Apartments"
 recent_projects:
-  - title: Fox Apartments
-    url: /project/fox-apartments/
-    categories:
-      - Architecture
-      - Structural
-    image_url: /assets/imported/2024/11/Fox-Apartments-10302024-27-700x700.webp
-  - title: 205 State Street Apartments
-    url: /project/205-state-street-apartments/
-    categories:
-      - Architecture
-    image_url: /assets/imported/2024/07/state-street-apartments-06192024-5-768x400.webp
-  - title: Whisper Run Residential Development
-    url: /project/whisper-run-residential-development/
-    categories:
-      - Civil
-    image_url: /assets/imported/2024/09/Whisper-Run.jpg
   - title: Nelson Kohl Apartments
     url: /project/nelson-kohl-apartments/
     categories:
@@ -104,8 +83,34 @@ recent_projects:
     categories:
       - Architecture
     image_url: /assets/imported/2024/01/800-S-Queen-view-BRANDED-700x700.jpg
+  - title: Fox Apartments
+    url: /project/fox-apartments/
+    categories:
+      - Architecture
+      - Structural
+    image_url: /assets/imported/2024/11/Fox-Apartments-10302024-27-700x700.webp
+  - title: 205 State Street Apartments
+    url: /project/205-state-street-apartments/
+    categories:
+      - Architecture
+    image_url: /assets/imported/2024/07/state-street-apartments-06192024-5-768x400.webp
+  - title: Whisper Run Residential Development
+    url: /project/whisper-run-residential-development/
+    categories:
+      - Civil
+    image_url: /assets/imported/2024/09/Whisper-Run.jpg
 hero_image_url: /assets/imported/2024/08/nelson-kohl-10-18-0004.webp
 seo_title: Multi-Family | WAREHAUS
 seo_description: Explore vibrant living spaces designed by WAREHAUS across the country, focusing on community, safety, and aesthetic appeal.
 seo_og_image_url: /assets/imported/2022/03/Asset-1.png
+lead_video_id: zRHlPCZYees
+photo_gallery:
+  - image_url: /assets/imported/2023/03/Nelson-Kohl-Apartments1023201807-of-12.jpg
+  - image_url: /assets/imported/2023/03/Nelson-Kohl-Apartments1023201808-of-12.jpg
+  - image_url: /assets/imported/2023/03/Nelson-Kohl-Apartments1023201812-of-12.jpg
+  - image_url: /assets/imported/2023/03/Nelson-Kohl-03_18-0041.jpg
+  - image_url: /assets/imported/2023/05/3400-Boston-Street_Rendering-20190521_0004.jpg
+  - image_url: /assets/imported/2023/03/Nelson-Kohl-07_18-0013.jpg
+  - image_url: /assets/imported/2023/03/Nelson-Kohl-Apartments1023201809-of-12.jpg
+  - image_url: /assets/imported/2023/05/3400-Boston-Street_Rendering-20190522_0010.jpg
 ---

@@ -20,6 +20,9 @@ completion_date: Various
 services_provided:
   - label: Architecture
     url: /services/architecture/
+industries:
+  - label: Healthcare
+    url: /healthcare/
 hero_image_url: /assets/imported/elementor/thumbs/University-of-Maryland-Faculty-Physicians-Inc_Professional-090515_00017-qtq3qlee8a5j204ec2oyxl6uy9pt9y6qsq8i11af1c.jpg
 gallery_images:
   - url: /assets/imported/elementor/thumbs/University-of-Maryland-Faculty-Physicians-Inc_Professional-090515_00017-qtq3qlee8a5j204ec2oyxl6uy9pt9y6qsq8i11af1c.jpg

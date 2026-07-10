@@ -1,0 +1,12 @@
+<ul class="space-y-2 text-[15px] text-[#666]">
+    {{ items }}
+        <li class="pl-5 relative leading-snug">
+            <span aria-hidden="true" class="absolute left-0 top-[0.55em] w-1.5 h-1.5 rounded-full bg-haus-amber-500"></span>
+            {{ if url }}
+                <a href="{{ url }}" class="text-[#4b4b4b] hover:text-haus-amber-700 transition">{{ label }}</a>
+            {{ else }}
+                {{ label }}
+            {{ /if }}
+        </li>
+    {{ /items }}
+</ul>
