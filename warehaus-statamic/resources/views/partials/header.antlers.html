@@ -93,7 +93,26 @@
                     {{ /collection:services }}
                 </div>
             </div>
-            <a href="/portfolio/" class="py-4 hover:text-haus-amber-400 transition flex justify-between items-center">Portfolio <span aria-hidden="true">→</span></a>
+            <div data-haus-mobile-disclosure>
+                <button type="button" class="w-full py-4 uppercase font-medium tracking-wide text-left bg-transparent border-0 hover:text-haus-amber-400 transition flex justify-between items-center" data-haus-mobile-disclosure-trigger aria-expanded="false">
+                    Portfolio
+                    <svg class="h-4 w-4 shrink-0 transition-transform" data-haus-mobile-disclosure-chevron viewBox="0 0 12 8" fill="none" aria-hidden="true"><path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </button>
+                <div hidden data-haus-mobile-disclosure-panel class="pb-3 pl-4 space-y-2 text-sm font-medium normal-case tracking-normal">
+                    <a href="/portfolio/" class="block py-1.5 text-haus-ink-300 hover:text-haus-amber-400 transition">Portfolio</a>
+                    <a href="/adaptive-reuse/" class="block py-1.5 text-haus-ink-300 hover:text-haus-amber-400 transition">Adaptive Reuse</a>
+                    <a href="/arts_culture/" class="block py-1.5 text-haus-ink-300 hover:text-haus-amber-400 transition">Arts &amp; Culture</a>
+                    <a href="/building-sciences/" class="block py-1.5 text-haus-ink-300 hover:text-haus-amber-400 transition">Building Sciences</a>
+                    <a href="/corporate-office/" class="block py-1.5 text-haus-ink-300 hover:text-haus-amber-400 transition">Corporate Office</a>
+                    <a href="/distribution_manufacturing/" class="block py-1.5 text-haus-ink-300 hover:text-haus-amber-400 transition">Distribution &amp; Manufacturing</a>
+                    <a href="/education/" class="block py-1.5 text-haus-ink-300 hover:text-haus-amber-400 transition">Education</a>
+                    <a href="/healthcare/" class="block py-1.5 text-haus-ink-300 hover:text-haus-amber-400 transition">Healthcare</a>
+                    <a href="/historic/" class="block py-1.5 text-haus-ink-300 hover:text-haus-amber-400 transition">Historic</a>
+                    <a href="/multi-family/" class="block py-1.5 text-haus-ink-300 hover:text-haus-amber-400 transition">Multi-Family</a>
+                    <a href="/residential-development/" class="block py-1.5 text-haus-ink-300 hover:text-haus-amber-400 transition">Residential Development</a>
+                    <a href="/retail_hospitality/" class="block py-1.5 text-haus-ink-300 hover:text-haus-amber-400 transition">Retail &amp; Hospitality</a>
+                </div>
+            </div>
             <a href="/about/" class="py-4 hover:text-haus-amber-400 transition flex justify-between items-center">About <span aria-hidden="true">→</span></a>
             <a href="/culture/" class="py-4 hover:text-haus-amber-400 transition flex justify-between items-center">Culture <span aria-hidden="true">→</span></a>
             <a href="/careers/" class="py-4 hover:text-haus-amber-400 transition flex justify-between items-center">Careers <span aria-hidden="true">→</span></a>
