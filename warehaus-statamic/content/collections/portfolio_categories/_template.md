@@ -13,8 +13,10 @@ intro_prose: >-
 capability_groups:
   - heading: 'Group heading (e.g. Suites)'
     items:
-      - 'Capability item one'
-      - 'Capability item two'
+      - label: 'Capability item one'
+      - label: 'Capability item two'
+lead_video_id: ''
+photo_gallery: []
 partnership_cards:
   - title: 'Partnership card title'
     body: 'Short description of a key benefit.'

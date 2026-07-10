@@ -22,6 +22,89 @@ class ProjectListingTest extends TestCase
         $this->assertTrue(ProjectListing::projectProvidesService($rows, 'historic-preservation', '/services/historic-preservation/'));
     }
 
+    public function test_project_belongs_to_category_matches_corporate_office_to_office_industry(): void
+    {
+        $rows = [['label' => 'Office', 'url' => '/office/']];
+
+        $this->assertTrue(ProjectListing::projectBelongsToCategory($rows, '/corporate-office/', 'corporate office'));
+        $this->assertFalse(ProjectListing::projectBelongsToCategory($rows, '/healthcare/', 'healthcare'));
+    }
+
+    public function test_project_belongs_to_category_matches_distribution_manufacturing_aliases(): void
+    {
+        $rows = [['label' => 'Distribution and Manufacturing', 'url' => '/distribution-and-manufacturing/']];
+
+        $this->assertTrue(ProjectListing::projectBelongsToCategory($rows, '/distribution_manufacturing/', 'distribution manufacturing'));
+    }
+
+    public function test_project_belongs_to_category_matches_healthcare_medical_alias(): void
+    {
+        $rows = [['label' => 'Medical', 'url' => '/medical/']];
+
+        $this->assertTrue(ProjectListing::projectBelongsToCategory($rows, '/healthcare/', 'healthcare'));
+    }
+
+    public function test_project_belongs_to_category_matches_retail_hospitality_aliases(): void
+    {
+        $rows = [['label' => 'Retail', 'url' => '/retail/']];
+
+        $this->assertTrue(ProjectListing::projectBelongsToCategory($rows, '/retail_hospitality/', 'retail hospitality'));
+    }
+
+    public function test_sort_portfolio_category_carousel_prepends_new_projects_before_baseline_order(): void
+    {
+        $baseline = ['/project/older/', '/project/middle/', '/project/newest-baseline/'];
+
+        $older = $this->carouselEntry('older', 100);
+        $middle = $this->carouselEntry('middle', 200);
+        $newestBaseline = $this->carouselEntry('newest-baseline', 300);
+        $brandNew = $this->carouselEntry('brand-new', 400);
+
+        $sorted = ProjectListing::sortPortfolioCategoryCarousel(
+            collect([$older, $middle, $newestBaseline, $brandNew]),
+            $baseline,
+            10
+        );
+
+        $this->assertSame(
+            ['brand-new', 'older', 'middle', 'newest-baseline'],
+            $sorted->map(fn ($entry) => $entry->slug())->all()
+        );
+    }
+
+    private function carouselEntry(string $slug, int $lastModified): object
+    {
+        return new class($slug, $lastModified) implements \Statamic\Contracts\Entries\Entry
+        {
+            public function __construct(private string $slug, private int $lastModified) {}
+
+            public function slug()
+            {
+                return $this->slug;
+            }
+
+            public function url()
+            {
+                return '/project/'.$this->slug.'/';
+            }
+
+            public function lastModified()
+            {
+                return $this->lastModified;
+            }
+
+            public function get($key, $fallback = null)
+            {
+                return $fallback;
+            }
+
+            public function __call($method, $parameters)
+            {
+                throw new \BadMethodCallException("Method {$method} is not implemented.");
+            }
+        };
+    }
+
     public function test_project_belongs_to_category_matches_url_variants(): void
     {
         $rows = [['label' => 'Retail and Hospitality', 'url' => '/retail-and-hospitality/']];
@@ -119,5 +202,6 @@ class ProjectListingTest extends TestCase
         $this->assertSame('/project/sample/', $item['url']);
         $this->assertSame('/assets/sample.png', $item['image_url']);
         $this->assertSame(['Architecture'], $item['categories']);
+        $this->assertSame('Architecture', $item['categories_label']);
     }
 }

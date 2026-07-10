@@ -20,6 +20,9 @@ services_provided:
     url: /services/architecture/
   - label: Civil
     url: /services/civil/
+industries:
+  - label: Healthcare
+    url: /healthcare/
 hero_image_url: /assets/imported/elementor/thumbs/Wellspan-Family-Medicine-Roosevelt-Facility-060514_00035-r341zqsijysz6696okctwk7xq0nunyve5y36occb6o.webp
 gallery_images:
   - url: /assets/imported/elementor/thumbs/Wellspan-Family-Medicine-Roosevelt-Facility-060514_00035-r341zqsijysz6696okctwk7xq0nunyve5y36occb6o.webp

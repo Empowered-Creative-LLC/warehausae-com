@@ -7,55 +7,32 @@ source_url: https://warehausae.com/retail_hospitality/
 category_name: retail & hospitality
 tagline: We listen. We design. We deliver.
 lead_heading: Hotel, Retail & Restaurant Design
-intro_prose: >-
-  Whether designing for discerning brands like Marriott or Hilton or repurposing history at decades-old hotels in York and Gettysburg, we draw on our well-rounded experience in hospitality, workplace
-  and residential design to create a distinct sense of place for each new project.
+intro_prose: |-
+  Whether designing for discerning brands like Marriott or Hilton or repurposing history at decades-old hotels in York and Gettysburg, we draw on our well-rounded experience in [hospitality](/project/mchenry-row-office-hotel/), [workplace](/project/paypal-toronto-flagship-office/) and [residential design](/project/nelson-kohl-apartments/) to create a distinct sense of place for each new project.
 
-
-  Our passion for sustainable design and incorporation of wellness spaces, both ever-present themes in hotel design, are also reflected in the many mixed-use residential projects in our portfolio.
-  With a focus on upfront problem-solving, our team is dedicated to a quick and efficient process that achieves open-for-business deadlines.
+  Our passion for sustainable design and incorporation of wellness spaces, both ever-present themes in hotel design, are also reflected in the many mixed-use residential projects in our portfolio. With a focus on upfront problem-solving, our team is dedicated to a quick and efficient process that achieves open-for-business deadlines.
 capability_groups:
-  - heading: Design Services
-    items:
-      - Full-Service Kitchen Design
-      - Expansions and Additions
-      - Furniture & Finish Selection
-      - Incorporation of Technology
+  - items:
+      - label: Full-Service Kitchen Design
+      - label: Expansions and Additions
+    heading: Design Services
+  - items:
+      - label: Furniture & Finish Selection
+      - label: Incorporation of Technology
 partnership_cards:
   - title: A Creative Approach to Site Adaption
-    body: Your project site’s geography, climate and context is unique. We thoughtfully adapt brand prototypes to your site and mitigate regulatory challenges so that your project kicks off successfully.
+    body: Your project site’s geography, climate and context is unique. We thoughtfully [adapt brand prototypes to your site](/project/mchenry-row-office-hotel/) and mitigate regulatory challenges so that your project kicks off successfully.
   - title: Experience Working with Global Brands
-    body: Like hospitality brands Marriott, Hilton and Westin and retail giants like Dunkin and BJs mean we know their standards and protocols. We hit the ground running, saving you time and energy.
+    body: Like hospitality brands [Marriott](/project/courtyard-by-marriott-rowan-boulevard/), [Hilton](/project/hilton-garden-inn/) and Westin and retail giants like [Dunkin](/project/dunkin-east-retail/) and BJs mean we know their standards and protocols. We hit the ground running, saving you time and energy.
   - title: A Relationship-Driven Team
     body: We work hand-in-hand to guide our clients through an inclusive design process.
   - title: Expertise in Building Science
-    body: Our expertise in building materials and systems and construction types creates high-performing buildings you can count on for decades.
+    body: Our expertise in [building materials](/building-sciences/) and systems and construction types creates high-performing buildings you can count on for decades.
 testimonial:
-  quote: >-
-    The collaboration I have experienced with Warehaus, in my own backyard, has been a dream! Idea to fruition is a long creative process and the team there has made it not only fun, but possible in a
-    big city way. A team is everything behind every project, and O.N.E. Is happy to have found our fit with Warehaus.
+  quote: The collaboration I have experienced with Warehaus, in my own backyard, has been a dream! Idea to fruition is a long creative process and the team there has made it not only fun, but possible in a big city way. A team is everything behind every project, and O.N.E. Is happy to have found our fit with Warehaus.
   attribution_name: Toni Calderone
   attribution_org: O.N.E. Hospitality
 recent_projects:
-  - title: Ballpark Commons
-    url: /project/ballpark-commons/
-    categories:
-      - Architecture
-      - Civil
-      - Interiors
-    image_url: /assets/imported/2026/04/Ballpark-Commons-site-image-700x700.png
-  - title: Zion Lutheran Church Adaptive Reuse
-    url: /project/zion-lutheran-church-adaptive-reuse/
-    categories:
-      - Architecture
-      - Historic
-    image_url: /assets/imported/2025/04/1Zion-Church-Duke-St_06112024-700x700.webp
-  - title: Susquehanna Trail Dunkin’ & Jimmy John’s
-    url: /project/susquehanna-trail-dunkin-jimmy-johns/
-    categories:
-      - Civil
-      - Civil Engineering
-    image_url: /assets/imported/2025/06/Susquehanna-Trail-Dunkin-and-Jimmy-Johns-5-700x700.webp
   - title: McHenry Row Office and Courtyard by Marriott Hotel
     url: /project/mchenry-row-office-hotel/
     categories:
@@ -132,8 +109,39 @@ recent_projects:
       - Architecture
       - Interiors
     image_url: /assets/imported/2024/09/Andonias-Chophouse-High-Res-Final-Render-700x700.webp
+  - title: Ballpark Commons
+    url: /project/ballpark-commons/
+    categories:
+      - Architecture
+      - Civil
+      - Interiors
+    image_url: /assets/imported/2026/04/Ballpark-Commons-site-image-700x700.png
+  - title: Zion Lutheran Church Adaptive Reuse
+    url: /project/zion-lutheran-church-adaptive-reuse/
+    categories:
+      - Architecture
+      - Historic
+    image_url: /assets/imported/2025/04/1Zion-Church-Duke-St_06112024-700x700.webp
+  - title: Susquehanna Trail Dunkin’ & Jimmy John’s
+    url: /project/susquehanna-trail-dunkin-jimmy-johns/
+    categories:
+      - Civil
+      - Civil Engineering
+    image_url: /assets/imported/2025/06/Susquehanna-Trail-Dunkin-and-Jimmy-Johns-5-700x700.webp
 hero_image_url: /assets/imported/2023/04/CY_BWICS_Firepit.jpg
 seo_title: Retail & Hospitality Design | Warehaus
 seo_description: Explore Retail and Hospitality Design by Warehaus. We specialize in hotel, restaurant, and retail designs that create unique experiences.
 seo_og_image_url: /assets/imported/2022/03/Asset-1.png
+lead_video_id: 9vLdA1i_Dx4
+photo_gallery:
+  - image_url: /assets/imported/2023/04/CY_BWICS_Bistro_Evening.jpg
+  - image_url: /assets/imported/2023/04/The-Inn-at-Wyndridge-Farm_Professional-102314_00027.jpg
+  - image_url: /assets/imported/2023/04/McHenry-Row-Courtyard-Marriott_int-e.jpg
+  - image_url: /assets/imported/2023/04/Innmaster_3.jpg
+  - image_url: /assets/imported/2023/04/The-Inn-at-Wyndridge-12_1979-0030-700x700.jpg
+  - image_url: /assets/imported/2023/04/The-Inn-at-Wyndridge-Farm_Professional-102714_00082.jpg
+  - image_url: /assets/imported/2023/04/CY_BWICS_Lobby_MediaPods2.jpg
+  - image_url: /assets/imported/2023/04/Blackworth-Live-Fire-Grill-20191015_0108.jpg
+  - image_url: /assets/imported/2023/04/Blackworth-Live-Fire-Grill-21060207_0110.jpg
+  - image_url: /assets/imported/2023/04/Blackworth-Live-Fire-Grill-21060207_0106.jpg
 ---

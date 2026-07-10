@@ -7,65 +7,31 @@ source_url: https://warehausae.com/corporate-office/
 category_name: corporate office
 tagline: We listen. We design. We deliver.
 lead_heading: A Reflection of Workplace Culture and Creativity
-intro_prose: |-
-  From open concept environments to configurable spaces, we apply our rigorous, research-based Design Delivery Process to set the foundation for our clients’ programming needs.
-
-  - Sound Mitigation
-  - Integration of Audio Visual Technology
-  - Workspace Programming
-  - Furniture Selection
-  - Feasibility Studies
-  - Site Wayfinding
+intro_prose: From [open concept environments](/project/320-north-george-street-office/) to [configurable spaces](/project/bartels-center/), we apply our rigorous, research-based Design Delivery Process to set the foundation for our clients’ programming needs.
 capability_groups:
-  - heading: Capabilities
-    items:
-      - Sound Mitigation
-      - Integration of Audio Visual Technology
-      - Workspace Programming
-      - Furniture Selection
-      - Feasibility Studies
-      - Site Wayfinding
+  - items:
+      - label: Sound Mitigation
+      - label: Integration of Audio Visual Technology
+      - label: Workspace Programming
+    heading: Capabilities
+  - items:
+      - label: Furniture Selection
+      - label: Feasibility Studies
+      - label: Site Wayfinding
 partnership_cards:
   - title: Design Best Practices
-    body: >-
-      We believe the key is understanding your unique business needs and solving for those needs with research-backed strategies. The most successful spaces accommodate varying work styles, with
-      breakout spaces for collaboration, nooks for privacy and focus, co-working areas, and convertible stations that accommodate visitors and hybrid workers.
+    body: We believe the key is understanding your unique business needs and solving for those needs with research-backed strategies. The most successful spaces accommodate varying work styles, with [breakout spaces](/project/paypal-toronto-flagship-office/) for collaboration, nooks for privacy and focus, co-working areas, and convertible stations that accommodate visitors and hybrid workers.
   - title: Clear Communication
-    body: >-
-      At project kick-off, we present a communication plan to ensure every participant understands the flow of information. We review roles and identify decision makers and information sharing
-      strategies to ensure that everyone is on the same page.
+    body: At project kick-off, we present a communication plan to ensure every participant understands the flow of information. We review roles and identify decision makers and information sharing strategies to ensure that everyone is on the same page.
   - title: Collaboration as a Key Value
-    body: >-
-      Managing our relationships with integrity is of utmost importance to us. We have built trusting, long-lasting relationships with many subconsultants that add value to office designs, from
-      acoustic consultants to food service designers.
+    body: Managing our relationships with integrity is of utmost importance to us. We have built trusting, long-lasting relationships with many subconsultants that add value to office designs, from acoustic consultants to food service designers.
   - title: A Forward-Thinking Approach to Post-Covid Office Design
-    body: We’re on the leading edge of modern, post-covid workspace needs that foster collaboration and support remote and hybrid workers.
+    body: We’re on the leading edge of modern, [post-covid](/project/pshmc-crystala-offices/) workspace needs that foster collaboration and support remote and hybrid workers.
 testimonial:
-  quote: >-
-    Warehaus offered artistic advice and suggestions under demanding circumstances with multiple changes to layouts, furniture, and lighting. They met the needs of this office to develop an approved
-    design with utmost professionalism. They had the foresight during the course of the project to make a fast and solid recommendation based on experience and logic.
+  quote: Warehaus offered artistic advice and suggestions under demanding circumstances with multiple changes to layouts, furniture, and lighting. They met the needs of this office to develop an approved design with utmost professionalism. They had the foresight during the course of the project to make a fast and solid recommendation based on experience and logic.
   attribution_name: Leigh Goldman
   attribution_org: PayPal Construction Manager
 recent_projects:
-  - title: Wagman, Inc. Office
-    url: /project/wagman-inc-office/
-    categories:
-      - Architecture
-      - Interiors
-    image_url: /assets/imported/2025/10/Wagman-offices-3265-Farmtrail-Rd-39-700x700.jpg
-  - title: Cumberland Township Municipal Building
-    url: /project/cumberland-township-municipal-building/
-    categories:
-      - Architecture
-      - Civil
-      - Interiors
-    image_url: /assets/imported/2025/06/Cumberland_Township_Municipal_Building_Groundbreaking20250617_0029-700x700.webp
-  - title: Volvo North America Living Office Transformation
-    url: /project/volvo-north-america-office-transformation/
-    categories:
-      - Architecture
-      - Interiors
-    image_url: /assets/imported/2025/11/Volvo-Construction-Equipment-497-HDR-700x700.jpg
   - title: 1110 East Princess Street Office
     url: /project/1110-princess-street-office/
     categories:
@@ -182,8 +148,50 @@ recent_projects:
       - Architecture
       - Interiors
     image_url: /assets/imported/elementor/thumbs/paypal-toronto-professional-120316-0002-r33rrjghearf953aqeny6h5ombhpgb4mvi9x0aa4kg.webp
+  - title: Wagman, Inc. Office
+    url: /project/wagman-inc-office/
+    categories:
+      - Architecture
+      - Interiors
+    image_url: /assets/imported/2025/10/Wagman-offices-3265-Farmtrail-Rd-39-700x700.jpg
+  - title: Cumberland Township Municipal Building
+    url: /project/cumberland-township-municipal-building/
+    categories:
+      - Architecture
+      - Civil
+      - Interiors
+    image_url: /assets/imported/2025/06/Cumberland_Township_Municipal_Building_Groundbreaking20250617_0029-700x700.webp
+  - title: Volvo North America Living Office Transformation
+    url: /project/volvo-north-america-office-transformation/
+    categories:
+      - Architecture
+      - Interiors
+    image_url: /assets/imported/2025/11/Volvo-Construction-Equipment-497-HDR-700x700.jpg
 hero_image_url: /assets/imported/2023/04/PayPal-Toronto_Professional-120316_0000.jpg
 seo_title: Warehaus Corporate Office Projects
 seo_description: Explore our portfolio of corporate office designs that reflect workplace culture and creativity.
 seo_og_image_url: /assets/imported/2022/03/Asset-1.png
+photo_gallery:
+  - image_url: /assets/imported/2023/04/PayPal-Toronto_Professional-120316_0006.jpg
+  - image_url: /assets/imported/2023/04/PayPal-Toronto_Professional-120316_0004.jpg
+  - image_url: /assets/imported/2023/03/210_York_Street15-of-00-1.jpg
+  - image_url: /assets/imported/2023/04/PayPal-Toronto_Professional-120316_0003.jpg
+  - image_url: /assets/imported/2023/03/Hershey-Next-Century_Professional-04_19-0003.jpg
+  - image_url: /assets/imported/2023/04/Harsco-Corporate-Office0531201901-of-41.jpg
+  - image_url: /assets/imported/2023/03/210-York-Street-04_2014-0001-700x501.jpg
+  - image_url: /assets/imported/2023/04/Harsco-Corporate-Headquarters_Professional-20150801_0053.jpg
+  - image_url: /assets/imported/2023/03/Warehaus-Headquarters-08_2017-0526.jpg
+  - image_url: /assets/imported/2023/03/210_York_Street18-of-00-1-700x700.jpg
+  - image_url: /assets/imported/2023/02/PayPal-Toronto_Professional-120316_0007-700x700.jpg
+  - image_url: /assets/imported/2023/03/Warehaus-Headquarters-08_2017-0162.jpg
+  - image_url: /assets/imported/2023/03/Warehaus-Headquarters-05_2014-0551.jpg
+  - image_url: /assets/imported/2023/04/Harsco-Corporate-Headquarters_Professional-20150801_0070.jpg
+  - image_url: /assets/imported/2023/04/PayPal-Toronto_Professional-120316_0008.jpg
+  - image_url: /assets/imported/2023/03/Hershey-Next-Century_Professional-03_15-0017.jpg
+  - image_url: /assets/imported/2023/04/Harsco-Corporate-Headquarters_Professional-20150801_0034.jpg
+  - image_url: /assets/imported/2023/03/Hershey-Next-Century_Professional-03_15-0016.jpg
+  - image_url: /assets/imported/2023/03/Hershey-Next-Century_Professional-04_19-0005.jpg
+  - image_url: /assets/imported/2023/03/Hershey-Next-Century_Professional-04_19-0004.jpg
+  - image_url: /assets/imported/2023/04/PayPal-Toronto_Professional-120316_0005.jpg
+  - image_url: /assets/imported/2023/03/210-York-Street-03_2016-0000.jpg
 ---
