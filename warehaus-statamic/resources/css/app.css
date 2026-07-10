@@ -393,3 +393,30 @@
         .haus-pin, .haus-pin::after, .haus-pin::before { transition: none; }
     }
 }
+
+/* Portfolio category photo slideshow (Ken Burns) */
+.haus-portfolio-slideshow__slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+.haus-portfolio-slideshow__slide.is-active {
+    opacity: 1;
+    z-index: 1;
+}
+.haus-portfolio-slideshow__img {
+    animation: haus-ken-burns 12s ease-in-out infinite alternate;
+    transform-origin: center center;
+}
+.haus-portfolio-slideshow__slide:not(.is-active) .haus-portfolio-slideshow__img {
+    animation: none;
+}
+@keyframes haus-ken-burns {
+    from { transform: scale(1); }
+    to { transform: scale(1.12); }
+}
+@media (prefers-reduced-motion: reduce) {
+    .haus-portfolio-slideshow__slide { transition: none; }
+    .haus-portfolio-slideshow__img { animation: none; }
+}

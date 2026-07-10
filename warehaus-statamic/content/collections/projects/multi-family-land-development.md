@@ -18,6 +18,9 @@ size: Various Projects
 services_provided:
   - label: Civil
     url: /services/civil/
+industries:
+  - label: Residential Development
+    url: /residential-development/
 hero_image_url: /assets/imported/elementor/thumbs/New-Brittany-8-r342oqc28f0dszyjrv6sor827ri4ab2ilmeuy5ajs0.webp
 gallery_images:
   - url: /assets/imported/elementor/thumbs/New-Brittany-8-r342oqc28f0dszyjrv6sor827ri4ab2ilmeuy5ajs0.webp

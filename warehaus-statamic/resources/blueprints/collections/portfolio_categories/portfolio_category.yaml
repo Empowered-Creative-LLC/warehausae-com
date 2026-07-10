@@ -52,10 +52,45 @@ tabs:
                     instructions: Group heading (e.g. 'Suites', 'Buildings').
                 - handle: items
                   field:
-                    type: list
-                    display: Capability Groups Items
+                    type: grid
+                    mode: stacked
+                    fields:
+                      - handle: label
+                        field:
+                          type: text
+                          display: Label
+                          required: true
+                      - handle: url
+                        field:
+                          type: text
+                          display: Link URL
+                          instructions: Optional project or page link (e.g. /project/capitol-theatre/).
+                    display: Capability Items
               display: Capability Groups
               instructions: Bulleted capability groupings shown on the page. Healthcare has 'Suites' and 'Buildings'. Other categories may have 0 or more groups.
+          - handle: lead_video_id
+            field:
+              type: text
+              display: Lead Section Video (YouTube ID)
+              instructions: Optional YouTube video ID shown below the lead block (e.g. Oox5sqk9Ows). Leave empty if no video on the live page.
+          - handle: photo_gallery
+            field:
+              type: grid
+              mode: stacked
+              fields:
+                - handle: image
+                  field:
+                    type: assets
+                    display: Image
+                    container: main
+                    folder: uploads/portfolio
+                    max_files: 1
+                - handle: image_url
+                  field:
+                    type: text
+                    display: Image URL (imported)
+              display: Photo Gallery
+              instructions: Full-bleed scrolling/Ken Burns photo slideshow below the lead section. Match images from the live warehausae.com page.
           - handle: partnership_cards
             field:
               type: grid
