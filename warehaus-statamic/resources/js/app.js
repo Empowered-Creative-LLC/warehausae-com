@@ -16,6 +16,8 @@ document.addEventListener('DOMContentLoaded', () => {
     initRotatingWords();
     sizeCdWordsWrappers();
     initRecentProjectsCarousel();
+    initProjectGalleryCarousel();
+    initImageLightbox();
     initMissionTypewriter();
     initPortfolioLoadMore();
     initPortfolioSlideshows();
@@ -499,6 +501,209 @@ function initParallaxBackgrounds() {
                 scrub: true,
             },
         });
+    });
+}
+
+/**
+ * Project page image gallery — ~4 thumbs visible, prev/next arrows, dots.
+ * Mirrors Elementor's image carousel on warehausae.com project pages.
+ */
+function initProjectGalleryCarousel() {
+    document.querySelectorAll('[data-haus-project-gallery]').forEach((root) => {
+        const track = root.querySelector('[data-haus-gallery-track]');
+        const items = [...root.querySelectorAll('[data-haus-gallery-item]')];
+        const prev = root.querySelector('[data-haus-gallery-prev]');
+        const next = root.querySelector('[data-haus-gallery-next]');
+        const dots = [...(root.parentElement?.querySelectorAll('[data-haus-gallery-dot]') || [])];
+        if (!track || !items.length) return;
+
+        let index = 0;
+        let syncingFromScroll = false;
+
+        const itemsPerView = () => {
+            const itemWidth = items[0].getBoundingClientRect().width || 1;
+            return Math.max(1, Math.round(track.clientWidth / itemWidth));
+        };
+
+        const maxIndex = () => Math.max(0, items.length - itemsPerView());
+
+        const gapPx = () => {
+            const row = root.querySelector('[data-haus-gallery-items]');
+            if (!row || items.length < 2) return 0;
+            const styles = getComputedStyle(row);
+            return Number.parseFloat(styles.columnGap || styles.gap) || 0;
+        };
+
+        const offsetForIndex = (i) => {
+            const width = items[0].getBoundingClientRect().width;
+            return Math.max(0, i * (width + gapPx()));
+        };
+
+        const syncDots = () => {
+            dots.forEach((dot, i) => {
+                const active = i === index;
+                dot.setAttribute('aria-current', active ? 'true' : 'false');
+                dot.classList.toggle('bg-haus-ink-700', active);
+                dot.classList.toggle('bg-haus-ink-300', !active);
+            });
+        };
+
+        const syncButtons = () => {
+            if (prev) prev.disabled = index <= 0;
+            if (next) next.disabled = index >= maxIndex();
+            syncDots();
+        };
+
+        const scrollToIndex = (nextIndex, { smooth = true } = {}) => {
+            index = Math.min(Math.max(0, nextIndex), maxIndex());
+            const left = offsetForIndex(index);
+            syncingFromScroll = true;
+            if (smooth && typeof track.scrollTo === 'function') {
+                track.scrollTo({ left, behavior: 'smooth' });
+                // Hard-set shortly after if smooth scroll is ignored
+                window.setTimeout(() => {
+                    if (Math.abs(track.scrollLeft - left) > 8) {
+                        track.scrollLeft = left;
+                    }
+                    syncingFromScroll = false;
+                }, 50);
+            } else {
+                track.scrollLeft = left;
+                syncingFromScroll = false;
+            }
+            syncButtons();
+        };
+
+        prev?.addEventListener('click', (event) => {
+            event.preventDefault();
+            scrollToIndex(index - 1);
+        });
+        next?.addEventListener('click', (event) => {
+            event.preventDefault();
+            scrollToIndex(index + 1);
+        });
+
+        dots.forEach((dot) => {
+            dot.addEventListener('click', (event) => {
+                event.preventDefault();
+                scrollToIndex(Number(dot.dataset.hausGalleryIndex || 0));
+            });
+        });
+
+        let scrollTimer;
+        track.addEventListener('scroll', () => {
+            if (syncingFromScroll) return;
+            clearTimeout(scrollTimer);
+            scrollTimer = setTimeout(() => {
+                const width = items[0].getBoundingClientRect().width + gapPx();
+                if (width <= 0) return;
+                index = Math.min(maxIndex(), Math.round(track.scrollLeft / width));
+                syncButtons();
+            }, 80);
+        }, { passive: true });
+
+        scrollToIndex(0, { smooth: false });
+        let resizeTimer;
+        window.addEventListener('resize', () => {
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(() => scrollToIndex(index, { smooth: false }), 150);
+        });
+    });
+}
+
+/**
+ * Simple full-screen lightbox for project gallery (and any [data-full-src] trigger).
+ * Avoids navigating to raw /assets/imported paths that 404 when files live on S3.
+ */
+function initImageLightbox() {
+    const triggers = [...document.querySelectorAll('[data-haus-gallery-item][data-full-src]')];
+    if (!triggers.length) return;
+
+    const sources = triggers.map((el) => ({
+        src: el.getAttribute('data-full-src'),
+        alt: el.querySelector('img')?.getAttribute('alt') || '',
+    })).filter((item) => item.src);
+
+    if (!sources.length) return;
+
+    let activeIndex = 0;
+    let overlay = document.querySelector('[data-haus-lightbox]');
+
+    if (!overlay) {
+        overlay = document.createElement('div');
+        overlay.setAttribute('data-haus-lightbox', '');
+        overlay.className = 'haus-lightbox';
+        overlay.hidden = true;
+        overlay.innerHTML = `
+            <div class="haus-lightbox__backdrop" data-haus-lightbox-close tabindex="-1"></div>
+            <button type="button" class="haus-lightbox__close" data-haus-lightbox-close aria-label="Close image">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" aria-hidden="true">
+                    <path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </button>
+            <button type="button" class="haus-lightbox__nav haus-lightbox__nav--prev" data-haus-lightbox-prev aria-label="Previous image">
+                <svg viewBox="0 0 12 16" width="14" height="18" fill="none" aria-hidden="true">
+                    <path d="M9 1L2 8L9 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+            <figure class="haus-lightbox__figure">
+                <img class="haus-lightbox__img" alt="" data-haus-lightbox-img>
+                <figcaption class="haus-lightbox__caption" data-haus-lightbox-caption></figcaption>
+            </figure>
+            <button type="button" class="haus-lightbox__nav haus-lightbox__nav--next" data-haus-lightbox-next aria-label="Next image">
+                <svg viewBox="0 0 12 16" width="14" height="18" fill="none" aria-hidden="true">
+                    <path d="M3 1L10 8L3 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+        `;
+        document.body.appendChild(overlay);
+    }
+
+    const img = overlay.querySelector('[data-haus-lightbox-img]');
+    const caption = overlay.querySelector('[data-haus-lightbox-caption]');
+    const prevBtn = overlay.querySelector('[data-haus-lightbox-prev]');
+    const nextBtn = overlay.querySelector('[data-haus-lightbox-next]');
+
+    const show = (index) => {
+        activeIndex = (index + sources.length) % sources.length;
+        const item = sources[activeIndex];
+        img.src = item.src;
+        img.alt = item.alt;
+        caption.textContent = item.alt;
+        caption.hidden = !item.alt;
+        const multi = sources.length > 1;
+        if (prevBtn) prevBtn.hidden = !multi;
+        if (nextBtn) nextBtn.hidden = !multi;
+    };
+
+    const open = (index) => {
+        show(index);
+        overlay.hidden = false;
+        document.body.classList.add('haus-lightbox-open');
+        overlay.querySelector('[data-haus-lightbox-close]')?.focus();
+    };
+
+    const close = () => {
+        overlay.hidden = true;
+        document.body.classList.remove('haus-lightbox-open');
+        img.removeAttribute('src');
+    };
+
+    triggers.forEach((el, i) => {
+        el.addEventListener('click', () => open(i));
+    });
+
+    overlay.querySelectorAll('[data-haus-lightbox-close]').forEach((el) => {
+        el.addEventListener('click', close);
+    });
+    prevBtn?.addEventListener('click', () => show(activeIndex - 1));
+    nextBtn?.addEventListener('click', () => show(activeIndex + 1));
+
+    document.addEventListener('keydown', (event) => {
+        if (overlay.hidden) return;
+        if (event.key === 'Escape') close();
+        if (event.key === 'ArrowLeft') show(activeIndex - 1);
+        if (event.key === 'ArrowRight') show(activeIndex + 1);
     });
 }
 
