@@ -1,0 +1,67 @@
+{{# Project image gallery — Elementor-style strip: ~4 visible, prev/next
+    arrows, pagination dots. Clicking a thumbnail opens a lightbox (using
+    resolved imported-asset URLs so Cloud/S3 paths work). #}}
+{{ if gallery_images }}
+    <section class="bg-white py-8 md:py-10" aria-label="Project image gallery">
+        <div class="mx-auto max-w-[1170px] px-6 md:px-10">
+            <div class="relative px-10 md:px-0" data-haus-project-gallery>
+                <button
+                    type="button"
+                    class="flex absolute top-1/2 -translate-y-1/2 left-0 md:-left-2 lg:-left-6 z-10 w-9 h-9 md:w-10 md:h-10 items-center justify-center bg-white border border-haus-ink-200 shadow-sm hover:bg-haus-ink-50 transition disabled:opacity-40 disabled:pointer-events-none"
+                    data-haus-gallery-prev
+                    aria-label="Previous images"
+                >
+                    <svg class="w-3.5 h-3.5 text-[#4b4b4b]" viewBox="0 0 12 16" fill="none" aria-hidden="true">
+                        <path d="M9 1L2 8L9 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+
+                <div
+                    class="overflow-x-auto scrollbar-hide -mx-1 px-1"
+                    data-haus-gallery-track
+                    role="region"
+                    aria-label="Image carousel"
+                >
+                    <div class="flex flex-nowrap gap-3 md:gap-5" data-haus-gallery-items>
+                        {{ gallery_images }}
+                            <button
+                                type="button"
+                                class="group flex-shrink-0 w-[72%] sm:w-[48%] md:w-[calc((100%-3.75rem)/4)] aspect-[4/3] overflow-hidden bg-haus-ink-100 cursor-zoom-in focus:outline-none focus-visible:ring-2 focus-visible:ring-haus-amber-500"
+                                data-haus-gallery-item
+                                data-haus-gallery-index="{{ index }}"
+                                data-full-src="{{ if image }}{{ image:url }}{{ else }}{{ url | imported_asset_url }}{{ /if }}"
+                                aria-label="{{ if alt }}Open image: {{ alt }}{{ else }}Open gallery image {{ count }}{{ /if }}"
+                            >
+                                {{ partial:img :asset="image" :legacy_url="url" :alt="alt" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 pointer-events-none" :glide="false" loading="lazy" }}
+                            </button>
+                        {{ /gallery_images }}
+                    </div>
+                </div>
+
+                <button
+                    type="button"
+                    class="flex absolute top-1/2 -translate-y-1/2 right-0 md:-right-2 lg:-right-6 z-10 w-9 h-9 md:w-10 md:h-10 items-center justify-center bg-white border border-haus-ink-200 shadow-sm hover:bg-haus-ink-50 transition disabled:opacity-40 disabled:pointer-events-none"
+                    data-haus-gallery-next
+                    aria-label="Next images"
+                >
+                    <svg class="w-3.5 h-3.5 text-[#4b4b4b]" viewBox="0 0 12 16" fill="none" aria-hidden="true">
+                        <path d="M3 1L10 8L3 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="mt-5 flex items-center justify-center gap-2" data-haus-gallery-dots role="tablist" aria-label="Gallery pages">
+                {{ gallery_images }}
+                    <button
+                        type="button"
+                        class="w-1.5 h-1.5 rounded-full bg-haus-ink-300 transition"
+                        data-haus-gallery-dot
+                        data-haus-gallery-index="{{ index }}"
+                        aria-label="Go to image {{ count }}"
+                        {{ if first }}aria-current="true"{{ /if }}
+                    ></button>
+                {{ /gallery_images }}
+            </div>
+        </div>
+    </section>
+{{ /if }}

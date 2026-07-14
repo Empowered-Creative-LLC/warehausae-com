@@ -196,6 +196,86 @@
     .scrollbar-hide { scrollbar-width: none; -ms-overflow-style: none; }
     .scrollbar-hide::-webkit-scrollbar { display: none; }
 
+    /* Project gallery lightbox */
+    body.haus-lightbox-open { overflow: hidden; }
+    .haus-lightbox {
+        position: fixed;
+        inset: 0;
+        z-index: 80;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1.5rem;
+    }
+    .haus-lightbox[hidden] { display: none; }
+    .haus-lightbox__backdrop {
+        position: absolute;
+        inset: 0;
+        background: rgba(17, 17, 17, 0.88);
+        border: 0;
+        cursor: zoom-out;
+    }
+    .haus-lightbox__figure {
+        position: relative;
+        z-index: 1;
+        margin: 0;
+        max-width: min(1100px, 100%);
+        max-height: calc(100vh - 3rem);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.75rem;
+    }
+    .haus-lightbox__img {
+        display: block;
+        max-width: 100%;
+        max-height: calc(100vh - 5.5rem);
+        width: auto;
+        height: auto;
+        object-fit: contain;
+        box-shadow: 0 16px 48px rgba(0, 0, 0, 0.35);
+    }
+    .haus-lightbox__caption {
+        color: rgba(255, 255, 255, 0.85);
+        font-size: 0.875rem;
+        text-align: center;
+        max-width: 40rem;
+    }
+    .haus-lightbox__close,
+    .haus-lightbox__nav {
+        position: absolute;
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        transition: background 0.2s ease;
+    }
+    .haus-lightbox__close:hover,
+    .haus-lightbox__nav:hover {
+        background: rgba(255, 255, 255, 0.18);
+    }
+    .haus-lightbox__close {
+        top: 1rem;
+        right: 1rem;
+        width: 2.75rem;
+        height: 2.75rem;
+    }
+    .haus-lightbox__nav {
+        top: 50%;
+        transform: translateY(-50%);
+        width: 2.75rem;
+        height: 2.75rem;
+    }
+    .haus-lightbox__nav--prev { left: 1rem; }
+    .haus-lightbox__nav--next { right: 1rem; }
+    @media (max-width: 767px) {
+        .haus-lightbox__nav--prev { left: 0.5rem; }
+        .haus-lightbox__nav--next { right: 0.5rem; }
+    }
+
     /* Portfolio index (/portfolio/) — faded title, category nav, metro grid */
     .haus-portfolio-hero {
         padding-top: clamp(6.5rem, 14vw, 8.5rem);
