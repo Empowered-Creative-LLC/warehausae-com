@@ -33,6 +33,19 @@
     <div class="mx-auto max-w-[1170px] px-6 md:px-10 grid lg:grid-cols-[1.4fr_1fr] gap-12 lg:gap-16 items-start">
         <div data-haus-fade-in>
             {{ if lead_heading }}<h2 class="text-3xl md:text-[46px] font-bold text-[#4b4b4b] leading-[1.13]">{{ lead_heading }}</h2>{{ /if }}
+            {{ if industries }}
+                <ul class="mt-5 flex flex-wrap gap-2" aria-label="Industries">
+                    {{ industries }}
+                        <li>
+                            {{ if url }}
+                                <a href="{{ url }}" class="inline-block bg-haus-amber-500 text-white text-[11px] md:text-xs font-semibold uppercase tracking-[0.06em] px-2.5 py-1 hover:bg-haus-amber-600 transition">{{ label }}</a>
+                            {{ else }}
+                                <span class="inline-block bg-haus-amber-500 text-white text-[11px] md:text-xs font-semibold uppercase tracking-[0.06em] px-2.5 py-1">{{ label }}</span>
+                            {{ /if }}
+                        </li>
+                    {{ /industries }}
+                </ul>
+            {{ /if }}
             {{ if intro_prose }}<div class="mt-8 space-y-4 text-[#666] text-[17px] leading-[1.6]">{{ intro_prose | nl2br }}</div>{{ /if }}
         </div>
 
@@ -41,7 +54,7 @@
                 <div class="bg-[#e7e5e4] px-6 py-3">
                     <p class="text-[14px] font-bold tracking-[0.04em] text-[#4b4b4b]">Project Details</p>
                 </div>
-                <dl class="px-6 py-6 grid grid-cols-2 gap-x-6 gap-y-5 text-[13px]">
+                <dl class="px-6 py-6 grid grid-cols-2 gap-x-6 gap-y-5 text-[13px] items-start">
                     {{ if client }}
                         <div>
                             <dt class="uppercase tracking-[0.08em] text-[#888] font-semibold">Client</dt>
@@ -66,21 +79,22 @@
                             <dd class="mt-1 text-[#4b4b4b]">{{ services_provided }}{{ if first == false }},<br>{{ /if }}{{ label }}{{ /services_provided }}</dd>
                         </div>
                     {{ /if }}
-                    {{ if industries }}
-                        <div class="col-span-2">
-                            <dt class="uppercase tracking-[0.08em] text-[#888] font-semibold">Industries</dt>
-                            <dd class="mt-1 text-[#4b4b4b]">{{ industries }}{{ if first == false }}, {{ /if }}{{ label }}{{ /industries }}</dd>
-                        </div>
-                    {{ /if }}
-                    {{ if awards }}
-                        <div class="col-span-2">
-                            <dt class="uppercase tracking-[0.08em] text-[#888] font-semibold">Awards</dt>
-                            <dd class="mt-1 text-[#4b4b4b]">
-                                <ul class="space-y-1">{{ awards }}<li>{{ value }}</li>{{ /awards }}</ul>
-                            </dd>
-                        </div>
-                    {{ /if }}
                 </dl>
+                {{# Awards sit outside the 2-col meta grid so a tall Services
+                    list can’t leave a dead zone above them. #}}
+                {{ if awards }}
+                    <div class="border-t border-haus-ink-200/60 bg-[#faf9f8] px-6 py-5">
+                        <p class="uppercase tracking-[0.08em] text-haus-amber-600 text-[13px] font-semibold">Awards</p>
+                        <ul class="mt-3 space-y-2.5 text-[14px] text-[#4b4b4b] leading-snug">
+                            {{ awards }}
+                                <li class="flex gap-2.5">
+                                    <span aria-hidden="true" class="mt-1.5 w-1.5 h-1.5 shrink-0 rounded-full bg-haus-amber-500"></span>
+                                    <span>{{ value }}</span>
+                                </li>
+                            {{ /awards }}
+                        </ul>
+                    </div>
+                {{ /if }}
             </div>
         </aside>
     </div>

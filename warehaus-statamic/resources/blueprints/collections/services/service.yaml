@@ -90,12 +90,32 @@ tabs:
               type: textarea
               display: Intro Prose
               instructions: The paragraph(s) of body copy immediately after the lead heading, joined with double newlines.
+          - handle: capabilities_heading
+            field:
+              type: text
+              display: Capabilities Heading
+              instructions: Optional heading above the capabilities list in the lead aside (e.g. 'Leading-Edge Technology' on Structural).
+          - handle: capabilities_intro
+            field:
+              type: textarea
+              display: Capabilities Intro
+              instructions: Optional short copy under the capabilities heading, before the bullet list.
           - handle: capabilities
             field:
               type: list
               display: Capabilities
-              instructions: Bulleted capabilities/disciplines shown on the page, in order.
-              required: true
+              instructions: Flat bulleted capabilities (2-column CSS grid). Prefer capability_columns when live uses independent left/right stacks.
+          - handle: capability_columns
+            field:
+              type: grid
+              mode: stacked
+              fields:
+                - handle: items
+                  field:
+                    type: list
+                    display: Column Items
+              display: Capability Columns
+              instructions: Independent left/right capability stacks (matches live Civil page). When set, used instead of flat capabilities.
           - handle: approach_heading
             field:
               type: text
@@ -113,11 +133,57 @@ tabs:
               container: main
               folder: uploads/services
               max_files: 1
-              instructions: Full-bleed photograph between the lead block and the approach section.
+              instructions: Full-bleed photograph between the lead block and the approach section (used when photo_gallery is empty).
           - handle: mid_image_url
             field:
               type: text
               display: Mid-section Image URL (imported)
+          - handle: photo_gallery
+            field:
+              type: grid
+              mode: stacked
+              fields:
+                - handle: image
+                  field:
+                    type: assets
+                    display: Image
+                    container: main
+                    folder: uploads/services
+                    max_files: 1
+                - handle: image_url
+                  field:
+                    type: text
+                    display: Image URL (imported)
+              display: Mid-section Photo Gallery
+              instructions: Full-bleed Ken Burns slideshow between the lead block and approach section (matches live Architecture page).
+          - handle: spotlight_heading
+            field:
+              type: text
+              display: Spotlight Heading
+              instructions: Optional mid-page featured strip heading after the photo gallery (e.g. 'An Industrial Niche' on Structural).
+          - handle: spotlight_prose
+            field:
+              type: textarea
+              display: Spotlight Prose
+              instructions: Body copy for the spotlight strip. Markdown links are supported.
+          - handle: spotlight_logos
+            field:
+              type: grid
+              mode: stacked
+              fields:
+                - handle: image
+                  field:
+                    type: assets
+                    display: Logo
+                    container: main
+                    folder: uploads/services
+                    max_files: 1
+                - handle: image_url
+                  field:
+                    type: text
+                    display: Logo URL (imported)
+              display: Spotlight Logos
+              instructions: Optional autoplay logo carousel shown beside the spotlight prose (Structural industrial clients).
           - handle: approach_blocks
             field:
               type: grid
@@ -132,7 +198,34 @@ tabs:
                     type: textarea
                     display: Approach Blocks Body
               display: Approach Blocks
-              instructions: Sub-sections under the approach heading; typically 4 cards (e.g. Comprehensive Research, Community Feedback, Design Charettes, Concept Sketches).
+              instructions: Sub-sections under the approach heading; typically 4 cards (e.g. Comprehensive Research, Community Feedback, Design Charettes, Concept Sketches). When spotlight_projects is set, the approach heading/intro render beside that carousel instead.
+          - handle: spotlight_projects
+            field:
+              type: grid
+              mode: stacked
+              fields:
+                - handle: title
+                  field:
+                    type: text
+                    display: Title
+                - handle: url
+                  field:
+                    type: text
+                    display: URL
+                    instructions: Optional link to a project page (e.g. /project/george-spangler-farm/).
+                - handle: image
+                  field:
+                    type: assets
+                    display: Image
+                    container: main
+                    folder: uploads/projects
+                    max_files: 1
+                - handle: image_url
+                  field:
+                    type: text
+                    display: Image URL (imported)
+              display: Spotlight Project Carousel
+              instructions: Right-column project slides under the approach heading (matches live Historic Preservation Gettysburg section). When set, used instead of approach_blocks accordion.
           - handle: team_leaders
             field:
               type: grid

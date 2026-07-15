@@ -491,3 +491,45 @@
     .haus-portfolio-slideshow__slide { transition: none; }
     .haus-portfolio-slideshow__img { animation: none; }
 }
+
+/* Service spotlight logo carousel (Structural Industrial Niche) */
+.haus-logo-carousel__slide {
+    opacity: 0;
+    transition: opacity 0.6s ease-in-out;
+    pointer-events: none;
+}
+.haus-logo-carousel__slide.is-active {
+    opacity: 1;
+    z-index: 1;
+    pointer-events: auto;
+}
+@media (prefers-reduced-motion: reduce) {
+    .haus-logo-carousel__slide { transition: none; }
+}
+
+/* Service spotlight carousel (Historic Preservation Gettysburg section) */
+.haus-spotlight-slide {
+    opacity: 0;
+    transition: opacity 0.6s ease-in-out;
+    pointer-events: none;
+}
+.haus-spotlight-slide.is-active {
+    opacity: 1;
+    z-index: 1;
+    pointer-events: auto;
+}
+.haus-spotlight-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 9999px;
+    background: #c4c4c4;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+}
+.haus-spotlight-dot.is-active {
+    background: #4b4b4b;
+}
+@media (prefers-reduced-motion: reduce) {
+    .haus-spotlight-slide { transition: none; }
+}

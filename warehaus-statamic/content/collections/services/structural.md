@@ -17,8 +17,8 @@ intro_prose: >-
   Our Structural Engineering Team is integral to the project team, collaborating closely with architects, designers, and civil engineers from the start and during all phases of a project. Our scope of
   structural services includes design, coordination, inspection, rehabilitation, full documentation, and existing conditions evaluations. We can fully model structural design iterations, offering
   teams a complete picture of design options, cost implications, and project coordination tools from concept design through realization.
-
-
+capabilities_heading: Leading-Edge Technology
+capabilities_intro: >-
   A leader in Building Information Modeling (BIM), Warehaus believes in ongoing training with the most current software platforms available in the industry.
 capabilities:
   - Autodesk
@@ -27,7 +27,16 @@ capabilities:
   - Risa Suite of Design Software
   - RAM Steel/Structure
   - NewForma Project Management
-approach_heading: Leading-Edge Technology
+photo_gallery:
+  - image_url: /assets/imported/2023/05/YARCS-Upper-Schoo.l-10262018-05-of-05.jpg
+  - image_url: /assets/imported/2023/05/Mobile-Climate-Control-34-700x700.jpg
+  - image_url: /assets/imported/2023/09/Project_Holderness_Academic_Building_20210926_11-1-min.webp
+  - image_url: /assets/imported/2023/04/George_Spangler_Farm_20191101_0076.jpg
+  - image_url: /assets/imported/2023/05/Ollies-Bargain-Outlet_Professional-20101209_0019.jpg
+  - image_url: /assets/imported/2023/04/Phoenix-Contact-New-Distribution-Center_Professional-051714_0003-700x700.jpg
+spotlight_heading: An Industrial Niche
+spotlight_prose: >-
+  Our portfolio of industrial clients runs deep, and our [structural engineers](/team/derek-donnelly-pe/) have made contributions to hundreds of warehouse and distribution projects
 team_leaders:
   - name: Troy Bankert, AIA
     title: Co-Owner / President & Chief Executive Officer
@@ -42,26 +51,6 @@ team_leaders:
     linkedin_url: https://www.linkedin.com/in/derek-d-118612b3/
     email: ddonnelly@warehausae.com
 recent_projects:
-  - title: "Kaltreider-Benfer Library: York County Library"
-    url: /project/kaltreider-benfer-library-york-county-library/
-    categories:
-      - Architecture
-      - Civil
-      - Structural
-    image_url: /assets/imported/2024/09/Kaltreider-Benfer-DRONE-13-700x700.webp
-  - title: Gratz Bank Tower Repair
-    url: /project/gratz-bank-tower-repair/
-    categories:
-      - Architecture
-      - Structural
-    image_url: /assets/imported/2024/09/Screenshot-2024-09-17-083457-700x688.webp
-  - title: York College of Pennsylvania Northside Commons Addition
-    url: /project/york-college-of-pennsylvania-northside-commons-addition/
-    categories:
-      - Architecture
-      - Civil
-      - Structural
-    image_url: /assets/imported/2025/04/Northside-Commons-Before-04082025-15-700x700.webp
   - title: 1110 East Princess Street Office
     url: /project/1110-princess-street-office/
     categories:
@@ -105,7 +94,7 @@ recent_projects:
       - Architecture
       - Civil
       - Structural
-    image_url: /assets/imported/2023/04/Logos-Academy-20110505_0159-700x700.jpg
+    image_url: /assets/imported/2023/04/Logos-Academy-20110505_0159.jpg
   - title: Carlisle Barracks Restoration
     url: /project/carlisle-barracks-restoration/
     categories:
@@ -166,6 +155,26 @@ recent_projects:
       - Civil
       - Structural
     image_url: /assets/imported/2024/08/the-barn-resort-08152024-3-700x700.webp
+  - title: "Kaltreider-Benfer Library: York County Library"
+    url: /project/kaltreider-benfer-library-york-county-library/
+    categories:
+      - Architecture
+      - Civil
+      - Structural
+    image_url: /assets/imported/2024/09/Kaltreider-Benfer-DRONE-13-700x700.webp
+  - title: Gratz Bank Tower Repair
+    url: /project/gratz-bank-tower-repair/
+    categories:
+      - Architecture
+      - Structural
+    image_url: /assets/imported/2024/09/Screenshot-2024-09-17-083457-700x688.webp
+  - title: York College of Pennsylvania Northside Commons Addition
+    url: /project/york-college-of-pennsylvania-northside-commons-addition/
+    categories:
+      - Architecture
+      - Civil
+      - Structural
+    image_url: /assets/imported/2025/04/Northside-Commons-Before-04082025-15-700x700.webp
 hero_image_url: /assets/imported/2023/09/Project_Holderness_Academic_Building_20210926_11-1-min.webp
 seo_title: Structural Engineering | Warehaus
 seo_description: Offering comprehensive structural engineering services, Warehaus excels in design, coordination, inspection, and rehabilitation for various projects.

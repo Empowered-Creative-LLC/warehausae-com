@@ -16,27 +16,84 @@
             {{ /if }}
             {{ if intro_prose }}<div class="mt-8 space-y-4 text-[#666] text-[17px] leading-[1.6]">{{ intro_prose | nl2br }}</div>{{ /if }}
         </div>
-        {{ if capabilities }}
+        {{ if capability_columns || capabilities || capabilities_heading }}
             <aside class="rounded border border-haus-ink-200/60 shadow-sm bg-white p-6 lg:p-8">
-                <ul class="grid sm:grid-cols-2 gap-x-6 gap-y-3 text-[15px] text-[#4b4b4b]">
-                    {{ capabilities }}
-                        <li class="pl-7 relative leading-snug">
-                            <span aria-hidden="true" class="absolute left-0 top-0.5 w-4 h-4 rounded-full bg-haus-amber-500 text-white inline-flex items-center justify-center text-[10px] font-bold leading-none">&#10003;</span>
-                            {{ value }}
-                        </li>
-                    {{ /capabilities }}
-                </ul>
+                {{ if capabilities_heading }}
+                    <h3 class="text-xl md:text-[22px] font-bold text-[#4b4b4b] leading-snug">{{ capabilities_heading }}</h3>
+                    {{ if capabilities_intro }}
+                        <p class="mt-3 text-[#666] text-[15px] leading-[1.6]">{{ capabilities_intro }}</p>
+                    {{ /if }}
+                {{ /if }}
+                {{# Prefer independent column stacks (matches live Elementor
+                    two-widget layout) so a tall item cannot stretch a row and
+                    leave the next bullet stranded below a gap. #}}
+                {{ if capability_columns }}
+                    <div class="{{ if capabilities_heading }}mt-5 {{ /if }}grid sm:grid-cols-2 gap-x-6 gap-y-3 text-[15px] text-[#4b4b4b]">
+                        {{ capability_columns }}
+                            <ul class="space-y-3">
+                                {{ items }}
+                                    <li class="pl-7 relative leading-snug">
+                                        <span aria-hidden="true" class="absolute left-0 top-0.5 w-4 h-4 rounded-full bg-haus-amber-500 text-white inline-flex items-center justify-center text-[10px] font-bold leading-none">&#10003;</span>
+                                        {{ value }}
+                                    </li>
+                                {{ /items }}
+                            </ul>
+                        {{ /capability_columns }}
+                    </div>
+                {{ elseif capabilities }}
+                    <ul class="{{ if capabilities_heading }}mt-5 {{ /if }}grid sm:grid-cols-2 gap-x-6 gap-y-3 items-start text-[15px] text-[#4b4b4b]">
+                        {{ capabilities }}
+                            <li class="pl-7 relative leading-snug self-start">
+                                <span aria-hidden="true" class="absolute left-0 top-0.5 w-4 h-4 rounded-full bg-haus-amber-500 text-white inline-flex items-center justify-center text-[10px] font-bold leading-none">&#10003;</span>
+                                {{ value }}
+                            </li>
+                        {{ /capabilities }}
+                    </ul>
+                {{ /if }}
             </aside>
         {{ /if }}
     </div>
 </section>
 
-{{# Mid-page photo strip — matches the full-bleed image between the lead
-    block and the approach section on live. Uses a field on the entry if
-    set; otherwise falls back to a generic project photo. #}}
-{{ if mid_image || mid_image_url }}
+{{# Mid-page photo strip — Elementor-style Ken Burns slideshow when
+    photo_gallery is set; otherwise a single full-bleed image. #}}
+{{ if photo_gallery }}
+    {{ partial:portfolio_photo_slideshow }}
+{{ elseif mid_image || mid_image_url }}
     <section class="bg-haus-ink-900">
         {{ partial:img :asset="mid_image" :legacy_url="mid_image_url" class="w-full h-[420px] md:h-[540px] object-cover" :glide="false" }}
+    </section>
+{{ /if }}
+
+{{# Optional logo-spotlight strip (Structural "An Industrial Niche") —
+    heading + prose + optional client logo carousel. Separate from
+    Historic's spotlight_projects project carousel. #}}
+{{ if spotlight_heading || spotlight_prose || spotlight_logos }}
+    <section class="bg-white py-16 md:py-24">
+        <div class="mx-auto max-w-[1170px] px-6 md:px-10 grid lg:grid-cols-[1.15fr_1fr] gap-10 lg:gap-14 items-center">
+            <div>
+                {{ if spotlight_heading }}
+                    <h2 class="text-3xl md:text-[46px] font-bold text-[#4b4b4b] leading-[1.13]">{{ spotlight_heading }}</h2>
+                    <div class="mt-4 w-[60px] h-[3px] bg-haus-amber-500"></div>
+                {{ /if }}
+                {{ if spotlight_prose }}
+                    <div class="mt-8 text-[#666] text-[17px] leading-[1.6] [&_a]:text-haus-amber-700 [&_a]:underline hover:[&_a]:text-haus-amber-600">{{ spotlight_prose | markdown }}</div>
+                {{ /if }}
+            </div>
+            {{ if spotlight_logos }}
+                <div
+                    class="relative w-full max-w-[466px] mx-auto lg:mx-0 aspect-[466/280] overflow-hidden"
+                    data-haus-logo-carousel
+                    aria-label="Client logo carousel"
+                >
+                    {{ spotlight_logos }}
+                        <div class="haus-logo-carousel__slide absolute inset-0 flex items-center justify-center p-6{{ if first }} is-active{{ /if }}" data-haus-logo-slide>
+                            {{ partial:img :asset="image" :legacy_url="image_url" class="max-w-full max-h-full object-contain" :glide="false" alt="" }}
+                        </div>
+                    {{ /spotlight_logos }}
+                </div>
+            {{ /if }}
+        </div>
     </section>
 {{ /if }}
 
@@ -46,10 +103,43 @@
     {{ partial:civil_engineers_map }}
 {{ /if }}
 
-{{# Approach section — matches live: 2-column with heading + intro on the
-    left, accordion of approach blocks on the right. First item is open by
-    default; the rest collapse behind a + indicator. #}}
-{{ if approach_blocks }}
+{{# Approach / spotlight — Architecture-style accordion when approach_blocks
+    is set; Historic Gettysburg-style heading+intro | project slides when
+    spotlight_projects is set. #}}
+{{ if spotlight_projects }}
+    <section class="bg-white py-16 md:py-24">
+        <div class="mx-auto max-w-[1170px] px-6 md:px-10 grid lg:grid-cols-[1.15fr_0.9fr] gap-10 lg:gap-14 items-center">
+            <div>
+                {{ if approach_heading }}
+                    <h2 class="text-3xl md:text-[46px] font-bold text-[#4b4b4b] leading-[1.13]">{{ approach_heading }}</h2>
+                    <div class="mt-4 w-[60px] h-[3px] bg-haus-amber-500"></div>
+                {{ /if }}
+                {{ if approach_intro_prose }}
+                    <div class="mt-8 space-y-4 text-[#666] text-[17px] leading-[1.6] [&_a]:text-haus-amber-500 [&_a]:font-semibold hover:[&_a]:text-haus-amber-600">{{ approach_intro_prose | raw }}</div>
+                {{ /if }}
+            </div>
+            <div class="relative" data-haus-spotlight-carousel aria-roledescription="carousel" aria-label="{{ approach_heading ?? 'Featured projects' }}">
+                <div class="relative h-[320px] sm:h-[400px] overflow-hidden bg-haus-ink-800">
+                    {{ spotlight_projects }}
+                        <div class="haus-spotlight-slide absolute inset-0{{ if first }} is-active{{ /if }}" data-haus-spotlight-slide{{ if url }} data-url="{{ url }}"{{ /if }}>
+                            {{ if url }}
+                                <a href="{{ url }}" class="absolute inset-0 z-10" aria-label="{{ title }}"></a>
+                            {{ /if }}
+                            {{ partial:img :asset="image" :legacy_url="image_url" :alt="title" class="absolute inset-0 w-full h-full object-cover" :glide="false" loading="lazy" }}
+                            <div class="absolute inset-0 bg-black/30 pointer-events-none"></div>
+                            <div class="absolute inset-x-0 bottom-0 pb-8 px-6 text-center pointer-events-none">
+                                <p class="text-white text-[18px] md:text-[22px] font-bold leading-snug">{{ title }}</p>
+                            </div>
+                        </div>
+                    {{ /spotlight_projects }}
+                    <button type="button" data-haus-spotlight-prev class="absolute left-2 top-1/2 -translate-y-1/2 z-20 w-10 h-10 flex items-center justify-center text-white text-2xl leading-none hover:text-haus-amber-500 transition" aria-label="Previous slide">&#8249;</button>
+                    <button type="button" data-haus-spotlight-next class="absolute right-2 top-1/2 -translate-y-1/2 z-20 w-10 h-10 flex items-center justify-center text-white text-2xl leading-none hover:text-haus-amber-500 transition" aria-label="Next slide">&#8250;</button>
+                </div>
+                <div class="mt-4 flex justify-center gap-2" data-haus-spotlight-dots role="tablist" aria-label="Slide pagination"></div>
+            </div>
+        </div>
+    </section>
+{{ elseif approach_blocks }}
     <section class="bg-white py-16 md:py-24">
         <div class="mx-auto max-w-[1170px] px-6 md:px-10 grid lg:grid-cols-[1fr_1.2fr] gap-12 lg:gap-20 items-start">
             <div>
