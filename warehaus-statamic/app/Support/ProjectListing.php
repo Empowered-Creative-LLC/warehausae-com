@@ -54,16 +54,51 @@ class ProjectListing
     }
 
     /**
+     * @param  list<string>  $baselineUrls
      * @return Collection<int, Entry>
      */
-    public static function forService(string $serviceSlug, ?string $serviceUrl = null, int $limit = 96): Collection
-    {
+    public static function forService(
+        string $serviceSlug,
+        ?string $serviceUrl = null,
+        int $limit = 96,
+        array $baselineUrls = [],
+    ): Collection {
         $serviceUrl ??= '/services/'.$serviceSlug.'/';
+        $baselineKeys = self::normalizedUrlKeys($baselineUrls);
 
-        return self::baseQuery()
-            ->filter(fn (Entry $entry) => self::entryMatchesService($entry, $serviceSlug, $serviceUrl))
-            ->take($limit)
-            ->values();
+        $matched = self::baseQuery()
+            ->filter(function (Entry $entry) use ($serviceSlug, $serviceUrl, $baselineKeys) {
+                if (isset($baselineKeys[self::normalizePath((string) $entry->url())])) {
+                    return true;
+                }
+
+                return self::entryMatchesService($entry, $serviceSlug, $serviceUrl);
+            });
+
+        if ($baselineKeys !== []) {
+            $matchedIds = $matched->mapWithKeys(fn (Entry $entry) => [$entry->id() => true]);
+
+            $baselineOnly = EntryFacade::query()
+                ->where('collection', 'projects')
+                ->where('published', true)
+                ->get()
+                ->reject(fn (Entry $entry) => self::isEditorTemplateEntry($entry))
+                ->filter(function (Entry $entry) use ($baselineKeys, $matchedIds) {
+                    if (isset($matchedIds[$entry->id()])) {
+                        return false;
+                    }
+
+                    return isset($baselineKeys[self::normalizePath((string) $entry->url())]);
+                });
+
+            $matched = $matched->concat($baselineOnly);
+
+            return $matched->pipe(
+                fn (Collection $entries) => self::sortPortfolioCategoryCarousel($entries, $baselineUrls, $limit)
+            );
+        }
+
+        return $matched->take($limit)->values();
     }
 
     /**

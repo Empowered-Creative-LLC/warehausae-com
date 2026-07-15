@@ -21,6 +21,8 @@ document.addEventListener('DOMContentLoaded', () => {
     initMissionTypewriter();
     initPortfolioLoadMore();
     initPortfolioSlideshows();
+    initSpotlightCarousels();
+    initLogoCarousels();
 });
 
 /**
@@ -744,5 +746,83 @@ function initPortfolioSlideshows() {
         setInterval(() => {
             show((index + 1) % slides.length);
         }, 5000);
+    });
+}
+
+/**
+ * Service spotlight carousel — heading+intro | project slides (Historic
+ * Preservation Gettysburg section on warehausae.com).
+ */
+function initSpotlightCarousels() {
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    document.querySelectorAll('[data-haus-spotlight-carousel]').forEach((root) => {
+        const slides = [...root.querySelectorAll('[data-haus-spotlight-slide]')];
+        if (slides.length < 2) return;
+
+        const dotsWrap = root.querySelector('[data-haus-spotlight-dots]');
+        const prevBtn = root.querySelector('[data-haus-spotlight-prev]');
+        const nextBtn = root.querySelector('[data-haus-spotlight-next]');
+        let index = Math.max(0, slides.findIndex((s) => s.classList.contains('is-active')));
+        let timer = null;
+
+        const dots = slides.map((_, i) => {
+            const btn = document.createElement('button');
+            btn.type = 'button';
+            btn.className = 'haus-spotlight-dot' + (i === index ? ' is-active' : '');
+            btn.setAttribute('aria-label', `Go to slide ${i + 1}`);
+            btn.addEventListener('click', () => show(i, true));
+            dotsWrap?.appendChild(btn);
+            return btn;
+        });
+
+        const show = (next, userAction = false) => {
+            slides[index].classList.remove('is-active');
+            dots[index]?.classList.remove('is-active');
+            index = (next + slides.length) % slides.length;
+            slides[index].classList.add('is-active');
+            dots[index]?.classList.add('is-active');
+            if (userAction) restart();
+        };
+
+        const restart = () => {
+            if (reducedMotion) return;
+            clearInterval(timer);
+            timer = setInterval(() => show(index + 1), 5000);
+        };
+
+        prevBtn?.addEventListener('click', () => show(index - 1, true));
+        nextBtn?.addEventListener('click', () => show(index + 1, true));
+
+        root.addEventListener('mouseenter', () => clearInterval(timer));
+        root.addEventListener('mouseleave', () => restart());
+
+        restart();
+    });
+}
+
+/**
+ * Service spotlight logo carousel — fades between client logos beside the
+ * "An Industrial Niche" style spotlight strip (~1.45s cadence on live).
+ */
+function initLogoCarousels() {
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    document.querySelectorAll('[data-haus-logo-carousel]').forEach((root) => {
+        const slides = [...root.querySelectorAll('[data-haus-logo-slide]')];
+        if (slides.length < 2) return;
+
+        let index = 0;
+        const show = (next) => {
+            slides[index].classList.remove('is-active');
+            index = next;
+            slides[index].classList.add('is-active');
+        };
+
+        if (reducedMotion) return;
+
+        setInterval(() => {
+            show((index + 1) % slides.length);
+        }, 1450);
     });
 }

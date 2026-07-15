@@ -30,7 +30,7 @@
 {{ /if }}
 
 {{# "Join Our Team" — open positions rendered as a two-column card grid,
-    mirroring the live warehausae.com/careers layout (amber date + time meta,
+    mirroring the live warehausae.com/careers layout (amber date meta,
     role blurb, amber "More" button, divider under each card). Auto-populated
     from the job_postings collection, so new postings appear automatically. #}}
 <section class="container-haus py-16 md:py-24">
@@ -43,20 +43,12 @@
         {{ if first }}<div class="mt-12 grid gap-x-12 md:grid-cols-2 max-w-5xl mx-auto">{{ /if }}
             <article class="flex flex-col py-8 border-b border-haus-ink-200">
                 <h3 class="text-xl md:text-2xl font-medium tracking-tight text-haus-ink-800">{{ title }}</h3>
-                {{ if posted_date || posted_time }}
-                    <div class="mt-3 flex flex-wrap items-center gap-x-5 gap-y-1 text-sm">
-                        {{ if posted_date }}
-                            <a href="{{ url }}" class="inline-flex items-center gap-2 text-haus-amber-600 hover:text-haus-amber-700 transition">
-                                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 8.25h18M4.5 5.25h15A1.5 1.5 0 0 1 21 6.75v12A1.5 1.5 0 0 1 19.5 20.25h-15A1.5 1.5 0 0 1 3 18.75v-12A1.5 1.5 0 0 1 4.5 5.25Z"/></svg>
-                                <span>{{ posted_date }}</span>
-                            </a>
-                        {{ /if }}
-                        {{ if posted_time }}
-                            <span class="inline-flex items-center gap-2 text-haus-ink-500">
-                                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
-                                <span>{{ posted_time }}</span>
-                            </span>
-                        {{ /if }}
+                {{ if posted_date }}
+                    <div class="mt-3 text-sm">
+                        <a href="{{ url }}" class="inline-flex items-center gap-2 text-haus-amber-600 hover:text-haus-amber-700 transition">
+                            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 8.25h18M4.5 5.25h15A1.5 1.5 0 0 1 21 6.75v12A1.5 1.5 0 0 1 19.5 20.25h-15A1.5 1.5 0 0 1 3 18.75v-12A1.5 1.5 0 0 1 4.5 5.25Z"/></svg>
+                            <span>{{ posted_date }}</span>
+                        </a>
                     </div>
                 {{ /if }}
                 {{ if overview }}<p class="mt-4 text-haus-ink-600 leading-relaxed">{{ overview }}</p>{{ /if }}
