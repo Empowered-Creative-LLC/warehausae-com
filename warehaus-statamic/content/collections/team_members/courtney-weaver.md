@@ -30,6 +30,7 @@ education: Weaver holds a Bachelor of Science in Accounting from Pennsylvania St
 contact_blurb: Have a project with architectural needs? Connect with Matt to discuss.
 email: cweaver@warehausae.com
 phone: (717) 644-1029
+linkedin_url: https://www.linkedin.com/in/courtneyweaver22/
 seo_title: Courtney Weaver - CFO - Warehaus
 seo_description: Courtney Weaver is the Chief Financial Officer at Warehaus, overseeing financial strategy and corporate accounting.
 seo_og_image_url: /assets/imported/2026/03/O39A1948-1024x683.jpg
