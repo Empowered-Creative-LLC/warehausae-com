@@ -11,7 +11,7 @@ hero_overlay_heading: Design Your Project With a Partner You Can Trust.
 hero_overlay_subheading: >-
   Integrated architecture and engineering solutions serving York, Central Pennsylvania, and surrounding communities.
 hero_cta_text: "START YOUR PROJECT"
-hero_cta_url: "/contact/"
+hero_cta_url: "mailto:info@warehausae.com"
 hero_image_url: /assets/imported/2023/03/Warehaus-Headquarters-05_2014-0437.jpg
 services_strip:
   - label: Architecture
