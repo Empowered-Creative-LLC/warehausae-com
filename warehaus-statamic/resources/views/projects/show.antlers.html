@@ -118,14 +118,14 @@
             {{ /if }}
             {{ if narrative:we_design }}
                 <div class="grid md:grid-cols-2 gap-10 lg:gap-16 items-center" data-haus-fade-in>
+                    {{ if gallery_images:2:image || gallery_images:2:url }}
+                        {{ partial:img :asset="gallery_images:2:image" :legacy_url="gallery_images:2:url" class="w-full object-cover aspect-[3/2] md:order-1" :glide="false" }}
+                    {{ /if }}
                     <div class="md:order-2">
                         <h3 class="text-[34px] md:text-[42px] font-light text-[#4b4b4b] leading-tight">We design.</h3>
                         <div class="mt-3 w-[60px] h-[3px] bg-haus-amber-500"></div>
                         <div class="mt-6 text-[#666] text-[17px] leading-[1.6] space-y-4">{{ narrative:we_design | nl2br }}</div>
                     </div>
-                    {{ if gallery_images:2:image || gallery_images:2:url }}
-                        {{ partial:img :asset="gallery_images:2:image" :legacy_url="gallery_images:2:url" class="w-full object-cover aspect-[3/2] md:order-1" :glide="false" }}
-                    {{ /if }}
                 </div>
             {{ /if }}
             {{ if narrative:we_deliver }}
