@@ -56,7 +56,7 @@ team_spotlights:
       SEO# 04183
     headshot_url: /assets/imported/2025/02/Stone-Stephen.webp
     blurb: >-
-      Warehaus offers SEO capabilities through Stephen Stone, EIT, a valued member of the Warehaus team.
+      Warehaus offers SEO capabilities through Stephen Stone, PE, a valued member of the Warehaus team.
 
 
       Stephen brings extensive civil engineering expertise and a strong commitment to public health, complementing Warehaus’s 45 years of experience delivering civil engineering solutions across

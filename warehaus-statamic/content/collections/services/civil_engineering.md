@@ -67,7 +67,7 @@ team_leaders:
     headshot_url: /assets/imported/2024/05/Stough-Jeff-1024x1024.jpg
     linkedin_url: https://www.linkedin.com/in/jeffstough/
     email: jstough@warehausae.com
-  - name: Stephen Stone, EIT
+  - name: Stephen Stone, PE
     title: Civil Designer and Sewage Enforcement Officer
     team_url: /team/seo-stephenstone/
     headshot_url: /assets/imported/2025/02/Stone-Stephen.webp
