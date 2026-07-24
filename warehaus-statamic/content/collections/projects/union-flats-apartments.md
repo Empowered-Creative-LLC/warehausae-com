@@ -27,13 +27,13 @@ services_provided:
 industries:
   - label: Multi-Family
     url: /multi-family/
-hero_image_url: /assets/imported/2023/03/Union-Flats-Luxury-Apartments-in-Mechanicsburg-PA.jpg
+hero_image_url: /assets/imported/2023/03/Union-Flats-131082.jpg
 gallery_images:
   - url: /assets/imported/2023/03/Union-Flats-1310823.jpg
     alt: Billiards Room in Union Flats Apartments
   - url: /assets/imported/2023/03/Union-Flats-1310822.jpg
     alt: Sought-After Amenities in Union Flats Apartments
-  - url: /assets/imported/2023/03/Union-Flats-Luxury-Apartments-in-Mechanicsburg-PA.jpg
+  - url: /assets/imported/2023/03/Union-Flats-131082.jpg
     alt: Union Flats Luxury Apartments in Mechanicsburg, PA
   - url: /assets/imported/2023/03/Union-Flats-131082.jpg
     alt: Union Flats Luxury Apartments in Mechanicsburg, PA
@@ -104,5 +104,5 @@ related_projects:
 is_test_fits_subpage: false
 seo_title: Union Flats Apartments
 seo_description: Union Flats has set a new standard for apartments in Mechanicsburg, PA.
-seo_og_image_url: /assets/imported/2023/03/Union-Flats-Luxury-Apartments-in-Mechanicsburg-PA.jpg
+seo_og_image_url: /assets/imported/2023/03/Union-Flats-131082.jpg
 ---
