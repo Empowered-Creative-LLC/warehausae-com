@@ -96,7 +96,7 @@ related_projects:
     url: /project/martin-brownstone-restoration/
     categories:
       - Architecture
-      - Interiors
+      - Historic
     image_url: /assets/imported/2023/04/Martin_Brownstone_After_1-700x700.jpg
 is_test_fits_subpage: false
 seo_title: St. Paul Evangelical Lutheran Church | Warehaus

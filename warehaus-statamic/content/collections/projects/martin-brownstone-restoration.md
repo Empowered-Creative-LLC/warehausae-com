@@ -28,8 +28,8 @@ completion_date: "2017"
 services_provided:
   - label: Architecture
     url: /services/architecture/
-  - label: Interiors
-    url: /services/interiors/
+  - label: Historic
+    url: /services/historic/
 industries:
   - label: Building Sciences
     url: /building-sciences/

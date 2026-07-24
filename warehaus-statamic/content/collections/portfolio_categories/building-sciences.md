@@ -72,7 +72,7 @@ recent_projects:
     url: /project/martin-brownstone-restoration/
     categories:
       - Architecture
-      - Interiors
+      - Historic
     image_url: /assets/imported/2023/04/Martin_Brownstone_After_1-700x700.jpg
   - title: St. Paul Evangelical Lutheran Church
     url: /project/st-paul-evangelical-lutheran-church/

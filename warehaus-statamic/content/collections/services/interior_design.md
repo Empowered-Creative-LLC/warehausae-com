@@ -214,12 +214,6 @@ recent_projects:
       - Architecture
       - Interiors
     image_url: /assets/imported/2023/04/JCC-6_10_21-EDITED-08.jpg
-  - title: Martin Brownstone
-    url: /project/martin-brownstone-restoration/
-    categories:
-      - Architecture
-      - Interiors
-    image_url: /assets/imported/2023/04/Martin_Brownstone_After_1-700x700.jpg
   - title: Holderness School Davis Center
     url: /project/holderness-school-davis-center/
     categories:
