@@ -105,9 +105,10 @@ return [
 
     'custom_cms_name' => env('STATAMIC_CUSTOM_CMS_NAME', 'Warehaus'),
 
+    // Light UI (sign-in / light theme): black wordmark. Dark UI: white wordmark.
     'custom_logo_url' => env('STATAMIC_CUSTOM_LOGO_URL') ?: [
-        'nav' => '/assets/brand/warehaus-logo.png',
-        'outside' => '/assets/brand/warehaus-logo.png',
+        'nav' => '/assets/brand/warehaus-logo-black.png',
+        'outside' => '/assets/brand/warehaus-logo-black.png',
     ],
 
     'custom_dark_logo_url' => env('STATAMIC_CUSTOM_DARK_LOGO_URL') ?: [

@@ -72,7 +72,7 @@ recent_projects:
     url: /project/martin-brownstone-restoration/
     categories:
       - Architecture
-      - Interiors
+      - Historic
     image_url: /assets/imported/2023/04/Martin_Brownstone_After_2.jpg
   - title: St. Paul Evangelical Lutheran Church
     url: /project/st-paul-evangelical-lutheran-church/
@@ -96,6 +96,11 @@ recent_projects:
       - Architecture
       - Structural
     image_url: /assets/imported/2024/09/Screenshot-2024-09-17-083457-700x688.webp
+photo_gallery:
+  - image_url: /assets/imported/2023/04/University-of-Maryland-Faculty-Physicians-Inc-082013_00006.jpg
+  - image_url: /assets/imported/2023/04/DSC02854.jpg
+  - image_url: /assets/imported/2023/04/1895_Federal_Building_2.jpg
+  - image_url: /assets/imported/2023/04/The-Lancaster-County-Courthouse-093014_0007.jpg
 hero_image_url: /assets/imported/2023/03/Warehaus-Headquarters-05_2014-0289.jpg
 seo_title: Building Sciences | Warehaus
 seo_description: Discover Warehaus' approach to building sciences, focusing on repair, restoration, and architectural services.

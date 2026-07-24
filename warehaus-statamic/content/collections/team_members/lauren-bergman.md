@@ -26,6 +26,7 @@ education: With a degree in Advertising and a specialty in Psychology from Penn 
 contact_blurb: For media or employment inquiries, connect with Lauren.
 email: lbergman@warehausae.com
 phone: (717) 815-8517
+linkedin_url: https://www.linkedin.com/in/laurenbergman/
 seo_title: Lauren Bergman | Warehaus
 seo_description: Meet Lauren Bergman, Chief Marketing and Employee Engagement Officer at Warehaus, bringing 20 years of experience in diverse communications and marketing strategies.
 seo_og_image_url: /assets/imported/2024/01/Bergman-Lauren-1.webp

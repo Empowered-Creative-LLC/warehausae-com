@@ -5,7 +5,7 @@
       3. Mission band — dark charcoal, large Poppins mixed solid/outline text
       4. Featured Projects — 3×2 grid with image overlay captions + ALL PROJECTS link
       5. News & Announcements — 4 horizontal news cards + ALL NEWS link
-      6. Culture — heading + body + CTA + Lottie grill + 3 photos
+      6. Culture — heading + body + CTA + grill illustration + 3 photos
 #}}
 
 <style>
@@ -189,11 +189,47 @@
     .haus-amber-btn:hover { background-color: #e08900; }
 </style>
 
-{{# ── 1. HERO — centered layout ───────────────────────────────── #}}
-<section class="relative overflow-hidden bg-haus-ink-900 text-white" style="height:90vh;min-height:600px;">
-    {{ if hero_image || hero_image_url }}
-        {{ partial:img :asset="hero_image" :legacy_url="hero_image_url" class="absolute inset-0 w-full h-full object-cover object-center" fetchpriority="high" }}
-    {{ /if }}
+{{# ── 1. HERO — centered layout, rotating background per session ── #}}
+<section
+    id="haus-home-hero"
+    class="relative overflow-hidden bg-haus-ink-900 text-white"
+    style="height:90vh;min-height:600px;"
+    data-hero-images='{{ "" | home_hero_rotation }}'
+>
+    <div
+        data-haus-home-hero-bg
+        class="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        role="img"
+        aria-label="Warehaus project photography"
+    ></div>
+    <script>
+        (function () {
+            var section = document.currentScript.parentElement;
+            var images = JSON.parse(section.getAttribute('data-hero-images') || '[]');
+            if (!images.length) return;
+
+            var indexKey = 'hausHomeHeroIndex';
+            var sessionKey = 'hausHomeHeroSet';
+            var index;
+
+            try {
+                if (!sessionStorage.getItem(sessionKey)) {
+                    var last = parseInt(localStorage.getItem(indexKey) ?? '-1', 10);
+                    index = (last + 1) % images.length;
+                    localStorage.setItem(indexKey, String(index));
+                    sessionStorage.setItem(sessionKey, '1');
+                } else {
+                    index = parseInt(localStorage.getItem(indexKey) ?? '0', 10);
+                    if (Number.isNaN(index) || index < 0 || index >= images.length) index = 0;
+                }
+            } catch (e) {
+                index = 0;
+            }
+
+            var bg = section.querySelector('[data-haus-home-hero-bg]');
+            if (bg) bg.style.backgroundImage = 'url("' + images[index] + '")';
+        })();
+    </script>
     {{# Uniform dark overlay across the full photo #}}
     <div class="absolute inset-0" style="background:rgba(0,0,0,0.52);"></div>
 
@@ -216,40 +252,37 @@
 </section>
 
 {{# ── 2. SERVICES STRIP — circular icons + hover image panel ──── #}}
-{{ collection:services show_on_homepage_strip:is="true" sort="nav_order:asc|title:asc" as="homepage_services" }}
-{{ if homepage_services }}
+{{# Labels/icons come from the homepage entry's services_strip grid so copy
+    updates deploy with home.md (not only the services collection nav_label). #}}
+{{ if services_strip }}
 <section class="bg-white border-b border-haus-ink-100 overflow-visible" style="position:relative;z-index:10;">
     <div class="container-haus">
         <div class="haus-services-row">
-            {{ homepage_services }}
-                <a href="{{ url }}" class="haus-service-item" aria-label="{{ nav_label ?? service_name | title }}">
-                    {{# Circle contains both the icon (default) and the hover photo (fades in) #}}
+            {{ services_strip }}
+                <a href="{{ url }}" class="haus-service-item" aria-label="{{ label }}">
                     <div class="svc-circle">
-                        {{# Icon layer — fades out on hover #}}
-                        {{ if strip_icon_url }}
+                        {{ if icon_url }}
                             <div class="svc-icon">
-                                <img src="{{ strip_icon_url | imported_asset_url }}" alt="" aria-hidden="true">
+                                <img src="{{ icon_url | imported_asset_url }}" alt="" aria-hidden="true">
                             </div>
-                        {{ elseif strip_icon }}
+                        {{ elseif icon }}
                             <div class="svc-icon">
-                                {{ partial:img :asset="strip_icon" class="w-full h-full object-contain" :glide="false" alt="" }}
+                                {{ partial:img :asset="icon" class="w-full h-full object-contain" :glide="false" alt="" }}
                             </div>
                         {{ /if }}
-                        {{# Photo layer — fades in on hover, fills the circle #}}
-                        {{ if strip_hover_image || strip_hover_image_url }}
+                        {{ if hover_image_url || hover_image }}
                             <div class="svc-hover-img">
-                                {{ partial:img :asset="strip_hover_image" :legacy_url="strip_hover_image_url" :alt="nav_label ?? service_name | title" class="w-full h-full object-cover" :glide="false" loading="lazy" }}
+                                {{ partial:img :asset="hover_image" :legacy_url="hover_image_url" :alt="label" class="w-full h-full object-cover" :glide="false" loading="lazy" }}
                             </div>
                         {{ /if }}
                     </div>
-                    <span class="svc-label">{{ nav_label ?? service_name | title }}</span>
+                    <span class="svc-label">{{ label }}</span>
                 </a>
-            {{ /homepage_services }}
+            {{ /services_strip }}
         </div>
     </div>
 </section>
 {{ /if }}
-{{ /collection:services }}
 
 {{# ── 3. MISSION BAND ─────────────────────────────────────────────── #}}
 <section class="py-12 md:py-16 bg-white">
@@ -278,9 +311,9 @@
     <div class="container-haus">
         <h2 class="haus-section-heading text-3xl md:text-4xl font-bold text-haus-ink-800 leading-tight">Featured Projects</h2>
         <div class="haus-section-divider"></div>
-        <div class="grid grid-cols-3 grid-rows-2 gap-px bg-gray-300">
+        <div class="grid grid-cols-1 md:grid-cols-3 md:grid-rows-2 gap-px bg-gray-300">
             {{ featured_projects }}
-                <a href="{{ url }}" class="haus-proj-card" style="aspect-ratio:4/3;">
+                <a href="{{ url }}" class="haus-proj-card aspect-[4/3]">
                     {{ if image || image_url }}
                         {{ partial:img :asset="image" :legacy_url="image_url" :alt="title" class="absolute inset-0 w-full h-full object-cover" :glide="false" loading="lazy" }}
                     {{ /if }}
@@ -382,10 +415,27 @@
     }
     .cult-p-1, .cult-p-2, .cult-p-4, .cult-p-5 { aspect-ratio: 4/3; }
     .cult-p-3 { aspect-ratio: auto; }
+    @media (max-width: 767px) {
+        .culture-grid {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto;
+            grid-template-areas:
+                "ca cd"
+                "cb cb"
+                "cc cc"
+                "ce ce";
+        }
+        .cult-p-1, .cult-p-2 { aspect-ratio: 4/3; }
+        .cult-p-3, .cult-p-5 { aspect-ratio: 4/5; }
+        .cult-p-4 { aspect-ratio: 4/3; }
+        .cult-p-3 img,
+        .cult-p-5 img { object-position: center top; }
+        .cult-p-4 img { object-position: center 20%; }
+    }
 </style>
 <section class="bg-white py-14 md:py-20">
     <div class="container-haus">
-        {{# Text + Lottie row #}}
+        {{# Text + culture illustration row #}}
         <div class="grid md:grid-cols-[1fr_300px] gap-10 items-center mb-10">
             <div>
                 <h2 class="haus-section-heading text-3xl md:text-4xl lg:text-5xl font-bold text-haus-ink-800 leading-tight">{{ culture_heading }}</h2>
@@ -400,9 +450,14 @@
                     </a>
                 {{ /if }}
             </div>
-            {{ if culture_lottie_url }}
+            {{ if culture_image_url }}
                 <div class="flex items-center justify-center md:justify-end" aria-hidden="true">
-                    <div class="w-[220px] h-[220px] md:w-[280px] md:h-[280px]" data-haus-lottie="{{ culture_lottie_url }}"></div>
+                    <img
+                        src="{{ culture_image_url | imported_asset_url }}"
+                        alt=""
+                        class="w-[220px] h-[220px] md:w-[280px] md:h-[280px] object-contain"
+                        loading="lazy"
+                    >
                 </div>
             {{ /if }}
         </div>

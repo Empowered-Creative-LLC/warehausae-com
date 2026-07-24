@@ -268,7 +268,19 @@ STATAMIC_GIT_USER_EMAIL=cms@warehausae.com
 
 Complete these steps in the Laravel Cloud dashboard after the first successful build.
 
-**`APP_URL`:** Set to `https://warehausae.com` (production canonical URL). Add `warehausae.com` as a custom domain on the environment when ready for DNS cutover. Until then, the Cloud dev URL (`warehausae-com-dev-ee1qzs.laravel.cloud`) can be used to visit the site, but keep `APP_URL` on `warehausae.com` so Statamic generates correct absolute URLs once DNS points here.
+**`APP_URL`:** Must match the URL people actually use to reach Statamic.
+
+- **While the Cloud preview URL is primary:** set `APP_URL=https://warehausae-com-dev-ee1qzs.laravel.cloud` so password-reset / invite emails link back to that host.
+- **After DNS cutover to production:** set `APP_URL=https://warehausae.com` and add that domain on the environment.
+
+Password-reset emails use `APP_URL` for the button and copy-paste link. A mismatch (e.g. Cloud site, but `APP_URL` still pointing at the old WordPress host) produces dead or confusing links.
+
+**Mail / spam (SendGrid):**
+
+1. In SendGrid → **Settings → Sender Authentication**, authenticate the `warehausae.com` domain (SPF + DKIM). Without this, resets routinely land in spam.
+2. Set `MAIL_FROM_ADDRESS` to an address on that authenticated domain (e.g. `info@warehausae.com` or `noreply@warehausae.com`).
+3. Set `MAIL_MAILER=sendgrid` and `SENDGRID_API_KEY` (Mail Send scope).
+4. Optional: in SendGrid → **Mail Settings → Tracking**, leave click tracking off for transactional CP mail (the app also sends an `X-SMTPAPI` header to disable click/open tracking on reset emails).
 
 #### 1. Managed database
 

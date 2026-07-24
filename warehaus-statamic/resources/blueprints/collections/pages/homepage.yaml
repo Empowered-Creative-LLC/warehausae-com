@@ -84,7 +84,7 @@ tabs:
                     display: Hover Preview Image URL (imported)
                     instructions: Legacy imported path. Use Hover Preview Image above for new uploads.
               display: Services Strip
-              instructions: Deprecated — the homepage services strip is now populated automatically from Services entries with “Show on Homepage Strip” enabled.
+              instructions: Homepage icon strip labels, links, and hover images. Order matters.
           - handle: believe_in_blocks
             field:
               type: grid

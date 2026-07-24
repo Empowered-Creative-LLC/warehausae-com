@@ -17,13 +17,40 @@ intro_prose: >-
   Our interdisciplinary team takes a balanced approach to historic preservation, seeking to highlight and preserve the historic resource while also considering the modern needs of the owner.
   Additionally, our long-term relationship with a highly regarded historic preservationist, coupled with our collective expertise in architecture and structural engineering, allows us to navigate
   projects with diverse funding stacks, including RACP, historic tax credits, new market tax credits and grant funding.
-capabilities:
-  - Historic Preservation Design Consultation
-  - Determinations of Eligibility and National Register
-  - Preservation Regulation Services
-  - Historic Resource Surveys
-  - Historic Structures Reports and Preservation Plans
+capability_columns:
+  - items:
+      - Historic Preservation Design Consultation
+      - Determinations of Eligibility and National Register
+      - Preservation Regulation Services
+  - items:
+      - Historic Resource Surveys
+      - Historic Structures Reports and Preservation Plans
+photo_gallery:
+  - image_url: /assets/imported/2023/05/Little_Round_Top_2-700x700.jpg
+  - image_url: /assets/imported/2023/04/20230127_165648.jpg
+  - image_url: /assets/imported/2023/04/St.-Paul-Lutheran-Church-111414_00699-700x700.jpg
+  - image_url: /assets/imported/2023/04/20230127_172832-700x700.jpg
+  - image_url: /assets/imported/2023/04/KitchenetteAndFrontDoor.webp
+  - image_url: /assets/imported/2023/04/14-East-Chocolate-Avenue-The-Hershey-Community-Building-05_19-0011.jpg
+  - image_url: /assets/imported/2023/04/St.-Paul-Lutheran-Church-111414_00707.jpg
+  - image_url: /assets/imported/2023/02/George_Spangler_Farm_20191101_0050-1.webp
+  - image_url: /assets/imported/2023/04/George_Spangler_Farm_20191101_0076.jpg
+  - image_url: /assets/imported/2023/04/George_Spangler_Farm_20191101_0096.jpg
+  - image_url: /assets/imported/2023/04/St.-Paul-Lutheran-Church-111414_00684_Edited.jpg
+  - image_url: /assets/imported/2023/04/Maria-Bischoff-Inn-700x700.jpg
 approach_heading: Restoring the Spirit of Gettysburg.
+approach_intro_prose: >-
+  Historic Preservation projects have taken us all over Pennsylvania and Maryland, but our work at <a href="/project/george-spangler-farm/">Gettysburg</a> truly highlights the importance of preserving history at one of America’s most significant landmarks.
+spotlight_projects:
+  - title: George Spangler Farm
+    url: /project/george-spangler-farm/
+    image_url: /assets/imported/2023/02/George_Spangler_Farm_20191101_0074-700x700.webp
+  - title: General Lee's Headquarters
+    image_url: /assets/imported/2023/10/General-Lees-Headquarters-Mary-Thompson-House-2.jpeg
+  - title: Gettysburg Armory
+    image_url: /assets/imported/2026/04/Gettysburg-Armory_Rendering-20190522_0001-scaled.jpg
+  - title: Wills Weinbrenner House
+    image_url: /assets/imported/2023/10/Wills-Winebrenner-House-031800_00001-2.jpg
 team_leaders:
   - name: Erin Himmelberger, AIA
     title: Director of Architecture
@@ -32,30 +59,18 @@ team_leaders:
     linkedin_url: https://www.linkedin.com/in/erin-himmelberger-98318735/
     email: ehimmelberger@warehausae.com
 recent_projects:
-  - title: Lancaster County Courthouse and Prison
-    url: /project/lancaster-county-courthouse-and-prison/
-    categories:
-      - Architecture
-      - Historic
-    image_url: /assets/imported/2023/04/The-Lancaster-County-Courthouse-093014_0007.jpg
-  - title: UMFP Redwood Facade Restoration
-    url: /project/umfp-redwood-facade-restoration/
-    categories:
-      - Architecture
-      - Historic
-    image_url: /assets/imported/2023/04/University-of-Maryland-Faculty-Physicians-Inc-082013_00006.jpg
-  - title: Zion Lutheran Church Adaptive Reuse
-    url: /project/zion-lutheran-church-adaptive-reuse/
-    categories:
-      - Architecture
-      - Historic
-    image_url: /assets/imported/2025/04/1Zion-Church-Duke-St_06112024-700x700.webp
   - title: University Lofts
     url: /project/university-lofts/
     categories:
       - Architecture
       - Historic
     image_url: /assets/imported/2023/03/University-Lofts_Rendering-052419_00024-700x700.jpg
+  - title: Martin Brownstone
+    url: /project/martin-brownstone-restoration/
+    categories:
+      - Architecture
+      - Historic
+    image_url: /assets/imported/2023/04/Martin_Brownstone_After_1-700x700.jpg
   - title: 210 York Street Office and Recording Studio
     url: /project/210-york-street-office/
     categories:
@@ -83,7 +98,7 @@ recent_projects:
     categories:
       - Architecture
       - Historic
-    image_url: /assets/imported/2023/08/12-Bischoff-interior-second-flr-after-rotated-700x700.webp
+    image_url: /assets/imported/2023/04/KitchenetteAndFrontDoor.webp
   - title: York Academy Regional Charter School – Lower School
     url: /project/york-academy-regional-charter-school-lower-school/
     categories:
@@ -126,6 +141,24 @@ recent_projects:
       - Architecture
       - Historic
     image_url: /assets/imported/2023/04/DSC02854.jpg
+  - title: Lancaster County Courthouse and Prison
+    url: /project/lancaster-county-courthouse-and-prison/
+    categories:
+      - Architecture
+      - Historic
+    image_url: /assets/imported/2023/04/The-Lancaster-County-Courthouse-093014_0007.jpg
+  - title: UMFP Redwood Facade Restoration
+    url: /project/umfp-redwood-facade-restoration/
+    categories:
+      - Architecture
+      - Historic
+    image_url: /assets/imported/2023/04/University-of-Maryland-Faculty-Physicians-Inc-082013_00006.jpg
+  - title: Zion Lutheran Church Adaptive Reuse
+    url: /project/zion-lutheran-church-adaptive-reuse/
+    categories:
+      - Architecture
+      - Historic
+    image_url: /assets/imported/2025/04/1Zion-Church-Duke-St_06112024-700x700.webp
 hero_image_url: /assets/imported/2023/04/Warehaus_GeorgeSpanglerFarm-0032.webp
 seo_title: Historic Preservation - Warehaus
 seo_description: Our interdisciplinary team provides expert historic preservation services, combining modern needs with historical integrity.

@@ -36,7 +36,12 @@ class ProjectsCarousel extends Tags
         } else {
             $projects = match ($context) {
                 'featured' => ProjectListing::featured($limit),
-                'service' => ProjectListing::forService($currentSlug, $currentUrl ?: null, $limit),
+                'service' => ProjectListing::forService(
+                    $currentSlug,
+                    $currentUrl ?: null,
+                    $limit,
+                    $this->baselineProjectUrls()
+                ),
                 'related' => $this->related($currentId, $limit),
                 default => ProjectListing::all($limit),
             };

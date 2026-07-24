@@ -41,7 +41,7 @@ tabs:
             field:
               type: text
               display: Posted Time
-              instructions: Time posted, as displayed (e.g. '9:57 am'). Shown next to the date on the careers page job cards.
+              instructions: Optional legacy field (e.g. '9:57 am'). Not shown on the careers page — date only is displayed.
           - handle: overview
             field:
               type: textarea
