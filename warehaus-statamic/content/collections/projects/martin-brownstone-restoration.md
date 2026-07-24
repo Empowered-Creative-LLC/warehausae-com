@@ -28,19 +28,19 @@ completion_date: "2017"
 services_provided:
   - label: Architecture
     url: /services/architecture/
+  - label: Historic
+    url: /services/historic/
   - label: Interiors
     url: /services/interiors/
 industries:
   - label: Building Sciences
     url: /building-sciences/
-hero_image_url: /assets/imported/2023/04/Martin_Brownstone_After_1-700x700.jpg
+hero_image_url: /assets/imported/2023/04/Martin_Brownstone_After_2.jpg
 gallery_images:
-  - url: /assets/imported/2023/04/Martin_Brownstone_After_1-700x700.jpg
+  - url: /assets/imported/2023/04/Martin_Brownstone_After_2.jpg
     alt: Restored brownstone facade showcases beauty of historic building in York, PA
   - url: /assets/imported/2023/04/Martin_Brownstone_Before_1.jpg
     alt: David E. Small brownstone 1860 historic facade restoration
-  - url: /assets/imported/2023/04/Martin_Brownstone_After_2.jpg
-    alt: 3D scanning technology used for recreating historic detailing on brownstone facade
   - url: /assets/imported/2023/04/Martin_Brownstone_Before_2.jpg
     alt: Martin Library building facade restoration in York, PA
 related_projects:
@@ -107,5 +107,5 @@ related_projects:
 is_test_fits_subpage: false
 seo_title: Martin Brownstone Restoration - Warehaus
 seo_description: Facade restoration project for the Martin Library in York, PA.
-seo_og_image_url: /assets/imported/2023/04/Martin_Brownstone_After_1-700x700.jpg
+seo_og_image_url: /assets/imported/2023/04/Martin_Brownstone_After_2.jpg
 ---

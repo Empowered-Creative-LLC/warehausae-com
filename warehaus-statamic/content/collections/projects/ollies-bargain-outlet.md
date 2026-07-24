@@ -40,7 +40,7 @@ gallery_images:
     alt: Efficient material handling equipment used for maximum storage capacity
   - url: /assets/imported/2023/05/Ollies-Bargain-Outlet_Professional-20101209_0023.jpg
     alt: 603,000 sf distribution facility designed by Warehaus
-  - url: /assets/imported/2023/05/Ollies-Bargain-Outlet_Professional-20101209_0010-700x700.jpg
+  - url: /assets/imported/2023/05/Ollies-Bargain-Outlet_Professional-20101209_0019.jpg
     alt: New warehouse and distribution center for Ollie's Bargain Outlet, constructed in just 6 months
   - url: /assets/imported/2023/05/Ollies-Bargain-Outlet_Professional-20101209_0007.jpg
     alt: New warehouse and distribution center for Ollie's Bargain Outlet, constructed in just 6 months

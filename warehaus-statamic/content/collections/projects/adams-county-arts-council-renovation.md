@@ -111,7 +111,7 @@ related_projects:
     categories:
       - Architecture
       - Interiors
-    image_url: /assets/imported/2023/04/Martin_Brownstone_After_1-700x700.jpg
+    image_url: /assets/imported/2023/04/Martin_Brownstone_After_2.jpg
 is_test_fits_subpage: false
 seo_title: Adams County Arts Council Renovation
 seo_description: The Adams County Arts Council (ACAC) has selected Warehaus to redesign the front facade and roof of the Arts Education Center (AEC) located at 125 S. Washington Street.

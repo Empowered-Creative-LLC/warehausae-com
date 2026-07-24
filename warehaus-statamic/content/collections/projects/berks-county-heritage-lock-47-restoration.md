@@ -43,7 +43,7 @@ gallery_images:
     alt: Abandoned Waterway Restoration in Berks County
   - url: /assets/imported/2023/04/Berks-County-Lock-47E-2.jpg
     alt: "Environmental Clearances for Historic Lock #47E Restoration"
-  - url: /assets/imported/2023/04/Berks-County-Lock-47E-3-700x700.jpg
+  - url: /assets/imported/2023/04/Berks-County-Lock-47E-1.jpg
     alt: Union Trail Enhancement with Timber Gate and Stone Wall Restoration in Bern Township
   - url: /assets/imported/2023/04/Berks-County-Lock-Overhead.jpg
     alt: Restoring Lock Gates in Berks County

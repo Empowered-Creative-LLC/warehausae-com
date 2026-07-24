@@ -47,7 +47,7 @@ gallery_images:
     alt: Alt Text Lititz restaurateurs bring fresh, rustic cuisine to Blackworth in Wilbur Chocolate Factory building
   - url: /assets/imported/2023/04/Blackworth-Live-Fire-Grill-21060207_0107.jpg
     alt: Original brick walls and wood columns highlighted in Blackworth restaurant design
-  - url: /assets/imported/2023/04/Blackworth_Live_Fire_Grill-20191015_0108-700x700.jpg
+  - url: /assets/imported/2023/04/Blackworth-Live-Fire-Grill-20191015_0109.jpg
     alt: Raw elements of old factory combined with contemporary design at Blackworth
   - url: /assets/imported/2023/04/Blackworth-Live-Fire-Grill-21060207_0112.jpg
     alt: Historic Wilbur Chocolate Factory transformed into Blackworth restaurant

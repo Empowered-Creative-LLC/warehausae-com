@@ -61,5 +61,5 @@ photo_gallery:
   - image_url: /assets/imported/2023/07/Donwood-Estates-700x700.webp
   - image_url: /assets/imported/2023/07/Donwood-Estates-4-700x700.webp
   - image_url: /assets/imported/2023/07/Spring-Forge-12.webp
-  - image_url: /assets/imported/2023/07/Spring-Forge-18.jpg
+  - image_url: /assets/imported/2023/07/Spring-Forge-12.webp
 ---

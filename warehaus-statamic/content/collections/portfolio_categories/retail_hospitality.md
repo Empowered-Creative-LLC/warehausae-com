@@ -140,8 +140,8 @@ photo_gallery:
   - image_url: /assets/imported/2023/04/Innmaster_3.jpg
   - image_url: /assets/imported/2023/04/The-Inn-at-Wyndridge-12_1979-0030-700x700.jpg
   - image_url: /assets/imported/2023/04/The-Inn-at-Wyndridge-Farm_Professional-102714_00082.jpg
-  - image_url: /assets/imported/2023/04/CY_BWICS_Lobby_MediaPods2.jpg
-  - image_url: /assets/imported/2023/04/Blackworth-Live-Fire-Grill-20191015_0108.jpg
+  - image_url: /assets/imported/2023/04/CY_BWICS_Bistro_Evening.jpg
+  - image_url: /assets/imported/2023/04/Blackworth-Live-Fire-Grill-20191015_0109.jpg
   - image_url: /assets/imported/2023/04/Blackworth-Live-Fire-Grill-21060207_0110.jpg
   - image_url: /assets/imported/2023/04/Blackworth-Live-Fire-Grill-21060207_0106.jpg
 ---

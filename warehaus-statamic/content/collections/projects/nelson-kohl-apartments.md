@@ -100,7 +100,7 @@ related_projects:
     url: /project/union-flats-apartments/
     categories:
       - Architecture
-    image_url: /assets/imported/2023/03/Union-Flats-Luxury-Apartments-in-Mechanicsburg-PA.jpg
+    image_url: /assets/imported/2023/03/Union-Flats-131082.jpg
   - title: University Lofts
     url: /project/university-lofts/
     categories:

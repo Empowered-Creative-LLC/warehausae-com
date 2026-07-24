@@ -161,11 +161,11 @@ photo_gallery:
   - image_url: /assets/imported/2023/04/KitchenetteAndFrontDoor.webp
   - image_url: /assets/imported/2023/05/Little_Round_Top_2-700x700.jpg
   - image_url: /assets/imported/2023/07/Capitol_Theatre-11_2018-0001.jpg
-  - image_url: /assets/imported/2023/04/20230127_165442.jpg
+  - image_url: /assets/imported/2023/04/20230127_165648.jpg
   - image_url: /assets/imported/2023/04/20230127_172832-700x700.jpg
   - image_url: /assets/imported/2023/04/George_Spangler_Farm_20191101_0050-1.jpg
-  - image_url: /assets/imported/2023/04/14-East-Chocolate-Avenue-The-Hershey-Community-Building-05_16-0005.jpg
-  - image_url: /assets/imported/2023/03/KitchenetteAndLounge.jpg
-  - image_url: /assets/imported/2023/04/George_Spangler_Farm_20191101_0045.jpg
-  - image_url: /assets/imported/2023/04/George_Spangler_Farm_20191101_0079.jpg
+  - image_url: /assets/imported/2023/04/14-East-Chocolate-Avenue-The-Hershey-Community-Building-05_19-0011.jpg
+  - image_url: /assets/imported/2023/03/University-Lofts_Rendering-052419_00024-700x700.jpg
+  - image_url: /assets/imported/2023/04/George_Spangler_Farm_20191101_0076.jpg
+  - image_url: /assets/imported/2023/04/George_Spangler_Farm_20191101_0076.jpg
 ---
