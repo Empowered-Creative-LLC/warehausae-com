@@ -62,11 +62,11 @@ gallery_images:
     alt: project_york-county-history-center20240625_tom_holdsworth0006
   - url: /assets/imported/2024/07/project-york-county-history-center20240625_tom_holdsworth0004-700x700.jpg
     alt: project_york-county-history-center20240625_tom_holdsworth0004
-  - url: /assets/imported/2024/07/project-york-county-history-center20240625_tom_holdsworth0005-700x700.webp
+  - url: /assets/imported/2024/07/project-york-county-history-center20240625_tom_holdsworth0005-700x700.jpg
     alt: project_york-county-history-center20240625_tom_holdsworth0005
   - url: /assets/imported/2024/07/project-york-county-history-center20240625_tom_holdsworth0008-700x700.jpg
     alt: project_york-county-history-center20240625_tom_holdsworth0008
-  - url: /assets/imported/2024/07/project-york-county-history-center20240625_tom_holdsworth0010-700x700.webp
+  - url: /assets/imported/2024/07/project-york-county-history-center20240625_tom_holdsworth0010-700x700.jpg
     alt: project_york-county-history-center20240625_tom_holdsworth0010
   - url: /assets/imported/2024/07/project-york-county-history-center20240625_tom_holdsworth0011-700x700.jpg
     alt: project_york-county-history-center20240625_tom_holdsworth0011

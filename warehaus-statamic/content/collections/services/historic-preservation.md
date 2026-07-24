@@ -141,6 +141,12 @@ recent_projects:
       - Architecture
       - Historic
     image_url: /assets/imported/2023/04/The-Lancaster-County-Courthouse-093014_0007.jpg
+  - title: Martin Brownstone
+    url: /project/martin-brownstone-restoration/
+    categories:
+      - Architecture
+      - Historic
+    image_url: /assets/imported/2023/04/Martin_Brownstone_After_1-700x700.jpg
   - title: UMFP Redwood Facade Restoration
     url: /project/umfp-redwood-facade-restoration/
     categories:
