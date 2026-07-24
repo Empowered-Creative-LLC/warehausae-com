@@ -108,6 +108,16 @@ Legacy WordPress images (~350MB) live in `warehaus-statamic/public/assets/import
 3. Set `AWS_URL` on the environment to the bucket **public** URL.
 4. [`ImportedAssetUrl`](warehaus-statamic/app/Support/ImportedAssetUrl.php) rewrites `/assets/imported/...` in templates to `{AWS_URL}/imported/...`.
 
+**Required after any content change that adds or renames `/assets/imported/` paths:**
+
+```bash
+node scripts/ensure-imported-assets.mjs   # download / rewrite missing refs
+bash scripts/upload-imported-to-r2.sh    # sync local → R2 + verify
+node scripts/verify-imported-assets.mjs --remote   # optional re-check
+```
+
+`upload-imported-to-r2.sh` refuses to finish if content still points at files that are missing locally or on the bucket. `ContentImportedAssetsTest` also fails locally when the imported tree is present but incomplete.
+
 **CP uploads** to `public/assets/images/...` are tracked by Statamic Git and deploy via the normal commit/push flow.
 
 **Homepage and design assets** under `public/assets/images/home/` are in Git and deploy normally.
@@ -166,6 +176,9 @@ The old WordPress site stays live until DNS is cut over. If you find a critical 
 - `scripts/lighthouse-audit.js` — performance/a11y/SEO/best-practices comparison vs the live site.
 - `scripts/playwright-diff.js` — visual diff at desktop + mobile vs the live site.
 - `scripts/fetch-missing-images.js` — crawl rendered pages and download any /assets/imported/ images that 404 locally.
+- `../scripts/ensure-imported-assets.mjs` — fix content refs missing from local `imported/` (download or rewrite).
+- `../scripts/verify-imported-assets.mjs` — assert every content `/assets/imported/` path exists locally and/or on R2 (`--remote`).
+- `../scripts/upload-imported-to-r2.sh` — sync `imported/` to R2, then verify remote refs.
 - `scripts/extract-css-heroes.js` — re-extract hero background images from the live site via Playwright.
 - `scripts/import-to-statamic.js` — re-import content from scraped/ data into Statamic content files.
 

@@ -106,11 +106,11 @@ lead_video_id: j0n6IxMB284
 photo_gallery:
   - image_url: /assets/imported/2023/05/Mobile-Climate-Control-9-700x700.jpg
   - image_url: /assets/imported/2023/05/Mobile-Climate-Control-50.jpg
-  - image_url: /assets/imported/2023/05/small-007.jpg
+  - image_url: /assets/imported/2023/03/2014_0023_00_N22_lgjpg.jpg
   - image_url: /assets/imported/2023/04/Phoenix-Contact-New-Distribution-Center_Professional-051714_0012.jpg
-  - image_url: /assets/imported/2023/03/Fuchs_North-America_Professional-20161212_0008.jpg
-  - image_url: /assets/imported/2023/04/Volvo-Paint-Line-07_2013-0003.jpg
-  - image_url: /assets/imported/2023/04/Procter-Gamble-Tabler-Station-Plant-0621201927-of-36.jpg
+  - image_url: /assets/imported/2023/03/Fuchs-North-America-12_2016-0000-700x501.jpg
+  - image_url: /assets/imported/2023/03/2014_0023_00_N22_lgjpg.jpg
+  - image_url: /assets/imported/2023/04/Procter-Gamble-Tabler-Station-Plant-0621201914-of-36.jpg
   - image_url: /assets/imported/2023/03/Fuchs-North-America-12_2016-0000-700x501.jpg
   - image_url: /assets/imported/2023/04/Phoenix-Contact-New-Distribution-Center_Professional-051714_0016.jpg
   - image_url: /assets/imported/2023/05/Mobile-Climate-Control-34-700x700.jpg

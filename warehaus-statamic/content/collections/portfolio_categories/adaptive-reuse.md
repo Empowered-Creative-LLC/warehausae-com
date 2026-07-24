@@ -155,6 +155,6 @@ photo_gallery:
   - image_url: /assets/imported/2023/03/210_York_Street10-of-00-1-700x700.jpg
   - image_url: /assets/imported/2023/04/Blackworth-Live-Fire-Grill-21060207_0107.jpg
   - image_url: /assets/imported/2023/04/York-College-Civil-Engineering-Center0614201903-of-6.webp
-  - image_url: /assets/imported/2023/03/Kinsley_1110_East_Princess_Street_062619_08-of-08-1.jpg
+  - image_url: /assets/imported/2023/03/Kinsley_1110_East_Princess_St_Interior_062619_01-of-05.jpg
   - image_url: /assets/imported/2023/04/York-Academy-Regional-Charter-Upper-School_Professional-042815_00106.jpg
 ---

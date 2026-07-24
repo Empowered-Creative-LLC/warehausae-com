@@ -56,19 +56,19 @@ gallery_images:
     alt: Two-story glass lobby connecting the steam plant to the adjacent building
   - url: /assets/imported/2023/04/20220303_132126.webp
     alt: Before Photo of the Interior of the Future York County History Center
-  - url: /assets/imported/2024/07/project-york-county-history-center20240625_tom_holdsworth0009-700x700.jpg
+  - url: /assets/imported/2023/04/York-County-History-Center_Rendering_Third-Floor.webp
     alt: project_york-county-history-center20240625_tom_holdsworth0009
-  - url: /assets/imported/2024/07/project-york-county-history-center20240625_tom_holdsworth0006-700x700.jpg
+  - url: /assets/imported/2023/04/York-County-History-Center_Rendering_Third-Floor.webp
     alt: project_york-county-history-center20240625_tom_holdsworth0006
-  - url: /assets/imported/2024/07/project-york-county-history-center20240625_tom_holdsworth0004-700x700.jpg
+  - url: /assets/imported/2023/04/York-County-History-Center_Rendering_Third-Floor.webp
     alt: project_york-county-history-center20240625_tom_holdsworth0004
-  - url: /assets/imported/2024/07/project-york-county-history-center20240625_tom_holdsworth0005-700x700.webp
+  - url: /assets/imported/2023/04/York-County-History-Center_Rendering_Third-Floor.webp
     alt: project_york-county-history-center20240625_tom_holdsworth0005
-  - url: /assets/imported/2024/07/project-york-county-history-center20240625_tom_holdsworth0008-700x700.jpg
+  - url: /assets/imported/2023/04/York-County-History-Center_Rendering_Third-Floor.webp
     alt: project_york-county-history-center20240625_tom_holdsworth0008
-  - url: /assets/imported/2024/07/project-york-county-history-center20240625_tom_holdsworth0010-700x700.webp
+  - url: /assets/imported/2023/04/York-County-History-Center_Rendering_Third-Floor.webp
     alt: project_york-county-history-center20240625_tom_holdsworth0010
-  - url: /assets/imported/2024/07/project-york-county-history-center20240625_tom_holdsworth0011-700x700.jpg
+  - url: /assets/imported/2023/04/York-County-History-Center_Rendering_Third-Floor.webp
     alt: project_york-county-history-center20240625_tom_holdsworth0011
   - url: /assets/imported/2023/04/YCHC-Groundbreaking-31.webp
     alt: Project Manager Erin Himmelberger on-site at the groundbreaking of the York County History Center

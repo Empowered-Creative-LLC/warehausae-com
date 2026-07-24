@@ -52,7 +52,7 @@ gallery_images:
     alt: The sustainable design of the Davis Center with ample daylight and renewable energy
   - url: /assets/imported/2023/05/Project_Holderness_Academic_Building_20210926_07.jpg
     alt: View of architectural features of the Holderness School Davis Center Winter Garden
-  - url: /assets/imported/2023/05/Project_Holderness_Academic_Building_20210926_17.png
+  - url: /assets/imported/2023/05/Project_Holderness_Academic_Building_20210926_12.jpg
     alt: A laboratory at the Holderness Davis Center for hands-on instruction
   - url: /assets/imported/2023/05/Project_Holderness_Academic_Building_20210926_09.jpg
     alt: Exterior view of the Holderness School Davis Center

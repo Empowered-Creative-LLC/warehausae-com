@@ -61,7 +61,7 @@ recent_projects:
     url: /project/union-flats-apartments/
     categories:
       - Architecture
-    image_url: /assets/imported/2023/03/Union-Flats-Luxury-Apartments-in-Mechanicsburg-PA.jpg
+    image_url: /assets/imported/2023/03/Union-Flats-131082.jpg
   - title: University Lofts
     url: /project/university-lofts/
     categories:
@@ -110,7 +110,7 @@ photo_gallery:
   - image_url: /assets/imported/2023/03/Nelson-Kohl-Apartments1023201812-of-12.jpg
   - image_url: /assets/imported/2023/03/Nelson-Kohl-03_18-0041.jpg
   - image_url: /assets/imported/2023/05/3400-Boston-Street_Rendering-20190521_0004.jpg
-  - image_url: /assets/imported/2023/03/Nelson-Kohl-07_18-0013.jpg
+  - image_url: /assets/imported/2023/03/Nelson-Kohl-03_18-0041.jpg
   - image_url: /assets/imported/2023/03/Nelson-Kohl-Apartments1023201809-of-12.jpg
   - image_url: /assets/imported/2023/05/3400-Boston-Street_Rendering-20190522_0010.jpg
 ---

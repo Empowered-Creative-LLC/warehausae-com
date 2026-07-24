@@ -181,7 +181,7 @@ photo_gallery:
   - image_url: /assets/imported/2023/04/PayPal-Toronto_Professional-120316_0004.jpg
   - image_url: /assets/imported/2023/03/210_York_Street15-of-00-1.jpg
   - image_url: /assets/imported/2023/04/PayPal-Toronto_Professional-120316_0003.jpg
-  - image_url: /assets/imported/2023/03/Hershey-Next-Century_Professional-04_19-0003.jpg
+  - image_url: /assets/imported/2023/03/Kinsley_1110_East_Princess_St_Interior_062619_01-of-05.jpg
   - image_url: /assets/imported/2023/04/Harsco-Corporate-Office0531201901-of-41.jpg
   - image_url: /assets/imported/2023/03/210-York-Street-04_2014-0001-700x501.jpg
   - image_url: /assets/imported/2023/04/Harsco-Corporate-Headquarters_Professional-20150801_0053.jpg
@@ -190,13 +190,13 @@ photo_gallery:
   - image_url: /assets/imported/2023/02/PayPal-Toronto_Professional-120316_0007-700x700.jpg
   - image_url: /assets/imported/2023/03/Warehaus-Headquarters-08_2017-0162.jpg
   - image_url: /assets/imported/2023/03/Warehaus-Headquarters-05_2014-0551.jpg
-  - image_url: /assets/imported/2023/04/Harsco-Corporate-Headquarters_Professional-20150801_0070.jpg
+  - image_url: /assets/imported/2023/04/Harsco-Corporate-Headquarters_Professional-20150801_0074.jpg
   - image_url: /assets/imported/2023/04/PayPal-Toronto_Professional-120316_0008.jpg
-  - image_url: /assets/imported/2023/03/Hershey-Next-Century_Professional-03_15-0017.jpg
+  - image_url: /assets/imported/2023/03/Kinsley_1110_East_Princess_St_Interior_062619_01-of-05.jpg
   - image_url: /assets/imported/2023/04/Harsco-Corporate-Headquarters_Professional-20150801_0034.jpg
-  - image_url: /assets/imported/2023/03/Hershey-Next-Century_Professional-03_15-0016.jpg
-  - image_url: /assets/imported/2023/03/Hershey-Next-Century_Professional-04_19-0005.jpg
-  - image_url: /assets/imported/2023/03/Hershey-Next-Century_Professional-04_19-0004.jpg
+  - image_url: /assets/imported/2023/03/Kinsley_1110_East_Princess_St_Interior_062619_01-of-05.jpg
+  - image_url: /assets/imported/2023/03/Kinsley_1110_East_Princess_St_Interior_062619_01-of-05.jpg
+  - image_url: /assets/imported/2023/03/Kinsley_1110_East_Princess_St_Interior_062619_01-of-05.jpg
   - image_url: /assets/imported/2023/04/PayPal-Toronto_Professional-120316_0005.jpg
   - image_url: /assets/imported/2023/03/210-York-Street-03_2016-0000.jpg
 ---

@@ -103,7 +103,7 @@ related_projects:
     categories:
       - Architecture
       - Historic
-    image_url: /assets/imported/2023/04/Martin_Brownstone_After_1-700x700.jpg
+    image_url: /assets/imported/2023/04/Martin_Brownstone_After_2.jpg
 is_test_fits_subpage: false
 seo_title: Gratz Bank Tower Repair - Warehaus
 seo_description: Repair and Preservation Efforts for Lightning-Damaged Tower at Gratz Bank in Minersville, PA.

@@ -34,7 +34,7 @@ gallery_images:
     alt: Architectural and structural design at Catalyst Commercial Development Muddy Creek warehouse
   - url: /assets/imported/2024/03/Catalyst-Muddy-Creek-9-700x700.webp
     alt: Architectural and structural design at Catalyst Commercial Development Muddy Creek warehouse
-  - url: /assets/imported/2024/03/Catalyst-Muddy_Creek-7-700x700.webp
+  - url: /assets/imported/2024/03/Catalyst-Muddy-Creek-10-700x700.webp
     alt: Architectural and structural design at Catalyst Commercial Development Muddy Creek warehouse
   - url: /assets/imported/2024/03/Catalyst-Muddy-Creek-13-700x700.webp
     alt: Architectural and structural design at Catalyst Commercial Development Muddy Creek warehouse

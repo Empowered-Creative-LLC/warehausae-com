@@ -87,7 +87,3 @@
         <div class="prose prose-lg max-w-none text-haus-ink-700 leading-relaxed">{{ raw_body_markdown | markdown | imported_asset_urls_in_html }}</div>
     </section>
 {{ /if }}
-
-{{ if slug == "portfolio" }}
-    {{ partial:case_studies_list }}
-{{ /if }}

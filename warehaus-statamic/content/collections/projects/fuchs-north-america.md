@@ -39,13 +39,13 @@ gallery_images:
     alt: Careful planning and coordination for space limitations and updated equipment
   - url: /assets/imported/2023/03/Fuchs-North-America-12_2016-0000-700x501.jpg
     alt: High-tech 80-foot tower with efficient blending processes
-  - url: /assets/imported/2023/03/Fuchs_North_America_Professional-20161212_0004.jpg
+  - url: /assets/imported/2023/03/Fuchs-North-America-12_2016-0000-700x501.jpg
     alt: High-tech 80-foot tower with efficient blending processes
-  - url: /assets/imported/2023/03/Fuchs_North_America_Professional-20161212_0008.jpg
+  - url: /assets/imported/2023/03/Fuchs-North-America-12_2016-0000-700x501.jpg
     alt: Modern warehouse facility for Fuchs North America
-  - url: /assets/imported/2023/03/Fuchs_North_America_Professional-20161212_0001.jpg
+  - url: /assets/imported/2023/03/Fuchs-North-America-12_2016-0000-700x501.jpg
     alt: Demonstration and tasting room, gym, locker room, cafeteria, training room, full-service kitchens, laboratories
-  - url: /assets/imported/2023/03/Fuchs_North_America_Professional-20161212_0029.jpg
+  - url: /assets/imported/2023/03/Fuchs-North-America-12_2016-0000-700x501.jpg
     alt: Successful design-build partnership for Fuchs North America facility
 related_projects:
   - title: Wagman, Inc. Office

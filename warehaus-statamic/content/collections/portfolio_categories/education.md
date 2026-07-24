@@ -112,23 +112,23 @@ seo_description: Innovative architectural design focused on enriching educationa
 seo_og_image_url: /assets/imported/2022/03/Asset-1.png
 photo_gallery:
   - image_url: /assets/imported/2023/05/York-Country-Day-School_Professional-101916_00023.jpg
-  - image_url: /assets/imported/2023/05/Project_Holderness_Academic_Building_20210926_13.png
-  - image_url: /assets/imported/2023/05/YARCS-Upper-Schoo.l-11142018-01-of-09.jpg
+  - image_url: /assets/imported/2023/05/Project_Holderness_Academic_Building_20210926_12.jpg
+  - image_url: /assets/imported/2023/05/YARCS-Upper-Schoo.l-11142018-04-of-09.jpg
   - image_url: /assets/imported/2023/05/Project_Holderness_Academic_Building_20210926_24.jpg
-  - image_url: /assets/imported/2023/05/YARCS-Upper-Schoo.l-11142018-02-of-09.jpg
+  - image_url: /assets/imported/2023/05/YARCS-Upper-Schoo.l-11142018-04-of-09.jpg
   - image_url: /assets/imported/2023/05/Project_Holderness_Academic_Building_20210926_08.jpg
   - image_url: /assets/imported/2023/05/G-05.jpg
   - image_url: /assets/imported/2023/05/F-01.jpg
   - image_url: /assets/imported/2023/05/York-Country-Day-School_Professional-101916_00013.jpg
-  - image_url: /assets/imported/2023/05/York-Country-Day-School_Professional-101916_00009.jpg
-  - image_url: /assets/imported/2023/05/York-Country-Day-School_Professional-101916_00030.jpg
-  - image_url: /assets/imported/2023/05/York-Country-Day-School_Professional-101916_00011.jpg
+  - image_url: /assets/imported/2023/05/York-Country-Day-School_Professional-101916_00013.jpg
+  - image_url: /assets/imported/2023/05/York-Country-Day-School_Professional-101916_00013.jpg
+  - image_url: /assets/imported/2023/05/York-Country-Day-School_Professional-101916_00013.jpg
   - image_url: /assets/imported/2023/05/YARCS-Upper-Schoo.l-11142018-06-of-09.jpg
-  - image_url: /assets/imported/2023/05/York-Country-Day-School_Professional-101816_00033.jpg
+  - image_url: /assets/imported/2023/05/York-Country-Day-School_Professional-101916_00013.jpg
   - image_url: /assets/imported/2023/05/YARCS-Upper-School-2018-0002.jpg
-  - image_url: /assets/imported/2023/05/York-Country-Day-School_Professional-101916_00019.jpg
+  - image_url: /assets/imported/2023/05/York-Country-Day-School_Professional-101916_00013.jpg
   - image_url: /assets/imported/2023/05/02U9868.jpg
   - image_url: /assets/imported/2023/05/H-04.jpg
-  - image_url: /assets/imported/2023/05/C-03.jpg
+  - image_url: /assets/imported/2023/04/York-Academy-Regional-Charter-Upper-School_Professional-093011_00101.webp
   - image_url: /assets/imported/2023/05/Project_Holderness_Academic_Building_20210926_09.jpg
 ---

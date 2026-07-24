@@ -46,11 +46,11 @@ spotlight_projects:
     url: /project/george-spangler-farm/
     image_url: /assets/imported/2023/02/George_Spangler_Farm_20191101_0074-700x700.webp
   - title: General Lee's Headquarters
-    image_url: /assets/imported/2023/10/General-Lees-Headquarters-Mary-Thompson-House-2.jpeg
+    image_url: /assets/imported/2023/04/Gettysburg-National-Military-Museum-and-Visitor-Center-20080423_0167.jpg
   - title: Gettysburg Armory
-    image_url: /assets/imported/2026/04/Gettysburg-Armory_Rendering-20190522_0001-scaled.jpg
+    image_url: /assets/imported/2023/04/Gettysburg_National_Military_Museum_and_Visitor_Center_01-of-00.jpg
   - title: Wills Weinbrenner House
-    image_url: /assets/imported/2023/10/Wills-Winebrenner-House-031800_00001-2.jpg
+    image_url: /assets/imported/2023/04/Gettysburg-National-Battlefield-Museum-and-Visitor-Center-07_10-0375.webp
 team_leaders:
   - name: Erin Himmelberger, AIA
     title: Director of Architecture
@@ -70,7 +70,7 @@ recent_projects:
     categories:
       - Architecture
       - Historic
-    image_url: /assets/imported/2023/04/Martin_Brownstone_After_1-700x700.jpg
+    image_url: /assets/imported/2023/04/Martin_Brownstone_After_2.jpg
   - title: 210 York Street Office and Recording Studio
     url: /project/210-york-street-office/
     categories:
