@@ -46,11 +46,11 @@ spotlight_projects:
     url: /project/george-spangler-farm/
     image_url: /assets/imported/2023/02/George_Spangler_Farm_20191101_0074-700x700.webp
   - title: General Lee's Headquarters
-    image_url: https://warehausae.com/wp-content/uploads/2023/10/General-Lees-Headquarters-Mary-Thompson-House-2.jpeg
+    image_url: /assets/imported/2023/10/General-Lees-Headquarters-Mary-Thompson-House-2.jpeg
   - title: Gettysburg Armory
-    image_url: https://warehausae.com/wp-content/uploads/2026/04/Gettysburg-Armory_Rendering-20190522_0001-scaled.jpg
+    image_url: /assets/imported/2026/04/Gettysburg-Armory_Rendering-20190522_0001-scaled.jpg
   - title: Wills Weinbrenner House
-    image_url: https://warehausae.com/wp-content/uploads/2023/10/Wills-Winebrenner-House-031800_00001-2.jpg
+    image_url: /assets/imported/2023/10/Wills-Winebrenner-House-031800_00001-2.jpg
 team_leaders:
   - name: Erin Himmelberger, AIA
     title: Director of Architecture
@@ -65,6 +65,12 @@ recent_projects:
       - Architecture
       - Historic
     image_url: /assets/imported/2023/03/University-Lofts_Rendering-052419_00024-700x700.jpg
+  - title: Martin Brownstone
+    url: /project/martin-brownstone-restoration/
+    categories:
+      - Architecture
+      - Historic
+    image_url: /assets/imported/2023/04/Martin_Brownstone_After_1-700x700.jpg
   - title: 210 York Street Office and Recording Studio
     url: /project/210-york-street-office/
     categories:

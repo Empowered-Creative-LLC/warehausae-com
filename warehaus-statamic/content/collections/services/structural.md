@@ -26,7 +26,7 @@ capabilities:
   - Navisworks
   - Risa Suite of Design Software
   - RAM Steel/Structure
-  - NewForma Project Management
+  - Tonic
 photo_gallery:
   - image_url: /assets/imported/2023/05/YARCS-Upper-Schoo.l-10262018-05-of-05.jpg
   - image_url: /assets/imported/2023/05/Mobile-Climate-Control-34-700x700.jpg
