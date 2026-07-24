@@ -43,6 +43,8 @@ gallery_images:
     alt: David E. Small brownstone 1860 historic facade restoration
   - url: /assets/imported/2023/04/Martin_Brownstone_Before_2.jpg
     alt: Martin Library building facade restoration in York, PA
+  - url: /assets/imported/2023/04/Martin_Brownstone_After_2.jpg
+    alt: Restored brownstone facade showcases the beauty of the historic building in York, PA
 related_projects:
   - title: UMFP Redwood Facade Restoration
     url: /project/umfp-redwood-facade-restoration/
