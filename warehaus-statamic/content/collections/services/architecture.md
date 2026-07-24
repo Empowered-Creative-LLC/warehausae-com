@@ -113,7 +113,7 @@ recent_projects:
     url: /project/union-flats-apartments/
     categories:
       - Architecture
-    image_url: /assets/imported/2023/03/Union-Flats-Luxury-Apartments-in-Mechanicsburg-PA.jpg
+    image_url: /assets/imported/2023/03/Union-Flats-131082.jpg
   - title: University Lofts
     url: /project/university-lofts/
     categories:
@@ -374,7 +374,7 @@ recent_projects:
     categories:
       - Architecture
       - Historic
-    image_url: /assets/imported/2023/04/Martin_Brownstone_After_1-700x700.jpg
+    image_url: /assets/imported/2023/04/Martin_Brownstone_After_2.jpg
   - title: St. Paul Evangelical Lutheran Church
     url: /project/st-paul-evangelical-lutheran-church/
     categories:
