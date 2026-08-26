@@ -10,7 +10,7 @@ These are blocking before launch. Each has a one-touch follow-up step.
 
 2. **Newsletter destination.** The Statamic form at `warehaus-statamic/resources/forms/newsletter.yaml` currently stores submissions in Statamic but emails nowhere. To enable email notifications, fill the `email:` block in that file with a target address (likely info@warehausae.com). Outbound mail is sent through SendGrid (Symfony SendGrid API transport) — set `MAIL_MAILER=sendgrid`, `SENDGRID_API_KEY`, `MAIL_FROM_ADDRESS`, and `MAIL_FROM_NAME` in production .env (see the env-var section below). Alternative: pipe to Mailchimp or ConvertKit via their API webhook.
 
-3. **Analytics platform.** No tracking is installed. To add: pick Plausible / GA4 / Fathom / Matomo, drop the snippet into `warehaus-statamic/resources/views/layout.antlers.html` just before `</head>`, and configure any environment-specific token.
+3. **Analytics platform.** ~~Client decision pending.~~ **Done:** GA4 stream "Warehaus - GA4" (`G-G5YSRTE2BY`). Snippet is gated in `layout.antlers.html` via `GA4_MEASUREMENT_ID`. Set that env var in Laravel Cloud production (do not set locally).
 
 4. **Hosting platform.** Suitable options for Laravel 12 + Statamic 6: Laravel Forge, Ploi, Laravel Cloud, Servd (Statamic-specialist), or a managed VPS. Whatever the client picks, the steps below are roughly equivalent.
 
@@ -55,10 +55,8 @@ SENDGRID_API_KEY=SG.xxxxxxxxxxxxxxxxxxxxxx   # SendGrid → Settings → API Key
 MAIL_FROM_ADDRESS=info@warehausae.com        # must be a SendGrid verified sender / authenticated domain
 MAIL_FROM_NAME=Warehaus
 
-# Analytics (once platform is decided)
-# Examples:
-# PLAUSIBLE_DOMAIN=warehausae.com
-# GA4_MEASUREMENT_ID=G-XXXXXXXX
+# Analytics — Warehaus - GA4 (set in Laravel Cloud only)
+GA4_MEASUREMENT_ID=G-G5YSRTE2BY
 ```
 
 ## Content strategy (CP-authoritative)
@@ -142,7 +140,7 @@ In rough order:
 - [ ] All 191 editorial URLs return 200 on the production domain (run `BASE=https://warehausae.com node migration-tool/scripts/verify-urls.js`)
 - [ ] Lighthouse on production matches or exceeds localhost scores
 - [ ] Newsletter form submits and notifies the configured destination
-- [ ] Analytics snippet installed and reporting
+- [x] Analytics snippet installed (GA4 `G-G5YSRTE2BY`) — confirm Realtime after production env is set
 - [ ] Font swap: if Neue Haas Unica Pro license is in hand, swap before launch
 - [ ] Take a snapshot of `public/assets/imported/` for backup
 - [ ] Plan a maintenance window for the DNS cutover

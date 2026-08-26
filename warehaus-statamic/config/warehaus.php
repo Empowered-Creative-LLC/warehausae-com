@@ -17,6 +17,18 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+    | Google Analytics 4
+    |--------------------------------------------------------------------------
+    |
+    | Measurement ID for the "Warehaus - GA4" data stream. Leave empty locally
+    | so localhost traffic does not pollute reports; set in Laravel Cloud.
+    |
+    */
+
+    'ga4_measurement_id' => env('GA4_MEASUREMENT_ID'),
+
+    /*
+    |--------------------------------------------------------------------------
     | Homepage hero rotation
     |--------------------------------------------------------------------------
     |

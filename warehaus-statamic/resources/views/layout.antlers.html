@@ -50,6 +50,17 @@
         land under public/fonts/. #}}
 
     {{ vite src="resources/css/app.css|resources/js/app.js" }}
+
+    {{# Google Analytics 4 — only when GA4_MEASUREMENT_ID is set (production). #}}
+    {{ if config:warehaus:ga4_measurement_id }}
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ config:warehaus:ga4_measurement_id }}"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', '{{ config:warehaus:ga4_measurement_id }}');
+    </script>
+    {{ /if }}
 </head>
 <body class="bg-white text-haus-ink-800 antialiased">
     {{# Skip-to-content link. Visually hidden until focused via keyboard. #}}
