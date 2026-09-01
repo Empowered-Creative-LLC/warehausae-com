@@ -9,21 +9,16 @@ show_on_about: false
 first_name: Cody
 discipline: architecture
 headshot_url: /assets/imported/2026/08/Kauffman-Cody.jpg
-years_in_industry: 15
-years_with_warehaus: 9
+years_in_industry: 8
+years_with_warehaus: 4
 bio: >-
-  Cody is an Architectural Project Manager with nine years of experience at Warehaus, known for his team-oriented approach and steady project leadership. He creates space for ideas from across the
-  team while keeping work aligned with a clear end goal, moving from big-picture thinking into refined detail. He adapts quickly as projects evolve and focuses on delivering successful outcomes for
-  both the client and the team, approaching challenges with a solutions-first mindset that keeps projects moving.
+  Cody is an Architectural Project Manager whose diligence, drive, and strong technical skills have fueled his growth throughout his career. Since joining Warehaus three years ago, he has progressed from Architectural Designer to Project Manager, building a broad understanding of the design process along the way. He approaches his work with focus and attention to detail, taking ownership of challenges and continually looking for opportunities to strengthen both his technical knowledge and project leadership skills.
 
 
-  Over the course of his career, Cody has contributed to a range of projects, with a particular focus on multi-family developments, where coordination and attention to detail are key. He is skilled in
-  Revit, CAD, and other BIM software, along with 3D laser scanning and post-processing—tools he uses to support precise, efficient project delivery.
-
-
-  Outside of the office, Cody enjoys spending time with his family and being outdoors, where he's an avid fly fisherman and hunter. He also designs and refinishes furniture in his free time.
+  An expert Revit user, Cody brings a high level of technical proficiency to project development and documentation. His experience working in multiple roles across the architecture team gives him a valuable perspective on coordination and helps him anticipate how design decisions impact the larger project. He is currently pursuing his architecture license, continuing a career trajectory defined by a commitment to learning and growth.
 contact_blurb: Have a project with architectural needs? Connect with Cody to discuss.
 email: ckauffman@warehausae.com
-phone: (717) 893-0007
-seo_description: Cody is an Architectural Project Manager with nine years of experience at Warehaus, known for his team-oriented approach and steady project leadership. He…
+phone: (717) 893-0067
+linkedin_url: https://www.linkedin.com/in/cody-kauffman-79b657186/
+seo_description: Cody is an Architectural Project Manager whose diligence, drive, and strong technical skills have fueled his growth throughout his career. Since joining Warehaus three years ago, he…
 ---
