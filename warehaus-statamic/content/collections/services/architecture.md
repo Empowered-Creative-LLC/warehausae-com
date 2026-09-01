@@ -76,12 +76,12 @@ team_leaders:
     headshot_url: /assets/imported/2024/01/Kepler-Travis-1.webp
     linkedin_url: https://www.linkedin.com/in/travis-kepler-422b97a3/
     email: tkepler@warehausae.com
-  - name: Matt Robertson
+  - name: Cody Kauffman
     title: Architectural Project Manager
-    team_url: /team/matt-robertson/
-    headshot_url: /assets/imported/2026/04/Robertson-Matt-1024x683.jpg
-    linkedin_url: https://www.linkedin.com/in/matt-robertson-b14b6157/
-    email: mrobertson@warehausae.com
+    team_url: /team/cody-kauffman/
+    headshot_url: /assets/images/team-headshots/Cody-Kauffman-Headshot-2026.jpg
+    linkedin_url: https://www.linkedin.com/in/cody-kauffman-79b657186/
+    email: ckauffman@warehausae.com
 recent_projects:
   - title: Nelson Kohl Apartments
     url: /project/nelson-kohl-apartments/
