@@ -8,7 +8,7 @@ name: Cody Kauffman
 show_on_about: false
 first_name: Cody
 discipline: architecture
-headshot_url: /assets/imported/2026/08/Kauffman-Cody.jpg
+headshot_url: /assets/images/team-headshots/Cody-Kauffman-Headshot-2026.jpg
 years_in_industry: 8
 years_with_warehaus: 4
 bio: >-
