@@ -24,3 +24,5 @@ Admin control panel lives at `/cp`.
     node scripts/firecrawl-crawl.js
 
 See the full project brief in the original migration plan for the 13-phase roadmap.
+
+<!-- test: PR/preview workflow check, safe to ignore or remove -->
