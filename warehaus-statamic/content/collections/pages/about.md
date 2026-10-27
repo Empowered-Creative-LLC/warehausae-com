@@ -12,7 +12,7 @@ lead_heading: Deep Roots. Rich History.
 intro_prose: |-
   Warehaus is an award-winning team of designers with a 45-year legacy serving Central Pennsylvania and beyond. What began as a land surveying company has evolved to become a 40-person firm offering [architecture](/services/architecture/), [civil engineering and land planning](/services/civil_engineering/), [structural engineering](/services/structural/), [interior design](/services/interior_design/), [historic preservation](/services/historic-preservation/), and [building sciences](/building-sciences/) services.
 
-  Warehaus co-owners [Troy Bankert](/team/troy-bankert/) and [David Koratich](/team/david-koratich/) each have a long history at Warehaus, spanning as far back as 1988. Today, they oversee the day-to-day operations of the firm as well as overall asset management, guiding the strategic vision for ongoing growth and advancement. QA test: this sentence is temporary.
+  Warehaus co-owners [Troy Bankert](/team/troy-bankert/) and [David Koratich](/team/david-koratich/) each have a long history at Warehaus, spanning as far back as 1988. Today, they oversee the day-to-day operations of the firm as well as overall asset management, guiding the strategic vision for ongoing growth and advancement. QA test two: this sentence is also temporary.
 intro_image_url: /assets/imported/2025/09/Troy-Bankert-and-David-Koratich-2025-1-1024x683.jpg
 mission_prose: >-
   We are design partners who guide you through a collaborative experience with a common purpose, to deliver well-crafted solutions that benefit our clients, employees, shareholders, and communities.
