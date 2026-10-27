@@ -10,6 +10,7 @@
         <figure class="bg-white pt-24 md:pt-28">
             <div class="container-haus max-w-3xl">
                 {{ partial:img :asset="featured_image" :legacy_url="featured_image_url" class="w-full max-h-[640px] object-cover" :glide="false" }}
+                {{ if featured_image_caption }}<figcaption class="mt-2 text-xs italic text-haus-ink-500">{{ featured_image_caption }}</figcaption>{{ /if }}
             </div>
         </figure>
     {{ /if }}
@@ -36,7 +37,7 @@
 
     <div class="container-haus pb-16 md:pb-24 max-w-3xl">
         {{ if body_markdown }}
-            <div class="prose prose-lg max-w-none text-haus-ink-700 leading-relaxed space-y-6">{{ body_markdown | strip_markdown_image | markdown | imported_asset_urls_in_html }}</div>
+            <div class="prose prose-lg max-w-none text-haus-ink-700 leading-relaxed space-y-6 [&_a]:text-haus-amber-600 [&_a:hover]:text-haus-amber-700 [&_a]:transition">{{ body_markdown | strip_markdown_image | markdown | imported_asset_urls_in_html }}</div>
         {{ /if }}
     </div>
 </article>
