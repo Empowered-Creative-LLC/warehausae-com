@@ -37,6 +37,11 @@ tabs:
               folder: uploads/news
               max_files: 1
               instructions: Upload or browse for the lead image at the top of the post.
+          - handle: featured_image_caption
+            field:
+              type: text
+              display: Featured Image Caption
+              instructions: Optional caption text shown below the featured image (e.g. photo credits, names left-to-right).
           - handle: featured_image_url
             field:
               type: text
