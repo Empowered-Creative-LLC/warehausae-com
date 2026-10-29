@@ -77,6 +77,7 @@ featured_projects:
       - Civil
       - Structural
 news_slugs:
+  - warehaus-welcomes-brian-welsh-as-business-development-manager
   - warehaus-announces-leadership-transition-david-koratich-named-president-as-troy-bankert-aia-transitions-to-principal
   - warehaus-named-national-finalist-for-holiday-campaign-celebrating-york-county
   - warehaus-welcomes-courtney-weaver-as-chief-financial-officer
