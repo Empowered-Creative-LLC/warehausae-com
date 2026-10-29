@@ -22,10 +22,10 @@ leadership_slugs:
   - lauren-bergman
   - courtney-weaver
 news_slugs:
+  - warehaus-welcomes-brian-welsh-as-business-development-manager
   - warehaus-named-national-finalist-for-holiday-campaign-celebrating-york-county
   - warehaus-welcomes-courtney-weaver-as-chief-financial-officer
   - warehaus-announces-leadership-promotions
-  - warehaus-leadership-promotions
 sections:
   - heading: "1980"
     body: The Kinsley family of companies acquires Land Survey Consultants.
