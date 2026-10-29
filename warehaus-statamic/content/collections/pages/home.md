@@ -82,6 +82,7 @@ news_slugs:
   - warehaus-named-national-finalist-for-holiday-campaign-celebrating-york-county
   - warehaus-welcomes-courtney-weaver-as-chief-financial-officer
   - warehaus-announces-leadership-promotions
+  - warehaus-leadership-promotions
 culture_heading: "A Culture Built on Collaboration."
 culture_body: >-
   We're serious about the work we do, but we don't take ourselves too seriously. Collaboration extends beyond project meetings and deadlines. From cornhole to cookouts, we've built a culture grounded in teamwork, trust, and genuine connection.
