@@ -24,9 +24,13 @@ return [
     |
     | Here you may configure which Cache Store the Stache uses.
     |
+    | Uses a dedicated file store to prevent race conditions during Laravel
+    | Cloud zero-downtime deployments. Each release has its own storage/
+    | directory, so the old release's Stache can't pollute the new one.
+    |
     */
 
-    'cache_store' => null,
+    'cache_store' => 'stache',
 
     /*
     |--------------------------------------------------------------------------

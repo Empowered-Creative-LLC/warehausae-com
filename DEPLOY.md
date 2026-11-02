@@ -214,6 +214,23 @@ The script lives at `scripts/laravel-cloud-build.sh` in this repo. It copies `wa
 
 **Important:** Disable Laravel Cloud's default `npm install` / `npm run build` steps if they are configured separately — they run against the repo root (which has no `package.json`) and will fail or no-op before the promotion step.
 
+### Stache cache race condition fix (PRs #62, #64)
+
+**Problem:** After PRs #62 and #64 merged, the live `/about` page served old `news_slugs` from `pages/about.md` even though the deploy commands ran `php artisan cache:clear`, `statamic:stache:clear`, and `statamic:stache:warm`.
+
+**Root cause:** The Stache was configured to use the shared `database` cache store (`CACHE_STORE=database`). The cache prefix is derived from `APP_NAME`, so the old release and the new release share the same DB cache keys. During Laravel Cloud's zero-downtime deployment cutover:
+
+1. New release deploys and runs `statamic:stache:clear` + `statamic:stache:warm` (fresh cache).
+2. Old release is still serving traffic during the cutover window.
+3. Old release lazily writes its stale Stache entries back into the shared DB cache.
+4. New release now reads stale content from the cache the old release just polluted.
+
+**Fix:** The Stache now uses a dedicated `stache` file cache store (configured in `config/cache.php` and `config/statamic/stache.php`). Each Laravel Cloud release has its own `storage/framework/cache/stache/` directory, so the old release's Stache cache cannot overwrite the new release's cache. The fix is purely in code — no dashboard settings or new environment variables are required.
+
+**Why it works on the first deploy after merge:** On the first deploy after merging this fix, the new release will use the file-based `stache` store. The file cache starts empty and gets populated by the `statamic:stache:warm` command in the deploy script. The old release's database cache is irrelevant (different store). Subsequent deploys maintain isolation because each release gets a new `storage/` directory.
+
+**Side effects:** The app cache (sessions, general cache) and other Laravel subsystems continue to use the shared `database` store as before. Only the Stache is isolated.
+
 ### Deploy commands
 
 Set **Deploy commands** on the environment to:
@@ -226,7 +243,7 @@ php artisan statamic:stache:warm
 php artisan statamic:search:update --all
 ```
 
-> **Why the clear steps:** Statamic's Stache is persisted in the database cache store, so `stache:warm` on its own can keep serving a stale content index across deploys — git-committed content changes (`content/*.md`, blueprints) then won't appear on the site even though the code deployed. Clearing the app cache and the Stache before warming forces the deployed content to take effect. `scripts/laravel-cloud-deploy.sh` already does this.
+> **Stache cache isolation (post-PR #64):** The Stache now uses a dedicated file cache store (`storage/framework/cache/stache`) instead of the shared database cache. This prevents a zero-downtime deployment race condition where the old release (still serving traffic during cutover) writes its stale Stache back into the shared DB cache after the new release has warmed it, causing the new release to serve stale content. Each Laravel Cloud release has its own `storage/` directory, so the old and new releases now maintain separate Stache caches. The `cache:clear` and `stache:clear` commands above remain in the deploy script but are now defensive; the file-based Stache is already release-local and can't be polluted by the previous release.
 
 If using Statamic Git push with a deploy key, also run the git SSH setup from [Git push credentials](#3-git-push-credentials-server-side-client-has-no-github-access) as additional deploy commands, or use [`warehaus-statamic/scripts/laravel-cloud-deploy.sh`](warehaus-statamic/scripts/laravel-cloud-deploy.sh) after copying it into the promoted app (see script header).
 
