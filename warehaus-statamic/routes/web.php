@@ -4,6 +4,25 @@ use Illuminate\Support\Facades\Route;
 use Statamic\Facades\Entry;
 use Statamic\View\View;
 
+// Sitemap XML route
+Route::get('/sitemap.xml', function () {
+    $collections = [
+        'pages' => Entry::query()->where('collection', 'pages')->where('published', true)->get(),
+        'news_posts' => Entry::query()->where('collection', 'news_posts')->where('published', true)->get(),
+        'projects' => Entry::query()->where('collection', 'projects')->where('published', true)->get(),
+        'job_postings' => Entry::query()->where('collection', 'job_postings')->where('published', true)->get(),
+        'team_members' => Entry::query()->where('collection', 'team_members')->where('published', true)->get(),
+        'case_studies' => Entry::query()->where('collection', 'case_studies')->where('published', true)->get(),
+        'services' => Entry::query()->where('collection', 'services')->where('published', true)->get(),
+        'industries_categories' => Entry::query()->where('collection', 'industries_categories')->where('published', true)->get(),
+        'portfolio_categories' => Entry::query()->where('collection', 'portfolio_categories')->where('published', true)->get(),
+    ];
+    
+    return response()
+        ->view('sitemap', ['collections' => $collections])
+        ->header('Content-Type', 'application/xml');
+})->name('sitemap');
+
 // Internal-only styleguide. Not linked from public nav; used for design QA.
 Route::get('/design/styleguide', function () {
     return (new View)
@@ -75,6 +94,20 @@ $permanentRedirects = [
 ];
 
 foreach ($permanentRedirects as $from => $to) {
+    Route::redirect($from, $to, 301);
+    Route::redirect($from.'/', $to, 301);
+}
+
+// Additional 301 redirects for old URLs
+$additionalRedirects = [
+    '/job/civil-designer' => '/job/job-civil-designer/',
+    '/decades' => '/about/',
+    '/archer-drive-municipal-project' => '/case-studies/municipal-engineering/',
+    '/author/lbergman' => '/team/lauren-bergman/',
+    '/feed' => '/news/',
+];
+
+foreach ($additionalRedirects as $from => $to) {
     Route::redirect($from, $to, 301);
     Route::redirect($from.'/', $to, 301);
 }
