@@ -7,6 +7,7 @@ department: Architects
 location: York, PA
 employment_type: Full Time
 posted_date: October 29, 2026
+posted_date_iso: '2026-10-29'
 posted_time: 2:12 pm
 overview: >-
   We're looking for an experienced Architectural Designer who can turn design concepts into detailed, buildable documents. You'll develop drawings, models, and construction documents from schematic design through construction, working closely with project architects, managers, and engineers.

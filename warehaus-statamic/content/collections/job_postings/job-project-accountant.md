@@ -7,6 +7,7 @@ department: Corporate
 location: York, PA
 employment_type: Full Time
 posted_date: November 6, 2026
+posted_date_iso: '2026-11-06'
 posted_time: 8:41 am
 overview: >-
   We're looking for an experienced Project Accountant to manage the financial side of our architecture, engineering, and construction projects—from setup and billing through reporting and closeout. You'll work closely with project managers and leadership in our York, PA office.

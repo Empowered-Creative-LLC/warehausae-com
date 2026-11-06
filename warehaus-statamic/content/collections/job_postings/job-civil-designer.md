@@ -8,6 +8,7 @@ department: Civil Engineering
 location: York, Pennsylvania
 employment_type: Full-time
 posted_date: January 26, 2026
+posted_date_iso: '2026-01-26'
 posted_time: 10:49 am
 overview: >-
   This position focuses on preparing site design and land development plans using Civil 3D, working closely with project managers and engineers. You'll work on grading, stormwater, utilities, and permitting, with the opportunity to take ownership of portions of the design as you grow.

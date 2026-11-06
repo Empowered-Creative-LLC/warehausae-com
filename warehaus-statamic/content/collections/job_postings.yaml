@@ -7,4 +7,4 @@ sites:
 blueprints:
   - job_posting
 sort_dir: desc
-sort_field: posted_date
+sort_field: posted_date_iso
