@@ -9,11 +9,7 @@ employment_type: Full Time
 posted_date: October 29, 2026
 posted_time: 2:12 pm
 overview: >-
-  At Warehaus, our architectural team works across a diverse range of projects, from large-scale commercial and industrial facilities to renovations and adaptive reuse. We're looking for an experienced
-  Architectural Designer who can contribute to both design development and technical documentation. If you enjoy turning design concepts into detailed, buildable solutions—and want to stay involved from
-  early design through construction—this is a role where you'll stay engaged. This position focuses on developing architectural drawings, models, and construction documents while working closely with
-  project architects, managers, and engineers. You'll be involved throughout the design process, from schematic design through construction administration, with opportunities to contribute ideas, solve
-  technical challenges, and take ownership of portions of the project.
+  We're looking for an experienced Architectural Designer who can turn design concepts into detailed, buildable documents. You'll develop drawings, models, and construction documents from schematic design through construction, working closely with project architects, managers, and engineers.
 responsibilities:
   - Develop architectural drawings and construction documents from schematic design through construction documentation
   - Prepare models, renderings, diagrams, and presentation materials to communicate design concepts

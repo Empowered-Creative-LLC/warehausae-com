@@ -39,7 +39,7 @@
         <span class="mt-4 inline-block h-1 w-14 rounded bg-haus-amber-500" aria-hidden="true"></span>
     </div>
 
-    {{ collection:job_postings sort="title:asc" }}
+    {{ collection:job_postings sort="posted_date:desc" }}
         {{ if first }}<div class="mt-12 grid gap-x-12 md:grid-cols-2 max-w-5xl mx-auto">{{ /if }}
             <article class="flex flex-col py-8 border-b border-haus-ink-200">
                 <h3 class="text-xl md:text-2xl font-medium tracking-tight text-haus-ink-800">{{ title }}</h3>
