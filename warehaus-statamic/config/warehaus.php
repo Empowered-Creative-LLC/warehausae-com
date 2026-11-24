@@ -13,7 +13,13 @@ return [
     |
     */
 
-    'imported_assets_base_url' => env('AWS_URL'),
+    // Public Laravel Cloud / R2 bucket URL used when AWS_URL is unset (PR
+    // preview environments typically do not inherit this env var). The
+    // hostname is already public on the live site; it is not a credential.
+    // A local override that sets this to null/empty is required if you want
+    // to serve the gitignored public/assets/imported/ tree from disk —
+    // an empty AWS_URL alone now falls back to this URL.
+    'imported_assets_base_url' => env('AWS_URL') ?: 'https://fls-a22bed4f-c9d7-467d-8de1-0126a14e582f.laravel.cloud',
 
     /*
     |--------------------------------------------------------------------------
