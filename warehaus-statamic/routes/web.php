@@ -1,5 +1,6 @@
 <?php
 
+use App\Support\ImportedAssetUrl;
 use Illuminate\Support\Facades\Route;
 use Statamic\Facades\Entry;
 use Statamic\View\View;
@@ -101,6 +102,10 @@ foreach ($permanentRedirects as $from => $to) {
 // Additional 301 redirects for old URLs
 $additionalRedirects = [
     '/job/civil-designer' => '/job/job-civil-designer/',
+    // There is no /contact entry in this repo or in the WordPress URL inventory.
+    // The site's Contact Us content already lives at /services/ (seo_title
+    // "Contact Us", heading "Get in Touch", address/email/phone).
+    '/contact' => '/services/',
     '/decades' => '/about/',
     '/archer-drive-municipal-project' => '/case-studies/municipal-engineering/',
     '/author/lbergman' => '/team/lauren-bergman/',
@@ -111,4 +116,31 @@ foreach ($additionalRedirects as $from => $to) {
     Route::redirect($from, $to, 301);
     Route::redirect($from.'/', $to, 301);
 }
+
+// Legacy WordPress images live in a gitignored public/assets/imported/ tree and
+// on the public R2 bucket. When a request for one of those paths hits Laravel
+// (the file is absent on disk, as on PR previews), redirect to the public
+// bucket rather than 404ing.
+Route::get('/assets/imported/{path}', function (string $path) {
+    if ($path === '' || str_contains($path, '..') || str_starts_with($path, '/')) {
+        abort(404);
+    }
+
+    $importedRoot = public_path('assets/imported');
+    $local = $importedRoot.DIRECTORY_SEPARATOR.str_replace('/', DIRECTORY_SEPARATOR, $path);
+    $realRoot = realpath($importedRoot);
+    $realFile = is_file($local) ? realpath($local) : false;
+
+    if ($realRoot && $realFile && str_starts_with($realFile, $realRoot.DIRECTORY_SEPARATOR)) {
+        return response()->file($realFile);
+    }
+
+    $base = ImportedAssetUrl::baseUrl();
+
+    if ($base === null) {
+        abort(404);
+    }
+
+    return redirect($base.'/imported/'.$path, 302);
+})->where('path', '.*');
 
